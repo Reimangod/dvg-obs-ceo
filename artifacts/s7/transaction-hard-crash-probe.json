@@ -1,0 +1,69 @@
+{
+  "acceptance_checks": [
+    "finite",
+    "physical_scalar_domain",
+    "local_energy_budget",
+    "chemical_accuracy",
+    "independent_energy_agreement",
+    "independent_state_fidelity",
+    "constraint",
+    "kkt",
+    "resource_recount",
+    "transformation_semantics",
+    "pareto_nonworse",
+    "resource_improved",
+    "optimizer_path_reviewed"
+  ],
+  "accepted_commit": {
+    "commit_record_sha256": "f1d98d90684fc0a91d53a6308e877fe7742b5cdd4b8d0984bca69ff0b0bf459a",
+    "committed": true
+  },
+  "artifact_kind": "s7-transaction-hard-crash-probe",
+  "claim_boundary": [
+    "S7 establishes transaction durability and independent acceptance plumbing only.",
+    "Synthetic energies and resources in this probe are not molecular performance results.",
+    "Hard-crash recovery is fail-closed: an orphan staging directory is never committed."
+  ],
+  "deadline": {
+    "restored": true
+  },
+  "failure_injections": {
+    "exception": {
+      "exception_type": "RuntimeError",
+      "failed_artifact_retained": true,
+      "restored": true
+    },
+    "nan": {
+      "exception_type": "TransactionError",
+      "failed_artifact_retained": true,
+      "restored": true
+    },
+    "partial-write": {
+      "exception_type": "RuntimeError",
+      "failed_artifact_retained": true,
+      "restored": true
+    }
+  },
+  "hard_crash": {
+    "bitwise_equivalent_recovery": true,
+    "durable_snapshot_sha256": "040eae33c16cee4f0d29369958b16c17792d1aba8b694d1db1c0d35bbebe12fa",
+    "exit_code": 17,
+    "expected_snapshot_digest": "a0f78158fae8cd230b2762579d9d59e4eed43aa79c687e2eeedb580f128d6246",
+    "failed_artifact_retained": true,
+    "recovered_snapshot_digest": "a0f78158fae8cd230b2762579d9d59e4eed43aa79c687e2eeedb580f128d6246"
+  },
+  "rejected_acceptance": {
+    "rejection_reasons": [
+      "local_energy_budget",
+      "chemical_accuracy",
+      "independent_state_fidelity",
+      "constraint",
+      "kkt",
+      "pareto_nonworse",
+      "resource_improved",
+      "optimizer_path_reviewed"
+    ],
+    "restored": true
+  },
+  "schema_version": "1.0.0"
+}

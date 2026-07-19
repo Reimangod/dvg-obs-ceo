@@ -21,5 +21,10 @@ No performance claim is permitted until the stage gates in
 
 - S0 repository isolation: complete
 - S1 baseline parity: complete
-- S2 telemetry and scientific identity: not started
-- Molecular compression experiments: forbidden until S3 and S7 gates pass
+- S2 telemetry and scientific identity: complete
+- S3 constrained OBS mathematical kernel: complete
+- S4 DVG block and candidate catalog: complete
+- S5 evaluation-neutral Hessian capture: complete
+- S6 paper-era full-circuit resource recount: complete
+- S7 fail-closed transaction and rollback: complete
+- S8 H2/H4 predictor calibration: next; no LiH selector tuning is permitted yet
