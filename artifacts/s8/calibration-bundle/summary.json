@@ -1,0 +1,236 @@
+{
+  "artifact_kind": "s8-h2-h4-predictor-calibration",
+  "calibration_version": "predictor-calibration-v1",
+  "catalog_candidate_count": 21,
+  "checkpoints": [
+    {
+      "absolute_error_hartree": 1.1102230246251565e-16,
+      "adapt_iteration": 1,
+      "case_id": "h2-1.5-iteration-1",
+      "checkpoint_digest": "793ce53f6dc435e7bc8c8fa777d3f0396bd91efd14b01cbfb27e30755d968371",
+      "energy_hartree": -0.9981493534714102,
+      "exact_hessian_available": true,
+      "fci_energy_hartree": -0.9981493534714101,
+      "hessian_quality_usable": true,
+      "parameter_count": 1
+    },
+    {
+      "absolute_error_hartree": 0.0012486017451136533,
+      "adapt_iteration": 4,
+      "case_id": "h4-1.5-first-chemical-accuracy",
+      "checkpoint_digest": "997d19722b77241436baec3e682627f365997b64ddbe4910017a4989905571f2",
+      "energy_hartree": -1.9949017237736966,
+      "exact_hessian_available": true,
+      "fci_energy_hartree": -1.9961503255188102,
+      "hessian_quality_usable": true,
+      "parameter_count": 10
+    }
+  ],
+  "claim_boundary": [
+    "H2/H4 are non-blind development systems used only for selector calibration.",
+    "Failed candidates and optimizer failures are retained and counted.",
+    "nfev/njev and statevector work are not paper-equivalent measurement cost.",
+    "No LiH or out-of-sample performance claim is made at S8."
+  ],
+  "environment": {
+    "blas_threads": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": null,
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "machine": "arm64",
+    "packages": {
+      "numpy": "1.23.5",
+      "openfermion": "1.5.1",
+      "openfermionpyscf": "0.5",
+      "pyscf": "2.2.0",
+      "qiskit": "0.43.3",
+      "scipy": "1.10.1"
+    },
+    "platform": "macOS-26.0.1-arm64-arm-64bit",
+    "processor": "arm",
+    "python": "3.10.19"
+  },
+  "executed_equivalence_classes": 17,
+  "failed_candidate_evaluations": 0,
+  "metrics": [
+    {
+      "classification": {
+        "applicable": false,
+        "reason": "heuristic score has no preregistered Hartree threshold"
+      },
+      "count": 17,
+      "kendall": 0.2647058823529411,
+      "method": "magnitude",
+      "spearman": 0.38480392156862747
+    },
+    {
+      "classification": {
+        "applicable": false,
+        "reason": "heuristic score has no preregistered Hartree threshold"
+      },
+      "count": 17,
+      "kendall": 0.3529411764705882,
+      "method": "magnitude_position",
+      "spearman": 0.43137254901960786
+    },
+    {
+      "calibration_intercept_hartree": -0.0013878431058427212,
+      "calibration_slope": 0.6916943982947068,
+      "classification": {
+        "false_negative": 0,
+        "false_positive": 0,
+        "false_reject_rate": null,
+        "false_safe_rate": 0.0,
+        "precision": null,
+        "recall": null,
+        "threshold_hartree": 0.0001,
+        "true_negative": 17,
+        "true_positive": 0
+      },
+      "count": 17,
+      "kendall": 0.764705882352941,
+      "method": "diagonal_hessian",
+      "spearman": 0.9191176470588237
+    },
+    {
+      "calibration_intercept_hartree": 0.0003579667126478868,
+      "calibration_slope": 0.8316874996954683,
+      "classification": {
+        "false_negative": 0,
+        "false_positive": 0,
+        "false_reject_rate": null,
+        "false_safe_rate": 0.0,
+        "precision": null,
+        "recall": null,
+        "threshold_hartree": 0.0001,
+        "true_negative": 11,
+        "true_positive": 0
+      },
+      "count": 11,
+      "kendall": 0.7090909090909091,
+      "method": "single_coordinate_obs",
+      "spearman": 0.881818181818182
+    },
+    {
+      "calibration_intercept_hartree": 0.00033537527732627426,
+      "calibration_slope": 0.8327698896542476,
+      "classification": {
+        "false_negative": 0,
+        "false_positive": 0,
+        "false_reject_rate": null,
+        "false_safe_rate": 0.0,
+        "precision": null,
+        "recall": null,
+        "threshold_hartree": 0.0001,
+        "true_negative": 17,
+        "true_positive": 0
+      },
+      "count": 17,
+      "kendall": 0.8676470588235293,
+      "method": "general_constraint_obs",
+      "spearman": 0.9632352941176472
+    },
+    {
+      "calibration_intercept_hartree": -1.0562183146738401e-05,
+      "calibration_slope": 0.8318419093615174,
+      "classification": {
+        "false_negative": 0,
+        "false_positive": 0,
+        "false_reject_rate": null,
+        "false_safe_rate": 0.0,
+        "precision": null,
+        "recall": null,
+        "threshold_hartree": 0.0001,
+        "true_negative": 17,
+        "true_positive": 0
+      },
+      "count": 17,
+      "kendall": 0.926470588235294,
+      "method": "exact_hessian_oracle",
+      "spearman": 0.982843137254902
+    }
+  ],
+  "paper_measurement_cost": null,
+  "plots": [
+    "scatter-diagonal_hessian.svg",
+    "scatter-single_coordinate_obs.svg",
+    "scatter-general_constraint_obs.svg",
+    "scatter-exact_hessian_oracle.svg"
+  ],
+  "primary_safe_candidates": 0,
+  "protocol_amendment_tag": "dvg-obs-s8-calibration-protocol-amendment-1",
+  "protocol_tag": "dvg-obs-s8-calibration-protocol-v1",
+  "schema_version": "1.0.0",
+  "successful_candidate_evaluations": 17,
+  "upstream": {
+    "commit": "a3f89d03e6a03c89767d3cf8ee7657a57653dda0",
+    "git_tree": "794d847f5c1be1590d93da81b905a915dfa17d13",
+    "worktree_clean": "true"
+  },
+  "warnings": {
+    "total_captured": 97,
+    "unique": [
+      {
+        "count": 1,
+        "warning": "builtins.DeprecationWarning: \n\n  `numpy.distutils` is deprecated since NumPy 1.23.0, as a result\n  of the deprecation of `distutils` itself. It will be removed for\n  Python >= 3.12. For older Python versions it will remain present.\n  It is recommended to use `setuptools < 60.0` for those Python versions.\n  For more details, see:\n    https://numpy.org/devdocs/reference/distutils_status_migration.html \n\n"
+      },
+      {
+        "count": 1,
+        "warning": "builtins.DeprecationWarning: Please use `OptimizeResult` from the `scipy.optimize` namespace, the `scipy.optimize.optimize` namespace is deprecated."
+      },
+      {
+        "count": 2,
+        "warning": "builtins.DeprecationWarning: The 'sym_pos' keyword is deprecated and should be replaced by using 'assume_a = \"pos\"'. 'sym_pos' will be removed in SciPy 1.11.0."
+      },
+      {
+        "count": 1,
+        "warning": "builtins.DeprecationWarning: The ``qiskit.opflow`` module is deprecated as of qiskit-terra 0.24.0. It will be removed no earlier than 3 months after the release date. For code migration guidelines, visit https://qisk.it/opflow_migration."
+      },
+      {
+        "count": 19,
+        "warning": "builtins.DeprecationWarning: The class ``qiskit.opflow.mixins.star_algebra.StarAlgebraMixin`` is deprecated as of qiskit-terra 0.24.0. It will be removed no earlier than 3 months after the release date. For code migration guidelines, visit https://qisk.it/opflow_migration."
+      },
+      {
+        "count": 19,
+        "warning": "builtins.DeprecationWarning: The class ``qiskit.opflow.operator_base.OperatorBase`` is deprecated as of qiskit-terra 0.24.0. It will be removed no earlier than 3 months after the release date. For code migration guidelines, visit https://qisk.it/opflow_migration."
+      },
+      {
+        "count": 8,
+        "warning": "builtins.DeprecationWarning: The class ``qiskit.opflow.primitive_ops.circuit_op.CircuitOp`` is deprecated as of qiskit-terra 0.24.0. It will be removed no earlier than 3 months after the release date. For code migration guidelines, visit https://qisk.it/opflow_migration."
+      },
+      {
+        "count": 4,
+        "warning": "builtins.DeprecationWarning: The class ``qiskit.opflow.primitive_ops.pauli_op.PauliOp`` is deprecated as of qiskit-terra 0.24.0. It will be removed no earlier than 3 months after the release date. For code migration guidelines, visit https://qisk.it/opflow_migration."
+      },
+      {
+        "count": 12,
+        "warning": "builtins.DeprecationWarning: The class ``qiskit.opflow.primitive_ops.primitive_op.PrimitiveOp`` is deprecated as of qiskit-terra 0.24.0. It will be removed no earlier than 3 months after the release date. For code migration guidelines, visit https://qisk.it/opflow_migration."
+      },
+      {
+        "count": 2,
+        "warning": "builtins.DeprecationWarning: The class ``qiskit.opflow.state_fns.circuit_state_fn.CircuitStateFn`` is deprecated as of qiskit-terra 0.24.0. It will be removed no earlier than 3 months after the release date. For code migration guidelines, visit https://qisk.it/opflow_migration."
+      },
+      {
+        "count": 5,
+        "warning": "builtins.DeprecationWarning: The class ``qiskit.opflow.state_fns.dict_state_fn.DictStateFn`` is deprecated as of qiskit-terra 0.24.0. It will be removed no earlier than 3 months after the release date. For code migration guidelines, visit https://qisk.it/opflow_migration."
+      },
+      {
+        "count": 7,
+        "warning": "builtins.DeprecationWarning: The class ``qiskit.opflow.state_fns.state_fn.StateFn`` is deprecated as of qiskit-terra 0.24.0. It will be removed no earlier than 3 months after the release date. For code migration guidelines, visit https://qisk.it/opflow_migration."
+      },
+      {
+        "count": 1,
+        "warning": "builtins.DeprecationWarning: The distutils package is deprecated and slated for removal in Python 3.12. Use setuptools or check PEP 632 for potential alternatives"
+      },
+      {
+        "count": 1,
+        "warning": "builtins.DeprecationWarning: The distutils.sysconfig module is deprecated, use sysconfig instead"
+      },
+      {
+        "count": 14,
+        "warning": "builtins.DeprecationWarning: The function ``qiskit.opflow.operator_globals.make_immutable()`` is deprecated as of qiskit-terra 0.24.0. It will be removed no earlier than 3 months after the release date. For code migration guidelines, visit https://qisk.it/opflow_migration."
+      }
+    ]
+  }
+}

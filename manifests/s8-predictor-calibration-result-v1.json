@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0.0",
+  "stage": "S8-primary",
+  "status": "complete-with-zero-positive-safe-candidates",
+  "completed_at": "2026-07-20",
+  "execution_source_commit": "00c0744eb4c200e8cca9d00664634585dde8568a",
+  "protocol_tag": "dvg-obs-s8-calibration-protocol-v1",
+  "protocol_amendment_tag": "dvg-obs-s8-calibration-protocol-amendment-1",
+  "checkpoints": {
+    "h2": {"iteration": 1, "parameters": 1, "fci_error_hartree": 1.1102230246251565e-16},
+    "h4": {"iteration": 4, "parameters": 10, "fci_error_hartree": 0.0012486017451136533}
+  },
+  "candidate_counts": {
+    "catalog": 21,
+    "executed_equivalence_classes": 17,
+    "successful": 17,
+    "failed": 0,
+    "safe": 0
+  },
+  "rank_correlations": {
+    "magnitude_spearman": 0.38480392156862747,
+    "magnitude_position_spearman": 0.43137254901960786,
+    "diagonal_hessian_spearman": 0.9191176470588237,
+    "general_constraint_obs_spearman": 0.9632352941176472,
+    "exact_hessian_oracle_spearman": 0.982843137254902
+  },
+  "closest_h4_candidate": {
+    "kind": "mvp-to-ovp-diff",
+    "actual_change_hartree": 0.00011278944956583103,
+    "general_obs_prediction_hartree": 0.0001089209841942998,
+    "exact_hessian_prediction_hartree": 0.0001174243162822611,
+    "chemical_accuracy_preserved": true,
+    "local_budget_passed": false,
+    "delta_cnot": -4,
+    "delta_cnot_depth": 0,
+    "delta_total_depth": -11,
+    "delta_parameters": -1
+  },
+  "warm_start_work": {
+    "projection_on_optimizer_iterations": 145,
+    "projection_off_optimizer_iterations": 159,
+    "projection_on_nfev": 199,
+    "projection_off_nfev": 229,
+    "paper_measurement_cost": null
+  },
+  "verification": {
+    "independent_bundle_audit": true,
+    "full_suite_tests_passed_local": 73,
+    "known_paper_stack_warnings": 95
+  },
+  "artifacts": {
+    "summary_sha256": "cf18eba8ed6cb890aac032891c523299a33fb1b090884ead8400f04934139f8c",
+    "jsonl_sha256": "2e962f55545639dcdee88ab45b667d7f6c0388871fe9d90a73ea1eb8e486befb",
+    "csv_sha256": "a9202c2d4514b54287f41267e28726f907f3ca638d670afb528d3a198bcffac9",
+    "audit_sha256": "2f84ff2ce16692cec839338ebfd4549ddfe3ab0c2cc8c273fff9c29952983492"
+  },
+  "next_gate": "S9 selector freeze prohibited until a preregistered positive-class calibration extension is evaluated",
+  "claim_boundary": [
+    "S8 supports development-system ranking evidence only.",
+    "Zero positive labels prevent precision or recall estimation.",
+    "No threshold was relaxed after observing the closest candidate.",
+    "No LiH, generalization, or paper measurement-cost claim is made."
+  ]
+}

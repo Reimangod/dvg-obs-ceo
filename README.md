@@ -27,4 +27,5 @@ No performance claim is permitted until the stage gates in
 - S5 evaluation-neutral Hessian capture: complete
 - S6 paper-era full-circuit resource recount: complete
 - S7 fail-closed transaction and rollback: complete
-- S8 H2/H4 predictor calibration: next; no LiH selector tuning is permitted yet
+- S8 primary H2/H4 predictor calibration: complete; zero positive safe labels
+- S8.1 later-checkpoint positive-class calibration: required before S9
