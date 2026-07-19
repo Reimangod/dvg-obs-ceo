@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0.0",
+  "stage": "S3",
+  "status": "complete",
+  "completed_at": "2026-07-20",
+  "kernel_version": "quadratic-kernel-v1",
+  "model": {
+    "source_constraint": "A theta = b",
+    "target_map": "theta = c + J phi",
+    "prediction_reference": "current-checkpoint-quadratic-model",
+    "silent_regularization": false,
+    "explicit_matrix_inverse": false
+  },
+  "default_numerical_policy": {
+    "symmetry_relative_tolerance": 1e-10,
+    "feasibility_absolute_tolerance": 1e-10,
+    "solve_relative_tolerance": 1e-10,
+    "rank_relative_tolerance": 1e-12,
+    "maximum_condition_number": 1e12,
+    "negative_energy_roundoff_hartree": 1e-12
+  },
+  "verification": {
+    "s3_tests_passed": 13,
+    "full_suite_tests_passed": 32,
+    "random_spd_cases": 120,
+    "analytic_kkt_match": true,
+    "analytic_newton_direction_match": true,
+    "coordinate_and_multiple_deletion": true,
+    "equal_and_opposite_relations": true,
+    "source_slot_permutation": true,
+    "target_sign_and_basis_rotation": true,
+    "ill_conditioned_rejection": true
+  },
+  "artifacts": {
+    "kernel_sha256": "827dc4687e11d3acdb49e5fcc8cb3011014855fbcfd88b52564017f2299fb3e5",
+    "property_tests_sha256": "4f54a7b3f50e26b4cfd4e37364816e8acdb74ebcbd32a0ad89d4b21526ac41fc",
+    "dependency_lock_sha256": "4d6b778d7608058a9aed93e6a43b6df198ea1ef2441afbe86d3e5a24e9c6ee01"
+  },
+  "claim_boundary": [
+    "S3 validates quadratic algebra and fail-closed numerical behavior.",
+    "S3 does not validate recycled-Hessian fidelity on molecular VQE landscapes.",
+    "S3 makes no circuit-resource, energy, or measurement-cost performance claim."
+  ]
+}
