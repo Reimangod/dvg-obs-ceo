@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.0.0",
+  "stage": "S8",
+  "status": "preregistered-before-calibration-execution",
+  "registered_at": "2026-07-20",
+  "development_systems": [
+    {
+      "case_id": "h2-1.5-iteration-1",
+      "molecule": "H2",
+      "linear_spacing_angstrom": 1.5,
+      "checkpoint": "after-adapt-iteration-1",
+      "role": "unsafe-deletion-negative-control"
+    },
+    {
+      "case_id": "h4-1.5-first-chemical-accuracy",
+      "molecule": "H4",
+      "linear_spacing_angstrom": 1.5,
+      "checkpoint": "first-strict-error-below-chemical-accuracy",
+      "maximum_adapt_iterations": 12,
+      "on_no_crossing": "fail-stage-without-substituting-a-checkpoint"
+    }
+  ],
+  "baseline": {
+    "upstream_commit": "a3f89d03e6a03c89767d3cf8ee7657a57653dda0",
+    "pool": "DVG_CEO",
+    "tetris": true,
+    "hessian_recycling": true,
+    "selection": "gradient",
+    "gradient_threshold": 1e-6,
+    "seed": 0,
+    "shots": null,
+    "noise": false
+  },
+  "candidate_scope": {
+    "catalog": "all-single-block-S4-candidates",
+    "joint_candidates": false,
+    "execution_deduplication": "one-representative-per-equivalence-class",
+    "duplicate_catalog_rows_retained": true
+  },
+  "predictors": {
+    "magnitude": "squared Euclidean source-constraint residual",
+    "magnitude_position": "magnitude residual divided by one plus mean normalized constrained-slot position",
+    "diagonal_hessian": "constrained quadratic prediction from diagonal of solved recycled Hessian",
+    "single_coordinate_obs": "general OBS restricted to one-coordinate deletion; unavailable otherwise",
+    "general_constraint_obs": "S3 constrained prediction from recycled inverse Hessian",
+    "exact_hessian_oracle": "S3 constrained prediction using official analytic source Hessian"
+  },
+  "warm_start_ablation": {
+    "projection_off": "least-squares native coordinates closest to checkpoint parameters",
+    "projection_on": "OBS target-native optimum coordinates",
+    "optimizer": "pinned-upstream-minimize_bfgs",
+    "maximum_iterations": 200,
+    "gradient_tolerance": 1e-8,
+    "fallbacks": 0,
+    "matched_budget": true
+  },
+  "exact_hessian_policy": {
+    "source": "official LinAlgAdapt analytic Hessian",
+    "finite_difference": false,
+    "silent_regularization": false,
+    "non_spd_result": "oracle-unavailable-with-reason"
+  },
+  "safe_label": {
+    "actual_local_energy_increase_hartree_at_most": 0.0001,
+    "chemical_accuracy_required": true,
+    "kkt_residual_at_most": 1e-8,
+    "full_resource_pareto_nonworse": true,
+    "at_least_one_resource_strictly_improved": true
+  },
+  "required_outputs": [
+    "all-candidate-jsonl",
+    "all-candidate-csv",
+    "checkpoint-provenance",
+    "prediction-versus-actual-metrics",
+    "safe-candidate-confusion-metrics",
+    "optimizer-work-ledger",
+    "scatter-plots"
+  ],
+  "claim_boundary": [
+    "H2 and H4 are development systems, not blind holdouts.",
+    "S8 may calibrate S9 but cannot establish LiH or out-of-sample superiority.",
+    "No paper measurement-cost claim is made from statevector work counters."
+  ]
+}
