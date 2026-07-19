@@ -1,0 +1,3 @@
+[submodule "vendor/ceo-adapt-vqe"]
+	path = vendor/ceo-adapt-vqe
+	url = https://github.com/mafaldaramoa/ceo-adapt-vqe.git

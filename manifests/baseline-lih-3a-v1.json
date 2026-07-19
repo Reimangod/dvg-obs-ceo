@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0.0",
+  "manifest_id": "dvg-obs-ceo-baseline-lih-3a-v1",
+  "registered_at": "2026-07-20",
+  "upstream": {
+    "repository": "https://github.com/mafaldaramoa/ceo-adapt-vqe.git",
+    "commit": "a3f89d03e6a03c89767d3cf8ee7657a57653dda0",
+    "git_tree": "794d847f5c1be1590d93da81b905a915dfa17d13"
+  },
+  "problem": {
+    "molecule": "LiH",
+    "geometry_angstrom": [["Li", [0.0, 0.0, 0.0]], ["H", [0.0, 0.0, 3.0]]],
+    "basis": "sto-3g",
+    "charge": 0,
+    "multiplicity": 1,
+    "mapping": "jordan-wigner",
+    "shots": null,
+    "noise_model": null
+  },
+  "algorithm": {
+    "name": "CEO-ADAPT-VQE*",
+    "pool": "DVG_CEO",
+    "tetris": true,
+    "hessian_recycling": true,
+    "selection": "gradient",
+    "gradient_threshold": 1e-6,
+    "seed": 0
+  },
+  "checkpoint": {
+    "rule": "first-strictly-below-one-kcal-per-mol-fci-error",
+    "chemical_accuracy_hartree": 0.0015936014376405157
+  },
+  "expected_reference": {
+    "adapt_iteration": 5,
+    "energy_hartree": -7.797909682469515,
+    "fci_energy_hartree": -7.7988431595024075,
+    "absolute_error_hartree": 0.0009334770328921493,
+    "parameter_count": 15,
+    "cnot_count": 107,
+    "cnot_depth": 30,
+    "source_result_sha256": "94c4dafeeb223bce41b5cce4b8f6c29051676c8b307144cc54740b52b50195d3"
+  },
+  "environment": {
+    "python": "3.10.19",
+    "numpy": "1.23.5",
+    "scipy": "1.10.1",
+    "qiskit": "0.43.3",
+    "pyscf": "2.2.0",
+    "openfermion": "1.5.1",
+    "openfermionpyscf": "0.5"
+  },
+  "claim_boundary": [
+    "Expected values are parity checks, not tuning targets.",
+    "LiH is non-blind because it was observed before preregistration.",
+    "Measurement cost is unavailable until separately reproduced."
+  ]
+}
+

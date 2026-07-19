@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dvg-obs-ceo"
+version = "0.1.0.dev0"
+description = "Independent DVG-aware OBS compression research extension for CEO-ADAPT-VQE"
+readme = "README.md"
+requires-python = ">=3.10,<3.11"
+license = {text = "Apache-2.0"}
+dependencies = [
+  "numpy==1.23.5",
+  "scipy==1.10.1",
+]
+
+[project.optional-dependencies]
+test = [
+  "pytest==8.3.5",
+  "jsonschema==4.23.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra --strict-markers"
+

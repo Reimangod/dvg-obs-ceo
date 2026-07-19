@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "stage": "S0",
+  "status": "complete",
+  "completed_at": "2026-07-20",
+  "repository": {
+    "name": "dvg-obs-ceo",
+    "visibility_required": "private",
+    "legacy_source_reuse": false
+  },
+  "pinned_upstream": {
+    "commit": "a3f89d03e6a03c89767d3cf8ee7657a57653dda0",
+    "git_tree": "794d847f5c1be1590d93da81b905a915dfa17d13",
+    "worktree_clean": true
+  },
+  "immutable_inputs": {
+    "implementation_plan_sha256": "b06bf4b22fc8098387130bc2c54c764f360f0e47e80824040938aa7fd9c9eba8",
+    "preregistration_sha256": "2f25828b89c81b2a9508d2841506a0bf1cf98ef0782db6d4f008adb30e425c46",
+    "baseline_manifest_sha256": "cca9dd5fee9a2d597e1e1506a455285a5f16a37659c9cc84d5df5556a9863906",
+    "dependency_lock_sha256": "cd1a02d362e6f6ca1f8b5fc6eb82949dcea895d9a6576491221badaafa56d054"
+  },
+  "verification": {
+    "legacy_dependency_scan_passed": true,
+    "unit_tests_passed": 3,
+    "python": "3.10.19",
+    "numpy": "1.23.5",
+    "scipy": "1.10.1"
+  },
+  "claim_boundary": [
+    "S0 proves repository isolation and provenance only.",
+    "S0 does not prove baseline numerical parity or algorithmic performance."
+  ]
+}
