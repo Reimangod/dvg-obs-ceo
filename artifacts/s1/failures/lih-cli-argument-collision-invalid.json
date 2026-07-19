@@ -1,0 +1,152 @@
+{
+  "absolute_error_hartree": 0.0009334770328921493,
+  "algorithm": {
+    "gradient_threshold": 1e-06,
+    "hessian_recycling": true,
+    "max_adapt_iter": 50,
+    "max_opt_iter": 10000,
+    "name": "CEO-ADAPT-VQE*",
+    "pool": "DVG_CEO",
+    "seed": 0,
+    "selection": "gradient",
+    "tetris": true
+  },
+  "ansatz_coefficients": [
+    -0.18820719206269798,
+    -0.0022172094703283027,
+    -0.2741019605079277,
+    -0.0025228899024443475,
+    -0.0014392044529809864,
+    0.2243326266156434,
+    -8.345958119142507e-07,
+    -0.057815671886772994,
+    -0.27457591729917386,
+    -0.0014375679130845369,
+    -0.7853336086795994,
+    -0.13773781527700146,
+    0.2966704566612536,
+    0.001621055669729338,
+    -0.0021142549316075037
+  ],
+  "ansatz_indices": [
+    970,
+    588,
+    946,
+    612,
+    1160,
+    952,
+    602,
+    1154,
+    940,
+    618,
+    1182,
+    14,
+    10,
+    4,
+    9
+  ],
+  "artifact_kind": "direct-unmodified-upstream-baseline",
+  "case_id": "lih-3a",
+  "claim_boundary": [
+    "This is a direct run of the pinned unmodified upstream implementation.",
+    "Work counters are not paper-equivalent measurement cost."
+  ],
+  "cnot_count": 107,
+  "cnot_counts_by_iteration": [
+    0,
+    18,
+    45,
+    72,
+    99,
+    107
+  ],
+  "cnot_depth": 30,
+  "cnot_depths_by_iteration": [
+    0,
+    7,
+    14,
+    21,
+    28,
+    30
+  ],
+  "energy_hartree": -7.797909682469515,
+  "environment": {
+    "blas_threads": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "machine": "arm64",
+    "packages": {
+      "numpy": "1.23.5",
+      "openfermion": "1.5.1",
+      "openfermionpyscf": "0.5",
+      "pyscf": "2.2.0",
+      "qiskit": "0.43.3",
+      "scipy": "1.10.1"
+    },
+    "platform": "macOS-26.0.1-arm64-arm-64bit",
+    "processor": "arm",
+    "python": "3.10.19"
+  },
+  "fci_energy_hartree": -7.7988431595024075,
+  "first_chemical_accuracy_iteration": 5,
+  "parameter_count": 15,
+  "problem": {
+    "basis": "sto-3g",
+    "distance_angstrom": 3.0,
+    "electrons": 4,
+    "molecule": "LiH",
+    "qubits": 12
+  },
+  "schema_version": "1.0.0",
+  "scientific_state_digest": "cb3e7091fe7a54cebeea5c67c1901973c3b3d8222f96a51b6adba7f5e1e4afab",
+  "trajectory": [
+    {
+      "absolute_error_hartree": 0.05450119508369955,
+      "adapt_iteration": 1,
+      "energy_hartree": -7.744341964418708,
+      "finished": false,
+      "parameter_count": 2
+    },
+    {
+      "absolute_error_hartree": 0.036024276437943925,
+      "adapt_iteration": 2,
+      "energy_hartree": -7.7628188830644635,
+      "finished": false,
+      "parameter_count": 5
+    },
+    {
+      "absolute_error_hartree": 0.023007438377283584,
+      "adapt_iteration": 3,
+      "energy_hartree": -7.775835721125124,
+      "finished": false,
+      "parameter_count": 8
+    },
+    {
+      "absolute_error_hartree": 0.005631636980601762,
+      "adapt_iteration": 4,
+      "energy_hartree": -7.793211522521806,
+      "finished": false,
+      "parameter_count": 11
+    },
+    {
+      "absolute_error_hartree": 0.0009334770328921493,
+      "adapt_iteration": 5,
+      "energy_hartree": -7.797909682469515,
+      "finished": false,
+      "parameter_count": 15
+    }
+  ],
+  "upstream": {
+    "commit": "a3f89d03e6a03c89767d3cf8ee7657a57653dda0",
+    "git_tree": "794d847f5c1be1590d93da81b905a915dfa17d13",
+    "worktree_clean": "true"
+  },
+  "work": {
+    "nfev": 166,
+    "ngev_component_equivalent": 1580,
+    "paper_measurement_cost": null,
+    "wall_time_seconds": 60.44114649997209
+  }
+}

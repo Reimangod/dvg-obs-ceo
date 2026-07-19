@@ -38,6 +38,26 @@
     "parameter_count": 15,
     "cnot_count": 107,
     "cnot_depth": 30,
+    "ansatz_indices": [970, 588, 946, 612, 1160, 952, 602, 1154, 940, 618, 1182, 14, 10, 4, 9],
+    "ansatz_coefficients": [
+      -0.18820719206269798,
+      -0.0022172094703283027,
+      -0.2741019605079277,
+      -0.0025228899024443475,
+      -0.0014392044529809864,
+      0.2243326266156434,
+      -8.345958119142507e-7,
+      -0.057815671886772994,
+      -0.27457591729917386,
+      -0.0014375679130845369,
+      -0.7853336086795994,
+      -0.13773781527700146,
+      0.2966704566612536,
+      0.001621055669729338,
+      -0.0021142549316075037
+    ],
+    "cnot_counts_by_iteration": [0, 18, 45, 72, 99, 107],
+    "cnot_depths_by_iteration": [0, 7, 14, 21, 28, 30],
     "source_result_sha256": "94c4dafeeb223bce41b5cce4b8f6c29051676c8b307144cc54740b52b50195d3"
   },
   "environment": {
@@ -53,6 +73,10 @@
     "Expected values are parity checks, not tuning targets.",
     "LiH is non-blind because it was observed before preregistration.",
     "Measurement cost is unavailable until separately reproduced."
-  ]
+  ],
+  "parity_tolerances": {
+    "energy_absolute_hartree": 1e-10,
+    "coefficient_absolute": 1e-9,
+    "integer_and_sequence_fields": "exact"
+  }
 }
-
