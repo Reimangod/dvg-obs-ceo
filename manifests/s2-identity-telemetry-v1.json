@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0.0",
+  "stage": "S2",
+  "status": "complete",
+  "completed_at": "2026-07-20",
+  "identity_model": {
+    "state_preparation_id": "state-v1",
+    "problem_id": "problem-v1",
+    "measurement_context_id": "measurement-v1",
+    "reuse_policy": "exact-measurement-context-id-only",
+    "coefficient_encoding": "IEEE-754-binary64-big-endian-hex",
+    "negative_zero_policy": "canonicalize-to-positive-zero"
+  },
+  "telemetry": {
+    "format": "canonical-JSONL",
+    "ordering": "contiguous-zero-based-sequence",
+    "integrity": "SHA-256-hash-chain",
+    "durability": ["exclusive-process-lock", "complete-write-loop", "fsync"],
+    "partial_record_policy": "reject"
+  },
+  "schemas": {
+    "scientific_identity_sha256": "e4b344083fe64b24107ada42de6e5509721d74d5c651b8ca7805b6a68005e3b2",
+    "telemetry_event_sha256": "d57e0472cfac958ef258d96f57c51a449babb86a5353aabb6861e98a94050cb4"
+  },
+  "environment": {
+    "dependency_lock_sha256": "4d6b778d7608058a9aed93e6a43b6df198ea1ef2441afbe86d3e5a24e9c6ee01"
+  },
+  "verification": {
+    "tests_passed": 19,
+    "identity_round_trip": true,
+    "payload_tamper_rejected": true,
+    "cross_context_reuse_rejected": true,
+    "hash_chain_tamper_rejected": true,
+    "truncated_record_rejected": true
+  },
+  "claim_boundary": [
+    "S2 establishes provenance and measurement-reuse safety.",
+    "S2 makes no circuit-resource, energy, or measurement-cost performance claim.",
+    "Work counters remain dimensionally distinct and are not paper-equivalent measurement cost."
+  ]
+}

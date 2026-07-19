@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Reimangod/dvg-obs-ceo/schemas/scientific-identity-v1.schema.json",
+  "title": "DVG-OBS-CEO scientific identity bundle",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "state_preparation_id", "problem_id", "measurement_context_id", "state", "problem", "measurement"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "state_preparation_id": {"type": "string", "pattern": "^state-v1:[0-9a-f]{64}$"},
+    "problem_id": {"type": "string", "pattern": "^problem-v1:[0-9a-f]{64}$"},
+    "measurement_context_id": {"type": "string", "pattern": "^measurement-v1:[0-9a-f]{64}$"},
+    "state": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["reference_state", "generator_definition_digest", "ansatz_block_structure", "ansatz_indices", "coefficient_bytes_hex", "orbital_parameter_bytes_hex", "qubit_mapping", "qubit_ordering"],
+      "properties": {
+        "reference_state": {"type": "array", "items": {"type": "integer", "enum": [0, 1]}},
+        "generator_definition_digest": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "ansatz_block_structure": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["generator_family", "indices"], "properties": {"generator_family": {"type": "string", "minLength": 1}, "indices": {"type": "array", "items": {"type": "integer", "minimum": 0}}}}},
+        "ansatz_indices": {"type": "array", "items": {"type": "integer", "minimum": 0}},
+        "coefficient_bytes_hex": {"type": "array", "items": {"type": "string", "pattern": "^[0-9a-f]{16}$"}},
+        "orbital_parameter_bytes_hex": {"type": "array", "items": {"type": "string", "pattern": "^[0-9a-f]{16}$"}},
+        "qubit_mapping": {"type": "string", "minLength": 1},
+        "qubit_ordering": {"type": "array", "items": {"type": "integer", "minimum": 0}}
+      }
+    },
+    "problem": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["hamiltonian_digest", "molecule", "geometry_angstrom", "basis_set", "active_space", "frozen_orbitals", "fermion_to_qubit_mapping_convention"],
+      "properties": {
+        "hamiltonian_digest": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "molecule": {"type": "string", "minLength": 1},
+        "geometry_angstrom": {"type": "array", "minItems": 1, "items": {"type": "array", "prefixItems": [{"type": "string", "minLength": 1}, {"type": "array", "minItems": 3, "maxItems": 3, "items": {"type": "number"}}], "minItems": 2, "maxItems": 2}},
+        "basis_set": {"type": "string", "minLength": 1},
+        "active_space": {"type": "array", "items": {"type": "integer", "minimum": 0}},
+        "frozen_orbitals": {"type": "array", "items": {"type": "integer", "minimum": 0}},
+        "fermion_to_qubit_mapping_convention": {"type": "string", "minLength": 1}
+      }
+    },
+    "measurement": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["state_preparation_id", "problem_id", "observable_set_digest", "measurement_plan_version", "grouping_strategy", "estimator_version", "backend_context_digest"],
+      "properties": {
+        "state_preparation_id": {"type": "string", "pattern": "^state-v1:[0-9a-f]{64}$"},
+        "problem_id": {"type": "string", "pattern": "^problem-v1:[0-9a-f]{64}$"},
+        "observable_set_digest": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "measurement_plan_version": {"type": "string", "minLength": 1},
+        "grouping_strategy": {"type": "string", "minLength": 1},
+        "estimator_version": {"type": "string", "minLength": 1},
+        "backend_context_digest": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+      }
+    }
+  }
+}
