@@ -61,6 +61,16 @@ def validate_bundle(bundle: Path) -> dict[str, Any]:
     checks["checkpoint_files"] = all(
         (bundle / name).is_file() for name in expected_checkpoints
     )
+    expected_failures = tuple(
+        f"checkpoint-failure-{failure['case_id']}.json"
+        for failure in summary.get("checkpoint_failures", [])
+    )
+    checks["checkpoint_failure_files"] = all(
+        (bundle / name).is_file() for name in expected_failures
+    )
+    checks["checkpoint_failure_count"] = len(expected_failures) == summary.get(
+        "failed_checkpoint_count", 0
+    )
     catalog = json.loads((bundle / "candidate-catalog.json").read_text(encoding="utf-8"))
     rows = [
         json.loads(line)

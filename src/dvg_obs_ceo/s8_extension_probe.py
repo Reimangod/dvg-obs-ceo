@@ -26,6 +26,7 @@ def run_probe(bundle: Path, *, resume: bool = False):
             "Failed candidates and optimizer failures are retained and counted.",
             "nfev/njev and statevector work are not paper-equivalent measurement cost.",
         ),
+        allow_registered_checkpoint_failures=True,
         resume=resume,
     )
 

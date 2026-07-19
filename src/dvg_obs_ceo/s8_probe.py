@@ -133,11 +133,23 @@ def _build_checkpoint(case_id: str) -> tuple[Any, Any, AnsatzStructure, dict[str
     algorithm.initialize()
     trajectory: list[dict[str, Any]] = []
     counts: list[int] = []
+    termination_probe: dict[str, Any] | None = None
     with HessianCaptureSession(adapt_module) as capture:
         while algorithm.data.iteration_counter < algorithm.max_adapt_iter:
+            previous_iteration = int(algorithm.data.iteration_counter)
             finished = bool(algorithm.run_iteration())
             iteration = int(algorithm.data.iteration_counter)
             error = abs(float(algorithm.energy) - float(algorithm.exact_energy))
+            if iteration == previous_iteration:
+                termination_probe = {
+                    "after_completed_adapt_iteration": iteration,
+                    "finished": finished,
+                    "energy_hartree": float(algorithm.energy),
+                    "absolute_error_hartree": error,
+                }
+                if not finished:
+                    raise RuntimeError("ADAPT iteration made no progress without convergence")
+                break
             counts.append(len(algorithm.indices))
             trajectory.append(
                 {
@@ -201,6 +213,7 @@ def _build_checkpoint(case_id: str) -> tuple[Any, Any, AnsatzStructure, dict[str
     checkpoint = {
         "case_id": case_id,
         "trajectory": trajectory,
+        "termination_probe": termination_probe,
         "ansatz_indices": list(structure.indices),
         "ansatz_coefficients": list(structure.coefficients),
         "iteration_counts": list(structure.cumulative_parameter_counts),
@@ -617,6 +630,7 @@ def run_cases(
     protocol_tag: str,
     protocol_amendment_tag: str | None,
     claim_boundary: Sequence[str],
+    allow_registered_checkpoint_failures: bool = False,
     resume: bool = False,
 ) -> dict[str, Any]:
     provenance = verify_upstream()
@@ -630,12 +644,32 @@ def run_cases(
     _fsync_directory(staging.parent)
     all_rows: list[dict[str, Any]] = []
     checkpoints: list[dict[str, Any]] = []
+    checkpoint_failures: list[dict[str, Any]] = []
     catalog: list[dict[str, Any]] = []
     warning_records: list[warnings.WarningMessage] = []
     for case_id in cases:
         with warnings.catch_warnings(record=True) as captured:
             warnings.simplefilter("always")
-            algorithm, pool, source, checkpoint, exact_hessian = _build_checkpoint(case_id)
+            try:
+                algorithm, pool, source, checkpoint, exact_hessian = _build_checkpoint(case_id)
+            except Exception as error:
+                if not allow_registered_checkpoint_failures:
+                    raise
+                failure = {
+                    "case_id": case_id,
+                    "error_type": type(error).__name__,
+                    "message": str(error),
+                    "policy": "registered-checkpoint-failed-without-substitution",
+                }
+                failure_path = staging / f"checkpoint-failure-{case_id}.json"
+                if failure_path.exists():
+                    if json.loads(failure_path.read_text(encoding="utf-8")) != failure:
+                        raise RuntimeError("resume checkpoint failure record mismatch")
+                else:
+                    _write_exclusive(failure_path, failure)
+                checkpoint_failures.append(failure)
+                warning_records.extend(captured)
+                continue
         warning_records.extend(captured)
         checkpoint_path = staging / f"checkpoint-{case_id}.json"
         if checkpoint_path.exists():
@@ -744,6 +778,8 @@ def run_cases(
             }
             for value in checkpoints
         ],
+        "checkpoint_failures": checkpoint_failures,
+        "failed_checkpoint_count": len(checkpoint_failures),
         "catalog_candidate_count": len(catalog),
         "executed_equivalence_classes": len(all_rows),
         "successful_candidate_evaluations": len(successful),
@@ -782,6 +818,7 @@ def run_probe(bundle: Path, *, resume: bool = False) -> dict[str, Any]:
             "nfev/njev and statevector work are not paper-equivalent measurement cost.",
             "No LiH or out-of-sample performance claim is made at S8.",
         ),
+        allow_registered_checkpoint_failures=False,
         resume=resume,
     )
 
