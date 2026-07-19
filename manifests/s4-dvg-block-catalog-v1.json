@@ -28,16 +28,20 @@
     "global_phase_policy": "record-and-compare-up-to-global-phase"
   },
   "verification": {
-    "s4_tests_passed_local": 7,
-    "full_suite_tests_passed_local": 39,
+    "s4_tests_passed_local": 9,
+    "full_suite_tests_passed_local": 41,
     "baseline_integration_tests": 2,
-    "dependency_independent_s4_tests": 5,
+    "dependency_independent_s4_tests": 7,
+    "s6_boundary_audit_corrections": [
+      "split-parent-QE-blocks-at-paper-counter-iteration-boundaries",
+      "retain-empty-iteration-segments-after-deletion"
+    ],
     "known_paper_stack_deprecation_warnings_local": 95
   },
   "artifacts": {
-    "block_ir_sha256": "cdc8bfe33cdefacb2f344ea930e6cbda4ef52f664dc59e3691d028b3be56c7eb",
+    "block_ir_sha256": "783750d32a6238ab8cb9cb86ac5bf3ef89c98b68bc54db3f646e7351cb464e67",
     "probe_runner_sha256": "0aca984c27b6e108fbd63c04039437cd08cff79e200cfb2373c7772aadf76d68",
-    "tests_sha256": "46c78905319f0df45fe35b9e72c35bf05612010eb2ede13ae8f9f41e6496934e",
+    "tests_sha256": "4f30a718fe9436736fd9e6be4e72a9304cb2bd9a9b1304cafbe374cf2d9de507",
     "probe_artifact_sha256": "0df68a6dce2d904ca76a140efe0e4c0846d21a4695b55a0db11369ec4f2880ef"
   },
   "claim_boundary": [

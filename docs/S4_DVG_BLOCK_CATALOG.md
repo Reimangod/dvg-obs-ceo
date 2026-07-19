@@ -10,10 +10,10 @@ from parameter magnitude:
 - one parent QE on its own is a single-QE block;
 - a non-parent single excitation with no CEO type is also a single-QE block.
 
-Grouping deliberately follows the actual `get_circuit` scan. Selection
-iteration and TETRIS-layer positions are retained per parameter, so a circuit
-block that ever crosses an iteration boundary is visible rather than silently
-relabeled.
+Grouping follows the actual paper-era accumulated-resource path: each ADAPT
+iteration is passed to `get_circuit` separately. Selection iteration and
+TETRIS-layer positions are retained per parameter, and parent QEs are never
+merged into one MVP across an iteration boundary.
 
 Every block records ordered ansatz positions, pool indices, coefficient
 context, generator and constituent-QE digests, support, normalization,
@@ -56,12 +56,18 @@ matched their target generator unitaries up to global phase. The global phase
 is recorded because it is physically irrelevant but numerically visible. A
 second independent artifact generation produced the identical SHA-256 digest.
 
-Seven S4 tests pass locally, including two pinned-upstream integration tests;
-the full suite has 39 passing tests. The paper-era Qiskit stack emits 95 known
+Nine S4 tests pass locally after the S6 iteration-boundary audit, including two
+pinned-upstream integration tests; the stage-equivalent full suite has 41
+passing tests. The paper-era Qiskit stack emits 95 known
 deprecation warnings locally. Minimal CI, which intentionally does not build
-the costly baseline extra, runs the five dependency-independent S4 tests and
+the costly baseline extra, runs the seven dependency-independent S4 tests and
 reports the two integration tests as explicit skips. The pinned integration
 artifact is committed so this distinction is auditable.
+
+S6 auditing corrected two representation assumptions without changing the
+registered S4 probe digest: blocks are split at paper-counter iteration
+boundaries, and empty iteration segments are retained after deletion. Both are
+covered by regression tests.
 
 ## Claim boundary
 

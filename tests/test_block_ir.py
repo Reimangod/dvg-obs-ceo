@@ -71,6 +71,20 @@ def test_recover_actual_grouping_and_iteration_metadata() -> None:
     assert len({block.block_id for block in blocks}) == 3
 
 
+def test_parent_qes_are_never_grouped_across_paper_counter_iteration_boundary() -> None:
+    pool = FakePool()
+    blocks = recover_dvg_blocks(pool, [0, 1], [0.3, -0.1], [1, 2])
+    assert [block.family for block in blocks] == ["single-QE", "single-QE"]
+    assert [block.selection_iterations for block in blocks] == [(1,), (2,)]
+
+
+def test_empty_iteration_segments_are_retained_without_inventing_blocks() -> None:
+    pool = FakePool()
+    blocks = recover_dvg_blocks(pool, [2], [0.3], [0, 1, 1])
+    assert len(blocks) == 1
+    assert blocks[0].selection_iterations == (2,)
+
+
 def test_candidate_catalog_marks_equivalent_two_qe_transforms() -> None:
     pool = FakePool()
     block = recover_dvg_blocks(pool, [0, 1], [0.3, -0.1], [2])[0]

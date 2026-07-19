@@ -134,8 +134,8 @@ def _iteration_assignment(
     counts = tuple(int(value) for value in cumulative_parameter_counts)
     if not counts or counts[-1] != parameter_count:
         raise BlockIRError("iteration parameter counts must terminate at ansatz length")
-    if counts[0] <= 0 or any(right <= left for left, right in zip(counts, counts[1:])):
-        raise BlockIRError("iteration parameter counts must be strictly increasing")
+    if counts[0] < 0 or any(right < left for left, right in zip(counts, counts[1:])):
+        raise BlockIRError("iteration parameter counts must be non-decreasing")
     iterations: list[int] = []
     layers: list[int] = []
     start = 0
@@ -173,6 +173,7 @@ def recover_dvg_blocks(
             stop < len(ansatz_indices)
             and int(ansatz_indices[stop]) in parent_range
             and _support(pool, int(ansatz_indices[stop])) == support
+            and iterations[stop] == iterations[position]
         ):
             stop += 1
         groups.append(tuple(range(position, stop)))

@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0.0",
+  "stage": "S6",
+  "status": "complete",
+  "completed_at": "2026-07-20",
+  "evaluator_version": "paper-era-full-circuit-resource-v1",
+  "backend_version": "paper-era-qasm-counter-a3f89d0",
+  "barrier_policy": "preserve-paper-era-block-and-iteration-barriers",
+  "global_transpilation": false,
+  "parity": {
+    "official_multisegment_adapt_data": true,
+    "h2_cnot_count": 9,
+    "h2_cnot_depth": 7,
+    "lih_cnot_count_by_iteration": [0, 18, 45, 72, 99, 107],
+    "lih_cnot_depth_by_iteration": [0, 7, 14, 21, 28, 30],
+    "lih_terminal_total_depth": 171,
+    "lih_parameter_count": 15,
+    "lih_logical_block_count": 15,
+    "physical_structural_snapshot_equal": true
+  },
+  "resource_only_pool_validation": {
+    "scope": "circuit resources only; prohibited for state and energy",
+    "official_10_qubit_metadata_compared": 510,
+    "sampled_generator_matches": 9,
+    "canonical_lih_trajectory_match": true
+  },
+  "registered_candidate_probe": {
+    "source": {
+      "cnot_count": 24,
+      "cnot_depth": 22,
+      "total_depth": 44,
+      "parameter_count": 4,
+      "logical_block_count": 3
+    },
+    "candidates_full_recount": 9,
+    "mvp_to_ovp_delta": {
+      "cnot_count": -4,
+      "cnot_depth": -6,
+      "total_depth": -11,
+      "parameter_count": -1,
+      "logical_block_count": 0
+    }
+  },
+  "verification": {
+    "s6_tests_passed_local": 7,
+    "full_suite_tests_passed_local": 55,
+    "baseline_extra_integration_tests": 3,
+    "artifact_regeneration_digest_match": true
+  },
+  "artifacts": {
+    "resource_evaluator_sha256": "4220cc44fde4a264f793e1190ef61e5ef8c93497d3614d13cd96763f9db98efd",
+    "resource_only_pool_sha256": "0bbfadcc5f60b34ff9703661ffa8ff33ca6dfb5a3c44ab5da0e4ec5cb1db022f",
+    "probe_runner_sha256": "cf809fa27eafb57a1b7a6a0a4487ff92fed7f16e6e8a50ebe0c600afc1ade2ea",
+    "resource_tests_sha256": "49e88dc204c7d26913c58ef6a14fcea12fbbed3c17cec7a8c884033a03b3c3d3",
+    "resource_pool_tests_sha256": "988274edcd869a86957165ab0a40db5d0e6a498c279edb2622b29672914054e0",
+    "probe_artifact_sha256": "54088775c7a957d4f4dc9eee32d2ce432ef8f98946c25cdc68ff51322e35ea0c"
+  },
+  "claim_boundary": [
+    "S6 establishes full-circuit paper-era resource parity and structural deltas.",
+    "S6 candidate coordinates are not energy-optimized or accuracy-accepted.",
+    "S6 makes no measurement-cost or molecular-performance claim."
+  ]
+}
