@@ -1,0 +1,288 @@
+{
+  "artifact_kind": "h2-hessian-capture-off-on-parity",
+  "capture": {
+    "additional_energy_evaluations": 0,
+    "additional_gradient_evaluations": 0,
+    "held_out_secant_policy": "none captured internally; must be supplied independently",
+    "optimizer_invocations": 1,
+    "records": [
+      {
+        "final_gradient": [
+          1.4253661584362476e-09
+        ],
+        "final_inverse_hessian": [
+          [
+            0.7236341907057654
+          ]
+        ],
+        "final_parameters": [
+          -0.3633454977873758
+        ],
+        "initial_gradient": null,
+        "initial_inverse_hessian": [
+          [
+            1.0
+          ]
+        ],
+        "initial_parameters": [
+          0.0
+        ],
+        "optimality": {
+          "constraint_residual_infinity": 0.0,
+          "gradient_infinity": 1.4253661584362476e-09,
+          "gradient_l2": 1.4253661584362476e-09,
+          "gradient_rms": 1.4253661584362476e-09,
+          "kkt_residual": 1.4253661584362476e-09,
+          "kkt_stationarity_l2": 1.4253661584362476e-09,
+          "parameter_step_l2": null,
+          "projected_gradient_infinity": 1.4253661584362476e-09,
+          "projected_gradient_l2": 1.4253661584362476e-09,
+          "projected_gradient_rms": 1.4253661584362476e-09,
+          "recent_energy_change_hartree": null
+        },
+        "optimization_id": "optimizer-v1:cc3e314576a362e0cb050f13cc1b4266a4f7947808da41a9b914c9f279547507",
+        "quality": {
+          "age_steps": 0,
+          "condition_number": 1.0,
+          "dimension": 1,
+          "finite": true,
+          "held_out_secant_count": 0,
+          "held_out_secant_max_relative_residual": null,
+          "held_out_secant_rms_relative_residual": null,
+          "internal_secant_count": 4,
+          "internal_secant_max_relative_residual": 0.06911580093004739,
+          "internal_secant_rms_relative_residual": 0.0346757584021119,
+          "invalid_update_count": 0,
+          "matrix_digest": "d785e1b8dd6b76e980f502e2aa76da0a479ee5b05156f3973b62eee5db23e7e5",
+          "minimum_eigenvalue": 0.7236341907057654,
+          "numerically_usable": true,
+          "positive_definite": true,
+          "rejection_reasons": [],
+          "secant_direction_coverage": 1.0,
+          "symmetry_relative_residual": 0.0,
+          "valid_update_count": 4,
+          "version": "hessian-diagnostics-v1"
+        },
+        "result": {
+          "function_evaluations": 5,
+          "gradient_evaluations": 5,
+          "iterations": 4,
+          "message": "Optimization terminated successfully.",
+          "status": 0,
+          "success": true
+        },
+        "secant_pairs": [
+          {
+            "curvature": 0.27110526245717925,
+            "gradient_change": [
+              -0.5905508024387633
+            ],
+            "normalized_curvature": 1.0,
+            "pair_id": "secant-v1:a49555c07a62e7950b59bf0bf62495025cd154d91fcb95d513c16729b7544963",
+            "source": "internal-bfgs",
+            "step": [
+              -0.45907187211940376
+            ],
+            "valid_for_bfgs_quality": true
+          },
+          {
+            "curvature": 0.014353303043755998,
+            "gradient_change": [
+              0.1404340020072149
+            ],
+            "normalized_curvature": 1.0,
+            "pair_id": "secant-v1:c75e69748151d4a19fff9f1e12d2f4a92edc6c361ae2d7238e2b2ad2b817adfe",
+            "source": "internal-bfgs",
+            "step": [
+              0.1022067507769136
+            ],
+            "valid_for_bfgs_quality": true
+          },
+          {
+            "curvature": 5.869776769968895e-05,
+            "gradient_change": [
+              -0.009006275102320993
+            ],
+            "normalized_curvature": 1.0,
+            "pair_id": "secant-v1:b2a50b9182f9d77cbde86557d47106cf33dae41877ffa71b953857eb3162062b",
+            "source": "internal-bfgs",
+            "step": [
+              -0.00651743001771754
+            ],
+            "valid_for_bfgs_quality": true
+          },
+          {
+            "curvature": 1.8973222620529878e-09,
+            "gradient_change": [
+              5.1204839831786586e-05
+            ],
+            "normalized_curvature": 1.0,
+            "pair_id": "secant-v1:b6a7b69a688dea01c5a78e3b0fdeaad546878bd37205a926943a69c951202230",
+            "source": "internal-bfgs",
+            "step": [
+              3.705357283190214e-05
+            ],
+            "valid_for_bfgs_quality": true
+          }
+        ]
+      }
+    ]
+  },
+  "case_id": "h2-smoke",
+  "claim_boundary": [
+    "S5 capture is observational and preserved registered H2 trajectory/work exactly.",
+    "Internal BFGS secants are not labeled held-out validation data.",
+    "H2 parity does not establish recycled-Hessian predictive fidelity on LiH."
+  ],
+  "diagnostics_version": "hessian-diagnostics-v1",
+  "observer_off_artifact": "artifacts/s1/h2-1.5-smoke.json",
+  "observer_on_artifact": "artifacts/s5/h2-capture-on-baseline.json",
+  "parity": {
+    "comparisons": [
+      {
+        "exact_equal": true,
+        "field": "energy_hartree",
+        "observed": -0.9981493534714102,
+        "reference": -0.9981493534714102
+      },
+      {
+        "exact_equal": true,
+        "field": "fci_energy_hartree",
+        "observed": -0.9981493534714101,
+        "reference": -0.9981493534714101
+      },
+      {
+        "exact_equal": true,
+        "field": "absolute_error_hartree",
+        "observed": 1.1102230246251565e-16,
+        "reference": 1.1102230246251565e-16
+      },
+      {
+        "exact_equal": true,
+        "field": "first_chemical_accuracy_iteration",
+        "observed": 1,
+        "reference": 1
+      },
+      {
+        "exact_equal": true,
+        "field": "ansatz_indices",
+        "observed": [
+          4
+        ],
+        "reference": [
+          4
+        ]
+      },
+      {
+        "exact_equal": true,
+        "field": "ansatz_coefficients",
+        "observed": [
+          -0.3633454977873758
+        ],
+        "reference": [
+          -0.3633454977873758
+        ]
+      },
+      {
+        "exact_equal": true,
+        "field": "parameter_count",
+        "observed": 1,
+        "reference": 1
+      },
+      {
+        "exact_equal": true,
+        "field": "cnot_count",
+        "observed": 9,
+        "reference": 9
+      },
+      {
+        "exact_equal": true,
+        "field": "cnot_depth",
+        "observed": 7,
+        "reference": 7
+      },
+      {
+        "exact_equal": true,
+        "field": "cnot_counts_by_iteration",
+        "observed": [
+          0,
+          9
+        ],
+        "reference": [
+          0,
+          9
+        ]
+      },
+      {
+        "exact_equal": true,
+        "field": "cnot_depths_by_iteration",
+        "observed": [
+          0,
+          7
+        ],
+        "reference": [
+          0,
+          7
+        ]
+      },
+      {
+        "exact_equal": true,
+        "field": "trajectory",
+        "observed": [
+          {
+            "absolute_error_hartree": 1.1102230246251565e-16,
+            "adapt_iteration": 1,
+            "energy_hartree": -0.9981493534714102,
+            "finished": false,
+            "parameter_count": 1
+          }
+        ],
+        "reference": [
+          {
+            "absolute_error_hartree": 1.1102230246251565e-16,
+            "adapt_iteration": 1,
+            "energy_hartree": -0.9981493534714102,
+            "finished": false,
+            "parameter_count": 1
+          }
+        ]
+      },
+      {
+        "exact_equal": true,
+        "field": "scientific_state_digest",
+        "observed": "e57d2aba7f3a38c36ac571ac2fb04b1cf0edd50280e08c59fc397c9d8e2bf673",
+        "reference": "e57d2aba7f3a38c36ac571ac2fb04b1cf0edd50280e08c59fc397c9d8e2bf673"
+      },
+      {
+        "exact_equal": true,
+        "field": "work.nfev",
+        "observed": 5,
+        "reference": 5
+      },
+      {
+        "exact_equal": true,
+        "field": "work.ngev_component_equivalent",
+        "observed": 5,
+        "reference": 5
+      },
+      {
+        "exact_equal": true,
+        "field": "work.paper_measurement_cost",
+        "observed": null,
+        "reference": null
+      }
+    ],
+    "excluded_fields": [
+      "work.wall_time_seconds",
+      "environment"
+    ],
+    "exclusion_reason": "observer overhead changes wall time; platform metadata is provenance, not trajectory",
+    "passed": true
+  },
+  "schema_version": "1.0.0",
+  "upstream": {
+    "commit": "a3f89d03e6a03c89767d3cf8ee7657a57653dda0",
+    "git_tree": "794d847f5c1be1590d93da81b905a915dfa17d13",
+    "worktree_clean": "true"
+  }
+}
