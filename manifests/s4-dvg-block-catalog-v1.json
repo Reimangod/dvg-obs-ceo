@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0.0",
+  "stage": "S4",
+  "status": "complete",
+  "completed_at": "2026-07-20",
+  "versions": {
+    "block_ir": "dvg-block-ir-v1",
+    "candidate_catalog": "dvg-candidate-catalog-v1"
+  },
+  "upstream": {
+    "commit": "a3f89d03e6a03c89767d3cf8ee7657a57653dda0",
+    "git_tree": "794d847f5c1be1590d93da81b905a915dfa17d13"
+  },
+  "registered_probe": {
+    "qubits": 4,
+    "recovered_families": ["OVP", "MVP", "single-QE"],
+    "blocks": 3,
+    "candidates": 9,
+    "semantic_candidates_validated": 9,
+    "native_target_circuits_validated": 6,
+    "tolerance": 1e-10,
+    "samples_per_candidate": 7,
+    "artifact_regeneration_digest_match": true
+  },
+  "observed_upstream_behavior": {
+    "in_place_equal_coefficient_mvp_result": "ValueError: 'YXXX' is not in list",
+    "native_target_rebuild_required": true,
+    "global_phase_policy": "record-and-compare-up-to-global-phase"
+  },
+  "verification": {
+    "s4_tests_passed_local": 7,
+    "full_suite_tests_passed_local": 39,
+    "baseline_integration_tests": 2,
+    "dependency_independent_s4_tests": 5,
+    "known_paper_stack_deprecation_warnings_local": 95
+  },
+  "artifacts": {
+    "block_ir_sha256": "cdc8bfe33cdefacb2f344ea930e6cbda4ef52f664dc59e3691d028b3be56c7eb",
+    "probe_runner_sha256": "0aca984c27b6e108fbd63c04039437cd08cff79e200cfb2373c7772aadf76d68",
+    "tests_sha256": "46c78905319f0df45fe35b9e72c35bf05612010eb2ede13ae8f9f41e6496934e",
+    "probe_artifact_sha256": "0df68a6dce2d904ca76a140efe0e4c0846d21a4695b55a0db11369ec4f2880ef"
+  },
+  "claim_boundary": [
+    "S4 validates exact small-pool block and transformation semantics.",
+    "S4 does not establish energy safety or full-ansatz resource reduction.",
+    "Native target rebuilding is mandatory; parameter-only pruning is not claimed as circuit pruning."
+  ]
+}

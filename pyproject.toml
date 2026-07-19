@@ -29,6 +29,7 @@ test = [
 [project.scripts]
 dvg-obs-baseline = "dvg_obs_ceo.baseline:main"
 dvg-obs-parity = "dvg_obs_ceo.parity:main"
+dvg-obs-s4-probe = "dvg_obs_ceo.s4_probe:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

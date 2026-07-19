@@ -1,0 +1,832 @@
+{
+  "artifact_kind": "pinned-upstream-s4-semantic-probe",
+  "block_ir_version": "dvg-block-ir-v1",
+  "blocks": [
+    {
+      "ansatz_positions": [
+        0
+      ],
+      "block_id": "block-v1:e1e7edf0804d82b5b212fc2904d4ec8e0bdf5ab027f6d7c5e8e76d62191c1fb3",
+      "circuit_implementation_id": "paper-era-ovp-ceo-circuit-v1",
+      "coefficients": [
+        0.2
+      ],
+      "constituent_qe_ids": [
+        "qe:abbe2c6e2e6dc28f888cc78188813082264926873b224ad897f32212bea77487",
+        "qe:b4803bdf6cda3fea0a5c3ab13bce89cd42977a7e9981c84287c176d308f266f3"
+      ],
+      "family": "OVP",
+      "generator_digests": [
+        "58ccb82b1113408c0723251bda1303bd9ea2cfa912821369760819dbc6884c76"
+      ],
+      "normalization": "paper-era-pool-arrange-v1",
+      "numerical_context_digest": "6d06878f8ce36e0d763af8ee5f90bed6ce68c1d234528e06e2bc2cd047704bd1",
+      "orientation": "sum",
+      "pool_indices": [
+        4
+      ],
+      "selection_iterations": [
+        1
+      ],
+      "support_qubits": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "symmetry_quantum_numbers": [
+        "delta_particles=0;delta_alpha=0;delta_beta=0"
+      ],
+      "tetris_layer_positions": [
+        0
+      ]
+    },
+    {
+      "ansatz_positions": [
+        1,
+        2
+      ],
+      "block_id": "block-v1:f4ce2c58c0125a18a18e46be8b337349678c1969f662faa2ab9cc2bb79a35665",
+      "circuit_implementation_id": "paper-era-mvp-ceo-circuit-v1",
+      "coefficients": [
+        0.3,
+        -0.1
+      ],
+      "constituent_qe_ids": [
+        "qe:abbe2c6e2e6dc28f888cc78188813082264926873b224ad897f32212bea77487",
+        "qe:b4803bdf6cda3fea0a5c3ab13bce89cd42977a7e9981c84287c176d308f266f3"
+      ],
+      "family": "MVP",
+      "generator_digests": [
+        "abbe2c6e2e6dc28f888cc78188813082264926873b224ad897f32212bea77487",
+        "b4803bdf6cda3fea0a5c3ab13bce89cd42977a7e9981c84287c176d308f266f3"
+      ],
+      "normalization": "paper-era-pool-arrange-v1",
+      "numerical_context_digest": "8fde58b9d37715f011fc1544c89256a756e4942e62d4e1d30c8b66a56c144925",
+      "orientation": "independent-qe-parameters",
+      "pool_indices": [
+        2,
+        3
+      ],
+      "selection_iterations": [
+        1,
+        1
+      ],
+      "support_qubits": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "symmetry_quantum_numbers": [
+        "delta_particles=0;delta_alpha=0;delta_beta=0"
+      ],
+      "tetris_layer_positions": [
+        1,
+        2
+      ]
+    },
+    {
+      "ansatz_positions": [
+        3
+      ],
+      "block_id": "block-v1:3e06c7568fe458e35ffc05192d4750ff14da0c071f3c980071b3597ae864d424",
+      "circuit_implementation_id": "paper-era-qe-circuit-v1",
+      "coefficients": [
+        0.4
+      ],
+      "constituent_qe_ids": [
+        "qe:d8adc00fedaf14c82651a9b235a1e0b91ff619d33bbf69a35f4e0f169f173c71"
+      ],
+      "family": "single-QE",
+      "generator_digests": [
+        "d8adc00fedaf14c82651a9b235a1e0b91ff619d33bbf69a35f4e0f169f173c71"
+      ],
+      "normalization": "paper-era-pool-arrange-v1",
+      "numerical_context_digest": "2ba590d1c59ea658873e38fd3112e7502cfd281176c39f4766a2fb84e7c2487f",
+      "orientation": "canonical-qe",
+      "pool_indices": [
+        0
+      ],
+      "selection_iterations": [
+        2
+      ],
+      "support_qubits": [
+        0,
+        2
+      ],
+      "symmetry_quantum_numbers": [
+        "delta_particles=0;delta_alpha=0;delta_beta=0"
+      ],
+      "tetris_layer_positions": [
+        0
+      ]
+    }
+  ],
+  "candidate_catalog_version": "dvg-candidate-catalog-v1",
+  "candidates": [
+    {
+      "candidate_id": "candidate-v1:a9dbe642deb55cc69fbd01a1342ab2358430f66630037c8b84b682ec5b539f04",
+      "constraint_matrix": [
+        [
+          1.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:879f892194d0e0a4899cfe08c6f62d890c94435eece5f647bd1326e131b7ace7",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        []
+      ],
+      "kind": "block-deletion",
+      "numerical_context_digest": "6d06878f8ce36e0d763af8ee5f90bed6ce68c1d234528e06e2bc2cd047704bd1",
+      "offset": [
+        0.0
+      ],
+      "orientation": "deletion",
+      "removed_source_slots": [
+        0
+      ],
+      "semantic_conflict_positions": [
+        0
+      ],
+      "source_block_id": "block-v1:e1e7edf0804d82b5b212fc2904d4ec8e0bdf5ab027f6d7c5e8e76d62191c1fb3",
+      "source_pool_indices": [
+        4
+      ],
+      "source_slots": [
+        "block-v1:e1e7edf0804d82b5b212fc2904d4ec8e0bdf5ab027f6d7c5e8e76d62191c1fb3:slot:0"
+      ],
+      "target_family": "empty",
+      "target_operator_digests": [],
+      "target_pool_indices": [],
+      "target_slots": [],
+      "units": "radian"
+    },
+    {
+      "candidate_id": "candidate-v1:bb3c3f09aba1304a77417ab9af72277715ec4554129ed65a55e8247f4139918a",
+      "constraint_matrix": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0,
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:7b1a18ecbd8ebd1cd416dd9c43f80631c4347d3faf34c0593b838c407042a8ac",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        [],
+        []
+      ],
+      "kind": "mvp-whole-deletion",
+      "numerical_context_digest": "8fde58b9d37715f011fc1544c89256a756e4942e62d4e1d30c8b66a56c144925",
+      "offset": [
+        0.0,
+        0.0
+      ],
+      "orientation": "deletion",
+      "removed_source_slots": [
+        0,
+        1
+      ],
+      "semantic_conflict_positions": [
+        1,
+        2
+      ],
+      "source_block_id": "block-v1:f4ce2c58c0125a18a18e46be8b337349678c1969f662faa2ab9cc2bb79a35665",
+      "source_pool_indices": [
+        2,
+        3
+      ],
+      "source_slots": [
+        "block-v1:f4ce2c58c0125a18a18e46be8b337349678c1969f662faa2ab9cc2bb79a35665:slot:0",
+        "block-v1:f4ce2c58c0125a18a18e46be8b337349678c1969f662faa2ab9cc2bb79a35665:slot:1"
+      ],
+      "target_family": "empty",
+      "target_operator_digests": [],
+      "target_pool_indices": [],
+      "target_slots": [],
+      "units": "radian"
+    },
+    {
+      "candidate_id": "candidate-v1:7a576a40fb57fce29b8c3f757dfab66ae3d5d5797193d2f1699fa242cc3f89d2",
+      "constraint_matrix": [
+        [
+          1.0,
+          -0.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:61fcb5b0ae51f9a10f83c412220084076f1012a1ce4e8ca6fa4eb882926643af",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        [
+          0.0
+        ],
+        [
+          1.0
+        ]
+      ],
+      "kind": "mvp-constituent-deletion",
+      "numerical_context_digest": "8fde58b9d37715f011fc1544c89256a756e4942e62d4e1d30c8b66a56c144925",
+      "offset": [
+        0.0,
+        0.0
+      ],
+      "orientation": "ordered-subset",
+      "removed_source_slots": [
+        0
+      ],
+      "semantic_conflict_positions": [
+        1,
+        2
+      ],
+      "source_block_id": "block-v1:f4ce2c58c0125a18a18e46be8b337349678c1969f662faa2ab9cc2bb79a35665",
+      "source_pool_indices": [
+        2,
+        3
+      ],
+      "source_slots": [
+        "block-v1:f4ce2c58c0125a18a18e46be8b337349678c1969f662faa2ab9cc2bb79a35665:slot:0",
+        "block-v1:f4ce2c58c0125a18a18e46be8b337349678c1969f662faa2ab9cc2bb79a35665:slot:1"
+      ],
+      "target_family": "single-QE",
+      "target_operator_digests": [
+        "b4803bdf6cda3fea0a5c3ab13bce89cd42977a7e9981c84287c176d308f266f3"
+      ],
+      "target_pool_indices": [
+        3
+      ],
+      "target_slots": [
+        "target:0"
+      ],
+      "units": "radian"
+    },
+    {
+      "candidate_id": "candidate-v1:0639c369e1cd4581a198a3724d6dca0c5c7a71a8e6ac3a66c86b961592ac0959",
+      "constraint_matrix": [
+        [
+          -0.0,
+          1.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:20bce1476f8acfeae6ea5e546725ec28e9f48bd17c49f3b8d92adb9ff2e3bc13",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        [
+          1.0
+        ],
+        [
+          0.0
+        ]
+      ],
+      "kind": "mvp-constituent-deletion",
+      "numerical_context_digest": "8fde58b9d37715f011fc1544c89256a756e4942e62d4e1d30c8b66a56c144925",
+      "offset": [
+        0.0,
+        0.0
+      ],
+      "orientation": "ordered-subset",
+      "removed_source_slots": [
+        1
+      ],
+      "semantic_conflict_positions": [
+        1,
+        2
+      ],
+      "source_block_id": "block-v1:f4ce2c58c0125a18a18e46be8b337349678c1969f662faa2ab9cc2bb79a35665",
+      "source_pool_indices": [
+        2,
+        3
+      ],
+      "source_slots": [
+        "block-v1:f4ce2c58c0125a18a18e46be8b337349678c1969f662faa2ab9cc2bb79a35665:slot:0",
+        "block-v1:f4ce2c58c0125a18a18e46be8b337349678c1969f662faa2ab9cc2bb79a35665:slot:1"
+      ],
+      "target_family": "single-QE",
+      "target_operator_digests": [
+        "abbe2c6e2e6dc28f888cc78188813082264926873b224ad897f32212bea77487"
+      ],
+      "target_pool_indices": [
+        2
+      ],
+      "target_slots": [
+        "target:0"
+      ],
+      "units": "radian"
+    },
+    {
+      "candidate_id": "candidate-v1:b04b773d07cd509bc43b7969446de173304d07d1487f59001df3e6b8f97156c9",
+      "constraint_matrix": [
+        [
+          -0.0,
+          1.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:20bce1476f8acfeae6ea5e546725ec28e9f48bd17c49f3b8d92adb9ff2e3bc13",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        [
+          1.0
+        ],
+        [
+          0.0
+        ]
+      ],
+      "kind": "mvp-to-single-qe",
+      "numerical_context_digest": "8fde58b9d37715f011fc1544c89256a756e4942e62d4e1d30c8b66a56c144925",
+      "offset": [
+        0.0,
+        0.0
+      ],
+      "orientation": "canonical-qe",
+      "removed_source_slots": [
+        1
+      ],
+      "semantic_conflict_positions": [
+        1,
+        2
+      ],
+      "source_block_id": "block-v1:f4ce2c58c0125a18a18e46be8b337349678c1969f662faa2ab9cc2bb79a35665",
+      "source_pool_indices": [
+        2,
+        3
+      ],
+      "source_slots": [
+        "block-v1:f4ce2c58c0125a18a18e46be8b337349678c1969f662faa2ab9cc2bb79a35665:slot:0",
+        "block-v1:f4ce2c58c0125a18a18e46be8b337349678c1969f662faa2ab9cc2bb79a35665:slot:1"
+      ],
+      "target_family": "single-QE",
+      "target_operator_digests": [
+        "abbe2c6e2e6dc28f888cc78188813082264926873b224ad897f32212bea77487"
+      ],
+      "target_pool_indices": [
+        2
+      ],
+      "target_slots": [
+        "target:0"
+      ],
+      "units": "radian"
+    },
+    {
+      "candidate_id": "candidate-v1:32f1e0e2a4678e16e6d11f53c6d9261ec1114f582a97c899806df882087a4462",
+      "constraint_matrix": [
+        [
+          1.0,
+          -0.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:61fcb5b0ae51f9a10f83c412220084076f1012a1ce4e8ca6fa4eb882926643af",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        [
+          0.0
+        ],
+        [
+          1.0
+        ]
+      ],
+      "kind": "mvp-to-single-qe",
+      "numerical_context_digest": "8fde58b9d37715f011fc1544c89256a756e4942e62d4e1d30c8b66a56c144925",
+      "offset": [
+        0.0,
+        0.0
+      ],
+      "orientation": "canonical-qe",
+      "removed_source_slots": [
+        0
+      ],
+      "semantic_conflict_positions": [
+        1,
+        2
+      ],
+      "source_block_id": "block-v1:f4ce2c58c0125a18a18e46be8b337349678c1969f662faa2ab9cc2bb79a35665",
+      "source_pool_indices": [
+        2,
+        3
+      ],
+      "source_slots": [
+        "block-v1:f4ce2c58c0125a18a18e46be8b337349678c1969f662faa2ab9cc2bb79a35665:slot:0",
+        "block-v1:f4ce2c58c0125a18a18e46be8b337349678c1969f662faa2ab9cc2bb79a35665:slot:1"
+      ],
+      "target_family": "single-QE",
+      "target_operator_digests": [
+        "b4803bdf6cda3fea0a5c3ab13bce89cd42977a7e9981c84287c176d308f266f3"
+      ],
+      "target_pool_indices": [
+        3
+      ],
+      "target_slots": [
+        "target:0"
+      ],
+      "units": "radian"
+    },
+    {
+      "candidate_id": "candidate-v1:193ce68c924a53d70f340353b9eb43ff773cd1633fcd976be6cbebd341e7163c",
+      "constraint_matrix": [
+        [
+          -1.0,
+          1.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:b2308ffcbdf6a07fd3ec5dfbe8d19d0b68e9a0c38a8e263fb7bdc08e9ef53ec8",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        [
+          0.9999999999999998
+        ],
+        [
+          0.9999999999999998
+        ]
+      ],
+      "kind": "mvp-to-ovp-sum",
+      "numerical_context_digest": "8fde58b9d37715f011fc1544c89256a756e4942e62d4e1d30c8b66a56c144925",
+      "offset": [
+        0.0,
+        0.0
+      ],
+      "orientation": "sum",
+      "removed_source_slots": [],
+      "semantic_conflict_positions": [
+        1,
+        2
+      ],
+      "source_block_id": "block-v1:f4ce2c58c0125a18a18e46be8b337349678c1969f662faa2ab9cc2bb79a35665",
+      "source_pool_indices": [
+        2,
+        3
+      ],
+      "source_slots": [
+        "block-v1:f4ce2c58c0125a18a18e46be8b337349678c1969f662faa2ab9cc2bb79a35665:slot:0",
+        "block-v1:f4ce2c58c0125a18a18e46be8b337349678c1969f662faa2ab9cc2bb79a35665:slot:1"
+      ],
+      "target_family": "OVP",
+      "target_operator_digests": [
+        "58ccb82b1113408c0723251bda1303bd9ea2cfa912821369760819dbc6884c76"
+      ],
+      "target_pool_indices": [
+        4
+      ],
+      "target_slots": [
+        "target:0"
+      ],
+      "units": "radian"
+    },
+    {
+      "candidate_id": "candidate-v1:290c6aea7e8e6e267a788bfce0309ca9c0d74d40204aca609cb386464a127846",
+      "constraint_matrix": [
+        [
+          1.0,
+          1.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:8fb871f6d8fb36b6d77dcd35af2cbe507c7b659a031072ccc21fa3205698b0a9",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        [
+          0.9999999999999998
+        ],
+        [
+          -0.9999999999999998
+        ]
+      ],
+      "kind": "mvp-to-ovp-diff",
+      "numerical_context_digest": "8fde58b9d37715f011fc1544c89256a756e4942e62d4e1d30c8b66a56c144925",
+      "offset": [
+        0.0,
+        0.0
+      ],
+      "orientation": "diff",
+      "removed_source_slots": [],
+      "semantic_conflict_positions": [
+        1,
+        2
+      ],
+      "source_block_id": "block-v1:f4ce2c58c0125a18a18e46be8b337349678c1969f662faa2ab9cc2bb79a35665",
+      "source_pool_indices": [
+        2,
+        3
+      ],
+      "source_slots": [
+        "block-v1:f4ce2c58c0125a18a18e46be8b337349678c1969f662faa2ab9cc2bb79a35665:slot:0",
+        "block-v1:f4ce2c58c0125a18a18e46be8b337349678c1969f662faa2ab9cc2bb79a35665:slot:1"
+      ],
+      "target_family": "OVP",
+      "target_operator_digests": [
+        "bdc6eb7decce80f545634890fbede9f3b330b0abddbf6c12b7bdf4c3d688a720"
+      ],
+      "target_pool_indices": [
+        5
+      ],
+      "target_slots": [
+        "target:0"
+      ],
+      "units": "radian"
+    },
+    {
+      "candidate_id": "candidate-v1:fa442aaa8aa2ab8dc17d19a0b80fff4a9297e9d636ce9ec51eb253285023326f",
+      "constraint_matrix": [
+        [
+          1.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:9653a4bf3398b22822a5dcee0798d6b1963f3373d6ca57a565ca3934fbad6e42",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        []
+      ],
+      "kind": "block-deletion",
+      "numerical_context_digest": "2ba590d1c59ea658873e38fd3112e7502cfd281176c39f4766a2fb84e7c2487f",
+      "offset": [
+        0.0
+      ],
+      "orientation": "deletion",
+      "removed_source_slots": [
+        0
+      ],
+      "semantic_conflict_positions": [
+        3
+      ],
+      "source_block_id": "block-v1:3e06c7568fe458e35ffc05192d4750ff14da0c071f3c980071b3597ae864d424",
+      "source_pool_indices": [
+        0
+      ],
+      "source_slots": [
+        "block-v1:3e06c7568fe458e35ffc05192d4750ff14da0c071f3c980071b3597ae864d424:slot:0"
+      ],
+      "target_family": "empty",
+      "target_operator_digests": [],
+      "target_pool_indices": [],
+      "target_slots": [],
+      "units": "radian"
+    }
+  ],
+  "claim_boundary": [
+    "This probe validates exact small-pool block and transformation semantics.",
+    "It makes no molecular-energy or circuit-resource performance claim.",
+    "The constrained MVP failure proves native circuit rebuilding is required."
+  ],
+  "probe": {
+    "ansatz_indices": [
+      4,
+      2,
+      3,
+      0
+    ],
+    "coefficients": [
+      0.2,
+      0.3,
+      -0.1,
+      0.4
+    ],
+    "iteration_parameter_counts": [
+      3,
+      4
+    ],
+    "qubits": 4
+  },
+  "schema_version": "1.0.0",
+  "upstream": {
+    "commit": "a3f89d03e6a03c89767d3cf8ee7657a57653dda0",
+    "git_tree": "794d847f5c1be1590d93da81b905a915dfa17d13",
+    "worktree_clean": "true"
+  },
+  "validation": {
+    "generator_unitary_random_state_candidate_ids": [
+      "candidate-v1:a9dbe642deb55cc69fbd01a1342ab2358430f66630037c8b84b682ec5b539f04",
+      "candidate-v1:bb3c3f09aba1304a77417ab9af72277715ec4554129ed65a55e8247f4139918a",
+      "candidate-v1:7a576a40fb57fce29b8c3f757dfab66ae3d5d5797193d2f1699fa242cc3f89d2",
+      "candidate-v1:0639c369e1cd4581a198a3724d6dca0c5c7a71a8e6ac3a66c86b961592ac0959",
+      "candidate-v1:b04b773d07cd509bc43b7969446de173304d07d1487f59001df3e6b8f97156c9",
+      "candidate-v1:32f1e0e2a4678e16e6d11f53c6d9261ec1114f582a97c899806df882087a4462",
+      "candidate-v1:193ce68c924a53d70f340353b9eb43ff773cd1633fcd976be6cbebd341e7163c",
+      "candidate-v1:290c6aea7e8e6e267a788bfce0309ca9c0d74d40204aca609cb386464a127846",
+      "candidate-v1:fa442aaa8aa2ab8dc17d19a0b80fff4a9297e9d636ce9ec51eb253285023326f"
+    ],
+    "mvp_equal_coefficient_in_place_failure": "'YXXX' is not in list",
+    "native_circuit_candidate_ids": [
+      "candidate-v1:7a576a40fb57fce29b8c3f757dfab66ae3d5d5797193d2f1699fa242cc3f89d2",
+      "candidate-v1:0639c369e1cd4581a198a3724d6dca0c5c7a71a8e6ac3a66c86b961592ac0959",
+      "candidate-v1:b04b773d07cd509bc43b7969446de173304d07d1487f59001df3e6b8f97156c9",
+      "candidate-v1:32f1e0e2a4678e16e6d11f53c6d9261ec1114f582a97c899806df882087a4462",
+      "candidate-v1:193ce68c924a53d70f340353b9eb43ff773cd1633fcd976be6cbebd341e7163c",
+      "candidate-v1:290c6aea7e8e6e267a788bfce0309ca9c0d74d40204aca609cb386464a127846"
+    ],
+    "native_circuit_global_phases_real_imag": {
+      "candidate-v1:0639c369e1cd4581a198a3724d6dca0c5c7a71a8e6ac3a66c86b961592ac0959": [
+        [
+          0.7071067811865477,
+          -0.7071067811865476
+        ],
+        [
+          0.7071067811865475,
+          -0.7071067811865476
+        ],
+        [
+          0.7071067811865476,
+          -0.7071067811865476
+        ],
+        [
+          0.7071067811865476,
+          -0.7071067811865476
+        ],
+        [
+          0.7071067811865475,
+          -0.7071067811865476
+        ],
+        [
+          0.7071067811865476,
+          -0.7071067811865477
+        ],
+        [
+          0.7071067811865477,
+          -0.7071067811865477
+        ]
+      ],
+      "candidate-v1:193ce68c924a53d70f340353b9eb43ff773cd1633fcd976be6cbebd341e7163c": [
+        [
+          0.7071067811865475,
+          0.7071067811865475
+        ],
+        [
+          0.7071067811865476,
+          0.7071067811865476
+        ],
+        [
+          0.7071067811865475,
+          0.7071067811865477
+        ],
+        [
+          0.7071067811865478,
+          0.7071067811865476
+        ],
+        [
+          0.7071067811865476,
+          0.7071067811865475
+        ],
+        [
+          0.7071067811865478,
+          0.7071067811865476
+        ],
+        [
+          0.7071067811865476,
+          0.7071067811865475
+        ]
+      ],
+      "candidate-v1:290c6aea7e8e6e267a788bfce0309ca9c0d74d40204aca609cb386464a127846": [
+        [
+          0.7071067811865476,
+          0.7071067811865476
+        ],
+        [
+          0.7071067811865476,
+          0.7071067811865476
+        ],
+        [
+          0.7071067811865477,
+          0.7071067811865476
+        ],
+        [
+          0.7071067811865475,
+          0.7071067811865475
+        ],
+        [
+          0.7071067811865475,
+          0.7071067811865475
+        ],
+        [
+          0.7071067811865477,
+          0.7071067811865476
+        ],
+        [
+          0.7071067811865478,
+          0.7071067811865476
+        ]
+      ],
+      "candidate-v1:32f1e0e2a4678e16e6d11f53c6d9261ec1114f582a97c899806df882087a4462": [
+        [
+          0.7071067811865475,
+          -0.7071067811865477
+        ],
+        [
+          0.7071067811865475,
+          -0.7071067811865476
+        ],
+        [
+          0.7071067811865475,
+          -0.7071067811865477
+        ],
+        [
+          0.7071067811865477,
+          -0.7071067811865476
+        ],
+        [
+          0.7071067811865476,
+          -0.7071067811865476
+        ],
+        [
+          0.7071067811865477,
+          -0.7071067811865476
+        ],
+        [
+          0.7071067811865477,
+          -0.7071067811865477
+        ]
+      ],
+      "candidate-v1:7a576a40fb57fce29b8c3f757dfab66ae3d5d5797193d2f1699fa242cc3f89d2": [
+        [
+          0.7071067811865475,
+          -0.7071067811865477
+        ],
+        [
+          0.7071067811865475,
+          -0.7071067811865476
+        ],
+        [
+          0.7071067811865475,
+          -0.7071067811865477
+        ],
+        [
+          0.7071067811865477,
+          -0.7071067811865476
+        ],
+        [
+          0.7071067811865476,
+          -0.7071067811865476
+        ],
+        [
+          0.7071067811865477,
+          -0.7071067811865476
+        ],
+        [
+          0.7071067811865477,
+          -0.7071067811865477
+        ]
+      ],
+      "candidate-v1:b04b773d07cd509bc43b7969446de173304d07d1487f59001df3e6b8f97156c9": [
+        [
+          0.7071067811865477,
+          -0.7071067811865476
+        ],
+        [
+          0.7071067811865475,
+          -0.7071067811865476
+        ],
+        [
+          0.7071067811865476,
+          -0.7071067811865476
+        ],
+        [
+          0.7071067811865476,
+          -0.7071067811865476
+        ],
+        [
+          0.7071067811865475,
+          -0.7071067811865476
+        ],
+        [
+          0.7071067811865476,
+          -0.7071067811865477
+        ],
+        [
+          0.7071067811865477,
+          -0.7071067811865477
+        ]
+      ]
+    },
+    "native_circuit_seed": 43,
+    "native_target_rebuild_required": true,
+    "samples_per_candidate": 7,
+    "semantic_seed": 41,
+    "tolerance": 1e-10
+  }
+}
