@@ -215,6 +215,7 @@ name = "dvg-obs-ceo"
 version = "0.1.0.dev0"
 source = { editable = "." }
 dependencies = [
+    { name = "jsonschema" },
     { name = "numpy" },
     { name = "scipy" },
 ]
@@ -227,13 +228,12 @@ baseline = [
     { name = "qiskit" },
 ]
 test = [
-    { name = "jsonschema" },
     { name = "pytest" },
 ]
 
 [package.metadata]
 requires-dist = [
-    { name = "jsonschema", marker = "extra == 'test'", specifier = "==4.23.0" },
+    { name = "jsonschema", specifier = "==4.23.0" },
     { name = "numpy", specifier = "==1.23.5" },
     { name = "openfermion", marker = "extra == 'baseline'", specifier = "==1.5.1" },
     { name = "openfermionpyscf", marker = "extra == 'baseline'", specifier = "==0.5" },

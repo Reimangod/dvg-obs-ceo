@@ -10,6 +10,7 @@ readme = "README.md"
 requires-python = ">=3.10,<3.11"
 license = {text = "Apache-2.0"}
 dependencies = [
+  "jsonschema==4.23.0",
   "numpy==1.23.5",
   "scipy==1.10.1",
 ]
@@ -23,7 +24,6 @@ baseline = [
 ]
 test = [
   "pytest==8.3.5",
-  "jsonschema==4.23.0",
 ]
 
 [project.scripts]
