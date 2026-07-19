@@ -15,10 +15,20 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
+baseline = [
+  "openfermion==1.5.1",
+  "openfermionpyscf==0.5",
+  "pyscf==2.2.0",
+  "qiskit==0.43.3",
+]
 test = [
   "pytest==8.3.5",
   "jsonschema==4.23.0",
 ]
+
+[project.scripts]
+dvg-obs-baseline = "dvg_obs_ceo.baseline:main"
+dvg-obs-parity = "dvg_obs_ceo.parity:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
@@ -26,4 +36,3 @@ where = ["src"]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 addopts = "-ra --strict-markers"
-

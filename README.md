@@ -20,5 +20,6 @@ No performance claim is permitted until the stage gates in
 ## Current status
 
 - S0 repository isolation: complete
-- S1 baseline parity: not started
+- S1 baseline parity: complete
+- S2 telemetry and scientific identity: not started
 - Molecular compression experiments: forbidden until S3 and S7 gates pass

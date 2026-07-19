@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0.0",
+  "stage": "S1",
+  "status": "complete",
+  "completed_at": "2026-07-20",
+  "baseline": {
+    "algorithm": "CEO-ADAPT-VQE*",
+    "pool": "DVG_CEO",
+    "upstream_commit": "a3f89d03e6a03c89767d3cf8ee7657a57653dda0",
+    "upstream_git_tree": "794d847f5c1be1590d93da81b905a915dfa17d13"
+  },
+  "environment": {
+    "python": "3.10.19",
+    "numpy": "1.23.5",
+    "scipy": "1.10.1",
+    "qiskit": "0.43.3",
+    "pyscf": "2.2.0",
+    "openfermion": "1.5.1",
+    "openfermionpyscf": "0.5",
+    "build_tool_only": "cmake 3.27.9",
+    "blas_thread_count": 1,
+    "dependency_lock_sha256": "500e6c1b94ba29ce704141178f7869baf100c79fed195d64f47a9a21f1d5fe88"
+  },
+  "verification": {
+    "h2_smoke_passed": true,
+    "lih_parity_passed": true,
+    "unit_tests_passed": 7,
+    "fresh_lih_result_sha256": "67385a07e128c4a21b1cbccec320ac1feacff12fc7ba0713a5569cc5c8b893b2",
+    "parity_report_sha256": "c24f94ac3fac5130dc0f144637fe88648e686f2f5758fe16a9c37e9f7076def0",
+    "h2_smoke_sha256": "7519961f88c1a27d1531bf9e368e7392071f17915a917524e297aa46205de591"
+  },
+  "observed_lih": {
+    "first_chemical_accuracy_iteration": 5,
+    "energy_hartree": -7.797909682469515,
+    "absolute_error_hartree": 0.0009334770328921493,
+    "parameter_count": 15,
+    "cnot_count": 107,
+    "cnot_depth": 30,
+    "nfev": 166,
+    "ngev_component_equivalent": 1580,
+    "wall_time_seconds": 59.4350075830007,
+    "paper_measurement_cost": null
+  },
+  "excluded_failure": {
+    "artifact_sha256": "c843344f8b1056916f96a3086bc24d9e58a7c84dba7f5387c5500c7708b5e436",
+    "reason": "process-wide CLI argument collision with PySCF output handling",
+    "used_in_parity": false
+  },
+  "claim_boundary": [
+    "S1 establishes exact baseline parity in the recorded environment.",
+    "S1 does not establish DVG-OBS-CEO performance.",
+    "nfev and ngev are not paper-equivalent measurement cost."
+  ]
+}
+
