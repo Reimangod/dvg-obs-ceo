@@ -47,8 +47,6 @@ def validate_bundle(bundle: Path) -> dict[str, Any]:
         "candidate-catalog.json",
         "all-candidates.jsonl",
         "all-candidates.csv",
-        "checkpoint-h2-1.5-iteration-1.json",
-        "checkpoint-h4-1.5-first-chemical-accuracy.json",
     )
     checks: dict[str, bool] = {
         "required_files": all((bundle / name).is_file() for name in required),
@@ -56,6 +54,13 @@ def validate_bundle(bundle: Path) -> dict[str, Any]:
     if not checks["required_files"]:
         raise ValueError("S8 bundle is missing required files")
     summary = json.loads((bundle / "summary.json").read_text(encoding="utf-8"))
+    expected_checkpoints = tuple(
+        f"checkpoint-{checkpoint['case_id']}.json"
+        for checkpoint in summary["checkpoints"]
+    )
+    checks["checkpoint_files"] = all(
+        (bundle / name).is_file() for name in expected_checkpoints
+    )
     catalog = json.loads((bundle / "candidate-catalog.json").read_text(encoding="utf-8"))
     rows = [
         json.loads(line)

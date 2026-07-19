@@ -94,7 +94,11 @@ def _algorithm(case_id: str) -> tuple[Any, Any]:
     molecules = importlib.import_module("adaptvqe.molecules")
     if case_id == "h2-1.5-iteration-1":
         molecule = create_h2(1.5)
-    elif case_id == "h4-1.5-first-chemical-accuracy":
+    elif case_id in {
+        "h4-1.5-first-chemical-accuracy",
+        "h4-1.5-iteration-8",
+        "h4-1.5-iteration-12-or-convergence",
+    }:
         molecule = molecules.create_h4(1.5)
     else:
         raise ValueError(f"unregistered S8 case: {case_id}")
@@ -148,6 +152,8 @@ def _build_checkpoint(case_id: str) -> tuple[Any, Any, AnsatzStructure, dict[str
                 break
             if case_id == "h4-1.5-first-chemical-accuracy" and error < CHEMICAL_ACCURACY_HARTREE:
                 break
+            if case_id == "h4-1.5-iteration-8" and iteration == 8:
+                break
             if finished:
                 break
     if not capture.records:
@@ -155,6 +161,8 @@ def _build_checkpoint(case_id: str) -> tuple[Any, Any, AnsatzStructure, dict[str
     if case_id == "h4-1.5-first-chemical-accuracy":
         if not trajectory or trajectory[-1]["absolute_error_hartree"] >= CHEMICAL_ACCURACY_HARTREE:
             raise RuntimeError("registered H4 checkpoint did not reach chemical accuracy by iteration 12")
+    if case_id == "h4-1.5-iteration-8" and trajectory[-1]["adapt_iteration"] != 8:
+        raise RuntimeError("registered H4 iteration-8 checkpoint converged before iteration 8")
     structure = AnsatzStructure.create(algorithm.indices, algorithm.coefficients, counts)
     last_capture = capture.records[-1]
     inverse_hessian = np.asarray(algorithm.inv_hessian, dtype=np.float64)
@@ -601,7 +609,16 @@ def _write_plots(directory: Path, rows: Sequence[Mapping[str, Any]]) -> list[str
     return outputs
 
 
-def run_probe(bundle: Path, *, resume: bool = False) -> dict[str, Any]:
+def run_cases(
+    bundle: Path,
+    *,
+    cases: Sequence[str],
+    artifact_kind: str,
+    protocol_tag: str,
+    protocol_amendment_tag: str | None,
+    claim_boundary: Sequence[str],
+    resume: bool = False,
+) -> dict[str, Any]:
     provenance = verify_upstream()
     if bundle.exists():
         raise FileExistsError(f"refusing to overwrite completed S8 bundle: {bundle}")
@@ -615,7 +632,6 @@ def run_probe(bundle: Path, *, resume: bool = False) -> dict[str, Any]:
     checkpoints: list[dict[str, Any]] = []
     catalog: list[dict[str, Any]] = []
     warning_records: list[warnings.WarningMessage] = []
-    cases = ("h2-1.5-iteration-1", "h4-1.5-first-chemical-accuracy")
     for case_id in cases:
         with warnings.catch_warnings(record=True) as captured:
             warnings.simplefilter("always")
@@ -708,10 +724,10 @@ def run_probe(bundle: Path, *, resume: bool = False) -> dict[str, Any]:
     )
     summary = {
         "schema_version": "1.0.0",
-        "artifact_kind": "s8-h2-h4-predictor-calibration",
+        "artifact_kind": artifact_kind,
         "calibration_version": CALIBRATION_VERSION,
-        "protocol_tag": "dvg-obs-s8-calibration-protocol-v1",
-        "protocol_amendment_tag": "dvg-obs-s8-calibration-protocol-amendment-1",
+        "protocol_tag": protocol_tag,
+        "protocol_amendment_tag": protocol_amendment_tag,
         "upstream": provenance,
         "environment": _environment(),
         "checkpoints": [
@@ -743,12 +759,7 @@ def run_probe(bundle: Path, *, resume: bool = False) -> dict[str, Any]:
         },
         "plots": plots,
         "paper_measurement_cost": None,
-        "claim_boundary": [
-            "H2/H4 are non-blind development systems used only for selector calibration.",
-            "Failed candidates and optimizer failures are retained and counted.",
-            "nfev/njev and statevector work are not paper-equivalent measurement cost.",
-            "No LiH or out-of-sample performance claim is made at S8.",
-        ],
+        "claim_boundary": list(claim_boundary),
     }
     _write_atomic_json(staging / "summary.json", summary)
     _fsync_directory(staging)
@@ -756,6 +767,23 @@ def run_probe(bundle: Path, *, resume: bool = False) -> dict[str, Any]:
     os.replace(staging, bundle)
     _fsync_directory(bundle.parent)
     return summary
+
+
+def run_probe(bundle: Path, *, resume: bool = False) -> dict[str, Any]:
+    return run_cases(
+        bundle,
+        cases=("h2-1.5-iteration-1", "h4-1.5-first-chemical-accuracy"),
+        artifact_kind="s8-h2-h4-predictor-calibration",
+        protocol_tag="dvg-obs-s8-calibration-protocol-v1",
+        protocol_amendment_tag="dvg-obs-s8-calibration-protocol-amendment-1",
+        claim_boundary=(
+            "H2/H4 are non-blind development systems used only for selector calibration.",
+            "Failed candidates and optimizer failures are retained and counted.",
+            "nfev/njev and statevector work are not paper-equivalent measurement cost.",
+            "No LiH or out-of-sample performance claim is made at S8.",
+        ),
+        resume=resume,
+    )
 
 
 def main() -> None:
