@@ -71,3 +71,14 @@ def test_finite_shot_or_noncanonical_request_fails_closed() -> None:
         canonical_pauli_string("A0")
     with pytest.raises(MeasurementReuseError, match="repeats"):
         canonical_pauli_string("X0 Z0")
+
+
+def test_aggregate_ledger_does_not_retain_events_but_keeps_chain_digest() -> None:
+    cache = ExactPauliReuseCache(enabled=True, retain_events=False)
+    cache.evaluate(request(), lambda _: 0.5)
+    report = cache.report(include_events=True)
+    assert report["requests"] == 1
+    assert report["retain_events"] is False
+    assert "events" not in report
+    assert report["event_ledger_digest"] is None
+    assert report["event_chain_digest"] != "0" * 64

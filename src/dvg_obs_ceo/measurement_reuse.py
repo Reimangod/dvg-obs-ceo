@@ -91,10 +91,13 @@ class ExactPauliRecord:
 class ExactPauliReuseCache:
     """In-memory exact cache with a deterministic request/hit ledger."""
 
-    def __init__(self, *, enabled: bool) -> None:
+    def __init__(self, *, enabled: bool, retain_events: bool = True) -> None:
         self.enabled = bool(enabled)
+        self.retain_events = bool(retain_events)
         self._records: dict[str, ExactPauliRecord] = {}
         self._events: list[dict[str, Any]] = []
+        self._requests = 0
+        self._event_chain_digest = "0" * 64
         self._fresh_evaluations = 0
         self._cache_hits = 0
 
@@ -126,29 +129,38 @@ class ExactPauliReuseCache:
             source_context = request.measurement_context_id
             if self.enabled:
                 self._records[key] = record
-        self._events.append({
-            "sequence": len(self._events),
+        event = {
+            "sequence": self._requests,
             "semantic_key": key,
             "pauli_string": request.pauli_string,
             "requested_measurement_context_id": request.measurement_context_id,
             "source_measurement_context_id": source_context,
             "disposition": disposition,
             "value_float64_hex": canonical_float64_hex((value,))[0],
+        }
+        self._event_chain_digest = sha256_hex({
+            "previous_event_chain_digest": self._event_chain_digest,
+            "event": event,
         })
+        self._requests += 1
+        if self.retain_events:
+            self._events.append(event)
         return value
 
     def report(self, *, include_events: bool = True) -> dict[str, Any]:
         value = {
             "policy_version": POLICY_VERSION,
             "enabled": self.enabled,
+            "retain_events": self.retain_events,
             "exact_noiseless_only": True,
-            "requests": len(self._events),
+            "requests": self._requests,
             "fresh_pauli_expectation_evaluations": self._fresh_evaluations,
             "cache_hits": self._cache_hits,
             "unique_cached_records": len(self._records),
-            "event_ledger_digest": sha256_hex(self._events),
+            "event_ledger_digest": sha256_hex(self._events) if self.retain_events else None,
+            "event_chain_digest": self._event_chain_digest,
             "paper_measurement_cost": None,
         }
-        if include_events:
+        if include_events and self.retain_events:
             value["events"] = list(self._events)
         return value

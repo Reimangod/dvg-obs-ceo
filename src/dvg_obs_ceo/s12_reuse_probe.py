@@ -25,7 +25,7 @@ from .identity import (
 from .measurement_reuse import ExactPauliRequest, ExactPauliReuseCache
 
 
-PROTOCOL_ID = "dvg-obs-s12-exact-ogm-reuse-protocol-v1.1"
+PROTOCOL_ID = "dvg-obs-s12-exact-ogm-reuse-protocol-v1.2"
 PROTOCOL_TAG = PROTOCOL_ID
 REQUIRED_THREADS = {"OMP_NUM_THREADS": "1", "OPENBLAS_NUM_THREADS": "1", "MKL_NUM_THREADS": "1"}
 BACKEND_CONTEXT_DIGEST = hashlib.sha256(b"pinned-scipy-sparse-exact-statevector-no-shots-v1").hexdigest()
@@ -200,7 +200,7 @@ def _expectation(operator: Any, values: dict[str, float]) -> float:
     return float(result.real)
 
 
-def run(case: str, bundle: Path) -> dict[str, Any]:
+def run(case: str, bundle: Path, *, retain_events: bool = False) -> dict[str, Any]:
     freeze = verify_freeze()
     upstream = verify_upstream()
     if bundle.exists():
@@ -269,7 +269,7 @@ def run(case: str, bundle: Path) -> dict[str, Any]:
     branches = {}
     reconstructed = {}
     for name, enabled in (("reuse_off", False), ("reuse_on", True)):
-        cache = ExactPauliReuseCache(enabled=enabled)
+        cache = ExactPauliReuseCache(enabled=enabled, retain_events=retain_events)
         energy_values = _measure_labels(energy_labels, cache, energy_context, evaluator)
         energy = _expectation(hamiltonian, energy_values)
         gradient_values = _measure_labels(gradient_labels, cache, gradient_context, evaluator)
@@ -322,6 +322,7 @@ def run(case: str, bundle: Path) -> dict[str, Any]:
         "artifact_kind": "s12-exact-ogm-aware-measurement-reuse-probe",
         "protocol_id": PROTOCOL_ID,
         "case": case,
+        "raw_event_retention": retain_events,
         "execution_freeze": freeze,
         "upstream": upstream,
         "source": {"path": source["_source_path"], "sha256": source["_source_sha256"]},
@@ -366,9 +367,10 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--case", choices=("h2-1.5", "lih-3.0"), required=True)
     parser.add_argument("--bundle", type=Path, required=True)
+    parser.add_argument("--retain-events", action="store_true")
     arguments = parser.parse_args()
     sys.argv[:] = [sys.argv[0]]
-    result = run(arguments.case, arguments.bundle)
+    result = run(arguments.case, arguments.bundle, retain_events=arguments.retain_events)
     print(json.dumps({
         "bundle": str(arguments.bundle),
         "passed": result["passed"],

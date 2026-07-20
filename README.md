@@ -32,4 +32,4 @@ No performance claim is permitted until the stage gates in
 - S9 conservative selector freeze: complete and immutable before LiH
 - S10 paired LiH execution: complete (promising candidate rejected by frozen KKT gate and fully rolled back)
 - S11 direct normal ADAPT / CEO* / V2 comparison: complete; GSD paper CNOT/depth parity reproduced, V2 primary unchanged after rollback
-- S12 measurement-reuse extension: next; paper-equivalent measurement accounting remains a hard gate
+- S12 exact OGM-aware term reuse: calibrated; correct but not adopted by default (LiH fresh exact-Pauli kernels reduced only 0.07125%)
