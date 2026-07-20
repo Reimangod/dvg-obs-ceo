@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0.0",
+  "artifact_kind": "s10-baseline-parity-failure",
+  "protocol_tag": "dvg-obs-s10-lih-primary-protocol-v1.1",
+  "commit": "a181c4c",
+  "failure_stage": "after-shared-checkpoint-optimization-before-pruning",
+  "adapt_iterations_executed": 5,
+  "pruning_candidates_selected": 0,
+  "energy_hartree": -7.79790968246952,
+  "registered_energy_hartree": -7.797909682469515,
+  "observed_ansatz_indices": [970, 588, 946, 602, 1178, 952, 612, 1136, 940, 618, 1182, 14, 10, 4, 9],
+  "registered_ansatz_indices": [970, 588, 946, 612, 1160, 952, 602, 1154, 940, 618, 1182, 14, 10, 4, 9],
+  "error_type": "S10Error",
+  "error": "LiH first-accuracy ansatz differs from the registered baseline",
+  "root_cause_evidence": {
+    "canonical_artifact_blas_threads": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1"
+    },
+    "failed_process_blas_threads": {
+      "OMP_NUM_THREADS": null,
+      "OPENBLAS_NUM_THREADS": null,
+      "MKL_NUM_THREADS": null
+    },
+    "mechanism": "The pinned implementation compares near-degenerate gradients at floating-point precision; BLAS reduction order can change equivalent tied choices."
+  },
+  "disposition": "superseded-by-protocol-v1.2-with-single-thread-preflight",
+  "scientific_result": null
+}

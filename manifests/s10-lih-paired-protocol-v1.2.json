@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0.0",
+  "protocol_id": "dvg-obs-s10-lih-paired-protocol-v1.2",
+  "supersedes": "dvg-obs-s10-lih-paired-protocol-v1.1",
+  "registered_at": "2026-07-20",
+  "execution_tag": "dvg-obs-s10-lih-primary-protocol-v1.2",
+  "amendment_reason": "Version 1.1 reproduced iteration and energy but used unset BLAS thread variables and selected a different near-degenerate operator representation. Version 1.2 requires the canonical artifact's single-thread environment before process start. No pruning decision executed under v1.1.",
+  "numerical_environment_preflight": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "fail_closed_before_molecule_construction": true
+  },
+  "source_checkpoint": {
+    "problem_manifest": "manifests/baseline-lih-3a-v1.json",
+    "molecule": "LiH",
+    "distance_angstrom": 3.0,
+    "checkpoint_rule": "first-strictly-below-pinned-upstream-chemical-accuracy",
+    "pinned_upstream_chemical_accuracy_hartree": 0.0015936,
+    "exact_one_kcal_per_mol_hartree_in_baseline_manifest": 0.0015936014376405157,
+    "expected_adapt_iteration": 5,
+    "generated_once_then-cloned": true
+  },
+  "paired_branches": ["exact-no-pruning-clone", "dvg-obs-ceo-selector-v1"],
+  "selector": {
+    "freeze_tag": "dvg-obs-s9-selector-v1",
+    "digest": "09823d0d82b3029ff7f25eeb2d5e22a6208e4029cdcf6ba28365339cf0a62216",
+    "predictor": "general_constraint_obs",
+    "primary_max_accepted_rounds": 1,
+    "maximum_candidates_optimized": 1,
+    "no_selection_is_valid": true
+  },
+  "acceptance": {
+    "version": "runtime-kkt-cumulative-resource-guard-v2",
+    "cumulative_energy_budget_hartree": 0.0001,
+    "budget_reference": "immutable-source-checkpoint-energy",
+    "fci_is_pruning_selector_or_acceptance_input": false,
+    "projection_on_first": true,
+    "projection_off_once_only_if_primary_status_false": true,
+    "stop_after_rejection": true
+  },
+  "resource_accounting": {
+    "definition": "paper-era-full-circuit-resource-v1",
+    "global_compilation": false,
+    "barriers_retained": true,
+    "structural_coefficients_for_preselection": true,
+    "physical_and_structural_recount_must_match_after_optimization": true
+  },
+  "work_accounting": {
+    "all-selected-candidate-primary-and-fallback-work-counted": true,
+    "paper_measurement_cost": null,
+    "statevector_kernel_count_is-explicit-lower-bound": true
+  },
+  "claim_boundary": [
+    "LiH was observed during baseline reconstruction and is not a blind holdout.",
+    "FCI error defines the shared first-accuracy source checkpoint and offline evaluation, but never selects or accepts pruning.",
+    "The v1 and v1.1 failures are retained; neither executed a pruning decision.",
+    "No selector threshold, resource priority, or fallback changed across protocol amendments.",
+    "A no-selection or rollback result is valid and must be reported.",
+    "Work counters are not paper-equivalent measurement cost."
+  ]
+}

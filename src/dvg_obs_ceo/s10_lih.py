@@ -49,9 +49,9 @@ from .transaction import (
 )
 
 
-PROTOCOL_ID = "dvg-obs-s10-lih-paired-protocol-v1.1"
-PROTOCOL_TAG = "dvg-obs-s10-lih-primary-protocol-v1.1"
-RUNNER_VERSION = "s10-lih-paired-runner-v1.1"
+PROTOCOL_ID = "dvg-obs-s10-lih-paired-protocol-v1.2"
+PROTOCOL_TAG = "dvg-obs-s10-lih-primary-protocol-v1.2"
+RUNNER_VERSION = "s10-lih-paired-runner-v1.2"
 SELECTOR_DIGEST = "09823d0d82b3029ff7f25eeb2d5e22a6208e4029cdcf6ba28365339cf0a62216"
 CHEMICAL_ACCURACY_HARTREE = 0.0015936
 EXPECTED_ENERGY_HARTREE = -7.797909682469515
@@ -59,6 +59,11 @@ EXPECTED_FCI_HARTREE = -7.7988431595024075
 EXPECTED_INDICES = (970, 588, 946, 612, 1160, 952, 602, 1154, 940, 618, 1182, 14, 10, 4, 9)
 EXPECTED_COUNTS = (2, 5, 8, 11, 15)
 SUMMARY_SCHEMA = ROOT / "schemas" / "s10-comparison-summary-v1.schema.json"
+REQUIRED_THREAD_ENVIRONMENT = {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+}
 
 
 class S10Error(RuntimeError):
@@ -88,7 +93,20 @@ def verify_execution_freeze() -> dict[str, str]:
     config = SelectorConfig()
     if config.digest != SELECTOR_DIGEST:
         raise S10Error("runtime selector digest differs from the frozen S9 selector")
-    return {"head": head, "protocol_tag": PROTOCOL_TAG, "selector_digest": config.digest}
+    observed_threads = {
+        name: os.environ.get(name) for name in REQUIRED_THREAD_ENVIRONMENT
+    }
+    if observed_threads != REQUIRED_THREAD_ENVIRONMENT:
+        raise S10Error(
+            "S10 requires canonical single-thread BLAS environment before process start: "
+            + repr(observed_threads)
+        )
+    return {
+        "head": head,
+        "protocol_tag": PROTOCOL_TAG,
+        "selector_digest": config.digest,
+        **REQUIRED_THREAD_ENVIRONMENT,
+    }
 
 
 def _write_exclusive(path: Path, value: Any) -> None:

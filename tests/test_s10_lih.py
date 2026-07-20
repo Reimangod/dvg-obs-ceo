@@ -44,11 +44,12 @@ def test_selected_candidate_work_counts_primary_and_fallback() -> None:
 
 
 def test_s10_protocol_forbids_fci_in_runtime_acceptance() -> None:
-    protocol = json.loads(open("manifests/s10-lih-paired-protocol-v1.1.json", encoding="utf-8").read())
+    protocol = json.loads(open("manifests/s10-lih-paired-protocol-v1.2.json", encoding="utf-8").read())
     assert protocol["protocol_id"] == PROTOCOL_ID
     assert protocol["selector"]["digest"] == SELECTOR_DIGEST
     assert protocol["acceptance"]["fci_is_pruning_selector_or_acceptance_input"] is False
     assert protocol["work_accounting"]["paper_measurement_cost"] is None
+    assert set(protocol["numerical_environment_preflight"].values()) >= {"1", True}
 
 
 def test_s10_summary_schema_accepts_no_selection() -> None:
