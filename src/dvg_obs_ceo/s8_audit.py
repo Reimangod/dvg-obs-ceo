@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import csv
 import json
+import math
 import os
 from pathlib import Path
 from typing import Any
@@ -23,6 +24,13 @@ PREDICTORS = (
     "exact_hessian_oracle",
 )
 
+# scipy/numpy reductions can differ in the last few bits across supported CPU
+# architectures.  These tolerances apply only to independently recomputed
+# descriptive metrics; candidate decisions and scientific thresholds remain
+# exact checks below.
+METRIC_ABSOLUTE_TOLERANCE = 1e-14
+METRIC_RELATIVE_TOLERANCE = 1e-12
+
 
 def _digest(value: Any) -> str:
     return hashlib.sha256(canonical_json_bytes(value)).hexdigest()
@@ -39,6 +47,78 @@ def _measurement_cost_values(value: Any) -> list[Any]:
         for item in value:
             result.extend(_measurement_cost_values(item))
     return result
+
+
+def compare_recomputed_metrics(
+    observed: Any,
+    recorded: Any,
+    *,
+    absolute_tolerance: float = METRIC_ABSOLUTE_TOLERANCE,
+    relative_tolerance: float = METRIC_RELATIVE_TOLERANCE,
+) -> dict[str, Any]:
+    """Compare metric trees while keeping non-floating fields exact.
+
+    The returned diagnostics make the cross-platform allowance auditable.  A
+    boolean, integer, string, key, or sequence difference is never softened.
+    """
+
+    mismatches: list[str] = []
+    float_comparisons = 0
+    max_absolute_difference = 0.0
+    max_relative_difference = 0.0
+
+    def visit(left: Any, right: Any, path: str) -> None:
+        nonlocal float_comparisons, max_absolute_difference, max_relative_difference
+        if isinstance(left, dict) and isinstance(right, dict):
+            if set(left) != set(right):
+                mismatches.append(f"{path}:keys")
+                return
+            for key in sorted(left):
+                visit(left[key], right[key], f"{path}.{key}")
+            return
+        if isinstance(left, list) and isinstance(right, list):
+            if len(left) != len(right):
+                mismatches.append(f"{path}:length")
+                return
+            for index, (left_item, right_item) in enumerate(zip(left, right)):
+                visit(left_item, right_item, f"{path}[{index}]")
+            return
+        if isinstance(left, bool) or isinstance(right, bool):
+            if type(left) is not type(right) or left != right:
+                mismatches.append(path)
+            return
+        if isinstance(left, float) and isinstance(right, float):
+            float_comparisons += 1
+            if not (math.isfinite(left) and math.isfinite(right)):
+                if left != right:
+                    mismatches.append(path)
+                return
+            absolute_difference = abs(left - right)
+            scale = max(abs(left), abs(right))
+            relative_difference = absolute_difference / scale if scale else 0.0
+            max_absolute_difference = max(max_absolute_difference, absolute_difference)
+            max_relative_difference = max(max_relative_difference, relative_difference)
+            if not math.isclose(
+                left,
+                right,
+                abs_tol=absolute_tolerance,
+                rel_tol=relative_tolerance,
+            ):
+                mismatches.append(path)
+            return
+        if type(left) is not type(right) or left != right:
+            mismatches.append(path)
+
+    visit(observed, recorded, "metrics")
+    return {
+        "passed": not mismatches,
+        "absolute_tolerance": absolute_tolerance,
+        "relative_tolerance": relative_tolerance,
+        "float_comparisons": float_comparisons,
+        "max_absolute_difference": max_absolute_difference,
+        "max_relative_difference": max_relative_difference,
+        "mismatch_paths": mismatches,
+    }
 
 
 def validate_bundle(bundle: Path) -> dict[str, Any]:
@@ -119,7 +199,10 @@ def validate_bundle(bundle: Path) -> dict[str, Any]:
         }
     )
     recomputed_metrics = [calibration_metrics(successful, method) for method in PREDICTORS]
-    checks["metrics_recomputed_exactly"] = recomputed_metrics == summary["metrics"]
+    metric_comparison = compare_recomputed_metrics(recomputed_metrics, summary["metrics"])
+    checks["metrics_recomputed_within_cross_platform_tolerance"] = metric_comparison[
+        "passed"
+    ]
     checkpoint_digests: dict[str, str] = {}
     for name in expected_checkpoints:
         path = bundle / name
@@ -138,11 +221,12 @@ def validate_bundle(bundle: Path) -> dict[str, Any]:
     checks["csv_success_rows"] = len(csv_rows) == len(successful)
     checks["plots_exist"] = all((bundle / name).is_file() for name in summary["plots"])
     audit = {
-        "schema_version": "1.0.0",
+        "schema_version": "1.1.0",
         "artifact_kind": "s8-calibration-bundle-independent-audit",
         "bundle": str(bundle),
         "passed": all(checks.values()),
         "checks": checks,
+        "metric_recomputation": metric_comparison,
         "checkpoint_digests": checkpoint_digests,
         "catalog_candidates": len(catalog),
         "executed_candidates": len(rows),

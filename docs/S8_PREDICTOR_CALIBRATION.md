@@ -84,6 +84,14 @@ equivalence counts, every safe conjunction, primary-path binding, metrics, CSV
 row counts, plot presence, and the absence of invented paper measurement cost.
 All checks passed. The full software suite passed 73 tests.
 
+The metric recomputation audit uses absolute tolerance `1e-14` and relative
+tolerance `1e-12` only for floating descriptive statistics produced by
+SciPy/NumPy. This prevents last-bit CPU/BLAS differences from failing CI while
+recording the maximum observed difference and mismatch paths. Discrete fields,
+candidate decisions, safety predicates, scientific thresholds, IDs, and
+digests still require exact equality. This audit tolerance does not alter any
+selector, optimizer, or reported molecular result.
+
 S8's registered primary run is complete, but S9 cannot estimate positive-class
 precision/recall from it. A separately preregistered later-checkpoint H4
 calibration is required before freezing a selector. That extension must retain
