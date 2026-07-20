@@ -1,0 +1,218 @@
+{
+  "assessments": [
+    {
+      "candidate_id": "candidate-v1:073ec39f670f3f44e600b9ddecb483eebff5092b4ac9a650dd34912f32caba32",
+      "eligible": false,
+      "predicted_cumulative_change_hartree": 0.012840441858941287,
+      "rejection_reasons": [
+        "predicted-cumulative-energy-budget"
+      ],
+      "resource_delta": {
+        "cnot_count": -9,
+        "cnot_depth": 0,
+        "logical_block_count": -1,
+        "parameter_count": -1,
+        "total_depth": -13
+      }
+    },
+    {
+      "candidate_id": "candidate-v1:b7f2fc067bbe96ba4f67869bb054403354c725650d2746554abc4f9a5253740d",
+      "eligible": true,
+      "predicted_cumulative_change_hartree": 2.6860444669330193e-05,
+      "rejection_reasons": [],
+      "resource_delta": {
+        "cnot_count": -9,
+        "cnot_depth": 0,
+        "logical_block_count": -1,
+        "parameter_count": -1,
+        "total_depth": -13
+      }
+    },
+    {
+      "candidate_id": "candidate-v1:c3afa8b329ffd8286e39f79b02f679207573c91397da9c2cae3cc50b9892294b",
+      "eligible": false,
+      "predicted_cumulative_change_hartree": 0.018408978444567715,
+      "rejection_reasons": [
+        "predicted-cumulative-energy-budget"
+      ],
+      "resource_delta": {
+        "cnot_count": -9,
+        "cnot_depth": 0,
+        "logical_block_count": -1,
+        "parameter_count": -1,
+        "total_depth": -13
+      }
+    },
+    {
+      "candidate_id": "candidate-v1:21b274206af9bfe8968d678a243f176833274f9ffb0ad092533526a6a7641b74",
+      "eligible": true,
+      "predicted_cumulative_change_hartree": 3.400452673897747e-05,
+      "rejection_reasons": [],
+      "resource_delta": {
+        "cnot_count": -9,
+        "cnot_depth": 0,
+        "logical_block_count": -1,
+        "parameter_count": -1,
+        "total_depth": -13
+      }
+    },
+    {
+      "candidate_id": "candidate-v1:45876591e4949a3c45459ef962137b64819e1ed09f6c43bbbf500796a7928004",
+      "eligible": true,
+      "predicted_cumulative_change_hartree": 1.0217525759870273e-06,
+      "rejection_reasons": [],
+      "resource_delta": {
+        "cnot_count": -9,
+        "cnot_depth": 0,
+        "logical_block_count": -1,
+        "parameter_count": -1,
+        "total_depth": -13
+      }
+    },
+    {
+      "candidate_id": "candidate-v1:e22241c22a3955d4007b48bf92e2bbd6178081425a44ba1cb2d4fe2c95e8a90f",
+      "eligible": false,
+      "predicted_cumulative_change_hartree": 0.014424508707974385,
+      "rejection_reasons": [
+        "predicted-cumulative-energy-budget"
+      ],
+      "resource_delta": {
+        "cnot_count": -9,
+        "cnot_depth": 0,
+        "logical_block_count": -1,
+        "parameter_count": -1,
+        "total_depth": -13
+      }
+    },
+    {
+      "candidate_id": "candidate-v1:00cd033f811b20f307f4b6f44110f373376999bc7872a40dff110e323d660c06",
+      "eligible": true,
+      "predicted_cumulative_change_hartree": 3.796066518614031e-12,
+      "rejection_reasons": [],
+      "resource_delta": {
+        "cnot_count": -9,
+        "cnot_depth": 0,
+        "logical_block_count": -1,
+        "parameter_count": -1,
+        "total_depth": -13
+      }
+    },
+    {
+      "candidate_id": "candidate-v1:f89f300a39b00eb564eace8739dd4bd2d97110517f7035591c16c5b01db515cd",
+      "eligible": false,
+      "predicted_cumulative_change_hartree": 0.00015462488057618582,
+      "rejection_reasons": [
+        "predicted-cumulative-energy-budget"
+      ],
+      "resource_delta": {
+        "cnot_count": -9,
+        "cnot_depth": 0,
+        "logical_block_count": -1,
+        "parameter_count": -1,
+        "total_depth": -13
+      }
+    },
+    {
+      "candidate_id": "candidate-v1:49c0a3be01f3c83d7a6c80740db9529c3356d9d6efba018c4b0dcfdbcdf30692",
+      "eligible": false,
+      "predicted_cumulative_change_hartree": 0.026205119077649698,
+      "rejection_reasons": [
+        "predicted-cumulative-energy-budget"
+      ],
+      "resource_delta": {
+        "cnot_count": -9,
+        "cnot_depth": 0,
+        "logical_block_count": -1,
+        "parameter_count": -1,
+        "total_depth": -13
+      }
+    },
+    {
+      "candidate_id": "candidate-v1:1b2361040c65908de3860e103d9e3ee089547a43cf39e4a026d8ad9555ec2045",
+      "eligible": true,
+      "predicted_cumulative_change_hartree": 1.0342269473302586e-05,
+      "rejection_reasons": [],
+      "resource_delta": {
+        "cnot_count": -9,
+        "cnot_depth": 0,
+        "logical_block_count": -1,
+        "parameter_count": -1,
+        "total_depth": -13
+      }
+    },
+    {
+      "candidate_id": "candidate-v1:70038b6739f4fc1e80c57536f5be7a5175ff42afdf82e6e7693b550badfedfe0",
+      "eligible": false,
+      "predicted_cumulative_change_hartree": 0.30835948348124465,
+      "rejection_reasons": [
+        "predicted-cumulative-energy-budget"
+      ],
+      "resource_delta": {
+        "cnot_count": -9,
+        "cnot_depth": 0,
+        "logical_block_count": -1,
+        "parameter_count": -1,
+        "total_depth": -13
+      }
+    },
+    {
+      "candidate_id": "candidate-v1:dd37a8a9764c2cfa09906c42ab708cf436ef9785f275220ef60092e3dfe5cf2f",
+      "eligible": false,
+      "predicted_cumulative_change_hartree": 0.0018550601145229863,
+      "rejection_reasons": [
+        "predicted-cumulative-energy-budget"
+      ],
+      "resource_delta": {
+        "cnot_count": -2,
+        "cnot_depth": 0,
+        "logical_block_count": -1,
+        "parameter_count": -1,
+        "total_depth": -7
+      }
+    },
+    {
+      "candidate_id": "candidate-v1:e53397d62e92b6fcc09a84017a1f2edeca970ca0d06a911275cbaf1b1c71b003",
+      "eligible": false,
+      "predicted_cumulative_change_hartree": 0.0032428746032317777,
+      "rejection_reasons": [
+        "predicted-cumulative-energy-budget"
+      ],
+      "resource_delta": {
+        "cnot_count": -2,
+        "cnot_depth": 0,
+        "logical_block_count": -1,
+        "parameter_count": -1,
+        "total_depth": -7
+      }
+    },
+    {
+      "candidate_id": "candidate-v1:d16cae27369d54c5e275f94de11383e3e1d10181430e16c7c7a27da9c890c1c1",
+      "eligible": true,
+      "predicted_cumulative_change_hartree": 5.484093312533144e-06,
+      "rejection_reasons": [],
+      "resource_delta": {
+        "cnot_count": -2,
+        "cnot_depth": 0,
+        "logical_block_count": -1,
+        "parameter_count": -1,
+        "total_depth": -7
+      }
+    },
+    {
+      "candidate_id": "candidate-v1:f798031dd6f0c034f571937c461fc7b1b1d98cdac6f625aa21950f497636aca9",
+      "eligible": true,
+      "predicted_cumulative_change_hartree": 8.508877637397078e-06,
+      "rejection_reasons": [],
+      "resource_delta": {
+        "cnot_count": -2,
+        "cnot_depth": 0,
+        "logical_block_count": -1,
+        "parameter_count": -1,
+        "total_depth": -7
+      }
+    }
+  ],
+  "chosen_candidate_id": "candidate-v1:00cd033f811b20f307f4b6f44110f373376999bc7872a40dff110e323d660c06",
+  "selector_digest": "09823d0d82b3029ff7f25eeb2d5e22a6208e4029cdcf6ba28365339cf0a62216",
+  "selector_version": "dvg-obs-selector-v1"
+}

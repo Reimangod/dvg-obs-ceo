@@ -1,0 +1,46 @@
+{
+  "artifact_kind": "s10-lih-independent-bundle-audit",
+  "bundle": "artifacts/s10/lih-3a-first-accuracy-primary-v1-2",
+  "checks": {
+    "canonical_energy": true,
+    "canonical_indices": true,
+    "canonical_resources": true,
+    "fci_not_pruning_input": true,
+    "measurement_cost_unclaimed": true,
+    "no_commit_directory": true,
+    "rejected_only_by_kkt": true,
+    "rollback_digest_exact": true,
+    "selector_artifact_matches_summary": true,
+    "selector_frozen": true,
+    "selector_replay": true,
+    "single_candidate_only": true,
+    "summary_reports_rollback": true,
+    "trial_artifact_bound": true
+  },
+  "file_sha256": {
+    "candidate-catalog.json": "32fb67e36c08b74505b3d4a640442fa4740dce7098be3b466379303242e6b296",
+    "checkpoint.json": "1ef38be983595fdb094f2a47287e6047193351e0eff4a7c589630ef023ad98eb",
+    "selected-trial.json": "38b0cb3f57fe661fc67a7cb7109237aa71086da3da2fdcf62ec28c4597a9d8c6",
+    "selector-decision.json": "a48d6bf8ad76b23b70039c0b1a3ade5442a7d877c6aff952f1b984e6a9f225c5",
+    "summary.json": "aa911e6bbdaede6290242f8309845c11259c3a3e90a8b97b0299777b89e2f0e4",
+    "transactions/failed/s10-primary-round-1/attempt.json": "b8b9d73b7bd4343af09f65553a2d515d0a86fd44d54a0cb3b272c7039ba36796",
+    "transactions/failed/s10-primary-round-1/rollback.json": "beff37668bc91bf8d5a5626a57b47babaab400e7641920c809f20c3ab5c65187",
+    "transactions/failed/s10-primary-round-1/snapshot.json": "56744db2b9de37ff29a62b758a932fa5984db09a35583c56877107a433c71182",
+    "transactions/failed/s10-primary-round-1/trial.json": "0b66aaf729c7ad61735efa890adffe4176a8c74f882ca1cfaf63536a1be168a0"
+  },
+  "interpretation": {
+    "candidate_energy_change_hartree": 3.779199175824033e-12,
+    "candidate_kkt_residual": 2.3287183258695764e-08,
+    "candidate_resource_delta": {
+      "cnot_count": -9,
+      "cnot_depth": 0,
+      "logical_block_count": -1,
+      "parameter_count": -1,
+      "total_depth": -13
+    },
+    "registered_kkt_limit": 1e-08,
+    "scientific_outcome": "promising-candidate-rejected-and-fully-rolled-back"
+  },
+  "passed": true,
+  "schema_version": "1.0.0"
+}

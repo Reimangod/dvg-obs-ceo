@@ -30,4 +30,5 @@ No performance claim is permitted until the stage gates in
 - S8 primary H2/H4 predictor calibration: complete; zero positive safe labels
 - S8.1 later-checkpoint positive-class calibration: complete; S9 gate passed
 - S9 conservative selector freeze: complete and immutable before LiH
-- S10 paired LiH execution: protocol/code prepared; tagged execution pending
+- S10 paired LiH execution: complete (promising candidate rejected by frozen KKT gate and fully rolled back)
+- S11 matched normal ADAPT / CEO* / V2 comparison: next
