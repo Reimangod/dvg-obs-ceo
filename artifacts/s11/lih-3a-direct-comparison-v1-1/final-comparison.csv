@@ -1,0 +1,5 @@
+series,evidence_status,adapt_iterations,energy_hartree,fci_error_hartree,parameter_count,cnot_count,cnot_depth,total_depth
+GSD-ADAPT,direct-accepted,6,-7.79815882803421,0.0006843314681974633,6,392,384,500
+CEO*,direct-accepted,5,-7.797909682469515,0.0009334770328921493,15,107,30,171
+V2-primary,direct-accepted-after-rollback,5,-7.797909682469515,0.0009334770328921493,15,107,30,171
+V2-candidate,rejected-counterfactual-kkt,5,-7.797909682465736,0.0009334770366713485,14,98,30,158
