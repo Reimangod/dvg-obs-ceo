@@ -16,8 +16,8 @@ from .baseline import ROOT
 from .s11_gsd import CHEMICAL_ACCURACY_HARTREE, PAPER_REFERENCE, validate_summary
 
 
-COMPARISON_ID = "dvg-obs-s11-lih-matched-comparison-v1"
-COMPARISON_TAG = "dvg-obs-s11-lih-comparison-protocol-v1"
+COMPARISON_ID = "dvg-obs-s11-lih-matched-comparison-v1.1"
+COMPARISON_TAG = "dvg-obs-s11-lih-comparison-protocol-v1.1"
 GSD_BUNDLE = ROOT / "artifacts" / "s11" / "gsd-lih-3a-first-accuracy-v1"
 S10_BUNDLE = ROOT / "artifacts" / "s10" / "lih-3a-first-accuracy-primary-v1-2"
 
@@ -207,9 +207,9 @@ def _plot(bundle: Path, gsd_rows: list[dict[str, Any]], ceo_rows: list[dict[str,
         axis.set_ylabel(ylabel)
         axis.grid(alpha=0.25)
     handles, labels = axes[1].get_legend_handles_labels()
-    figure.legend(handles, labels, loc="upper center", ncol=3, frameon=False)
-    figure.suptitle("LiH 3 Å: Fig. 14-style direct comparison", y=1.03)
-    figure.tight_layout()
+    figure.legend(handles, labels, loc="upper center", ncol=3, frameon=False, bbox_to_anchor=(0.5, 0.94))
+    figure.suptitle("LiH 3 Å: Fig. 14-style direct comparison", y=0.995)
+    figure.tight_layout(rect=(0, 0, 1, 0.83))
     for suffix in ("svg", "png"):
         figure.savefig(bundle / f"fig14_style.{suffix}", dpi=180, bbox_inches="tight")
     plt.close(figure)
