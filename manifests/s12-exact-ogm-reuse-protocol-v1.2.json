@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "protocol_id": "dvg-obs-s12-exact-ogm-reuse-protocol-v1.2",
+  "execution_tag": "dvg-obs-s12-exact-ogm-reuse-protocol-v1.2",
+  "supersedes": "dvg-obs-s12-exact-ogm-reuse-protocol-v1.1",
+  "change_scope": "engineering-only ledger compaction",
+  "default": "retain aggregate counters and a hash-chain digest without retaining every event in memory or JSON",
+  "opt_in": "--retain-events reproduces the full event-ledger behavior used by the v1.1 H2/LiH calibration",
+  "scientific_semantics_unchanged": [
+    "reuse key",
+    "OFF/ON Pauli requests",
+    "exact expectation evaluator",
+    "identity boundaries",
+    "success checks"
+  ],
+  "result_status": "not rerun; the scientific result remains protocol v1.1"
+}

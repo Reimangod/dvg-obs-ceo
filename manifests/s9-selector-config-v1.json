@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0.0",
+  "stage": "S9",
+  "status": "frozen-before-lih",
+  "frozen_at": "2026-07-20",
+  "selector_digest": "09823d0d82b3029ff7f25eeb2d5e22a6208e4029cdcf6ba28365339cf0a62216",
+  "config": {
+    "version": "dvg-obs-selector-v1",
+    "predictor": "general_constraint_obs",
+    "cumulative_energy_budget_hartree": 0.0001,
+    "resource_lexicographic_order": [
+      "cnot_count",
+      "cnot_depth",
+      "parameter_count",
+      "logical_block_count",
+      "total_depth"
+    ],
+    "candidates_per_round": 1,
+    "primary_max_accepted_rounds": 1,
+    "secondary_greedy_max_accepted_rounds": 4,
+    "optimizer_warm_start": "projection-on-target-native-obs",
+    "optimizer_fallback": "projection-off-once-if-primary-status-false",
+    "maximum_optimizer_fallbacks": 1,
+    "stop_regime_after_rejected_candidate": true,
+    "require_hessian_quality_gate": true,
+    "require_full_resource_recount": true,
+    "require_semantic_validation": true,
+    "evaluation_oracle_runtime_fields_forbidden": true
+  },
+  "calibration_basis": {
+    "s8_primary_safe": 0,
+    "s8_1_terminal_true_positive": 30,
+    "s8_1_terminal_false_positive": 0,
+    "s8_1_terminal_false_negative": 29,
+    "s8_1_terminal_true_negative": 3,
+    "precision": 1.0,
+    "recall": 0.5084745762711864
+  },
+  "frozen_runtime_policy": {
+    "primary_mode": "one candidate at first-accuracy checkpoint",
+    "secondary_mode": "greedy repeated post-hoc ablation, at most four accepted rounds",
+    "after_candidate_rejection": "stop regime",
+    "no_eligible_candidate": "commit nothing and report no-selection",
+    "budget_reference": "immutable original compression checkpoint energy",
+    "fci_use": "offline evaluation only"
+  },
+  "verification": {
+    "s8_replay_exact": true,
+    "s8_1_replay_exact": true,
+    "full_suite_tests_passed_local": 80,
+    "known_paper_stack_warnings": 95,
+    "selector_source_sha256": "a1c306efaf126833f25fabd4947318c0d1089a2747e3b85fc46d82f61d2a9dcc",
+    "freeze_probe_sha256": "f20944f6885f2c70172510ba26bdba97b5804b9667c3268377f5610a0ecc4409",
+    "selector_tests_sha256": "3c03c8736da2d553aa6aec815f5c1dfc9f1ba615f83588e7e008e837db48f8c2",
+    "replay_artifact_sha256": "7341d378bf3d8b50f60fcaefabe71533e1b5e0c284c70049562cc511227ddf7e"
+  },
+  "claim_boundary": [
+    "The selector is conservative and may select no LiH candidate.",
+    "The four-round mode is a separate exploratory ablation, not the primary comparison.",
+    "No threshold or priority may change after LiH without a new protocol/version."
+  ]
+}

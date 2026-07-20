@@ -1,0 +1,51 @@
+{
+  "artifact_kind": "s12-independent-reuse-audit",
+  "cases": {
+    "h2-1.5": {
+      "checks": {
+        "fresh_reduction_equals_hits": true,
+        "gradient_digest_equal": true,
+        "hits_equal_cross_context_overlap": true,
+        "off_all_fresh": true,
+        "on_accounting_closes": true,
+        "paper_cost_unclaimed": true,
+        "probe_passed": true,
+        "requests_match_inventory": true
+      },
+      "failed_checks": [],
+      "fresh_reduction": 8,
+      "fresh_reduction_fraction": 0.12121212121212122,
+      "passed": true,
+      "summary_sha256": "9fbeb2f451753f730a8f81ed8e3e978809b888860117de6ee09dd2a0f6c2f172"
+    },
+    "lih-3.0": {
+      "checks": {
+        "fresh_reduction_equals_hits": true,
+        "gradient_digest_equal": true,
+        "hits_equal_cross_context_overlap": true,
+        "off_all_fresh": true,
+        "on_accounting_closes": true,
+        "paper_cost_unclaimed": true,
+        "probe_passed": true,
+        "requests_match_inventory": true
+      },
+      "failed_checks": [],
+      "fresh_reduction": 369,
+      "fresh_reduction_fraction": 0.0007125023894897208,
+      "passed": true,
+      "summary_sha256": "1ed80f780bbb3c3cb5ba2336c1a8052ef7825c4c6801464125cdd1263b723794"
+    }
+  },
+  "claim_boundary": [
+    "The reduction fraction concerns fresh exact Pauli expectation kernels only.",
+    "It is not a shot, commuting-collection, wall-time, or paper Measurement Cost reduction."
+  ],
+  "passed": true,
+  "raw_ledger_checks": {
+    "reuse_off-ledger.json": true,
+    "reuse_on-ledger.json": true
+  },
+  "raw_ledger_manifest_consistent": true,
+  "raw_ledgers_verified_locally": true,
+  "schema_version": "1.0.0"
+}

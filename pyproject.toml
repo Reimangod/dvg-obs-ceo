@@ -25,10 +25,27 @@ baseline = [
 test = [
   "pytest==8.3.5",
 ]
+calibration = [
+  "matplotlib==3.10.9",
+]
 
 [project.scripts]
 dvg-obs-baseline = "dvg_obs_ceo.baseline:main"
 dvg-obs-parity = "dvg_obs_ceo.parity:main"
+dvg-obs-s4-probe = "dvg_obs_ceo.s4_probe:main"
+dvg-obs-s5-probe = "dvg_obs_ceo.s5_probe:main"
+dvg-obs-s6-probe = "dvg_obs_ceo.s6_probe:main"
+dvg-obs-s7-probe = "dvg_obs_ceo.s7_probe:main"
+dvg-obs-s8-probe = "dvg_obs_ceo.s8_probe:main"
+dvg-obs-s8-audit = "dvg_obs_ceo.s8_audit:main"
+dvg-obs-s8-extension-probe = "dvg_obs_ceo.s8_extension_probe:main"
+dvg-obs-s9-probe = "dvg_obs_ceo.s9_probe:main"
+dvg-obs-s10-lih = "dvg_obs_ceo.s10_lih:main"
+dvg-obs-s10-audit = "dvg_obs_ceo.s10_audit:main"
+dvg-obs-s11-gsd = "dvg_obs_ceo.s11_gsd:main"
+dvg-obs-s11-compare = "dvg_obs_ceo.s11_compare:main"
+dvg-obs-s12-reuse-probe = "dvg_obs_ceo.s12_reuse_probe:main"
+dvg-obs-s12-audit = "dvg_obs_ceo.s12_audit:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

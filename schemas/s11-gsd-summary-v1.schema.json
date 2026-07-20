@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://reimangod.github.io/dvg-obs-ceo/schemas/s11-gsd-summary-v1.schema.json",
+  "type": "object",
+  "required": [
+    "schema_version", "artifact_kind", "protocol_id", "execution_freeze",
+    "upstream", "environment", "algorithm", "trajectory",
+    "reached_chemical_accuracy", "first_chemical_accuracy_iteration",
+    "energy_hartree", "fci_energy_hartree", "fci_error_hartree",
+    "ansatz_indices", "ansatz_coefficients", "resources", "work",
+    "paper_reference", "paper_resource_parity", "claim_boundary"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "artifact_kind": {"const": "s11-direct-pinned-gsd-adapt-lih"},
+    "protocol_id": {"const": "dvg-obs-s11-gsd-lih-protocol-v1"},
+    "trajectory": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "adapt_iteration", "energy_hartree", "fci_error_hartree",
+          "parameter_count", "cnot_count", "cnot_depth", "total_depth",
+          "cumulative_wall_time_seconds", "cumulative_optimizer_energy_evaluations",
+          "cumulative_gradient_component_equivalent", "finished", "paper_measurement_cost"
+        ],
+        "properties": {
+          "adapt_iteration": {"type": "integer", "minimum": 1},
+          "energy_hartree": {"type": "number"},
+          "fci_error_hartree": {"type": "number", "minimum": 0},
+          "parameter_count": {"type": "integer", "minimum": 1},
+          "cnot_count": {"type": "integer", "minimum": 0},
+          "cnot_depth": {"type": "integer", "minimum": 0},
+          "total_depth": {"type": "integer", "minimum": 0},
+          "cumulative_wall_time_seconds": {"type": "number", "minimum": 0},
+          "cumulative_optimizer_energy_evaluations": {"type": "integer", "minimum": 0},
+          "cumulative_gradient_component_equivalent": {"type": "integer", "minimum": 0},
+          "finished": {"type": "boolean"},
+          "paper_measurement_cost": {"type": "null"}
+        },
+        "additionalProperties": false
+      }
+    },
+    "reached_chemical_accuracy": {"const": true},
+    "first_chemical_accuracy_iteration": {"type": "integer", "minimum": 1},
+    "paper_reference": {
+      "type": "object",
+      "properties": {
+        "cnot_count": {"const": 392},
+        "cnot_depth": {"const": 384},
+        "measurement_cost": {"const": 50468}
+      },
+      "required": ["cnot_count", "cnot_depth", "measurement_cost"],
+      "additionalProperties": false
+    },
+    "paper_resource_parity": {
+      "type": "object",
+      "properties": {
+        "cnot_count": {"type": "boolean"},
+        "cnot_depth": {"type": "boolean"},
+        "measurement_cost": {"type": "null"}
+      },
+      "required": ["cnot_count", "cnot_depth", "measurement_cost"],
+      "additionalProperties": false
+    },
+    "claim_boundary": {"type": "array", "minItems": 3, "items": {"type": "string"}}
+  },
+  "additionalProperties": true
+}

@@ -21,5 +21,15 @@ No performance claim is permitted until the stage gates in
 
 - S0 repository isolation: complete
 - S1 baseline parity: complete
-- S2 telemetry and scientific identity: not started
-- Molecular compression experiments: forbidden until S3 and S7 gates pass
+- S2 telemetry and scientific identity: complete
+- S3 constrained OBS mathematical kernel: complete
+- S4 DVG block and candidate catalog: complete
+- S5 evaluation-neutral Hessian capture: complete
+- S6 paper-era full-circuit resource recount: complete
+- S7 fail-closed transaction and rollback: complete
+- S8 primary H2/H4 predictor calibration: complete; zero positive safe labels
+- S8.1 later-checkpoint positive-class calibration: complete; S9 gate passed
+- S9 conservative selector freeze: complete and immutable before LiH
+- S10 paired LiH execution: complete (promising candidate rejected by frozen KKT gate and fully rolled back)
+- S11 direct normal ADAPT / CEO* / V2 comparison: complete; GSD paper CNOT/depth parity reproduced, V2 primary unchanged after rollback
+- S12 exact OGM-aware term reuse: calibrated; correct but not adopted by default (LiH fresh exact-Pauli kernels reduced only 0.07125%)

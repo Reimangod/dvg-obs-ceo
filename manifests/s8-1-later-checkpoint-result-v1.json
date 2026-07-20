@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "stage": "S8.1",
+  "status": "complete-selector-freeze-gate-passed",
+  "completed_at": "2026-07-20",
+  "execution_source_commit": "daa4c13f2deb82d90a1bc02c03b7d424177e4605",
+  "protocol_tag": "dvg-obs-s8-1-later-checkpoint-protocol-v1",
+  "checkpoint_failures": [
+    {
+      "case_id": "h4-1.5-iteration-8",
+      "reason": "algorithm converged after completed iteration 7; no iteration-8 checkpoint exists",
+      "substitution": false
+    }
+  ],
+  "terminal_checkpoint": {
+    "completed_adapt_iteration": 7,
+    "parameters": 24,
+    "energy_hartree": -1.9961503255188093,
+    "fci_difference_hartree": 8.881784197001252e-16,
+    "recycled_hessian_usable": true,
+    "exact_hessian_oracle_available": false,
+    "exact_hessian_reason": "matrix is not positive definite"
+  },
+  "candidate_counts": {
+    "catalog": 74,
+    "executed_equivalence_classes": 62,
+    "successful": 62,
+    "failed": 0,
+    "actual_safe": 59,
+    "actual_unsafe": 3
+  },
+  "general_constraint_obs_classification": {
+    "threshold_hartree": 0.0001,
+    "true_positive": 30,
+    "false_positive": 0,
+    "false_negative": 29,
+    "true_negative": 3,
+    "precision": 1.0,
+    "recall": 0.5084745762711864,
+    "false_safe_rate": 0.0
+  },
+  "best_frozen_lexicographic_candidate": {
+    "kind": "mvp-whole-deletion",
+    "predicted_change_hartree": 0.00005196184022661202,
+    "actual_change_hartree": 4.440892098500626e-16,
+    "delta_cnot": -13,
+    "delta_cnot_depth": 0,
+    "delta_total_depth": -24,
+    "delta_parameters": -3,
+    "delta_logical_blocks": -1
+  },
+  "warm_start_work": {
+    "projection_on_nfev": 3311,
+    "projection_off_nfev": 3402,
+    "projection_on_safe": 59,
+    "projection_off_safe": 57,
+    "paper_measurement_cost": null
+  },
+  "verification": {
+    "independent_bundle_audit": true,
+    "audit_file_classification_bug_fixed": true,
+    "full_suite_tests_passed_local": 74,
+    "known_paper_stack_warnings": 95
+  },
+  "artifacts": {
+    "summary_sha256": "e150af42b4118bd374cb362202d0bcface16a15f4e77c362c46afe3851b7db45",
+    "jsonl_sha256": "95e0088afcfb5315142b925b25856639057193b70950162c9f1e9050ceab8553",
+    "csv_sha256": "dcf0a1f7a1b89d087beb259ec7f1d963b3f968e1cb538ad65ea0ddd029589678",
+    "audit_sha256": "839d885e7f9822e02def261629997ec50cf845944f7ee52f0fea7b4a59cebe05"
+  },
+  "claim_boundary": [
+    "S8.1 is outcome-informed development calibration.",
+    "Terminal overparameterized behavior cannot be generalized to first-accuracy LiH.",
+    "Negative rank correlation at tied numerical-zero losses is not a predictor failure claim.",
+    "No paper measurement-cost claim is made."
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "absolute_error_hartree": 1.1102230246251565e-16,
+  "algorithm": {
+    "gradient_threshold": 0.1,
+    "hessian_recycling": true,
+    "max_adapt_iter": 1,
+    "max_opt_iter": 10000,
+    "name": "CEO-ADAPT-VQE*",
+    "pool": "DVG_CEO",
+    "seed": 0,
+    "selection": "gradient",
+    "tetris": true
+  },
+  "ansatz_coefficients": [
+    -0.3633454977873758
+  ],
+  "ansatz_indices": [
+    4
+  ],
+  "artifact_kind": "direct-unmodified-upstream-baseline",
+  "case_id": "h2-smoke",
+  "claim_boundary": [
+    "This is a direct run of the pinned unmodified upstream implementation.",
+    "Work counters are not paper-equivalent measurement cost."
+  ],
+  "cnot_count": 9,
+  "cnot_counts_by_iteration": [
+    0,
+    9
+  ],
+  "cnot_depth": 7,
+  "cnot_depths_by_iteration": [
+    0,
+    7
+  ],
+  "energy_hartree": -0.9981493534714102,
+  "environment": {
+    "blas_threads": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": null,
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "machine": "arm64",
+    "packages": {
+      "numpy": "1.23.5",
+      "openfermion": "1.5.1",
+      "openfermionpyscf": "0.5",
+      "pyscf": "2.2.0",
+      "qiskit": "0.43.3",
+      "scipy": "1.10.1"
+    },
+    "platform": "macOS-26.0.1-arm64-arm-64bit",
+    "processor": "arm",
+    "python": "3.10.19"
+  },
+  "fci_energy_hartree": -0.9981493534714101,
+  "first_chemical_accuracy_iteration": 1,
+  "parameter_count": 1,
+  "problem": {
+    "basis": "sto-3g",
+    "distance_angstrom": 1.5,
+    "electrons": 2,
+    "molecule": "H2",
+    "qubits": 4
+  },
+  "schema_version": "1.0.0",
+  "scientific_state_digest": "e57d2aba7f3a38c36ac571ac2fb04b1cf0edd50280e08c59fc397c9d8e2bf673",
+  "trajectory": [
+    {
+      "absolute_error_hartree": 1.1102230246251565e-16,
+      "adapt_iteration": 1,
+      "energy_hartree": -0.9981493534714102,
+      "finished": false,
+      "parameter_count": 1
+    }
+  ],
+  "upstream": {
+    "commit": "a3f89d03e6a03c89767d3cf8ee7657a57653dda0",
+    "git_tree": "794d847f5c1be1590d93da81b905a915dfa17d13",
+    "worktree_clean": "true"
+  },
+  "work": {
+    "nfev": 5,
+    "ngev_component_equivalent": 5,
+    "paper_measurement_cost": null,
+    "wall_time_seconds": 0.06329820799874142
+  }
+}

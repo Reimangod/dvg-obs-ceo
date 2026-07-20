@@ -1,0 +1,260 @@
+{
+  "algorithm": {
+    "gradient_threshold": 1e-06,
+    "hessian_recycling": false,
+    "name": "GSD-ADAPT-VQE",
+    "optimized_gradient_measurements": false,
+    "pool": "GSD",
+    "seed": 0,
+    "tetris": false
+  },
+  "ansatz_coefficients": [
+    -0.17995441392031475,
+    -0.22170083719916708,
+    0.2433856567328531,
+    -0.33229295857905455,
+    -0.28721407885839934,
+    0.15028287970788026
+  ],
+  "ansatz_indices": [
+    370,
+    346,
+    352,
+    340,
+    14,
+    13
+  ],
+  "artifact_kind": "s11-direct-pinned-gsd-adapt-lih",
+  "claim_boundary": [
+    "This is a direct run of pinned GSD-ADAPT-VQE under the paper's stated original-protocol contrast.",
+    "Local evaluation counters are not paper-equivalent measurement cost.",
+    "The paper measurement value is reference-only and is not a reproduced result."
+  ],
+  "energy_hartree": -7.79815882803421,
+  "environment": {
+    "blas_threads": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "machine": "arm64",
+    "packages": {
+      "numpy": "1.23.5",
+      "openfermion": "1.5.1",
+      "openfermionpyscf": "0.5",
+      "pyscf": "2.2.0",
+      "qiskit": "0.43.3",
+      "scipy": "1.10.1"
+    },
+    "platform": "macOS-26.0.1-arm64-arm-64bit",
+    "processor": "arm",
+    "python": "3.10.19"
+  },
+  "execution_freeze": {
+    "head": "6c84df86b16ba21f54fad8516982657ca9f79fe4",
+    "tag": "dvg-obs-s11-gsd-lih-protocol-v1",
+    "threads": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    }
+  },
+  "fci_energy_hartree": -7.7988431595024075,
+  "fci_error_hartree": 0.0006843314681974633,
+  "first_chemical_accuracy_iteration": 6,
+  "paper_reference": {
+    "cnot_count": 392,
+    "cnot_depth": 384,
+    "measurement_cost": 50468
+  },
+  "paper_resource_parity": {
+    "cnot_count": true,
+    "cnot_depth": true,
+    "measurement_cost": null
+  },
+  "protocol_id": "dvg-obs-s11-gsd-lih-protocol-v1",
+  "reached_chemical_accuracy": true,
+  "resources": {
+    "circuit_qasm_digest": "077ab9be8ff062c0f8af0ea4c706bfc1e79aec6af9b0fe15129416499a97dcf0",
+    "cnot_count_by_iteration": [
+      0,
+      48,
+      192,
+      304,
+      352,
+      360,
+      392
+    ],
+    "cnot_depth_by_iteration": [
+      0,
+      48,
+      192,
+      304,
+      348,
+      356,
+      384
+    ],
+    "coefficient_policy": "physical",
+    "evaluator_version": "paper-era-full-circuit-resource-v1",
+    "segments": [
+      {
+        "adapt_iteration": 1,
+        "cumulative_cnot_count": 48,
+        "cumulative_cnot_depth": 48,
+        "cumulative_total_depth": 72,
+        "parameter_count": 1
+      },
+      {
+        "adapt_iteration": 2,
+        "cumulative_cnot_count": 192,
+        "cumulative_cnot_depth": 192,
+        "cumulative_total_depth": 240,
+        "parameter_count": 1
+      },
+      {
+        "adapt_iteration": 3,
+        "cumulative_cnot_count": 304,
+        "cumulative_cnot_depth": 304,
+        "cumulative_total_depth": 376,
+        "parameter_count": 1
+      },
+      {
+        "adapt_iteration": 4,
+        "cumulative_cnot_count": 352,
+        "cumulative_cnot_depth": 348,
+        "cumulative_total_depth": 448,
+        "parameter_count": 1
+      },
+      {
+        "adapt_iteration": 5,
+        "cumulative_cnot_count": 360,
+        "cumulative_cnot_depth": 356,
+        "cumulative_total_depth": 462,
+        "parameter_count": 1
+      },
+      {
+        "adapt_iteration": 6,
+        "cumulative_cnot_count": 392,
+        "cumulative_cnot_depth": 384,
+        "cumulative_total_depth": 500,
+        "parameter_count": 1
+      }
+    ],
+    "snapshot": {
+      "cnot_count": 392,
+      "cnot_depth": 384,
+      "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+      "logical_block_count": 6,
+      "parameter_count": 6,
+      "structure_digest": "761be985f9ae1b395a8d26954fdc87b202f63daa1bb83a860a031f3bb7196af8",
+      "total_depth": 500
+    },
+    "total_depth_by_iteration": [
+      0,
+      72,
+      240,
+      376,
+      448,
+      462,
+      500
+    ]
+  },
+  "schema_version": "1.0.0",
+  "trajectory": [
+    {
+      "adapt_iteration": 1,
+      "cnot_count": 48,
+      "cnot_depth": 48,
+      "cumulative_gradient_component_equivalent": 5,
+      "cumulative_optimizer_energy_evaluations": 5,
+      "cumulative_wall_time_seconds": 11.465568334009731,
+      "energy_hartree": -7.744257991821097,
+      "fci_error_hartree": 0.054585167681310054,
+      "finished": false,
+      "paper_measurement_cost": null,
+      "parameter_count": 1,
+      "total_depth": 72
+    },
+    {
+      "adapt_iteration": 2,
+      "cnot_count": 192,
+      "cnot_depth": 192,
+      "cumulative_gradient_component_equivalent": 15,
+      "cumulative_optimizer_energy_evaluations": 10,
+      "cumulative_wall_time_seconds": 14.203948792011943,
+      "energy_hartree": -7.76272257239292,
+      "fci_error_hartree": 0.03612058710948762,
+      "finished": false,
+      "paper_measurement_cost": null,
+      "parameter_count": 2,
+      "total_depth": 240
+    },
+    {
+      "adapt_iteration": 3,
+      "cnot_count": 304,
+      "cnot_depth": 304,
+      "cumulative_gradient_component_equivalent": 36,
+      "cumulative_optimizer_energy_evaluations": 17,
+      "cumulative_wall_time_seconds": 17.63285416699364,
+      "energy_hartree": -7.775440924976592,
+      "fci_error_hartree": 0.02340223452581558,
+      "finished": false,
+      "paper_measurement_cost": null,
+      "parameter_count": 3,
+      "total_depth": 376
+    },
+    {
+      "adapt_iteration": 4,
+      "cnot_count": 352,
+      "cnot_depth": 348,
+      "cumulative_gradient_component_equivalent": 72,
+      "cumulative_optimizer_energy_evaluations": 26,
+      "cumulative_wall_time_seconds": 21.3607426249946,
+      "energy_hartree": -7.7930540602561,
+      "fci_error_hartree": 0.005789099246307217,
+      "finished": false,
+      "paper_measurement_cost": null,
+      "parameter_count": 4,
+      "total_depth": 448
+    },
+    {
+      "adapt_iteration": 5,
+      "cnot_count": 360,
+      "cnot_depth": 356,
+      "cumulative_gradient_component_equivalent": 127,
+      "cumulative_optimizer_energy_evaluations": 37,
+      "cumulative_wall_time_seconds": 25.94560329199885,
+      "energy_hartree": -7.795661166527098,
+      "fci_error_hartree": 0.003181992975309633,
+      "finished": false,
+      "paper_measurement_cost": null,
+      "parameter_count": 5,
+      "total_depth": 462
+    },
+    {
+      "adapt_iteration": 6,
+      "cnot_count": 392,
+      "cnot_depth": 384,
+      "cumulative_gradient_component_equivalent": 211,
+      "cumulative_optimizer_energy_evaluations": 51,
+      "cumulative_wall_time_seconds": 31.19091245898744,
+      "energy_hartree": -7.79815882803421,
+      "fci_error_hartree": 0.0006843314681974633,
+      "finished": false,
+      "paper_measurement_cost": null,
+      "parameter_count": 6,
+      "total_depth": 500
+    }
+  ],
+  "upstream": {
+    "commit": "a3f89d03e6a03c89767d3cf8ee7657a57653dda0",
+    "git_tree": "794d847f5c1be1590d93da81b905a915dfa17d13",
+    "worktree_clean": "true"
+  },
+  "work": {
+    "gradient_component_equivalent": 211,
+    "optimizer_energy_evaluations": 51,
+    "paper_measurement_cost": null,
+    "wall_time_seconds": 31.27409233400249
+  }
+}

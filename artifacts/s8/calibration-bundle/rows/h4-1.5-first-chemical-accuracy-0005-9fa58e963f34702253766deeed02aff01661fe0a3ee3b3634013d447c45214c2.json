@@ -1,0 +1,755 @@
+{
+  "actual_change_hartree": 0.005296379919165872,
+  "calibration_version": "predictor-calibration-v1",
+  "candidate": {
+    "candidate_id": "candidate-v1:9fa58e963f34702253766deeed02aff01661fe0a3ee3b3634013d447c45214c2",
+    "constraint_matrix": [
+      [
+        1.0
+      ]
+    ],
+    "constraint_rhs": [
+      0.0
+    ],
+    "equivalence_class_id": "transform-v1:66bb9c711c289dfec29f21e8d4e1acc793db5e3f042026450f5add2a8181d6a7",
+    "generator_normalization": "paper-era-pool-arrange-v1",
+    "jacobian": [
+      []
+    ],
+    "kind": "block-deletion",
+    "numerical_context_digest": "8ef8558fccee478dd13ecaf61f7d388a5f7b0d821627a0c5063aeb0325a7d4d8",
+    "offset": [
+      0.0
+    ],
+    "orientation": "deletion",
+    "removed_source_slots": [
+      0
+    ],
+    "semantic_conflict_positions": [
+      5
+    ],
+    "source_block_id": "block-v1:51639d659dd89e9785609d7427b091b1c1bfed34aa5f84c8643f92d9e4d5c046",
+    "source_pool_indices": [
+      162
+    ],
+    "source_slots": [
+      "block-v1:51639d659dd89e9785609d7427b091b1c1bfed34aa5f84c8643f92d9e4d5c046:slot:0"
+    ],
+    "target_family": "empty",
+    "target_operator_digests": [],
+    "target_pool_indices": [],
+    "target_slots": [],
+    "units": "radian"
+  },
+  "candidate_shared_work": {
+    "paper_measurement_cost": null,
+    "prediction_wall_time_seconds": 0.0023969580070115626,
+    "source_state_recomputations": 1,
+    "total_candidate_wall_time_seconds": 1.1843039999948815
+  },
+  "case_id": "h4-1.5-first-chemical-accuracy",
+  "checkpoint_digest": "997d19722b77241436baec3e682627f365997b64ddbe4910017a4989905571f2",
+  "constraint_prediction": {
+    "predicted_change_from_current_hartree": 0.005373446429576369,
+    "predicted_constraint_penalty_hartree": 0.00537344642957638,
+    "reference_energy_kind": "current-checkpoint-quadratic-model"
+  },
+  "global_constraint_shape": [
+    1,
+    10
+  ],
+  "global_jacobian_shape": [
+    10,
+    9
+  ],
+  "paper_measurement_cost": null,
+  "paths": {
+    "projection_off": {
+      "actual_change_hartree": 0.005296379919166094,
+      "constraint_residual_infinity": 0.0,
+      "coordinates": [
+        -0.4017162885553113,
+        -0.14201310234371572,
+        0.20389973886048907,
+        0.20389975919594983,
+        -0.07190177347749145,
+        -0.13842069092676348,
+        0.34030827375332723,
+        -0.13842067790182858,
+        0.2932124399653514
+      ],
+      "deterministic_structural_resources": {
+        "circuit_qasm_digest": "98e285ca8881ac0ddb92c6717a0f846bb07b092465fbcb02675b742a8a406585",
+        "cnot_count_by_iteration": [
+          0,
+          18,
+          36,
+          45,
+          71
+        ],
+        "cnot_depth_by_iteration": [
+          0,
+          7,
+          14,
+          21,
+          34
+        ],
+        "coefficient_policy": "deterministic-structural",
+        "evaluator_version": "paper-era-full-circuit-resource-v1",
+        "segments": [
+          {
+            "adapt_iteration": 1,
+            "cumulative_cnot_count": 18,
+            "cumulative_cnot_depth": 7,
+            "cumulative_total_depth": 26,
+            "parameter_count": 2
+          },
+          {
+            "adapt_iteration": 2,
+            "cumulative_cnot_count": 36,
+            "cumulative_cnot_depth": 14,
+            "cumulative_total_depth": 52,
+            "parameter_count": 2
+          },
+          {
+            "adapt_iteration": 3,
+            "cumulative_cnot_count": 45,
+            "cumulative_cnot_depth": 21,
+            "cumulative_total_depth": 65,
+            "parameter_count": 1
+          },
+          {
+            "adapt_iteration": 4,
+            "cumulative_cnot_count": 71,
+            "cumulative_cnot_depth": 34,
+            "cumulative_total_depth": 113,
+            "parameter_count": 4
+          }
+        ],
+        "snapshot": {
+          "cnot_count": 71,
+          "cnot_depth": 34,
+          "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+          "logical_block_count": 7,
+          "parameter_count": 9,
+          "structure_digest": "91632fa1153edd68949f807040b31262672486edf572dbaacac3c6e3f464b8db",
+          "total_depth": 113
+        },
+        "total_depth_by_iteration": [
+          0,
+          26,
+          52,
+          65,
+          113
+        ]
+      },
+      "energy_hartree": -1.9896053438545305,
+      "final_inverse_hessian": [
+        [
+          1.063481075475813,
+          -0.021526709432733597,
+          -0.04672072057100897,
+          -0.0451850782851979,
+          -0.28372176450126396,
+          0.2152964469768643,
+          -0.1781297680733169,
+          0.22505326147972962,
+          -0.5226116522722393
+        ],
+        [
+          -0.021526709432733614,
+          0.46854906630727927,
+          -0.17415676089968296,
+          -0.18534217648109289,
+          -0.04978327081693621,
+          -0.0765791475115882,
+          0.23618803183032153,
+          -0.07577409557979918,
+          0.22587746600870673
+        ],
+        [
+          -0.04672072057100886,
+          -0.17415676089968288,
+          0.9581913207203466,
+          0.29486044872813777,
+          0.008392856417516165,
+          0.28361836758167847,
+          -0.7128273564218117,
+          0.27674526148191536,
+          -0.9001966962850327
+        ],
+        [
+          -0.0451850782851978,
+          -0.18534217648109272,
+          0.294860448728138,
+          0.9988226765942569,
+          0.009939496358332245,
+          0.2651914552059899,
+          -0.5737280866162726,
+          0.28599075111630085,
+          -0.7659721149178159
+        ],
+        [
+          -0.2837217645012639,
+          -0.04978327081693623,
+          0.008392856417516262,
+          0.009939496358332328,
+          0.866358771784297,
+          0.08819477667150086,
+          -0.018990752451826187,
+          0.08622902196147947,
+          0.5747796143866394
+        ],
+        [
+          0.2152964469768643,
+          -0.07657914751158822,
+          0.28361836758167847,
+          0.26519145520599025,
+          0.0881947766715008,
+          1.0383313060644332,
+          -0.7700313140560042,
+          0.3909882487923516,
+          -0.792922156523236
+        ],
+        [
+          -0.17812976807331715,
+          0.23618803183032136,
+          -0.7128273564218117,
+          -0.5737280866162731,
+          -0.01899075245182591,
+          -0.770031314056004,
+          7.4009158319563415,
+          -0.744986115345715,
+          5.185503392296338
+        ],
+        [
+          0.22505326147972973,
+          -0.07577409557979914,
+          0.27674526148191525,
+          0.28599075111630073,
+          0.08622902196147952,
+          0.3909882487923517,
+          -0.7449861153457152,
+          1.0493117860074457,
+          -0.8504736330725435
+        ],
+        [
+          -0.5226116522722388,
+          0.22587746600870667,
+          -0.9001966962850325,
+          -0.7659721149178158,
+          0.5747796143866395,
+          -0.7929221565232356,
+          5.185503392296339,
+          -0.8504736330725438,
+          8.304029099072864
+        ]
+      ],
+      "finite": true,
+      "gradient": [
+        -3.6037883788253566e-09,
+        5.1006390222596565e-09,
+        -1.3864285255873326e-08,
+        1.4982947167674343e-08,
+        1.4836236933435387e-08,
+        3.1929848817030537e-09,
+        5.879283282439474e-09,
+        2.2023172847884798e-08,
+        -2.1273633202256725e-09
+      ],
+      "gradient_infinity": 2.2023172847884798e-08,
+      "gradient_l2": 3.478694853388756e-08,
+      "independent_energy_difference_hartree": 0.0,
+      "independent_energy_hartree": -1.9896053438545305,
+      "independent_state_recomputation_fidelity": 1.0000000000000004,
+      "independent_work": {
+        "energy_evaluations": 1,
+        "explicit_state_recomputations": 2,
+        "gradient_vector_evaluations": 1,
+        "initial_energy_evaluations_for_audit": 1
+      },
+      "initial_coordinates": [
+        -0.3568552635725369,
+        -0.13377244883234476,
+        0.20250851722765043,
+        0.20250851738869172,
+        -0.10712702813735832,
+        -0.15001282811814565,
+        0.3464200764504951,
+        -0.15001282644425692,
+        0.2021053826025912
+      ],
+      "initial_energy_hartree": -1.9874574656825539,
+      "optimizer": {
+        "function_evaluations": 57,
+        "gradient_component_equivalent": 405,
+        "gradient_tolerance": 1e-08,
+        "gradient_vector_evaluations": 45,
+        "implementation": "pinned-upstream-minimize_bfgs",
+        "iterations": 9,
+        "maximum_iterations": 200,
+        "message": "Desired error not necessarily achieved due to precision loss.",
+        "status": 2,
+        "success": false
+      },
+      "paper_measurement_cost": null,
+      "resource_delta": {
+        "cnot_count": -9,
+        "cnot_depth": 0,
+        "logical_block_count": -1,
+        "parameter_count": -1,
+        "total_depth": -13
+      },
+      "resource_recount_consistent": true,
+      "resources": {
+        "circuit_qasm_digest": "0c2de00f42def57aaeaad5de1db8e51b46eba8351f29463ecebd1beb58ce122e",
+        "cnot_count_by_iteration": [
+          0,
+          18,
+          36,
+          45,
+          71
+        ],
+        "cnot_depth_by_iteration": [
+          0,
+          7,
+          14,
+          21,
+          34
+        ],
+        "coefficient_policy": "physical",
+        "evaluator_version": "paper-era-full-circuit-resource-v1",
+        "segments": [
+          {
+            "adapt_iteration": 1,
+            "cumulative_cnot_count": 18,
+            "cumulative_cnot_depth": 7,
+            "cumulative_total_depth": 26,
+            "parameter_count": 2
+          },
+          {
+            "adapt_iteration": 2,
+            "cumulative_cnot_count": 36,
+            "cumulative_cnot_depth": 14,
+            "cumulative_total_depth": 52,
+            "parameter_count": 2
+          },
+          {
+            "adapt_iteration": 3,
+            "cumulative_cnot_count": 45,
+            "cumulative_cnot_depth": 21,
+            "cumulative_total_depth": 65,
+            "parameter_count": 1
+          },
+          {
+            "adapt_iteration": 4,
+            "cumulative_cnot_count": 71,
+            "cumulative_cnot_depth": 34,
+            "cumulative_total_depth": 113,
+            "parameter_count": 4
+          }
+        ],
+        "snapshot": {
+          "cnot_count": 71,
+          "cnot_depth": 34,
+          "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+          "logical_block_count": 7,
+          "parameter_count": 9,
+          "structure_digest": "91632fa1153edd68949f807040b31262672486edf572dbaacac3c6e3f464b8db",
+          "total_depth": 113
+        },
+        "total_depth_by_iteration": [
+          0,
+          26,
+          52,
+          65,
+          113
+        ]
+      },
+      "safe": false,
+      "safe_checks": {
+        "chemical_accuracy": false,
+        "constraint": true,
+        "finite": true,
+        "independent_energy": true,
+        "independent_state": true,
+        "kkt": false,
+        "local_energy_budget": false,
+        "optimizer_path": false,
+        "pareto_nonworse": true,
+        "resource_improved": true,
+        "resource_recount_consistent": true
+      },
+      "source_candidate_state_fidelity": 0.9912295839385639,
+      "wall_time_seconds": 0.9247445419896394
+    },
+    "projection_on": {
+      "actual_change_hartree": 0.005296379919165872,
+      "constraint_residual_infinity": 0.0,
+      "coordinates": [
+        -0.4017162878008613,
+        -0.14201310166766154,
+        0.2038997418095468,
+        0.20389974255286666,
+        -0.07190178768039227,
+        -0.1384207023753447,
+        0.3403082619633058,
+        -0.13842070193158432,
+        0.29321243839278094
+      ],
+      "deterministic_structural_resources": {
+        "circuit_qasm_digest": "98e285ca8881ac0ddb92c6717a0f846bb07b092465fbcb02675b742a8a406585",
+        "cnot_count_by_iteration": [
+          0,
+          18,
+          36,
+          45,
+          71
+        ],
+        "cnot_depth_by_iteration": [
+          0,
+          7,
+          14,
+          21,
+          34
+        ],
+        "coefficient_policy": "deterministic-structural",
+        "evaluator_version": "paper-era-full-circuit-resource-v1",
+        "segments": [
+          {
+            "adapt_iteration": 1,
+            "cumulative_cnot_count": 18,
+            "cumulative_cnot_depth": 7,
+            "cumulative_total_depth": 26,
+            "parameter_count": 2
+          },
+          {
+            "adapt_iteration": 2,
+            "cumulative_cnot_count": 36,
+            "cumulative_cnot_depth": 14,
+            "cumulative_total_depth": 52,
+            "parameter_count": 2
+          },
+          {
+            "adapt_iteration": 3,
+            "cumulative_cnot_count": 45,
+            "cumulative_cnot_depth": 21,
+            "cumulative_total_depth": 65,
+            "parameter_count": 1
+          },
+          {
+            "adapt_iteration": 4,
+            "cumulative_cnot_count": 71,
+            "cumulative_cnot_depth": 34,
+            "cumulative_total_depth": 113,
+            "parameter_count": 4
+          }
+        ],
+        "snapshot": {
+          "cnot_count": 71,
+          "cnot_depth": 34,
+          "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+          "logical_block_count": 7,
+          "parameter_count": 9,
+          "structure_digest": "91632fa1153edd68949f807040b31262672486edf572dbaacac3c6e3f464b8db",
+          "total_depth": 113
+        },
+        "total_depth_by_iteration": [
+          0,
+          26,
+          52,
+          65,
+          113
+        ]
+      },
+      "energy_hartree": -1.9896053438545307,
+      "final_inverse_hessian": [
+        [
+          1.060425967845733,
+          -0.0238194217352444,
+          -0.03981430527158347,
+          -0.03204113752865015,
+          -0.2832968465547622,
+          0.17818673332117516,
+          -0.15817946861041082,
+          0.17403211146668165,
+          -0.4946242100558972
+        ],
+        [
+          -0.023819421735244345,
+          0.46838522188286796,
+          -0.1827084744651073,
+          -0.18866085277192263,
+          -0.062301014088811,
+          -0.07486624294409085,
+          0.25784029498869615,
+          -0.07422224016302353,
+          0.22377253566342722
+        ],
+        [
+          -0.03981430527158358,
+          -0.18270847446510724,
+          0.993685569833242,
+          0.3224487164301162,
+          0.02824957145156859,
+          0.29441220594753936,
+          -0.7887055193085097,
+          0.2871703543356846,
+          -0.934414955618668
+        ],
+        [
+          -0.032041137528650065,
+          -0.18866085277192257,
+          0.3224487164301161,
+          1.0089242655384316,
+          0.0349650924413932,
+          0.27833857825828123,
+          -0.5928171908658412,
+          0.30093958654116687,
+          -0.7480563084117098
+        ],
+        [
+          -0.2832968465547622,
+          -0.062301014088811,
+          0.0282495714515687,
+          0.03496509244139326,
+          0.8617578087773057,
+          0.09913152164206286,
+          -0.052956380210276044,
+          0.10085298066118321,
+          0.5547416113572218
+        ],
+        [
+          0.1781867333211753,
+          -0.07486624294409094,
+          0.29441220594753914,
+          0.2783385782582815,
+          0.09913152164206278,
+          1.0130546214242833,
+          -0.7995000107472843,
+          0.36794540532603226,
+          -0.8057727913794944
+        ],
+        [
+          -0.1581794686104109,
+          0.2578402949886962,
+          -0.7887055193085097,
+          -0.5928171908658413,
+          -0.05295638021027621,
+          -0.7995000107472846,
+          7.504521788692014,
+          -0.7534001044143579,
+          5.1633229835791
+        ],
+        [
+          0.17403211146668152,
+          -0.0742222401630236,
+          0.28717035433568466,
+          0.30093958654116687,
+          0.10085298066118317,
+          0.3679454053260324,
+          -0.7534001044143577,
+          1.0270971883194908,
+          -0.8492904581053231
+        ],
+        [
+          -0.4946242100558974,
+          0.22377253566342725,
+          -0.9344149556186674,
+          -0.7480563084117096,
+          0.5547416113572218,
+          -0.805772791379494,
+          5.1633229835791,
+          -0.8492904581053236,
+          8.255748057520293
+        ]
+      ],
+      "finite": true,
+      "gradient": [
+        -9.95924676061577e-10,
+        1.2778753333275716e-09,
+        -8.689018788331226e-10,
+        1.8938584034344785e-10,
+        6.719548632794226e-10,
+        -1.1550817420602488e-09,
+        5.669514441253298e-10,
+        -5.711357636828396e-10,
+        -4.5941574849939215e-10
+      ],
+      "gradient_infinity": 1.2778753333275716e-09,
+      "gradient_l2": 2.4617308543230665e-09,
+      "independent_energy_difference_hartree": 0.0,
+      "independent_energy_hartree": -1.9896053438545307,
+      "independent_state_recomputation_fidelity": 1.0,
+      "independent_work": {
+        "energy_evaluations": 1,
+        "explicit_state_recomputations": 2,
+        "gradient_vector_evaluations": 1,
+        "initial_energy_evaluations_for_audit": 1
+      },
+      "initial_coordinates": [
+        -0.401942663305295,
+        -0.14113630305618693,
+        0.2014227852043485,
+        0.19194402624980186,
+        -0.07396420104008089,
+        -0.1371496594542939,
+        0.35726558393675834,
+        -0.140213712093223,
+        0.31859637260068757
+      ],
+      "initial_energy_hartree": -1.9894776462189865,
+      "optimizer": {
+        "function_evaluations": 9,
+        "gradient_component_equivalent": 81,
+        "gradient_tolerance": 1e-08,
+        "gradient_vector_evaluations": 9,
+        "implementation": "pinned-upstream-minimize_bfgs",
+        "iterations": 8,
+        "maximum_iterations": 200,
+        "message": "Optimization terminated successfully.",
+        "status": 0,
+        "success": true
+      },
+      "paper_measurement_cost": null,
+      "resource_delta": {
+        "cnot_count": -9,
+        "cnot_depth": 0,
+        "logical_block_count": -1,
+        "parameter_count": -1,
+        "total_depth": -13
+      },
+      "resource_recount_consistent": true,
+      "resources": {
+        "circuit_qasm_digest": "e4acdc09444a57f07bc90ea3f464315cbc7d7bcf454b8a5795ded663f16c3cef",
+        "cnot_count_by_iteration": [
+          0,
+          18,
+          36,
+          45,
+          71
+        ],
+        "cnot_depth_by_iteration": [
+          0,
+          7,
+          14,
+          21,
+          34
+        ],
+        "coefficient_policy": "physical",
+        "evaluator_version": "paper-era-full-circuit-resource-v1",
+        "segments": [
+          {
+            "adapt_iteration": 1,
+            "cumulative_cnot_count": 18,
+            "cumulative_cnot_depth": 7,
+            "cumulative_total_depth": 26,
+            "parameter_count": 2
+          },
+          {
+            "adapt_iteration": 2,
+            "cumulative_cnot_count": 36,
+            "cumulative_cnot_depth": 14,
+            "cumulative_total_depth": 52,
+            "parameter_count": 2
+          },
+          {
+            "adapt_iteration": 3,
+            "cumulative_cnot_count": 45,
+            "cumulative_cnot_depth": 21,
+            "cumulative_total_depth": 65,
+            "parameter_count": 1
+          },
+          {
+            "adapt_iteration": 4,
+            "cumulative_cnot_count": 71,
+            "cumulative_cnot_depth": 34,
+            "cumulative_total_depth": 113,
+            "parameter_count": 4
+          }
+        ],
+        "snapshot": {
+          "cnot_count": 71,
+          "cnot_depth": 34,
+          "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+          "logical_block_count": 7,
+          "parameter_count": 9,
+          "structure_digest": "91632fa1153edd68949f807040b31262672486edf572dbaacac3c6e3f464b8db",
+          "total_depth": 113
+        },
+        "total_depth_by_iteration": [
+          0,
+          26,
+          52,
+          65,
+          113
+        ]
+      },
+      "safe": false,
+      "safe_checks": {
+        "chemical_accuracy": false,
+        "constraint": true,
+        "finite": true,
+        "independent_energy": true,
+        "independent_state": true,
+        "kkt": true,
+        "local_energy_budget": false,
+        "optimizer_path": true,
+        "pareto_nonworse": true,
+        "resource_improved": true,
+        "resource_recount_consistent": true
+      },
+      "source_candidate_state_fidelity": 0.991229584996843,
+      "wall_time_seconds": 0.18902741698548198
+    }
+  },
+  "predictors": {
+    "diagonal_hessian": 0.007511483959578817,
+    "exact_hessian_oracle": 0.005516915659531548,
+    "general_constraint_obs": 0.005373446429576369,
+    "magnitude": 0.008315294195735077,
+    "magnitude_position": 0.0053455462686868346,
+    "single_coordinate_obs": 0.005373446429576369
+  },
+  "primary_actual_path": "projection_on",
+  "safe": false,
+  "source_block": {
+    "ansatz_positions": [
+      5
+    ],
+    "block_id": "block-v1:51639d659dd89e9785609d7427b091b1c1bfed34aa5f84c8643f92d9e4d5c046",
+    "circuit_implementation_id": "paper-era-ovp-ceo-circuit-v1",
+    "coefficients": [
+      -0.09118823496337165
+    ],
+    "constituent_qe_ids": [
+      "qe:60818cec5e71c48c8918913e57033681bd9fc6523c363a88c8c71f86eeda53ed",
+      "qe:a64d4f87cfbfb3d2e571db242bfea80204997cc7ffdf451542eab0ad9d28a716"
+    ],
+    "family": "OVP",
+    "generator_digests": [
+      "ad4a25d32c80e8eee674afd069186daa92af4830a4d21d852643808240786a8e"
+    ],
+    "normalization": "paper-era-pool-arrange-v1",
+    "numerical_context_digest": "8ef8558fccee478dd13ecaf61f7d388a5f7b0d821627a0c5063aeb0325a7d4d8",
+    "orientation": "sum",
+    "pool_indices": [
+      162
+    ],
+    "selection_iterations": [
+      3
+    ],
+    "support_qubits": [
+      2,
+      3,
+      6,
+      7
+    ],
+    "symmetry_quantum_numbers": [
+      "delta_particles=0;delta_alpha=0;delta_beta=0"
+    ],
+    "tetris_layer_positions": [
+      1
+    ]
+  }
+}

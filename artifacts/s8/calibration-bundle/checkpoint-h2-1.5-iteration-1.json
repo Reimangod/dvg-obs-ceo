@@ -1,0 +1,180 @@
+{
+  "absolute_error_hartree": 1.1102230246251565e-16,
+  "ansatz_coefficients": [
+    -0.3633454977873758
+  ],
+  "ansatz_indices": [
+    4
+  ],
+  "case_id": "h2-1.5-iteration-1",
+  "checkpoint_digest": "793ce53f6dc435e7bc8c8fa777d3f0396bd91efd14b01cbfb27e30755d968371",
+  "energy_hartree": -0.9981493534714102,
+  "exact_hessian": [
+    [
+      1.3819136986049823
+    ]
+  ],
+  "exact_hessian_diagnostics": {
+    "condition_number": 1.0,
+    "dimension": 1,
+    "minimum_cholesky_diagonal": 1.1755482544774511,
+    "symmetry_relative_residual": 0.0
+  },
+  "exact_hessian_unavailable_reason": null,
+  "fci_energy_hartree": -0.9981493534714101,
+  "gradient": [
+    1.4253661584362476e-09
+  ],
+  "gradient_infinity": 1.4253661584362476e-09,
+  "hessian_capture": {
+    "final_gradient": [
+      1.4253661584362476e-09
+    ],
+    "final_inverse_hessian": [
+      [
+        0.7236341907057654
+      ]
+    ],
+    "final_parameters": [
+      -0.3633454977873758
+    ],
+    "initial_gradient": null,
+    "initial_inverse_hessian": [
+      [
+        1.0
+      ]
+    ],
+    "initial_parameters": [
+      0.0
+    ],
+    "optimality": {
+      "constraint_residual_infinity": 0.0,
+      "gradient_infinity": 1.4253661584362476e-09,
+      "gradient_l2": 1.4253661584362476e-09,
+      "gradient_rms": 1.4253661584362476e-09,
+      "kkt_residual": 1.4253661584362476e-09,
+      "kkt_stationarity_l2": 1.4253661584362476e-09,
+      "parameter_step_l2": null,
+      "projected_gradient_infinity": 1.4253661584362476e-09,
+      "projected_gradient_l2": 1.4253661584362476e-09,
+      "projected_gradient_rms": 1.4253661584362476e-09,
+      "recent_energy_change_hartree": null
+    },
+    "optimization_id": "optimizer-v1:cc3e314576a362e0cb050f13cc1b4266a4f7947808da41a9b914c9f279547507",
+    "quality": {
+      "age_steps": 0,
+      "condition_number": 1.0,
+      "dimension": 1,
+      "finite": true,
+      "held_out_secant_count": 0,
+      "held_out_secant_max_relative_residual": null,
+      "held_out_secant_rms_relative_residual": null,
+      "internal_secant_count": 4,
+      "internal_secant_max_relative_residual": 0.06911580093004739,
+      "internal_secant_rms_relative_residual": 0.0346757584021119,
+      "invalid_update_count": 0,
+      "matrix_digest": "d785e1b8dd6b76e980f502e2aa76da0a479ee5b05156f3973b62eee5db23e7e5",
+      "minimum_eigenvalue": 0.7236341907057654,
+      "numerically_usable": true,
+      "positive_definite": true,
+      "rejection_reasons": [],
+      "secant_direction_coverage": 1.0,
+      "symmetry_relative_residual": 0.0,
+      "valid_update_count": 4,
+      "version": "hessian-diagnostics-v1"
+    },
+    "result": {
+      "function_evaluations": 5,
+      "gradient_evaluations": 5,
+      "iterations": 4,
+      "message": "Optimization terminated successfully.",
+      "status": 0,
+      "success": true
+    },
+    "secant_pairs": [
+      {
+        "curvature": 0.27110526245717925,
+        "gradient_change": [
+          -0.5905508024387633
+        ],
+        "normalized_curvature": 1.0,
+        "pair_id": "secant-v1:a49555c07a62e7950b59bf0bf62495025cd154d91fcb95d513c16729b7544963",
+        "source": "internal-bfgs",
+        "step": [
+          -0.45907187211940376
+        ],
+        "valid_for_bfgs_quality": true
+      },
+      {
+        "curvature": 0.014353303043755998,
+        "gradient_change": [
+          0.1404340020072149
+        ],
+        "normalized_curvature": 1.0,
+        "pair_id": "secant-v1:c75e69748151d4a19fff9f1e12d2f4a92edc6c361ae2d7238e2b2ad2b817adfe",
+        "source": "internal-bfgs",
+        "step": [
+          0.1022067507769136
+        ],
+        "valid_for_bfgs_quality": true
+      },
+      {
+        "curvature": 5.869776769968895e-05,
+        "gradient_change": [
+          -0.009006275102320993
+        ],
+        "normalized_curvature": 1.0,
+        "pair_id": "secant-v1:b2a50b9182f9d77cbde86557d47106cf33dae41877ffa71b953857eb3162062b",
+        "source": "internal-bfgs",
+        "step": [
+          -0.00651743001771754
+        ],
+        "valid_for_bfgs_quality": true
+      },
+      {
+        "curvature": 1.8973222620529878e-09,
+        "gradient_change": [
+          5.1204839831786586e-05
+        ],
+        "normalized_curvature": 1.0,
+        "pair_id": "secant-v1:b6a7b69a688dea01c5a78e3b0fdeaad546878bd37205a926943a69c951202230",
+        "source": "internal-bfgs",
+        "step": [
+          3.705357283190214e-05
+        ],
+        "valid_for_bfgs_quality": true
+      }
+    ]
+  },
+  "independent_energy_hartree": -0.9981493534714102,
+  "iteration_counts": [
+    1
+  ],
+  "recycled_inverse_hessian": [
+    [
+      0.7236341907057654
+    ]
+  ],
+  "statevector_sha256": "f7b21a83473507f3d80338ae140e9ca70c7b89c853f38c5e843a0f8903d5eb2d",
+  "trajectory": [
+    {
+      "absolute_error_hartree": 1.1102230246251565e-16,
+      "adapt_iteration": 1,
+      "energy_hartree": -0.9981493534714102,
+      "finished": false,
+      "parameter_count": 1
+    }
+  ],
+  "work": {
+    "baseline_optimizer_energy_evaluations": 5,
+    "baseline_optimizer_gradient_component_equivalent": 5,
+    "exact_hessian_analytic_entries": 1,
+    "exact_hessian_wall_time_seconds": 0.003120790992397815,
+    "independent_checkpoint_energy_evaluations": 1,
+    "independent_checkpoint_state_recomputations": 1,
+    "paper_measurement_cost": null,
+    "statevector_kernel_total": null,
+    "statevector_kernel_total_reason": "upstream analytic routines are not instrumented at kernel granularity",
+    "total_checkpoint_wall_time_seconds": 1.9025535840191878
+  }
+}

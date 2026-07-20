@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0.0",
+  "stage": "S8.1",
+  "status": "preregistered-before-s8.1-execution",
+  "registered_at": "2026-07-20",
+  "outcome_informed_extension": true,
+  "rationale": "S8 primary produced zero positive safe labels, so precision and recall could not be estimated.",
+  "primary_s8_result_immutable": true,
+  "development_checkpoints": [
+    {
+      "case_id": "h4-1.5-iteration-8",
+      "checkpoint": "after-adapt-iteration-8",
+      "on_earlier_convergence": "fail-checkpoint-without-substitution"
+    },
+    {
+      "case_id": "h4-1.5-iteration-12-or-convergence",
+      "checkpoint": "after-adapt-iteration-12-or-first-earlier-algorithmic-convergence",
+      "maximum_adapt_iterations": 12
+    }
+  ],
+  "unchanged_from_s8": {
+    "molecule": "linear H4",
+    "spacing_angstrom": 1.5,
+    "pool": "DVG_CEO",
+    "tetris": true,
+    "hessian_recycling": true,
+    "candidate_scope": "all single-block S4 candidates, one execution per equivalence class",
+    "predictors": [
+      "magnitude",
+      "magnitude_position",
+      "diagonal_hessian",
+      "single_coordinate_obs",
+      "general_constraint_obs",
+      "exact_hessian_oracle"
+    ],
+    "local_energy_budget_hartree": 0.0001,
+    "optimizer": "pinned-upstream-minimize_bfgs",
+    "optimizer_max_iterations": 200,
+    "optimizer_gradient_tolerance": 1e-8,
+    "projection_on_off_ablation": true,
+    "fallbacks": 0
+  },
+  "explicitly_forbidden": [
+    "reclassifying the S8 near-miss",
+    "raising the local energy budget after observing S8",
+    "dropping failed or unsafe candidates",
+    "using S8.1 as a blind-holdout claim"
+  ],
+  "selector_freeze_gate": {
+    "at_least_one_actual_safe_positive": true,
+    "at_least_one_actual_unsafe_negative": true,
+    "general_obs_false_safe_count": 0,
+    "all_candidate_and_work_records_complete": true,
+    "on_failure": "S9 remains blocked; no additional adaptive checkpoint is silently added"
+  },
+  "claim_boundary": [
+    "This is outcome-informed development calibration, not confirmatory evidence.",
+    "Later checkpoints are a separate post-hoc regime from the primary first-accuracy checkpoint.",
+    "Paper measurement cost remains undefined."
+  ]
+}

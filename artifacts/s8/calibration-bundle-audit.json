@@ -1,0 +1,36 @@
+{
+  "artifact_kind": "s8-calibration-bundle-independent-audit",
+  "bundle": "artifacts/s8/calibration-bundle",
+  "catalog_candidates": 21,
+  "checkpoint_digests": {
+    "checkpoint-h2-1.5-iteration-1.json": "793ce53f6dc435e7bc8c8fa777d3f0396bd91efd14b01cbfb27e30755d968371",
+    "checkpoint-h4-1.5-first-chemical-accuracy.json": "997d19722b77241436baec3e682627f365997b64ddbe4910017a4989905571f2"
+  },
+  "checks": {
+    "catalog_count": true,
+    "checkpoint_digest:checkpoint-h2-1.5-iteration-1.json": true,
+    "checkpoint_digest:checkpoint-h4-1.5-first-chemical-accuracy.json": true,
+    "csv_success_rows": true,
+    "failure_count": true,
+    "jsonl_matches_durable_rows": true,
+    "jsonl_unique_candidate_ids": true,
+    "measurement_cost_unclaimed": true,
+    "metrics_recomputed_exactly": true,
+    "plots_exist": true,
+    "primary_projection_binding": true,
+    "representative_count": true,
+    "representatives_match_rows": true,
+    "required_files": true,
+    "row_file_unique_candidate_ids": true,
+    "safe_count": true,
+    "safe_is_conjunction": true,
+    "success_count": true
+  },
+  "claim_boundary": "Consistency validation only; this audit adds no performance claim.",
+  "executed_candidates": 17,
+  "failed_candidates": 0,
+  "passed": true,
+  "safe_candidates": 0,
+  "schema_version": "1.0.0",
+  "successful_candidates": 17
+}
