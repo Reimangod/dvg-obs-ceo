@@ -44,6 +44,7 @@ dvg-obs-s10-lih = "dvg_obs_ceo.s10_lih:main"
 dvg-obs-s10-audit = "dvg_obs_ceo.s10_audit:main"
 dvg-obs-s11-gsd = "dvg_obs_ceo.s11_gsd:main"
 dvg-obs-s11-compare = "dvg_obs_ceo.s11_compare:main"
+dvg-obs-s12-reuse-probe = "dvg_obs_ceo.s12_reuse_probe:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
