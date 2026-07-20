@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0.0",
+  "protocol_id": "dvg-obs-s11-gsd-lih-protocol-v1",
+  "execution_tag": "dvg-obs-s11-gsd-lih-protocol-v1",
+  "registered_at": "2026-07-20",
+  "paper": {
+    "title": "Reducing the resources required by ADAPT-VQE using coupled exchange operators and improved subroutines",
+    "doi": "10.1038/s41534-025-01039-4",
+    "comparison": "Fig. 14, Fig. 15, and Table 1",
+    "algorithm": "GSD-ADAPT-VQE original protocol"
+  },
+  "problem": {
+    "molecule": "LiH",
+    "distance_angstrom": 3.0,
+    "basis": "sto-3g",
+    "mapping": "jordan-wigner",
+    "shots": null,
+    "noise": null
+  },
+  "algorithm": {
+    "pool": "GSD",
+    "selection": "gradient",
+    "gradient_threshold": 0.000001,
+    "tetris": false,
+    "hessian_recycling": false,
+    "optimized_gradient_measurements": false,
+    "full_optimization": true,
+    "optimizer": "pinned-upstream-BFGS",
+    "seed": 0,
+    "stop": "first-strictly-below-pinned-upstream-chemical-accuracy"
+  },
+  "numerical_environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  },
+  "paper_first_accuracy_reference": {
+    "cnot_count": 392,
+    "cnot_depth": 384,
+    "measurement_cost": 50468
+  },
+  "record_each_iteration": [
+    "energy", "fci_error", "parameters", "CNOT", "CNOT_depth",
+    "total_depth", "wall_time", "energy_evaluations",
+    "gradient_component_equivalent"
+  ],
+  "claim_boundary": [
+    "The direct GSD run is the ordinary-ADAPT comparator; it is not condition-matched in algorithmic enhancements to CEO*.",
+    "The paper measurement-cost value is a cited reference, not recomputed by this runner.",
+    "Local energy/gradient counters are not relabeled as paper measurement cost.",
+    "V2's accepted primary result is the rolled-back no-pruning state; rejected counterfactual resources are shown separately."
+  ]
+}

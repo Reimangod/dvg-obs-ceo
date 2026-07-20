@@ -42,6 +42,7 @@ dvg-obs-s8-extension-probe = "dvg_obs_ceo.s8_extension_probe:main"
 dvg-obs-s9-probe = "dvg_obs_ceo.s9_probe:main"
 dvg-obs-s10-lih = "dvg_obs_ceo.s10_lih:main"
 dvg-obs-s10-audit = "dvg_obs_ceo.s10_audit:main"
+dvg-obs-s11-gsd = "dvg_obs_ceo.s11_gsd:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
