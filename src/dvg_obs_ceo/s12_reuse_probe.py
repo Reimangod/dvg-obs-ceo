@@ -25,7 +25,7 @@ from .identity import (
 from .measurement_reuse import ExactPauliRequest, ExactPauliReuseCache
 
 
-PROTOCOL_ID = "dvg-obs-s12-exact-ogm-reuse-protocol-v1"
+PROTOCOL_ID = "dvg-obs-s12-exact-ogm-reuse-protocol-v1.1"
 PROTOCOL_TAG = PROTOCOL_ID
 REQUIRED_THREADS = {"OMP_NUM_THREADS": "1", "OPENBLAS_NUM_THREADS": "1", "MKL_NUM_THREADS": "1"}
 BACKEND_CONTEXT_DIGEST = hashlib.sha256(b"pinned-scipy-sparse-exact-statevector-no-shots-v1").hexdigest()
@@ -294,14 +294,23 @@ def run(case: str, bundle: Path) -> dict[str, Any]:
     off_energy, off_gradients = reconstructed["reuse_off"]
     on_energy, on_gradients = reconstructed["reuse_on"]
     official_energy = float(algorithm.evaluate_energy(coefficients, indices))
+    official_gradients = np.asarray(
+        [algorithm.eval_candidate_gradient(index) for index in range(pool.size)],
+        dtype=np.float64,
+    )
     _, _, official_norm, _ = algorithm.rank_gradients(silent=True)
+    thresholded_official_norm = float(np.sqrt(sum(
+        gradient ** 2 for index, gradient in enumerate(official_gradients)
+        if abs(gradient) >= 1e-8 and index not in pool.parent_range
+    )))
     source_energy = float(source["energy_hartree"])
     checks = {
         "reuse_off_on_energy_bitwise_equal": canonical_float64_hex((off_energy,)) == canonical_float64_hex((on_energy,)),
         "reuse_off_on_gradient_bitwise_equal": np.array_equal(off_gradients, on_gradients),
         "termwise_energy_matches_official_sparse": abs(off_energy - official_energy) <= 1e-10,
         "official_sparse_energy_matches_source": abs(official_energy - source_energy) <= 1e-10,
-        "termwise_gradient_norm_matches_official": abs(branches["reuse_off"]["total_gradient_norm_excluding_parents"] - float(official_norm)) <= 1e-10,
+        "termwise_gradient_vector_matches_official_sparse": bool(np.allclose(off_gradients, official_gradients, rtol=0.0, atol=1e-10)),
+        "official_rank_norm_matches_thresholded_raw_vector": abs(thresholded_official_norm - float(official_norm)) <= 1e-12,
         "reuse_has_positive_hits": branches["reuse_on"]["ledger"]["cache_hits"] > 0,
         "reuse_reduces_fresh_pauli_evaluations": branches["reuse_on"]["ledger"]["fresh_pauli_expectation_evaluations"] < branches["reuse_off"]["ledger"]["fresh_pauli_expectation_evaluations"],
         "state_id_same_across_contexts": identities["energy"]["state_preparation_id"] == identities["gradients"]["state_preparation_id"],
@@ -322,6 +331,13 @@ def run(case: str, bundle: Path) -> dict[str, Any]:
             "ogm_gradient_union_nonidentity_pauli_terms": len(gradient_labels),
             "cross_context_overlap_terms": len(energy_labels & gradient_labels),
             "pool_operators": pool.size,
+        },
+        "independent_sparse_parity": {
+            "official_energy_hartree": official_energy,
+            "maximum_absolute_gradient_difference": float(np.max(np.abs(off_gradients - official_gradients))),
+            "official_rank_gradient_norm": float(official_norm),
+            "thresholded_raw_gradient_norm": thresholded_official_norm,
+            "official_gradient_zero_cutoff": 1e-8
         },
         "branches": branches,
         "checks": checks,

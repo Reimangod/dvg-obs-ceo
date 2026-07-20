@@ -1,0 +1,607 @@
+{
+  "cache_hits": 0,
+  "enabled": false,
+  "event_ledger_digest": "cc464d2f888030be78d38afb2e278a4ae31f72458518c1efc61fa5d02eecd2bd",
+  "events": [
+    {
+      "disposition": "fresh",
+      "pauli_string": "X0 X1 Y2 Y3",
+      "requested_measurement_context_id": "measurement-v1:0457792c673e19e0737defb91ff80e28ab0f1b07a266b5b42b3f113fec044a77",
+      "semantic_key": "pauli-expectation-v1:05ec57c2fb5e01f7eecf5474bc4a2eca11e897f02088e1c77200076d8a125faf",
+      "sequence": 0,
+      "source_measurement_context_id": "measurement-v1:0457792c673e19e0737defb91ff80e28ab0f1b07a266b5b42b3f113fec044a77",
+      "value_float64_hex": "3fe542c437017102"
+    },
+    {
+      "disposition": "fresh",
+      "pauli_string": "X0 Y1 Y2 X3",
+      "requested_measurement_context_id": "measurement-v1:0457792c673e19e0737defb91ff80e28ab0f1b07a266b5b42b3f113fec044a77",
+      "semantic_key": "pauli-expectation-v1:5783615d1b5bfe0aadf753943cea07a580c7272bc3cfcc2b2cdc3e6e268037e4",
+      "sequence": 1,
+      "source_measurement_context_id": "measurement-v1:0457792c673e19e0737defb91ff80e28ab0f1b07a266b5b42b3f113fec044a77",
+      "value_float64_hex": "bfe542c437017102"
+    },
+    {
+      "disposition": "fresh",
+      "pauli_string": "Y0 X1 X2 Y3",
+      "requested_measurement_context_id": "measurement-v1:0457792c673e19e0737defb91ff80e28ab0f1b07a266b5b42b3f113fec044a77",
+      "semantic_key": "pauli-expectation-v1:c12a6211bf33f039d5cb332c2f2538bb817ec64b80fdc61ac3e8bc9965c599d1",
+      "sequence": 2,
+      "source_measurement_context_id": "measurement-v1:0457792c673e19e0737defb91ff80e28ab0f1b07a266b5b42b3f113fec044a77",
+      "value_float64_hex": "bfe542c437017102"
+    },
+    {
+      "disposition": "fresh",
+      "pauli_string": "Y0 Y1 X2 X3",
+      "requested_measurement_context_id": "measurement-v1:0457792c673e19e0737defb91ff80e28ab0f1b07a266b5b42b3f113fec044a77",
+      "semantic_key": "pauli-expectation-v1:584f06f3b6662b99dfd396caa98fd58fd0fcb1ae67e637ff19b5524d7979c4b0",
+      "sequence": 3,
+      "source_measurement_context_id": "measurement-v1:0457792c673e19e0737defb91ff80e28ab0f1b07a266b5b42b3f113fec044a77",
+      "value_float64_hex": "3fe542c437017102"
+    },
+    {
+      "disposition": "fresh",
+      "pauli_string": "Z0",
+      "requested_measurement_context_id": "measurement-v1:0457792c673e19e0737defb91ff80e28ab0f1b07a266b5b42b3f113fec044a77",
+      "semantic_key": "pauli-expectation-v1:280846fee915ce6dba6a3ed57c9ae6f0567f83a38437f9728b9131ff13e67fe9",
+      "sequence": 4,
+      "source_measurement_context_id": "measurement-v1:0457792c673e19e0737defb91ff80e28ab0f1b07a266b5b42b3f113fec044a77",
+      "value_float64_hex": "bfe7ea8327f8fc4a"
+    },
+    {
+      "disposition": "fresh",
+      "pauli_string": "Z0 Z1",
+      "requested_measurement_context_id": "measurement-v1:0457792c673e19e0737defb91ff80e28ab0f1b07a266b5b42b3f113fec044a77",
+      "semantic_key": "pauli-expectation-v1:c5d6251241593ab6be86c77ba43d9d0c572709b07d06513537f07727057a2b25",
+      "sequence": 5,
+      "source_measurement_context_id": "measurement-v1:0457792c673e19e0737defb91ff80e28ab0f1b07a266b5b42b3f113fec044a77",
+      "value_float64_hex": "3ff0000000000000"
+    },
+    {
+      "disposition": "fresh",
+      "pauli_string": "Z0 Z2",
+      "requested_measurement_context_id": "measurement-v1:0457792c673e19e0737defb91ff80e28ab0f1b07a266b5b42b3f113fec044a77",
+      "semantic_key": "pauli-expectation-v1:382e5602934cce7af5ea100533d5928d15d6c2c3d507f9fd080a741003024c0c",
+      "sequence": 6,
+      "source_measurement_context_id": "measurement-v1:0457792c673e19e0737defb91ff80e28ab0f1b07a266b5b42b3f113fec044a77",
+      "value_float64_hex": "bff0000000000000"
+    },
+    {
+      "disposition": "fresh",
+      "pauli_string": "Z0 Z3",
+      "requested_measurement_context_id": "measurement-v1:0457792c673e19e0737defb91ff80e28ab0f1b07a266b5b42b3f113fec044a77",
+      "semantic_key": "pauli-expectation-v1:7f8a33374493ac20bb21ac7cfeaf8fce72cfbee781f1f5c19f84ba4616582432",
+      "sequence": 7,
+      "source_measurement_context_id": "measurement-v1:0457792c673e19e0737defb91ff80e28ab0f1b07a266b5b42b3f113fec044a77",
+      "value_float64_hex": "bff0000000000000"
+    },
+    {
+      "disposition": "fresh",
+      "pauli_string": "Z1",
+      "requested_measurement_context_id": "measurement-v1:0457792c673e19e0737defb91ff80e28ab0f1b07a266b5b42b3f113fec044a77",
+      "semantic_key": "pauli-expectation-v1:17995c9f09caad6d4ed001c192d504449a29544cceda8184ac68560aa7ec896f",
+      "sequence": 8,
+      "source_measurement_context_id": "measurement-v1:0457792c673e19e0737defb91ff80e28ab0f1b07a266b5b42b3f113fec044a77",
+      "value_float64_hex": "bfe7ea8327f8fc4a"
+    },
+    {
+      "disposition": "fresh",
+      "pauli_string": "Z1 Z2",
+      "requested_measurement_context_id": "measurement-v1:0457792c673e19e0737defb91ff80e28ab0f1b07a266b5b42b3f113fec044a77",
+      "semantic_key": "pauli-expectation-v1:6ab385cbee8676cd96040ede09dbd9636b527632f848fb77d66e3f9c761f10c2",
+      "sequence": 9,
+      "source_measurement_context_id": "measurement-v1:0457792c673e19e0737defb91ff80e28ab0f1b07a266b5b42b3f113fec044a77",
+      "value_float64_hex": "bff0000000000000"
+    },
+    {
+      "disposition": "fresh",
+      "pauli_string": "Z1 Z3",
+      "requested_measurement_context_id": "measurement-v1:0457792c673e19e0737defb91ff80e28ab0f1b07a266b5b42b3f113fec044a77",
+      "semantic_key": "pauli-expectation-v1:cc9013959113f9e6711fefafd019172c70d23f0c7848b818f985a666f74c63d4",
+      "sequence": 10,
+      "source_measurement_context_id": "measurement-v1:0457792c673e19e0737defb91ff80e28ab0f1b07a266b5b42b3f113fec044a77",
+      "value_float64_hex": "bff0000000000000"
+    },
+    {
+      "disposition": "fresh",
+      "pauli_string": "Z2",
+      "requested_measurement_context_id": "measurement-v1:0457792c673e19e0737defb91ff80e28ab0f1b07a266b5b42b3f113fec044a77",
+      "semantic_key": "pauli-expectation-v1:f54df8faafa330f38f19b324c180420ffc8b73e14680ee5a45b6e0b3c1451f64",
+      "sequence": 11,
+      "source_measurement_context_id": "measurement-v1:0457792c673e19e0737defb91ff80e28ab0f1b07a266b5b42b3f113fec044a77",
+      "value_float64_hex": "3fe7ea8327f8fc4a"
+    },
+    {
+      "disposition": "fresh",
+      "pauli_string": "Z2 Z3",
+      "requested_measurement_context_id": "measurement-v1:0457792c673e19e0737defb91ff80e28ab0f1b07a266b5b42b3f113fec044a77",
+      "semantic_key": "pauli-expectation-v1:518641538f72e0c570f00551ff22b72cd6ecb3a47ee946083955f76a937b2e16",
+      "sequence": 12,
+      "source_measurement_context_id": "measurement-v1:0457792c673e19e0737defb91ff80e28ab0f1b07a266b5b42b3f113fec044a77",
+      "value_float64_hex": "3ff0000000000000"
+    },
+    {
+      "disposition": "fresh",
+      "pauli_string": "Z3",
+      "requested_measurement_context_id": "measurement-v1:0457792c673e19e0737defb91ff80e28ab0f1b07a266b5b42b3f113fec044a77",
+      "semantic_key": "pauli-expectation-v1:e33ba0059f3f3176e49ca7e3471590b0b2d088f3ff57d48c42716d1041389ea5",
+      "sequence": 13,
+      "source_measurement_context_id": "measurement-v1:0457792c673e19e0737defb91ff80e28ab0f1b07a266b5b42b3f113fec044a77",
+      "value_float64_hex": "3fe7ea8327f8fc4a"
+    },
+    {
+      "disposition": "fresh",
+      "pauli_string": "X0 X1 X2 X3",
+      "requested_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "semantic_key": "pauli-expectation-v1:f406ecad7231c667cb6520371b75fc8ee8eb428a75b3e10aa9ef7f1c1e195cfb",
+      "sequence": 14,
+      "source_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "value_float64_hex": "bfe542c437017102"
+    },
+    {
+      "disposition": "fresh",
+      "pauli_string": "X0 X1 X2 Y3",
+      "requested_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "semantic_key": "pauli-expectation-v1:b0efa0a5f03bec5d3be5ad194b4c2382e8383579c42cbc7f4c6991ce7801e2e2",
+      "sequence": 15,
+      "source_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "value_float64_hex": "0000000000000000"
+    },
+    {
+      "disposition": "fresh",
+      "pauli_string": "X0 X1 Y2 X3",
+      "requested_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "semantic_key": "pauli-expectation-v1:a6b4a6c6c563447532f879b2614f1db14c96b20156091f749f36266d459fce92",
+      "sequence": 16,
+      "source_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "value_float64_hex": "0000000000000000"
+    },
+    {
+      "disposition": "fresh",
+      "pauli_string": "X0 X1 Y2 Y3",
+      "requested_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "semantic_key": "pauli-expectation-v1:05ec57c2fb5e01f7eecf5474bc4a2eca11e897f02088e1c77200076d8a125faf",
+      "sequence": 17,
+      "source_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "value_float64_hex": "3fe542c437017102"
+    },
+    {
+      "disposition": "fresh",
+      "pauli_string": "X0 X2",
+      "requested_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "semantic_key": "pauli-expectation-v1:be1b8813b4d0c378b5e71bda34a24bc4a2fed1314c382d9ca61d90ca4424e3f0",
+      "sequence": 18,
+      "source_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "value_float64_hex": "0000000000000000"
+    },
+    {
+      "disposition": "fresh",
+      "pauli_string": "X0 X2 Z3",
+      "requested_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "semantic_key": "pauli-expectation-v1:aafe6bb60349e24c09279c8b3e85e00f3aa8b8dbb77f06b2c9a2c93dadb25714",
+      "sequence": 19,
+      "source_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "value_float64_hex": "0000000000000000"
+    },
+    {
+      "disposition": "fresh",
+      "pauli_string": "X0 Y1 X2 X3",
+      "requested_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "semantic_key": "pauli-expectation-v1:688d6e5e110b549559ae70b0b0f22df4ffb9dbf4abda5dbc0a2d6a8d39d05fe5",
+      "sequence": 20,
+      "source_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "value_float64_hex": "0000000000000000"
+    },
+    {
+      "disposition": "fresh",
+      "pauli_string": "X0 Y1 X2 Y3",
+      "requested_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "semantic_key": "pauli-expectation-v1:15ad496e6a970f14242b1402fe071a2e08dfafb79fca3e92588e40c03b091f4d",
+      "sequence": 21,
+      "source_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "value_float64_hex": "bfe542c437017102"
+    },
+    {
+      "disposition": "fresh",
+      "pauli_string": "X0 Y1 Y2 X3",
+      "requested_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "semantic_key": "pauli-expectation-v1:5783615d1b5bfe0aadf753943cea07a580c7272bc3cfcc2b2cdc3e6e268037e4",
+      "sequence": 22,
+      "source_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "value_float64_hex": "bfe542c437017102"
+    },
+    {
+      "disposition": "fresh",
+      "pauli_string": "X0 Y1 Y2 Y3",
+      "requested_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "semantic_key": "pauli-expectation-v1:7a49904f71af2768e1f806783427951446e097fd0366dbb2c4332f89901450d2",
+      "sequence": 23,
+      "source_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "value_float64_hex": "0000000000000000"
+    },
+    {
+      "disposition": "fresh",
+      "pauli_string": "X0 Y2",
+      "requested_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "semantic_key": "pauli-expectation-v1:ae4c634d9684d064cc46da9a319c7fe0457d7b693fc8791e8b015196d0af4a79",
+      "sequence": 24,
+      "source_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "value_float64_hex": "0000000000000000"
+    },
+    {
+      "disposition": "fresh",
+      "pauli_string": "X0 Y2 Z3",
+      "requested_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "semantic_key": "pauli-expectation-v1:cdc7ed436c579d7fd33bf7b9502421049069cfb33e95ec9af8f182cf795360fa",
+      "sequence": 25,
+      "source_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "value_float64_hex": "0000000000000000"
+    },
+    {
+      "disposition": "fresh",
+      "pauli_string": "X0 Z1 X2",
+      "requested_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "semantic_key": "pauli-expectation-v1:190b1491d0f0f29907a8e7a1160e8fe16a7b8d2ed5edd9241db6b9cb32a8df7d",
+      "sequence": 26,
+      "source_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "value_float64_hex": "0000000000000000"
+    },
+    {
+      "disposition": "fresh",
+      "pauli_string": "X0 Z1 Y2",
+      "requested_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "semantic_key": "pauli-expectation-v1:b5adb8f233ce1a209839e54a3ba2a7a8a42eaf011caffb29a773860aed316e03",
+      "sequence": 27,
+      "source_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "value_float64_hex": "0000000000000000"
+    },
+    {
+      "disposition": "fresh",
+      "pauli_string": "X0 Z1 Y2 Z3",
+      "requested_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "semantic_key": "pauli-expectation-v1:86a04f449f23a32a588004b6ef70ae8f6765e028112c9db304caada041425d36",
+      "sequence": 28,
+      "source_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "value_float64_hex": "0000000000000000"
+    },
+    {
+      "disposition": "fresh",
+      "pauli_string": "X1 X3",
+      "requested_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "semantic_key": "pauli-expectation-v1:d351122d71038b8a61afdc15c2277e102c7b9999878ecac62a26db43d3b34279",
+      "sequence": 29,
+      "source_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "value_float64_hex": "0000000000000000"
+    },
+    {
+      "disposition": "fresh",
+      "pauli_string": "X1 Y3",
+      "requested_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "semantic_key": "pauli-expectation-v1:918520331135663d25e4a0b0c1224f6436948b4d0ce1a6d49313a62bb82182cc",
+      "sequence": 30,
+      "source_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "value_float64_hex": "0000000000000000"
+    },
+    {
+      "disposition": "fresh",
+      "pauli_string": "X1 Z2 X3",
+      "requested_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "semantic_key": "pauli-expectation-v1:8d3d5c4b39bd29812078e5dccc7f96b5b4b9c5a1be35cb264dcde675f4fc71ab",
+      "sequence": 31,
+      "source_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "value_float64_hex": "0000000000000000"
+    },
+    {
+      "disposition": "fresh",
+      "pauli_string": "X1 Z2 Y3",
+      "requested_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "semantic_key": "pauli-expectation-v1:0fd32442bf082ac9a0d4da32f2c2a8573d7c76ec08dc1bad46dfa3c4f1dfe95a",
+      "sequence": 32,
+      "source_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "value_float64_hex": "0000000000000000"
+    },
+    {
+      "disposition": "fresh",
+      "pauli_string": "Y0 X1 X2 X3",
+      "requested_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "semantic_key": "pauli-expectation-v1:ff2a5fb0f9bae5695120b7c330ef8268bbe76dd2f5ebf3f257693dac392367aa",
+      "sequence": 33,
+      "source_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "value_float64_hex": "0000000000000000"
+    },
+    {
+      "disposition": "fresh",
+      "pauli_string": "Y0 X1 X2 Y3",
+      "requested_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "semantic_key": "pauli-expectation-v1:c12a6211bf33f039d5cb332c2f2538bb817ec64b80fdc61ac3e8bc9965c599d1",
+      "sequence": 34,
+      "source_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "value_float64_hex": "bfe542c437017102"
+    },
+    {
+      "disposition": "fresh",
+      "pauli_string": "Y0 X1 Y2 X3",
+      "requested_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "semantic_key": "pauli-expectation-v1:68b325d5dab90761b9def6b62ef11353af1adfccfdc6eec6bce709103166c6fe",
+      "sequence": 35,
+      "source_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "value_float64_hex": "bfe542c437017102"
+    },
+    {
+      "disposition": "fresh",
+      "pauli_string": "Y0 X1 Y2 Y3",
+      "requested_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "semantic_key": "pauli-expectation-v1:e6287e77ba9395a3db02e2eb8e117132c0f482ead725c9f817ffeade98b16bbb",
+      "sequence": 36,
+      "source_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "value_float64_hex": "0000000000000000"
+    },
+    {
+      "disposition": "fresh",
+      "pauli_string": "Y0 X2",
+      "requested_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "semantic_key": "pauli-expectation-v1:20a5260806b454ca1ea8a43c9992ff1d87d5e5e8b84a64da07e6ecf73e4b738b",
+      "sequence": 37,
+      "source_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "value_float64_hex": "0000000000000000"
+    },
+    {
+      "disposition": "fresh",
+      "pauli_string": "Y0 X2 Z3",
+      "requested_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "semantic_key": "pauli-expectation-v1:058c7203ecc75c94ad8a167562311f4a1056379e0fa6c905aa53f0b52923b8d9",
+      "sequence": 38,
+      "source_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "value_float64_hex": "0000000000000000"
+    },
+    {
+      "disposition": "fresh",
+      "pauli_string": "Y0 Y1 X2 X3",
+      "requested_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "semantic_key": "pauli-expectation-v1:584f06f3b6662b99dfd396caa98fd58fd0fcb1ae67e637ff19b5524d7979c4b0",
+      "sequence": 39,
+      "source_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "value_float64_hex": "3fe542c437017102"
+    },
+    {
+      "disposition": "fresh",
+      "pauli_string": "Y0 Y1 X2 Y3",
+      "requested_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "semantic_key": "pauli-expectation-v1:0a50be1a0624b3e67d6905c0a6aa35e9c62252c27a3c699b1144b8532c94d522",
+      "sequence": 40,
+      "source_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "value_float64_hex": "0000000000000000"
+    },
+    {
+      "disposition": "fresh",
+      "pauli_string": "Y0 Y1 Y2 X3",
+      "requested_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "semantic_key": "pauli-expectation-v1:94de54fc6e56448c8d22189bd084cdf4f9107debaef656852611debde6760ac0",
+      "sequence": 41,
+      "source_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "value_float64_hex": "0000000000000000"
+    },
+    {
+      "disposition": "fresh",
+      "pauli_string": "Y0 Y1 Y2 Y3",
+      "requested_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "semantic_key": "pauli-expectation-v1:46849772835acf7e5b7b7e6ccbc469524bdd6d90667ef937844b94e0fe041b06",
+      "sequence": 42,
+      "source_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "value_float64_hex": "bfe542c437017102"
+    },
+    {
+      "disposition": "fresh",
+      "pauli_string": "Y0 Y2",
+      "requested_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "semantic_key": "pauli-expectation-v1:891a284c4b0b2fba959c61c92602bc87ea675716f94d857577330c13fe046f6c",
+      "sequence": 43,
+      "source_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "value_float64_hex": "0000000000000000"
+    },
+    {
+      "disposition": "fresh",
+      "pauli_string": "Y0 Y2 Z3",
+      "requested_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "semantic_key": "pauli-expectation-v1:8af142a682b93aa6faa383bf70d2cdd52100a531cab08cec80307f45fb28b1c4",
+      "sequence": 44,
+      "source_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "value_float64_hex": "0000000000000000"
+    },
+    {
+      "disposition": "fresh",
+      "pauli_string": "Y0 Z1 X2",
+      "requested_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "semantic_key": "pauli-expectation-v1:b22472dd4d6896fb1b9441ebd8c3f1a3d764d734ce646a1a45fdcccecf22a470",
+      "sequence": 45,
+      "source_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "value_float64_hex": "0000000000000000"
+    },
+    {
+      "disposition": "fresh",
+      "pauli_string": "Y0 Z1 X2 Z3",
+      "requested_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "semantic_key": "pauli-expectation-v1:7355c09b97d5bb92e941d588e7a1751675e34c4483a1e5a98d6ec89e5575698c",
+      "sequence": 46,
+      "source_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "value_float64_hex": "0000000000000000"
+    },
+    {
+      "disposition": "fresh",
+      "pauli_string": "Y0 Z1 Y2",
+      "requested_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "semantic_key": "pauli-expectation-v1:054c04fbfb9bf4bea8ff178343f70f8133b75ec8d17f327415bd5043cf6cdea1",
+      "sequence": 47,
+      "source_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "value_float64_hex": "0000000000000000"
+    },
+    {
+      "disposition": "fresh",
+      "pauli_string": "Y1 X3",
+      "requested_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "semantic_key": "pauli-expectation-v1:60b0b7ed655a6a655fb21572fa029920fa079cb3cee91c69e75fdc1a61eb7093",
+      "sequence": 48,
+      "source_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "value_float64_hex": "0000000000000000"
+    },
+    {
+      "disposition": "fresh",
+      "pauli_string": "Y1 Y3",
+      "requested_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "semantic_key": "pauli-expectation-v1:0e51a1c4e076d83e874533840b4ce3530babc2dde6cec2cc6695fd676d9a7834",
+      "sequence": 49,
+      "source_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "value_float64_hex": "0000000000000000"
+    },
+    {
+      "disposition": "fresh",
+      "pauli_string": "Y1 Z2 X3",
+      "requested_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "semantic_key": "pauli-expectation-v1:c79e02871694f2212b7794bc2f6a18fcf57051c601dba6fef933591ede0b5b7e",
+      "sequence": 50,
+      "source_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "value_float64_hex": "0000000000000000"
+    },
+    {
+      "disposition": "fresh",
+      "pauli_string": "Y1 Z2 Y3",
+      "requested_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "semantic_key": "pauli-expectation-v1:083c987e1ef7efee994d57b30191127e4aae7586d9a386499fd319e05ec6bfb3",
+      "sequence": 51,
+      "source_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "value_float64_hex": "0000000000000000"
+    },
+    {
+      "disposition": "fresh",
+      "pauli_string": "Z0",
+      "requested_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "semantic_key": "pauli-expectation-v1:280846fee915ce6dba6a3ed57c9ae6f0567f83a38437f9728b9131ff13e67fe9",
+      "sequence": 52,
+      "source_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "value_float64_hex": "bfe7ea8327f8fc4a"
+    },
+    {
+      "disposition": "fresh",
+      "pauli_string": "Z0 X1 X3",
+      "requested_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "semantic_key": "pauli-expectation-v1:8f04ef7b6d01dd3a2c8da233fddbabbefdf84b4f097e0b013cf945890b9d8db3",
+      "sequence": 53,
+      "source_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "value_float64_hex": "0000000000000000"
+    },
+    {
+      "disposition": "fresh",
+      "pauli_string": "Z0 X1 Y3",
+      "requested_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "semantic_key": "pauli-expectation-v1:9572d514ab782a8841833e57796362ca600109dc1c4f0fcf51419299bfd67f10",
+      "sequence": 54,
+      "source_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "value_float64_hex": "0000000000000000"
+    },
+    {
+      "disposition": "fresh",
+      "pauli_string": "Z0 X1 Z2 Y3",
+      "requested_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "semantic_key": "pauli-expectation-v1:c3ec6f5bae22e5afc34cb265e1f17861110c293a929ab57af44eb18e2843cc5f",
+      "sequence": 55,
+      "source_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "value_float64_hex": "0000000000000000"
+    },
+    {
+      "disposition": "fresh",
+      "pauli_string": "Z0 Y1 X3",
+      "requested_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "semantic_key": "pauli-expectation-v1:415f72e0d2069eaa894e5a5f7e4f1c5ca5b66d87dfc0ae98c1ff865dc972d827",
+      "sequence": 56,
+      "source_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "value_float64_hex": "0000000000000000"
+    },
+    {
+      "disposition": "fresh",
+      "pauli_string": "Z0 Y1 Y3",
+      "requested_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "semantic_key": "pauli-expectation-v1:22047e0b3bb575c4f6f94e5d77c90d8f800602f57bb0f3c13c490d03e7e07b55",
+      "sequence": 57,
+      "source_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "value_float64_hex": "0000000000000000"
+    },
+    {
+      "disposition": "fresh",
+      "pauli_string": "Z0 Y1 Z2 X3",
+      "requested_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "semantic_key": "pauli-expectation-v1:affd1f700a3cee2c3d2065d61090d3409111eb3f16d17934c8012639967ece47",
+      "sequence": 58,
+      "source_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "value_float64_hex": "0000000000000000"
+    },
+    {
+      "disposition": "fresh",
+      "pauli_string": "Z0 Z1 Z2",
+      "requested_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "semantic_key": "pauli-expectation-v1:65497a2027274ce350f7c28e6f0e66bc724a27f4c28aea6e991ad19cb7eed4c3",
+      "sequence": 59,
+      "source_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "value_float64_hex": "3fe7ea8327f8fc4a"
+    },
+    {
+      "disposition": "fresh",
+      "pauli_string": "Z0 Z1 Z3",
+      "requested_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "semantic_key": "pauli-expectation-v1:0648f0d487775350b9229e26cc4488f1de3c52ac184a61cbec4a676adef395c4",
+      "sequence": 60,
+      "source_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "value_float64_hex": "3fe7ea8327f8fc4a"
+    },
+    {
+      "disposition": "fresh",
+      "pauli_string": "Z0 Z2 Z3",
+      "requested_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "semantic_key": "pauli-expectation-v1:65cd7cbc04186604984eb8b78baaf307f22844d97a85a974fe8d4aa009d36db7",
+      "sequence": 61,
+      "source_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "value_float64_hex": "bfe7ea8327f8fc4a"
+    },
+    {
+      "disposition": "fresh",
+      "pauli_string": "Z1",
+      "requested_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "semantic_key": "pauli-expectation-v1:17995c9f09caad6d4ed001c192d504449a29544cceda8184ac68560aa7ec896f",
+      "sequence": 62,
+      "source_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "value_float64_hex": "bfe7ea8327f8fc4a"
+    },
+    {
+      "disposition": "fresh",
+      "pauli_string": "Z1 Z2 Z3",
+      "requested_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "semantic_key": "pauli-expectation-v1:9cacef8f022e8a0f9ccbc4415b89e27aa0a269af04b7c36378c4b15645d81130",
+      "sequence": 63,
+      "source_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "value_float64_hex": "bfe7ea8327f8fc4a"
+    },
+    {
+      "disposition": "fresh",
+      "pauli_string": "Z2",
+      "requested_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "semantic_key": "pauli-expectation-v1:f54df8faafa330f38f19b324c180420ffc8b73e14680ee5a45b6e0b3c1451f64",
+      "sequence": 64,
+      "source_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "value_float64_hex": "3fe7ea8327f8fc4a"
+    },
+    {
+      "disposition": "fresh",
+      "pauli_string": "Z3",
+      "requested_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "semantic_key": "pauli-expectation-v1:e33ba0059f3f3176e49ca7e3471590b0b2d088f3ff57d48c42716d1041389ea5",
+      "sequence": 65,
+      "source_measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "value_float64_hex": "3fe7ea8327f8fc4a"
+    }
+  ],
+  "exact_noiseless_only": true,
+  "fresh_pauli_expectation_evaluations": 66,
+  "paper_measurement_cost": null,
+  "policy_version": "exact-pauli-cross-context-reuse-v1",
+  "requests": 66,
+  "unique_cached_records": 0
+}
