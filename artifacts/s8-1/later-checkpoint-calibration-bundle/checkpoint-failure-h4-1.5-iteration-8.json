@@ -1,0 +1,6 @@
+{
+  "case_id": "h4-1.5-iteration-8",
+  "error_type": "RuntimeError",
+  "message": "registered H4 iteration-8 checkpoint converged before iteration 8",
+  "policy": "registered-checkpoint-failed-without-substitution"
+}

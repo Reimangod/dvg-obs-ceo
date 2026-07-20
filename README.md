@@ -28,4 +28,5 @@ No performance claim is permitted until the stage gates in
 - S6 paper-era full-circuit resource recount: complete
 - S7 fail-closed transaction and rollback: complete
 - S8 primary H2/H4 predictor calibration: complete; zero positive safe labels
-- S8.1 later-checkpoint positive-class calibration: required before S9
+- S8.1 later-checkpoint positive-class calibration: complete; S9 gate passed
+- S9 conservative selector freeze: next

@@ -1,0 +1,4734 @@
+[
+  {
+    "candidate": {
+      "candidate_id": "candidate-v1:db5fb02bce1654d5c349d836130ae251308b94fc86608d3a556571a637d73200",
+      "constraint_matrix": [
+        [
+          1.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:619d883cc135e8ef12c29aae3113ce9d6ebcd54464c8dcb0f59b86b44d46d87b",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        []
+      ],
+      "kind": "block-deletion",
+      "numerical_context_digest": "2c17ee735071314d9a4cb41b3c9bc8fc3f6e267757976f3be471d49a793f4b08",
+      "offset": [
+        0.0
+      ],
+      "orientation": "deletion",
+      "removed_source_slots": [
+        0
+      ],
+      "semantic_conflict_positions": [
+        0
+      ],
+      "source_block_id": "block-v1:d1f1479a96aaacccfc3ef0623b1fe00eefc1401a93bdf71063e22417a8a15275",
+      "source_pool_indices": [
+        156
+      ],
+      "source_slots": [
+        "block-v1:d1f1479a96aaacccfc3ef0623b1fe00eefc1401a93bdf71063e22417a8a15275:slot:0"
+      ],
+      "target_family": "empty",
+      "target_operator_digests": [],
+      "target_pool_indices": [],
+      "target_slots": [],
+      "units": "radian"
+    },
+    "case_id": "h4-1.5-iteration-12-or-convergence",
+    "executed_representative_candidate_id": "candidate-v1:db5fb02bce1654d5c349d836130ae251308b94fc86608d3a556571a637d73200",
+    "is_executed_representative": true
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate-v1:5d7805f7dfc77e353809c27d3c11919946756631254aa0f75804ad48ae336551",
+      "constraint_matrix": [
+        [
+          1.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:aa96eb1cd4a711555c034594a2d893ceb4be570f1369abf5541b07b93a9fb454",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        []
+      ],
+      "kind": "block-deletion",
+      "numerical_context_digest": "f60c1eadead4421e4c0ca87aeeac15158f2468fa58de4adc74ebdac60ceca60d",
+      "offset": [
+        0.0
+      ],
+      "orientation": "deletion",
+      "removed_source_slots": [
+        0
+      ],
+      "semantic_conflict_positions": [
+        1
+      ],
+      "source_block_id": "block-v1:ae5a79de07f7b84d6b931a6b3514a2eab2093fac8a743f03a0a50446aee9c9b6",
+      "source_pool_indices": [
+        106
+      ],
+      "source_slots": [
+        "block-v1:ae5a79de07f7b84d6b931a6b3514a2eab2093fac8a743f03a0a50446aee9c9b6:slot:0"
+      ],
+      "target_family": "empty",
+      "target_operator_digests": [],
+      "target_pool_indices": [],
+      "target_slots": [],
+      "units": "radian"
+    },
+    "case_id": "h4-1.5-iteration-12-or-convergence",
+    "executed_representative_candidate_id": "candidate-v1:5d7805f7dfc77e353809c27d3c11919946756631254aa0f75804ad48ae336551",
+    "is_executed_representative": true
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate-v1:d23aa90310d38b46684404e6b5d8c53f0297d5b46b7441cdd2908c7ed224d799",
+      "constraint_matrix": [
+        [
+          1.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:f069b4c4d8767a83a78df364435d6bd1f9bff104dce9b43d24795ffe8020b321",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        []
+      ],
+      "kind": "block-deletion",
+      "numerical_context_digest": "d865fbe25edbee89731e3b5fc9a9b43b95e303ae1e8961697626662d1ab77cb4",
+      "offset": [
+        0.0
+      ],
+      "orientation": "deletion",
+      "removed_source_slots": [
+        0
+      ],
+      "semantic_conflict_positions": [
+        2
+      ],
+      "source_block_id": "block-v1:ab4f6bad45532f11dcf3494beb153f33e6fbabea4bf4f9f8496bdd092912eb7d",
+      "source_pool_indices": [
+        122
+      ],
+      "source_slots": [
+        "block-v1:ab4f6bad45532f11dcf3494beb153f33e6fbabea4bf4f9f8496bdd092912eb7d:slot:0"
+      ],
+      "target_family": "empty",
+      "target_operator_digests": [],
+      "target_pool_indices": [],
+      "target_slots": [],
+      "units": "radian"
+    },
+    "case_id": "h4-1.5-iteration-12-or-convergence",
+    "executed_representative_candidate_id": "candidate-v1:d23aa90310d38b46684404e6b5d8c53f0297d5b46b7441cdd2908c7ed224d799",
+    "is_executed_representative": true
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate-v1:af69fa8e99373f7d76ca6b2b4d45d396b109756ad087ed6cc28520d4c25a18a2",
+      "constraint_matrix": [
+        [
+          1.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:706759c8600a468c80019ea6c39c668ab81e44660ea8d7c1b8d9759790524a5d",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        []
+      ],
+      "kind": "block-deletion",
+      "numerical_context_digest": "0f8978a64f77e2ad33e4c7d19d5ce150692696f665f92dcc60b958db6bdb4f04",
+      "offset": [
+        0.0
+      ],
+      "orientation": "deletion",
+      "removed_source_slots": [
+        0
+      ],
+      "semantic_conflict_positions": [
+        3
+      ],
+      "source_block_id": "block-v1:7ac84c3dda8a4855e03322293b7c111ab4364a52bf2f01f8ea56e8b3ee8c7219",
+      "source_pool_indices": [
+        140
+      ],
+      "source_slots": [
+        "block-v1:7ac84c3dda8a4855e03322293b7c111ab4364a52bf2f01f8ea56e8b3ee8c7219:slot:0"
+      ],
+      "target_family": "empty",
+      "target_operator_digests": [],
+      "target_pool_indices": [],
+      "target_slots": [],
+      "units": "radian"
+    },
+    "case_id": "h4-1.5-iteration-12-or-convergence",
+    "executed_representative_candidate_id": "candidate-v1:af69fa8e99373f7d76ca6b2b4d45d396b109756ad087ed6cc28520d4c25a18a2",
+    "is_executed_representative": true
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate-v1:58857b6297c6ea4052c33f3596c196575f4c48f59bd1f611b3571bddf9101ce8",
+      "constraint_matrix": [
+        [
+          1.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:e279f5c41f22e1ab9f75e0882399bf5226a539188292808b5529ff21b19a55c5",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        []
+      ],
+      "kind": "block-deletion",
+      "numerical_context_digest": "058b073683edd8fd8cc8b40e191fb5b1efef25f79a544e0a4d4beee1a9aa3b61",
+      "offset": [
+        0.0
+      ],
+      "orientation": "deletion",
+      "removed_source_slots": [
+        0
+      ],
+      "semantic_conflict_positions": [
+        4
+      ],
+      "source_block_id": "block-v1:9674fa2fb78322fc80f4cd0c7524cdac3ff3a6236204b39bdcfd4537a1372441",
+      "source_pool_indices": [
+        100
+      ],
+      "source_slots": [
+        "block-v1:9674fa2fb78322fc80f4cd0c7524cdac3ff3a6236204b39bdcfd4537a1372441:slot:0"
+      ],
+      "target_family": "empty",
+      "target_operator_digests": [],
+      "target_pool_indices": [],
+      "target_slots": [],
+      "units": "radian"
+    },
+    "case_id": "h4-1.5-iteration-12-or-convergence",
+    "executed_representative_candidate_id": "candidate-v1:58857b6297c6ea4052c33f3596c196575f4c48f59bd1f611b3571bddf9101ce8",
+    "is_executed_representative": true
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate-v1:9fa58e963f34702253766deeed02aff01661fe0a3ee3b3634013d447c45214c2",
+      "constraint_matrix": [
+        [
+          1.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:66bb9c711c289dfec29f21e8d4e1acc793db5e3f042026450f5add2a8181d6a7",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        []
+      ],
+      "kind": "block-deletion",
+      "numerical_context_digest": "b3a0a732a00279ff937b7029ac9a9e9792985acaf94cfd1e3a0cc221ddc7b8a3",
+      "offset": [
+        0.0
+      ],
+      "orientation": "deletion",
+      "removed_source_slots": [
+        0
+      ],
+      "semantic_conflict_positions": [
+        5
+      ],
+      "source_block_id": "block-v1:51639d659dd89e9785609d7427b091b1c1bfed34aa5f84c8643f92d9e4d5c046",
+      "source_pool_indices": [
+        162
+      ],
+      "source_slots": [
+        "block-v1:51639d659dd89e9785609d7427b091b1c1bfed34aa5f84c8643f92d9e4d5c046:slot:0"
+      ],
+      "target_family": "empty",
+      "target_operator_digests": [],
+      "target_pool_indices": [],
+      "target_slots": [],
+      "units": "radian"
+    },
+    "case_id": "h4-1.5-iteration-12-or-convergence",
+    "executed_representative_candidate_id": "candidate-v1:9fa58e963f34702253766deeed02aff01661fe0a3ee3b3634013d447c45214c2",
+    "is_executed_representative": true
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate-v1:7f2a090c514c1939fe586e0a34c2257a20232ea354b9081ba42427e996117ab2",
+      "constraint_matrix": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0,
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:1b7187c888c191b3c061c3093c7a1c643770c0c6261c86cc098a09867603ee3c",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        [],
+        []
+      ],
+      "kind": "mvp-whole-deletion",
+      "numerical_context_digest": "1f722baf8b3fc45de53aa1093b693e6a74fd8f5e8b317a21dc885ec53def8e41",
+      "offset": [
+        0.0,
+        0.0
+      ],
+      "orientation": "deletion",
+      "removed_source_slots": [
+        0,
+        1
+      ],
+      "semantic_conflict_positions": [
+        6,
+        7
+      ],
+      "source_block_id": "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a",
+      "source_pool_indices": [
+        43,
+        44
+      ],
+      "source_slots": [
+        "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a:slot:0",
+        "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a:slot:1"
+      ],
+      "target_family": "empty",
+      "target_operator_digests": [],
+      "target_pool_indices": [],
+      "target_slots": [],
+      "units": "radian"
+    },
+    "case_id": "h4-1.5-iteration-12-or-convergence",
+    "executed_representative_candidate_id": "candidate-v1:7f2a090c514c1939fe586e0a34c2257a20232ea354b9081ba42427e996117ab2",
+    "is_executed_representative": true
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate-v1:70b156419fc7f6bc31d927dea9d953a9705ccede9d044e5ae537e6ce5f8fd0e8",
+      "constraint_matrix": [
+        [
+          1.0,
+          -0.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:d46ce5ef575fdaa00d1d234867fcd9573fb5d6a6211b25979fed37f7aa3cb8a2",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        [
+          0.0
+        ],
+        [
+          1.0
+        ]
+      ],
+      "kind": "mvp-constituent-deletion",
+      "numerical_context_digest": "1f722baf8b3fc45de53aa1093b693e6a74fd8f5e8b317a21dc885ec53def8e41",
+      "offset": [
+        0.0,
+        0.0
+      ],
+      "orientation": "ordered-subset",
+      "removed_source_slots": [
+        0
+      ],
+      "semantic_conflict_positions": [
+        6,
+        7
+      ],
+      "source_block_id": "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a",
+      "source_pool_indices": [
+        43,
+        44
+      ],
+      "source_slots": [
+        "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a:slot:0",
+        "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a:slot:1"
+      ],
+      "target_family": "single-QE",
+      "target_operator_digests": [
+        "a3b7ee4223edbbdea656a6aed23c188598ded86f9f77059cbee096b9f15cad17"
+      ],
+      "target_pool_indices": [
+        44
+      ],
+      "target_slots": [
+        "target:0"
+      ],
+      "units": "radian"
+    },
+    "case_id": "h4-1.5-iteration-12-or-convergence",
+    "executed_representative_candidate_id": "candidate-v1:70b156419fc7f6bc31d927dea9d953a9705ccede9d044e5ae537e6ce5f8fd0e8",
+    "is_executed_representative": true
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate-v1:fff7155780d50642af0896f96640a99e5391604a16074490c8b32a7756155c52",
+      "constraint_matrix": [
+        [
+          -0.0,
+          1.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:f3c739c2824aa6309707f37f56e5627f2c7ec76857deb8714ae4543d52786865",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        [
+          1.0
+        ],
+        [
+          0.0
+        ]
+      ],
+      "kind": "mvp-constituent-deletion",
+      "numerical_context_digest": "1f722baf8b3fc45de53aa1093b693e6a74fd8f5e8b317a21dc885ec53def8e41",
+      "offset": [
+        0.0,
+        0.0
+      ],
+      "orientation": "ordered-subset",
+      "removed_source_slots": [
+        1
+      ],
+      "semantic_conflict_positions": [
+        6,
+        7
+      ],
+      "source_block_id": "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a",
+      "source_pool_indices": [
+        43,
+        44
+      ],
+      "source_slots": [
+        "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a:slot:0",
+        "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a:slot:1"
+      ],
+      "target_family": "single-QE",
+      "target_operator_digests": [
+        "951d91f09ea740b2e207db18dcf413fd6b8495eee4703c4a79cd76c84b1ede91"
+      ],
+      "target_pool_indices": [
+        43
+      ],
+      "target_slots": [
+        "target:0"
+      ],
+      "units": "radian"
+    },
+    "case_id": "h4-1.5-iteration-12-or-convergence",
+    "executed_representative_candidate_id": "candidate-v1:fff7155780d50642af0896f96640a99e5391604a16074490c8b32a7756155c52",
+    "is_executed_representative": true
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate-v1:2fbdcbc7747780b91fbfe9dedd097cd728250df2043fc8b5a57f7cc99911dd84",
+      "constraint_matrix": [
+        [
+          -0.0,
+          1.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:f3c739c2824aa6309707f37f56e5627f2c7ec76857deb8714ae4543d52786865",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        [
+          1.0
+        ],
+        [
+          0.0
+        ]
+      ],
+      "kind": "mvp-to-single-qe",
+      "numerical_context_digest": "1f722baf8b3fc45de53aa1093b693e6a74fd8f5e8b317a21dc885ec53def8e41",
+      "offset": [
+        0.0,
+        0.0
+      ],
+      "orientation": "canonical-qe",
+      "removed_source_slots": [
+        1
+      ],
+      "semantic_conflict_positions": [
+        6,
+        7
+      ],
+      "source_block_id": "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a",
+      "source_pool_indices": [
+        43,
+        44
+      ],
+      "source_slots": [
+        "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a:slot:0",
+        "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a:slot:1"
+      ],
+      "target_family": "single-QE",
+      "target_operator_digests": [
+        "951d91f09ea740b2e207db18dcf413fd6b8495eee4703c4a79cd76c84b1ede91"
+      ],
+      "target_pool_indices": [
+        43
+      ],
+      "target_slots": [
+        "target:0"
+      ],
+      "units": "radian"
+    },
+    "case_id": "h4-1.5-iteration-12-or-convergence",
+    "executed_representative_candidate_id": "candidate-v1:fff7155780d50642af0896f96640a99e5391604a16074490c8b32a7756155c52",
+    "is_executed_representative": false
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate-v1:989a6cbf43e147a3600da39002f385667bcb3be3d35dc10d4b4d45b1edd239f6",
+      "constraint_matrix": [
+        [
+          1.0,
+          -0.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:d46ce5ef575fdaa00d1d234867fcd9573fb5d6a6211b25979fed37f7aa3cb8a2",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        [
+          0.0
+        ],
+        [
+          1.0
+        ]
+      ],
+      "kind": "mvp-to-single-qe",
+      "numerical_context_digest": "1f722baf8b3fc45de53aa1093b693e6a74fd8f5e8b317a21dc885ec53def8e41",
+      "offset": [
+        0.0,
+        0.0
+      ],
+      "orientation": "canonical-qe",
+      "removed_source_slots": [
+        0
+      ],
+      "semantic_conflict_positions": [
+        6,
+        7
+      ],
+      "source_block_id": "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a",
+      "source_pool_indices": [
+        43,
+        44
+      ],
+      "source_slots": [
+        "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a:slot:0",
+        "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a:slot:1"
+      ],
+      "target_family": "single-QE",
+      "target_operator_digests": [
+        "a3b7ee4223edbbdea656a6aed23c188598ded86f9f77059cbee096b9f15cad17"
+      ],
+      "target_pool_indices": [
+        44
+      ],
+      "target_slots": [
+        "target:0"
+      ],
+      "units": "radian"
+    },
+    "case_id": "h4-1.5-iteration-12-or-convergence",
+    "executed_representative_candidate_id": "candidate-v1:70b156419fc7f6bc31d927dea9d953a9705ccede9d044e5ae537e6ce5f8fd0e8",
+    "is_executed_representative": false
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate-v1:7f20067caa031a05345976e1024b170c50ce565c1e60805b9168e4ed0e17b548",
+      "constraint_matrix": [
+        [
+          -1.0,
+          1.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:b40d37d80ad33435bf92b7e4d52634fd4b6f6ebef6afcbc3cacd656c6a644ca3",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        [
+          0.9999999999999998
+        ],
+        [
+          0.9999999999999998
+        ]
+      ],
+      "kind": "mvp-to-ovp-sum",
+      "numerical_context_digest": "1f722baf8b3fc45de53aa1093b693e6a74fd8f5e8b317a21dc885ec53def8e41",
+      "offset": [
+        0.0,
+        0.0
+      ],
+      "orientation": "sum",
+      "removed_source_slots": [],
+      "semantic_conflict_positions": [
+        6,
+        7
+      ],
+      "source_block_id": "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a",
+      "source_pool_indices": [
+        43,
+        44
+      ],
+      "source_slots": [
+        "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a:slot:0",
+        "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a:slot:1"
+      ],
+      "target_family": "OVP",
+      "target_operator_digests": [
+        "5f8d254c7a79d0cfa526bdd56c35cd77f04e922a8a072ecf6413454752000bcb"
+      ],
+      "target_pool_indices": [
+        124
+      ],
+      "target_slots": [
+        "target:0"
+      ],
+      "units": "radian"
+    },
+    "case_id": "h4-1.5-iteration-12-or-convergence",
+    "executed_representative_candidate_id": "candidate-v1:7f20067caa031a05345976e1024b170c50ce565c1e60805b9168e4ed0e17b548",
+    "is_executed_representative": true
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate-v1:920d2dd8c375f70c51cf28bcbcf2209142fdbc274f81e80194748d8bfd971d69",
+      "constraint_matrix": [
+        [
+          1.0,
+          1.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:5495a6e2ae0064bcccbf756dd3b32c587fc9c1945b31c258af7a2924589daf84",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        [
+          0.9999999999999998
+        ],
+        [
+          -0.9999999999999998
+        ]
+      ],
+      "kind": "mvp-to-ovp-diff",
+      "numerical_context_digest": "1f722baf8b3fc45de53aa1093b693e6a74fd8f5e8b317a21dc885ec53def8e41",
+      "offset": [
+        0.0,
+        0.0
+      ],
+      "orientation": "diff",
+      "removed_source_slots": [],
+      "semantic_conflict_positions": [
+        6,
+        7
+      ],
+      "source_block_id": "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a",
+      "source_pool_indices": [
+        43,
+        44
+      ],
+      "source_slots": [
+        "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a:slot:0",
+        "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a:slot:1"
+      ],
+      "target_family": "OVP",
+      "target_operator_digests": [
+        "bf95da449ebc8dbf44fa55f9ac8ed19c9a073456022730cc943826be22b6ca73"
+      ],
+      "target_pool_indices": [
+        125
+      ],
+      "target_slots": [
+        "target:0"
+      ],
+      "units": "radian"
+    },
+    "case_id": "h4-1.5-iteration-12-or-convergence",
+    "executed_representative_candidate_id": "candidate-v1:920d2dd8c375f70c51cf28bcbcf2209142fdbc274f81e80194748d8bfd971d69",
+    "is_executed_representative": true
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate-v1:4d1a87a7bdec5c9a5995c45f8f39773b86e20eb88aa20f93f98cf50dd4e8711d",
+      "constraint_matrix": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0,
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:469f86a5a8205bd0154958168f23273c9dbaab7f7d82f18c3674785e7665a5c2",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        [],
+        []
+      ],
+      "kind": "mvp-whole-deletion",
+      "numerical_context_digest": "8dfe17f388417b58bd97cab249e1777d5fb1a267dc67d5dc362506d421373806",
+      "offset": [
+        0.0,
+        0.0
+      ],
+      "orientation": "deletion",
+      "removed_source_slots": [
+        0,
+        1
+      ],
+      "semantic_conflict_positions": [
+        8,
+        9
+      ],
+      "source_block_id": "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef",
+      "source_pool_indices": [
+        57,
+        58
+      ],
+      "source_slots": [
+        "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef:slot:0",
+        "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef:slot:1"
+      ],
+      "target_family": "empty",
+      "target_operator_digests": [],
+      "target_pool_indices": [],
+      "target_slots": [],
+      "units": "radian"
+    },
+    "case_id": "h4-1.5-iteration-12-or-convergence",
+    "executed_representative_candidate_id": "candidate-v1:4d1a87a7bdec5c9a5995c45f8f39773b86e20eb88aa20f93f98cf50dd4e8711d",
+    "is_executed_representative": true
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate-v1:86cf795e09e9c5e0e0708ca83cd8bf0a13333452f778bd5e093c9392f11b32d6",
+      "constraint_matrix": [
+        [
+          1.0,
+          -0.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:fab04776290bea2f370cd31a4822fa7fa406cfa2aa46dd8dae249f1d29a0e135",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        [
+          0.0
+        ],
+        [
+          1.0
+        ]
+      ],
+      "kind": "mvp-constituent-deletion",
+      "numerical_context_digest": "8dfe17f388417b58bd97cab249e1777d5fb1a267dc67d5dc362506d421373806",
+      "offset": [
+        0.0,
+        0.0
+      ],
+      "orientation": "ordered-subset",
+      "removed_source_slots": [
+        0
+      ],
+      "semantic_conflict_positions": [
+        8,
+        9
+      ],
+      "source_block_id": "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef",
+      "source_pool_indices": [
+        57,
+        58
+      ],
+      "source_slots": [
+        "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef:slot:0",
+        "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef:slot:1"
+      ],
+      "target_family": "single-QE",
+      "target_operator_digests": [
+        "ae5159956b0bcc6c9e1a2c40e32336a2013b1b4ed83d55a05a8f956742536971"
+      ],
+      "target_pool_indices": [
+        58
+      ],
+      "target_slots": [
+        "target:0"
+      ],
+      "units": "radian"
+    },
+    "case_id": "h4-1.5-iteration-12-or-convergence",
+    "executed_representative_candidate_id": "candidate-v1:86cf795e09e9c5e0e0708ca83cd8bf0a13333452f778bd5e093c9392f11b32d6",
+    "is_executed_representative": true
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate-v1:c53878b41fe0334d430d88bdbc45ebb5f1bc3eab1143b38578e92d2f984fc9d4",
+      "constraint_matrix": [
+        [
+          -0.0,
+          1.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:b109de720bc3ca77c9c3af966d968751bd546717cff8546bd5eae67119673340",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        [
+          1.0
+        ],
+        [
+          0.0
+        ]
+      ],
+      "kind": "mvp-constituent-deletion",
+      "numerical_context_digest": "8dfe17f388417b58bd97cab249e1777d5fb1a267dc67d5dc362506d421373806",
+      "offset": [
+        0.0,
+        0.0
+      ],
+      "orientation": "ordered-subset",
+      "removed_source_slots": [
+        1
+      ],
+      "semantic_conflict_positions": [
+        8,
+        9
+      ],
+      "source_block_id": "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef",
+      "source_pool_indices": [
+        57,
+        58
+      ],
+      "source_slots": [
+        "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef:slot:0",
+        "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef:slot:1"
+      ],
+      "target_family": "single-QE",
+      "target_operator_digests": [
+        "fab962e9ec1325fd80b1f62055b0ab844165ab2907f9c5fe9e686e3ab77d64ad"
+      ],
+      "target_pool_indices": [
+        57
+      ],
+      "target_slots": [
+        "target:0"
+      ],
+      "units": "radian"
+    },
+    "case_id": "h4-1.5-iteration-12-or-convergence",
+    "executed_representative_candidate_id": "candidate-v1:c53878b41fe0334d430d88bdbc45ebb5f1bc3eab1143b38578e92d2f984fc9d4",
+    "is_executed_representative": true
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate-v1:cda61e108c1a97bc27e74619bb1e9e8f74a4d305d3fbabaca0f72956a3ee966f",
+      "constraint_matrix": [
+        [
+          -0.0,
+          1.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:b109de720bc3ca77c9c3af966d968751bd546717cff8546bd5eae67119673340",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        [
+          1.0
+        ],
+        [
+          0.0
+        ]
+      ],
+      "kind": "mvp-to-single-qe",
+      "numerical_context_digest": "8dfe17f388417b58bd97cab249e1777d5fb1a267dc67d5dc362506d421373806",
+      "offset": [
+        0.0,
+        0.0
+      ],
+      "orientation": "canonical-qe",
+      "removed_source_slots": [
+        1
+      ],
+      "semantic_conflict_positions": [
+        8,
+        9
+      ],
+      "source_block_id": "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef",
+      "source_pool_indices": [
+        57,
+        58
+      ],
+      "source_slots": [
+        "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef:slot:0",
+        "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef:slot:1"
+      ],
+      "target_family": "single-QE",
+      "target_operator_digests": [
+        "fab962e9ec1325fd80b1f62055b0ab844165ab2907f9c5fe9e686e3ab77d64ad"
+      ],
+      "target_pool_indices": [
+        57
+      ],
+      "target_slots": [
+        "target:0"
+      ],
+      "units": "radian"
+    },
+    "case_id": "h4-1.5-iteration-12-or-convergence",
+    "executed_representative_candidate_id": "candidate-v1:c53878b41fe0334d430d88bdbc45ebb5f1bc3eab1143b38578e92d2f984fc9d4",
+    "is_executed_representative": false
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate-v1:b577a7dab4c621ffc581b0eeba887693389da8b579ba9e7b436697f2f8995e78",
+      "constraint_matrix": [
+        [
+          1.0,
+          -0.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:fab04776290bea2f370cd31a4822fa7fa406cfa2aa46dd8dae249f1d29a0e135",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        [
+          0.0
+        ],
+        [
+          1.0
+        ]
+      ],
+      "kind": "mvp-to-single-qe",
+      "numerical_context_digest": "8dfe17f388417b58bd97cab249e1777d5fb1a267dc67d5dc362506d421373806",
+      "offset": [
+        0.0,
+        0.0
+      ],
+      "orientation": "canonical-qe",
+      "removed_source_slots": [
+        0
+      ],
+      "semantic_conflict_positions": [
+        8,
+        9
+      ],
+      "source_block_id": "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef",
+      "source_pool_indices": [
+        57,
+        58
+      ],
+      "source_slots": [
+        "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef:slot:0",
+        "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef:slot:1"
+      ],
+      "target_family": "single-QE",
+      "target_operator_digests": [
+        "ae5159956b0bcc6c9e1a2c40e32336a2013b1b4ed83d55a05a8f956742536971"
+      ],
+      "target_pool_indices": [
+        58
+      ],
+      "target_slots": [
+        "target:0"
+      ],
+      "units": "radian"
+    },
+    "case_id": "h4-1.5-iteration-12-or-convergence",
+    "executed_representative_candidate_id": "candidate-v1:86cf795e09e9c5e0e0708ca83cd8bf0a13333452f778bd5e093c9392f11b32d6",
+    "is_executed_representative": false
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate-v1:436b6f9a209a6dd9b2c0bdc6e7df9af0c89e1f77f2438b6fff669524035beea2",
+      "constraint_matrix": [
+        [
+          -1.0,
+          1.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:a0bbb0639a22156ea8307340562ffc319fbe58b3d9a0becb3eddd76a6619c9c3",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        [
+          0.9999999999999998
+        ],
+        [
+          0.9999999999999998
+        ]
+      ],
+      "kind": "mvp-to-ovp-sum",
+      "numerical_context_digest": "8dfe17f388417b58bd97cab249e1777d5fb1a267dc67d5dc362506d421373806",
+      "offset": [
+        0.0,
+        0.0
+      ],
+      "orientation": "sum",
+      "removed_source_slots": [],
+      "semantic_conflict_positions": [
+        8,
+        9
+      ],
+      "source_block_id": "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef",
+      "source_pool_indices": [
+        57,
+        58
+      ],
+      "source_slots": [
+        "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef:slot:0",
+        "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef:slot:1"
+      ],
+      "target_family": "OVP",
+      "target_operator_digests": [
+        "32b80eae7918aa316eddb96125eef70469a87f2dca4fac5fc3ebb7c80ad4e348"
+      ],
+      "target_pool_indices": [
+        138
+      ],
+      "target_slots": [
+        "target:0"
+      ],
+      "units": "radian"
+    },
+    "case_id": "h4-1.5-iteration-12-or-convergence",
+    "executed_representative_candidate_id": "candidate-v1:436b6f9a209a6dd9b2c0bdc6e7df9af0c89e1f77f2438b6fff669524035beea2",
+    "is_executed_representative": true
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate-v1:d68e24bbf926e226938c26ab7d92fa01a8b7ab8368675aedb5adfe7cae350655",
+      "constraint_matrix": [
+        [
+          1.0,
+          1.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:341a26469e49718a6efea945ea55bbe86b4465a5673caff224572e149e68624a",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        [
+          0.9999999999999998
+        ],
+        [
+          -0.9999999999999998
+        ]
+      ],
+      "kind": "mvp-to-ovp-diff",
+      "numerical_context_digest": "8dfe17f388417b58bd97cab249e1777d5fb1a267dc67d5dc362506d421373806",
+      "offset": [
+        0.0,
+        0.0
+      ],
+      "orientation": "diff",
+      "removed_source_slots": [],
+      "semantic_conflict_positions": [
+        8,
+        9
+      ],
+      "source_block_id": "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef",
+      "source_pool_indices": [
+        57,
+        58
+      ],
+      "source_slots": [
+        "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef:slot:0",
+        "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef:slot:1"
+      ],
+      "target_family": "OVP",
+      "target_operator_digests": [
+        "4b10b0c3ad291cbb5ba4b123405240c2e40d9c0c84e60a30e99685a62a0e3da7"
+      ],
+      "target_pool_indices": [
+        139
+      ],
+      "target_slots": [
+        "target:0"
+      ],
+      "units": "radian"
+    },
+    "case_id": "h4-1.5-iteration-12-or-convergence",
+    "executed_representative_candidate_id": "candidate-v1:d68e24bbf926e226938c26ab7d92fa01a8b7ab8368675aedb5adfe7cae350655",
+    "is_executed_representative": true
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate-v1:261fd819762917c21ba86e1520295609bad3c445dfda126106be0bdc915cc695",
+      "constraint_matrix": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0,
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:1fbe8b1b52e35f7e90f4c03af5652240f2245dcfcb045ac9b20b28878cfe5a14",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        [],
+        []
+      ],
+      "kind": "mvp-whole-deletion",
+      "numerical_context_digest": "a50528e4b805a5185fc999ccc6a38f14543dd19154922047f90e90bf5cb99e3b",
+      "offset": [
+        0.0,
+        0.0
+      ],
+      "orientation": "deletion",
+      "removed_source_slots": [
+        0,
+        1
+      ],
+      "semantic_conflict_positions": [
+        10,
+        11
+      ],
+      "source_block_id": "block-v1:d991bb8293d42e2a793355b920dd6974a15ce536e7ef122c3956e53d278c6288",
+      "source_pool_indices": [
+        70,
+        71
+      ],
+      "source_slots": [
+        "block-v1:d991bb8293d42e2a793355b920dd6974a15ce536e7ef122c3956e53d278c6288:slot:0",
+        "block-v1:d991bb8293d42e2a793355b920dd6974a15ce536e7ef122c3956e53d278c6288:slot:1"
+      ],
+      "target_family": "empty",
+      "target_operator_digests": [],
+      "target_pool_indices": [],
+      "target_slots": [],
+      "units": "radian"
+    },
+    "case_id": "h4-1.5-iteration-12-or-convergence",
+    "executed_representative_candidate_id": "candidate-v1:261fd819762917c21ba86e1520295609bad3c445dfda126106be0bdc915cc695",
+    "is_executed_representative": true
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate-v1:b5efd0a203aea088fbf2ce8754bdc577d756443d2f3f27a2426237793b203964",
+      "constraint_matrix": [
+        [
+          1.0,
+          -0.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:4f98d99b5dbb7d47686c08624d203257c336294901de3137420e931c972fe05d",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        [
+          0.0
+        ],
+        [
+          1.0
+        ]
+      ],
+      "kind": "mvp-constituent-deletion",
+      "numerical_context_digest": "a50528e4b805a5185fc999ccc6a38f14543dd19154922047f90e90bf5cb99e3b",
+      "offset": [
+        0.0,
+        0.0
+      ],
+      "orientation": "ordered-subset",
+      "removed_source_slots": [
+        0
+      ],
+      "semantic_conflict_positions": [
+        10,
+        11
+      ],
+      "source_block_id": "block-v1:d991bb8293d42e2a793355b920dd6974a15ce536e7ef122c3956e53d278c6288",
+      "source_pool_indices": [
+        70,
+        71
+      ],
+      "source_slots": [
+        "block-v1:d991bb8293d42e2a793355b920dd6974a15ce536e7ef122c3956e53d278c6288:slot:0",
+        "block-v1:d991bb8293d42e2a793355b920dd6974a15ce536e7ef122c3956e53d278c6288:slot:1"
+      ],
+      "target_family": "single-QE",
+      "target_operator_digests": [
+        "1d2e45850725a48bda143d9997d0c906f1dca3015c7f2665f983f1dcc5ebde75"
+      ],
+      "target_pool_indices": [
+        71
+      ],
+      "target_slots": [
+        "target:0"
+      ],
+      "units": "radian"
+    },
+    "case_id": "h4-1.5-iteration-12-or-convergence",
+    "executed_representative_candidate_id": "candidate-v1:b5efd0a203aea088fbf2ce8754bdc577d756443d2f3f27a2426237793b203964",
+    "is_executed_representative": true
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate-v1:28aa60d5506448ed91563a1caaf7e64a681c9390c2a0ae656e14a653c1b2f97d",
+      "constraint_matrix": [
+        [
+          -0.0,
+          1.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:239741912828f1fe0ae6b37000e50f65bc575d2130836774d448c31a66d7f6ef",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        [
+          1.0
+        ],
+        [
+          0.0
+        ]
+      ],
+      "kind": "mvp-constituent-deletion",
+      "numerical_context_digest": "a50528e4b805a5185fc999ccc6a38f14543dd19154922047f90e90bf5cb99e3b",
+      "offset": [
+        0.0,
+        0.0
+      ],
+      "orientation": "ordered-subset",
+      "removed_source_slots": [
+        1
+      ],
+      "semantic_conflict_positions": [
+        10,
+        11
+      ],
+      "source_block_id": "block-v1:d991bb8293d42e2a793355b920dd6974a15ce536e7ef122c3956e53d278c6288",
+      "source_pool_indices": [
+        70,
+        71
+      ],
+      "source_slots": [
+        "block-v1:d991bb8293d42e2a793355b920dd6974a15ce536e7ef122c3956e53d278c6288:slot:0",
+        "block-v1:d991bb8293d42e2a793355b920dd6974a15ce536e7ef122c3956e53d278c6288:slot:1"
+      ],
+      "target_family": "single-QE",
+      "target_operator_digests": [
+        "e29ba7e65dd04695dfd14e30474a1e5186ef259426353e0caa4cc97e8ab2f254"
+      ],
+      "target_pool_indices": [
+        70
+      ],
+      "target_slots": [
+        "target:0"
+      ],
+      "units": "radian"
+    },
+    "case_id": "h4-1.5-iteration-12-or-convergence",
+    "executed_representative_candidate_id": "candidate-v1:28aa60d5506448ed91563a1caaf7e64a681c9390c2a0ae656e14a653c1b2f97d",
+    "is_executed_representative": true
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate-v1:c0ceb1315feeda95553525f7bb00a9f8170a0386a7516a19d52d72ef12822efe",
+      "constraint_matrix": [
+        [
+          -0.0,
+          1.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:239741912828f1fe0ae6b37000e50f65bc575d2130836774d448c31a66d7f6ef",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        [
+          1.0
+        ],
+        [
+          0.0
+        ]
+      ],
+      "kind": "mvp-to-single-qe",
+      "numerical_context_digest": "a50528e4b805a5185fc999ccc6a38f14543dd19154922047f90e90bf5cb99e3b",
+      "offset": [
+        0.0,
+        0.0
+      ],
+      "orientation": "canonical-qe",
+      "removed_source_slots": [
+        1
+      ],
+      "semantic_conflict_positions": [
+        10,
+        11
+      ],
+      "source_block_id": "block-v1:d991bb8293d42e2a793355b920dd6974a15ce536e7ef122c3956e53d278c6288",
+      "source_pool_indices": [
+        70,
+        71
+      ],
+      "source_slots": [
+        "block-v1:d991bb8293d42e2a793355b920dd6974a15ce536e7ef122c3956e53d278c6288:slot:0",
+        "block-v1:d991bb8293d42e2a793355b920dd6974a15ce536e7ef122c3956e53d278c6288:slot:1"
+      ],
+      "target_family": "single-QE",
+      "target_operator_digests": [
+        "e29ba7e65dd04695dfd14e30474a1e5186ef259426353e0caa4cc97e8ab2f254"
+      ],
+      "target_pool_indices": [
+        70
+      ],
+      "target_slots": [
+        "target:0"
+      ],
+      "units": "radian"
+    },
+    "case_id": "h4-1.5-iteration-12-or-convergence",
+    "executed_representative_candidate_id": "candidate-v1:28aa60d5506448ed91563a1caaf7e64a681c9390c2a0ae656e14a653c1b2f97d",
+    "is_executed_representative": false
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate-v1:1d84bdeea30f389464e788fca79a952ca2c43bd30383d0e354755d0d17efa3d8",
+      "constraint_matrix": [
+        [
+          1.0,
+          -0.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:4f98d99b5dbb7d47686c08624d203257c336294901de3137420e931c972fe05d",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        [
+          0.0
+        ],
+        [
+          1.0
+        ]
+      ],
+      "kind": "mvp-to-single-qe",
+      "numerical_context_digest": "a50528e4b805a5185fc999ccc6a38f14543dd19154922047f90e90bf5cb99e3b",
+      "offset": [
+        0.0,
+        0.0
+      ],
+      "orientation": "canonical-qe",
+      "removed_source_slots": [
+        0
+      ],
+      "semantic_conflict_positions": [
+        10,
+        11
+      ],
+      "source_block_id": "block-v1:d991bb8293d42e2a793355b920dd6974a15ce536e7ef122c3956e53d278c6288",
+      "source_pool_indices": [
+        70,
+        71
+      ],
+      "source_slots": [
+        "block-v1:d991bb8293d42e2a793355b920dd6974a15ce536e7ef122c3956e53d278c6288:slot:0",
+        "block-v1:d991bb8293d42e2a793355b920dd6974a15ce536e7ef122c3956e53d278c6288:slot:1"
+      ],
+      "target_family": "single-QE",
+      "target_operator_digests": [
+        "1d2e45850725a48bda143d9997d0c906f1dca3015c7f2665f983f1dcc5ebde75"
+      ],
+      "target_pool_indices": [
+        71
+      ],
+      "target_slots": [
+        "target:0"
+      ],
+      "units": "radian"
+    },
+    "case_id": "h4-1.5-iteration-12-or-convergence",
+    "executed_representative_candidate_id": "candidate-v1:b5efd0a203aea088fbf2ce8754bdc577d756443d2f3f27a2426237793b203964",
+    "is_executed_representative": false
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate-v1:9bc54ebfadadd1a9fc316970a6aea309956300f402afcbae34777ecaf1b96268",
+      "constraint_matrix": [
+        [
+          -1.0,
+          1.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:86ced81313d94b298f52a456b0287d83bea8ccf487b72c8c7b92654cad5551d4",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        [
+          0.9999999999999998
+        ],
+        [
+          0.9999999999999998
+        ]
+      ],
+      "kind": "mvp-to-ovp-sum",
+      "numerical_context_digest": "a50528e4b805a5185fc999ccc6a38f14543dd19154922047f90e90bf5cb99e3b",
+      "offset": [
+        0.0,
+        0.0
+      ],
+      "orientation": "sum",
+      "removed_source_slots": [],
+      "semantic_conflict_positions": [
+        10,
+        11
+      ],
+      "source_block_id": "block-v1:d991bb8293d42e2a793355b920dd6974a15ce536e7ef122c3956e53d278c6288",
+      "source_pool_indices": [
+        70,
+        71
+      ],
+      "source_slots": [
+        "block-v1:d991bb8293d42e2a793355b920dd6974a15ce536e7ef122c3956e53d278c6288:slot:0",
+        "block-v1:d991bb8293d42e2a793355b920dd6974a15ce536e7ef122c3956e53d278c6288:slot:1"
+      ],
+      "target_family": "OVP",
+      "target_operator_digests": [
+        "9f0f36fbc2e0633a584d5ca7de14dc055422cb20a94f62893c1293600405197d"
+      ],
+      "target_pool_indices": [
+        154
+      ],
+      "target_slots": [
+        "target:0"
+      ],
+      "units": "radian"
+    },
+    "case_id": "h4-1.5-iteration-12-or-convergence",
+    "executed_representative_candidate_id": "candidate-v1:9bc54ebfadadd1a9fc316970a6aea309956300f402afcbae34777ecaf1b96268",
+    "is_executed_representative": true
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate-v1:ccaf9d6977c042af54e10ed623dde7da5df8cadfe6cfa2f144a4a8c72e9552f4",
+      "constraint_matrix": [
+        [
+          1.0,
+          1.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:3b13155e7365c0a6274852203c8a6b513b26f7609ef689460961b5b0c64f7ca0",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        [
+          0.9999999999999998
+        ],
+        [
+          -0.9999999999999998
+        ]
+      ],
+      "kind": "mvp-to-ovp-diff",
+      "numerical_context_digest": "a50528e4b805a5185fc999ccc6a38f14543dd19154922047f90e90bf5cb99e3b",
+      "offset": [
+        0.0,
+        0.0
+      ],
+      "orientation": "diff",
+      "removed_source_slots": [],
+      "semantic_conflict_positions": [
+        10,
+        11
+      ],
+      "source_block_id": "block-v1:d991bb8293d42e2a793355b920dd6974a15ce536e7ef122c3956e53d278c6288",
+      "source_pool_indices": [
+        70,
+        71
+      ],
+      "source_slots": [
+        "block-v1:d991bb8293d42e2a793355b920dd6974a15ce536e7ef122c3956e53d278c6288:slot:0",
+        "block-v1:d991bb8293d42e2a793355b920dd6974a15ce536e7ef122c3956e53d278c6288:slot:1"
+      ],
+      "target_family": "OVP",
+      "target_operator_digests": [
+        "e85e21ff59d2036f443172633970c0ac5b4acf00b1b8d7b5cb6d13e11df95c0b"
+      ],
+      "target_pool_indices": [
+        155
+      ],
+      "target_slots": [
+        "target:0"
+      ],
+      "units": "radian"
+    },
+    "case_id": "h4-1.5-iteration-12-or-convergence",
+    "executed_representative_candidate_id": "candidate-v1:ccaf9d6977c042af54e10ed623dde7da5df8cadfe6cfa2f144a4a8c72e9552f4",
+    "is_executed_representative": true
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate-v1:69ec64b828dedab2ab91080ce9034c3ff771716907e84c494435e6a11edf9c09",
+      "constraint_matrix": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0,
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:bb5e317708b93f20693b51a79ce25a77f931392481be6dbccd64ae73cec03f4f",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        [],
+        []
+      ],
+      "kind": "mvp-whole-deletion",
+      "numerical_context_digest": "0c32794bb940ed2c2e7080a7df7c1db55fdecb5c0a37c7e40ce611505e718560",
+      "offset": [
+        0.0,
+        0.0
+      ],
+      "orientation": "deletion",
+      "removed_source_slots": [
+        0,
+        1
+      ],
+      "semantic_conflict_positions": [
+        12,
+        13
+      ],
+      "source_block_id": "block-v1:eaed3763a78bbdbf4f3e58c0fe6a2324929af48af44cd5d9136aecbed97a5176",
+      "source_pool_indices": [
+        30,
+        31
+      ],
+      "source_slots": [
+        "block-v1:eaed3763a78bbdbf4f3e58c0fe6a2324929af48af44cd5d9136aecbed97a5176:slot:0",
+        "block-v1:eaed3763a78bbdbf4f3e58c0fe6a2324929af48af44cd5d9136aecbed97a5176:slot:1"
+      ],
+      "target_family": "empty",
+      "target_operator_digests": [],
+      "target_pool_indices": [],
+      "target_slots": [],
+      "units": "radian"
+    },
+    "case_id": "h4-1.5-iteration-12-or-convergence",
+    "executed_representative_candidate_id": "candidate-v1:69ec64b828dedab2ab91080ce9034c3ff771716907e84c494435e6a11edf9c09",
+    "is_executed_representative": true
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate-v1:21d0008b69c31f53d5abc4e6eec2f906ae0a0fe1a54ae9e7dc5ecf4b0271a3dd",
+      "constraint_matrix": [
+        [
+          1.0,
+          -0.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:725e88fc914fe2c0ddd4b8005959d8732d15f625cd59ddca449213bd94b90c70",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        [
+          0.0
+        ],
+        [
+          1.0
+        ]
+      ],
+      "kind": "mvp-constituent-deletion",
+      "numerical_context_digest": "0c32794bb940ed2c2e7080a7df7c1db55fdecb5c0a37c7e40ce611505e718560",
+      "offset": [
+        0.0,
+        0.0
+      ],
+      "orientation": "ordered-subset",
+      "removed_source_slots": [
+        0
+      ],
+      "semantic_conflict_positions": [
+        12,
+        13
+      ],
+      "source_block_id": "block-v1:eaed3763a78bbdbf4f3e58c0fe6a2324929af48af44cd5d9136aecbed97a5176",
+      "source_pool_indices": [
+        30,
+        31
+      ],
+      "source_slots": [
+        "block-v1:eaed3763a78bbdbf4f3e58c0fe6a2324929af48af44cd5d9136aecbed97a5176:slot:0",
+        "block-v1:eaed3763a78bbdbf4f3e58c0fe6a2324929af48af44cd5d9136aecbed97a5176:slot:1"
+      ],
+      "target_family": "single-QE",
+      "target_operator_digests": [
+        "94eaade464af5d776d88d881d7d48e6cffc7cbd57b06d57cbabe266b39d83791"
+      ],
+      "target_pool_indices": [
+        31
+      ],
+      "target_slots": [
+        "target:0"
+      ],
+      "units": "radian"
+    },
+    "case_id": "h4-1.5-iteration-12-or-convergence",
+    "executed_representative_candidate_id": "candidate-v1:21d0008b69c31f53d5abc4e6eec2f906ae0a0fe1a54ae9e7dc5ecf4b0271a3dd",
+    "is_executed_representative": true
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate-v1:de89e59256121fe8d3e3a3acf16c8b8626562054695d783c227751e58d14818d",
+      "constraint_matrix": [
+        [
+          -0.0,
+          1.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:83efdb4b8019a1cd22ac54225e8ae270248292bffdb0eb50c38cdf0d32780661",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        [
+          1.0
+        ],
+        [
+          0.0
+        ]
+      ],
+      "kind": "mvp-constituent-deletion",
+      "numerical_context_digest": "0c32794bb940ed2c2e7080a7df7c1db55fdecb5c0a37c7e40ce611505e718560",
+      "offset": [
+        0.0,
+        0.0
+      ],
+      "orientation": "ordered-subset",
+      "removed_source_slots": [
+        1
+      ],
+      "semantic_conflict_positions": [
+        12,
+        13
+      ],
+      "source_block_id": "block-v1:eaed3763a78bbdbf4f3e58c0fe6a2324929af48af44cd5d9136aecbed97a5176",
+      "source_pool_indices": [
+        30,
+        31
+      ],
+      "source_slots": [
+        "block-v1:eaed3763a78bbdbf4f3e58c0fe6a2324929af48af44cd5d9136aecbed97a5176:slot:0",
+        "block-v1:eaed3763a78bbdbf4f3e58c0fe6a2324929af48af44cd5d9136aecbed97a5176:slot:1"
+      ],
+      "target_family": "single-QE",
+      "target_operator_digests": [
+        "c08a7f618b5603300188deed80f76ef1a7d4c6cbaf4fff64b1053f31f52036bf"
+      ],
+      "target_pool_indices": [
+        30
+      ],
+      "target_slots": [
+        "target:0"
+      ],
+      "units": "radian"
+    },
+    "case_id": "h4-1.5-iteration-12-or-convergence",
+    "executed_representative_candidate_id": "candidate-v1:de89e59256121fe8d3e3a3acf16c8b8626562054695d783c227751e58d14818d",
+    "is_executed_representative": true
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate-v1:39af0c803b70e26ea67daf3dc06205fb89db1ca40baff4f3abc041f4f99ec876",
+      "constraint_matrix": [
+        [
+          -0.0,
+          1.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:83efdb4b8019a1cd22ac54225e8ae270248292bffdb0eb50c38cdf0d32780661",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        [
+          1.0
+        ],
+        [
+          0.0
+        ]
+      ],
+      "kind": "mvp-to-single-qe",
+      "numerical_context_digest": "0c32794bb940ed2c2e7080a7df7c1db55fdecb5c0a37c7e40ce611505e718560",
+      "offset": [
+        0.0,
+        0.0
+      ],
+      "orientation": "canonical-qe",
+      "removed_source_slots": [
+        1
+      ],
+      "semantic_conflict_positions": [
+        12,
+        13
+      ],
+      "source_block_id": "block-v1:eaed3763a78bbdbf4f3e58c0fe6a2324929af48af44cd5d9136aecbed97a5176",
+      "source_pool_indices": [
+        30,
+        31
+      ],
+      "source_slots": [
+        "block-v1:eaed3763a78bbdbf4f3e58c0fe6a2324929af48af44cd5d9136aecbed97a5176:slot:0",
+        "block-v1:eaed3763a78bbdbf4f3e58c0fe6a2324929af48af44cd5d9136aecbed97a5176:slot:1"
+      ],
+      "target_family": "single-QE",
+      "target_operator_digests": [
+        "c08a7f618b5603300188deed80f76ef1a7d4c6cbaf4fff64b1053f31f52036bf"
+      ],
+      "target_pool_indices": [
+        30
+      ],
+      "target_slots": [
+        "target:0"
+      ],
+      "units": "radian"
+    },
+    "case_id": "h4-1.5-iteration-12-or-convergence",
+    "executed_representative_candidate_id": "candidate-v1:de89e59256121fe8d3e3a3acf16c8b8626562054695d783c227751e58d14818d",
+    "is_executed_representative": false
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate-v1:d5121c29ddb1d581be3c5e166d254eb2682e7660bbaf66d665c0cc1866f565c9",
+      "constraint_matrix": [
+        [
+          1.0,
+          -0.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:725e88fc914fe2c0ddd4b8005959d8732d15f625cd59ddca449213bd94b90c70",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        [
+          0.0
+        ],
+        [
+          1.0
+        ]
+      ],
+      "kind": "mvp-to-single-qe",
+      "numerical_context_digest": "0c32794bb940ed2c2e7080a7df7c1db55fdecb5c0a37c7e40ce611505e718560",
+      "offset": [
+        0.0,
+        0.0
+      ],
+      "orientation": "canonical-qe",
+      "removed_source_slots": [
+        0
+      ],
+      "semantic_conflict_positions": [
+        12,
+        13
+      ],
+      "source_block_id": "block-v1:eaed3763a78bbdbf4f3e58c0fe6a2324929af48af44cd5d9136aecbed97a5176",
+      "source_pool_indices": [
+        30,
+        31
+      ],
+      "source_slots": [
+        "block-v1:eaed3763a78bbdbf4f3e58c0fe6a2324929af48af44cd5d9136aecbed97a5176:slot:0",
+        "block-v1:eaed3763a78bbdbf4f3e58c0fe6a2324929af48af44cd5d9136aecbed97a5176:slot:1"
+      ],
+      "target_family": "single-QE",
+      "target_operator_digests": [
+        "94eaade464af5d776d88d881d7d48e6cffc7cbd57b06d57cbabe266b39d83791"
+      ],
+      "target_pool_indices": [
+        31
+      ],
+      "target_slots": [
+        "target:0"
+      ],
+      "units": "radian"
+    },
+    "case_id": "h4-1.5-iteration-12-or-convergence",
+    "executed_representative_candidate_id": "candidate-v1:21d0008b69c31f53d5abc4e6eec2f906ae0a0fe1a54ae9e7dc5ecf4b0271a3dd",
+    "is_executed_representative": false
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate-v1:e7b587f4891c8a5bbf101c01063ebafee50cdf370e7458ecfbac56f8ce7ad2ec",
+      "constraint_matrix": [
+        [
+          1.0,
+          -0.9999999999999998
+        ]
+      ],
+      "constraint_rhs": [
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:415844bf87f0506c817ecee5b145280c7fad0e056c8a5cc0e3a31ac2ac527bad",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        [
+          0.9999999999999998
+        ],
+        [
+          1.0
+        ]
+      ],
+      "kind": "mvp-to-ovp-sum",
+      "numerical_context_digest": "0c32794bb940ed2c2e7080a7df7c1db55fdecb5c0a37c7e40ce611505e718560",
+      "offset": [
+        0.0,
+        0.0
+      ],
+      "orientation": "sum",
+      "removed_source_slots": [],
+      "semantic_conflict_positions": [
+        12,
+        13
+      ],
+      "source_block_id": "block-v1:eaed3763a78bbdbf4f3e58c0fe6a2324929af48af44cd5d9136aecbed97a5176",
+      "source_pool_indices": [
+        30,
+        31
+      ],
+      "source_slots": [
+        "block-v1:eaed3763a78bbdbf4f3e58c0fe6a2324929af48af44cd5d9136aecbed97a5176:slot:0",
+        "block-v1:eaed3763a78bbdbf4f3e58c0fe6a2324929af48af44cd5d9136aecbed97a5176:slot:1"
+      ],
+      "target_family": "OVP",
+      "target_operator_digests": [
+        "cb87f94f37d37d06b9aae4c82e3bd6b128495e5a4f59b46b3b5343a7626365e8"
+      ],
+      "target_pool_indices": [
+        108
+      ],
+      "target_slots": [
+        "target:0"
+      ],
+      "units": "radian"
+    },
+    "case_id": "h4-1.5-iteration-12-or-convergence",
+    "executed_representative_candidate_id": "candidate-v1:e7b587f4891c8a5bbf101c01063ebafee50cdf370e7458ecfbac56f8ce7ad2ec",
+    "is_executed_representative": true
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate-v1:5e497b0da1616e0f7fd5a493a4b02d1f051763d4a52623ef9846713f8db3ae51",
+      "constraint_matrix": [
+        [
+          0.9999999999999999,
+          1.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:1670a8cfaab79e9934dedff3adcb4090e9267bdd4b48a5c10b00bb3990fb5e6f",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        [
+          0.9999999999999998
+        ],
+        [
+          -0.9999999999999997
+        ]
+      ],
+      "kind": "mvp-to-ovp-diff",
+      "numerical_context_digest": "0c32794bb940ed2c2e7080a7df7c1db55fdecb5c0a37c7e40ce611505e718560",
+      "offset": [
+        0.0,
+        0.0
+      ],
+      "orientation": "diff",
+      "removed_source_slots": [],
+      "semantic_conflict_positions": [
+        12,
+        13
+      ],
+      "source_block_id": "block-v1:eaed3763a78bbdbf4f3e58c0fe6a2324929af48af44cd5d9136aecbed97a5176",
+      "source_pool_indices": [
+        30,
+        31
+      ],
+      "source_slots": [
+        "block-v1:eaed3763a78bbdbf4f3e58c0fe6a2324929af48af44cd5d9136aecbed97a5176:slot:0",
+        "block-v1:eaed3763a78bbdbf4f3e58c0fe6a2324929af48af44cd5d9136aecbed97a5176:slot:1"
+      ],
+      "target_family": "OVP",
+      "target_operator_digests": [
+        "bc66bdeb00ae8fca7a9e540556f3cbc8bb1ff45a74720a21b5273c45b59d72a9"
+      ],
+      "target_pool_indices": [
+        109
+      ],
+      "target_slots": [
+        "target:0"
+      ],
+      "units": "radian"
+    },
+    "case_id": "h4-1.5-iteration-12-or-convergence",
+    "executed_representative_candidate_id": "candidate-v1:5e497b0da1616e0f7fd5a493a4b02d1f051763d4a52623ef9846713f8db3ae51",
+    "is_executed_representative": true
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate-v1:24ac72f84d861e932d85c9a3f1ec54946b902fe50ad8b0b48ae9034d7b7796ef",
+      "constraint_matrix": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0,
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:5107178b3cdff1f1e842debf16466b22dad4b5ee9bb63a7ed8c66eb1e2fabd51",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        [],
+        []
+      ],
+      "kind": "mvp-whole-deletion",
+      "numerical_context_digest": "49cd348f25411b1bae619cecff3c7b85d15f43e6ce530463cf5d04134b14d1e0",
+      "offset": [
+        0.0,
+        0.0
+      ],
+      "orientation": "deletion",
+      "removed_source_slots": [
+        0,
+        1
+      ],
+      "semantic_conflict_positions": [
+        14,
+        15
+      ],
+      "source_block_id": "block-v1:4a4b929ef154a4f43a89e8e552d96ab2c4eb272678cd0caff2b38e0608c1ef49",
+      "source_pool_indices": [
+        49,
+        50
+      ],
+      "source_slots": [
+        "block-v1:4a4b929ef154a4f43a89e8e552d96ab2c4eb272678cd0caff2b38e0608c1ef49:slot:0",
+        "block-v1:4a4b929ef154a4f43a89e8e552d96ab2c4eb272678cd0caff2b38e0608c1ef49:slot:1"
+      ],
+      "target_family": "empty",
+      "target_operator_digests": [],
+      "target_pool_indices": [],
+      "target_slots": [],
+      "units": "radian"
+    },
+    "case_id": "h4-1.5-iteration-12-or-convergence",
+    "executed_representative_candidate_id": "candidate-v1:24ac72f84d861e932d85c9a3f1ec54946b902fe50ad8b0b48ae9034d7b7796ef",
+    "is_executed_representative": true
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate-v1:70b1d4349733ed4dfba9f97ce812add196ff4aa6cc8ca2f01e7914995a19d325",
+      "constraint_matrix": [
+        [
+          1.0,
+          -0.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:09650cead0200fd616ae03301d92254e37b9411a4f949a6d7d119953730474c6",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        [
+          0.0
+        ],
+        [
+          1.0
+        ]
+      ],
+      "kind": "mvp-constituent-deletion",
+      "numerical_context_digest": "49cd348f25411b1bae619cecff3c7b85d15f43e6ce530463cf5d04134b14d1e0",
+      "offset": [
+        0.0,
+        0.0
+      ],
+      "orientation": "ordered-subset",
+      "removed_source_slots": [
+        0
+      ],
+      "semantic_conflict_positions": [
+        14,
+        15
+      ],
+      "source_block_id": "block-v1:4a4b929ef154a4f43a89e8e552d96ab2c4eb272678cd0caff2b38e0608c1ef49",
+      "source_pool_indices": [
+        49,
+        50
+      ],
+      "source_slots": [
+        "block-v1:4a4b929ef154a4f43a89e8e552d96ab2c4eb272678cd0caff2b38e0608c1ef49:slot:0",
+        "block-v1:4a4b929ef154a4f43a89e8e552d96ab2c4eb272678cd0caff2b38e0608c1ef49:slot:1"
+      ],
+      "target_family": "single-QE",
+      "target_operator_digests": [
+        "91c2d0fe145ed2af979d789e2b0114ed22f564cd875b5bad711e624eb0ce525d"
+      ],
+      "target_pool_indices": [
+        50
+      ],
+      "target_slots": [
+        "target:0"
+      ],
+      "units": "radian"
+    },
+    "case_id": "h4-1.5-iteration-12-or-convergence",
+    "executed_representative_candidate_id": "candidate-v1:70b1d4349733ed4dfba9f97ce812add196ff4aa6cc8ca2f01e7914995a19d325",
+    "is_executed_representative": true
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate-v1:b043a3e775f29314c38af94c35a1e088a422cb584a4d452e83a69ed1a0319b13",
+      "constraint_matrix": [
+        [
+          -0.0,
+          1.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:4490d526849ea03a8083c003836b9fd71b52c8dfc746306b16a7fde1aa8c6693",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        [
+          1.0
+        ],
+        [
+          0.0
+        ]
+      ],
+      "kind": "mvp-constituent-deletion",
+      "numerical_context_digest": "49cd348f25411b1bae619cecff3c7b85d15f43e6ce530463cf5d04134b14d1e0",
+      "offset": [
+        0.0,
+        0.0
+      ],
+      "orientation": "ordered-subset",
+      "removed_source_slots": [
+        1
+      ],
+      "semantic_conflict_positions": [
+        14,
+        15
+      ],
+      "source_block_id": "block-v1:4a4b929ef154a4f43a89e8e552d96ab2c4eb272678cd0caff2b38e0608c1ef49",
+      "source_pool_indices": [
+        49,
+        50
+      ],
+      "source_slots": [
+        "block-v1:4a4b929ef154a4f43a89e8e552d96ab2c4eb272678cd0caff2b38e0608c1ef49:slot:0",
+        "block-v1:4a4b929ef154a4f43a89e8e552d96ab2c4eb272678cd0caff2b38e0608c1ef49:slot:1"
+      ],
+      "target_family": "single-QE",
+      "target_operator_digests": [
+        "9a3f44d257b76e5d2cdcacbfa098bc53a478742a238bac083b9b27e978211663"
+      ],
+      "target_pool_indices": [
+        49
+      ],
+      "target_slots": [
+        "target:0"
+      ],
+      "units": "radian"
+    },
+    "case_id": "h4-1.5-iteration-12-or-convergence",
+    "executed_representative_candidate_id": "candidate-v1:b043a3e775f29314c38af94c35a1e088a422cb584a4d452e83a69ed1a0319b13",
+    "is_executed_representative": true
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate-v1:c461d13ca1c66db8664af51a5007b219e7572a2c55067df9539ed110bb0afe15",
+      "constraint_matrix": [
+        [
+          -0.0,
+          1.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:4490d526849ea03a8083c003836b9fd71b52c8dfc746306b16a7fde1aa8c6693",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        [
+          1.0
+        ],
+        [
+          0.0
+        ]
+      ],
+      "kind": "mvp-to-single-qe",
+      "numerical_context_digest": "49cd348f25411b1bae619cecff3c7b85d15f43e6ce530463cf5d04134b14d1e0",
+      "offset": [
+        0.0,
+        0.0
+      ],
+      "orientation": "canonical-qe",
+      "removed_source_slots": [
+        1
+      ],
+      "semantic_conflict_positions": [
+        14,
+        15
+      ],
+      "source_block_id": "block-v1:4a4b929ef154a4f43a89e8e552d96ab2c4eb272678cd0caff2b38e0608c1ef49",
+      "source_pool_indices": [
+        49,
+        50
+      ],
+      "source_slots": [
+        "block-v1:4a4b929ef154a4f43a89e8e552d96ab2c4eb272678cd0caff2b38e0608c1ef49:slot:0",
+        "block-v1:4a4b929ef154a4f43a89e8e552d96ab2c4eb272678cd0caff2b38e0608c1ef49:slot:1"
+      ],
+      "target_family": "single-QE",
+      "target_operator_digests": [
+        "9a3f44d257b76e5d2cdcacbfa098bc53a478742a238bac083b9b27e978211663"
+      ],
+      "target_pool_indices": [
+        49
+      ],
+      "target_slots": [
+        "target:0"
+      ],
+      "units": "radian"
+    },
+    "case_id": "h4-1.5-iteration-12-or-convergence",
+    "executed_representative_candidate_id": "candidate-v1:b043a3e775f29314c38af94c35a1e088a422cb584a4d452e83a69ed1a0319b13",
+    "is_executed_representative": false
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate-v1:bfa35b4eb422fabd08d9ba17a6b6efae611dba9939a21e54075b74d01a0b4a9b",
+      "constraint_matrix": [
+        [
+          1.0,
+          -0.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:09650cead0200fd616ae03301d92254e37b9411a4f949a6d7d119953730474c6",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        [
+          0.0
+        ],
+        [
+          1.0
+        ]
+      ],
+      "kind": "mvp-to-single-qe",
+      "numerical_context_digest": "49cd348f25411b1bae619cecff3c7b85d15f43e6ce530463cf5d04134b14d1e0",
+      "offset": [
+        0.0,
+        0.0
+      ],
+      "orientation": "canonical-qe",
+      "removed_source_slots": [
+        0
+      ],
+      "semantic_conflict_positions": [
+        14,
+        15
+      ],
+      "source_block_id": "block-v1:4a4b929ef154a4f43a89e8e552d96ab2c4eb272678cd0caff2b38e0608c1ef49",
+      "source_pool_indices": [
+        49,
+        50
+      ],
+      "source_slots": [
+        "block-v1:4a4b929ef154a4f43a89e8e552d96ab2c4eb272678cd0caff2b38e0608c1ef49:slot:0",
+        "block-v1:4a4b929ef154a4f43a89e8e552d96ab2c4eb272678cd0caff2b38e0608c1ef49:slot:1"
+      ],
+      "target_family": "single-QE",
+      "target_operator_digests": [
+        "91c2d0fe145ed2af979d789e2b0114ed22f564cd875b5bad711e624eb0ce525d"
+      ],
+      "target_pool_indices": [
+        50
+      ],
+      "target_slots": [
+        "target:0"
+      ],
+      "units": "radian"
+    },
+    "case_id": "h4-1.5-iteration-12-or-convergence",
+    "executed_representative_candidate_id": "candidate-v1:70b1d4349733ed4dfba9f97ce812add196ff4aa6cc8ca2f01e7914995a19d325",
+    "is_executed_representative": false
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate-v1:3ab57c6eec4b65c1248270e46a5a3ac1922dd8102bda399a7e097890558bc545",
+      "constraint_matrix": [
+        [
+          -1.0,
+          1.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:b4d14badf2a0f4c5158c5ccab465a7690fd9845232719ebd93c8f9fb8d7e9ed6",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        [
+          0.9999999999999998
+        ],
+        [
+          0.9999999999999998
+        ]
+      ],
+      "kind": "mvp-to-ovp-sum",
+      "numerical_context_digest": "49cd348f25411b1bae619cecff3c7b85d15f43e6ce530463cf5d04134b14d1e0",
+      "offset": [
+        0.0,
+        0.0
+      ],
+      "orientation": "sum",
+      "removed_source_slots": [],
+      "semantic_conflict_positions": [
+        14,
+        15
+      ],
+      "source_block_id": "block-v1:4a4b929ef154a4f43a89e8e552d96ab2c4eb272678cd0caff2b38e0608c1ef49",
+      "source_pool_indices": [
+        49,
+        50
+      ],
+      "source_slots": [
+        "block-v1:4a4b929ef154a4f43a89e8e552d96ab2c4eb272678cd0caff2b38e0608c1ef49:slot:0",
+        "block-v1:4a4b929ef154a4f43a89e8e552d96ab2c4eb272678cd0caff2b38e0608c1ef49:slot:1"
+      ],
+      "target_family": "OVP",
+      "target_operator_digests": [
+        "3b17101aee05ca9746f9f7683e63bdac1049c90fbe7cfdd1017350060f8a97f8"
+      ],
+      "target_pool_indices": [
+        130
+      ],
+      "target_slots": [
+        "target:0"
+      ],
+      "units": "radian"
+    },
+    "case_id": "h4-1.5-iteration-12-or-convergence",
+    "executed_representative_candidate_id": "candidate-v1:3ab57c6eec4b65c1248270e46a5a3ac1922dd8102bda399a7e097890558bc545",
+    "is_executed_representative": true
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate-v1:c7b807223dc91a7d570258db38cb0985003f6a96e430cd4c444834f19a5a28c1",
+      "constraint_matrix": [
+        [
+          1.0,
+          1.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:3106f38bfecb9d85b7d6ce29ebfea2a47a453ee96ddfeb62cadb21084348a60c",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        [
+          0.9999999999999998
+        ],
+        [
+          -0.9999999999999998
+        ]
+      ],
+      "kind": "mvp-to-ovp-diff",
+      "numerical_context_digest": "49cd348f25411b1bae619cecff3c7b85d15f43e6ce530463cf5d04134b14d1e0",
+      "offset": [
+        0.0,
+        0.0
+      ],
+      "orientation": "diff",
+      "removed_source_slots": [],
+      "semantic_conflict_positions": [
+        14,
+        15
+      ],
+      "source_block_id": "block-v1:4a4b929ef154a4f43a89e8e552d96ab2c4eb272678cd0caff2b38e0608c1ef49",
+      "source_pool_indices": [
+        49,
+        50
+      ],
+      "source_slots": [
+        "block-v1:4a4b929ef154a4f43a89e8e552d96ab2c4eb272678cd0caff2b38e0608c1ef49:slot:0",
+        "block-v1:4a4b929ef154a4f43a89e8e552d96ab2c4eb272678cd0caff2b38e0608c1ef49:slot:1"
+      ],
+      "target_family": "OVP",
+      "target_operator_digests": [
+        "1f86159b16baecab07cf67d90c9c7f5c4c3c2d6d52a9f3444ab4efa387b092ec"
+      ],
+      "target_pool_indices": [
+        131
+      ],
+      "target_slots": [
+        "target:0"
+      ],
+      "units": "radian"
+    },
+    "case_id": "h4-1.5-iteration-12-or-convergence",
+    "executed_representative_candidate_id": "candidate-v1:c7b807223dc91a7d570258db38cb0985003f6a96e430cd4c444834f19a5a28c1",
+    "is_executed_representative": true
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate-v1:40e5dbec0110b46777fda0e200e0a5a71f18d7623dfdd6860f54447f48491b62",
+      "constraint_matrix": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0,
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:5ca77edbef7237f4f3abd7853874b140175dbaf4ce585e9213c59c7c789e5574",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        [],
+        []
+      ],
+      "kind": "mvp-whole-deletion",
+      "numerical_context_digest": "6655b3726a1f42893407a4c9f632022702f48d5e451a74e8dd673eb810a5381c",
+      "offset": [
+        0.0,
+        0.0
+      ],
+      "orientation": "deletion",
+      "removed_source_slots": [
+        0,
+        1
+      ],
+      "semantic_conflict_positions": [
+        16,
+        17
+      ],
+      "source_block_id": "block-v1:507582f56517fb96f2e418e4471e6d63ea5cd691520a353e28d7a25954bad696",
+      "source_pool_indices": [
+        51,
+        52
+      ],
+      "source_slots": [
+        "block-v1:507582f56517fb96f2e418e4471e6d63ea5cd691520a353e28d7a25954bad696:slot:0",
+        "block-v1:507582f56517fb96f2e418e4471e6d63ea5cd691520a353e28d7a25954bad696:slot:1"
+      ],
+      "target_family": "empty",
+      "target_operator_digests": [],
+      "target_pool_indices": [],
+      "target_slots": [],
+      "units": "radian"
+    },
+    "case_id": "h4-1.5-iteration-12-or-convergence",
+    "executed_representative_candidate_id": "candidate-v1:40e5dbec0110b46777fda0e200e0a5a71f18d7623dfdd6860f54447f48491b62",
+    "is_executed_representative": true
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate-v1:378ad55658417c802ec9723af222d26e960723a198b0bd709acd15b52e6bb838",
+      "constraint_matrix": [
+        [
+          1.0,
+          -0.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:4c7a65b6f060ed528cc4d9e00abb142c64cbfd53780c16b976744fa8ae498667",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        [
+          0.0
+        ],
+        [
+          1.0
+        ]
+      ],
+      "kind": "mvp-constituent-deletion",
+      "numerical_context_digest": "6655b3726a1f42893407a4c9f632022702f48d5e451a74e8dd673eb810a5381c",
+      "offset": [
+        0.0,
+        0.0
+      ],
+      "orientation": "ordered-subset",
+      "removed_source_slots": [
+        0
+      ],
+      "semantic_conflict_positions": [
+        16,
+        17
+      ],
+      "source_block_id": "block-v1:507582f56517fb96f2e418e4471e6d63ea5cd691520a353e28d7a25954bad696",
+      "source_pool_indices": [
+        51,
+        52
+      ],
+      "source_slots": [
+        "block-v1:507582f56517fb96f2e418e4471e6d63ea5cd691520a353e28d7a25954bad696:slot:0",
+        "block-v1:507582f56517fb96f2e418e4471e6d63ea5cd691520a353e28d7a25954bad696:slot:1"
+      ],
+      "target_family": "single-QE",
+      "target_operator_digests": [
+        "9d3c081aaaef169ef1d34d3b8b2683d4a79fe0671b8266a39dc6dd5b892fc00e"
+      ],
+      "target_pool_indices": [
+        52
+      ],
+      "target_slots": [
+        "target:0"
+      ],
+      "units": "radian"
+    },
+    "case_id": "h4-1.5-iteration-12-or-convergence",
+    "executed_representative_candidate_id": "candidate-v1:378ad55658417c802ec9723af222d26e960723a198b0bd709acd15b52e6bb838",
+    "is_executed_representative": true
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate-v1:a3b3a2a56b30294a088ab0081598d9b306f8543ed34caf1c472bd054c92ffedc",
+      "constraint_matrix": [
+        [
+          -0.0,
+          1.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:8a901da6d55edda9d646117b370b8e20c89b925edfc0455256bee7147bbcc946",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        [
+          1.0
+        ],
+        [
+          0.0
+        ]
+      ],
+      "kind": "mvp-constituent-deletion",
+      "numerical_context_digest": "6655b3726a1f42893407a4c9f632022702f48d5e451a74e8dd673eb810a5381c",
+      "offset": [
+        0.0,
+        0.0
+      ],
+      "orientation": "ordered-subset",
+      "removed_source_slots": [
+        1
+      ],
+      "semantic_conflict_positions": [
+        16,
+        17
+      ],
+      "source_block_id": "block-v1:507582f56517fb96f2e418e4471e6d63ea5cd691520a353e28d7a25954bad696",
+      "source_pool_indices": [
+        51,
+        52
+      ],
+      "source_slots": [
+        "block-v1:507582f56517fb96f2e418e4471e6d63ea5cd691520a353e28d7a25954bad696:slot:0",
+        "block-v1:507582f56517fb96f2e418e4471e6d63ea5cd691520a353e28d7a25954bad696:slot:1"
+      ],
+      "target_family": "single-QE",
+      "target_operator_digests": [
+        "e86bac1bf438a817feadedbb319432faa3686316c6413547d7d638cae912bb06"
+      ],
+      "target_pool_indices": [
+        51
+      ],
+      "target_slots": [
+        "target:0"
+      ],
+      "units": "radian"
+    },
+    "case_id": "h4-1.5-iteration-12-or-convergence",
+    "executed_representative_candidate_id": "candidate-v1:a3b3a2a56b30294a088ab0081598d9b306f8543ed34caf1c472bd054c92ffedc",
+    "is_executed_representative": true
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate-v1:0c754a04412c1668343e50ee9162bb8f7cb052edabbc80a79eee8a6ad4bf9629",
+      "constraint_matrix": [
+        [
+          -0.0,
+          1.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:8a901da6d55edda9d646117b370b8e20c89b925edfc0455256bee7147bbcc946",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        [
+          1.0
+        ],
+        [
+          0.0
+        ]
+      ],
+      "kind": "mvp-to-single-qe",
+      "numerical_context_digest": "6655b3726a1f42893407a4c9f632022702f48d5e451a74e8dd673eb810a5381c",
+      "offset": [
+        0.0,
+        0.0
+      ],
+      "orientation": "canonical-qe",
+      "removed_source_slots": [
+        1
+      ],
+      "semantic_conflict_positions": [
+        16,
+        17
+      ],
+      "source_block_id": "block-v1:507582f56517fb96f2e418e4471e6d63ea5cd691520a353e28d7a25954bad696",
+      "source_pool_indices": [
+        51,
+        52
+      ],
+      "source_slots": [
+        "block-v1:507582f56517fb96f2e418e4471e6d63ea5cd691520a353e28d7a25954bad696:slot:0",
+        "block-v1:507582f56517fb96f2e418e4471e6d63ea5cd691520a353e28d7a25954bad696:slot:1"
+      ],
+      "target_family": "single-QE",
+      "target_operator_digests": [
+        "e86bac1bf438a817feadedbb319432faa3686316c6413547d7d638cae912bb06"
+      ],
+      "target_pool_indices": [
+        51
+      ],
+      "target_slots": [
+        "target:0"
+      ],
+      "units": "radian"
+    },
+    "case_id": "h4-1.5-iteration-12-or-convergence",
+    "executed_representative_candidate_id": "candidate-v1:a3b3a2a56b30294a088ab0081598d9b306f8543ed34caf1c472bd054c92ffedc",
+    "is_executed_representative": false
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate-v1:e7e3fdfea2d8a415731762b69be3e2398293331e415499eff0bb638ce7399b1c",
+      "constraint_matrix": [
+        [
+          1.0,
+          -0.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:4c7a65b6f060ed528cc4d9e00abb142c64cbfd53780c16b976744fa8ae498667",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        [
+          0.0
+        ],
+        [
+          1.0
+        ]
+      ],
+      "kind": "mvp-to-single-qe",
+      "numerical_context_digest": "6655b3726a1f42893407a4c9f632022702f48d5e451a74e8dd673eb810a5381c",
+      "offset": [
+        0.0,
+        0.0
+      ],
+      "orientation": "canonical-qe",
+      "removed_source_slots": [
+        0
+      ],
+      "semantic_conflict_positions": [
+        16,
+        17
+      ],
+      "source_block_id": "block-v1:507582f56517fb96f2e418e4471e6d63ea5cd691520a353e28d7a25954bad696",
+      "source_pool_indices": [
+        51,
+        52
+      ],
+      "source_slots": [
+        "block-v1:507582f56517fb96f2e418e4471e6d63ea5cd691520a353e28d7a25954bad696:slot:0",
+        "block-v1:507582f56517fb96f2e418e4471e6d63ea5cd691520a353e28d7a25954bad696:slot:1"
+      ],
+      "target_family": "single-QE",
+      "target_operator_digests": [
+        "9d3c081aaaef169ef1d34d3b8b2683d4a79fe0671b8266a39dc6dd5b892fc00e"
+      ],
+      "target_pool_indices": [
+        52
+      ],
+      "target_slots": [
+        "target:0"
+      ],
+      "units": "radian"
+    },
+    "case_id": "h4-1.5-iteration-12-or-convergence",
+    "executed_representative_candidate_id": "candidate-v1:378ad55658417c802ec9723af222d26e960723a198b0bd709acd15b52e6bb838",
+    "is_executed_representative": false
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate-v1:5ea0ab4a8f62cf7c7011bcb3c478cb060dd986101eade574b608f89ce4e4d0ec",
+      "constraint_matrix": [
+        [
+          -1.0,
+          1.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:9373b8a4861006aec1c27f74338cf00f5d91396a6e01d88715fb4719ca490eba",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        [
+          0.9999999999999998
+        ],
+        [
+          0.9999999999999998
+        ]
+      ],
+      "kind": "mvp-to-ovp-sum",
+      "numerical_context_digest": "6655b3726a1f42893407a4c9f632022702f48d5e451a74e8dd673eb810a5381c",
+      "offset": [
+        0.0,
+        0.0
+      ],
+      "orientation": "sum",
+      "removed_source_slots": [],
+      "semantic_conflict_positions": [
+        16,
+        17
+      ],
+      "source_block_id": "block-v1:507582f56517fb96f2e418e4471e6d63ea5cd691520a353e28d7a25954bad696",
+      "source_pool_indices": [
+        51,
+        52
+      ],
+      "source_slots": [
+        "block-v1:507582f56517fb96f2e418e4471e6d63ea5cd691520a353e28d7a25954bad696:slot:0",
+        "block-v1:507582f56517fb96f2e418e4471e6d63ea5cd691520a353e28d7a25954bad696:slot:1"
+      ],
+      "target_family": "OVP",
+      "target_operator_digests": [
+        "4ab9874db0f93593ff4866599a82b9d0cd76939e333684fdf04e37235c0c3e10"
+      ],
+      "target_pool_indices": [
+        132
+      ],
+      "target_slots": [
+        "target:0"
+      ],
+      "units": "radian"
+    },
+    "case_id": "h4-1.5-iteration-12-or-convergence",
+    "executed_representative_candidate_id": "candidate-v1:5ea0ab4a8f62cf7c7011bcb3c478cb060dd986101eade574b608f89ce4e4d0ec",
+    "is_executed_representative": true
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate-v1:b6a9d76a3050e9541f006e3f663e4e492b11f92120ccd2464b5c4b09a2106dda",
+      "constraint_matrix": [
+        [
+          1.0,
+          1.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:33500143d795da086104d4ffabdf0a336c028c5de34065627da347a2d7a8b465",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        [
+          0.9999999999999998
+        ],
+        [
+          -0.9999999999999998
+        ]
+      ],
+      "kind": "mvp-to-ovp-diff",
+      "numerical_context_digest": "6655b3726a1f42893407a4c9f632022702f48d5e451a74e8dd673eb810a5381c",
+      "offset": [
+        0.0,
+        0.0
+      ],
+      "orientation": "diff",
+      "removed_source_slots": [],
+      "semantic_conflict_positions": [
+        16,
+        17
+      ],
+      "source_block_id": "block-v1:507582f56517fb96f2e418e4471e6d63ea5cd691520a353e28d7a25954bad696",
+      "source_pool_indices": [
+        51,
+        52
+      ],
+      "source_slots": [
+        "block-v1:507582f56517fb96f2e418e4471e6d63ea5cd691520a353e28d7a25954bad696:slot:0",
+        "block-v1:507582f56517fb96f2e418e4471e6d63ea5cd691520a353e28d7a25954bad696:slot:1"
+      ],
+      "target_family": "OVP",
+      "target_operator_digests": [
+        "59b12faaed18c2a64b333e09ee26dcfbdff51783861700aeb7a561c831074a7b"
+      ],
+      "target_pool_indices": [
+        133
+      ],
+      "target_slots": [
+        "target:0"
+      ],
+      "units": "radian"
+    },
+    "case_id": "h4-1.5-iteration-12-or-convergence",
+    "executed_representative_candidate_id": "candidate-v1:b6a9d76a3050e9541f006e3f663e4e492b11f92120ccd2464b5c4b09a2106dda",
+    "is_executed_representative": true
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate-v1:1334771f370cda2d7a4a8da467c52657b8b453fde4271dbcaa4c81fe48435128",
+      "constraint_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:7fc8b78e473303d253a4e7ba9b997d93ee8d951d6193dcfe8e3930a4f0514531",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        [],
+        [],
+        []
+      ],
+      "kind": "mvp-whole-deletion",
+      "numerical_context_digest": "32dc6631b00d4d60373ba3a6b8e3174db9bab4f5aea195506ea553141cf524d0",
+      "offset": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "orientation": "deletion",
+      "removed_source_slots": [
+        0,
+        1,
+        2
+      ],
+      "semantic_conflict_positions": [
+        18,
+        19,
+        20
+      ],
+      "source_block_id": "block-v1:faf8b2a4a196a6aa523d5bde7bdfd3f91986133c78fea7f3a1ef71b02b3bdce1",
+      "source_pool_indices": [
+        65,
+        66,
+        67
+      ],
+      "source_slots": [
+        "block-v1:faf8b2a4a196a6aa523d5bde7bdfd3f91986133c78fea7f3a1ef71b02b3bdce1:slot:0",
+        "block-v1:faf8b2a4a196a6aa523d5bde7bdfd3f91986133c78fea7f3a1ef71b02b3bdce1:slot:1",
+        "block-v1:faf8b2a4a196a6aa523d5bde7bdfd3f91986133c78fea7f3a1ef71b02b3bdce1:slot:2"
+      ],
+      "target_family": "empty",
+      "target_operator_digests": [],
+      "target_pool_indices": [],
+      "target_slots": [],
+      "units": "radian"
+    },
+    "case_id": "h4-1.5-iteration-12-or-convergence",
+    "executed_representative_candidate_id": "candidate-v1:1334771f370cda2d7a4a8da467c52657b8b453fde4271dbcaa4c81fe48435128",
+    "is_executed_representative": true
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate-v1:c1fe6a417bf548367c4d081774afaeb2ec49dd3dfaf3d92dc101b43cdb2ba8db",
+      "constraint_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:927320a5bbb345217aedfca534dd02b6713c4abdca212ef6a0689fa7205d1001",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "kind": "mvp-constituent-deletion",
+      "numerical_context_digest": "32dc6631b00d4d60373ba3a6b8e3174db9bab4f5aea195506ea553141cf524d0",
+      "offset": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "orientation": "ordered-subset",
+      "removed_source_slots": [
+        0
+      ],
+      "semantic_conflict_positions": [
+        18,
+        19,
+        20
+      ],
+      "source_block_id": "block-v1:faf8b2a4a196a6aa523d5bde7bdfd3f91986133c78fea7f3a1ef71b02b3bdce1",
+      "source_pool_indices": [
+        65,
+        66,
+        67
+      ],
+      "source_slots": [
+        "block-v1:faf8b2a4a196a6aa523d5bde7bdfd3f91986133c78fea7f3a1ef71b02b3bdce1:slot:0",
+        "block-v1:faf8b2a4a196a6aa523d5bde7bdfd3f91986133c78fea7f3a1ef71b02b3bdce1:slot:1",
+        "block-v1:faf8b2a4a196a6aa523d5bde7bdfd3f91986133c78fea7f3a1ef71b02b3bdce1:slot:2"
+      ],
+      "target_family": "MVP",
+      "target_operator_digests": [
+        "2b2fc65aaf1db9303e913fcf71bbead89f2c864c65a0a814e1ba4f17eb896b2f",
+        "3c799b76eca2608e506a71bfebd5bc1fa4bfa2f6404266c7c9a1f0067df6d3bd"
+      ],
+      "target_pool_indices": [
+        66,
+        67
+      ],
+      "target_slots": [
+        "target:0",
+        "target:1"
+      ],
+      "units": "radian"
+    },
+    "case_id": "h4-1.5-iteration-12-or-convergence",
+    "executed_representative_candidate_id": "candidate-v1:c1fe6a417bf548367c4d081774afaeb2ec49dd3dfaf3d92dc101b43cdb2ba8db",
+    "is_executed_representative": true
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate-v1:2d03eb716c899cd542732941a694080aee66a0d46ad8bbce59d0cab8a51e83bb",
+      "constraint_matrix": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:cefbef70d7cdcf1fc78f8526229c5deac218fa6c9a051ace6fe457c934e50508",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "kind": "mvp-constituent-deletion",
+      "numerical_context_digest": "32dc6631b00d4d60373ba3a6b8e3174db9bab4f5aea195506ea553141cf524d0",
+      "offset": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "orientation": "ordered-subset",
+      "removed_source_slots": [
+        1
+      ],
+      "semantic_conflict_positions": [
+        18,
+        19,
+        20
+      ],
+      "source_block_id": "block-v1:faf8b2a4a196a6aa523d5bde7bdfd3f91986133c78fea7f3a1ef71b02b3bdce1",
+      "source_pool_indices": [
+        65,
+        66,
+        67
+      ],
+      "source_slots": [
+        "block-v1:faf8b2a4a196a6aa523d5bde7bdfd3f91986133c78fea7f3a1ef71b02b3bdce1:slot:0",
+        "block-v1:faf8b2a4a196a6aa523d5bde7bdfd3f91986133c78fea7f3a1ef71b02b3bdce1:slot:1",
+        "block-v1:faf8b2a4a196a6aa523d5bde7bdfd3f91986133c78fea7f3a1ef71b02b3bdce1:slot:2"
+      ],
+      "target_family": "MVP",
+      "target_operator_digests": [
+        "3b7f48d752b3900d615d84ecf7604c00f27f605bd7bae2bace05a7ee22f98b1f",
+        "3c799b76eca2608e506a71bfebd5bc1fa4bfa2f6404266c7c9a1f0067df6d3bd"
+      ],
+      "target_pool_indices": [
+        65,
+        67
+      ],
+      "target_slots": [
+        "target:0",
+        "target:1"
+      ],
+      "units": "radian"
+    },
+    "case_id": "h4-1.5-iteration-12-or-convergence",
+    "executed_representative_candidate_id": "candidate-v1:2d03eb716c899cd542732941a694080aee66a0d46ad8bbce59d0cab8a51e83bb",
+    "is_executed_representative": true
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate-v1:7771db489bd6f565457d5fc92fb379720fbd5522176d0f610443d3e220ef2aa7",
+      "constraint_matrix": [
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:dbdd399f81e32d78fe4ca0af14d73651dae1f11cbab153fec8c955417524c850",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "kind": "mvp-constituent-deletion",
+      "numerical_context_digest": "32dc6631b00d4d60373ba3a6b8e3174db9bab4f5aea195506ea553141cf524d0",
+      "offset": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "orientation": "ordered-subset",
+      "removed_source_slots": [
+        2
+      ],
+      "semantic_conflict_positions": [
+        18,
+        19,
+        20
+      ],
+      "source_block_id": "block-v1:faf8b2a4a196a6aa523d5bde7bdfd3f91986133c78fea7f3a1ef71b02b3bdce1",
+      "source_pool_indices": [
+        65,
+        66,
+        67
+      ],
+      "source_slots": [
+        "block-v1:faf8b2a4a196a6aa523d5bde7bdfd3f91986133c78fea7f3a1ef71b02b3bdce1:slot:0",
+        "block-v1:faf8b2a4a196a6aa523d5bde7bdfd3f91986133c78fea7f3a1ef71b02b3bdce1:slot:1",
+        "block-v1:faf8b2a4a196a6aa523d5bde7bdfd3f91986133c78fea7f3a1ef71b02b3bdce1:slot:2"
+      ],
+      "target_family": "MVP",
+      "target_operator_digests": [
+        "3b7f48d752b3900d615d84ecf7604c00f27f605bd7bae2bace05a7ee22f98b1f",
+        "2b2fc65aaf1db9303e913fcf71bbead89f2c864c65a0a814e1ba4f17eb896b2f"
+      ],
+      "target_pool_indices": [
+        65,
+        66
+      ],
+      "target_slots": [
+        "target:0",
+        "target:1"
+      ],
+      "units": "radian"
+    },
+    "case_id": "h4-1.5-iteration-12-or-convergence",
+    "executed_representative_candidate_id": "candidate-v1:7771db489bd6f565457d5fc92fb379720fbd5522176d0f610443d3e220ef2aa7",
+    "is_executed_representative": true
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate-v1:f8adbee3ab8572b6456fbc0c67a586325da48fbc0b1f1c2b69fe141421d955af",
+      "constraint_matrix": [
+        [
+          -0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0,
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:2572b6c62cc7c47cc28d418a436851c972cfb0809b4f9cf9fdcab53367525736",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        [
+          1.0
+        ],
+        [
+          0.0
+        ],
+        [
+          0.0
+        ]
+      ],
+      "kind": "mvp-to-single-qe",
+      "numerical_context_digest": "32dc6631b00d4d60373ba3a6b8e3174db9bab4f5aea195506ea553141cf524d0",
+      "offset": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "orientation": "canonical-qe",
+      "removed_source_slots": [
+        1,
+        2
+      ],
+      "semantic_conflict_positions": [
+        18,
+        19,
+        20
+      ],
+      "source_block_id": "block-v1:faf8b2a4a196a6aa523d5bde7bdfd3f91986133c78fea7f3a1ef71b02b3bdce1",
+      "source_pool_indices": [
+        65,
+        66,
+        67
+      ],
+      "source_slots": [
+        "block-v1:faf8b2a4a196a6aa523d5bde7bdfd3f91986133c78fea7f3a1ef71b02b3bdce1:slot:0",
+        "block-v1:faf8b2a4a196a6aa523d5bde7bdfd3f91986133c78fea7f3a1ef71b02b3bdce1:slot:1",
+        "block-v1:faf8b2a4a196a6aa523d5bde7bdfd3f91986133c78fea7f3a1ef71b02b3bdce1:slot:2"
+      ],
+      "target_family": "single-QE",
+      "target_operator_digests": [
+        "3b7f48d752b3900d615d84ecf7604c00f27f605bd7bae2bace05a7ee22f98b1f"
+      ],
+      "target_pool_indices": [
+        65
+      ],
+      "target_slots": [
+        "target:0"
+      ],
+      "units": "radian"
+    },
+    "case_id": "h4-1.5-iteration-12-or-convergence",
+    "executed_representative_candidate_id": "candidate-v1:f8adbee3ab8572b6456fbc0c67a586325da48fbc0b1f1c2b69fe141421d955af",
+    "is_executed_representative": true
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate-v1:88cbd52288f5271da3c36645617777394e594763f91c5bb0146e126b22bf1263",
+      "constraint_matrix": [
+        [
+          1.0,
+          -0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -0.0,
+          1.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0,
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:908b02ce78bbcee1a88d3ef0a2a3e8f102da79bfa8d238e0d55b8f770006cae6",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        [
+          0.0
+        ],
+        [
+          1.0
+        ],
+        [
+          0.0
+        ]
+      ],
+      "kind": "mvp-to-single-qe",
+      "numerical_context_digest": "32dc6631b00d4d60373ba3a6b8e3174db9bab4f5aea195506ea553141cf524d0",
+      "offset": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "orientation": "canonical-qe",
+      "removed_source_slots": [
+        0,
+        2
+      ],
+      "semantic_conflict_positions": [
+        18,
+        19,
+        20
+      ],
+      "source_block_id": "block-v1:faf8b2a4a196a6aa523d5bde7bdfd3f91986133c78fea7f3a1ef71b02b3bdce1",
+      "source_pool_indices": [
+        65,
+        66,
+        67
+      ],
+      "source_slots": [
+        "block-v1:faf8b2a4a196a6aa523d5bde7bdfd3f91986133c78fea7f3a1ef71b02b3bdce1:slot:0",
+        "block-v1:faf8b2a4a196a6aa523d5bde7bdfd3f91986133c78fea7f3a1ef71b02b3bdce1:slot:1",
+        "block-v1:faf8b2a4a196a6aa523d5bde7bdfd3f91986133c78fea7f3a1ef71b02b3bdce1:slot:2"
+      ],
+      "target_family": "single-QE",
+      "target_operator_digests": [
+        "2b2fc65aaf1db9303e913fcf71bbead89f2c864c65a0a814e1ba4f17eb896b2f"
+      ],
+      "target_pool_indices": [
+        66
+      ],
+      "target_slots": [
+        "target:0"
+      ],
+      "units": "radian"
+    },
+    "case_id": "h4-1.5-iteration-12-or-convergence",
+    "executed_representative_candidate_id": "candidate-v1:88cbd52288f5271da3c36645617777394e594763f91c5bb0146e126b22bf1263",
+    "is_executed_representative": true
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate-v1:efbe6c27d60bb02e2957a6492d923e6d4ea05a1a8ebab0a596b7ff9ffa058eb2",
+      "constraint_matrix": [
+        [
+          1.0,
+          0.0,
+          -0.0
+        ],
+        [
+          0.0,
+          1.0,
+          -0.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0,
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:b46a9c8980fef7353ca9154de7bb6c93b2e8227d651c051d63adb47b7fb62b90",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        [
+          0.0
+        ],
+        [
+          0.0
+        ],
+        [
+          1.0
+        ]
+      ],
+      "kind": "mvp-to-single-qe",
+      "numerical_context_digest": "32dc6631b00d4d60373ba3a6b8e3174db9bab4f5aea195506ea553141cf524d0",
+      "offset": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "orientation": "canonical-qe",
+      "removed_source_slots": [
+        0,
+        1
+      ],
+      "semantic_conflict_positions": [
+        18,
+        19,
+        20
+      ],
+      "source_block_id": "block-v1:faf8b2a4a196a6aa523d5bde7bdfd3f91986133c78fea7f3a1ef71b02b3bdce1",
+      "source_pool_indices": [
+        65,
+        66,
+        67
+      ],
+      "source_slots": [
+        "block-v1:faf8b2a4a196a6aa523d5bde7bdfd3f91986133c78fea7f3a1ef71b02b3bdce1:slot:0",
+        "block-v1:faf8b2a4a196a6aa523d5bde7bdfd3f91986133c78fea7f3a1ef71b02b3bdce1:slot:1",
+        "block-v1:faf8b2a4a196a6aa523d5bde7bdfd3f91986133c78fea7f3a1ef71b02b3bdce1:slot:2"
+      ],
+      "target_family": "single-QE",
+      "target_operator_digests": [
+        "3c799b76eca2608e506a71bfebd5bc1fa4bfa2f6404266c7c9a1f0067df6d3bd"
+      ],
+      "target_pool_indices": [
+        67
+      ],
+      "target_slots": [
+        "target:0"
+      ],
+      "units": "radian"
+    },
+    "case_id": "h4-1.5-iteration-12-or-convergence",
+    "executed_representative_candidate_id": "candidate-v1:efbe6c27d60bb02e2957a6492d923e6d4ea05a1a8ebab0a596b7ff9ffa058eb2",
+    "is_executed_representative": true
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate-v1:77fa7b0a736b3614607cf9418fa54fb30a0bac418eee244c98089c5d0832f177",
+      "constraint_matrix": [
+        [
+          -1.0,
+          1.0,
+          0.0
+        ],
+        [
+          -0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0,
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:171c6f2e96fe255d53382a69110ea0ad9283cc5b8bd43329f2ca1ea1a96dacf2",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        [
+          0.9999999999999998
+        ],
+        [
+          0.9999999999999998
+        ],
+        [
+          0.0
+        ]
+      ],
+      "kind": "mvp-to-ovp-sum",
+      "numerical_context_digest": "32dc6631b00d4d60373ba3a6b8e3174db9bab4f5aea195506ea553141cf524d0",
+      "offset": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "orientation": "sum",
+      "removed_source_slots": [
+        2
+      ],
+      "semantic_conflict_positions": [
+        18,
+        19,
+        20
+      ],
+      "source_block_id": "block-v1:faf8b2a4a196a6aa523d5bde7bdfd3f91986133c78fea7f3a1ef71b02b3bdce1",
+      "source_pool_indices": [
+        65,
+        66,
+        67
+      ],
+      "source_slots": [
+        "block-v1:faf8b2a4a196a6aa523d5bde7bdfd3f91986133c78fea7f3a1ef71b02b3bdce1:slot:0",
+        "block-v1:faf8b2a4a196a6aa523d5bde7bdfd3f91986133c78fea7f3a1ef71b02b3bdce1:slot:1",
+        "block-v1:faf8b2a4a196a6aa523d5bde7bdfd3f91986133c78fea7f3a1ef71b02b3bdce1:slot:2"
+      ],
+      "target_family": "OVP",
+      "target_operator_digests": [
+        "985de04d8cfd5525c224c29c4fa899c4e6d290608ef9d9966ee209ad00769aff"
+      ],
+      "target_pool_indices": [
+        146
+      ],
+      "target_slots": [
+        "target:0"
+      ],
+      "units": "radian"
+    },
+    "case_id": "h4-1.5-iteration-12-or-convergence",
+    "executed_representative_candidate_id": "candidate-v1:77fa7b0a736b3614607cf9418fa54fb30a0bac418eee244c98089c5d0832f177",
+    "is_executed_representative": true
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate-v1:9d42095072619efb650e2852138b0ad8f3f25f20bcf34b5f247898ca2a19a1e0",
+      "constraint_matrix": [
+        [
+          1.0,
+          1.0,
+          0.0
+        ],
+        [
+          -0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0,
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:86d75f26040754d3b184578e4734e0466400c57ce3558da21ebcf7c5516b6ab9",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        [
+          0.9999999999999998
+        ],
+        [
+          -0.9999999999999998
+        ],
+        [
+          0.0
+        ]
+      ],
+      "kind": "mvp-to-ovp-diff",
+      "numerical_context_digest": "32dc6631b00d4d60373ba3a6b8e3174db9bab4f5aea195506ea553141cf524d0",
+      "offset": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "orientation": "diff",
+      "removed_source_slots": [
+        2
+      ],
+      "semantic_conflict_positions": [
+        18,
+        19,
+        20
+      ],
+      "source_block_id": "block-v1:faf8b2a4a196a6aa523d5bde7bdfd3f91986133c78fea7f3a1ef71b02b3bdce1",
+      "source_pool_indices": [
+        65,
+        66,
+        67
+      ],
+      "source_slots": [
+        "block-v1:faf8b2a4a196a6aa523d5bde7bdfd3f91986133c78fea7f3a1ef71b02b3bdce1:slot:0",
+        "block-v1:faf8b2a4a196a6aa523d5bde7bdfd3f91986133c78fea7f3a1ef71b02b3bdce1:slot:1",
+        "block-v1:faf8b2a4a196a6aa523d5bde7bdfd3f91986133c78fea7f3a1ef71b02b3bdce1:slot:2"
+      ],
+      "target_family": "OVP",
+      "target_operator_digests": [
+        "f6ea6a885e2646721798243cc90d9e0faa6347bdff400e4dbcc1d1eb65c9454d"
+      ],
+      "target_pool_indices": [
+        147
+      ],
+      "target_slots": [
+        "target:0"
+      ],
+      "units": "radian"
+    },
+    "case_id": "h4-1.5-iteration-12-or-convergence",
+    "executed_representative_candidate_id": "candidate-v1:9d42095072619efb650e2852138b0ad8f3f25f20bcf34b5f247898ca2a19a1e0",
+    "is_executed_representative": true
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate-v1:9aff27accc5c615fce0faaed55d04878d2c3890c396d38309a05050d880aad89",
+      "constraint_matrix": [
+        [
+          1.0,
+          0.0,
+          -0.0
+        ],
+        [
+          0.0,
+          1.0,
+          -0.9999999999999998
+        ]
+      ],
+      "constraint_rhs": [
+        0.0,
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:c119ef0a02778e05406e131d2adcc42d2700197c55dfaf40c5b8d0ed67c6c6d1",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        [
+          0.0
+        ],
+        [
+          0.9999999999999998
+        ],
+        [
+          1.0
+        ]
+      ],
+      "kind": "mvp-to-ovp-sum",
+      "numerical_context_digest": "32dc6631b00d4d60373ba3a6b8e3174db9bab4f5aea195506ea553141cf524d0",
+      "offset": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "orientation": "sum",
+      "removed_source_slots": [
+        0
+      ],
+      "semantic_conflict_positions": [
+        18,
+        19,
+        20
+      ],
+      "source_block_id": "block-v1:faf8b2a4a196a6aa523d5bde7bdfd3f91986133c78fea7f3a1ef71b02b3bdce1",
+      "source_pool_indices": [
+        65,
+        66,
+        67
+      ],
+      "source_slots": [
+        "block-v1:faf8b2a4a196a6aa523d5bde7bdfd3f91986133c78fea7f3a1ef71b02b3bdce1:slot:0",
+        "block-v1:faf8b2a4a196a6aa523d5bde7bdfd3f91986133c78fea7f3a1ef71b02b3bdce1:slot:1",
+        "block-v1:faf8b2a4a196a6aa523d5bde7bdfd3f91986133c78fea7f3a1ef71b02b3bdce1:slot:2"
+      ],
+      "target_family": "OVP",
+      "target_operator_digests": [
+        "67ac040fc43c82797e13b7eab40f12bc8e1159e5d3ea759b793f300d7dbc1555"
+      ],
+      "target_pool_indices": [
+        148
+      ],
+      "target_slots": [
+        "target:0"
+      ],
+      "units": "radian"
+    },
+    "case_id": "h4-1.5-iteration-12-or-convergence",
+    "executed_representative_candidate_id": "candidate-v1:9aff27accc5c615fce0faaed55d04878d2c3890c396d38309a05050d880aad89",
+    "is_executed_representative": true
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate-v1:7bd3eec2a8db68a4347178e80d371cea0fc842b0e0236faac3931bfe6682f8e9",
+      "constraint_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.9999999999999999,
+          1.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0,
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:65f6debc02bee396c1c5a87e0727ec2aaa699b8196083f7290fc63482a8ea9dd",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        [
+          0.0
+        ],
+        [
+          -0.9999999999999998
+        ],
+        [
+          0.9999999999999997
+        ]
+      ],
+      "kind": "mvp-to-ovp-diff",
+      "numerical_context_digest": "32dc6631b00d4d60373ba3a6b8e3174db9bab4f5aea195506ea553141cf524d0",
+      "offset": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "orientation": "diff",
+      "removed_source_slots": [
+        0
+      ],
+      "semantic_conflict_positions": [
+        18,
+        19,
+        20
+      ],
+      "source_block_id": "block-v1:faf8b2a4a196a6aa523d5bde7bdfd3f91986133c78fea7f3a1ef71b02b3bdce1",
+      "source_pool_indices": [
+        65,
+        66,
+        67
+      ],
+      "source_slots": [
+        "block-v1:faf8b2a4a196a6aa523d5bde7bdfd3f91986133c78fea7f3a1ef71b02b3bdce1:slot:0",
+        "block-v1:faf8b2a4a196a6aa523d5bde7bdfd3f91986133c78fea7f3a1ef71b02b3bdce1:slot:1",
+        "block-v1:faf8b2a4a196a6aa523d5bde7bdfd3f91986133c78fea7f3a1ef71b02b3bdce1:slot:2"
+      ],
+      "target_family": "OVP",
+      "target_operator_digests": [
+        "b3f2c3acfeb05ae531c062f687a6059eda706ccdf76dbd9fd48a5c8c8164cbe1"
+      ],
+      "target_pool_indices": [
+        149
+      ],
+      "target_slots": [
+        "target:0"
+      ],
+      "units": "radian"
+    },
+    "case_id": "h4-1.5-iteration-12-or-convergence",
+    "executed_representative_candidate_id": "candidate-v1:7bd3eec2a8db68a4347178e80d371cea0fc842b0e0236faac3931bfe6682f8e9",
+    "is_executed_representative": true
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate-v1:eb0f3f0e1d61a5379bafd867bcb140b8894ae077eb550960dd23c5c359803c5a",
+      "constraint_matrix": [
+        [
+          -0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0,
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:fc22e5f75260fc841b784e79f8b97fd6457a8ab88859e77a8e99acc9bd18ccd3",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        [
+          0.9999999999999998
+        ],
+        [
+          0.0
+        ],
+        [
+          0.9999999999999998
+        ]
+      ],
+      "kind": "mvp-to-ovp-sum",
+      "numerical_context_digest": "32dc6631b00d4d60373ba3a6b8e3174db9bab4f5aea195506ea553141cf524d0",
+      "offset": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "orientation": "sum",
+      "removed_source_slots": [
+        1
+      ],
+      "semantic_conflict_positions": [
+        18,
+        19,
+        20
+      ],
+      "source_block_id": "block-v1:faf8b2a4a196a6aa523d5bde7bdfd3f91986133c78fea7f3a1ef71b02b3bdce1",
+      "source_pool_indices": [
+        65,
+        66,
+        67
+      ],
+      "source_slots": [
+        "block-v1:faf8b2a4a196a6aa523d5bde7bdfd3f91986133c78fea7f3a1ef71b02b3bdce1:slot:0",
+        "block-v1:faf8b2a4a196a6aa523d5bde7bdfd3f91986133c78fea7f3a1ef71b02b3bdce1:slot:1",
+        "block-v1:faf8b2a4a196a6aa523d5bde7bdfd3f91986133c78fea7f3a1ef71b02b3bdce1:slot:2"
+      ],
+      "target_family": "OVP",
+      "target_operator_digests": [
+        "6438f21d37dd8003fe9f6b1506b3c01d829a2da0db0685f7afc6d137d4534b0b"
+      ],
+      "target_pool_indices": [
+        150
+      ],
+      "target_slots": [
+        "target:0"
+      ],
+      "units": "radian"
+    },
+    "case_id": "h4-1.5-iteration-12-or-convergence",
+    "executed_representative_candidate_id": "candidate-v1:eb0f3f0e1d61a5379bafd867bcb140b8894ae077eb550960dd23c5c359803c5a",
+    "is_executed_representative": true
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate-v1:469465b15872cc9d15fc3ac78c01e5212eb751dc126b0536fa04446299393694",
+      "constraint_matrix": [
+        [
+          -0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0,
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:5810967d89e0eea00e6069941db1b9a035b3db1daede07b8898d0ec35c86ee38",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        [
+          0.9999999999999998
+        ],
+        [
+          0.0
+        ],
+        [
+          -0.9999999999999998
+        ]
+      ],
+      "kind": "mvp-to-ovp-diff",
+      "numerical_context_digest": "32dc6631b00d4d60373ba3a6b8e3174db9bab4f5aea195506ea553141cf524d0",
+      "offset": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "orientation": "diff",
+      "removed_source_slots": [
+        1
+      ],
+      "semantic_conflict_positions": [
+        18,
+        19,
+        20
+      ],
+      "source_block_id": "block-v1:faf8b2a4a196a6aa523d5bde7bdfd3f91986133c78fea7f3a1ef71b02b3bdce1",
+      "source_pool_indices": [
+        65,
+        66,
+        67
+      ],
+      "source_slots": [
+        "block-v1:faf8b2a4a196a6aa523d5bde7bdfd3f91986133c78fea7f3a1ef71b02b3bdce1:slot:0",
+        "block-v1:faf8b2a4a196a6aa523d5bde7bdfd3f91986133c78fea7f3a1ef71b02b3bdce1:slot:1",
+        "block-v1:faf8b2a4a196a6aa523d5bde7bdfd3f91986133c78fea7f3a1ef71b02b3bdce1:slot:2"
+      ],
+      "target_family": "OVP",
+      "target_operator_digests": [
+        "e3e2a1264bf113d4bf49440f7b179e884a52f815f3b058a28bf4f1b521c0b41d"
+      ],
+      "target_pool_indices": [
+        151
+      ],
+      "target_slots": [
+        "target:0"
+      ],
+      "units": "radian"
+    },
+    "case_id": "h4-1.5-iteration-12-or-convergence",
+    "executed_representative_candidate_id": "candidate-v1:469465b15872cc9d15fc3ac78c01e5212eb751dc126b0536fa04446299393694",
+    "is_executed_representative": true
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate-v1:156099feb59bec4a3fd7bc2f281b2a0c18db6b8f41413a45408844f1064062b1",
+      "constraint_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:aea4470835c47083477aae394b0c6e94afd887d91bbc7216f953f1489b0a1eb6",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        [],
+        [],
+        []
+      ],
+      "kind": "mvp-whole-deletion",
+      "numerical_context_digest": "f5b149fd3ff7b5c573e0c200646f8a80789ba0271690042ea86387d3874ca12a",
+      "offset": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "orientation": "deletion",
+      "removed_source_slots": [
+        0,
+        1,
+        2
+      ],
+      "semantic_conflict_positions": [
+        21,
+        22,
+        23
+      ],
+      "source_block_id": "block-v1:0ba5fcd7367a0e4e30973e567b884037f64b4cc15a5d41a67ec9c8cc198f1562",
+      "source_pool_indices": [
+        34,
+        35,
+        36
+      ],
+      "source_slots": [
+        "block-v1:0ba5fcd7367a0e4e30973e567b884037f64b4cc15a5d41a67ec9c8cc198f1562:slot:0",
+        "block-v1:0ba5fcd7367a0e4e30973e567b884037f64b4cc15a5d41a67ec9c8cc198f1562:slot:1",
+        "block-v1:0ba5fcd7367a0e4e30973e567b884037f64b4cc15a5d41a67ec9c8cc198f1562:slot:2"
+      ],
+      "target_family": "empty",
+      "target_operator_digests": [],
+      "target_pool_indices": [],
+      "target_slots": [],
+      "units": "radian"
+    },
+    "case_id": "h4-1.5-iteration-12-or-convergence",
+    "executed_representative_candidate_id": "candidate-v1:156099feb59bec4a3fd7bc2f281b2a0c18db6b8f41413a45408844f1064062b1",
+    "is_executed_representative": true
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate-v1:06a06685cedafef0e56af59cd22c8bf94b932b29f4067be8c95f91ce4135dc1a",
+      "constraint_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:c3d6e24812a025c0ef4c992f2cb973e1060b725c26b8fafdea5fd29ea2d0a70d",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "kind": "mvp-constituent-deletion",
+      "numerical_context_digest": "f5b149fd3ff7b5c573e0c200646f8a80789ba0271690042ea86387d3874ca12a",
+      "offset": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "orientation": "ordered-subset",
+      "removed_source_slots": [
+        0
+      ],
+      "semantic_conflict_positions": [
+        21,
+        22,
+        23
+      ],
+      "source_block_id": "block-v1:0ba5fcd7367a0e4e30973e567b884037f64b4cc15a5d41a67ec9c8cc198f1562",
+      "source_pool_indices": [
+        34,
+        35,
+        36
+      ],
+      "source_slots": [
+        "block-v1:0ba5fcd7367a0e4e30973e567b884037f64b4cc15a5d41a67ec9c8cc198f1562:slot:0",
+        "block-v1:0ba5fcd7367a0e4e30973e567b884037f64b4cc15a5d41a67ec9c8cc198f1562:slot:1",
+        "block-v1:0ba5fcd7367a0e4e30973e567b884037f64b4cc15a5d41a67ec9c8cc198f1562:slot:2"
+      ],
+      "target_family": "MVP",
+      "target_operator_digests": [
+        "f5d5c766b6736e9858a3f7517c6ada2564b23efea783400882e60dafd4df9ad8",
+        "fb659f489405cac77d00d361e3f710afe8a3cd50cd0fe2a86ba4c66c3192f14a"
+      ],
+      "target_pool_indices": [
+        35,
+        36
+      ],
+      "target_slots": [
+        "target:0",
+        "target:1"
+      ],
+      "units": "radian"
+    },
+    "case_id": "h4-1.5-iteration-12-or-convergence",
+    "executed_representative_candidate_id": "candidate-v1:06a06685cedafef0e56af59cd22c8bf94b932b29f4067be8c95f91ce4135dc1a",
+    "is_executed_representative": true
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate-v1:f6fcfe049db3a7fa3e81b37f20f3b27ce3da79e84dd759c5fbd0745ab46c3359",
+      "constraint_matrix": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:053a6da6832c71982d7debb7366e6f2f2949d421f6e069bf13b4258d82366632",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "kind": "mvp-constituent-deletion",
+      "numerical_context_digest": "f5b149fd3ff7b5c573e0c200646f8a80789ba0271690042ea86387d3874ca12a",
+      "offset": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "orientation": "ordered-subset",
+      "removed_source_slots": [
+        1
+      ],
+      "semantic_conflict_positions": [
+        21,
+        22,
+        23
+      ],
+      "source_block_id": "block-v1:0ba5fcd7367a0e4e30973e567b884037f64b4cc15a5d41a67ec9c8cc198f1562",
+      "source_pool_indices": [
+        34,
+        35,
+        36
+      ],
+      "source_slots": [
+        "block-v1:0ba5fcd7367a0e4e30973e567b884037f64b4cc15a5d41a67ec9c8cc198f1562:slot:0",
+        "block-v1:0ba5fcd7367a0e4e30973e567b884037f64b4cc15a5d41a67ec9c8cc198f1562:slot:1",
+        "block-v1:0ba5fcd7367a0e4e30973e567b884037f64b4cc15a5d41a67ec9c8cc198f1562:slot:2"
+      ],
+      "target_family": "MVP",
+      "target_operator_digests": [
+        "1244a9aabfcff90ea16bd414d406c60caf96fa590d73ff6598b7314760aa6f3d",
+        "fb659f489405cac77d00d361e3f710afe8a3cd50cd0fe2a86ba4c66c3192f14a"
+      ],
+      "target_pool_indices": [
+        34,
+        36
+      ],
+      "target_slots": [
+        "target:0",
+        "target:1"
+      ],
+      "units": "radian"
+    },
+    "case_id": "h4-1.5-iteration-12-or-convergence",
+    "executed_representative_candidate_id": "candidate-v1:f6fcfe049db3a7fa3e81b37f20f3b27ce3da79e84dd759c5fbd0745ab46c3359",
+    "is_executed_representative": true
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate-v1:31aad38a26d05020612e0724a2c9969dcaed01a42f495705910e5da0ac405c68",
+      "constraint_matrix": [
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:7c8996515d9a3dad5d36aafb667eb1849ab03a703712b5c8ecbdea232fdf83ca",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "kind": "mvp-constituent-deletion",
+      "numerical_context_digest": "f5b149fd3ff7b5c573e0c200646f8a80789ba0271690042ea86387d3874ca12a",
+      "offset": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "orientation": "ordered-subset",
+      "removed_source_slots": [
+        2
+      ],
+      "semantic_conflict_positions": [
+        21,
+        22,
+        23
+      ],
+      "source_block_id": "block-v1:0ba5fcd7367a0e4e30973e567b884037f64b4cc15a5d41a67ec9c8cc198f1562",
+      "source_pool_indices": [
+        34,
+        35,
+        36
+      ],
+      "source_slots": [
+        "block-v1:0ba5fcd7367a0e4e30973e567b884037f64b4cc15a5d41a67ec9c8cc198f1562:slot:0",
+        "block-v1:0ba5fcd7367a0e4e30973e567b884037f64b4cc15a5d41a67ec9c8cc198f1562:slot:1",
+        "block-v1:0ba5fcd7367a0e4e30973e567b884037f64b4cc15a5d41a67ec9c8cc198f1562:slot:2"
+      ],
+      "target_family": "MVP",
+      "target_operator_digests": [
+        "1244a9aabfcff90ea16bd414d406c60caf96fa590d73ff6598b7314760aa6f3d",
+        "f5d5c766b6736e9858a3f7517c6ada2564b23efea783400882e60dafd4df9ad8"
+      ],
+      "target_pool_indices": [
+        34,
+        35
+      ],
+      "target_slots": [
+        "target:0",
+        "target:1"
+      ],
+      "units": "radian"
+    },
+    "case_id": "h4-1.5-iteration-12-or-convergence",
+    "executed_representative_candidate_id": "candidate-v1:31aad38a26d05020612e0724a2c9969dcaed01a42f495705910e5da0ac405c68",
+    "is_executed_representative": true
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate-v1:38043152f0ed71c8e8636cf9cb79b05523410ca36df88b22874110981d895942",
+      "constraint_matrix": [
+        [
+          -0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0,
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:05685b740b38e02b4d42159986a3a9b222aa8751a33bec0cb5b26951238273d5",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        [
+          1.0
+        ],
+        [
+          0.0
+        ],
+        [
+          0.0
+        ]
+      ],
+      "kind": "mvp-to-single-qe",
+      "numerical_context_digest": "f5b149fd3ff7b5c573e0c200646f8a80789ba0271690042ea86387d3874ca12a",
+      "offset": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "orientation": "canonical-qe",
+      "removed_source_slots": [
+        1,
+        2
+      ],
+      "semantic_conflict_positions": [
+        21,
+        22,
+        23
+      ],
+      "source_block_id": "block-v1:0ba5fcd7367a0e4e30973e567b884037f64b4cc15a5d41a67ec9c8cc198f1562",
+      "source_pool_indices": [
+        34,
+        35,
+        36
+      ],
+      "source_slots": [
+        "block-v1:0ba5fcd7367a0e4e30973e567b884037f64b4cc15a5d41a67ec9c8cc198f1562:slot:0",
+        "block-v1:0ba5fcd7367a0e4e30973e567b884037f64b4cc15a5d41a67ec9c8cc198f1562:slot:1",
+        "block-v1:0ba5fcd7367a0e4e30973e567b884037f64b4cc15a5d41a67ec9c8cc198f1562:slot:2"
+      ],
+      "target_family": "single-QE",
+      "target_operator_digests": [
+        "1244a9aabfcff90ea16bd414d406c60caf96fa590d73ff6598b7314760aa6f3d"
+      ],
+      "target_pool_indices": [
+        34
+      ],
+      "target_slots": [
+        "target:0"
+      ],
+      "units": "radian"
+    },
+    "case_id": "h4-1.5-iteration-12-or-convergence",
+    "executed_representative_candidate_id": "candidate-v1:38043152f0ed71c8e8636cf9cb79b05523410ca36df88b22874110981d895942",
+    "is_executed_representative": true
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate-v1:1a10094b8d24949d3968a18f1ce71512e62b1d3ddc5c3c3743216bf0fc839cff",
+      "constraint_matrix": [
+        [
+          1.0,
+          -0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -0.0,
+          1.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0,
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:3536df6fcf9d0d8438c4b27c921ca5b53258fad2c8af0893cfafd4aa6f4e29ce",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        [
+          0.0
+        ],
+        [
+          1.0
+        ],
+        [
+          0.0
+        ]
+      ],
+      "kind": "mvp-to-single-qe",
+      "numerical_context_digest": "f5b149fd3ff7b5c573e0c200646f8a80789ba0271690042ea86387d3874ca12a",
+      "offset": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "orientation": "canonical-qe",
+      "removed_source_slots": [
+        0,
+        2
+      ],
+      "semantic_conflict_positions": [
+        21,
+        22,
+        23
+      ],
+      "source_block_id": "block-v1:0ba5fcd7367a0e4e30973e567b884037f64b4cc15a5d41a67ec9c8cc198f1562",
+      "source_pool_indices": [
+        34,
+        35,
+        36
+      ],
+      "source_slots": [
+        "block-v1:0ba5fcd7367a0e4e30973e567b884037f64b4cc15a5d41a67ec9c8cc198f1562:slot:0",
+        "block-v1:0ba5fcd7367a0e4e30973e567b884037f64b4cc15a5d41a67ec9c8cc198f1562:slot:1",
+        "block-v1:0ba5fcd7367a0e4e30973e567b884037f64b4cc15a5d41a67ec9c8cc198f1562:slot:2"
+      ],
+      "target_family": "single-QE",
+      "target_operator_digests": [
+        "f5d5c766b6736e9858a3f7517c6ada2564b23efea783400882e60dafd4df9ad8"
+      ],
+      "target_pool_indices": [
+        35
+      ],
+      "target_slots": [
+        "target:0"
+      ],
+      "units": "radian"
+    },
+    "case_id": "h4-1.5-iteration-12-or-convergence",
+    "executed_representative_candidate_id": "candidate-v1:1a10094b8d24949d3968a18f1ce71512e62b1d3ddc5c3c3743216bf0fc839cff",
+    "is_executed_representative": true
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate-v1:5d1659382bcb155d918cdafcdf3ea1b9ebbd1ee654ad99d83257c656579661da",
+      "constraint_matrix": [
+        [
+          1.0,
+          0.0,
+          -0.0
+        ],
+        [
+          0.0,
+          1.0,
+          -0.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0,
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:2797cffb0ab7efdebf40171165e3461f917511df912df9f7b3c079163cbddaf8",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        [
+          0.0
+        ],
+        [
+          0.0
+        ],
+        [
+          1.0
+        ]
+      ],
+      "kind": "mvp-to-single-qe",
+      "numerical_context_digest": "f5b149fd3ff7b5c573e0c200646f8a80789ba0271690042ea86387d3874ca12a",
+      "offset": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "orientation": "canonical-qe",
+      "removed_source_slots": [
+        0,
+        1
+      ],
+      "semantic_conflict_positions": [
+        21,
+        22,
+        23
+      ],
+      "source_block_id": "block-v1:0ba5fcd7367a0e4e30973e567b884037f64b4cc15a5d41a67ec9c8cc198f1562",
+      "source_pool_indices": [
+        34,
+        35,
+        36
+      ],
+      "source_slots": [
+        "block-v1:0ba5fcd7367a0e4e30973e567b884037f64b4cc15a5d41a67ec9c8cc198f1562:slot:0",
+        "block-v1:0ba5fcd7367a0e4e30973e567b884037f64b4cc15a5d41a67ec9c8cc198f1562:slot:1",
+        "block-v1:0ba5fcd7367a0e4e30973e567b884037f64b4cc15a5d41a67ec9c8cc198f1562:slot:2"
+      ],
+      "target_family": "single-QE",
+      "target_operator_digests": [
+        "fb659f489405cac77d00d361e3f710afe8a3cd50cd0fe2a86ba4c66c3192f14a"
+      ],
+      "target_pool_indices": [
+        36
+      ],
+      "target_slots": [
+        "target:0"
+      ],
+      "units": "radian"
+    },
+    "case_id": "h4-1.5-iteration-12-or-convergence",
+    "executed_representative_candidate_id": "candidate-v1:5d1659382bcb155d918cdafcdf3ea1b9ebbd1ee654ad99d83257c656579661da",
+    "is_executed_representative": true
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate-v1:1380221449be24bd0fea63c58bef20d5d9c12d2192ceb362f339f9621fee5600",
+      "constraint_matrix": [
+        [
+          -1.0,
+          1.0,
+          0.0
+        ],
+        [
+          -0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0,
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:f6a53a963a62f9fe29ccbf814e2aab75bf703d979662b885bc7ad267dc30ad6b",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        [
+          0.9999999999999998
+        ],
+        [
+          0.9999999999999998
+        ],
+        [
+          0.0
+        ]
+      ],
+      "kind": "mvp-to-ovp-sum",
+      "numerical_context_digest": "f5b149fd3ff7b5c573e0c200646f8a80789ba0271690042ea86387d3874ca12a",
+      "offset": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "orientation": "sum",
+      "removed_source_slots": [
+        2
+      ],
+      "semantic_conflict_positions": [
+        21,
+        22,
+        23
+      ],
+      "source_block_id": "block-v1:0ba5fcd7367a0e4e30973e567b884037f64b4cc15a5d41a67ec9c8cc198f1562",
+      "source_pool_indices": [
+        34,
+        35,
+        36
+      ],
+      "source_slots": [
+        "block-v1:0ba5fcd7367a0e4e30973e567b884037f64b4cc15a5d41a67ec9c8cc198f1562:slot:0",
+        "block-v1:0ba5fcd7367a0e4e30973e567b884037f64b4cc15a5d41a67ec9c8cc198f1562:slot:1",
+        "block-v1:0ba5fcd7367a0e4e30973e567b884037f64b4cc15a5d41a67ec9c8cc198f1562:slot:2"
+      ],
+      "target_family": "OVP",
+      "target_operator_digests": [
+        "d2af34ece5f7cc6f6bedd0d726626a9f3a35dc8901558dcd91b91412ab37cee1"
+      ],
+      "target_pool_indices": [
+        112
+      ],
+      "target_slots": [
+        "target:0"
+      ],
+      "units": "radian"
+    },
+    "case_id": "h4-1.5-iteration-12-or-convergence",
+    "executed_representative_candidate_id": "candidate-v1:1380221449be24bd0fea63c58bef20d5d9c12d2192ceb362f339f9621fee5600",
+    "is_executed_representative": true
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate-v1:71f3cd1a9aef1a430ca3947ee392e77932fc6f14de463eba29684fcea6123ccb",
+      "constraint_matrix": [
+        [
+          1.0,
+          1.0,
+          0.0
+        ],
+        [
+          -0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0,
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:28e77e7d327b15f20d204f7c74b3dc9510d31710996c9def93b506af48212625",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        [
+          0.9999999999999998
+        ],
+        [
+          -0.9999999999999998
+        ],
+        [
+          0.0
+        ]
+      ],
+      "kind": "mvp-to-ovp-diff",
+      "numerical_context_digest": "f5b149fd3ff7b5c573e0c200646f8a80789ba0271690042ea86387d3874ca12a",
+      "offset": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "orientation": "diff",
+      "removed_source_slots": [
+        2
+      ],
+      "semantic_conflict_positions": [
+        21,
+        22,
+        23
+      ],
+      "source_block_id": "block-v1:0ba5fcd7367a0e4e30973e567b884037f64b4cc15a5d41a67ec9c8cc198f1562",
+      "source_pool_indices": [
+        34,
+        35,
+        36
+      ],
+      "source_slots": [
+        "block-v1:0ba5fcd7367a0e4e30973e567b884037f64b4cc15a5d41a67ec9c8cc198f1562:slot:0",
+        "block-v1:0ba5fcd7367a0e4e30973e567b884037f64b4cc15a5d41a67ec9c8cc198f1562:slot:1",
+        "block-v1:0ba5fcd7367a0e4e30973e567b884037f64b4cc15a5d41a67ec9c8cc198f1562:slot:2"
+      ],
+      "target_family": "OVP",
+      "target_operator_digests": [
+        "8a5045a858b73e0caddc6cc5ba229b80d5d0f5151357c0dc6d080d95e1672452"
+      ],
+      "target_pool_indices": [
+        113
+      ],
+      "target_slots": [
+        "target:0"
+      ],
+      "units": "radian"
+    },
+    "case_id": "h4-1.5-iteration-12-or-convergence",
+    "executed_representative_candidate_id": "candidate-v1:71f3cd1a9aef1a430ca3947ee392e77932fc6f14de463eba29684fcea6123ccb",
+    "is_executed_representative": true
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate-v1:3ce6682fcf92798ad2972f35c696a9acacd1c9f5cddecf1deed9c3a7ce53e9c8",
+      "constraint_matrix": [
+        [
+          1.0,
+          0.0,
+          -0.0
+        ],
+        [
+          0.0,
+          1.0,
+          -0.9999999999999998
+        ]
+      ],
+      "constraint_rhs": [
+        0.0,
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:0ded3fa4c26bc7ca4bb965a2a7fb3c9eae09f17e4cd55c4df473140c83738ae0",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        [
+          0.0
+        ],
+        [
+          0.9999999999999998
+        ],
+        [
+          1.0
+        ]
+      ],
+      "kind": "mvp-to-ovp-sum",
+      "numerical_context_digest": "f5b149fd3ff7b5c573e0c200646f8a80789ba0271690042ea86387d3874ca12a",
+      "offset": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "orientation": "sum",
+      "removed_source_slots": [
+        0
+      ],
+      "semantic_conflict_positions": [
+        21,
+        22,
+        23
+      ],
+      "source_block_id": "block-v1:0ba5fcd7367a0e4e30973e567b884037f64b4cc15a5d41a67ec9c8cc198f1562",
+      "source_pool_indices": [
+        34,
+        35,
+        36
+      ],
+      "source_slots": [
+        "block-v1:0ba5fcd7367a0e4e30973e567b884037f64b4cc15a5d41a67ec9c8cc198f1562:slot:0",
+        "block-v1:0ba5fcd7367a0e4e30973e567b884037f64b4cc15a5d41a67ec9c8cc198f1562:slot:1",
+        "block-v1:0ba5fcd7367a0e4e30973e567b884037f64b4cc15a5d41a67ec9c8cc198f1562:slot:2"
+      ],
+      "target_family": "OVP",
+      "target_operator_digests": [
+        "9549fddeac4447a4cad5018f707e60d596f91a6423a9fc5627d076615c7bd850"
+      ],
+      "target_pool_indices": [
+        114
+      ],
+      "target_slots": [
+        "target:0"
+      ],
+      "units": "radian"
+    },
+    "case_id": "h4-1.5-iteration-12-or-convergence",
+    "executed_representative_candidate_id": "candidate-v1:3ce6682fcf92798ad2972f35c696a9acacd1c9f5cddecf1deed9c3a7ce53e9c8",
+    "is_executed_representative": true
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate-v1:9b8177a6447a9031cd1fe54318970405adc55941945bba55634b4f2673402104",
+      "constraint_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.9999999999999999,
+          1.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0,
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:f14dc325472c1ccd886898cc9353fe69500ad448405058f8a7795cddb1fd3995",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        [
+          0.0
+        ],
+        [
+          -0.9999999999999998
+        ],
+        [
+          0.9999999999999997
+        ]
+      ],
+      "kind": "mvp-to-ovp-diff",
+      "numerical_context_digest": "f5b149fd3ff7b5c573e0c200646f8a80789ba0271690042ea86387d3874ca12a",
+      "offset": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "orientation": "diff",
+      "removed_source_slots": [
+        0
+      ],
+      "semantic_conflict_positions": [
+        21,
+        22,
+        23
+      ],
+      "source_block_id": "block-v1:0ba5fcd7367a0e4e30973e567b884037f64b4cc15a5d41a67ec9c8cc198f1562",
+      "source_pool_indices": [
+        34,
+        35,
+        36
+      ],
+      "source_slots": [
+        "block-v1:0ba5fcd7367a0e4e30973e567b884037f64b4cc15a5d41a67ec9c8cc198f1562:slot:0",
+        "block-v1:0ba5fcd7367a0e4e30973e567b884037f64b4cc15a5d41a67ec9c8cc198f1562:slot:1",
+        "block-v1:0ba5fcd7367a0e4e30973e567b884037f64b4cc15a5d41a67ec9c8cc198f1562:slot:2"
+      ],
+      "target_family": "OVP",
+      "target_operator_digests": [
+        "36d7d2edf9675109277f5f7a2ca3db45574e655fb7d4343554016d6a443e20ac"
+      ],
+      "target_pool_indices": [
+        115
+      ],
+      "target_slots": [
+        "target:0"
+      ],
+      "units": "radian"
+    },
+    "case_id": "h4-1.5-iteration-12-or-convergence",
+    "executed_representative_candidate_id": "candidate-v1:9b8177a6447a9031cd1fe54318970405adc55941945bba55634b4f2673402104",
+    "is_executed_representative": true
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate-v1:4fa68d11a0e55150f7a678dee8ea4401b9f09f4fc9de70500b0d327dff8d292d",
+      "constraint_matrix": [
+        [
+          -0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0,
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:2c4029cedb02fd76b6c0f0a3f277a5582575c5284f344a37b0f40c606220dabf",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        [
+          0.9999999999999998
+        ],
+        [
+          0.0
+        ],
+        [
+          0.9999999999999998
+        ]
+      ],
+      "kind": "mvp-to-ovp-sum",
+      "numerical_context_digest": "f5b149fd3ff7b5c573e0c200646f8a80789ba0271690042ea86387d3874ca12a",
+      "offset": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "orientation": "sum",
+      "removed_source_slots": [
+        1
+      ],
+      "semantic_conflict_positions": [
+        21,
+        22,
+        23
+      ],
+      "source_block_id": "block-v1:0ba5fcd7367a0e4e30973e567b884037f64b4cc15a5d41a67ec9c8cc198f1562",
+      "source_pool_indices": [
+        34,
+        35,
+        36
+      ],
+      "source_slots": [
+        "block-v1:0ba5fcd7367a0e4e30973e567b884037f64b4cc15a5d41a67ec9c8cc198f1562:slot:0",
+        "block-v1:0ba5fcd7367a0e4e30973e567b884037f64b4cc15a5d41a67ec9c8cc198f1562:slot:1",
+        "block-v1:0ba5fcd7367a0e4e30973e567b884037f64b4cc15a5d41a67ec9c8cc198f1562:slot:2"
+      ],
+      "target_family": "OVP",
+      "target_operator_digests": [
+        "55ae4fd168d54daeb3a230c7829f64014fc0a9cfcb952f681b5e726c67180254"
+      ],
+      "target_pool_indices": [
+        116
+      ],
+      "target_slots": [
+        "target:0"
+      ],
+      "units": "radian"
+    },
+    "case_id": "h4-1.5-iteration-12-or-convergence",
+    "executed_representative_candidate_id": "candidate-v1:4fa68d11a0e55150f7a678dee8ea4401b9f09f4fc9de70500b0d327dff8d292d",
+    "is_executed_representative": true
+  },
+  {
+    "candidate": {
+      "candidate_id": "candidate-v1:82d5924a8b39f778ec806e7969eee91fd63c01657ed73091341033da4852cc7b",
+      "constraint_matrix": [
+        [
+          -0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "constraint_rhs": [
+        0.0,
+        0.0
+      ],
+      "equivalence_class_id": "transform-v1:31a9c0b90ecd381502d6aa422dccf9d9891afb4adb484f3dd7568ef75dbdf49f",
+      "generator_normalization": "paper-era-pool-arrange-v1",
+      "jacobian": [
+        [
+          0.9999999999999998
+        ],
+        [
+          0.0
+        ],
+        [
+          -0.9999999999999998
+        ]
+      ],
+      "kind": "mvp-to-ovp-diff",
+      "numerical_context_digest": "f5b149fd3ff7b5c573e0c200646f8a80789ba0271690042ea86387d3874ca12a",
+      "offset": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "orientation": "diff",
+      "removed_source_slots": [
+        1
+      ],
+      "semantic_conflict_positions": [
+        21,
+        22,
+        23
+      ],
+      "source_block_id": "block-v1:0ba5fcd7367a0e4e30973e567b884037f64b4cc15a5d41a67ec9c8cc198f1562",
+      "source_pool_indices": [
+        34,
+        35,
+        36
+      ],
+      "source_slots": [
+        "block-v1:0ba5fcd7367a0e4e30973e567b884037f64b4cc15a5d41a67ec9c8cc198f1562:slot:0",
+        "block-v1:0ba5fcd7367a0e4e30973e567b884037f64b4cc15a5d41a67ec9c8cc198f1562:slot:1",
+        "block-v1:0ba5fcd7367a0e4e30973e567b884037f64b4cc15a5d41a67ec9c8cc198f1562:slot:2"
+      ],
+      "target_family": "OVP",
+      "target_operator_digests": [
+        "1802ba0e9435a02d64d24640bd3d62b343f8f7327488a173dceaa9458e241c44"
+      ],
+      "target_pool_indices": [
+        117
+      ],
+      "target_slots": [
+        "target:0"
+      ],
+      "units": "radian"
+    },
+    "case_id": "h4-1.5-iteration-12-or-convergence",
+    "executed_representative_candidate_id": "candidate-v1:82d5924a8b39f778ec806e7969eee91fd63c01657ed73091341033da4852cc7b",
+    "is_executed_representative": true
+  }
+]

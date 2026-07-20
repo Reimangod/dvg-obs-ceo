@@ -121,12 +121,18 @@ def validate_bundle(bundle: Path) -> dict[str, Any]:
     recomputed_metrics = [calibration_metrics(successful, method) for method in PREDICTORS]
     checks["metrics_recomputed_exactly"] = recomputed_metrics == summary["metrics"]
     checkpoint_digests: dict[str, str] = {}
-    for path in sorted(bundle.glob("checkpoint-*.json")):
+    for name in expected_checkpoints:
+        path = bundle / name
         checkpoint = json.loads(path.read_text(encoding="utf-8"))
         recorded = checkpoint.pop("checkpoint_digest")
         observed = _digest(checkpoint)
         checkpoint_digests[path.name] = observed
         checks[f"checkpoint_digest:{path.name}"] = observed == recorded
+    for failure in summary.get("checkpoint_failures", []):
+        path = bundle / f"checkpoint-failure-{failure['case_id']}.json"
+        checks[f"checkpoint_failure_content:{path.name}"] = (
+            json.loads(path.read_text(encoding="utf-8")) == failure
+        )
     with (bundle / "all-candidates.csv").open(newline="", encoding="utf-8") as stream:
         csv_rows = list(csv.DictReader(stream))
     checks["csv_success_rows"] = len(csv_rows) == len(successful)
