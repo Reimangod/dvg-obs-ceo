@@ -12,7 +12,7 @@
     "schema_version": {"const": "1.0.0"},
     "artifact_kind": {"const": "s10-lih-first-accuracy-paired-comparison"},
     "run_id": {"type": "string", "minLength": 1},
-    "protocol_id": {"const": "dvg-obs-s10-lih-paired-protocol-v1"},
+    "protocol_id": {"const": "dvg-obs-s10-lih-paired-protocol-v1.1"},
     "selector_digest": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
     "checkpoint": {
       "type": "object",

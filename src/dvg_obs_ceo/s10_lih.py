@@ -49,11 +49,11 @@ from .transaction import (
 )
 
 
-PROTOCOL_ID = "dvg-obs-s10-lih-paired-protocol-v1"
-PROTOCOL_TAG = "dvg-obs-s10-lih-primary-protocol-v1"
-RUNNER_VERSION = "s10-lih-paired-runner-v1"
+PROTOCOL_ID = "dvg-obs-s10-lih-paired-protocol-v1.1"
+PROTOCOL_TAG = "dvg-obs-s10-lih-primary-protocol-v1.1"
+RUNNER_VERSION = "s10-lih-paired-runner-v1.1"
 SELECTOR_DIGEST = "09823d0d82b3029ff7f25eeb2d5e22a6208e4029cdcf6ba28365339cf0a62216"
-CHEMICAL_ACCURACY_HARTREE = 0.0015936014376405157
+CHEMICAL_ACCURACY_HARTREE = 0.0015936
 EXPECTED_ENERGY_HARTREE = -7.797909682469515
 EXPECTED_FCI_HARTREE = -7.7988431595024075
 EXPECTED_INDICES = (970, 588, 946, 612, 1160, 952, 602, 1154, 940, 618, 1182, 14, 10, 4, 9)
@@ -117,6 +117,8 @@ def _fsync_directory(path: Path) -> None:
 
 def _algorithm() -> tuple[Any, Any, float]:
     LinAlgAdapt, DVG_CEO, creators, chemical_accuracy = _load_upstream()
+    if float(chemical_accuracy) != CHEMICAL_ACCURACY_HARTREE:
+        raise S10Error("pinned upstream chemical-accuracy constant changed")
     _, create_lih = creators
     molecule = create_lih(3.0)
     pool = DVG_CEO(molecule)
@@ -138,8 +140,6 @@ def _algorithm() -> tuple[Any, Any, float]:
         rand_degenerate=False,
         shots=None,
     )
-    if abs(float(chemical_accuracy) - CHEMICAL_ACCURACY_HARTREE) > 1e-16:
-        raise S10Error("upstream chemical-accuracy constant changed")
     return algorithm, pool, float(chemical_accuracy)
 
 

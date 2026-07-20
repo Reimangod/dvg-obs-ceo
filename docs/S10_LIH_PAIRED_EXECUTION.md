@@ -6,10 +6,16 @@ chemical-accuracy crossing. The checkpoint must reproduce iteration 5, energy
 pinned paper-era implementation.
 
 Before molecular execution, code and protocol are committed and tagged
-`dvg-obs-s10-lih-primary-protocol-v1`. The runner refuses a dirty worktree or a
+`dvg-obs-s10-lih-primary-protocol-v1.1`. The runner refuses a dirty worktree or a
 HEAD different from that tag. S9 selector digest
 `09823d0d82b3029ff7f25eeb2d5e22a6208e4029cdcf6ba28365339cf0a62216`
 is also checked at runtime.
+
+Protocol v1 failed during preflight before `algorithm.initialize()` because it
+incorrectly demanded equality between the pinned source constant `0.0015936` Ha
+and the exact 1 kcal/mol conversion `0.0015936014376405157` Ha in the baseline
+manifest. Version 1.1 uses the official pinned-source value, records both values,
+and preserves the zero-iteration failure artifact.
 
 ## Paired comparison
 

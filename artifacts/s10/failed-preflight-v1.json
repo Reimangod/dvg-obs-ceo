@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0.0",
+  "artifact_kind": "s10-preflight-failure",
+  "protocol_tag": "dvg-obs-s10-lih-primary-protocol-v1",
+  "commit": "547cd3fed3cd6aae9b7799b03333b00244cdfe08",
+  "failure_stage": "before-algorithm-initialize",
+  "adapt_iterations_executed": 0,
+  "pruning_candidates_selected": 0,
+  "error_type": "S10Error",
+  "error": "upstream chemical-accuracy constant changed",
+  "root_cause": "Protocol v1 compared pinned upstream 0.0015936 Ha against the exact 1 kcal/mol conversion 0.0015936014376405157 Ha with an unjustifiably strict 1e-16 tolerance.",
+  "disposition": "superseded-by-protocol-v1.1",
+  "scientific_result": null
+}
