@@ -64,6 +64,7 @@ def _runtime() -> CompressionRuntime:
         metadata={
             "run_id": "s7-probe",
             "resource_structure_digest": "a" * 64,
+            "budget_reference_energy_hartree": -1.0,
         },
     )
 
@@ -83,10 +84,10 @@ def _decision(*, safe: bool = True):
     after = _resource(11, 7, 20, 1, 1, "b") if safe else _resource(21, 11, 31, 3, 3, "b")
     return evaluate_acceptance(
         AcceptanceEvidence(
-            baseline_energy_hartree=-1.0,
+            source_energy_hartree=-1.0,
+            budget_reference_energy_hartree=-1.0,
             candidate_energy_hartree=-0.99995 if safe else -0.9,
             independent_energy_hartree=-0.99995 if safe else -0.9,
-            fci_energy_hartree=-1.0,
             independent_state_fidelity=1.0 if safe else 0.8,
             constraint_residual=1e-12 if safe else 1e-2,
             kkt_residual=1e-10 if safe else 1e-2,

@@ -26,8 +26,8 @@ from .telemetry import ResourceSnapshot, WorkCounters
 
 FloatArray = NDArray[np.float64]
 ComplexArray = NDArray[np.complex128]
-TRANSACTION_VERSION = "compression-transaction-v1"
-ACCEPTANCE_VERSION = "accuracy-kkt-resource-guard-v1"
+TRANSACTION_VERSION = "compression-transaction-v2"
+ACCEPTANCE_VERSION = "runtime-kkt-cumulative-resource-guard-v2"
 
 
 class TransactionError(RuntimeError):
@@ -153,6 +153,11 @@ class CompressionRuntime:
             or any(character not in "0123456789abcdef" for character in resource_digest)
         ):
             raise TransactionError("runtime metadata requires a lowercase resource structure digest")
+        budget_reference = self.metadata.get("budget_reference_energy_hartree")
+        if not isinstance(budget_reference, (float, int)) or not math.isfinite(
+            float(budget_reference)
+        ):
+            raise TransactionError("runtime metadata requires a finite immutable budget reference energy")
 
     def snapshot(self) -> "RuntimeSnapshot":
         self.validate()
@@ -331,8 +336,7 @@ class OptimizerOutcome:
 
 @dataclass(frozen=True)
 class AcceptanceCriteria:
-    chemical_accuracy_hartree: float = 1.6e-3
-    local_energy_budget_hartree: float = 1e-4
+    cumulative_energy_budget_hartree: float = 1e-4
     independent_energy_tolerance_hartree: float = 1e-10
     minimum_state_fidelity: float = 1.0 - 1e-10
     maximum_constraint_residual: float = 1e-10
@@ -340,8 +344,7 @@ class AcceptanceCriteria:
 
     def __post_init__(self) -> None:
         values = (
-            self.chemical_accuracy_hartree,
-            self.local_energy_budget_hartree,
+            self.cumulative_energy_budget_hartree,
             self.independent_energy_tolerance_hartree,
             self.minimum_state_fidelity,
             self.maximum_constraint_residual,
@@ -355,10 +358,10 @@ class AcceptanceCriteria:
 
 @dataclass(frozen=True)
 class AcceptanceEvidence:
-    baseline_energy_hartree: float
+    source_energy_hartree: float
+    budget_reference_energy_hartree: float
     candidate_energy_hartree: float
     independent_energy_hartree: float
-    fci_energy_hartree: float
     independent_state_fidelity: float
     constraint_residual: float
     kkt_residual: float
@@ -377,7 +380,8 @@ class AcceptanceDecision:
     checks: dict[str, bool]
     rejection_reasons: tuple[str, ...]
     evidence_digest: str
-    baseline_energy_hartree: float
+    source_energy_hartree: float
+    budget_reference_energy_hartree: float
     candidate_energy_hartree: float
     before_parameter_count: int
     after_parameter_count: int
@@ -390,10 +394,10 @@ def evaluate_acceptance(
     criteria: AcceptanceCriteria = AcceptanceCriteria(),
 ) -> AcceptanceDecision:
     scalar_values = (
-        evidence.baseline_energy_hartree,
+        evidence.source_energy_hartree,
+        evidence.budget_reference_energy_hartree,
         evidence.candidate_energy_hartree,
         evidence.independent_energy_hartree,
-        evidence.fci_energy_hartree,
         evidence.independent_state_fidelity,
         evidence.constraint_residual,
         evidence.kkt_residual,
@@ -439,12 +443,9 @@ def evaluate_acceptance(
     checks = {
         "finite": finite,
         "physical_scalar_domain": physical_domain,
-        "local_energy_budget": finite
-        and evidence.candidate_energy_hartree - evidence.baseline_energy_hartree
-        <= criteria.local_energy_budget_hartree,
-        "chemical_accuracy": finite
-        and abs(evidence.independent_energy_hartree - evidence.fci_energy_hartree)
-        <= criteria.chemical_accuracy_hartree,
+        "cumulative_energy_budget": finite
+        and evidence.candidate_energy_hartree - evidence.budget_reference_energy_hartree
+        <= criteria.cumulative_energy_budget_hartree,
         "independent_energy_agreement": finite
         and abs(evidence.candidate_energy_hartree - evidence.independent_energy_hartree)
         <= criteria.independent_energy_tolerance_hartree,
@@ -481,7 +482,8 @@ def evaluate_acceptance(
         checks,
         reasons,
         digest,
-        evidence.baseline_energy_hartree,
+        evidence.source_energy_hartree,
+        evidence.budget_reference_energy_hartree,
         evidence.candidate_energy_hartree,
         before.parameter_count,
         after.parameter_count,
@@ -609,10 +611,17 @@ class CompressionTransaction:
         ):
             raise TransactionError("acceptance resources are not bound to runtime parameter counts")
         if (
-            self.snapshot.energy_hartree != decision.baseline_energy_hartree
+            self.snapshot.energy_hartree != decision.source_energy_hartree
             or self.runtime.energy_hartree != decision.candidate_energy_hartree
         ):
             raise TransactionError("acceptance energies are not bound to runtime state")
+        if (
+            float(self.snapshot.metadata["budget_reference_energy_hartree"])
+            != decision.budget_reference_energy_hartree
+            or float(self.runtime.metadata["budget_reference_energy_hartree"])
+            != decision.budget_reference_energy_hartree
+        ):
+            raise TransactionError("acceptance budget reference is not immutable across the transaction")
         if (
             self.snapshot.metadata["resource_structure_digest"]
             != decision.before_structure_digest

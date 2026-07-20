@@ -28,10 +28,10 @@ def resource(cnot, depth, total, parameters, blocks, digest_character):
 
 def accepted_decision(primary_success=True, fallback=None):
     evidence = AcceptanceEvidence(
-        baseline_energy_hartree=-1.0,
+        source_energy_hartree=-1.0,
+        budget_reference_energy_hartree=-1.0,
         candidate_energy_hartree=-0.99995,
         independent_energy_hartree=-0.99995,
-        fci_energy_hartree=-1.0,
         independent_state_fidelity=1.0,
         constraint_residual=1e-12,
         kkt_residual=1e-10,
@@ -56,7 +56,11 @@ def runtime():
         statevector=[1.0, 0.0, 0.0, 0.0],
         work=WorkCounters(energy_evaluations=3, gradient_vector_evaluations=2),
         adapt_iteration=1,
-        metadata={"run_id": "test", "resource_structure_digest": "a" * 64},
+        metadata={
+            "run_id": "test",
+            "resource_structure_digest": "a" * 64,
+            "budget_reference_energy_hartree": -1.0,
+        },
     )
 
 
@@ -116,10 +120,10 @@ def test_rejected_decision_cannot_commit_and_rolls_back(tmp_path: Path) -> None:
     state = runtime()
     before = state.snapshot().snapshot_digest
     evidence = AcceptanceEvidence(
-        baseline_energy_hartree=-1.0,
+        source_energy_hartree=-1.0,
+        budget_reference_energy_hartree=-1.0,
         candidate_energy_hartree=-0.9,
         independent_energy_hartree=-0.9,
-        fci_energy_hartree=-1.0,
         independent_state_fidelity=0.8,
         constraint_residual=1e-2,
         kkt_residual=1e-2,
@@ -132,7 +136,7 @@ def test_rejected_decision_cannot_commit_and_rolls_back(tmp_path: Path) -> None:
     )
     decision = evaluate_acceptance(evidence)
     assert not decision.accepted
-    assert {"local_energy_budget", "chemical_accuracy", "pareto_nonworse", "optimizer_path_reviewed"} <= set(decision.rejection_reasons)
+    assert {"cumulative_energy_budget", "pareto_nonworse", "optimizer_path_reviewed"} <= set(decision.rejection_reasons)
     with pytest.raises(TransactionError, match="rejected"):
         with CompressionTransaction(state, tmp_path, transaction_id="tx-rejected") as transaction:
             mutate_to_accepted(state)
@@ -163,10 +167,10 @@ def test_failed_primary_requires_completed_fallback_and_independent_kkt() -> Non
 
 def test_nonphysical_fidelity_and_negative_residuals_are_rejected() -> None:
     base = AcceptanceEvidence(
-        baseline_energy_hartree=-1.0,
+        source_energy_hartree=-1.0,
+        budget_reference_energy_hartree=-1.0,
         candidate_energy_hartree=-1.0,
         independent_energy_hartree=-1.0,
-        fci_energy_hartree=-1.0,
         independent_state_fidelity=1.01,
         constraint_residual=-1e-9,
         kkt_residual=0.0,
@@ -180,6 +184,43 @@ def test_nonphysical_fidelity_and_negative_residuals_are_rejected() -> None:
     decision = evaluate_acceptance(base)
     assert not decision.accepted
     assert not decision.checks["physical_scalar_domain"]
+
+
+def test_cumulative_budget_cannot_reset_after_each_accepted_round() -> None:
+    evidence = AcceptanceEvidence(
+        source_energy_hartree=-0.99995,
+        budget_reference_energy_hartree=-1.0,
+        candidate_energy_hartree=-0.99989,
+        independent_energy_hartree=-0.99989,
+        independent_state_fidelity=1.0,
+        constraint_residual=0.0,
+        kkt_residual=0.0,
+        before_resources=resource(11, 7, 20, 1, 1, "b"),
+        after_resources=resource(9, 6, 18, 0, 0, "c"),
+        full_resource_recount_succeeded=True,
+        transformation_semantics_validated=True,
+        primary_optimizer=OptimizerOutcome(True, "0", "ok", True),
+        fallback_optimizer=None,
+    )
+    decision = evaluate_acceptance(evidence)
+    assert not decision.accepted
+    assert not decision.checks["cumulative_energy_budget"]
+    assert "fci_energy_hartree" not in AcceptanceEvidence.__dataclass_fields__
+
+
+def test_runtime_requires_and_commit_binds_immutable_budget_reference(tmp_path: Path) -> None:
+    state = runtime()
+    del state.metadata["budget_reference_energy_hartree"]
+    with pytest.raises(TransactionError, match="budget reference"):
+        state.validate()
+    state = runtime()
+    with pytest.raises(TransactionError, match="budget reference"):
+        with CompressionTransaction(state, tmp_path, transaction_id="tx-budget-mutation") as transaction:
+            mutate_to_accepted(state)
+            state.metadata["budget_reference_energy_hartree"] = -0.99995
+            transaction.commit(accepted_decision())
+    assert state.energy_hartree == pytest.approx(-1.0)
+    assert state.metadata["budget_reference_energy_hartree"] == pytest.approx(-1.0)
 
 
 def test_deadline_and_path_escape_roll_back(tmp_path: Path) -> None:
