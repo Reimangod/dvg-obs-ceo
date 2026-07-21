@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0.0",
+  "protocol_id": "dvg-obs-v3-s1-gradient-audit-v1",
+  "execution_tag": "dvg-obs-v3-s1-gradient-audit-v1",
+  "registered_at": "2026-07-22",
+  "upstream_commit": "a3f89d03e6a03c89767d3cf8ee7657a57653dda0",
+  "input": {
+    "candidate_rows": {
+      "path": "artifacts/s8/calibration-bundle/all-candidates.jsonl",
+      "sha256": "2e962f55545639dcdee88ab45b667d7f6c0388871fe9d90a73ea1eb8e486befb",
+      "expected_rows": 17
+    },
+    "checkpoints": {
+      "h2-1.5-iteration-1": {
+        "path": "artifacts/s8/calibration-bundle/checkpoint-h2-1.5-iteration-1.json",
+        "sha256": "5e4045001b5025b58be34e5219e8eada3615a81672d050945f6a156fc883b5a7"
+      },
+      "h4-1.5-first-chemical-accuracy": {
+        "path": "artifacts/s8/calibration-bundle/checkpoint-h4-1.5-first-chemical-accuracy.json",
+        "sha256": "e8e7cba516dce67c154257db78f6e6c9e048a0cb085c2f9db9984e9839752d6e"
+      }
+    }
+  },
+  "agreement_policy": {
+    "absolute_tolerance": 1e-10,
+    "relative_tolerance": 1e-8,
+    "minimum_source_target_state_fidelity": 0.9999999999,
+    "maximum_source_target_energy_difference_hartree": 1e-10
+  },
+  "evaluation": {
+    "candidate_path": "stored projection_on final coordinates",
+    "target_gradient": "analytic gradient on rebuilt target-native circuit",
+    "source_gradient": "fresh analytic gradient on source circuit at theta=c+J*phi",
+    "checkpoint_gradient_reuse": false,
+    "ordinary_gsd_adapt_iterations": 0,
+    "ceo_star_adapt_iterations": 0,
+    "fci_used": false,
+    "paper_measurement_cost": null
+  },
+  "required_candidate_kinds": [
+    "block-deletion",
+    "mvp-whole-deletion",
+    "mvp-constituent-deletion",
+    "mvp-to-ovp-sum",
+    "mvp-to-ovp-diff"
+  ],
+  "numerical_environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  }
+}

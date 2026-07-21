@@ -47,6 +47,7 @@ dvg-obs-s11-compare = "dvg_obs_ceo.s11_compare:main"
 dvg-obs-s12-reuse-probe = "dvg_obs_ceo.s12_reuse_probe:main"
 dvg-obs-s12-audit = "dvg_obs_ceo.s12_audit:main"
 dvg-obs-v3-protocol = "dvg_obs_ceo.v3_protocol:main"
+dvg-obs-v3-gradient-audit = "dvg_obs_ceo.v3_gradient_audit:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
