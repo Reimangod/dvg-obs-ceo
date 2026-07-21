@@ -21,7 +21,7 @@ def test_trust_ncg_polishes_spd_quadratic_deterministically() -> None:
     assert first["gradient_infinity"] <= 5e-9
     np.testing.assert_allclose(first["coordinates"], center, atol=1e-9, rtol=0.0)
     assert first["work"]["hessian_vector_gradient_evaluations"] == 2 * first["work"]["hessian_vector_products"]
-    assert first["scipy_reported"]["function_evaluations"] == first["work"]["energy_evaluations"]
+    assert first["scipy_reported"]["function_evaluations"] + 1 == first["work"]["energy_evaluations"]
     assert (
         first["scipy_reported"]["hessian_evaluations_including_dummy"]
         == first["work"]["hessian_vector_products"] + 1
@@ -30,6 +30,7 @@ def test_trust_ncg_polishes_spd_quadratic_deterministically() -> None:
     assert (
         first["scipy_reported"]["gradient_evaluations_excluding_hvp"]
         + first["work"]["hessian_vector_gradient_evaluations"]
+        + 1
         == first["work"]["gradient_vector_evaluations"]
     )
 
@@ -59,3 +60,16 @@ def test_zero_dimensional_target_is_exact_and_does_not_request_gradient() -> Non
     assert result["success"]
     assert result["gradient"] == []
     assert result["work"]["gradient_vector_evaluations"] == 0
+
+
+def test_already_certified_target_does_not_enter_scipy() -> None:
+    result = polish_trust_ncg(
+        [0.2],
+        lambda x: float(x[0] ** 2),
+        lambda _x: np.array([9e-9]),
+    )
+    assert result["success"]
+    assert result["termination_origin"] == "preflight-certificate"
+    assert result["iterations"] == 0
+    assert result["work"]["energy_evaluations"] == 1
+    assert result["work"]["gradient_vector_evaluations"] == 1

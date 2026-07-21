@@ -28,9 +28,9 @@ from .v3_gradient_audit import _energy, _gradient, _load_and_verify
 from .v3_protocol import _write_exclusive
 
 
-PROTOCOL_ID = "dvg-obs-v3-s2-polishing-protocol-v1"
+PROTOCOL_ID = "dvg-obs-v3-s2-polishing-protocol-v1.1"
 PROTOCOL_TAG = PROTOCOL_ID
-DEFAULT_MANIFEST = ROOT / "manifests" / "v3-s2-polishing-protocol-v1.json"
+DEFAULT_MANIFEST = ROOT / "manifests" / "v3-s2-polishing-protocol-v1.1.json"
 REQUIRED_THREADS = {
     "OMP_NUM_THREADS": "1",
     "OPENBLAS_NUM_THREADS": "1",
@@ -108,13 +108,28 @@ def _work_reconciles(result: dict[str, Any]) -> bool:
     ledger = result["work"]
     if scipy_work is None:
         return False
+    origin = result["termination_origin"]
+    if origin == "zero-dimensional-exact":
+        return bool(
+            ledger["energy_evaluations"] == 1
+            and ledger["gradient_vector_evaluations"] == 0
+            and scipy_work["dummy_hessian_initializations"] == 0
+        )
+    if origin == "preflight-certificate":
+        return bool(
+            ledger["energy_evaluations"] == 1
+            and ledger["gradient_vector_evaluations"] == 1
+            and ledger["hessian_vector_products"] == 0
+            and all(value == 0 for value in scipy_work.values())
+        )
     return bool(
-        scipy_work["function_evaluations"] == ledger["energy_evaluations"]
+        scipy_work["function_evaluations"] + 1 == ledger["energy_evaluations"]
         and scipy_work["dummy_hessian_initializations"] == 1
         and scipy_work["hessian_evaluations_including_dummy"]
         == ledger["hessian_vector_products"] + 1
         and scipy_work["gradient_evaluations_excluding_hvp"]
         + ledger["hessian_vector_gradient_evaluations"]
+        + 1
         == ledger["gradient_vector_evaluations"]
         and ledger["hessian_vector_gradient_evaluations"]
         == 2 * ledger["hessian_vector_products"]
@@ -256,11 +271,11 @@ def run(artifact_path: Path, manifest_path: Path = DEFAULT_MANIFEST) -> dict[str
         ),
         "records": records,
     }
+    _write_exclusive(artifact_path, artifact)
     if not passed:
         raise V3PolishingCalibrationError(
-            f"S2 calibration failed closed: failed={failed}, injection={failure_injection}"
+            f"S2 calibration failed closed after evidence retention: failed={failed}, injection={failure_injection}"
         )
-    _write_exclusive(artifact_path, artifact)
     return artifact
 
 

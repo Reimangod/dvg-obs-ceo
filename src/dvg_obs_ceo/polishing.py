@@ -31,6 +31,7 @@ class TrustNCGConfig:
     maximum_trust_radius: float = 0.5
     acceptance_eta: float = 0.15
     gradient_l2_tolerance: float = 5e-9
+    certification_infinity_threshold: float = 1e-8
     maximum_iterations: int = 8
     maximum_energy_evaluations: int = 16
     maximum_gradient_vector_evaluations: int = 128
@@ -43,10 +44,15 @@ class TrustNCGConfig:
             "relative_hvp_step": self.relative_hvp_step,
             "damping": self.damping,
             "gradient_l2_tolerance": self.gradient_l2_tolerance,
+            "certification_infinity_threshold": self.certification_infinity_threshold,
         }
         if any(not math.isfinite(value) or value < 0.0 for value in finite_nonnegative.values()):
             raise PolishingError("step, damping, and gradient tolerance must be finite and nonnegative")
-        if self.relative_hvp_step == 0.0 or self.gradient_l2_tolerance == 0.0:
+        if (
+            self.relative_hvp_step == 0.0
+            or self.gradient_l2_tolerance == 0.0
+            or self.certification_infinity_threshold == 0.0
+        ):
             raise PolishingError("step and gradient tolerance must be positive")
         if not 0.0 <= self.acceptance_eta < 0.25:
             raise PolishingError("trust-region eta must be in [0, 0.25)")
@@ -105,6 +111,13 @@ def polish_trust_ncg(
             "status": 0,
             "message": "exact zero-dimensional target",
             "iterations": 0,
+            "termination_origin": "zero-dimensional-exact",
+            "preflight": {
+                "performed": False,
+                "certified": True,
+                "gradient_infinity": 0.0,
+                "threshold": config.certification_infinity_threshold,
+            },
             "scipy_reported": {
                 "function_evaluations": 1,
                 "gradient_evaluations_excluding_hvp": 0,
@@ -160,6 +173,45 @@ def polish_trust_ncg(
         value = (plus - minus) / (2.0 * step) + config.damping * vector
         return _finite_vector("central-difference HVP", value, dimension)
 
+    preflight_gradient = gradient(initial)
+    preflight_energy = energy(initial)
+    preflight_infinity = float(np.max(np.abs(preflight_gradient)))
+    if preflight_infinity <= config.certification_infinity_threshold:
+        return {
+            "version": POLISHER_VERSION,
+            "coordinates": initial.tolist(),
+            "energy_hartree": preflight_energy,
+            "gradient": preflight_gradient.tolist(),
+            "gradient_l2": float(np.linalg.norm(preflight_gradient)),
+            "gradient_infinity": preflight_infinity,
+            "success": True,
+            "status": 0,
+            "message": "preflight infinity-norm certificate already satisfied",
+            "failure_reason": None,
+            "iterations": 0,
+            "termination_origin": "preflight-certificate",
+            "preflight": {
+                "performed": True,
+                "certified": True,
+                "gradient_infinity": preflight_infinity,
+                "threshold": config.certification_infinity_threshold,
+            },
+            "scipy_reported": {
+                "function_evaluations": 0,
+                "gradient_evaluations_excluding_hvp": 0,
+                "hessian_evaluations_including_dummy": 0,
+                "dummy_hessian_initializations": 0,
+            },
+            "config": asdict(config),
+            "work": {
+                "energy_evaluations": ledger.energy_evaluations,
+                "gradient_vector_evaluations": ledger.gradient_vector_evaluations,
+                "hessian_vector_products": ledger.hessian_vector_products,
+                "hessian_vector_gradient_evaluations": ledger.hessian_vector_gradient_evaluations,
+                "paper_measurement_cost": None,
+            },
+        }
+
     try:
         result = minimize(
             energy,
@@ -190,6 +242,7 @@ def polish_trust_ncg(
             "dummy_hessian_initializations": 1,
         }
         failure_reason = None
+        termination_origin = "scipy-trust-ncg"
     except (EvaluationBudgetExceeded, PolishingError) as error:
         coordinates = initial.copy()
         final_energy = math.nan
@@ -200,6 +253,7 @@ def polish_trust_ncg(
         iterations = 0
         scipy_reported = None
         failure_reason = type(error).__name__
+        termination_origin = "fail-closed"
 
     return {
         "version": POLISHER_VERSION,
@@ -213,6 +267,13 @@ def polish_trust_ncg(
         "message": message,
         "failure_reason": failure_reason,
         "iterations": iterations,
+        "termination_origin": termination_origin,
+        "preflight": {
+            "performed": True,
+            "certified": False,
+            "gradient_infinity": preflight_infinity,
+            "threshold": config.certification_infinity_threshold,
+        },
         "scipy_reported": scipy_reported,
         "config": asdict(config),
         "work": {
