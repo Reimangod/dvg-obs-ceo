@@ -1,0 +1,142 @@
+{
+  "schema_version": "1.0.0",
+  "protocol_id": "dvg-obs-v4-global-obs-protocol-v1",
+  "execution_tag": "dvg-obs-v4-global-obs-protocol-v1",
+  "registered_at": "2026-07-22",
+  "upstream_commit": "a3f89d03e6a03c89767d3cf8ee7657a57653dda0",
+  "hypothesis": "Joint compatible CEO constraints with OBS compensation can expose a resource-nonworse accepted reduction that a single-candidate greedy transaction did not accept.",
+  "null_result_is_valid": true,
+  "claim_boundary": [
+    "Global refers only to deterministic search over the frozen surrogate and supported candidate catalog, not the true VQE global optimum.",
+    "H2 and H4 are calibration data; LiH 3 Angstrom is observed development data.",
+    "No out-of-sample, generality, hardware-noise, or paper Measurement Cost claim is authorized.",
+    "No ordinary GSD-ADAPT or CEO* ansatz-growth execution is authorized.",
+    "Actual energy and FCI energy are forbidden from screening, ranking, and search."
+  ],
+  "source_files": {
+    "h2_checkpoint": {
+      "path": "artifacts/s8/calibration-bundle/checkpoint-h2-1.5-iteration-1.json",
+      "sha256": "5e4045001b5025b58be34e5219e8eada3615a81672d050945f6a156fc883b5a7"
+    },
+    "h4_checkpoint": {
+      "path": "artifacts/s8/calibration-bundle/checkpoint-h4-1.5-first-chemical-accuracy.json",
+      "sha256": "e8e7cba516dce67c154257db78f6e6c9e048a0cb085c2f9db9984e9839752d6e"
+    },
+    "h2_h4_candidate_rows": {
+      "path": "artifacts/s8/calibration-bundle/all-candidates.jsonl",
+      "sha256": "2e962f55545639dcdee88ab45b667d7f6c0388871fe9d90a73ea1eb8e486befb"
+    },
+    "lih_checkpoint": {
+      "path": "artifacts/s10/lih-3a-first-accuracy-primary-v1-2/checkpoint.json",
+      "sha256": "1ef38be983595fdb094f2a47287e6047193351e0eff4a7c589630ef023ad98eb"
+    },
+    "v2_selected_trial": {
+      "path": "artifacts/s10/lih-3a-first-accuracy-primary-v1-2/selected-trial.json",
+      "sha256": "38b0cb3f57fe661fc67a7cb7109237aa71086da3da2fdcf62ec28c4597a9d8c6"
+    },
+    "v2_summary": {
+      "path": "artifacts/s10/lih-3a-first-accuracy-primary-v1-2/summary.json",
+      "sha256": "aa911e6bbdaede6290242f8309845c11259c3a3e90a8b97b0299777b89e2f0e4"
+    },
+    "v3_gradient_result": {
+      "path": "artifacts/v3/s1-gradient-calibration-v1.json",
+      "sha256": "fcc9f8867d9a2125e2342900e5a05c5f39ecfc65830f4f965cef2a0e9e0490f1"
+    },
+    "v3_polishing_result": {
+      "path": "artifacts/v3/s2-polishing-calibration-v1-2.json",
+      "sha256": "1d72ab0c40cccc713778d7dd12bf8d254dc55d8993b908a4e8dc8c10ba81f35d"
+    },
+    "v3_result_document": {
+      "path": "docs/V3_RESULT.md",
+      "sha256": "09743d04e854f018f94d5b1c77e6d0123d78c18c6ea8c637a8adc30298910926"
+    }
+  },
+  "data_roles": {
+    "calibration": ["H2 1.5 Angstrom iteration 1", "H4 1.5 Angstrom first chemical accuracy"],
+    "development": ["LiH 3.0 Angstrom first chemical accuracy"],
+    "confirmatory_validation": null
+  },
+  "co_primary_endpoints": {
+    "circuit_primary_order": [
+      "cnot_count",
+      "cnot_depth",
+      "total_depth",
+      "parameter_count",
+      "predicted_loss_hartree",
+      "canonical_state_id"
+    ],
+    "parameter_primary_order": [
+      "parameter_count",
+      "cnot_depth",
+      "cnot_count",
+      "total_depth",
+      "predicted_loss_hartree",
+      "canonical_state_id"
+    ],
+    "componentwise_nonworse_guards": [
+      "parameter_count",
+      "cnot_count",
+      "cnot_depth",
+      "total_depth"
+    ],
+    "require_at_least_one_strict_resource_improvement": true
+  },
+  "exact_vqe_budget": {
+    "top_k_per_endpoint": 2,
+    "maximum_unique_exact_attempts": 4,
+    "duplicate_structure_is_executed_once": true,
+    "failed_attempts_do_not_change_ranking": true,
+    "actual_energy_is_pass_fail_only": true
+  },
+  "acceptance": {
+    "cumulative_energy_budget_hartree": 1e-4,
+    "independent_energy_tolerance_hartree": 1e-10,
+    "minimum_independent_state_recomputation_fidelity": 0.9999999999,
+    "maximum_constraint_residual": 1e-10,
+    "maximum_stationarity_residual": 1e-8,
+    "two_path_gradient_audit_required": true,
+    "full_resource_recount_required": true,
+    "transformation_semantics_required": true,
+    "fci_is_runtime_input": false
+  },
+  "supported_atomic_transformations": [
+    "constituent deletion",
+    "QE or MVP whole-block deletion",
+    "MVP to QE",
+    "MVP to existing OVP sum or difference",
+    "existing exact signed ties"
+  ],
+  "excluded_transformations": [
+    "arbitrary Hessian eigenvector pruning",
+    "uncertified generator merging",
+    "approximate floating row-space deduplication without symbolic identity"
+  ],
+  "search_statuses": [
+    "exhaustive",
+    "surrogate-complete",
+    "budget-truncated",
+    "numerical-failure",
+    "infrastructure-timeout"
+  ],
+  "stop_rules": {
+    "no_lih_specific_retuning_after_first_development_result": true,
+    "no_threshold_relaxation": true,
+    "no_candidate_family_expansion_after_lih": true,
+    "no_new_baseline_execution": true,
+    "defer_unseen_validation_without_matched_frozen_checkpoint": true,
+    "search_uses_deterministic_counters_not_normal_wall_time": true,
+    "wall_time_is_telemetry_except_emergency_timeout": true
+  },
+  "identity_layers": [
+    "StatePreparationID",
+    "ProblemID",
+    "MeasurementContextID",
+    "ConstraintSemanticID",
+    "ConstraintNumericalID"
+  ],
+  "numerical_environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  }
+}
