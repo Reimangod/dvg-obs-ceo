@@ -186,6 +186,27 @@ def test_nonphysical_fidelity_and_negative_residuals_are_rejected() -> None:
     assert not decision.checks["physical_scalar_domain"]
 
 
+def test_v4_can_apply_only_its_four_preregistered_resource_guards() -> None:
+    evidence = AcceptanceEvidence(
+        source_energy_hartree=-1.0,
+        budget_reference_energy_hartree=-1.0,
+        candidate_energy_hartree=-1.0,
+        independent_energy_hartree=-1.0,
+        independent_state_fidelity=1.0,
+        constraint_residual=0.0,
+        kkt_residual=0.0,
+        before_resources=resource(20, 10, 30, 2, 1, "a"),
+        after_resources=resource(19, 10, 29, 1, 2, "b"),
+        full_resource_recount_succeeded=True,
+        transformation_semantics_validated=True,
+        primary_optimizer=OptimizerOutcome(True, "0", "ok", True),
+        fallback_optimizer=None,
+    )
+    assert not evaluate_acceptance(evidence).accepted
+    v4 = evaluate_acceptance(evidence, AcceptanceCriteria(guard_logical_block_count=False))
+    assert v4.accepted
+
+
 def test_cumulative_budget_cannot_reset_after_each_accepted_round() -> None:
     evidence = AcceptanceEvidence(
         source_energy_hartree=-0.99995,

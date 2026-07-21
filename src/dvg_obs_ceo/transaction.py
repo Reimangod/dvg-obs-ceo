@@ -341,6 +341,7 @@ class AcceptanceCriteria:
     minimum_state_fidelity: float = 1.0 - 1e-10
     maximum_constraint_residual: float = 1e-10
     maximum_kkt_residual: float = 1e-8
+    guard_logical_block_count: bool = True
 
     def __post_init__(self) -> None:
         values = (
@@ -354,6 +355,8 @@ class AcceptanceCriteria:
             raise TransactionError("acceptance criteria must be finite and non-negative")
         if self.minimum_state_fidelity > 1.0:
             raise TransactionError("minimum state fidelity cannot exceed one")
+        if not isinstance(self.guard_logical_block_count, bool):
+            raise TransactionError("logical-block guard flag must be boolean")
 
 
 @dataclass(frozen=True)
@@ -416,15 +419,16 @@ def evaluate_acceptance(
         before.cnot_depth,
         before.total_depth,
         before.parameter_count,
-        before.logical_block_count,
     )
     after_values = (
         after.cnot_count,
         after.cnot_depth,
         after.total_depth,
         after.parameter_count,
-        after.logical_block_count,
     )
+    if criteria.guard_logical_block_count:
+        before_values = (*before_values, before.logical_block_count)
+        after_values = (*after_values, after.logical_block_count)
     pareto_nonworse = all(new <= old for old, new in zip(before_values, after_values))
     resource_improved = any(new < old for old, new in zip(before_values, after_values))
     fallback_attempted = evidence.fallback_optimizer is not None
