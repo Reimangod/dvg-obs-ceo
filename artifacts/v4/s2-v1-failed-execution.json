@@ -1,0 +1,10 @@
+{
+  "schema_version": "1.0.0",
+  "artifact_kind": "v4-s2-failed-execution-incident",
+  "protocol_tag": "dvg-obs-v4-s2-composition-v1",
+  "execution_head": "f59a062",
+  "passed": false,
+  "vqe_energy_evaluations": 0,
+  "failure": "all-zero structural coefficients caused the official pool to eliminate every generator in an MVP block before circuit construction",
+  "resolution_boundary": "V1.1 uses deterministic nonzero coefficients only for circuit constructibility checks. They are never used for energy, gradient, ranking, or resource claims."
+}

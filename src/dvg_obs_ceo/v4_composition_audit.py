@@ -27,7 +27,7 @@ from .v3_protocol import _write_exclusive
 from .v4_protocol import audit_manifest
 
 
-PROTOCOL_TAG = "dvg-obs-v4-s2-composition-v1"
+PROTOCOL_TAG = "dvg-obs-v4-s2-composition-v1.1"
 REQUIRED_THREADS = {
     "OMP_NUM_THREADS": "1",
     "OPENBLAS_NUM_THREADS": "1",
@@ -94,7 +94,8 @@ def run(artifact_path: Path) -> dict[str, Any]:
             semantic_checks += 1
 
         def validate_circuit(indices):
-            pool.get_circuit(list(indices), [0.0] * len(indices))
+            structural_coefficients = [0.125 + 0.001 * index for index in range(len(indices))]
+            pool.get_circuit(list(indices), structural_coefficients)
 
         for size in (2, 3):
             for batch in combinations(candidates, size):
