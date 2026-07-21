@@ -228,7 +228,10 @@ class CanonicalConstraintState:
         matrix = np.asarray([[float(value) for value in row] for row in exact_a], dtype=np.float64)
         rhs = np.asarray([float(value) for value in exact_b], dtype=np.float64)
         offset_residual = float(np.max(np.abs(matrix @ offset - rhs))) if len(rhs) else 0.0
-        jacobian_residual = float(np.max(np.abs(matrix @ jacobian))) if matrix.size else 0.0
+        jacobian_product = matrix @ jacobian
+        jacobian_residual = (
+            float(np.max(np.abs(jacobian_product))) if jacobian_product.size else 0.0
+        )
         if offset_residual > feasibility_tolerance or jacobian_residual > feasibility_tolerance:
             raise ConstraintStateError("numerical affine map violates exact constraints")
         primitives = tuple(

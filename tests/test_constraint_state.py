@@ -109,6 +109,16 @@ def test_atomic_semantics_reject_unregistered_approximation() -> None:
         exact_atomic_constraint(candidate)
 
 
+def test_zero_target_deletion_has_zero_jacobian_residual() -> None:
+    candidate = _candidate("mvp-whole-deletion", [[], []], (0, 1))
+    exact = exact_atomic_constraint(candidate)
+    state = CanonicalConstraintState.create(
+        exact.system, candidate.transformation, [exact.primitive]
+    )
+    assert state.diagnostics["target_dimension"] == 0
+    assert state.diagnostics["jacobian_constraint_residual_infinity"] == 0.0
+
+
 def test_equivalent_candidate_construction_paths_share_semantic_primitive() -> None:
     constituent = exact_atomic_constraint(
         _candidate("mvp-constituent-deletion", [[1.0], [0.0]], (1,))

@@ -20,7 +20,7 @@ from .v3_protocol import _write_exclusive
 from .v4_protocol import DEFAULT_MANIFEST as V4_MANIFEST, audit_manifest
 
 
-PROTOCOL_TAG = "dvg-obs-v4-s1-constraint-ir-v1"
+PROTOCOL_TAG = "dvg-obs-v4-s1-constraint-ir-v1.1"
 REQUIRED_THREADS = {
     "OMP_NUM_THREADS": "1",
     "OPENBLAS_NUM_THREADS": "1",
