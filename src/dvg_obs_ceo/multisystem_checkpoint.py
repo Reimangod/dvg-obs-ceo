@@ -16,14 +16,14 @@ from typing import Any
 
 import numpy as np
 
-from .baseline import ROOT, _environment, _nested_sum, verify_upstream
+from .baseline import ROOT, _environment, _load_upstream, _nested_sum, verify_upstream
 from .hessian import HessianCaptureSession, capture_to_dict
 from .identity import canonical_json_bytes
 from .resources import AnsatzStructure, evaluate_full_circuit_resources, paper_era_backend, resources_to_dict
 from .s8_probe import _state_vector
 
 
-PROTOCOL_TAG = "dvg-obs-full-figures-checkpoint-protocol-v1"
+PROTOCOL_TAG = "dvg-obs-full-figures-checkpoint-protocol-v1.1"
 MANIFEST_PATH = ROOT / "manifests" / "full-figures-ceo-star-v4-v1.json"
 CHEMICAL_ACCURACY_HARTREE = 0.0015936
 REQUIRED_THREADS = {"OMP_NUM_THREADS": "1", "OPENBLAS_NUM_THREADS": "1", "MKL_NUM_THREADS": "1"}
@@ -68,7 +68,10 @@ def verify_freeze(case_id: str) -> tuple[dict[str, Any], dict[str, Any]]:
 
 
 def _algorithm(case: dict[str, Any]) -> tuple[Any, Any]:
-    verify_upstream()
+    # In addition to verifying the pinned commit, this registers the vendored
+    # package path before importing molecule factories absent from baseline.py's
+    # two-case public tuple.
+    _load_upstream()
     molecules = importlib.import_module("adaptvqe.molecules")
     pools = importlib.import_module("adaptvqe.pools")
     algorithms = importlib.import_module("adaptvqe.algorithms.adapt_vqe")
