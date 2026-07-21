@@ -18,7 +18,7 @@ from .resources import AnsatzStructure, evaluate_full_circuit_resources, paper_e
 from .s10_lih import _algorithm as _lih_algorithm
 
 
-REPORT_TAG = "dvg-obs-v4-s9-report-v1"
+REPORT_TAG = "dvg-obs-v4-s9-report-v1.1"
 S7_SUMMARY = ROOT / "artifacts" / "v4" / "s7-lih-development-v1-2" / "summary.json"
 V2_SUMMARY = ROOT / "artifacts" / "s10" / "lih-3a-first-accuracy-primary-v1-2" / "summary.json"
 V2_TRIAL = ROOT / "artifacts" / "s10" / "lih-3a-first-accuracy-primary-v1-2" / "selected-trial.json"
@@ -171,10 +171,15 @@ def run(output: Path) -> dict[str, Any]:
         plan = compose_registered_candidates(
             source_structure, blocks, tuple(by_id[value] for value in record["candidate_ids"])
         )
+        # The search-level eligibility flag is evaluated before the frozen
+        # confidence/quality filter.  Only post-filter candidates are selector
+        # inputs and therefore have resource assessments to reconstruct.
+        item = assessment.get(plan.state.constraint_semantic_id)
+        if item is None:
+            continue
         target = AnsatzStructure.create(plan.target_indices, [1.0] * len(plan.target_indices), plan.target_iteration_counts)
         resources = evaluate_full_circuit_resources(pool, target, paper_era_backend(), coefficient_policy="deterministic-structural").snapshot
-        item = assessment.get(plan.state.constraint_semantic_id)
-        if item is None or item["structure_digest"] != resources.structure_digest:
+        if item["structure_digest"] != resources.structure_digest:
             raise V4ReportingError("Pareto reconstruction differs from the frozen selector")
         pareto_rows.append({
             "semantic_id": plan.state.constraint_semantic_id,
@@ -184,7 +189,7 @@ def run(output: Path) -> dict[str, Any]:
             "cnot_depth": resources.cnot_depth, "total_depth": resources.total_depth,
             "pareto": plan.state.constraint_semantic_id in s7["selection"]["pareto_semantic_ids"],
         })
-    if len(pareto_rows) != s7["selection"]["eligible_count"]:
+    if len(pareto_rows) != s7["selection"]["input_count"]:
         raise V4ReportingError("Pareto reconstruction count differs from selector")
     branch_rows = []
     for case in s4["cases"]:
