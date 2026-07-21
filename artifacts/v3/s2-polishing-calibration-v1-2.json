@@ -1,0 +1,1722 @@
+{
+  "artifact_kind": "v3-s2-polishing-calibration",
+  "case_counts": {
+    "h2-1.5-iteration-1": 1,
+    "h4-1.5-first-chemical-accuracy": 16
+  },
+  "claim_boundary": "H2/H4 calibration of one fixed polishing configuration only; no LiH evaluation, new ansatz discovery, validation, or paper Measurement Cost claim.",
+  "execution_freeze": {
+    "head": "bf1e05c29db55f64e3fb433880073f02cfbf84b1",
+    "protocol_tag": "dvg-obs-v3-s2-polishing-protocol-v1.2",
+    "threads": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    }
+  },
+  "failed_candidate_ids": [
+    "candidate-v1:d23aa90310d38b46684404e6b5d8c53f0297d5b46b7441cdd2908c7ed224d799"
+  ],
+  "failure_injection": {
+    "failure_reason": "EvaluationBudgetExceeded",
+    "input_unchanged": true,
+    "passed": true
+  },
+  "manifest_sha256": "6a56ba8f3547b6545f4d918105efd25a914f196986c54017234cebdb940bc725",
+  "maximum_final_gradient_infinity": 1.6579406493522075e-08,
+  "passed": false,
+  "protocol_id": "dvg-obs-v3-s2-polishing-protocol-v1.2",
+  "records": [
+    {
+      "candidate_id": "candidate-v1:a9dbe642deb55cc69fbd01a1342ab2358430f66630037c8b84b682ec5b539f04",
+      "case_id": "h2-1.5-iteration-1",
+      "checks": {
+        "energy_nonworse": true,
+        "finite": true,
+        "independent_energy": true,
+        "optimizer_success": true,
+        "permitted_status": true,
+        "replay_identical": true,
+        "stationarity": true,
+        "work_reconciles": true
+      },
+      "independent_final_energy_hartree": -0.9108735545943865,
+      "independent_final_gradient": [],
+      "independent_final_gradient_infinity": 0.0,
+      "initial_energy_hartree": -0.9108735545943865,
+      "initial_gradient_infinity": 0.0,
+      "kind": "block-deletion",
+      "passed": true,
+      "result": {
+        "config": {
+          "acceptance_eta": 0.15,
+          "certification_infinity_threshold": 1e-08,
+          "damping": 0.0,
+          "fallback_policy": "none-fail-closed",
+          "gradient_l2_tolerance": 5e-09,
+          "initial_trust_radius": 0.05,
+          "maximum_energy_evaluations": 16,
+          "maximum_gradient_vector_evaluations": 128,
+          "maximum_hessian_vector_products": 64,
+          "maximum_iterations": 8,
+          "maximum_trust_radius": 0.5,
+          "permitted_success_statuses": [
+            0
+          ],
+          "relative_hvp_step": 6.055454452393343e-06
+        },
+        "coordinates": [],
+        "energy_hartree": -0.9108735545943865,
+        "gradient": [],
+        "gradient_infinity": 0.0,
+        "gradient_l2": 0.0,
+        "iterations": 0,
+        "message": "exact zero-dimensional target",
+        "preflight": {
+          "certified": true,
+          "gradient_infinity": 0.0,
+          "performed": false,
+          "threshold": 1e-08
+        },
+        "scipy_reported": {
+          "dummy_hessian_initializations": 0,
+          "function_evaluations": 1,
+          "gradient_evaluations_excluding_hvp": 0,
+          "hessian_evaluations_including_dummy": 0
+        },
+        "status": 0,
+        "success": true,
+        "termination_origin": "zero-dimensional-exact",
+        "version": "target-native-trust-ncg-central-gradient-hvp-v1",
+        "work": {
+          "energy_evaluations": 1,
+          "gradient_vector_evaluations": 0,
+          "hessian_vector_gradient_evaluations": 0,
+          "hessian_vector_products": 0,
+          "paper_measurement_cost": null
+        }
+      },
+      "target_dimension": 0
+    },
+    {
+      "candidate_id": "candidate-v1:436b6f9a209a6dd9b2c0bdc6e7df9af0c89e1f77f2438b6fff669524035beea2",
+      "case_id": "h4-1.5-first-chemical-accuracy",
+      "checks": {
+        "energy_nonworse": true,
+        "finite": true,
+        "independent_energy": true,
+        "optimizer_success": true,
+        "permitted_status": true,
+        "replay_identical": true,
+        "stationarity": true,
+        "work_reconciles": true
+      },
+      "independent_final_energy_hartree": -1.9918340731079978,
+      "independent_final_gradient": [
+        4.515787743741839e-10,
+        2.9142972063356254e-10,
+        -9.501474845623192e-10,
+        -4.4342954447218474e-09,
+        1.887366101946397e-09,
+        1.0575672768076139e-09,
+        8.324569922280034e-10,
+        1.0759908190133283e-09,
+        9.696505959277957e-10
+      ],
+      "independent_final_gradient_infinity": 4.4342954447218474e-09,
+      "initial_energy_hartree": -1.9918340731079982,
+      "initial_gradient_infinity": 4.434295194921667e-09,
+      "kind": "mvp-to-ovp-sum",
+      "passed": true,
+      "result": {
+        "config": {
+          "acceptance_eta": 0.15,
+          "certification_infinity_threshold": 1e-08,
+          "damping": 0.0,
+          "fallback_policy": "none-fail-closed",
+          "gradient_l2_tolerance": 5e-09,
+          "initial_trust_radius": 0.05,
+          "maximum_energy_evaluations": 16,
+          "maximum_gradient_vector_evaluations": 128,
+          "maximum_hessian_vector_products": 64,
+          "maximum_iterations": 8,
+          "maximum_trust_radius": 0.5,
+          "permitted_success_statuses": [
+            0
+          ],
+          "relative_hvp_step": 6.055454452393343e-06
+        },
+        "coordinates": [
+          -0.31677052462662236,
+          -0.13291386343199246,
+          0.23109459309385105,
+          0.23028850340785154,
+          -0.1305364518895854,
+          -0.11125036111626052,
+          -0.12152604025266323,
+          0.15712555014787413,
+          -0.11106865244122649
+        ],
+        "energy_hartree": -1.9918340731079978,
+        "failure_reason": null,
+        "gradient": [
+          4.515787743741839e-10,
+          2.9142972063356254e-10,
+          -9.501474845623192e-10,
+          -4.4342954447218474e-09,
+          1.887366101946397e-09,
+          1.0575672768076139e-09,
+          8.324569922280034e-10,
+          1.0759908190133283e-09,
+          9.696505959277957e-10
+        ],
+        "gradient_infinity": 4.4342954447218474e-09,
+        "gradient_l2": 5.322233884139148e-09,
+        "iterations": 0,
+        "message": "preflight infinity-norm certificate already satisfied",
+        "preflight": {
+          "certified": true,
+          "gradient_infinity": 4.4342954447218474e-09,
+          "performed": true,
+          "threshold": 1e-08
+        },
+        "scipy_reported": {
+          "dummy_hessian_initializations": 0,
+          "function_evaluations": 0,
+          "gradient_evaluations_excluding_hvp": 0,
+          "hessian_evaluations_including_dummy": 0
+        },
+        "status": 0,
+        "success": true,
+        "termination_origin": "preflight-certificate",
+        "version": "target-native-trust-ncg-central-gradient-hvp-v1",
+        "work": {
+          "energy_evaluations": 1,
+          "gradient_vector_evaluations": 1,
+          "hessian_vector_gradient_evaluations": 0,
+          "hessian_vector_products": 0,
+          "paper_measurement_cost": null
+        }
+      },
+      "target_dimension": 9
+    },
+    {
+      "candidate_id": "candidate-v1:4d1a87a7bdec5c9a5995c45f8f39773b86e20eb88aa20f93f98cf50dd4e8711d",
+      "case_id": "h4-1.5-first-chemical-accuracy",
+      "checks": {
+        "energy_nonworse": true,
+        "finite": true,
+        "independent_energy": true,
+        "optimizer_success": true,
+        "permitted_status": true,
+        "replay_identical": true,
+        "stationarity": true,
+        "work_reconciles": true
+      },
+      "independent_final_energy_hartree": -1.984425418212042,
+      "independent_final_gradient": [
+        1.378699598930666e-09,
+        2.8872402732527114e-09,
+        5.6492351799102e-09,
+        4.437768666432085e-09,
+        4.99972691589759e-09,
+        1.1068024032001578e-09,
+        8.216273720412781e-10,
+        1.1347289280080886e-09
+      ],
+      "independent_final_gradient_infinity": 5.6492351799102e-09,
+      "initial_energy_hartree": -1.9844254182120422,
+      "initial_gradient_infinity": 5.649235579547121e-09,
+      "kind": "mvp-whole-deletion",
+      "passed": true,
+      "result": {
+        "config": {
+          "acceptance_eta": 0.15,
+          "certification_infinity_threshold": 1e-08,
+          "damping": 0.0,
+          "fallback_policy": "none-fail-closed",
+          "gradient_l2_tolerance": 5e-09,
+          "initial_trust_radius": 0.05,
+          "maximum_energy_evaluations": 16,
+          "maximum_gradient_vector_evaluations": 128,
+          "maximum_hessian_vector_products": 64,
+          "maximum_iterations": 8,
+          "maximum_trust_radius": 0.5,
+          "permitted_success_statuses": [
+            0
+          ],
+          "relative_hvp_step": 6.055454452393343e-06
+        },
+        "coordinates": [
+          -0.33819944808149977,
+          -0.14087901959317273,
+          0.25051007621140103,
+          0.2515948412742324,
+          -0.09356331714400593,
+          -0.07981231207951714,
+          -0.08682153932237452,
+          0.17146376404663308
+        ],
+        "energy_hartree": -1.984425418212042,
+        "failure_reason": null,
+        "gradient": [
+          1.378699598930666e-09,
+          2.8872402732527114e-09,
+          5.6492351799102e-09,
+          4.437768666432085e-09,
+          4.99972691589759e-09,
+          1.1068024032001578e-09,
+          8.216273720412781e-10,
+          1.1347289280080886e-09
+        ],
+        "gradient_infinity": 5.6492351799102e-09,
+        "gradient_l2": 9.488391850367044e-09,
+        "iterations": 0,
+        "message": "preflight infinity-norm certificate already satisfied",
+        "preflight": {
+          "certified": true,
+          "gradient_infinity": 5.6492351799102e-09,
+          "performed": true,
+          "threshold": 1e-08
+        },
+        "scipy_reported": {
+          "dummy_hessian_initializations": 0,
+          "function_evaluations": 0,
+          "gradient_evaluations_excluding_hvp": 0,
+          "hessian_evaluations_including_dummy": 0
+        },
+        "status": 0,
+        "success": true,
+        "termination_origin": "preflight-certificate",
+        "version": "target-native-trust-ncg-central-gradient-hvp-v1",
+        "work": {
+          "energy_evaluations": 1,
+          "gradient_vector_evaluations": 1,
+          "hessian_vector_gradient_evaluations": 0,
+          "hessian_vector_products": 0,
+          "paper_measurement_cost": null
+        }
+      },
+      "target_dimension": 8
+    },
+    {
+      "candidate_id": "candidate-v1:58857b6297c6ea4052c33f3596c196575f4c48f59bd1f611b3571bddf9101ce8",
+      "case_id": "h4-1.5-first-chemical-accuracy",
+      "checks": {
+        "energy_nonworse": true,
+        "finite": true,
+        "independent_energy": true,
+        "optimizer_success": true,
+        "permitted_status": true,
+        "replay_identical": true,
+        "stationarity": true,
+        "work_reconciles": true
+      },
+      "independent_final_energy_hartree": -1.9890148980612359,
+      "independent_final_gradient": [
+        -3.448494823032888e-10,
+        -2.5786754259682354e-09,
+        3.42483384620923e-09,
+        -1.8276204022393827e-09,
+        1.4867284402284714e-09,
+        5.00593103427982e-10,
+        -1.3101901334688915e-09,
+        -2.515471241026912e-09,
+        1.4526858674313026e-09
+      ],
+      "independent_final_gradient_infinity": 3.42483384620923e-09,
+      "initial_energy_hartree": -1.989014898061236,
+      "initial_gradient_infinity": 3.4248343080793553e-09,
+      "kind": "block-deletion",
+      "passed": true,
+      "result": {
+        "config": {
+          "acceptance_eta": 0.15,
+          "certification_infinity_threshold": 1e-08,
+          "damping": 0.0,
+          "fallback_policy": "none-fail-closed",
+          "gradient_l2_tolerance": 5e-09,
+          "initial_trust_radius": 0.05,
+          "maximum_energy_evaluations": 16,
+          "maximum_gradient_vector_evaluations": 128,
+          "maximum_hessian_vector_products": 64,
+          "maximum_iterations": 8,
+          "maximum_trust_radius": 0.5,
+          "permitted_success_statuses": [
+            0
+          ],
+          "relative_hvp_step": 6.055454452393343e-06
+        },
+        "coordinates": [
+          -0.40570102757909626,
+          -0.14336566203941944,
+          0.20458769928693626,
+          0.2045876956785654,
+          -0.05766842117283723,
+          -0.13688411357983588,
+          0.34109237521948227,
+          -0.13688411574908765,
+          0.30363031865723233
+        ],
+        "energy_hartree": -1.9890148980612359,
+        "failure_reason": null,
+        "gradient": [
+          -3.448494823032888e-10,
+          -2.5786754259682354e-09,
+          3.42483384620923e-09,
+          -1.8276204022393827e-09,
+          1.4867284402284714e-09,
+          5.00593103427982e-10,
+          -1.3101901334688915e-09,
+          -2.515471241026912e-09,
+          1.4526858674313026e-09
+        ],
+        "gradient_infinity": 3.42483384620923e-09,
+        "gradient_l2": 5.869720284361976e-09,
+        "iterations": 0,
+        "message": "preflight infinity-norm certificate already satisfied",
+        "preflight": {
+          "certified": true,
+          "gradient_infinity": 3.42483384620923e-09,
+          "performed": true,
+          "threshold": 1e-08
+        },
+        "scipy_reported": {
+          "dummy_hessian_initializations": 0,
+          "function_evaluations": 0,
+          "gradient_evaluations_excluding_hvp": 0,
+          "hessian_evaluations_including_dummy": 0
+        },
+        "status": 0,
+        "success": true,
+        "termination_origin": "preflight-certificate",
+        "version": "target-native-trust-ncg-central-gradient-hvp-v1",
+        "work": {
+          "energy_evaluations": 1,
+          "gradient_vector_evaluations": 1,
+          "hessian_vector_gradient_evaluations": 0,
+          "hessian_vector_products": 0,
+          "paper_measurement_cost": null
+        }
+      },
+      "target_dimension": 9
+    },
+    {
+      "candidate_id": "candidate-v1:5d7805f7dfc77e353809c27d3c11919946756631254aa0f75804ad48ae336551",
+      "case_id": "h4-1.5-first-chemical-accuracy",
+      "checks": {
+        "energy_nonworse": true,
+        "finite": true,
+        "independent_energy": true,
+        "optimizer_success": true,
+        "permitted_status": true,
+        "replay_identical": true,
+        "stationarity": true,
+        "work_reconciles": true
+      },
+      "independent_final_energy_hartree": -1.9776120674364102,
+      "independent_final_gradient": [
+        7.298934789901068e-10,
+        -1.6974091576749117e-09,
+        4.975729932243933e-10,
+        1.655172479544248e-09,
+        7.593620177104299e-10,
+        -8.786355345548336e-10,
+        2.0315476479890182e-09,
+        -5.710771439071394e-11,
+        -1.2964288809147462e-09
+      ],
+      "independent_final_gradient_infinity": 2.0315476479890182e-09,
+      "initial_energy_hartree": -1.9776120674364108,
+      "initial_gradient_infinity": 2.031547633352289e-09,
+      "kind": "block-deletion",
+      "passed": true,
+      "result": {
+        "config": {
+          "acceptance_eta": 0.15,
+          "certification_infinity_threshold": 1e-08,
+          "damping": 0.0,
+          "fallback_policy": "none-fail-closed",
+          "gradient_l2_tolerance": 5e-09,
+          "initial_trust_radius": 0.05,
+          "maximum_energy_evaluations": 16,
+          "maximum_gradient_vector_evaluations": 128,
+          "maximum_hessian_vector_products": 64,
+          "maximum_iterations": 8,
+          "maximum_trust_radius": 0.5,
+          "permitted_success_statuses": [
+            0
+          ],
+          "relative_hvp_step": 6.055454452393343e-06
+        },
+        "coordinates": [
+          -0.34889741037110883,
+          0.13834233936947007,
+          0.13834234087034214,
+          -0.1295997726903002,
+          -0.10805717905421268,
+          -0.18893847740824996,
+          0.4682662343260217,
+          -0.1889384766898295,
+          0.29328885994497134
+        ],
+        "energy_hartree": -1.9776120674364102,
+        "failure_reason": null,
+        "gradient": [
+          7.298934789901068e-10,
+          -1.6974091576749117e-09,
+          4.975729932243933e-10,
+          1.655172479544248e-09,
+          7.593620177104299e-10,
+          -8.786355345548336e-10,
+          2.0315476479890182e-09,
+          -5.710771439071394e-11,
+          -1.2964288809147462e-09
+        ],
+        "gradient_infinity": 2.0315476479890182e-09,
+        "gradient_l2": 3.6825158813974026e-09,
+        "iterations": 0,
+        "message": "preflight infinity-norm certificate already satisfied",
+        "preflight": {
+          "certified": true,
+          "gradient_infinity": 2.0315476479890182e-09,
+          "performed": true,
+          "threshold": 1e-08
+        },
+        "scipy_reported": {
+          "dummy_hessian_initializations": 0,
+          "function_evaluations": 0,
+          "gradient_evaluations_excluding_hvp": 0,
+          "hessian_evaluations_including_dummy": 0
+        },
+        "status": 0,
+        "success": true,
+        "termination_origin": "preflight-certificate",
+        "version": "target-native-trust-ncg-central-gradient-hvp-v1",
+        "work": {
+          "energy_evaluations": 1,
+          "gradient_vector_evaluations": 1,
+          "hessian_vector_gradient_evaluations": 0,
+          "hessian_vector_products": 0,
+          "paper_measurement_cost": null
+        }
+      },
+      "target_dimension": 9
+    },
+    {
+      "candidate_id": "candidate-v1:70b156419fc7f6bc31d927dea9d953a9705ccede9d044e5ae537e6ce5f8fd0e8",
+      "case_id": "h4-1.5-first-chemical-accuracy",
+      "checks": {
+        "energy_nonworse": true,
+        "finite": true,
+        "independent_energy": true,
+        "optimizer_success": true,
+        "permitted_status": true,
+        "replay_identical": true,
+        "stationarity": true,
+        "work_reconciles": true
+      },
+      "independent_final_energy_hartree": -1.984456157498671,
+      "independent_final_gradient": [
+        2.365949214322427e-09,
+        2.121106831842745e-10,
+        -1.4126682727245987e-09,
+        -5.936242886139809e-10,
+        5.677717926887149e-10,
+        1.3913744843774278e-09,
+        -1.3155090228950117e-09,
+        -9.041778662594036e-10,
+        9.879460322742561e-10
+      ],
+      "independent_final_gradient_infinity": 2.365949214322427e-09,
+      "initial_energy_hartree": -1.9844561574986717,
+      "initial_gradient_infinity": 2.365949436367032e-09,
+      "kind": "mvp-constituent-deletion",
+      "passed": true,
+      "result": {
+        "config": {
+          "acceptance_eta": 0.15,
+          "certification_infinity_threshold": 1e-08,
+          "damping": 0.0,
+          "fallback_policy": "none-fail-closed",
+          "gradient_l2_tolerance": 5e-09,
+          "initial_trust_radius": 0.05,
+          "maximum_energy_evaluations": 16,
+          "maximum_gradient_vector_evaluations": 128,
+          "maximum_hessian_vector_products": 64,
+          "maximum_iterations": 8,
+          "maximum_trust_radius": 0.5,
+          "permitted_success_statuses": [
+            0
+          ],
+          "relative_hvp_step": 6.055454452393343e-06
+        },
+        "coordinates": [
+          -0.34131269062741487,
+          -0.14190970484259025,
+          0.2499555319265614,
+          0.24877449836490215,
+          -0.09028392515479865,
+          -0.07701091852937515,
+          0.1828524153812904,
+          -0.08832285242476266,
+          0.03961943150713589
+        ],
+        "energy_hartree": -1.984456157498671,
+        "failure_reason": null,
+        "gradient": [
+          2.365949214322427e-09,
+          2.121106831842745e-10,
+          -1.4126682727245987e-09,
+          -5.936242886139809e-10,
+          5.677717926887149e-10,
+          1.3913744843774278e-09,
+          -1.3155090228950117e-09,
+          -9.041778662594036e-10,
+          9.879460322742561e-10
+        ],
+        "gradient_infinity": 2.365949214322427e-09,
+        "gradient_l2": 3.71122012303993e-09,
+        "iterations": 0,
+        "message": "preflight infinity-norm certificate already satisfied",
+        "preflight": {
+          "certified": true,
+          "gradient_infinity": 2.365949214322427e-09,
+          "performed": true,
+          "threshold": 1e-08
+        },
+        "scipy_reported": {
+          "dummy_hessian_initializations": 0,
+          "function_evaluations": 0,
+          "gradient_evaluations_excluding_hvp": 0,
+          "hessian_evaluations_including_dummy": 0
+        },
+        "status": 0,
+        "success": true,
+        "termination_origin": "preflight-certificate",
+        "version": "target-native-trust-ncg-central-gradient-hvp-v1",
+        "work": {
+          "energy_evaluations": 1,
+          "gradient_vector_evaluations": 1,
+          "hessian_vector_gradient_evaluations": 0,
+          "hessian_vector_products": 0,
+          "paper_measurement_cost": null
+        }
+      },
+      "target_dimension": 9
+    },
+    {
+      "candidate_id": "candidate-v1:7f20067caa031a05345976e1024b170c50ce565c1e60805b9168e4ed0e17b548",
+      "case_id": "h4-1.5-first-chemical-accuracy",
+      "checks": {
+        "energy_nonworse": true,
+        "finite": true,
+        "independent_energy": true,
+        "optimizer_success": true,
+        "permitted_status": true,
+        "replay_identical": true,
+        "stationarity": true,
+        "work_reconciles": true
+      },
+      "independent_final_energy_hartree": -1.9875303991928532,
+      "independent_final_gradient": [
+        -2.2390396203775254e-09,
+        5.763715268947145e-10,
+        -7.863139757802867e-09,
+        4.291707517145582e-09,
+        -9.343685858018147e-09,
+        3.6404833869685405e-09,
+        7.687953734562825e-09,
+        -6.3107463421641086e-09,
+        -3.337163205496818e-09
+      ],
+      "independent_final_gradient_infinity": 9.343685858018147e-09,
+      "initial_energy_hartree": -1.9875303991928537,
+      "initial_gradient_infinity": 9.343685710566652e-09,
+      "kind": "mvp-to-ovp-sum",
+      "passed": true,
+      "result": {
+        "config": {
+          "acceptance_eta": 0.15,
+          "certification_infinity_threshold": 1e-08,
+          "damping": 0.0,
+          "fallback_policy": "none-fail-closed",
+          "gradient_l2_tolerance": 5e-09,
+          "initial_trust_radius": 0.05,
+          "maximum_energy_evaluations": 16,
+          "maximum_gradient_vector_evaluations": 128,
+          "maximum_hessian_vector_products": 64,
+          "maximum_iterations": 8,
+          "maximum_trust_radius": 0.5,
+          "permitted_success_statuses": [
+            0
+          ],
+          "relative_hvp_step": 6.055454452393343e-06
+        },
+        "coordinates": [
+          -0.30520057655450483,
+          -0.14280391815162727,
+          0.23777892756020116,
+          0.2357434794192408,
+          -0.1174005196046742,
+          -0.10018922066159233,
+          -0.08544850977402686,
+          -0.10258102189221714,
+          -0.2018772846678233
+        ],
+        "energy_hartree": -1.9875303991928532,
+        "failure_reason": null,
+        "gradient": [
+          -2.2390396203775254e-09,
+          5.763715268947145e-10,
+          -7.863139757802867e-09,
+          4.291707517145582e-09,
+          -9.343685858018147e-09,
+          3.6404833869685405e-09,
+          7.687953734562825e-09,
+          -6.3107463421641086e-09,
+          -3.337163205496818e-09
+        ],
+        "gradient_infinity": 9.343685858018147e-09,
+        "gradient_l2": 1.7210973761128668e-08,
+        "iterations": 0,
+        "message": "preflight infinity-norm certificate already satisfied",
+        "preflight": {
+          "certified": true,
+          "gradient_infinity": 9.343685858018147e-09,
+          "performed": true,
+          "threshold": 1e-08
+        },
+        "scipy_reported": {
+          "dummy_hessian_initializations": 0,
+          "function_evaluations": 0,
+          "gradient_evaluations_excluding_hvp": 0,
+          "hessian_evaluations_including_dummy": 0
+        },
+        "status": 0,
+        "success": true,
+        "termination_origin": "preflight-certificate",
+        "version": "target-native-trust-ncg-central-gradient-hvp-v1",
+        "work": {
+          "energy_evaluations": 1,
+          "gradient_vector_evaluations": 1,
+          "hessian_vector_gradient_evaluations": 0,
+          "hessian_vector_products": 0,
+          "paper_measurement_cost": null
+        }
+      },
+      "target_dimension": 9
+    },
+    {
+      "candidate_id": "candidate-v1:7f2a090c514c1939fe586e0a34c2257a20232ea354b9081ba42427e996117ab2",
+      "case_id": "h4-1.5-first-chemical-accuracy",
+      "checks": {
+        "energy_nonworse": true,
+        "finite": true,
+        "independent_energy": true,
+        "optimizer_success": true,
+        "permitted_status": true,
+        "replay_identical": true,
+        "stationarity": true,
+        "work_reconciles": true
+      },
+      "independent_final_energy_hartree": -1.983125413950881,
+      "independent_final_gradient": [
+        -4.792768404371373e-10,
+        -1.4162565564745933e-10,
+        1.4801405413822355e-10,
+        2.441665897245926e-10,
+        9.188346524607871e-11,
+        -2.680481323014128e-10,
+        9.282879456437576e-11,
+        -2.5956992458220363e-10
+      ],
+      "independent_final_gradient_infinity": 4.792768404371373e-10,
+      "initial_energy_hartree": -1.9831254139508814,
+      "initial_gradient_infinity": 4.792768404371373e-10,
+      "kind": "mvp-whole-deletion",
+      "passed": true,
+      "result": {
+        "config": {
+          "acceptance_eta": 0.15,
+          "certification_infinity_threshold": 1e-08,
+          "damping": 0.0,
+          "fallback_policy": "none-fail-closed",
+          "gradient_l2_tolerance": 5e-09,
+          "initial_trust_radius": 0.05,
+          "maximum_energy_evaluations": 16,
+          "maximum_gradient_vector_evaluations": 128,
+          "maximum_hessian_vector_products": 64,
+          "maximum_iterations": 8,
+          "maximum_trust_radius": 0.5,
+          "permitted_success_statuses": [
+            0
+          ],
+          "relative_hvp_step": 6.055454452393343e-06
+        },
+        "coordinates": [
+          -0.3264178053151434,
+          -0.14008470313319196,
+          0.25762399151878,
+          0.25581675719464725,
+          -0.09755559127201968,
+          -0.08320085528414435,
+          -0.07700833791254404,
+          -0.1232682552155009
+        ],
+        "energy_hartree": -1.983125413950881,
+        "failure_reason": null,
+        "gradient": [
+          -4.792768404371373e-10,
+          -1.4162565564745933e-10,
+          1.4801405413822355e-10,
+          2.441665897245926e-10,
+          9.188346524607871e-11,
+          -2.680481323014128e-10,
+          9.282879456437576e-11,
+          -2.5956992458220363e-10
+        ],
+        "gradient_infinity": 4.792768404371373e-10,
+        "gradient_l2": 6.982662122292167e-10,
+        "iterations": 0,
+        "message": "preflight infinity-norm certificate already satisfied",
+        "preflight": {
+          "certified": true,
+          "gradient_infinity": 4.792768404371373e-10,
+          "performed": true,
+          "threshold": 1e-08
+        },
+        "scipy_reported": {
+          "dummy_hessian_initializations": 0,
+          "function_evaluations": 0,
+          "gradient_evaluations_excluding_hvp": 0,
+          "hessian_evaluations_including_dummy": 0
+        },
+        "status": 0,
+        "success": true,
+        "termination_origin": "preflight-certificate",
+        "version": "target-native-trust-ncg-central-gradient-hvp-v1",
+        "work": {
+          "energy_evaluations": 1,
+          "gradient_vector_evaluations": 1,
+          "hessian_vector_gradient_evaluations": 0,
+          "hessian_vector_products": 0,
+          "paper_measurement_cost": null
+        }
+      },
+      "target_dimension": 8
+    },
+    {
+      "candidate_id": "candidate-v1:86cf795e09e9c5e0e0708ca83cd8bf0a13333452f778bd5e093c9392f11b32d6",
+      "case_id": "h4-1.5-first-chemical-accuracy",
+      "checks": {
+        "energy_nonworse": true,
+        "finite": true,
+        "independent_energy": true,
+        "optimizer_success": true,
+        "permitted_status": true,
+        "replay_identical": true,
+        "stationarity": true,
+        "work_reconciles": true
+      },
+      "independent_final_energy_hartree": -1.984456157498671,
+      "independent_final_gradient": [
+        5.686724424691647e-10,
+        4.4429061818451743e-10,
+        -1.0741045748142997e-10,
+        -8.869157769320068e-10,
+        4.4778095033976006e-10,
+        1.0758357885110037e-09,
+        -3.04098572278394e-10,
+        -6.624242846961503e-10,
+        4.472544366113107e-10
+      ],
+      "independent_final_gradient_infinity": 1.0758357885110037e-09,
+      "initial_energy_hartree": -1.9844561574986712,
+      "initial_gradient_infinity": 1.0758357260609586e-09,
+      "kind": "mvp-constituent-deletion",
+      "passed": true,
+      "result": {
+        "config": {
+          "acceptance_eta": 0.15,
+          "certification_infinity_threshold": 1e-08,
+          "damping": 0.0,
+          "fallback_policy": "none-fail-closed",
+          "gradient_l2_tolerance": 5e-09,
+          "initial_trust_radius": 0.05,
+          "maximum_energy_evaluations": 16,
+          "maximum_gradient_vector_evaluations": 128,
+          "maximum_hessian_vector_products": 64,
+          "maximum_iterations": 8,
+          "maximum_trust_radius": 0.5,
+          "permitted_success_statuses": [
+            0
+          ],
+          "relative_hvp_step": 6.055454452393343e-06
+        },
+        "coordinates": [
+          -0.34131269206349,
+          -0.14190970467932146,
+          0.24877449930617113,
+          0.2499555328449264,
+          -0.09028392539127915,
+          -0.07701091883361959,
+          -0.08832285175306474,
+          0.19033691639092212,
+          0.032290064301153006
+        ],
+        "energy_hartree": -1.984456157498671,
+        "failure_reason": null,
+        "gradient": [
+          5.686724424691647e-10,
+          4.4429061818451743e-10,
+          -1.0741045748142997e-10,
+          -8.869157769320068e-10,
+          4.4778095033976006e-10,
+          1.0758357885110037e-09,
+          -3.04098572278394e-10,
+          -6.624242846961503e-10,
+          4.472544366113107e-10
+        ],
+        "gradient_infinity": 1.0758357885110037e-09,
+        "gradient_l2": 1.8461278208703854e-09,
+        "iterations": 0,
+        "message": "preflight infinity-norm certificate already satisfied",
+        "preflight": {
+          "certified": true,
+          "gradient_infinity": 1.0758357885110037e-09,
+          "performed": true,
+          "threshold": 1e-08
+        },
+        "scipy_reported": {
+          "dummy_hessian_initializations": 0,
+          "function_evaluations": 0,
+          "gradient_evaluations_excluding_hvp": 0,
+          "hessian_evaluations_including_dummy": 0
+        },
+        "status": 0,
+        "success": true,
+        "termination_origin": "preflight-certificate",
+        "version": "target-native-trust-ncg-central-gradient-hvp-v1",
+        "work": {
+          "energy_evaluations": 1,
+          "gradient_vector_evaluations": 1,
+          "hessian_vector_gradient_evaluations": 0,
+          "hessian_vector_products": 0,
+          "paper_measurement_cost": null
+        }
+      },
+      "target_dimension": 9
+    },
+    {
+      "candidate_id": "candidate-v1:920d2dd8c375f70c51cf28bcbcf2209142fdbc274f81e80194748d8bfd971d69",
+      "case_id": "h4-1.5-first-chemical-accuracy",
+      "checks": {
+        "energy_nonworse": true,
+        "finite": true,
+        "independent_energy": true,
+        "optimizer_success": true,
+        "permitted_status": true,
+        "replay_identical": true,
+        "stationarity": true,
+        "work_reconciles": true
+      },
+      "independent_final_energy_hartree": -1.9928937733016399,
+      "independent_final_gradient": [
+        6.103835215043318e-10,
+        -6.579165337528003e-10,
+        2.0111230098797395e-09,
+        -2.2038690317138787e-10,
+        -3.7487634871324893e-10,
+        -2.1192977164852245e-09,
+        -2.7112708692739185e-10,
+        1.0008770617853102e-09,
+        5.944933529830609e-10
+      ],
+      "independent_final_gradient_infinity": 2.1192977164852245e-09,
+      "initial_energy_hartree": -1.9928937733016405,
+      "initial_gradient_infinity": 2.1192979107742538e-09,
+      "kind": "mvp-to-ovp-diff",
+      "passed": true,
+      "result": {
+        "config": {
+          "acceptance_eta": 0.15,
+          "certification_infinity_threshold": 1e-08,
+          "damping": 0.0,
+          "fallback_policy": "none-fail-closed",
+          "gradient_l2_tolerance": 5e-09,
+          "initial_trust_radius": 0.05,
+          "maximum_energy_evaluations": 16,
+          "maximum_gradient_vector_evaluations": 128,
+          "maximum_hessian_vector_products": 64,
+          "maximum_iterations": 8,
+          "maximum_trust_radius": 0.5,
+          "permitted_success_statuses": [
+            0
+          ],
+          "relative_hvp_step": 6.055454452393343e-06
+        },
+        "coordinates": [
+          -0.3414533544754983,
+          -0.13865507952366427,
+          0.21472587176008745,
+          0.21375500908194786,
+          -0.1140272663941125,
+          -0.09693811682841544,
+          -0.14701429634066532,
+          -0.1359857562600299,
+          0.03799302022969787
+        ],
+        "energy_hartree": -1.9928937733016399,
+        "failure_reason": null,
+        "gradient": [
+          6.103835215043318e-10,
+          -6.579165337528003e-10,
+          2.0111230098797395e-09,
+          -2.2038690317138787e-10,
+          -3.7487634871324893e-10,
+          -2.1192977164852245e-09,
+          -2.7112708692739185e-10,
+          1.0008770617853102e-09,
+          5.944933529830609e-10
+        ],
+        "gradient_infinity": 2.1192977164852245e-09,
+        "gradient_l2": 3.310475884431932e-09,
+        "iterations": 0,
+        "message": "preflight infinity-norm certificate already satisfied",
+        "preflight": {
+          "certified": true,
+          "gradient_infinity": 2.1192977164852245e-09,
+          "performed": true,
+          "threshold": 1e-08
+        },
+        "scipy_reported": {
+          "dummy_hessian_initializations": 0,
+          "function_evaluations": 0,
+          "gradient_evaluations_excluding_hvp": 0,
+          "hessian_evaluations_including_dummy": 0
+        },
+        "status": 0,
+        "success": true,
+        "termination_origin": "preflight-certificate",
+        "version": "target-native-trust-ncg-central-gradient-hvp-v1",
+        "work": {
+          "energy_evaluations": 1,
+          "gradient_vector_evaluations": 1,
+          "hessian_vector_gradient_evaluations": 0,
+          "hessian_vector_products": 0,
+          "paper_measurement_cost": null
+        }
+      },
+      "target_dimension": 9
+    },
+    {
+      "candidate_id": "candidate-v1:9fa58e963f34702253766deeed02aff01661fe0a3ee3b3634013d447c45214c2",
+      "case_id": "h4-1.5-first-chemical-accuracy",
+      "checks": {
+        "energy_nonworse": true,
+        "finite": true,
+        "independent_energy": true,
+        "optimizer_success": true,
+        "permitted_status": true,
+        "replay_identical": true,
+        "stationarity": true,
+        "work_reconciles": true
+      },
+      "independent_final_energy_hartree": -1.9896053438545303,
+      "independent_final_gradient": [
+        -9.959251201507868e-10,
+        1.2778751945496936e-09,
+        -8.689020098047451e-10,
+        1.8938572238225149e-10,
+        6.719547110574375e-10,
+        -1.155081383839851e-09,
+        5.669514163697542e-10,
+        -5.711359371551872e-10,
+        -4.5941573462160434e-10
+      ],
+      "independent_final_gradient_infinity": 1.2778751945496936e-09,
+      "initial_energy_hartree": -1.9896053438545307,
+      "initial_gradient_infinity": 1.2778753333275716e-09,
+      "kind": "block-deletion",
+      "passed": true,
+      "result": {
+        "config": {
+          "acceptance_eta": 0.15,
+          "certification_infinity_threshold": 1e-08,
+          "damping": 0.0,
+          "fallback_policy": "none-fail-closed",
+          "gradient_l2_tolerance": 5e-09,
+          "initial_trust_radius": 0.05,
+          "maximum_energy_evaluations": 16,
+          "maximum_gradient_vector_evaluations": 128,
+          "maximum_hessian_vector_products": 64,
+          "maximum_iterations": 8,
+          "maximum_trust_radius": 0.5,
+          "permitted_success_statuses": [
+            0
+          ],
+          "relative_hvp_step": 6.055454452393343e-06
+        },
+        "coordinates": [
+          -0.4017162878008613,
+          -0.14201310166766154,
+          0.2038997418095468,
+          0.20389974255286666,
+          -0.07190178768039227,
+          -0.1384207023753447,
+          0.3403082619633058,
+          -0.13842070193158432,
+          0.29321243839278094
+        ],
+        "energy_hartree": -1.9896053438545303,
+        "failure_reason": null,
+        "gradient": [
+          -9.959251201507868e-10,
+          1.2778751945496936e-09,
+          -8.689020098047451e-10,
+          1.8938572238225149e-10,
+          6.719547110574375e-10,
+          -1.155081383839851e-09,
+          5.669514163697542e-10,
+          -5.711359371551872e-10,
+          -4.5941573462160434e-10
+        ],
+        "gradient_infinity": 1.2778751945496936e-09,
+        "gradient_l2": 2.461730820730636e-09,
+        "iterations": 0,
+        "message": "preflight infinity-norm certificate already satisfied",
+        "preflight": {
+          "certified": true,
+          "gradient_infinity": 1.2778751945496936e-09,
+          "performed": true,
+          "threshold": 1e-08
+        },
+        "scipy_reported": {
+          "dummy_hessian_initializations": 0,
+          "function_evaluations": 0,
+          "gradient_evaluations_excluding_hvp": 0,
+          "hessian_evaluations_including_dummy": 0
+        },
+        "status": 0,
+        "success": true,
+        "termination_origin": "preflight-certificate",
+        "version": "target-native-trust-ncg-central-gradient-hvp-v1",
+        "work": {
+          "energy_evaluations": 1,
+          "gradient_vector_evaluations": 1,
+          "hessian_vector_gradient_evaluations": 0,
+          "hessian_vector_products": 0,
+          "paper_measurement_cost": null
+        }
+      },
+      "target_dimension": 9
+    },
+    {
+      "candidate_id": "candidate-v1:af69fa8e99373f7d76ca6b2b4d45d396b109756ad087ed6cc28520d4c25a18a2",
+      "case_id": "h4-1.5-first-chemical-accuracy",
+      "checks": {
+        "energy_nonworse": true,
+        "finite": true,
+        "independent_energy": true,
+        "optimizer_success": true,
+        "permitted_status": true,
+        "replay_identical": true,
+        "stationarity": true,
+        "work_reconciles": true
+      },
+      "independent_final_energy_hartree": -1.9748754510267283,
+      "independent_final_gradient": [
+        8.777965021522505e-10,
+        2.891101531787843e-09,
+        -9.034959098149636e-10,
+        4.85884677165014e-10,
+        -5.727458438076205e-11,
+        7.126766659454331e-10,
+        -3.132935143951299e-11,
+        1.1993299131596302e-09,
+        2.414465849476244e-11
+      ],
+      "independent_final_gradient_infinity": 2.891101531787843e-09,
+      "initial_energy_hartree": -1.9748754510267288,
+      "initial_gradient_infinity": 2.891101594237888e-09,
+      "kind": "block-deletion",
+      "passed": true,
+      "result": {
+        "config": {
+          "acceptance_eta": 0.15,
+          "certification_infinity_threshold": 1e-08,
+          "damping": 0.0,
+          "fallback_policy": "none-fail-closed",
+          "gradient_l2_tolerance": 5e-09,
+          "initial_trust_radius": 0.05,
+          "maximum_energy_evaluations": 16,
+          "maximum_gradient_vector_evaluations": 128,
+          "maximum_hessian_vector_products": 64,
+          "maximum_iterations": 8,
+          "maximum_trust_radius": 0.5,
+          "permitted_success_statuses": [
+            0
+          ],
+          "relative_hvp_step": 6.055454452393343e-06
+        },
+        "coordinates": [
+          -0.37143632863326553,
+          -0.08356420729278766,
+          0.12982309858972094,
+          -0.10468970989065032,
+          -0.08741325082573288,
+          -0.21630772897851863,
+          0.46563768047849297,
+          -0.2179454318457664,
+          0.41635589123016
+        ],
+        "energy_hartree": -1.9748754510267283,
+        "failure_reason": null,
+        "gradient": [
+          8.777965021522505e-10,
+          2.891101531787843e-09,
+          -9.034959098149636e-10,
+          4.85884677165014e-10,
+          -5.727458438076205e-11,
+          7.126766659454331e-10,
+          -3.132935143951299e-11,
+          1.1993299131596302e-09,
+          2.414465849476244e-11
+        ],
+        "gradient_infinity": 2.891101531787843e-09,
+        "gradient_l2": 3.4831779579066697e-09,
+        "iterations": 0,
+        "message": "preflight infinity-norm certificate already satisfied",
+        "preflight": {
+          "certified": true,
+          "gradient_infinity": 2.891101531787843e-09,
+          "performed": true,
+          "threshold": 1e-08
+        },
+        "scipy_reported": {
+          "dummy_hessian_initializations": 0,
+          "function_evaluations": 0,
+          "gradient_evaluations_excluding_hvp": 0,
+          "hessian_evaluations_including_dummy": 0
+        },
+        "status": 0,
+        "success": true,
+        "termination_origin": "preflight-certificate",
+        "version": "target-native-trust-ncg-central-gradient-hvp-v1",
+        "work": {
+          "energy_evaluations": 1,
+          "gradient_vector_evaluations": 1,
+          "hessian_vector_gradient_evaluations": 0,
+          "hessian_vector_products": 0,
+          "paper_measurement_cost": null
+        }
+      },
+      "target_dimension": 9
+    },
+    {
+      "candidate_id": "candidate-v1:c53878b41fe0334d430d88bdbc45ebb5f1bc3eab1143b38578e92d2f984fc9d4",
+      "case_id": "h4-1.5-first-chemical-accuracy",
+      "checks": {
+        "energy_nonworse": true,
+        "finite": true,
+        "independent_energy": true,
+        "optimizer_success": true,
+        "permitted_status": true,
+        "replay_identical": true,
+        "stationarity": true,
+        "work_reconciles": true
+      },
+      "independent_final_energy_hartree": -1.993542317848607,
+      "independent_final_gradient": [
+        -1.9541013251966888e-10,
+        -2.482475731924172e-09,
+        3.231973310074271e-09,
+        -1.816279238120444e-09,
+        2.8693824330461304e-09,
+        -1.0064873240400729e-10,
+        1.5481444086765106e-09,
+        1.4880406689829484e-09,
+        1.1989447212812365e-09
+      ],
+      "independent_final_gradient_infinity": 3.231973310074271e-09,
+      "initial_energy_hartree": -1.9935423178486076,
+      "initial_gradient_infinity": 3.2319738088072703e-09,
+      "kind": "mvp-constituent-deletion",
+      "passed": true,
+      "result": {
+        "config": {
+          "acceptance_eta": 0.15,
+          "certification_infinity_threshold": 1e-08,
+          "damping": 0.0,
+          "fallback_policy": "none-fail-closed",
+          "gradient_l2_tolerance": 5e-09,
+          "initial_trust_radius": 0.05,
+          "maximum_energy_evaluations": 16,
+          "maximum_gradient_vector_evaluations": 128,
+          "maximum_hessian_vector_products": 64,
+          "maximum_iterations": 8,
+          "maximum_trust_radius": 0.5,
+          "permitted_success_statuses": [
+            0
+          ],
+          "relative_hvp_step": 6.055454452393343e-06
+        },
+        "coordinates": [
+          -0.33217767983081825,
+          -0.1336957710349209,
+          0.22026301494441136,
+          0.219605228655255,
+          -0.12449409652624416,
+          -0.10598432652077705,
+          -0.13434869067523839,
+          0.22927819321646162,
+          -0.13369338603688774
+        ],
+        "energy_hartree": -1.993542317848607,
+        "failure_reason": null,
+        "gradient": [
+          -1.9541013251966888e-10,
+          -2.482475731924172e-09,
+          3.231973310074271e-09,
+          -1.816279238120444e-09,
+          2.8693824330461304e-09,
+          -1.0064873240400729e-10,
+          1.5481444086765106e-09,
+          1.4880406689829484e-09,
+          1.1989447212812365e-09
+        ],
+        "gradient_infinity": 3.231973310074271e-09,
+        "gradient_l2": 5.851270197923148e-09,
+        "iterations": 0,
+        "message": "preflight infinity-norm certificate already satisfied",
+        "preflight": {
+          "certified": true,
+          "gradient_infinity": 3.231973310074271e-09,
+          "performed": true,
+          "threshold": 1e-08
+        },
+        "scipy_reported": {
+          "dummy_hessian_initializations": 0,
+          "function_evaluations": 0,
+          "gradient_evaluations_excluding_hvp": 0,
+          "hessian_evaluations_including_dummy": 0
+        },
+        "status": 0,
+        "success": true,
+        "termination_origin": "preflight-certificate",
+        "version": "target-native-trust-ncg-central-gradient-hvp-v1",
+        "work": {
+          "energy_evaluations": 1,
+          "gradient_vector_evaluations": 1,
+          "hessian_vector_gradient_evaluations": 0,
+          "hessian_vector_products": 0,
+          "paper_measurement_cost": null
+        }
+      },
+      "target_dimension": 9
+    },
+    {
+      "candidate_id": "candidate-v1:d23aa90310d38b46684404e6b5d8c53f0297d5b46b7441cdd2908c7ed224d799",
+      "case_id": "h4-1.5-first-chemical-accuracy",
+      "checks": {
+        "energy_nonworse": true,
+        "finite": false,
+        "independent_energy": false,
+        "optimizer_success": false,
+        "permitted_status": false,
+        "replay_identical": true,
+        "stationarity": false,
+        "work_reconciles": false
+      },
+      "independent_final_energy_hartree": -1.974875451026729,
+      "independent_final_gradient": [
+        -5.099342281766894e-09,
+        3.907236562072924e-09,
+        6.635090739641122e-09,
+        -1.1943085875788188e-08,
+        -1.6579406493522075e-08,
+        7.293789745354412e-10,
+        3.972727400519682e-09,
+        -2.4181502633613405e-10,
+        -1.0614753520599152e-10
+      ],
+      "independent_final_gradient_infinity": 1.6579406493522075e-08,
+      "initial_energy_hartree": -1.974875451026729,
+      "initial_gradient_infinity": 1.6579406564645738e-08,
+      "kind": "block-deletion",
+      "passed": false,
+      "result": {
+        "config": {
+          "acceptance_eta": 0.15,
+          "certification_infinity_threshold": 1e-08,
+          "damping": 0.0,
+          "fallback_policy": "none-fail-closed",
+          "gradient_l2_tolerance": 5e-09,
+          "initial_trust_radius": 0.05,
+          "maximum_energy_evaluations": 16,
+          "maximum_gradient_vector_evaluations": 128,
+          "maximum_hessian_vector_products": 64,
+          "maximum_iterations": 8,
+          "maximum_trust_radius": 0.5,
+          "permitted_success_statuses": [
+            0
+          ],
+          "relative_hvp_step": 6.055454452393343e-06
+        },
+        "coordinates": [
+          -0.37143632494086964,
+          -0.08356420559474256,
+          0.1298231032304482,
+          -0.10468972231034983,
+          -0.08741326254901868,
+          -0.21794543611030662,
+          0.4743869699153459,
+          -0.2163077332646906,
+          0.42271272389751363
+        ],
+        "energy_hartree": null,
+        "failure_reason": "EvaluationBudgetExceeded",
+        "gradient": null,
+        "gradient_infinity": null,
+        "gradient_l2": null,
+        "iterations": 0,
+        "message": "gradient-vector budget exceeded",
+        "preflight": {
+          "certified": false,
+          "gradient_infinity": 1.6579406493522075e-08,
+          "performed": true,
+          "threshold": 1e-08
+        },
+        "scipy_reported": null,
+        "status": -1,
+        "success": false,
+        "termination_origin": "fail-closed",
+        "version": "target-native-trust-ncg-central-gradient-hvp-v1",
+        "work": {
+          "energy_evaluations": 3,
+          "gradient_vector_evaluations": 128,
+          "hessian_vector_gradient_evaluations": 126,
+          "hessian_vector_products": 64,
+          "paper_measurement_cost": null
+        }
+      },
+      "target_dimension": 9
+    },
+    {
+      "candidate_id": "candidate-v1:d68e24bbf926e226938c26ab7d92fa01a8b7ab8368675aedb5adfe7cae350655",
+      "case_id": "h4-1.5-first-chemical-accuracy",
+      "checks": {
+        "energy_nonworse": true,
+        "finite": true,
+        "independent_energy": true,
+        "optimizer_success": true,
+        "permitted_status": true,
+        "replay_identical": true,
+        "stationarity": true,
+        "work_reconciles": true
+      },
+      "independent_final_energy_hartree": -1.994788934324131,
+      "independent_final_gradient": [
+        -1.3084784367123348e-09,
+        6.06452520146572e-10,
+        -3.7598849814829416e-11,
+        -9.063493844330139e-10,
+        3.516042903876915e-10,
+        7.925982786760599e-10,
+        -3.611626093677489e-10,
+        -1.2140378979896838e-10,
+        -4.3603055888130626e-10
+      ],
+      "independent_final_gradient_infinity": 1.3084784367123348e-09,
+      "initial_energy_hartree": -1.9947889343241307,
+      "initial_gradient_infinity": 1.3084784367123348e-09,
+      "kind": "mvp-to-ovp-diff",
+      "passed": true,
+      "result": {
+        "config": {
+          "acceptance_eta": 0.15,
+          "certification_infinity_threshold": 1e-08,
+          "damping": 0.0,
+          "fallback_policy": "none-fail-closed",
+          "gradient_l2_tolerance": 5e-09,
+          "initial_trust_radius": 0.05,
+          "maximum_energy_evaluations": 16,
+          "maximum_gradient_vector_evaluations": 128,
+          "maximum_hessian_vector_products": 64,
+          "maximum_iterations": 8,
+          "maximum_trust_radius": 0.5,
+          "permitted_success_statuses": [
+            0
+          ],
+          "relative_hvp_step": 6.055454452393343e-06
+        },
+        "coordinates": [
+          -0.35158525891732645,
+          -0.13373942890884383,
+          0.206573295618087,
+          0.20635400085854275,
+          -0.11237639566640722,
+          -0.09562444982036407,
+          -0.14731223013645645,
+          0.3179274644559996,
+          -0.14977571778071153
+        ],
+        "energy_hartree": -1.994788934324131,
+        "failure_reason": null,
+        "gradient": [
+          -1.3084784367123348e-09,
+          6.06452520146572e-10,
+          -3.7598849814829416e-11,
+          -9.063493844330139e-10,
+          3.516042903876915e-10,
+          7.925982786760599e-10,
+          -3.611626093677489e-10,
+          -1.2140378979896838e-10,
+          -4.3603055888130626e-10
+        ],
+        "gradient_infinity": 1.3084784367123348e-09,
+        "gradient_l2": 1.997478642174501e-09,
+        "iterations": 0,
+        "message": "preflight infinity-norm certificate already satisfied",
+        "preflight": {
+          "certified": true,
+          "gradient_infinity": 1.3084784367123348e-09,
+          "performed": true,
+          "threshold": 1e-08
+        },
+        "scipy_reported": {
+          "dummy_hessian_initializations": 0,
+          "function_evaluations": 0,
+          "gradient_evaluations_excluding_hvp": 0,
+          "hessian_evaluations_including_dummy": 0
+        },
+        "status": 0,
+        "success": true,
+        "termination_origin": "preflight-certificate",
+        "version": "target-native-trust-ncg-central-gradient-hvp-v1",
+        "work": {
+          "energy_evaluations": 1,
+          "gradient_vector_evaluations": 1,
+          "hessian_vector_gradient_evaluations": 0,
+          "hessian_vector_products": 0,
+          "paper_measurement_cost": null
+        }
+      },
+      "target_dimension": 9
+    },
+    {
+      "candidate_id": "candidate-v1:db5fb02bce1654d5c349d836130ae251308b94fc86608d3a556571a637d73200",
+      "case_id": "h4-1.5-first-chemical-accuracy",
+      "checks": {
+        "energy_nonworse": true,
+        "finite": true,
+        "independent_energy": true,
+        "optimizer_success": true,
+        "permitted_status": true,
+        "replay_identical": true,
+        "stationarity": true,
+        "work_reconciles": true
+      },
+      "independent_final_energy_hartree": -1.9776120674364097,
+      "independent_final_gradient": [
+        2.8497921800152426e-09,
+        4.896698602152583e-10,
+        5.432474636801743e-09,
+        1.4274859547452196e-09,
+        1.1342242596523722e-09,
+        -1.6213505460091482e-09,
+        1.0786887494340647e-09,
+        4.1019560664823373e-10,
+        2.448894073636687e-10
+      ],
+      "independent_final_gradient_infinity": 5.432474636801743e-09,
+      "initial_energy_hartree": -1.9776120674364102,
+      "initial_gradient_infinity": 5.432474586494762e-09,
+      "kind": "block-deletion",
+      "passed": true,
+      "result": {
+        "config": {
+          "acceptance_eta": 0.15,
+          "certification_infinity_threshold": 1e-08,
+          "damping": 0.0,
+          "fallback_policy": "none-fail-closed",
+          "gradient_l2_tolerance": 5e-09,
+          "initial_trust_radius": 0.05,
+          "maximum_energy_evaluations": 16,
+          "maximum_gradient_vector_evaluations": 128,
+          "maximum_hessian_vector_products": 64,
+          "maximum_iterations": 8,
+          "maximum_trust_radius": 0.5,
+          "permitted_success_statuses": [
+            0
+          ],
+          "relative_hvp_step": 6.055454452393343e-06
+        },
+        "coordinates": [
+          -0.34889740843811656,
+          0.13834234212188262,
+          0.13834234535257028,
+          -0.12959977324210514,
+          -0.1080571792342188,
+          -0.1889384758261403,
+          2.0390625561552134,
+          -0.18893847443020034,
+          1.8640851855286726
+        ],
+        "energy_hartree": -1.9776120674364097,
+        "failure_reason": null,
+        "gradient": [
+          2.8497921800152426e-09,
+          4.896698602152583e-10,
+          5.432474636801743e-09,
+          1.4274859547452196e-09,
+          1.1342242596523722e-09,
+          -1.6213505460091482e-09,
+          1.0786887494340647e-09,
+          4.1019560664823373e-10,
+          2.448894073636687e-10
+        ],
+        "gradient_infinity": 5.432474636801743e-09,
+        "gradient_l2": 6.724405684646381e-09,
+        "iterations": 0,
+        "message": "preflight infinity-norm certificate already satisfied",
+        "preflight": {
+          "certified": true,
+          "gradient_infinity": 5.432474636801743e-09,
+          "performed": true,
+          "threshold": 1e-08
+        },
+        "scipy_reported": {
+          "dummy_hessian_initializations": 0,
+          "function_evaluations": 0,
+          "gradient_evaluations_excluding_hvp": 0,
+          "hessian_evaluations_including_dummy": 0
+        },
+        "status": 0,
+        "success": true,
+        "termination_origin": "preflight-certificate",
+        "version": "target-native-trust-ncg-central-gradient-hvp-v1",
+        "work": {
+          "energy_evaluations": 1,
+          "gradient_vector_evaluations": 1,
+          "hessian_vector_gradient_evaluations": 0,
+          "hessian_vector_products": 0,
+          "paper_measurement_cost": null
+        }
+      },
+      "target_dimension": 9
+    },
+    {
+      "candidate_id": "candidate-v1:fff7155780d50642af0896f96640a99e5391604a16074490c8b32a7756155c52",
+      "case_id": "h4-1.5-first-chemical-accuracy",
+      "checks": {
+        "energy_nonworse": true,
+        "finite": true,
+        "independent_energy": true,
+        "optimizer_success": true,
+        "permitted_status": true,
+        "replay_identical": true,
+        "stationarity": true,
+        "work_reconciles": true
+      },
+      "independent_final_energy_hartree": -1.9899844081941862,
+      "independent_final_gradient": [
+        7.2413808283045e-10,
+        2.43370571612056e-09,
+        1.053091389481911e-09,
+        -1.649108710699565e-09,
+        9.254821809086267e-10,
+        -1.1134750760311007e-10,
+        1.6325803226663327e-09,
+        1.3354306965807083e-09,
+        -1.388341486913136e-09
+      ],
+      "independent_final_gradient_infinity": 2.43370571612056e-09,
+      "initial_energy_hartree": -1.9899844081941866,
+      "initial_gradient_infinity": 2.433705632853833e-09,
+      "kind": "mvp-constituent-deletion",
+      "passed": true,
+      "result": {
+        "config": {
+          "acceptance_eta": 0.15,
+          "certification_infinity_threshold": 1e-08,
+          "damping": 0.0,
+          "fallback_policy": "none-fail-closed",
+          "gradient_l2_tolerance": 5e-09,
+          "initial_trust_radius": 0.05,
+          "maximum_energy_evaluations": 16,
+          "maximum_gradient_vector_evaluations": 128,
+          "maximum_hessian_vector_products": 64,
+          "maximum_iterations": 8,
+          "maximum_trust_radius": 0.5,
+          "permitted_success_statuses": [
+            0
+          ],
+          "relative_hvp_step": 6.055454452393343e-06
+        },
+        "coordinates": [
+          -0.3181995106118775,
+          -0.14182156606879937,
+          0.22842988403316977,
+          0.2267661338794785,
+          -0.1177890300251436,
+          -0.10034466963567068,
+          -0.11524506258861818,
+          -0.11662277943000869,
+          -0.1112604314252654
+        ],
+        "energy_hartree": -1.9899844081941862,
+        "failure_reason": null,
+        "gradient": [
+          7.2413808283045e-10,
+          2.43370571612056e-09,
+          1.053091389481911e-09,
+          -1.649108710699565e-09,
+          9.254821809086267e-10,
+          -1.1134750760311007e-10,
+          1.6325803226663327e-09,
+          1.3354306965807083e-09,
+          -1.388341486913136e-09
+        ],
+        "gradient_infinity": 2.43370571612056e-09,
+        "gradient_l2": 4.1858047928958305e-09,
+        "iterations": 0,
+        "message": "preflight infinity-norm certificate already satisfied",
+        "preflight": {
+          "certified": true,
+          "gradient_infinity": 2.43370571612056e-09,
+          "performed": true,
+          "threshold": 1e-08
+        },
+        "scipy_reported": {
+          "dummy_hessian_initializations": 0,
+          "function_evaluations": 0,
+          "gradient_evaluations_excluding_hvp": 0,
+          "hessian_evaluations_including_dummy": 0
+        },
+        "status": 0,
+        "success": true,
+        "termination_origin": "preflight-certificate",
+        "version": "target-native-trust-ncg-central-gradient-hvp-v1",
+        "work": {
+          "energy_evaluations": 1,
+          "gradient_vector_evaluations": 1,
+          "hessian_vector_gradient_evaluations": 0,
+          "hessian_vector_products": 0,
+          "paper_measurement_cost": null
+        }
+      },
+      "target_dimension": 9
+    }
+  ],
+  "schema_version": "1.0.0",
+  "total_polishing_work_first_replay": {
+    "ceo_star_adapt_iterations": 0,
+    "energy_evaluations": 19,
+    "gradient_vector_evaluations": 143,
+    "hessian_vector_products": 64,
+    "ordinary_gsd_adapt_iterations": 0,
+    "paper_measurement_cost": null
+  }
+}

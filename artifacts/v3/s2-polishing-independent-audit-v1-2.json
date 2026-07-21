@@ -1,0 +1,26 @@
+{
+  "artifact_kind": "v3-s2-independent-failed-result-audit",
+  "checks": {
+    "baseline_not_reexecuted": true,
+    "budget_failure": true,
+    "calibration_failed": true,
+    "candidate_ids_unique": true,
+    "execution_tag": true,
+    "failed_coordinates_rolled_back": true,
+    "failure_injection": true,
+    "manifest_sha256": true,
+    "one_expected_failure": true,
+    "paper_measurement_cost_unclaimed": true,
+    "preflight_scope": true,
+    "protocol": true,
+    "record_checks_reconcile": true,
+    "record_count": true,
+    "sixteen_passed": true,
+    "threshold_not_relaxed": true
+  },
+  "failed_checks": [],
+  "passed": true,
+  "result_sha256": "1d72ab0c40cccc713778d7dd12bf8d254dc55d8993b908a4e8dc8c10ba81f35d",
+  "schema_version": "1.0.0",
+  "scientific_outcome": "calibration-unsuccessful-lih-not-authorized"
+}
