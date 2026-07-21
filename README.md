@@ -33,3 +33,10 @@ No performance claim is permitted until the stage gates in
 - S10 paired LiH execution: complete (promising candidate rejected by frozen KKT gate and fully rolled back)
 - S11 direct normal ADAPT / CEO* / V2 comparison: complete; GSD paper CNOT/depth parity reproduced, V2 primary unchanged after rollback
 - S12 exact OGM-aware term reuse: calibrated; correct but not adopted by default (LiH fresh exact-Pauli kernels reduced only 0.07125%)
+- V3 bounded stationarity certification: closed at H2/H4 calibration; no LiH run and no threshold relaxation
+- V4 S0-S7 Global OBS: complete; one LiH development candidate accepted with 15 to 8 parameters, 107 to 58 CNOTs, and total depth 171 to 92
+- V4 S8 validation: deliberately deferred, not passed; no unseen matched CEO* checkpoint is available in the approved scope
+- V4 S9 reporting: complete with source-hashed CSV, JSON, figures, and explicit negative results
+
+The V4 outcome is a **development result**, not blind validation or a general
+superiority claim. Paper-equivalent Measurement Cost remains unavailable.

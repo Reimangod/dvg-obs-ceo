@@ -32,3 +32,16 @@ reconstructed structure digest against the frozen resource assessment.
 
 This distinction is retained as an explicit ablation in the report:
 127 prediction-budget candidates before confidence filtering and 8 after it.
+
+## v1.1 runner collision
+
+The corrected reporter generated every table, figure, and content hash, but the
+local `rtk` wrapper interpreted the CLI option `--output` as its own output-file
+hint and concurrently created an empty destination file. The report's final
+atomic directory rename therefore stopped with `NotADirectoryError`.
+
+The staging bundle was hashed before any intervention. The empty destination
+was removed and the already-complete staging directory was atomically renamed
+to `artifacts/v4/s9-report-v1-1`. No table, figure, hash, selection, or scientific
+value was regenerated or edited. Future local invocations should use `rtk
+proxy` for this entry point; the package entry point itself is unchanged.
