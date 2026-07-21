@@ -37,6 +37,7 @@ No performance claim is permitted until the stage gates in
 - V4 S0-S7 Global OBS: complete; one LiH development candidate accepted with 15 to 8 parameters, 107 to 58 CNOTs, and total depth 171 to 92
 - V4 S8 validation: deliberately deferred, not passed; no unseen matched CEO* checkpoint is available in the approved scope
 - V4 S9 reporting: complete with source-hashed CSV, JSON, figures, and explicit negative results
+- V4 S10 local release gate: passed (162 tests; evidence, tags, submodule, rollback, staging, and raw-artifact checks all passed)
 
 The V4 outcome is a **development result**, not blind validation or a general
 superiority claim. Paper-equivalent Measurement Cost remains unavailable.

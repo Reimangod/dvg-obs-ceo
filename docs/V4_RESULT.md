@@ -83,3 +83,9 @@ state and fixed calibration guards.
 - Pareto table: `artifacts/v4/s9-report-v1-1/pareto-candidates.csv`
 - Independent S7 audit: `artifacts/v4/s7-lih-independent-audit-v1.json`
 - Deferred-validation gate: `artifacts/v4/s8-deferred-validation-gate-v1.json`
+- S10 local release audit: `artifacts/v4/s10-local-release-audit-v1.json`
+
+The final local release suite passed all 162 tests. The 95 emitted warnings are
+deprecation warnings from the pinned paper-era OpenFermion/Qiskit dependency
+stack; they are retained as technical debt and were not converted into hidden
+test suppressions.
