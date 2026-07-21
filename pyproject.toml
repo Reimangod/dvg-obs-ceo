@@ -62,6 +62,7 @@ dvg-obs-v4-lih = "dvg_obs_ceo.v4_lih:main"
 dvg-obs-v4-lih-audit = "dvg_obs_ceo.v4_lih_audit:main"
 dvg-obs-v4-report = "dvg_obs_ceo.v4_reporting:main"
 dvg-obs-v4-release-audit = "dvg_obs_ceo.v4_release_audit:main"
+dvg-obs-paper-equivalent-figures = "dvg_obs_ceo.paper_equivalent_figures:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
