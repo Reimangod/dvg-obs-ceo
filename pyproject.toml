@@ -53,6 +53,7 @@ dvg-obs-v3-polishing-calibration = "dvg_obs_ceo.v3_polishing_calibration:main"
 dvg-obs-v3-polishing-result-audit = "dvg_obs_ceo.v3_polishing_result_audit:main"
 dvg-obs-v4-protocol = "dvg_obs_ceo.v4_protocol:main"
 dvg-obs-v4-constraint-audit = "dvg_obs_ceo.v4_constraint_audit:main"
+dvg-obs-v4-composition-audit = "dvg_obs_ceo.v4_composition_audit:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
