@@ -28,9 +28,9 @@ from .v3_gradient_audit import _energy, _gradient, _load_and_verify
 from .v3_protocol import _write_exclusive
 
 
-PROTOCOL_ID = "dvg-obs-v3-s2-polishing-protocol-v1.1"
+PROTOCOL_ID = "dvg-obs-v3-s2-polishing-protocol-v1.2"
 PROTOCOL_TAG = PROTOCOL_ID
-DEFAULT_MANIFEST = ROOT / "manifests" / "v3-s2-polishing-protocol-v1.1.json"
+DEFAULT_MANIFEST = ROOT / "manifests" / "v3-s2-polishing-protocol-v1.2.json"
 REQUIRED_THREADS = {
     "OMP_NUM_THREADS": "1",
     "OPENBLAS_NUM_THREADS": "1",
@@ -184,18 +184,23 @@ def run(artifact_path: Path, manifest_path: Path = DEFAULT_MANIFEST) -> dict[str
             )
             initial_energy = float(row["paths"]["projection_on"]["independent_energy_hartree"])
             criteria = manifest["calibration_acceptance"]
+            reported_energy = first["energy_hartree"]
             checks = {
                 "optimizer_success": first["success"] is True,
                 "permitted_status": first["status"] in config.permitted_success_statuses,
                 "finite": bool(
-                    math.isfinite(float(first["energy_hartree"]))
+                    isinstance(reported_energy, (float, int))
+                    and math.isfinite(float(reported_energy))
                     and np.all(np.isfinite(final))
                     and np.all(np.isfinite(independent_gradient))
                 ),
                 "stationarity": independent_gradient_inf
                 <= criteria["maximum_final_gradient_infinity"],
-                "independent_energy": abs(independent_energy - float(first["energy_hartree"]))
-                <= criteria["maximum_independent_energy_difference_hartree"],
+                "independent_energy": bool(
+                    isinstance(reported_energy, (float, int))
+                    and abs(independent_energy - float(reported_energy))
+                    <= criteria["maximum_independent_energy_difference_hartree"]
+                ),
                 "energy_nonworse": independent_energy - initial_energy
                 <= criteria["maximum_energy_increase_from_stored_endpoint_hartree"],
                 "work_reconciles": _work_reconciles(first),

@@ -245,8 +245,8 @@ def polish_trust_ncg(
         termination_origin = "scipy-trust-ncg"
     except (EvaluationBudgetExceeded, PolishingError) as error:
         coordinates = initial.copy()
-        final_energy = math.nan
-        final_gradient = np.full(dimension, math.nan)
+        final_energy = None
+        final_gradient = None
         status = -1
         success = False
         message = str(error)
@@ -259,9 +259,9 @@ def polish_trust_ncg(
         "version": POLISHER_VERSION,
         "coordinates": coordinates.tolist(),
         "energy_hartree": final_energy,
-        "gradient": final_gradient.tolist(),
-        "gradient_l2": float(np.linalg.norm(final_gradient)),
-        "gradient_infinity": float(np.max(np.abs(final_gradient))),
+        "gradient": None if final_gradient is None else final_gradient.tolist(),
+        "gradient_l2": None if final_gradient is None else float(np.linalg.norm(final_gradient)),
+        "gradient_infinity": None if final_gradient is None else float(np.max(np.abs(final_gradient))),
         "success": success,
         "status": status,
         "message": message,
