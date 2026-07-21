@@ -49,6 +49,7 @@ dvg-obs-s12-audit = "dvg_obs_ceo.s12_audit:main"
 dvg-obs-v3-protocol = "dvg_obs_ceo.v3_protocol:main"
 dvg-obs-v3-gradient-audit = "dvg_obs_ceo.v3_gradient_audit:main"
 dvg-obs-v3-gradient-result-audit = "dvg_obs_ceo.v3_gradient_result_audit:main"
+dvg-obs-v3-polishing-calibration = "dvg_obs_ceo.v3_polishing_calibration:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
