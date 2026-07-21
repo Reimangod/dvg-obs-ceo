@@ -20,7 +20,7 @@ from .v3_protocol import _write_exclusive
 from .v4_protocol import DEFAULT_MANIFEST as V4_MANIFEST, audit_manifest
 
 
-PROTOCOL_TAG = "dvg-obs-v4-s1-constraint-ir-v1.1"
+PROTOCOL_TAG = "dvg-obs-v4-s1-constraint-ir-v1.2"
 REQUIRED_THREADS = {
     "OMP_NUM_THREADS": "1",
     "OPENBLAS_NUM_THREADS": "1",
@@ -54,7 +54,7 @@ def run(artifact_path: Path) -> dict[str, Any]:
     s0 = audit_manifest(V4_MANIFEST)
     manifest = json.loads(V4_MANIFEST.read_text(encoding="utf-8"))
     s1_manifest_path = ROOT / "manifests" / "v3-s1-gradient-audit-v1.json"
-    _, rows, checkpoints = _load_and_verify(s1_manifest_path)
+    _, _, checkpoints = _load_and_verify(s1_manifest_path)
     records: list[dict[str, Any]] = []
     kinds: Counter[str] = Counter()
     equivalence_to_semantic: dict[str, set[str]] = defaultdict(set)
@@ -72,12 +72,7 @@ def run(artifact_path: Path) -> dict[str, Any]:
         candidates = {
             candidate.candidate_id: candidate for candidate in enumerate_candidates(pool, blocks)
         }
-        case_rows = sorted(
-            (row for row in rows if row["case_id"] == case_id),
-            key=lambda row: row["candidate"]["candidate_id"],
-        )
-        for row in case_rows:
-            candidate = candidates[row["candidate"]["candidate_id"]]
+        for candidate in sorted(candidates.values(), key=lambda value: value.candidate_id):
             exact = exact_atomic_constraint(candidate)
             state = CanonicalConstraintState.create(
                 exact.system, candidate.transformation, [exact.primitive]
@@ -106,12 +101,13 @@ def run(artifact_path: Path) -> dict[str, Any]:
     }
     checks = {
         "s0_audit": s0["passed"],
-        "candidate_count": len(records) == 17,
-        "candidate_ids_unique": len({record["candidate_id"] for record in records}) == 17,
+        "candidate_count": len(records) == 21,
+        "candidate_ids_unique": len({record["candidate_id"] for record in records}) == 21,
         "all_registered_kinds_present": set(kinds) == {
             "block-deletion",
             "mvp-whole-deletion",
             "mvp-constituent-deletion",
+            "mvp-to-single-qe",
             "mvp-to-ovp-sum",
             "mvp-to-ovp-diff",
         },
@@ -131,6 +127,11 @@ def run(artifact_path: Path) -> dict[str, Any]:
         ),
         "semantic_id_maps_to_one_equivalence_class": all(
             len(values) == 1 for values in semantic_to_equivalence.values()
+        ),
+        "equivalent_construction_paths_collapsed": bool(
+            len(equivalence_to_semantic) == 17
+            and len(semantic_to_equivalence) == 17
+            and len(records) == 21
         ),
         "exact_rref_contains_no_float": all(
             isinstance(value, str)

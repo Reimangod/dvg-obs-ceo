@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0.0",
+  "artifact_kind": "v4-s1-scope-correction",
+  "protocol_tag": "dvg-obs-v4-s1-constraint-ir-v1.1",
+  "passed_within_limited_scope": true,
+  "candidate_count": 17,
+  "equivalence_class_count": 17,
+  "semantic_state_count": 17,
+  "vqe_energy_evaluations": 0,
+  "limitation": "the audit used only the 17 S8 equivalence representatives and therefore could not empirically verify collapse of four alternative construction paths",
+  "resolution": "V1.2 audits all 21 reconstructed catalog candidates and requires collapse to 17 equivalence and semantic states before S1 completion."
+}
