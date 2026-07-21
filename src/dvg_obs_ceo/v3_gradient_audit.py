@@ -266,10 +266,10 @@ def run(output: Path, manifest_path: Path = DEFAULT_MANIFEST) -> dict[str, Any]:
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--artifact-path", type=Path, required=True)
     parser.add_argument("--manifest", type=Path, default=DEFAULT_MANIFEST)
     arguments = parser.parse_args()
-    result = run(arguments.output, arguments.manifest)
+    result = run(arguments.artifact_path, arguments.manifest)
     print(
         json.dumps(
             {
