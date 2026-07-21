@@ -1,0 +1,118 @@
+{
+  "schema_version": "1.0.0",
+  "protocol_id": "dvg-obs-v3-stationarity-protocol-v1",
+  "execution_tag": "dvg-obs-v3-stationarity-protocol-v1",
+  "registered_at": "2026-07-22",
+  "stage": "V3-S0",
+  "purpose": "bounded numerical certification of the single immutable S10 LiH compression candidate",
+  "upstream_commit": "a3f89d03e6a03c89767d3cf8ee7657a57653dda0",
+  "predecessor": {
+    "protocol_tag": "dvg-obs-s10-lih-primary-protocol-v1.2",
+    "protocol_commit": "7ed25428955af7c9dcc02df49dbdfc0a7b75760e",
+    "result_tag": "dvg-obs-s10-lih-primary-result-v1",
+    "result_commit": "b13466751d58df320696c792a6e6c382a7149c9a"
+  },
+  "source_files": {
+    "plan": {
+      "path": "docs/V3_V4_RESEARCH_PLAN.md",
+      "sha256": "8828310444a6a6b3b737445250002d6ed418de17beb64072efce79cc85ac07e1"
+    },
+    "s10_protocol": {
+      "path": "manifests/s10-lih-paired-protocol-v1.2.json",
+      "sha256": "e1e1351e32a55ae59d02d3d711c1505b85e0cb60c4c28d09f897fea225ab83b3"
+    },
+    "checkpoint": {
+      "path": "artifacts/s10/lih-3a-first-accuracy-primary-v1-2/checkpoint.json",
+      "sha256": "1ef38be983595fdb094f2a47287e6047193351e0eff4a7c589630ef023ad98eb"
+    },
+    "selected_trial": {
+      "path": "artifacts/s10/lih-3a-first-accuracy-primary-v1-2/selected-trial.json",
+      "sha256": "38b0cb3f57fe661fc67a7cb7109237aa71086da3da2fdcf62ec28c4597a9d8c6"
+    },
+    "summary": {
+      "path": "artifacts/s10/lih-3a-first-accuracy-primary-v1-2/summary.json",
+      "sha256": "aa911e6bbdaede6290242f8309845c11259c3a3e90a8b97b0299777b89e2f0e4"
+    },
+    "selector_decision": {
+      "path": "artifacts/s10/lih-3a-first-accuracy-primary-v1-2/selector-decision.json",
+      "sha256": "a48d6bf8ad76b23b70039c0b1a3ade5442a7d877c6aff952f1b984e6a9f225c5"
+    },
+    "candidate_catalog": {
+      "path": "artifacts/s10/lih-3a-first-accuracy-primary-v1-2/candidate-catalog.json",
+      "sha256": "32fb67e36c08b74505b3d4a640442fa4740dce7098be3b466379303242e6b296"
+    }
+  },
+  "problem": {
+    "molecule": "LiH",
+    "distance_angstrom": 3.0,
+    "basis": "STO-3G",
+    "fermion_to_qubit_mapping": "Jordan-Wigner",
+    "noise": null,
+    "shots": null,
+    "development_or_validation": "diagnostic-development"
+  },
+  "immutable_checkpoint": {
+    "checkpoint_digest": "667dedeb56d115df83dedbafaac57379b294800b5948733ea0024bbab286721f",
+    "adapt_iteration": 5,
+    "energy_hartree": -7.797909682469515,
+    "parameter_count": 15,
+    "logical_block_count": 15,
+    "cnot_count": 107,
+    "cnot_depth": 30,
+    "total_depth": 171,
+    "structure_digest": "7562e62fee3f14594995a4dbb3c599a54df63ec879346388eb03656cc9ef22a8"
+  },
+  "immutable_candidate": {
+    "candidate_id": "candidate-v1:00cd033f811b20f307f4b6f44110f373376999bc7872a40dff110e323d660c06",
+    "equivalence_class_id": "transform-v1:0ca39a7c2fc113c6d6c432dc1e0051706dd3c84471153246a0f2b65f4c73f7a9",
+    "source_block_id": "block-v1:ade98b25335241f48928ddedb48a42c2beae4dec8639d1d6ff17570faf49309b",
+    "source_pool_indices": [602],
+    "kind": "block-deletion",
+    "target_family": "empty",
+    "parameter_count": 14,
+    "logical_block_count": 14,
+    "cnot_count": 98,
+    "cnot_depth": 30,
+    "total_depth": 158,
+    "structure_digest": "bbc35a4f22ddccfcf1ba9cb7a8f9e711e5bd645fdba5010253b6a16d8e28aa03",
+    "s10_rejection_reasons": ["kkt"]
+  },
+  "acceptance": {
+    "cumulative_energy_budget_hartree": 0.0001,
+    "independent_energy_tolerance_hartree": 1e-10,
+    "minimum_independent_state_recomputation_fidelity": 0.9999999999,
+    "maximum_constraint_residual": 1e-10,
+    "maximum_stationarity_residual": 1e-8,
+    "resource_fields_must_be_nonworse": [
+      "parameter_count",
+      "logical_block_count",
+      "cnot_count",
+      "cnot_depth",
+      "total_depth"
+    ],
+    "at_least_one_resource_must_improve": true,
+    "fci_is_runtime_input": false
+  },
+  "scope_limits": {
+    "candidate_count": 1,
+    "solver_family_count": 1,
+    "lih_execution_count": 1,
+    "candidate_reselection": false,
+    "threshold_relaxation": false,
+    "ordinary_gsd_adapt_reexecution": false,
+    "ceo_star_reexecution": false,
+    "paper_measurement_cost": null
+  },
+  "numerical_environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  },
+  "claim_boundary": [
+    "V3 does not alter or relabel the rejected and rolled-back V2 result.",
+    "LiH is observed development data and cannot validate generalization.",
+    "V3 may certify the existing candidate but does not discover a new compression.",
+    "Additional polishing work is reported separately from final circuit resources.",
+    "Implementation work counters are not paper-equivalent Measurement Cost."
+  ]
+}
