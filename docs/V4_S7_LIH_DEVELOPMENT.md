@@ -23,3 +23,7 @@ evidence only. It cannot support an out-of-sample or general-superiority claim.
 Execution protocol v1.1 includes the source-slot ordering correction documented
 in `docs/incidents/V4_S7_V1_LEXICOGRAPHIC_SLOT_ORDER.md`; thresholds, candidate
 families, budgets, checkpoint, and ranking are unchanged from v1.
+
+Execution protocol v1.2 additionally maps the inapplicable internal unbounded
+held-out diagnostic sentinel to JSON `null`, as documented in
+`docs/incidents/V4_S7_V1_1_JSON_INFINITY.md`. Scientific behavior is unchanged.

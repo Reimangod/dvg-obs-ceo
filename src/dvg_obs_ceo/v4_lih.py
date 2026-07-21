@@ -45,7 +45,7 @@ from .transaction import (
 from .v3_protocol import _write_exclusive
 
 
-PROTOCOL_TAG = "dvg-obs-v4-s7-lih-v1.1"
+PROTOCOL_TAG = "dvg-obs-v4-s7-lih-v1.2"
 CONFIG_PATH = ROOT / "manifests" / "v4-s6-frozen-config-v1.json"
 CHECKPOINT_PATH = ROOT / "artifacts" / "s10" / "lih-3a-first-accuracy-primary-v1-2" / "checkpoint.json"
 EXPECTED_CHECKPOINT_SHA256 = "1ef38be983595fdb094f2a47287e6047193351e0eff4a7c589630ef023ad98eb"
@@ -140,6 +140,16 @@ def _energy(algorithm: Any, coordinates: np.ndarray, indices: Sequence[int]) -> 
 def _optimizer_outcome(path: Mapping[str, Any]) -> OptimizerOutcome:
     optimizer = path["optimizer"]
     return OptimizerOutcome(bool(optimizer["success"]), str(optimizer["status"]), str(optimizer["message"]), True)
+
+
+def _strict_json_quality(quality: Mapping[str, Any], *, held_out_required: bool) -> dict[str, Any]:
+    result = dict(quality)
+    result["policy"] = dict(quality["policy"])
+    if not held_out_required:
+        result["policy"]["maximum_held_out_projected_residual"] = None
+    # Fail here, close to the boundary, instead of after expensive transactions.
+    json.dumps(result, allow_nan=False)
+    return result
 
 
 def _attempt_work(
@@ -344,7 +354,10 @@ def run(bundle: Path) -> dict[str, Any]:
                 checkpoint["recycled_inverse_hessian"], plan.transformation,
                 internal_pairs=internal, held_out_pairs=(),
             )
-            quality = evaluate_joint_quality(prediction, quality_policy)
+            quality = _strict_json_quality(
+                evaluate_joint_quality(prediction, quality_policy),
+                held_out_required=quality_policy.require_held_out_evidence,
+            )
             prediction_cache[key] = (plan, prediction, quality)
         return prediction_cache[key]
 
