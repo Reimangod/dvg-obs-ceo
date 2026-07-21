@@ -57,6 +57,7 @@ dvg-obs-v4-composition-audit = "dvg_obs_ceo.v4_composition_audit:main"
 dvg-obs-v4-joint-prediction-audit = "dvg_obs_ceo.v4_joint_prediction_audit:main"
 dvg-obs-v4-search-audit = "dvg_obs_ceo.v4_search_audit:main"
 dvg-obs-v4-resource-audit = "dvg_obs_ceo.v4_resource_audit:main"
+dvg-obs-v4-calibration-audit = "dvg_obs_ceo.v4_calibration_audit:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

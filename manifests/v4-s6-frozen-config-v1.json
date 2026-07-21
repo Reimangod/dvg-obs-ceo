@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "configuration_id": "dvg-obs-v4-s6-frozen-config-v1",
+  "execution_tag": "dvg-obs-v4-s6-calibration-v1",
+  "frozen_before_v4_lih_execution": true,
+  "configuration_digest": "836cd1d4142051e36d43f7d78758b10e673fb942086a9e82f94ae3f5b9acfb18",
+  "inputs": {
+    "s3_joint_prediction": {
+      "path": "artifacts/v4/s3-joint-prediction-audit-v1.json",
+      "sha256": "00851eeb2c8711a7aff26c20b5f540568bc2ed5fc7f60ab9669dc1824662d536"
+    },
+    "s4_search": {
+      "path": "artifacts/v4/s4-deterministic-search-audit-v1.json",
+      "sha256": "49052b4bcff64f7f42b6b31450a044995d40c420d5528925c518b221cb314702"
+    },
+    "s5_resources": {
+      "path": "artifacts/v4/s5-full-resource-pareto-audit-v1.json",
+      "sha256": "c8aea6015c225a4388d07812adc7da74f1562810bd78eb98092b4e715e474fe2"
+    },
+    "primary_single_candidate_outcomes": {
+      "path": "artifacts/s8/calibration-bundle/all-candidates.jsonl",
+      "sha256": "2e962f55545639dcdee88ab45b667d7f6c0388871fe9d90a73ea1eb8e486befb"
+    }
+  },
+  "configuration": {
+    "screening_budget_hartree": 0.0001,
+    "quality_policy": {
+      "maximum_constraint_schur_condition_number": 100.0,
+      "maximum_target_hessian_condition_number": 100.0,
+      "minimum_constraint_direction_coverage": 0.99,
+      "maximum_internal_projected_residual": 0.5,
+      "maximum_held_out_projected_residual": null,
+      "require_held_out_evidence": false
+    },
+    "search_budgets": {
+      "maximum_expanded_nodes": 20000,
+      "maximum_completed_states": 10000,
+      "maximum_quadratic_solves": 10000,
+      "maximum_full_resource_recounts": 10000
+    },
+    "exact_vqe_budget": {
+      "top_k_per_endpoint": 2,
+      "maximum_unique_exact_attempts": 4
+    },
+    "optimizer": {
+      "warm_start": "joint-target-native-obs",
+      "fallback": "least-squares-native-once-if-primary-status-false",
+      "maximum_fallbacks_per_structure": 1,
+      "maximum_iterations_per_path": 200,
+      "gradient_tolerance": 1e-08
+    },
+    "acceptance": {
+      "cumulative_energy_budget_hartree": 0.0001,
+      "independent_energy_tolerance_hartree": 1e-10,
+      "minimum_independent_state_recomputation_fidelity": 0.9999999999,
+      "maximum_constraint_residual": 1e-10,
+      "maximum_stationarity_residual": 1e-08,
+      "componentwise_nonworse_resources": true,
+      "at_least_one_strict_resource_improvement": true
+    }
+  },
+  "calibration_interpretation": {
+    "single_candidate_outcomes": 17,
+    "predicted_positive_count_at_budget": 0,
+    "actual_positive_count_at_budget": 0,
+    "positive_class_metrics_available": false,
+    "held_out_joint_secants_available": false,
+    "confidence_status": "diagnostic-envelope-only-not-probabilistically-calibrated",
+    "threshold_derivation": "outward-rounded H2/H4 S3 diagnostic extrema",
+    "search_budget_derivation": "next round deterministic caps above four times H4 exhaustive work"
+  },
+  "stop_rules": {
+    "no_threshold_change_after_lih": true,
+    "no_candidate_family_change_after_lih": true,
+    "no_actual_energy_or_fci_in_ranking": true,
+    "budget_truncation_is_not_global_winner": true,
+    "candidate_quality_failure_does_not_prune_descendants": true,
+    "no_new_baseline_execution": true
+  },
+  "claim_boundary": "The quality envelope is deterministic fail-closed range control, not a calibrated probability of safety. Accuracy is established only by independent exact acceptance."
+}
