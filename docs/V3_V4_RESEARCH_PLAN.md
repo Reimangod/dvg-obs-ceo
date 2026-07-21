@@ -1,7 +1,7 @@
 # V3/V4 research and implementation plan
 
-Status: draft. This document is a successor protocol and does not rewrite the
-completed S0-S12 plan or reinterpret any frozen V2 result.
+Status: draft revision 2. This document is a successor protocol and does not
+rewrite the completed S0-S12 plan or reinterpret any frozen V2 result.
 
 ## 1. Purpose and naming
 
@@ -20,7 +20,8 @@ The terms used in all code, artifacts, and papers shall be:
 - `first-order constrained stationarity certificate`, not "KKT optimality
   proof";
 - `development result` for LiH, because its V2 outcome is already known;
-- `validation result` only for a system not used to design or tune V3/V4;
+- `development result` only; confirmatory molecular validation is deferred
+  while new ordinary GSD-ADAPT and CEO* executions are out of scope;
 - `implementation work counters`, not paper Measurement Cost, unless the
   paper-era measurement definition is independently reproduced.
 
@@ -37,7 +38,7 @@ V3 and V4 inherit these values without retrospective modification:
 - V2 measured energy increase: approximately `3.7792e-12` Ha;
 - cumulative energy budget: `1e-4` Ha;
 - independent-energy tolerance: `1e-10` Ha;
-- minimum state fidelity: `1 - 1e-10`;
+- minimum independent state recomputation fidelity: `1 - 1e-10`;
 - maximum constraint residual: `1e-10`;
 - maximum stationarity residual: `1e-8`;
 - V2 remains rejected and rolled back. A V3 result never edits or relabels the
@@ -47,12 +48,31 @@ FCI energy is forbidden from candidate screening, ranking, polishing, and
 acceptance. It may be joined only after a run has been committed or rolled
 back, for reporting.
 
+### Baseline non-reexecution rule
+
+No new ordinary GSD-ADAPT or CEO* run is performed in V3 or V4. Existing
+audited H2/H4/LiH checkpoints, trajectories, and resource artifacts are the
+only baseline inputs. Each reuse verifies the source SHA-256, schema, upstream
+commit, problem identity, and circuit-counter version. V3/V4 may evaluate and
+optimize a compressed target cloned from an existing checkpoint, but they do
+not regrow the source ansatz.
+
+Consequences:
+
+- normal ADAPT and CEO* wall time are not spent again;
+- stored baseline values remain comparison references and are never inferred
+  from a new run;
+- no unseen-molecule validation is claimed in the current V4 scope, because a
+  matched unseen CEO* source checkpoint would require a new CEO* execution;
+- generality or out-of-sample performance claims are prohibited. A future
+  validation phase requires a separately authorized and preregistered protocol.
+
 ## 3. Common engineering rules
 
 1. Do not edit `vendor/ceo-adapt-vqe`; keep it a pinned submodule.
 2. Create V3 and V4 on separate feature branches and separate draft PRs.
 3. Freeze each executable protocol with a manifest digest and immutable Git
-   tag before its LiH or validation run.
+   tag before its LiH run.
 4. Refuse dirty-tree, wrong-submodule, wrong-thread-count, or wrong-protocol
    execution.
 5. Write artifacts atomically, never overwrite completed bundles, and retain
@@ -60,8 +80,8 @@ back, for reporting.
 6. Every exact VQE attempt runs inside the existing transaction/rollback
    mechanism, including crash, timeout, NaN, and partial-write handling.
 7. Search order, tie-breaking, IDs, and artifact schemas must be deterministic.
-8. Keep prediction/screening work, polishing work, baseline work, and final
-   circuit resources in separate ledgers.
+8. Keep prediction/screening work, polishing work, reused-baseline provenance,
+   and final circuit resources in separate ledgers.
 9. Preserve the three identity layers: StatePreparationID, ProblemID, and
    MeasurementContextID.
 10. A smaller predicted circuit is never a result until the full physical
@@ -150,7 +170,9 @@ Acceptance requires all existing gates:
 - finite values and physical scalar domain;
 - cumulative energy increase at most `1e-4` Ha;
 - independent energy agreement within `1e-10` Ha;
-- state fidelity at least `1 - 1e-10`;
+- independent state recomputation fidelity at least `1 - 1e-10`. This compares
+  two independent recomputations of the same candidate state and is an
+  implementation certificate, not source-candidate fidelity;
 - constraint residual at most `1e-10`;
 - target-native stationarity infinity norm at most `1e-8`;
 - two-path gradient audit passed;
@@ -162,6 +184,10 @@ Acceptance requires all existing gates:
 Second-order quantities are diagnostics only: approximate reduced-Hessian
 minimum eigenvalue and independent directional curvature. They are not called
 proofs and do not replace the first-order acceptance gate.
+
+Source-candidate fidelity is recorded only as an exact-simulator research
+diagnostic. It is not an acceptance gate and is not presented as a
+hardware-free measurement.
 
 Definition of done: the transaction commits or rolls back once, retains all
 evidence, and an independent auditor reproduces every gate.
@@ -205,13 +231,14 @@ from delaying the main algorithm.
 
 ### V4-S0: Preregister claims, endpoints, and datasets
 
-Freeze three data roles:
+Freeze two data roles using existing audited source checkpoints only:
 
 - H2/H4: calibration and engineering tests;
-- LiH 3 Angstrom: observed development benchmark;
-- one previously unused molecular system: confirmatory validation, selected
-  and frozen after feasibility-only resource inspection and before viewing any
-  V4 energy outcome.
+- LiH 3 Angstrom: observed development benchmark.
+
+No new ordinary ADAPT or CEO* source run is permitted. Confirmatory molecular
+validation is outside this protocol. Synthetic/property tests do not count as
+molecular validation.
 
 Freeze two co-primary endpoints:
 
@@ -219,12 +246,13 @@ Freeze two co-primary endpoints:
 2. Parameter-primary: parameters, CNOT depth, CNOT, total depth, predicted
    loss.
 
-Both endpoints require CNOT and CNOT depth to be no worse than CEO*. Any
-experiment permitting a positive circuit regression is labeled secondary and
-cannot support the primary performance claim.
+Both endpoints require CNOT, CNOT depth, and total depth to be no worse than
+the immutable stored CEO* checkpoint. Any experiment permitting a positive
+circuit regression is labeled secondary and cannot support the primary
+performance claim.
 
 Definition of done: protocol, endpoint order, hard guards, Top-K budget,
-validation system, and all stop rules are tagged before validation.
+source artifact digests, and all stop rules are tagged before LiH development.
 
 ### V4-S1: Exact canonical ConstraintState IR
 
@@ -232,17 +260,22 @@ Represent a search node as a canonical constrained ansatz state containing:
 
 - active source blocks and target block families;
 - exact constraint provenance;
-- normalized exact/integer/rational rows for `[A | b]` where supported;
+- exact rational reduced row-echelon representation of `[A | b]` where
+  supported;
 - source-to-target map and target dimension;
 - structural and transformation digests;
 - predicted loss and Hessian diagnostics;
 - exact full-circuit resource snapshot.
 
-Do not construct identity digests from platform-dependent floating SVD, QR, or
-RREF output. Known deletion, signed tying, and OVP relations use exact symbolic
-normalization. Transformations requiring non-exact coefficients retain a
-canonical provenance IR and canonical float bytes, and are never deduplicated
-solely by approximate row-space equality.
+Use two identities. `ConstraintSemanticID` contains exact transformation
+primitives, block/slot provenance, registered symbolic tokens such as
+`sqrt(2)`, and an exact rational RREF (or equivalent exact canonical row-space
+form). `ConstraintNumericalID` contains canonical float64 bytes for `A`, `b`,
+`c`, and `J` plus matrix diagnostics.
+
+Do not construct semantic identity digests from platform-dependent floating
+SVD, QR, or RREF output. Transformations that lack an exact symbolic form are
+not deduplicated solely by approximate row-space equality.
 
 Definition of done: permutation, row scaling, and application-order property
 tests produce identical IDs for mathematically identical exact constraints and
@@ -296,17 +329,39 @@ states fail closed.
 ### V4-S4: Deterministic branch-and-bound search
 
 Implement deterministic exploration over canonical ConstraintState nodes.
-Prune only with auditable safe bounds:
+The search is exact only with respect to the frozen quadratic surrogate and
+candidate catalog. It is never described as globally optimal under the true
+VQE objective.
 
-- predicted energy lower bound already exceeds the registered budget;
+Descendant pruning is permitted only for monotone structural/surrogate bounds:
+
+- the fixed-surrogate predicted energy lower bound already exceeds the
+  registered screening budget;
 - even the maximum remaining parameter/resource reduction cannot beat the
   incumbent;
 - an optimistic resource bound cannot improve either endpoint;
-- transformation or Hessian-quality gates fail.
+- an exact semantic conflict, target-family exclusion, deletion containment,
+  rank impossibility, or affine infeasibility makes every descendant invalid.
+
+Candidate-specific condition-number failure, insufficient direction coverage,
+projected secant residual failure, or a numerical solve failure rejects only
+the current completed state. It does not automatically prune descendants or
+siblings because those diagnostics are not monotone under added constraints.
 
 Maintain stable tie-breaking and deduplicate by canonical state digest. Record
 visited, expanded, deduplicated, pruned, infeasible, and completed counts plus
 the reason for every pruned branch.
+
+Every result records one search status:
+
+- `exhaustive`: the complete canonical catalog was enumerated;
+- `surrogate-complete`: branch-and-bound proved completion under the frozen
+  surrogate/catalog;
+- `budget-truncated`: a deterministic work bound stopped the search, so output
+  is called `best found candidate`, not `global winner`;
+- `numerical-failure`: a required invariant or solver failed;
+- `infrastructure-timeout`: a large emergency wall-time limit stopped the run;
+  the output is not a normal scientific result.
 
 Definition of done: on small catalogs, branch-and-bound returns the same Pareto
 set and endpoint winners as exhaustive enumeration.
@@ -325,6 +380,12 @@ Produce:
 - stable alternative structures up to the frozen Top-K budget;
 - explicit equivalence-class deduplication.
 
+The preregistered ranking order selects the formal winner. All frozen Top-K
+candidates are evaluated independently, but actual energy is used only for
+pass/fail. Among passing candidates, the highest-ranked preregistered candidate
+is the endpoint winner. If one canonical structure appears in both endpoints,
+it is executed once and attributed to both by structure digest.
+
 No actual candidate energy, FCI energy, or post-optimization outcome is a
 selector input.
 
@@ -336,25 +397,39 @@ same Top-K list and digest.
 Use H2/H4 to fix:
 
 - empirical prediction safety envelope;
-- maximum search nodes and wall/work budget;
+- maximum expanded nodes;
+- maximum completed states;
+- maximum quadratic solves;
+- maximum full-resource recounts;
 - Top-K exact VQE attempts;
 - continuation schedule, if continuation is retained;
 - polishing and fallback limits;
 - endpoint hard caps and tie-breaking.
 
+Wall time is telemetry only, except for a deliberately large emergency safety
+timeout. Reaching that timeout produces `infrastructure-timeout` and no normal
+scientific winner. Formal stopping depends only on deterministic counters.
+
 Candidate failures do not silently alter ranking or thresholds. All attempts
 are retained. Calibration results cannot later be pooled with validation.
 
 Definition of done: deterministic replay, complete failure ledger, independent
-audit, frozen selector/configuration digest, and pre-validation tag.
+audit, frozen selector/configuration digest, and pre-LiH tag. The full V4
+configuration is frozen after H2/H4 and before LiH; it is not changed after the
+LiH result is observed.
 
 ### V4-S7: Paired LiH development experiment
 
-Clone the same immutable CEO* iteration-5 checkpoint into:
+Load the existing audited CEO* iteration-5 checkpoint once and create target
+transactions for:
 
-- no-compression control;
 - circuit-primary Global OBS transaction;
 - parameter-primary Global OBS transaction.
+
+Do not rerun CEO* and do not run ordinary GSD-ADAPT. The unchanged source
+snapshot, energy, circuit resources, and prior trajectory are read from their
+immutable audited artifacts. Pairing means common checkpoint identity, not a
+new baseline execution.
 
 Optimize at most the preregistered Top-K candidates per endpoint. Each attempt
 uses a fresh exact clone; failed attempts cannot contaminate later trials.
@@ -367,26 +442,42 @@ Because LiH informed V4, report this as development evidence only.
 Definition of done: a paired comparison bundle and independent audit reproduce
 all source digests, attempts, rollbacks/commits, resource counts, and work.
 
-### V4-S8: Frozen unseen-system validation
+### V4-S8: Deferred validation gate
 
-Run the unchanged tagged V4 protocol once on the preregistered unused system.
-Do not change thresholds, Top-K, objective order, solver, or work budget after
-viewing the result. A null or negative result is retained and reported.
+No unseen-system run is performed in the current scope because the user has
+excluded new CEO* and ordinary ADAPT executions. Consequently V4-S8 is a
+documented deferment, not a missing run and not a passed validation gate.
 
-Definition of done: complete audited paired artifacts exist for CEO* control
-and both V4 endpoints, with no configuration drift from the frozen manifest.
+A future confirmatory study requires a separate protocol that freezes, before
+execution:
+
+- permission to generate a matched CEO* source checkpoint;
+- the molecule and geometry selection rule;
+- whether the checkpoint is selected by a CEO* internal gradient criterion or
+  by first chemical accuracy;
+- any explicitly permitted FCI checkpoint-selection oracle;
+- all V4 thresholds, solver settings, and deterministic budgets.
+
+One unseen system would support only a `validation-supported result`, not a
+claim of general applicability. General claims require broader preregistered
+coverage such as two molecules or one molecule at two geometries.
 
 ### V4-S9: Ablation and reporting
 
 Report separately:
 
-- CEO* versus V2 official rollback result;
+- stored CEO* reference versus the V2 official rollback result, without a new
+  CEO* execution;
 - V2 rejected single candidate;
 - V3 certification result;
 - V4 circuit-primary and parameter-primary results;
 - Global OBS with/without candidate-specific confidence;
 - branch-and-bound versus exhaustive search on tractable calibration cases;
 - screening/prediction work, exact-VQE work, and final circuit resources.
+
+Ablations run only on synthetic catalogs, H2/H4 calibration artifacts, and LiH
+development. They are not run on a future confirmatory system before its
+primary result; any later validation ablation is explicitly exploratory.
 
 Required trajectory fields include energy/error, ADAPT/compression iteration,
 wall time, energy evaluations, gradient-vector and component equivalents,
@@ -407,8 +498,10 @@ Before calling V4 complete:
 - large raw artifacts are excluded from Git and represented by byte count and
   SHA-256 manifests;
 - draft PR contains claim boundaries and known negative results;
-- no result is described as a general improvement without unseen-system
-  validation.
+- no result is described as validated, out-of-sample, or generally applicable
+  in the current no-new-baseline scope;
+- normal ADAPT and CEO* execution counters remain zero for V3/V4, with all
+  reused source artifact digests recorded.
 
 ## 7. Success levels
 
@@ -418,14 +511,22 @@ protocol executes and audits correctly, including a null result.
 Performance labels are:
 
 - `valid reduction`: accepted candidate, unchanged accuracy/certificate gates,
-  no CNOT or CNOT-depth regression, and at least one strict resource reduction;
-- `V2-exceeding reduction`: strictly improves the accepted resource vector
-  beyond the official V2 rollback result and, separately, beyond the rejected
-  14-parameter diagnostic candidate where claimed;
+  no parameter, CNOT, CNOT-depth, or total-depth regression, and at least one
+  strict resource reduction;
+- `accepted CEO*-improving reduction`: an accepted candidate whose resource
+  vector `(parameters, CNOT, CNOT depth, total depth)` is componentwise no worse
+  than the immutable CEO* reference and strictly better in at least one
+  component;
+- `diagnostic-candidate-exceeding reduction`: an accepted candidate whose same
+  resource vector componentwise dominates the rejected 14-parameter V2
+  diagnostic candidate and is strictly better in at least one component;
 - `strong development result`: at least 15% CNOT reduction or at least 20%
-  parameter reduction versus CEO* with no CNOT-depth regression on LiH;
-- `validation-supported result`: the frozen unseen-system run also Pareto-
-  dominates its matched CEO* control under the same acceptance gates.
+  parameter reduction versus the stored CEO* reference with no CNOT-depth or
+  total-depth regression on LiH.
+
+`validation-supported result` is unavailable in the current scope. It may be
+used only by a future separately frozen unseen-system protocol with a matched
+source checkpoint.
 
 The strong thresholds are reporting labels, not reasons to tune or rerun.
 
@@ -434,9 +535,13 @@ The strong thresholds are reporting labels, not reasons to tune or rerun.
 1. Review and freeze this draft without altering S0-S12 history.
 2. Create the V3 branch and complete V3-S0 through V3-S4 continuously.
 3. Close V3 after its single LiH diagnostic, whether accepted or rejected.
-4. Create a fresh V4 branch from the reviewed base, not from mutable V3 runtime
-   artifacts.
+4. Review and tag V3 code. Create V4 from that reviewed code tag so it inherits
+   the gradient audit, certificate schema, ledger, and polishing code, but never
+   from mutable V3 runtime artifacts or post-result local tuning.
 5. Complete V4-S0 through V4-S6 before any V4 LiH execution.
-6. Run LiH as development, freeze the unseen-system protocol, then validate.
-7. Publish only claims supported by the corresponding evidence level.
-
+6. Freeze the complete V4 protocol after H2/H4, then run LiH development once
+   without configuration changes.
+7. Do not execute ordinary GSD-ADAPT, CEO*, or unseen-system validation in the
+   current scope. Reuse only audited source artifacts.
+8. Run ablations on synthetic/H2/H4/LiH development data and publish only
+   claims supported by the corresponding evidence level.
