@@ -23,8 +23,9 @@ from .resources import AnsatzStructure, evaluate_full_circuit_resources, paper_e
 from .s8_probe import _state_vector
 
 
-PROTOCOL_TAG = "dvg-obs-full-figures-checkpoint-protocol-v1.1"
+PROTOCOL_TAG = "dvg-obs-full-figures-checkpoint-protocol-v1.2"
 MANIFEST_PATH = ROOT / "manifests" / "full-figures-ceo-star-v4-v1.json"
+OUTPUT_ROOT = ROOT / "artifacts" / "full-figures" / "ceo-star"
 CHEMICAL_ACCURACY_HARTREE = 0.0015936
 REQUIRED_THREADS = {"OMP_NUM_THREADS": "1", "OPENBLAS_NUM_THREADS": "1", "MKL_NUM_THREADS": "1"}
 
@@ -46,6 +47,21 @@ def registered_cases() -> dict[str, dict[str, Any]]:
     return {item["case_id"]: item for item in manifest["cases"]}
 
 
+def canonical_output(case_id: str) -> Path:
+    if case_id not in registered_cases():
+        raise MultiSystemCheckpointError(f"unregistered case: {case_id}")
+    return OUTPUT_ROOT / case_id / "checkpoint.json"
+
+
+def _allowed_result_paths() -> set[str]:
+    paths: set[str] = set()
+    for case_id in registered_cases():
+        checkpoint = canonical_output(case_id)
+        paths.add(str(checkpoint.relative_to(ROOT)))
+        paths.add(str(checkpoint.with_suffix(".progress.jsonl").relative_to(ROOT)))
+    return paths
+
+
 def verify_freeze(case_id: str) -> tuple[dict[str, Any], dict[str, Any]]:
     manifest = json.loads(MANIFEST_PATH.read_text(encoding="utf-8"))
     cases = registered_cases()
@@ -53,11 +69,19 @@ def verify_freeze(case_id: str) -> tuple[dict[str, Any], dict[str, Any]]:
         raise MultiSystemCheckpointError(f"unregistered case: {case_id}")
     head = _git("rev-parse", "HEAD")
     tag = _git("rev-parse", f"{PROTOCOL_TAG}^{{}}")
-    dirty = _git("status", "--porcelain")
+    tracked_dirty = _git("status", "--porcelain", "--untracked-files=no")
+    untracked = {
+        value for value in _git("ls-files", "--others", "--exclude-standard").splitlines()
+        if value
+    }
+    unexpected_untracked = untracked - _allowed_result_paths()
     threads = {name: os.environ.get(name) for name in REQUIRED_THREADS}
-    if head != tag or dirty or threads != REQUIRED_THREADS:
+    if head != tag or tracked_dirty or unexpected_untracked or threads != REQUIRED_THREADS:
         raise MultiSystemCheckpointError(
-            f"checkpoint run requires clean tagged code and canonical threads: head={head}, tag={tag}, dirty={bool(dirty)}, threads={threads}"
+            "checkpoint run requires immutable tagged code, only registered result artifacts, "
+            f"and canonical threads: head={head}, tag={tag}, "
+            f"tracked_dirty={bool(tracked_dirty)}, unexpected_untracked={sorted(unexpected_untracked)}, "
+            f"threads={threads}"
         )
     return {
         "head": head,
@@ -129,6 +153,11 @@ def _write_exclusive(path: Path, value: dict[str, Any]) -> None:
 
 def run(case_id: str, output: Path) -> dict[str, Any]:
     freeze, case = verify_freeze(case_id)
+    expected_output = canonical_output(case_id)
+    if output.resolve() != expected_output.resolve():
+        raise MultiSystemCheckpointError(
+            f"checkpoint output is not canonical: observed={output}, expected={expected_output}"
+        )
     if output.exists():
         raise FileExistsError(output)
     progress = output.with_suffix(".progress.jsonl")
