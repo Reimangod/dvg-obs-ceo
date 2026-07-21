@@ -45,7 +45,7 @@ from .transaction import (
 from .v3_protocol import _write_exclusive
 
 
-PROTOCOL_TAG = "dvg-obs-v4-s7-lih-v1"
+PROTOCOL_TAG = "dvg-obs-v4-s7-lih-v1.1"
 CONFIG_PATH = ROOT / "manifests" / "v4-s6-frozen-config-v1.json"
 CHECKPOINT_PATH = ROOT / "artifacts" / "s10" / "lih-3a-first-accuracy-primary-v1-2" / "checkpoint.json"
 EXPECTED_CHECKPOINT_SHA256 = "1ef38be983595fdb094f2a47287e6047193351e0eff4a7c589630ef023ad98eb"

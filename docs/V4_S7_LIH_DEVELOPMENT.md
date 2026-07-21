@@ -19,3 +19,7 @@ cannot alter later attempts.
 
 LiH was observed while developing earlier versions, so this is development
 evidence only. It cannot support an out-of-sample or general-superiority claim.
+
+Execution protocol v1.1 includes the source-slot ordering correction documented
+in `docs/incidents/V4_S7_V1_LEXICOGRAPHIC_SLOT_ORDER.md`; thresholds, candidate
+families, budgets, checkpoint, and ranking are unchanged from v1.

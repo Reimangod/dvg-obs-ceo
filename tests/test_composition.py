@@ -9,6 +9,7 @@ from dvg_obs_ceo.composition import (
     combine_exact_systems,
     compose_registered_candidates,
     pairwise_compatibility,
+    exact_matrix_in_source_order,
 )
 from dvg_obs_ceo.constraint_state import ExactConstraintSystem
 from dvg_obs_ceo.quadratic import ConstraintTargetIR
@@ -57,6 +58,35 @@ def test_disjoint_deletions_compose_in_original_ansatz_order() -> None:
     assert validated == [(11,)]
     assert plan.transformation.jacobian.shape == (3, 1)
     np.testing.assert_array_equal(plan.transformation.jacobian[:, 0], [0.0, 1.0, 0.0])
+
+
+def test_two_digit_source_slots_are_reordered_back_to_numeric_ansatz_order() -> None:
+    block = _block("block:eleven", (11,))
+    source = AnsatzStructure.create(
+        list(range(12)), [0.1] * 12, [12]
+    )
+    plan = compose_registered_candidates(source, [block], [_deletion(block)])
+    assert plan.transformation.constraint_matrix.shape == (1, 12)
+    np.testing.assert_array_equal(
+        plan.transformation.constraint_matrix[0], [0.0] * 11 + [1.0]
+    )
+    np.testing.assert_allclose(
+        plan.transformation.constraint_matrix @ plan.transformation.jacobian,
+        0.0,
+        rtol=0.0,
+        atol=0.0,
+    )
+
+
+def test_exact_matrix_order_helper_rejects_missing_or_duplicate_slots() -> None:
+    slots = [f"ansatz-position:{index}" for index in range(12)]
+    row = [0] * 12
+    row[11] = 1
+    system = ExactConstraintSystem.create(slots, [row], [0])
+    matrix, _ = exact_matrix_in_source_order(system, slots)
+    np.testing.assert_array_equal(matrix[0], row)
+    with pytest.raises(GlobalCompatibilityError, match="source order"):
+        exact_matrix_in_source_order(system, slots[:-1])
 
 
 def test_same_block_candidates_fail_pairwise_and_global() -> None:

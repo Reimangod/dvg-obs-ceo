@@ -108,6 +108,25 @@ def combine_exact_systems(
     return combined
 
 
+def exact_matrix_in_source_order(
+    system: ExactConstraintSystem,
+    source_slots: Sequence[str],
+) -> tuple[np.ndarray, np.ndarray]:
+    """Materialize canonical exact rows in an explicitly requested slot order."""
+
+    requested = tuple(str(slot) for slot in source_slots)
+    if len(set(requested)) != len(requested) or set(requested) != set(system.source_slots):
+        raise GlobalCompatibilityError("requested exact-matrix source order is incompatible")
+    rows, rhs = system.rational_matrix()
+    reordered = []
+    for row in rows:
+        by_slot = dict(zip(system.source_slots, row))
+        reordered.append([float(by_slot[slot]) for slot in requested])
+    return np.asarray(reordered, dtype=np.float64), np.asarray(
+        [float(value) for value in rhs], dtype=np.float64
+    )
+
+
 def _selection_iterations(source: AnsatzStructure) -> tuple[int, ...]:
     result: list[int] = []
     start = 0
@@ -219,11 +238,9 @@ def compose_registered_candidates(
             target_iterations.append(block.selection_iterations[0])
     global_exact = combine_exact_systems(source_slots, exact_systems)
     jacobian = np.column_stack(columns) if columns else np.zeros((len(source.indices), 0))
-    exact_a, exact_b = global_exact.rational_matrix()
-    constraint_matrix = np.asarray(
-        [[float(value) for value in row] for row in exact_a], dtype=np.float64
+    constraint_matrix, constraint_rhs = exact_matrix_in_source_order(
+        global_exact, source_slots
     )
-    constraint_rhs = np.asarray([float(value) for value in exact_b], dtype=np.float64)
     transformation = ConstraintTargetIR.create(
         constraint_matrix=constraint_matrix,
         constraint_rhs=constraint_rhs,
