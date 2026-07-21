@@ -84,6 +84,7 @@ state and fixed calibration guards.
 - Independent S7 audit: `artifacts/v4/s7-lih-independent-audit-v1.json`
 - Deferred-validation gate: `artifacts/v4/s8-deferred-validation-gate-v1.json`
 - S10 local release audit: `artifacts/v4/s10-local-release-audit-v1.json`
+- Paper-equivalent figure bundle: `output/pdf/v4-paper-equivalent-v1/`
 
 The final local release suite passed all 162 tests. The 95 emitted warnings are
 deprecation warnings from the pinned paper-era OpenFermion/Qiskit dependency

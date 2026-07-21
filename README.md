@@ -38,6 +38,7 @@ No performance claim is permitted until the stage gates in
 - V4 S8 validation: deliberately deferred, not passed; no unseen matched CEO* checkpoint is available in the approved scope
 - V4 S9 reporting: complete with source-hashed CSV, JSON, figures, and explicit negative results
 - V4 S10 local release gate: passed (162 tests; evidence, tags, submodule, rollback, staging, and raw-artifact checks all passed)
+- Paper Fig. 11/14/15 equivalents: generated for LiH 3 A from frozen GSD/CEO*/V4 evidence; Measurement Cost remains explicitly unavailable for V4
 
 The V4 outcome is a **development result**, not blind validation or a general
 superiority claim. Paper-equivalent Measurement Cost remains unavailable.
