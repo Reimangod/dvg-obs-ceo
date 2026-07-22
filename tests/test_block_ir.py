@@ -35,9 +35,9 @@ class FakePool:
         minus = FakeQubitOperator({next(iter(q0.terms)): 0.5j, next(iter(q1.terms)): 0.5j})
         self.operators = [
             FakeOperator(q0, {0, 2}, [2], [0]),
-            FakeOperator(q1, {0, 2}, [2], [0]),
-            FakeOperator(plus, {0, 2}, [[2], [2]], [[0], [0]], "sum", [0, 1]),
-            FakeOperator(minus, {0, 2}, [[2], [2]], [[0], [0]], "diff", [0, 1]),
+            FakeOperator(q1, {0, 2}, [3], [1]),
+            FakeOperator(plus, {0, 2}, [[2], [3]], [[0], [1]], "sum", [0, 1]),
+            FakeOperator(minus, {0, 2}, [[2], [3]], [[0], [1]], "diff", [0, 1]),
         ]
         self.parent_range = range(0, 2)
 
@@ -55,8 +55,22 @@ class FakeThreeParentPool(FakePool):
             for pauli, coefficient in (("X", 0.5j), ("Y", -0.5j), ("Z", 0.25j))
         ]
         self.operators = [
-            FakeOperator(generator, {0, 2}, [2], [0]) for generator in generators
+            FakeOperator(generator, {0, 2}, [2 + index], [index])
+            for index, generator in enumerate(generators)
         ]
+        plus = FakeQubitOperator({**generators[0].terms, **generators[1].terms})
+        diff = FakeQubitOperator(
+            {
+                **generators[0].terms,
+                next(iter(generators[1].terms)): -next(iter(generators[1].terms.values())),
+            }
+        )
+        self.operators.extend(
+            [
+                FakeOperator(plus, {0, 2}, [[2], [3]], [[0], [1]], "sum", [0, 1, 2]),
+                FakeOperator(diff, {0, 2}, [[2], [3]], [[0], [1]], "diff", [0, 1, 2]),
+            ]
+        )
         self.parent_range = range(0, 3)
 
 
@@ -115,6 +129,27 @@ def test_three_constituent_mvp_supports_multi_target_subset_jacobians() -> None:
     assert len(constituent) == 3
     assert all(candidate.transformation.jacobian.shape == (3, 2) for candidate in constituent)
     assert all(candidate.transformation.constraint_matrix.shape == (1, 3) for candidate in constituent)
+    ovp = [candidate for candidate in candidates if "mvp-to-ovp" in candidate.kind]
+    assert {candidate.exact_generator_relation for candidate in ovp} == {
+        (1, 1, 0),
+        (1, -1, 0),
+    }
+    assert all(candidate.transformation.jacobian.shape == (3, 1) for candidate in ovp)
+
+
+def test_registered_ovp_relation_follows_source_pool_permutation() -> None:
+    pool = FakeThreeParentPool()
+    block = recover_dvg_blocks(pool, [2, 0, 1], [0.2, 0.3, -0.1], [3])[0]
+    candidates = enumerate_candidates(pool, [block])
+    relations = {
+        candidate.kind: candidate.exact_generator_relation
+        for candidate in candidates
+        if "mvp-to-ovp" in candidate.kind
+    }
+    assert relations == {
+        "mvp-to-ovp-sum": (0, 1, 1),
+        "mvp-to-ovp-diff": (0, 1, -1),
+    }
 
 
 def test_generator_unitary_and_random_state_validation() -> None:

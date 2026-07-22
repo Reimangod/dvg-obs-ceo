@@ -5,13 +5,12 @@ from __future__ import annotations
 import argparse
 from collections import Counter
 import hashlib
-import inspect
 import json
 from pathlib import Path
+import subprocess
 from typing import Any
 
 from .baseline import ROOT
-from .constraint_state import exact_atomic_constraint
 from .identity import canonical_json_bytes
 from .v3_protocol import _write_exclusive
 from .v4_1_protocol import DEFAULT_MANIFEST, V41ProtocolError, audit_manifest
@@ -38,15 +37,25 @@ def _digest(value: Any) -> str:
 
 
 def _source_location() -> dict[str, Any]:
-    lines, start = inspect.getsourcelines(exact_atomic_constraint)
+    path = "src/dvg_obs_ceo/constraint_state.py"
+    historical = subprocess.check_output(
+        [
+            "git",
+            "-C",
+            str(ROOT),
+            "show",
+            f"488ec8b87079fd7ca63f1b3825cda3d6aecfa9f0:{path}",
+        ],
+        text=True,
+    ).splitlines()
     offset = next(
-        index for index, line in enumerate(lines) if "registered OVP tie must map" in line
+        index for index, line in enumerate(historical) if "registered OVP tie must map" in line
     )
-    path = Path(inspect.getsourcefile(exact_atomic_constraint) or "").resolve()
     return {
-        "path": str(path.relative_to(ROOT.resolve())),
-        "line": start + offset,
+        "path": path,
+        "line": offset + 1,
         "function": "exact_atomic_constraint",
+        "commit": "488ec8b87079fd7ca63f1b3825cda3d6aecfa9f0",
     }
 
 

@@ -20,7 +20,7 @@ from .quadratic import ConstraintTargetIR
 FloatArray = NDArray[np.float64]
 ComplexArray = NDArray[np.complex128]
 BLOCK_IR_VERSION = "dvg-block-ir-v1"
-CANDIDATE_CATALOG_VERSION = "dvg-candidate-catalog-v1"
+CANDIDATE_CATALOG_VERSION = "dvg-candidate-catalog-v1.1"
 
 
 class BlockIRError(ValueError):
@@ -125,6 +125,7 @@ class CompressionCandidate:
     target_operator_digests: tuple[str, ...]
     semantic_conflict_positions: tuple[int, ...]
     numerical_context_digest: str
+    exact_generator_relation: tuple[int, ...] | None = None
 
 
 def _iteration_assignment(
@@ -297,6 +298,56 @@ def _relation_weights(
     return np.asarray(weights, dtype=np.float64)
 
 
+def _registered_ovp_relation(
+    source_pool_indices: Sequence[int],
+    target: Any,
+    pool: Any,
+) -> tuple[int, ...] | None:
+    """Return exact signed source weights from registered OVP parent metadata.
+
+    A target whose two registered parents are not both present in this source
+    block is not a candidate for the block.  Numerical generator coefficients
+    are deliberately not used to invent this symbolic relation.
+    """
+
+    ceo_type = getattr(target, "ceo_type", None)
+    registered_parents = tuple(
+        int(index) for index in (getattr(target, "parents", None) or ())
+    )
+    if ceo_type not in {"sum", "diff"}:
+        raise BlockIRError("registered OVP relation requires sum/diff metadata")
+    if len(registered_parents) < 2 or len(set(registered_parents)) != len(registered_parents):
+        raise BlockIRError("registered OVP relation requires distinct parent IDs")
+    source_orbs = tuple(tuple(int(value) for value in item) for item in target.source_orbs)
+    target_orbs = tuple(tuple(int(value) for value in item) for item in target.target_orbs)
+    if len(source_orbs) != 2 or len(target_orbs) != 2:
+        raise BlockIRError("OVP metadata must identify exactly two constituent excitations")
+    parents: list[int] = []
+    for source_orb, target_orb in zip(source_orbs, target_orbs):
+        matches = [
+            parent
+            for parent in registered_parents
+            if tuple(int(value) for value in pool.operators[parent].source_orbs) == source_orb
+            and tuple(int(value) for value in pool.operators[parent].target_orbs) == target_orb
+        ]
+        if len(matches) != 1:
+            raise BlockIRError(
+                "OVP constituent orbital metadata does not identify one registered parent"
+            )
+        parents.append(matches[0])
+    if len(set(parents)) != 2:
+        raise BlockIRError("OVP constituent metadata identifies duplicate parents")
+    source_position = {int(index): position for position, index in enumerate(source_pool_indices)}
+    if len(source_position) != len(source_pool_indices):
+        raise BlockIRError("source pool indices must be unique")
+    if any(parent not in source_position for parent in parents):
+        return None
+    relation = [0] * len(source_pool_indices)
+    relation[source_position[parents[0]]] = 1
+    relation[source_position[parents[1]]] = 1 if ceo_type == "sum" else -1
+    return tuple(relation)
+
+
 def _constraint_for_jacobian(jacobian: FloatArray) -> FloatArray:
     source_dimension, target_dimension = jacobian.shape
     if target_dimension == 0:
@@ -338,6 +389,7 @@ def _candidate(
     target_digests: tuple[str, ...],
     removed_slots: tuple[int, ...],
     orientation: str,
+    exact_generator_relation: tuple[int, ...] | None = None,
 ) -> CompressionCandidate:
     source_dimension, target_dimension = jacobian.shape
     constraint = _constraint_for_jacobian(jacobian)
@@ -359,6 +411,10 @@ def _candidate(
         "target_pool_indices": list(target_pool_indices),
         "target_operator_digests": list(target_digests),
     }
+    if exact_generator_relation is not None:
+        if len(exact_generator_relation) != source_dimension:
+            raise BlockIRError("exact generator relation has wrong source dimension")
+        structural["exact_generator_relation"] = list(exact_generator_relation)
     equivalence = "transform-v1:" + _digest(structural)
     return CompressionCandidate(
         candidate_id="candidate-v1:" + _digest({**structural, "kind": kind}),
@@ -373,6 +429,7 @@ def _candidate(
         target_operator_digests=target_digests,
         semantic_conflict_positions=block.ansatz_positions,
         numerical_context_digest=block.numerical_context_digest,
+        exact_generator_relation=exact_generator_relation,
     )
 
 
@@ -428,10 +485,22 @@ def enumerate_candidates(pool: Any, blocks: Sequence[DVGBlock]) -> tuple[Compres
             if _support(pool, target_index) != block.support_qubits:
                 continue
             _operator_symmetry(target)
+            exact_relation = _registered_ovp_relation(block.pool_indices, target, pool)
+            if exact_relation is None:
+                continue
             try:
                 weights = _relation_weights(source_operators, pool.get_q_op(target_index))
             except BlockIRError:
                 continue
+            if not np.allclose(
+                weights,
+                np.asarray(exact_relation, dtype=np.float64),
+                rtol=0.0,
+                atol=1e-10,
+            ):
+                raise BlockIRError(
+                    "registered OVP parent relation disagrees with numerical generator"
+                )
             jacobian = weights.reshape(dimension, 1)
             result.append(
                 _candidate(
@@ -443,6 +512,7 @@ def enumerate_candidates(pool: Any, blocks: Sequence[DVGBlock]) -> tuple[Compres
                     (operator_digest(pool.get_q_op(target_index)),),
                     tuple(index for index, value in enumerate(weights) if value == 0.0),
                     str(target.ceo_type),
+                    exact_relation,
                 )
             )
     identifiers = [candidate.candidate_id for candidate in result]
@@ -583,4 +653,9 @@ def candidate_to_dict(candidate: CompressionCandidate) -> dict[str, Any]:
         "target_operator_digests": list(candidate.target_operator_digests),
         "semantic_conflict_positions": list(candidate.semantic_conflict_positions),
         "numerical_context_digest": candidate.numerical_context_digest,
+        "exact_generator_relation": (
+            list(candidate.exact_generator_relation)
+            if candidate.exact_generator_relation is not None
+            else None
+        ),
     }

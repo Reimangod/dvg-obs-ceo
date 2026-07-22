@@ -65,9 +65,9 @@ class FakePool:
         diff = FakeQubitOperator({next(iter(q0.terms)): 0.5j, next(iter(q1.terms)): 0.5j})
         self.operators = [
             FakeOperator(q0, {0, 2}, [2], [0]),
-            FakeOperator(q1, {0, 2}, [2], [0]),
-            FakeOperator(plus, {0, 2}, [[2], [2]], [[0], [0]], "sum", [0, 1]),
-            FakeOperator(diff, {0, 2}, [[2], [2]], [[0], [0]], "diff", [0, 1]),
+            FakeOperator(q1, {0, 2}, [3], [1]),
+            FakeOperator(plus, {0, 2}, [[2], [3]], [[0], [1]], "sum", [0, 1]),
+            FakeOperator(diff, {0, 2}, [[2], [3]], [[0], [1]], "diff", [0, 1]),
         ]
         self.parent_range = range(0, 2)
 

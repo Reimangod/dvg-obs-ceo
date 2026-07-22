@@ -48,6 +48,11 @@ def _candidate(kind: str, jacobian, removed=()) -> CompressionCandidate:
         generator_normalization="paper-era-pool-arrange-v1",
         orientation=kind,
     )
+    exact_relation = None
+    if kind.endswith("sum"):
+        exact_relation = tuple(1 if index < 2 else 0 for index in range(source))
+    elif kind.endswith("diff"):
+        exact_relation = tuple((1, -1)[index] if index < 2 else 0 for index in range(source))
     return CompressionCandidate(
         "candidate:" + kind,
         "equivalence:" + kind,
@@ -61,6 +66,7 @@ def _candidate(kind: str, jacobian, removed=()) -> CompressionCandidate:
         tuple("a" * 64 for _ in range(target)),
         tuple(range(source)),
         "b" * 64,
+        exact_relation,
     )
 
 
@@ -107,6 +113,33 @@ def test_atomic_semantics_reject_unregistered_approximation() -> None:
     candidate = _candidate("mvp-to-ovp-sum", [[1.0], [0.999999]])
     with pytest.raises(ConstraintStateError, match="disagrees"):
         exact_atomic_constraint(candidate)
+
+
+@pytest.mark.parametrize(
+    ("kind", "jacobian", "expected_rows"),
+    [
+        ("mvp-to-ovp-sum", [[1.0], [1.0], [0.0]], [[1, -1, 0], [0, 0, 1]]),
+        ("mvp-to-ovp-diff", [[1.0], [-1.0], [0.0]], [[1, 1, 0], [0, 0, 1]]),
+    ],
+)
+def test_three_constituent_ovp_has_exact_tie_and_zero_constraint(
+    kind, jacobian, expected_rows
+) -> None:
+    candidate = _candidate(kind, jacobian, (2,))
+    exact = exact_atomic_constraint(candidate)
+    matrix, rhs = exact.system.rational_matrix()
+    assert [[int(value) for value in row] for row in matrix] == expected_rows
+    assert [int(value) for value in rhs] == [0, 0]
+    expected_relation = [1, 1, 0] if kind.endswith("sum") else [1, -1, 0]
+    assert exact.primitive["exact_generator_relation"] == expected_relation
+
+
+def test_ovp_semantics_reject_missing_or_invented_exact_provenance() -> None:
+    candidate = _candidate("mvp-to-ovp-sum", [[1.0], [1.0], [0.0]], (2,))
+    with pytest.raises(ConstraintStateError, match="explicit exact"):
+        exact_atomic_constraint(replace(candidate, exact_generator_relation=None))
+    with pytest.raises(ConstraintStateError, match="exactly two"):
+        exact_atomic_constraint(replace(candidate, exact_generator_relation=(1, 1, 1)))
 
 
 def test_zero_target_deletion_has_zero_jacobian_residual() -> None:

@@ -1,0 +1,114 @@
+{
+  "artifact_digest": "6d519c39f685b6db9b80277d37011c6c552d6ad641fd3035b06f1f3a015124ba",
+  "artifact_kind": "v4.1-s2-exact-semantic-audit",
+  "cases": [
+    {
+      "atomic_semantic_replay_count": 319,
+      "block_count": 79,
+      "candidate_count": 319,
+      "case_id": "h6-1.5",
+      "checkpoint_sha256": "2c994c6ac2d4478c7174b71b661f496c9fda8a14e3a7ca08d01e9130515fe491",
+      "checks": {
+        "all_atomic_semantics_replayed": true,
+        "catalog_cardinality_preserved": true,
+        "numerical_ids_unique": true,
+        "semantic_ids_unique": true,
+        "three_constituent_ovp_supported": true
+      },
+      "exact_relation_histogram": {
+        "0,-1,1": 2,
+        "0,1,1": 2,
+        "1,-1": 54,
+        "1,-1,0": 2,
+        "1,0,-1": 2,
+        "1,0,1": 2,
+        "1,1": 54,
+        "1,1,0": 2
+      },
+      "kind_histogram": {
+        "block-deletion": 23,
+        "mvp-constituent-deletion": 114,
+        "mvp-to-ovp-diff": 60,
+        "mvp-to-ovp-sum": 60,
+        "mvp-to-single-qe": 6,
+        "mvp-whole-deletion": 56
+      },
+      "ovp_source_dimension_histogram": {
+        "2": 108,
+        "3": 12
+      },
+      "unknown_semantic_failure_count": 0
+    },
+    {
+      "atomic_semantic_replay_count": 359,
+      "block_count": 95,
+      "candidate_count": 359,
+      "case_id": "h6-3.0",
+      "checkpoint_sha256": "40a59c46b12e27551b3b156125cf1f2bd6f75ec49da1831eba13cdc27be24a88",
+      "checks": {
+        "all_atomic_semantics_replayed": true,
+        "catalog_cardinality_preserved": true,
+        "numerical_ids_unique": true,
+        "semantic_ids_unique": true,
+        "three_constituent_ovp_supported": true
+      },
+      "exact_relation_histogram": {
+        "0,-1,1": 12,
+        "0,1,1": 12,
+        "1,-1": 30,
+        "1,-1,0": 12,
+        "1,0,-1": 12,
+        "1,0,1": 12,
+        "1,1": 30,
+        "1,1,0": 12
+      },
+      "kind_histogram": {
+        "block-deletion": 53,
+        "mvp-constituent-deletion": 96,
+        "mvp-to-ovp-diff": 66,
+        "mvp-to-ovp-sum": 66,
+        "mvp-to-single-qe": 36,
+        "mvp-whole-deletion": 42
+      },
+      "ovp_source_dimension_histogram": {
+        "2": 60,
+        "3": 72
+      },
+      "unknown_semantic_failure_count": 0
+    },
+    {
+      "atomic_semantic_replay_count": 56,
+      "block_count": 32,
+      "candidate_count": 56,
+      "case_id": "beh2-3.0",
+      "checkpoint_sha256": "4344d203bbf161fd53814f1fb51af2bbc8531d7c77587a477a3654b3b1ec626c",
+      "checks": {
+        "all_atomic_semantics_replayed": true,
+        "catalog_cardinality_preserved": true,
+        "numerical_ids_unique": true,
+        "semantic_ids_unique": true,
+        "three_constituent_ovp_supported": true
+      },
+      "exact_relation_histogram": {
+        "1,-1": 6,
+        "1,1": 6
+      },
+      "kind_histogram": {
+        "block-deletion": 26,
+        "mvp-constituent-deletion": 12,
+        "mvp-to-ovp-diff": 6,
+        "mvp-to-ovp-sum": 6,
+        "mvp-whole-deletion": 6
+      },
+      "ovp_source_dimension_histogram": {
+        "2": 12
+      },
+      "unknown_semantic_failure_count": 0
+    }
+  ],
+  "claim_boundary": "Exact atomic and single-candidate composition replay only; no Hessian screening, search, resource selection, or VQE execution.",
+  "passed": true,
+  "protocol_id": "dvg-obs-v4.1-scale-transfer-protocol-v1",
+  "s0_manifest_sha256": "daeab27726a7c3a3f6a4ef11c8dccc8be112649e4bbc0952876666bf32613b46",
+  "schema_version": "1.0.0"
+}

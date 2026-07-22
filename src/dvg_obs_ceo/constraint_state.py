@@ -18,7 +18,7 @@ from .quadratic import ConstraintTargetIR, QuadraticModelError
 FloatArray = NDArray[np.float64]
 SEMANTIC_VERSION = "constraint-semantic-v1"
 NUMERICAL_VERSION = "constraint-numerical-v1"
-ATOMIC_SYMBOLIC_VERSION = "atomic-ceo-symbolic-v1"
+ATOMIC_SYMBOLIC_VERSION = "atomic-ceo-symbolic-v1.1"
 
 
 class ConstraintStateError(RuntimeError):
@@ -154,11 +154,36 @@ def exact_atomic_constraint(
         rows = np.eye(source_dimension, dtype=int)[list(candidate.removed_source_slots)].tolist()
         relation = "identity-subset"
     elif kind in {"mvp-to-ovp-sum", "mvp-to-ovp-diff"}:
-        if (source_dimension, target_dimension) != (2, 1):
-            raise ConstraintStateError("registered OVP tie must map two sources to one target")
+        relation = candidate.exact_generator_relation
+        if target_dimension != 1 or relation is None or len(relation) != source_dimension:
+            raise ConstraintStateError(
+                "registered OVP tie requires one target and explicit exact source relation"
+            )
+        if any(isinstance(value, bool) or not isinstance(value, int) for value in relation):
+            raise ConstraintStateError("registered OVP relation must contain exact integers")
+        nonzero = [index for index, value in enumerate(relation) if value]
+        if len(nonzero) != 2 or any(abs(relation[index]) != 1 for index in nonzero):
+            raise ConstraintStateError(
+                "registered OVP relation must contain exactly two signed parent weights"
+            )
+        expected[:, 0] = np.asarray(relation, dtype=np.float64)
+        pivot = nonzero[0]
+        for index in range(source_dimension):
+            if index == pivot:
+                continue
+            row = [0] * source_dimension
+            row[index] = relation[pivot]
+            row[pivot] = -relation[index]
+            rows.append(row)
         sign = 1 if kind.endswith("sum") else -1
-        expected[:, 0] = [1.0, float(sign)]
-        rows = [[1, -sign]]
+        observed_signs = tuple(relation[index] for index in nonzero)
+        signs_match_type = (
+            observed_signs == (1, 1)
+            if sign == 1
+            else sorted(observed_signs) == [-1, 1]
+        )
+        if not signs_match_type:
+            raise ConstraintStateError("registered OVP signed relation disagrees with CEO type")
         relation = "existing-ovp-sum" if sign == 1 else "existing-ovp-difference"
     else:
         raise ConstraintStateError(f"candidate kind lacks exact symbolic support: {kind}")
@@ -177,6 +202,11 @@ def exact_atomic_constraint(
         "target_pool_indices": list(candidate.target_pool_indices),
         "target_operator_digests": list(candidate.target_operator_digests),
         "removed_source_slots": list(candidate.removed_source_slots),
+        "exact_generator_relation": (
+            list(candidate.exact_generator_relation)
+            if candidate.exact_generator_relation is not None
+            else None
+        ),
         "generator_normalization": transform.generator_normalization,
         "units": transform.units,
         "exact_augmented_rref": [list(row) for row in system.augmented_rref],
