@@ -9,7 +9,7 @@ import json
 import math
 import os
 from pathlib import Path
-from typing import Any, Sequence
+from typing import Any, Mapping, Sequence
 
 import numpy as np
 
@@ -46,8 +46,8 @@ class V41MultiSystemError(RuntimeError):
     """Raised when corrected screening cannot be trusted."""
 
 
-SCREENING_CODE_TAG = "dvg-obs-v4.1-s5-screening-code-v1.3"
-DEFAULT_SCREENING_ROOT = ROOT / "artifacts/v4.1/s5-sentinels-rerun-v3"
+SCREENING_CODE_TAG = "dvg-obs-v4.1-s5-screening-code-v1.4"
+DEFAULT_SCREENING_ROOT = ROOT / "artifacts/v4.1/s5-sentinels-rerun-v4"
 REQUIRED_THREADS = {"OMP_NUM_THREADS": "1", "OPENBLAS_NUM_THREADS": "1", "MKL_NUM_THREADS": "1"}
 
 
@@ -112,6 +112,30 @@ def select_v4_1_sentinels(
     payload.pop("selection_digest", None)
     payload["selection_digest"] = _digest(payload)
     return payload
+
+
+def replay_selected_sentinel_evidence(
+    selection: Mapping[str, Any],
+    evidence: Mapping[str, Mapping[str, Any]],
+    predictor: Any,
+) -> list[dict[str, Any]]:
+    """Materialize full diagnostics only for the frozen unique sentinel queue."""
+
+    sentinels: list[dict[str, Any]] = []
+    for semantic_id in selection["unique_attempt_semantic_ids"]:
+        stored = dict(evidence[semantic_id])
+        candidate_ids = tuple(stored["candidate_ids"])
+        plan, prediction, quality = predictor(candidate_ids)
+        if (
+            plan.state.constraint_semantic_id != semantic_id
+            or plan.state.constraint_numerical_id != stored["constraint_numerical_id"]
+            or not quality["passed"]
+        ):
+            raise V41MultiSystemError(
+                "selected sentinel full-prediction replay drift"
+            )
+        sentinels.append({**stored, "prediction": prediction, "quality": quality})
+    return sentinels
 
 
 def screen_case(case_id: str, manifest_path: Path = DEFAULT_MANIFEST) -> dict[str, Any]:
@@ -239,8 +263,6 @@ def screen_case(case_id: str, manifest_path: Path = DEFAULT_MANIFEST) -> dict[st
             "candidate_ids": list(candidate_ids),
             "constraint_semantic_id": plan.state.constraint_semantic_id,
             "constraint_numerical_id": plan.state.constraint_numerical_id,
-            "prediction": prediction,
-            "quality": quality,
             "resources": asdict(recount.snapshot),
             "target_indices": list(plan.target_indices),
             "target_iteration_counts": list(plan.target_iteration_counts),
@@ -253,7 +275,7 @@ def screen_case(case_id: str, manifest_path: Path = DEFAULT_MANIFEST) -> dict[st
         top_k_per_endpoint=config["exact_vqe_budget"]["top_k_per_endpoint"],
         maximum_unique_attempts=4,
     )
-    sentinels = [evidence[value] for value in selection["unique_attempt_semantic_ids"]]
+    sentinels = replay_selected_sentinel_evidence(selection, evidence, predict)
     result: dict[str, Any] = {
         "schema_version": "1.0.0",
         "artifact_kind": "v4.1-s5-case-sentinel-screening",
@@ -270,8 +292,8 @@ def screen_case(case_id: str, manifest_path: Path = DEFAULT_MANIFEST) -> dict[st
         "screening_work": {
             "fixed_source_hessian_factorizations": 1,
             "constraint_space_solves": search["counts"]["quadratic_solves"],
-            "maximum_full_prediction_live_set": 1,
-            "full_quality_predictions": len(eligible_records),
+            "full_quality_predictions": len(eligible_records) + len(sentinels),
+            "retained_full_prediction_records": len(sentinels),
             "algorithm": "memory-bounded-fixed-source-constrained-newton-v1",
         },
         "quality_passed_resource_candidate_count": len(resources),
