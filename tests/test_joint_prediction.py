@@ -5,6 +5,7 @@ from dvg_obs_ceo.hessian import SecantPair
 from dvg_obs_ceo.joint_prediction import (
     JointPredictionError,
     JointQualityPolicy,
+    JointScreeningContext,
     evaluate_joint_quality,
     joint_obs_prediction,
 )
@@ -140,3 +141,38 @@ def test_raw_target_condition_can_be_telemetry_with_scale_certificate_gate() -> 
     )
     assert quality["passed"]
     assert quality["checks"]["target_hessian_condition"]
+
+
+@pytest.mark.parametrize("seed", range(10))
+def test_memory_bounded_screening_prediction_matches_full_prediction(seed) -> None:
+    random = np.random.default_rng(seed)
+    dimension = 7
+    rank = 1 + seed % 4
+    factor = random.normal(size=(dimension, dimension))
+    hessian = factor.T @ factor + np.eye(dimension)
+    inverse = np.linalg.inv(hessian)
+    theta = random.normal(size=dimension)
+    gradient = random.normal(size=dimension)
+    # An orthogonal constraint basis makes the registered null-space map exact.
+    orthogonal, _ = np.linalg.qr(random.normal(size=(dimension, dimension)))
+    matrix = orthogonal[:, :rank].T
+    jacobian = orthogonal[:, rank:]
+    transform = _transform(matrix, np.zeros(rank), jacobian)
+    context = JointScreeningContext.create(theta, gradient, inverse)
+    screened = context.predicted_change(transform)
+    full = joint_obs_prediction(
+        theta, gradient, inverse, transform, internal_pairs=()
+    )["predicted_change_from_current_hartree"]
+    assert screened == full
+
+
+def test_screening_context_fails_closed_on_constraint_drift() -> None:
+    context = JointScreeningContext.create([0.1, -0.2], [0.0, 0.0], np.eye(2))
+    malformed = ConstraintTargetIR.create(
+        constraint_matrix=[[1.0, 0.0, 0.0]], constraint_rhs=[0.0],
+        offset=[0.0, 0.0], jacobian=[[0.0], [1.0]],
+        source_slots=["s:0", "s:1"], target_slots=["t:0"],
+        generator_normalization="test", orientation="test",
+    )
+    with pytest.raises(JointPredictionError, match="screening solve"):
+        context.predicted_change(malformed)

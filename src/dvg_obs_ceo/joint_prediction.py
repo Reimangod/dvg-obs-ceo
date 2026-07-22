@@ -16,6 +16,7 @@ from .quadratic import (
     QuadraticModel,
     QuadraticModelError,
     predict_constrained_optimum,
+    solve_spd,
     target_native_model,
     validate_spd,
 )
@@ -80,6 +81,108 @@ class JointQualityPolicy:
             or self.maximum_target_hessian_relative_backward_error <= 0
         ):
             raise JointPredictionError("joint quality policy is invalid")
+
+
+@dataclass(frozen=True)
+class JointScreeningContext:
+    """Fixed-source quadratic context for memory-bounded surrogate screening.
+
+    The expensive source-Hessian validation and factorization are performed
+    once.  Candidate evaluation uses the same constrained-Newton formula as
+    :func:`joint_obs_prediction`, including an independent direct-quadratic
+    consistency check, but deliberately does not construct target-native
+    coordinates or diagnostics.  Those are recomputed in full for every
+    energy-eligible candidate before quality filtering or selection.
+    """
+
+    model: QuadraticModel
+    source_hessian: FloatArray
+    unconstrained_theta: FloatArray
+    unconstrained_change_from_current: float
+    numerical_policy: NumericalPolicy
+
+    @classmethod
+    def create(
+        cls,
+        theta: ArrayLike,
+        gradient: ArrayLike,
+        inverse_hessian: ArrayLike,
+        numerical_policy: NumericalPolicy = NumericalPolicy(),
+    ) -> "JointScreeningContext":
+        model = QuadraticModel.create(theta, gradient, inverse_hessian)
+        try:
+            source_hessian = solve_spd(
+                model.inverse_hessian,
+                np.eye(model.theta.size, dtype=np.float64),
+                numerical_policy,
+            )
+        except QuadraticModelError as error:
+            raise JointPredictionError("screening source Hessian is invalid") from error
+        source_hessian = (source_hessian + source_hessian.T) * 0.5
+        unconstrained = model.theta - model.inverse_hessian @ model.gradient
+        change = float(-0.5 * model.gradient @ model.inverse_hessian @ model.gradient)
+        return cls(model, source_hessian, unconstrained, change, numerical_policy)
+
+    def predicted_change(self, transformation: ConstraintTargetIR) -> float:
+        """Return the fixed-source constrained optimum change for one state."""
+
+        policy = self.numerical_policy
+        try:
+            # Composition already validates the complete target IR.  Repeating
+            # its target-Jacobian SVD here would change no scientific check and
+            # dominates large-system screening.  Constraint-space quantities
+            # below are nevertheless checked independently and fail closed.
+            matrix = np.asarray(transformation.constraint_matrix, dtype=np.float64)
+            rhs = np.asarray(transformation.constraint_rhs, dtype=np.float64)
+            if (
+                matrix.ndim != 2
+                or matrix.shape[1] != self.model.theta.size
+                or rhs.shape != (matrix.shape[0],)
+                or not np.all(np.isfinite(matrix))
+                or not np.all(np.isfinite(rhs))
+            ):
+                raise QuadraticModelError("screening constraint dimensions are invalid")
+            if matrix.shape[0]:
+                residual = matrix @ self.unconstrained_theta - rhs
+                schur = matrix @ self.model.inverse_hessian @ matrix.T
+                multiplier = solve_spd(schur, residual, policy)
+                constrained = (
+                    self.unconstrained_theta
+                    - self.model.inverse_hessian @ matrix.T @ multiplier
+                )
+                penalty = float(0.5 * residual @ multiplier)
+                if penalty < -policy.negative_energy_roundoff_hartree:
+                    raise QuadraticModelError(
+                        "constraint penalty is unphysically negative"
+                    )
+                penalty = max(0.0, penalty)
+            else:
+                constrained = self.unconstrained_theta
+                penalty = 0.0
+            predicted = self.unconstrained_change_from_current + penalty
+            displacement = constrained - self.model.theta
+            direct = float(
+                self.model.gradient @ displacement
+                + 0.5 * displacement @ self.source_hessian @ displacement
+            )
+            if abs(predicted - direct) > policy.solve_relative_tolerance * max(
+                1.0, abs(predicted), abs(direct)
+            ):
+                raise QuadraticModelError(
+                    "screening prediction and direct quadratic model disagree"
+                )
+            feasibility = (
+                float(np.max(np.abs(matrix @ constrained - rhs)))
+                if matrix.shape[0]
+                else 0.0
+            )
+            if feasibility > policy.feasibility_absolute_tolerance:
+                raise QuadraticModelError(
+                    "screening constrained solution violates the registered constraint"
+                )
+        except QuadraticModelError as error:
+            raise JointPredictionError("joint OBS screening solve failed") from error
+        return predicted
 
 
 def secant_pairs_from_capture(

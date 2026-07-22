@@ -19,7 +19,13 @@ from .composition import GlobalCompatibilityError, compose_registered_candidates
 from .constraint_state import ConstraintStateError
 from .global_selector import GlobalResourceCandidate, select_global_candidates
 from .identity import canonical_json_bytes
-from .joint_prediction import JointQualityPolicy, evaluate_joint_quality, joint_obs_prediction, secant_pairs_from_capture
+from .joint_prediction import (
+    JointQualityPolicy,
+    JointScreeningContext,
+    evaluate_joint_quality,
+    joint_obs_prediction,
+    secant_pairs_from_capture,
+)
 from .multisystem_checkpoint import _algorithm
 from .resources import AnsatzStructure, evaluate_full_circuit_resources, paper_era_backend
 from .search import SearchCandidate, SearchConfig, SearchEvaluation, deterministic_search
@@ -40,8 +46,8 @@ class V41MultiSystemError(RuntimeError):
     """Raised when corrected screening cannot be trusted."""
 
 
-SCREENING_CODE_TAG = "dvg-obs-v4.1-s5-screening-code-v1.2"
-DEFAULT_SCREENING_ROOT = ROOT / "artifacts/v4.1/s5-sentinels-rerun-v2"
+SCREENING_CODE_TAG = "dvg-obs-v4.1-s5-screening-code-v1.3"
+DEFAULT_SCREENING_ROOT = ROOT / "artifacts/v4.1/s5-sentinels-rerun-v3"
 REQUIRED_THREADS = {"OMP_NUM_THREADS": "1", "OPENBLAS_NUM_THREADS": "1", "MKL_NUM_THREADS": "1"}
 
 
@@ -158,31 +164,36 @@ def screen_case(case_id: str, manifest_path: Path = DEFAULT_MANIFEST) -> dict[st
         maximum_target_hessian_relative_solve_residual=1e-10,
         maximum_target_hessian_relative_backward_error=1e-10,
     )
-    cache: dict[tuple[str, ...], tuple[Any, dict[str, Any], dict[str, Any]]] = {}
+    screening_context = JointScreeningContext.create(
+        checkpoint["ansatz_coefficients"], checkpoint["gradient"],
+        checkpoint["recycled_inverse_hessian"],
+    )
 
     def predict(candidate_ids: tuple[str, ...]) -> tuple[Any, dict[str, Any], dict[str, Any]]:
         key = tuple(sorted(candidate_ids))
-        if key not in cache:
-            plan = compose_registered_candidates(source, blocks, tuple(by_id[value] for value in key))
-            prediction = joint_obs_prediction(
-                checkpoint["ansatz_coefficients"], checkpoint["gradient"],
-                checkpoint["recycled_inverse_hessian"], plan.transformation,
-                internal_pairs=internal, held_out_pairs=(),
-            )
-            quality = evaluate_joint_quality(prediction, quality_policy)
-            cache[key] = (plan, prediction, quality)
-        return cache[key]
+        plan = compose_registered_candidates(source, blocks, tuple(by_id[value] for value in key))
+        prediction = joint_obs_prediction(
+            checkpoint["ansatz_coefficients"], checkpoint["gradient"],
+            checkpoint["recycled_inverse_hessian"], plan.transformation,
+            internal_pairs=internal, held_out_pairs=(),
+        )
+        quality = evaluate_joint_quality(prediction, quality_policy)
+        return plan, prediction, quality
 
     def evaluator(candidate_ids: tuple[str, ...]) -> SearchEvaluation:
         try:
-            plan, prediction, _ = predict(candidate_ids)
+            key = tuple(sorted(candidate_ids))
+            plan = compose_registered_candidates(
+                source, blocks, tuple(by_id[value] for value in key)
+            )
+            predicted_change = screening_context.predicted_change(plan.transformation)
         except (ConstraintStateError, GlobalCompatibilityError) as error:
             return SearchEvaluation("semantic-composition-failure", None, None, None, reason=repr(error))
         except Exception as error:
             return SearchEvaluation("candidate-numerical-failure", None, None, None, reason=repr(error))
         return SearchEvaluation(
             "valid", plan.state.constraint_semantic_id, plan.state.constraint_numerical_id,
-            float(prediction["predicted_change_from_current_hartree"]),
+            float(predicted_change),
         )
 
     budgets = config["search_budgets"]
@@ -256,6 +267,13 @@ def screen_case(case_id: str, manifest_path: Path = DEFAULT_MANIFEST) -> dict[st
         },
         "source_resources": asdict(source_resources.snapshot),
         "search": search,
+        "screening_work": {
+            "fixed_source_hessian_factorizations": 1,
+            "constraint_space_solves": search["counts"]["quadratic_solves"],
+            "maximum_full_prediction_live_set": 1,
+            "full_quality_predictions": len(eligible_records),
+            "algorithm": "memory-bounded-fixed-source-constrained-newton-v1",
+        },
         "quality_passed_resource_candidate_count": len(resources),
         "quality_rejections": quality_rejections,
         "resource_failures": resource_failures,
