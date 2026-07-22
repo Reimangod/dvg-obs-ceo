@@ -1,4 +1,6 @@
-from dvg_obs_ceo.multisystem_paper_comparison import direct_comparison, load_data
+import csv
+
+from dvg_obs_ceo.multisystem_paper_comparison import _write_csv, direct_comparison, load_data
 
 
 def test_stored_checkpoints_and_direct_comparison() -> None:
@@ -12,3 +14,14 @@ def test_stored_checkpoints_and_direct_comparison() -> None:
     assert comparison["local"]["measurement_cost"] is None
     assert comparison["delta_percent"]["cnot_count"] > 0
     assert comparison["delta_percent"]["cnot_depth"] > 0
+
+
+def test_csv_writer_projects_ledger_rows_to_declared_schema(tmp_path) -> None:
+    data = load_data()
+    output = tmp_path / "figure-data.csv"
+    _write_csv(output, data)
+    with output.open(newline="", encoding="utf-8") as stream:
+        rows = list(csv.DictReader(stream))
+    assert len(rows) == 64
+    assert "finished" not in rows[0]
+    assert rows[-1]["case"] == "beh2-3.0"

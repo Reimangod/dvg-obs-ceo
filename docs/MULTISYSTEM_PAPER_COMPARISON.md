@@ -27,3 +27,7 @@ is not replaced with optimizer calls, gradient components, or wall time.
 The generator fails closed on checkpoint digest mismatch, progress-ledger
 mismatch, non-first-accuracy checkpoints, a dirty worktree, or an untagged
 protocol revision.
+
+Protocol v1.1 fixes a pre-output CSV schema projection error found on the first
+generation attempt. The failed attempt wrote only a 132-byte CSV header and no
+figure. No scientific input, metric, or plotting rule changed.

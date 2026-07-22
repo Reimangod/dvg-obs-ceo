@@ -14,7 +14,7 @@ from .baseline import ROOT
 from .identity import canonical_json_bytes
 
 
-PROTOCOL_TAG = "dvg-obs-multisystem-paper-comparison-protocol-v1"
+PROTOCOL_TAG = "dvg-obs-multisystem-paper-comparison-protocol-v1.1"
 RESULT_ROOT = ROOT / "artifacts" / "full-figures" / "ceo-star"
 CASES = {
     "h6-1.5": {"label": "Linear H6 at 1.5 A", "checkpoint": RESULT_ROOT / "h6-1.5" / "checkpoint.json"},
@@ -121,7 +121,8 @@ def _write_csv(path: Path, data: dict[str, Any]) -> None:
         writer.writeheader()
         for case_id, payload in data.items():
             for row in payload["checkpoint"]["trajectory"]:
-                writer.writerow({"case": case_id, "label": payload["label"], **row})
+                source = {"case": case_id, "label": payload["label"], **row}
+                writer.writerow({field: source[field] for field in fields})
         stream.flush()
         os.fsync(stream.fileno())
 
