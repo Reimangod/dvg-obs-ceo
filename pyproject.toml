@@ -68,6 +68,8 @@ dvg-obs-v4-1-semantic-audit = "dvg_obs_ceo.v4_1_semantic_audit:main"
 dvg-obs-v4-1-scale-audit = "dvg_obs_ceo.v4_1_scale_audit:main"
 dvg-obs-v4-1-bundle-audit = "dvg_obs_ceo.v4_1_bundle_audit:main"
 dvg-obs-v4-1-multisystem = "dvg_obs_ceo.v4_1_multisystem:main"
+dvg-obs-v4-1-exact-multisystem = "dvg_obs_ceo.v4_1_exact_multisystem:main"
+dvg-obs-v4-1-exact-audit = "dvg_obs_ceo.v4_1_exact_audit:main"
 dvg-obs-paper-equivalent-figures = "dvg_obs_ceo.paper_equivalent_figures:main"
 dvg-obs-multisystem-checkpoint = "dvg_obs_ceo.multisystem_checkpoint:main"
 
