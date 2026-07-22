@@ -29,6 +29,7 @@ from .joint_prediction import (
 from .multisystem_checkpoint import _algorithm
 from .resources import AnsatzStructure, evaluate_full_circuit_resources, paper_era_backend
 from .search import SearchCandidate, SearchConfig, SearchEvaluation, deterministic_search
+from .telemetry import ResourceSnapshot
 from .v4_1_protocol import DEFAULT_MANIFEST, audit_manifest
 from .v4_1_bundle import CaseRunLease
 from .v3_protocol import _write_exclusive
@@ -46,8 +47,8 @@ class V41MultiSystemError(RuntimeError):
     """Raised when corrected screening cannot be trusted."""
 
 
-SCREENING_CODE_TAG = "dvg-obs-v4.1-s5-screening-code-v1.4"
-DEFAULT_SCREENING_ROOT = ROOT / "artifacts/v4.1/s5-sentinels-rerun-v4"
+SCREENING_CODE_TAG = "dvg-obs-v4.1-s5-screening-code-v1.5"
+DEFAULT_SCREENING_ROOT = ROOT / "artifacts/v4.1/s5-sentinels-rerun-v5"
 REQUIRED_THREADS = {"OMP_NUM_THREADS": "1", "OPENBLAS_NUM_THREADS": "1", "MKL_NUM_THREADS": "1"}
 
 
@@ -136,6 +137,36 @@ def replay_selected_sentinel_evidence(
             )
         sentinels.append({**stored, "prediction": prediction, "quality": quality})
     return sentinels
+
+
+def replay_selection_from_resource_evidence(summary: Mapping[str, Any]) -> dict[str, Any]:
+    """Replay endpoint selection from the persisted, energy-blind input table."""
+
+    records = summary.get("resource_candidate_evidence")
+    if not isinstance(records, list):
+        raise V41MultiSystemError("resource-candidate replay evidence is absent")
+    candidates: list[GlobalResourceCandidate] = []
+    for record in records:
+        candidates.append(
+            GlobalResourceCandidate(
+                tuple(record["candidate_ids"]),
+                str(record["constraint_semantic_id"]),
+                str(record["constraint_numerical_id"]),
+                float(record["predicted_loss_hartree"]),
+                ResourceSnapshot(**record["resources"]),
+            )
+        )
+    source = ResourceSnapshot(**summary["source_resources"])
+    replayed = select_v4_1_sentinels(
+        candidates,
+        source,
+        screening_budget_hartree=float(summary["selection"]["screening_budget_hartree"]),
+        top_k_per_endpoint=int(summary["selection"]["top_k_per_endpoint"]),
+        maximum_unique_attempts=int(summary["selection"]["maximum_unique_attempts"]),
+    )
+    if replayed != summary["selection"]:
+        raise V41MultiSystemError("persisted sentinel selection replay drift")
+    return replayed
 
 
 def screen_case(case_id: str, manifest_path: Path = DEFAULT_MANIFEST) -> dict[str, Any]:
@@ -242,6 +273,8 @@ def screen_case(case_id: str, manifest_path: Path = DEFAULT_MANIFEST) -> dict[st
                 "candidate_ids": list(candidate_ids),
                 "constraint_semantic_id": plan.state.constraint_semantic_id,
                 "failed_checks": sorted(name for name, passed in quality["checks"].items() if not passed),
+                "prediction_diagnostics": prediction["diagnostics"],
+                "quality": quality,
             })
             continue
         try:
@@ -263,6 +296,7 @@ def screen_case(case_id: str, manifest_path: Path = DEFAULT_MANIFEST) -> dict[st
             "candidate_ids": list(candidate_ids),
             "constraint_semantic_id": plan.state.constraint_semantic_id,
             "constraint_numerical_id": plan.state.constraint_numerical_id,
+            "predicted_loss_hartree": candidate.predicted_loss_hartree,
             "resources": asdict(recount.snapshot),
             "target_indices": list(plan.target_indices),
             "target_iteration_counts": list(plan.target_iteration_counts),
@@ -297,6 +331,9 @@ def screen_case(case_id: str, manifest_path: Path = DEFAULT_MANIFEST) -> dict[st
             "algorithm": "memory-bounded-fixed-source-constrained-newton-v1",
         },
         "quality_passed_resource_candidate_count": len(resources),
+        "resource_candidate_evidence": [
+            evidence[semantic_id] for semantic_id in sorted(evidence)
+        ],
         "quality_rejections": quality_rejections,
         "resource_failures": resource_failures,
         "selection": selection,
@@ -306,6 +343,7 @@ def screen_case(case_id: str, manifest_path: Path = DEFAULT_MANIFEST) -> dict[st
         "paper_measurement_cost": None,
         "claim_boundary": "Observed development screening; no exact candidate VQE or actual/FCI-energy ranking.",
     }
+    replay_selection_from_resource_evidence(result)
     result["summary_digest"] = _digest(result)
     return result
 
