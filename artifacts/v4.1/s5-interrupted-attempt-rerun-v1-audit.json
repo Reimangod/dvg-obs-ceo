@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "artifact_kind": "v4.1-s5-interrupted-screening-audit",
+  "case_id": "h6-1.5",
+  "screening_code_commit": "5cb358d79134f2260f30be14653a8403ee58a068",
+  "run_uuid": "28dd6b7d-cee5-456c-b1ec-cc9fc59d3ea6",
+  "process_id": 78349,
+  "observed_state": {
+    "lock_status": "stale",
+    "canonical_status": "absent",
+    "staging_status": "incomplete",
+    "completion_manifest_present": false,
+    "scientific_result_present": false
+  },
+  "disposition": "retained-not-deleted",
+  "rerun_policy": "use a new output root and run UUID after a new frozen screening-code tag",
+  "actual_candidate_energy_evaluations": 0,
+  "claim_boundary": "Interrupted surrogate-screening process only; no canonical result and no VQE performance evidence."
+}

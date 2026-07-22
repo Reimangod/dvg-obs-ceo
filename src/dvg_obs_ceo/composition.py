@@ -82,25 +82,67 @@ def combine_exact_systems(
     *,
     require_independent: bool = True,
 ) -> ExactConstraintSystem:
-    """Stack exact subsystem equations and compute one global exact RREF."""
+    """Stack exact subsystem equations and compute one global exact RREF.
+
+    Canonical subsystem RREFs whose variable supports are pairwise disjoint are
+    already a global RREF after pivot ordering.  This exact fast path avoids
+    repeating fraction-valued elimination for every screened candidate batch.
+    Overlapping supports retain the original full-RREF implementation.
+    """
 
     global_slots = tuple(str(slot) for slot in source_slots)
     if len(set(global_slots)) != len(global_slots):
         raise GlobalCompatibilityError("global source slots must be unique")
+    canonical_slots = tuple(sorted(global_slots))
     rows: list[list[Fraction]] = []
     rhs: list[Fraction] = []
     requested_rank = 0
+    subsystem_supports: list[set[int]] = []
     for system in systems:
         if not set(system.source_slots).issubset(global_slots):
             raise GlobalCompatibilityError("exact subsystem uses an unknown source slot")
         local_rows, local_rhs = system.rational_matrix()
+        support: set[int] = set()
         for local_row, value in zip(local_rows, local_rhs):
             by_slot = dict(zip(system.source_slots, local_row))
-            rows.append([by_slot.get(slot, Fraction(0)) for slot in global_slots])
+            row = [by_slot.get(slot, Fraction(0)) for slot in canonical_slots]
+            support.update(index for index, coefficient in enumerate(row) if coefficient)
+            rows.append(row)
             rhs.append(value)
+        subsystem_supports.append(support)
         requested_rank += system.rank
+    used: set[int] = set()
+    disjoint = True
+    for support in subsystem_supports:
+        if used & support:
+            disjoint = False
+            break
+        used.update(support)
+    if disjoint:
+        augmented = [row + [value] for row, value in zip(rows, rhs)]
+        augmented.sort(
+            key=lambda row: next(
+                (index for index, value in enumerate(row[:-1]) if value),
+                len(canonical_slots),
+            )
+        )
+        combined = ExactConstraintSystem(
+            canonical_slots,
+            tuple(
+                tuple(
+                    str(value.numerator)
+                    if value.denominator == 1
+                    else f"{value.numerator}/{value.denominator}"
+                    for value in row
+                )
+                for row in augmented
+            ),
+        )
+        if require_independent and combined.rank != requested_rank:
+            raise GlobalCompatibilityError("global exact constraints are rank redundant")
+        return combined
     try:
-        combined = ExactConstraintSystem.create(global_slots, rows, rhs)
+        combined = ExactConstraintSystem.create(canonical_slots, rows, rhs)
     except ConstraintStateError as error:
         raise GlobalCompatibilityError("global exact constraints are infeasible") from error
     if require_independent and combined.rank != requested_rank:

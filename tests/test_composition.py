@@ -1,4 +1,5 @@
 from dataclasses import replace
+from fractions import Fraction
 
 import numpy as np
 import pytest
@@ -119,6 +120,56 @@ def test_redundant_global_constraints_fail_closed() -> None:
     scaled = ExactConstraintSystem.create(["x", "y"], [[-2, 2]], [0])
     with pytest.raises(GlobalCompatibilityError, match="rank redundant"):
         combine_exact_systems(["x", "y"], [first, scaled])
+
+
+def test_disjoint_fast_path_is_exactly_equal_to_full_rref() -> None:
+    slots = ["z", "a", "y", "b", "x", "c"]
+    systems = (
+        ExactConstraintSystem.create(
+            ["z", "a"], [[2, -4]], [Fraction(2, 3)]
+        ),
+        ExactConstraintSystem.create(
+            ["y", "b"], [[-3, 0], [0, 5]], [Fraction(7, 2), -1]
+        ),
+        ExactConstraintSystem.create(
+            ["x", "c"], [[6, 9]], [Fraction(-5, 7)]
+        ),
+    )
+    fast = combine_exact_systems(slots, systems)
+
+    canonical_slots = tuple(sorted(slots))
+    rows = []
+    rhs = []
+    for system in systems:
+        local_rows, local_rhs = system.rational_matrix()
+        for local_row, value in zip(local_rows, local_rhs):
+            by_slot = dict(zip(system.source_slots, local_row))
+            rows.append([by_slot.get(slot, Fraction(0)) for slot in canonical_slots])
+            rhs.append(value)
+    reference = ExactConstraintSystem.create(canonical_slots, rows, rhs)
+
+    assert fast == reference
+    assert fast.payload() == reference.payload()
+
+
+def test_overlap_uses_full_rref_and_preserves_affine_semantics() -> None:
+    first = ExactConstraintSystem.create(["x", "y", "z"], [[1, 1, 0]], [1])
+    second = ExactConstraintSystem.create(["z", "x"], [[1, -1]], [Fraction(1, 2)])
+    combined = combine_exact_systems(["z", "y", "x"], [first, second])
+    reference = ExactConstraintSystem.create(
+        ["z", "y", "x"], [[0, 1, 1], [1, 0, -1]], [1, Fraction(1, 2)]
+    )
+    assert combined == reference
+
+
+def test_disjoint_fast_path_is_order_invariant() -> None:
+    systems = (
+        ExactConstraintSystem.create(["d", "a"], [[-2, 3]], [0]),
+        ExactConstraintSystem.create(["c", "b"], [[5, 7]], [0]),
+    )
+    forward = combine_exact_systems(["d", "c", "b", "a"], systems)
+    reverse = combine_exact_systems(["a", "b", "c", "d"], tuple(reversed(systems)))
+    assert forward == reverse
 
 
 def test_actual_circuit_construction_failure_blocks_plan() -> None:

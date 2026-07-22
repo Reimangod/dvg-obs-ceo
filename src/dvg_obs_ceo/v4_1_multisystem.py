@@ -40,8 +40,8 @@ class V41MultiSystemError(RuntimeError):
     """Raised when corrected screening cannot be trusted."""
 
 
-SCREENING_CODE_TAG = "dvg-obs-v4.1-s5-screening-code-v1.1"
-DEFAULT_SCREENING_ROOT = ROOT / "artifacts/v4.1/s5-sentinels-rerun-v1"
+SCREENING_CODE_TAG = "dvg-obs-v4.1-s5-screening-code-v1.2"
+DEFAULT_SCREENING_ROOT = ROOT / "artifacts/v4.1/s5-sentinels-rerun-v2"
 REQUIRED_THREADS = {"OMP_NUM_THREADS": "1", "OPENBLAS_NUM_THREADS": "1", "MKL_NUM_THREADS": "1"}
 
 
