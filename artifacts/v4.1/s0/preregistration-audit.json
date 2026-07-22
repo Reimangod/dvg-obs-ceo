@@ -1,0 +1,53 @@
+{
+  "artifact_kind": "v4.1-s0-preregistration-audit",
+  "checks": {
+    "case_set": true,
+    "change_classes_disjoint": true,
+    "checkpoint_sha256:beh2-3.0": true,
+    "checkpoint_sha256:h6-1.5": true,
+    "checkpoint_sha256:h6-3.0": true,
+    "configuration_canonical_digest": true,
+    "configuration_sha256": true,
+    "dedicated_output_root": true,
+    "execution_fail_closed": true,
+    "identity_layers": true,
+    "numerical_fail_closed": true,
+    "parent_is_ancestor": true,
+    "parent_result_tag_commit": true,
+    "plan_exists": true,
+    "plan_sha256": true,
+    "protocol_id": true,
+    "protocol_tag": true,
+    "scientific_guards": true,
+    "summary_internal_digest:beh2-3.0": true,
+    "summary_internal_digest:h6-1.5": true,
+    "summary_internal_digest:h6-3.0": true,
+    "summary_sha256:beh2-3.0": true,
+    "summary_sha256:h6-1.5": true,
+    "summary_sha256:h6-3.0": true
+  },
+  "claim_boundary": "Preregistration and immutable-parent audit only; no candidate decision or VQE execution.",
+  "failed_checks": [],
+  "manifest_sha256": "daeab27726a7c3a3f6a4ef11c8dccc8be112649e4bbc0952876666bf32613b46",
+  "observed_evidence": {
+    "beh2-3.0": {
+      "checkpoint_sha256": "4344d203bbf161fd53814f1fb51af2bbc8531d7c77587a477a3654b3b1ec626c",
+      "v4_summary_digest": "6493230cde231c7f632d311be957979e3b5f119a9a407f420384b3f0d596a7b4",
+      "v4_summary_sha256": "671737015b2e309b929a83b0ce8a61cb7d5734baa4e1bcdbe8236cc77543ebb2"
+    },
+    "h6-1.5": {
+      "checkpoint_sha256": "2c994c6ac2d4478c7174b71b661f496c9fda8a14e3a7ca08d01e9130515fe491",
+      "v4_summary_digest": "434085e06a185f73d8d1147e4b9d7fe0635ec795288c662f33b64c1a3f036bb5",
+      "v4_summary_sha256": "3d6ccd210165b36d1015c557f0079982088a2db4eda010da6126d7f00ade849e"
+    },
+    "h6-3.0": {
+      "checkpoint_sha256": "40a59c46b12e27551b3b156125cf1f2bd6f75ec49da1831eba13cdc27be24a88",
+      "v4_summary_digest": "5fa6cbc834842a2d26c135452c332126ecd0f23e190046113b17039d287c1192",
+      "v4_summary_sha256": "7556ef175e2a33866240390a8a20612fb53314ba293da3e002f400d62a1ed24e"
+    }
+  },
+  "parent_result_commit": "488ec8b87079fd7ca63f1b3825cda3d6aecfa9f0",
+  "passed": true,
+  "protocol_id": "dvg-obs-v4.1-scale-transfer-protocol-v1",
+  "schema_version": "1.0.0"
+}
