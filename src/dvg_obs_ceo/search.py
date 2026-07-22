@@ -35,7 +35,12 @@ class SearchEvaluation:
     reason: str | None = None
 
     def validate(self) -> None:
-        allowed = {"valid", "candidate-numerical-failure", "semantic-infeasible"}
+        allowed = {
+            "valid",
+            "candidate-numerical-failure",
+            "semantic-composition-failure",
+            "semantic-infeasible",
+        }
         if self.status not in allowed:
             raise SearchError(f"unregistered evaluation status: {self.status}")
         if self.status == "valid":
@@ -103,6 +108,7 @@ def deterministic_search(
         "pruned_semantic_infeasible": 0,
         "pruned_resource_bound": 0,
         "candidate_numerical_failures": 0,
+        "semantic_composition_failures": 0,
     }
     truncated_reason: str | None = None
     monotone_pruning_used = False
@@ -144,6 +150,10 @@ def deterministic_search(
                 record["prune_reason"] = "semantic-infeasible"
             elif evaluation.status == "candidate-numerical-failure":
                 counts["candidate_numerical_failures"] += 1
+            elif evaluation.status == "semantic-composition-failure":
+                # A known symbolic-composition failure is reported separately,
+                # but does not prune descendants without a monotonicity proof.
+                counts["semantic_composition_failures"] += 1
             else:
                 semantic_id = str(evaluation.constraint_semantic_id)
                 if semantic_id in semantic_seen:

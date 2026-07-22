@@ -17,7 +17,8 @@ import numpy as np
 
 from .baseline import ROOT, _environment, verify_upstream
 from .block_ir import candidate_to_dict, enumerate_candidates, recover_dvg_blocks
-from .composition import compose_registered_candidates
+from .composition import GlobalCompatibilityError, compose_registered_candidates
+from .constraint_state import ConstraintStateError
 from .global_selector import GlobalResourceCandidate, select_global_candidates
 from .identity import canonical_json_bytes
 from .joint_prediction import (
@@ -35,8 +36,8 @@ from .v3_protocol import _write_exclusive
 from .v4_lih import _energy, _execute_attempt, _strict_json_quality
 
 
-PROTOCOL_TAG = "dvg-obs-v4-multisystem-protocol-v1"
-MANIFEST_PATH = ROOT / "manifests" / "v4-multisystem-protocol-v1.json"
+PROTOCOL_TAG = "dvg-obs-v4-multisystem-protocol-v1.1"
+MANIFEST_PATH = ROOT / "manifests" / "v4-multisystem-protocol-v1.1.json"
 CONFIG_PATH = ROOT / "manifests" / "v4-s6-frozen-config-v1.json"
 REQUIRED_THREADS = {"OMP_NUM_THREADS": "1", "OPENBLAS_NUM_THREADS": "1", "MKL_NUM_THREADS": "1"}
 
@@ -233,6 +234,10 @@ def run(case_id: str) -> dict[str, Any]:
     def evaluator(candidate_ids: tuple[str, ...]) -> SearchEvaluation:
         try:
             plan, prediction, _ = predict(candidate_ids)
+        except (ConstraintStateError, GlobalCompatibilityError) as error:
+            return SearchEvaluation(
+                "semantic-composition-failure", None, None, None, reason=repr(error)
+            )
         except Exception as error:
             return SearchEvaluation("candidate-numerical-failure", None, None, None, reason=repr(error))
         return SearchEvaluation(
@@ -261,10 +266,19 @@ def run(case_id: str) -> dict[str, Any]:
     resource_candidates: list[GlobalResourceCandidate] = []
     plan_by_semantic: dict[str, tuple[Any, dict[str, Any], dict[str, Any]]] = {}
     resource_failures: list[dict[str, Any]] = []
+    quality_rejections: list[dict[str, Any]] = []
     for record in eligible_records[: search_budget["maximum_full_resource_recounts"]]:
         candidate_ids = tuple(record["candidate_ids"])
         plan, prediction, quality = predict(candidate_ids)
         if not quality["passed"]:
+            quality_rejections.append({
+                "candidate_ids": list(candidate_ids),
+                "constraint_semantic_id": plan.state.constraint_semantic_id,
+                "failed_checks": sorted(
+                    name for name, passed in quality["checks"].items() if not passed
+                ),
+                "quality": quality,
+            })
             continue
         try:
             target = AnsatzStructure.create(
@@ -294,6 +308,17 @@ def run(case_id: str) -> dict[str, Any]:
         maximum_unique_attempts=config["exact_vqe_budget"]["maximum_unique_exact_attempts"],
     )
     attempts: list[dict[str, Any]] = []
+    chemical_accuracy_margin = (
+        float(checkpoint["exact_energy_hartree"])
+        + float(checkpoint["chemical_accuracy_hartree"])
+        - float(checkpoint["energy_hartree"])
+    )
+    if not math.isfinite(chemical_accuracy_margin) or chemical_accuracy_margin <= 0.0:
+        raise V4MultiSystemError("source checkpoint is not strictly within chemical accuracy")
+    effective_acceptance_budget = min(
+        float(config["acceptance"]["cumulative_energy_budget_hartree"]),
+        float(np.nextafter(chemical_accuracy_margin, -math.inf)),
+    )
     safe_case_id = case_id.replace(".", "p")
     for number, semantic_id in enumerate(selection["unique_attempt_semantic_ids"], 1):
         plan, prediction, quality = plan_by_semantic[semantic_id]
@@ -311,6 +336,7 @@ def run(case_id: str) -> dict[str, Any]:
             configuration_digest=config_manifest["configuration_digest"],
             run_id=f"v4-multisystem-{case_id}-stored-first-accuracy",
             transaction_prefix=f"v4-{safe_case_id}-attempt",
+            cumulative_energy_budget_hartree=effective_acceptance_budget,
         )
         attempt["quality"] = quality
         attempt["prediction"] = prediction
@@ -354,6 +380,7 @@ def run(case_id: str) -> dict[str, Any]:
         },
         "search": search,
         "quality_passed_resource_candidate_count": len(resource_candidates),
+        "quality_rejections": quality_rejections,
         "resource_failures": resource_failures,
         "selection": selection,
         "attempts": attempts,
@@ -368,6 +395,12 @@ def run(case_id: str) -> dict[str, Any]:
             "full_resource_recounts": len(resource_candidates) + 1,
             "exact_vqe_attempts": len(attempts),
             "paper_measurement_cost": None,
+        },
+        "accuracy_guard": {
+            "rule": "min(frozen_energy_budget, nextafter(exact_energy + chemical_accuracy - source_energy, -infinity))",
+            "chemical_accuracy_margin_hartree": chemical_accuracy_margin,
+            "effective_acceptance_budget_hartree": effective_acceptance_budget,
+            "used_for_screening_or_ranking": False,
         },
         "claim_boundary": protocol()["claim_boundary"],
     }

@@ -73,6 +73,23 @@ def test_semantic_infeasibility_prunes_descendants() -> None:
     assert result["counts"]["pruned_semantic_infeasible"] == 1
 
 
+def test_semantic_composition_failure_is_transparent_and_does_not_prune() -> None:
+    candidates = [SearchCandidate("a", "g1"), SearchCandidate("b", "g2")]
+
+    def evaluator(selected):
+        if selected == ("a",):
+            return SearchEvaluation(
+                "semantic-composition-failure", None, None, None, reason="registered conflict"
+            )
+        return _evaluation(selected)
+
+    result = deterministic_search(candidates, evaluator, SearchConfig(1.0, 100, 100, 100))
+    assert "semantic:a+b" in result["eligible_semantic_ids"]
+    assert result["counts"]["semantic_composition_failures"] == 1
+    failed = next(record for record in result["records"] if record["candidate_ids"] == ["a"])
+    assert not failed["prune_descendants"]
+
+
 def test_deterministic_budget_truncation_replays_exactly() -> None:
     candidates = [SearchCandidate(str(index), f"g{index}") for index in range(5)]
     config = SearchConfig(1.0, 7, 100, 100)

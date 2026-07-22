@@ -194,6 +194,7 @@ def _execute_attempt(
     configuration_digest: str,
     run_id: str = "v4-lih-3a-stored-first-accuracy",
     transaction_prefix: str = "v4-lih-attempt",
+    cumulative_energy_budget_hartree: float = 1e-4,
 ) -> dict[str, Any]:
     runtime = _source_runtime(
         source, checkpoint, source_state, configuration_digest, run_id=run_id
@@ -250,7 +251,10 @@ def _execute_attempt(
         )
         runtime.metadata["resource_structure_digest"] = physical.snapshot.structure_digest
         runtime.metadata["constraint_semantic_id"] = plan.state.constraint_semantic_id
-        criteria = AcceptanceCriteria(guard_logical_block_count=False)
+        criteria = AcceptanceCriteria(
+            cumulative_energy_budget_hartree=cumulative_energy_budget_hartree,
+            guard_logical_block_count=False,
+        )
         semantics_valid = bool(
             certificate["passed"]
             and certificate["source_target_state_fidelity"] >= criteria.minimum_state_fidelity

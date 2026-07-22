@@ -23,3 +23,11 @@ def test_frozen_acceptance_matches_runtime_gate() -> None:
     frozen = json.loads(CONFIG_PATH.read_text())["configuration"]
     assert _acceptance_configuration_matches(frozen)
     assert asdict(AcceptanceCriteria(guard_logical_block_count=False))["cumulative_energy_budget_hartree"] == 1e-4
+
+
+def test_protocol_adds_only_a_stricter_accuracy_retention_guard() -> None:
+    manifest = protocol()
+    guard = manifest["scientific_freeze"]["accuracy_retention_guard"]
+    assert guard["molecule_independent_rule"]
+    assert guard["never_relaxes_frozen_energy_budget"]
+    assert not guard["used_for_screening_or_ranking"]
