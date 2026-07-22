@@ -1,0 +1,212 @@
+{
+  "artifact_digest": "2da95ac6dcb9b1c7954468310525ad18ed30d2adac147faed1ef83d231cd3722",
+  "artifact_kind": "v4.1-s1-failure-reproduction",
+  "cases": [
+    {
+      "case_id": "h6-1.5",
+      "catalog": {
+        "block_count": 79,
+        "candidate_count": 319,
+        "registered_source_dimension_gt2_to_ovp_count": 12
+      },
+      "checks": {
+        "budget_truncated": true,
+        "case_identity": true,
+        "catalog_count": true,
+        "completed_record_count": true,
+        "eligible_count": true,
+        "large_ovp_catalog_presence": true,
+        "large_ovp_explains_semantic_failures": true,
+        "semantic_count": true,
+        "valid_count": true,
+        "zero_exact_attempts": true,
+        "zero_quality_pass": true
+      },
+      "exact_attempt_count": 0,
+      "quality_failure": {
+        "failed_check_histogram": {
+          "target_hessian_condition": 71
+        },
+        "quality_passed_resource_candidate_count": 0,
+        "rejected_candidate_count": 71
+      },
+      "search": {
+        "counts": {
+          "candidate_numerical_failures": 0,
+          "completed": 10000,
+          "deduplicated": 0,
+          "expanded": 12082,
+          "pruned_predicted_loss": 137,
+          "pruned_resource_bound": 0,
+          "pruned_semantic_infeasible": 0,
+          "quadratic_solves": 10000,
+          "semantic_composition_failures": 9792
+        },
+        "record_status_histogram": {
+          "semantic-composition-failure": 9792,
+          "valid": 208
+        },
+        "status": "budget-truncated",
+        "surrogate_eligible_count": 71,
+        "truncated_reason": "maximum-completed-states"
+      },
+      "semantic_failure": {
+        "candidate_families": [
+          "mvp-to-ovp-sum",
+          "mvp-to-ovp-diff"
+        ],
+        "classification_histogram": {
+          "hard-coded-two-source-ovp-primitive": 9792
+        },
+        "count": 9792,
+        "source_location": {
+          "function": "exact_atomic_constraint",
+          "line": 158,
+          "path": "src/dvg_obs_ceo/constraint_state.py"
+        },
+        "with_registered_source_dimension_gt2_to_ovp": 9792
+      },
+      "v4_summary_digest": "434085e06a185f73d8d1147e4b9d7fe0635ec795288c662f33b64c1a3f036bb5",
+      "v4_summary_sha256": "3d6ccd210165b36d1015c557f0079982088a2db4eda010da6126d7f00ade849e"
+    },
+    {
+      "case_id": "h6-3.0",
+      "catalog": {
+        "block_count": 95,
+        "candidate_count": 359,
+        "registered_source_dimension_gt2_to_ovp_count": 72
+      },
+      "checks": {
+        "budget_truncated": true,
+        "case_identity": true,
+        "catalog_count": true,
+        "completed_record_count": true,
+        "eligible_count": true,
+        "large_ovp_catalog_presence": true,
+        "large_ovp_explains_semantic_failures": true,
+        "semantic_count": true,
+        "valid_count": true,
+        "zero_exact_attempts": true,
+        "zero_quality_pass": true
+      },
+      "exact_attempt_count": 0,
+      "quality_failure": {
+        "failed_check_histogram": {
+          "constraint_schur_condition": 16,
+          "internal_projected_residual": 12,
+          "target_hessian_condition": 59
+        },
+        "quality_passed_resource_candidate_count": 0,
+        "rejected_candidate_count": 59
+      },
+      "search": {
+        "counts": {
+          "candidate_numerical_failures": 0,
+          "completed": 10000,
+          "deduplicated": 0,
+          "expanded": 13426,
+          "pruned_predicted_loss": 213,
+          "pruned_resource_bound": 0,
+          "pruned_semantic_infeasible": 0,
+          "quadratic_solves": 10000,
+          "semantic_composition_failures": 9728
+        },
+        "record_status_histogram": {
+          "semantic-composition-failure": 9728,
+          "valid": 272
+        },
+        "status": "budget-truncated",
+        "surrogate_eligible_count": 59,
+        "truncated_reason": "maximum-completed-states"
+      },
+      "semantic_failure": {
+        "candidate_families": [
+          "mvp-to-ovp-sum",
+          "mvp-to-ovp-diff"
+        ],
+        "classification_histogram": {
+          "hard-coded-two-source-ovp-primitive": 9728
+        },
+        "count": 9728,
+        "source_location": {
+          "function": "exact_atomic_constraint",
+          "line": 158,
+          "path": "src/dvg_obs_ceo/constraint_state.py"
+        },
+        "with_registered_source_dimension_gt2_to_ovp": 9728
+      },
+      "v4_summary_digest": "5fa6cbc834842a2d26c135452c332126ecd0f23e190046113b17039d287c1192",
+      "v4_summary_sha256": "7556ef175e2a33866240390a8a20612fb53314ba293da3e002f400d62a1ed24e"
+    },
+    {
+      "case_id": "beh2-3.0",
+      "catalog": {
+        "block_count": 32,
+        "candidate_count": 56,
+        "registered_source_dimension_gt2_to_ovp_count": 0
+      },
+      "checks": {
+        "budget_truncated": true,
+        "case_identity": true,
+        "catalog_count": true,
+        "completed_record_count": true,
+        "eligible_count": true,
+        "large_ovp_catalog_presence": true,
+        "large_ovp_explains_semantic_failures": true,
+        "semantic_count": true,
+        "valid_count": true,
+        "zero_exact_attempts": true,
+        "zero_quality_pass": true
+      },
+      "exact_attempt_count": 0,
+      "quality_failure": {
+        "failed_check_histogram": {
+          "constraint_schur_condition": 1226,
+          "internal_projected_residual": 558,
+          "target_hessian_condition": 1325
+        },
+        "quality_passed_resource_candidate_count": 0,
+        "rejected_candidate_count": 1325
+      },
+      "search": {
+        "counts": {
+          "candidate_numerical_failures": 0,
+          "completed": 10000,
+          "deduplicated": 0,
+          "expanded": 14780,
+          "pruned_predicted_loss": 8675,
+          "pruned_resource_bound": 0,
+          "pruned_semantic_infeasible": 0,
+          "quadratic_solves": 10000,
+          "semantic_composition_failures": 0
+        },
+        "record_status_histogram": {
+          "valid": 10000
+        },
+        "status": "budget-truncated",
+        "surrogate_eligible_count": 1325,
+        "truncated_reason": "maximum-completed-states"
+      },
+      "semantic_failure": {
+        "candidate_families": [],
+        "classification_histogram": {},
+        "count": 0,
+        "source_location": {
+          "function": "exact_atomic_constraint",
+          "line": 158,
+          "path": "src/dvg_obs_ceo/constraint_state.py"
+        },
+        "with_registered_source_dimension_gt2_to_ovp": 0
+      },
+      "v4_summary_digest": "6493230cde231c7f632d311be957979e3b5f119a9a407f420384b3f0d596a7b4",
+      "v4_summary_sha256": "671737015b2e309b929a83b0ce8a61cb7d5734baa4e1bcdbe8236cc77543ebb2"
+    }
+  ],
+  "claim_boundary": "Reproduction from immutable V4 summaries only; no search, quality decision, resource selection, or exact VQE was rerun.",
+  "passed": true,
+  "protocol_id": "dvg-obs-v4.1-scale-transfer-protocol-v1",
+  "read_only": true,
+  "s0_manifest_sha256": "daeab27726a7c3a3f6a4ef11c8dccc8be112649e4bbc0952876666bf32613b46",
+  "schema_version": "1.0.0",
+  "unknown_failure_count": 0
+}
