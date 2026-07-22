@@ -103,6 +103,8 @@ def _source_runtime(
     checkpoint: Mapping[str, Any],
     source_state: np.ndarray,
     configuration_digest: str,
+    *,
+    run_id: str = "v4-lih-3a-stored-first-accuracy",
 ) -> CompressionRuntime:
     snapshot = checkpoint["resources"]["snapshot"]
     work = checkpoint["work"]
@@ -119,7 +121,7 @@ def _source_runtime(
         ),
         adapt_iteration=int(checkpoint["adapt_iteration"]),
         metadata={
-            "run_id": "v4-lih-3a-stored-first-accuracy",
+            "run_id": run_id,
             "resource_structure_digest": snapshot["structure_digest"],
             "budget_reference_energy_hartree": float(checkpoint["energy_hartree"]),
             "configuration_digest": configuration_digest,
@@ -190,8 +192,12 @@ def _execute_attempt(
     prediction: Mapping[str, Any],
     transaction_root: Path,
     configuration_digest: str,
+    run_id: str = "v4-lih-3a-stored-first-accuracy",
+    transaction_prefix: str = "v4-lih-attempt",
 ) -> dict[str, Any]:
-    runtime = _source_runtime(source, checkpoint, source_state, configuration_digest)
+    runtime = _source_runtime(
+        source, checkpoint, source_state, configuration_digest, run_id=run_id
+    )
     before_digest = runtime.snapshot().snapshot_digest
     initial = np.asarray(prediction["target_native_coordinates"], dtype=np.float64)
     initial_inverse = np.asarray(prediction["target_inverse_hessian"], dtype=np.float64)
@@ -199,7 +205,7 @@ def _execute_attempt(
     fallback_initial = least_squares_native_coordinates(
         np.asarray(source.coefficients, dtype=np.float64), plan.transformation
     )
-    transaction_id = f"v4-lih-attempt-{attempt_number:02d}-{plan.state.constraint_semantic_id[-12:]}"
+    transaction_id = f"{transaction_prefix}-{attempt_number:02d}-{plan.state.constraint_semantic_id[-12:]}"
     with CompressionTransaction(runtime, transaction_root, transaction_id=transaction_id) as transaction:
         primary = _optimize_target(algorithm, target_indices, initial, initial_inverse, source_state)
         fallback = None
