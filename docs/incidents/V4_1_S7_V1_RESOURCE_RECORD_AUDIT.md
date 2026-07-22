@@ -32,3 +32,20 @@ and H6 1.5 A is replayed from the original checkpoint before S8 begins.
 
 The retained v1 bundle is incident evidence only. Its numerical outcome is not
 used for selection, tuning, or a performance claim.
+
+## Follow-up serialization false positive
+
+The v1.1 replay exposed a second audit-only mismatch. Independent resources
+were converted with generic dataclass `asdict`, which retains tuples, while the
+canonical `resources_to_dict` serializer intentionally emits JSON lists. The
+values were equal but Python container types differed. The audit now uses the
+same public canonical serializer and writes a failed audit artifact before
+raising, so any later aggregate failure is directly inspectable. The v1.1
+bundle is also retained as incident evidence and is replayed under v1.2.
+
+The detailed v1.1 failed-audit artifact then isolated a third audit-only
+ordering assumption: S5 stores the constituent candidate IDs in lexical order,
+whereas the canonical composed plan stores the same unique IDs in source-block
+order. All four semantic and numerical constraint IDs replayed exactly. The
+audit now checks an equal duplicate-free candidate set, while continuing to
+require exact ordering of the four sentinel structures themselves.

@@ -1,0 +1,204 @@
+{
+  "artifact_digest": "82727c9a981a1f71f3c97ef79371c16a3b4ae7c2274a438525f9b0fca94427c7",
+  "artifact_kind": "v4.1-frozen-sentinel-independent-case-audit",
+  "attempt_audits": [
+    {
+      "checks": {
+        "acceptance_status": true,
+        "accepted_all_checks": true,
+        "energy_recomputed": true,
+        "gradient_recomputed": true,
+        "independent_energy_recomputed": true,
+        "physical_structural_snapshot_equal": true,
+        "plan_replay": true,
+        "quality_passed": true,
+        "queue_identity": false,
+        "rejection_has_reason": true,
+        "resources_recomputed": true,
+        "sentinel_replay": true,
+        "snapshot_valid": true,
+        "state_normalized": true,
+        "terminal_record_valid": true,
+        "transaction_layout": true,
+        "two_path_certificate": true
+      },
+      "constraint_semantic_id": "constraint-semantic-v1:7b3c651bfe4c55cd956fc411e37caaebe650db87217f318159d397143d896ccb",
+      "failed_checks": [
+        "queue_identity"
+      ],
+      "independent_energy_hartree": -2.99408531605911,
+      "independent_gradient_infinity": 3.4753156654548922e-09,
+      "independent_resources": {
+        "cnot_count": 858,
+        "cnot_depth": 300,
+        "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 78,
+        "parameter_count": 131,
+        "structure_digest": "1bc0d6c5d54c0c4d06867e0b3d5fa3b479a491a1d40c3e10e9f535964784c3e7",
+        "total_depth": 1546
+      },
+      "status": "accepted"
+    },
+    {
+      "checks": {
+        "acceptance_status": true,
+        "accepted_all_checks": true,
+        "energy_recomputed": true,
+        "gradient_recomputed": true,
+        "independent_energy_recomputed": true,
+        "physical_structural_snapshot_equal": true,
+        "plan_replay": true,
+        "quality_passed": true,
+        "queue_identity": false,
+        "rejection_has_reason": true,
+        "resources_recomputed": true,
+        "sentinel_replay": true,
+        "snapshot_valid": true,
+        "state_normalized": true,
+        "terminal_record_valid": true,
+        "transaction_layout": true,
+        "two_path_certificate": true
+      },
+      "constraint_semantic_id": "constraint-semantic-v1:064a551bde13f206714e651167b518649a98c431941cf529715b2219a08eac9f",
+      "failed_checks": [
+        "queue_identity"
+      ],
+      "independent_energy_hartree": -2.994117725904346,
+      "independent_gradient_infinity": 1.4136538749013217e-08,
+      "independent_resources": {
+        "cnot_count": 865,
+        "cnot_depth": 298,
+        "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 78,
+        "parameter_count": 129,
+        "structure_digest": "3f0df84eab32f27b6bcd38aabdd03ec0dc85093299c1b51f4fe0818da9b543a1",
+        "total_depth": 1549
+      },
+      "status": "rolled-back"
+    },
+    {
+      "checks": {
+        "acceptance_status": true,
+        "accepted_all_checks": true,
+        "energy_recomputed": true,
+        "gradient_recomputed": true,
+        "independent_energy_recomputed": true,
+        "physical_structural_snapshot_equal": true,
+        "plan_replay": true,
+        "quality_passed": true,
+        "queue_identity": false,
+        "rejection_has_reason": true,
+        "resources_recomputed": true,
+        "sentinel_replay": true,
+        "snapshot_valid": true,
+        "state_normalized": true,
+        "terminal_record_valid": true,
+        "transaction_layout": true,
+        "two_path_certificate": true
+      },
+      "constraint_semantic_id": "constraint-semantic-v1:de97bdce937b959c7afc6899ae6341122b4ac94ce852b4a092092c1c525310e7",
+      "failed_checks": [
+        "queue_identity"
+      ],
+      "independent_energy_hartree": -2.9940888937469317,
+      "independent_gradient_infinity": 5.659503941879418e-09,
+      "independent_resources": {
+        "cnot_count": 858,
+        "cnot_depth": 301,
+        "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 78,
+        "parameter_count": 132,
+        "structure_digest": "9983c6f087766ed9b17b07a4f13f1e997e466a64e54546a70f42a9b77bf21941",
+        "total_depth": 1549
+      },
+      "status": "accepted"
+    },
+    {
+      "checks": {
+        "acceptance_status": true,
+        "accepted_all_checks": true,
+        "energy_recomputed": true,
+        "gradient_recomputed": true,
+        "independent_energy_recomputed": true,
+        "physical_structural_snapshot_equal": true,
+        "plan_replay": true,
+        "quality_passed": true,
+        "queue_identity": false,
+        "rejection_has_reason": true,
+        "resources_recomputed": true,
+        "sentinel_replay": true,
+        "snapshot_valid": true,
+        "state_normalized": true,
+        "terminal_record_valid": true,
+        "transaction_layout": true,
+        "two_path_certificate": true
+      },
+      "constraint_semantic_id": "constraint-semantic-v1:af997d649990f161895399a2965dc00daf44ed88e27b8fc0afeb8b53bcd5f9e7",
+      "failed_checks": [
+        "queue_identity"
+      ],
+      "independent_energy_hartree": -2.994115892166907,
+      "independent_gradient_infinity": 8.734837626638015e-09,
+      "independent_resources": {
+        "cnot_count": 865,
+        "cnot_depth": 298,
+        "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 78,
+        "parameter_count": 130,
+        "structure_digest": "5a6112263bc0d5b262d00676330ddcf82c1d2309573815392fb4007ef983ee6d",
+        "total_depth": 1552
+      },
+      "status": "accepted"
+    }
+  ],
+  "bundle_digest": "6e8264ca6db16045de7a63cb9f6a3f227daebb838f7306dfc8c78f8322420197",
+  "case_id": "h6-1.5",
+  "checks": {
+    "attempt_audits": false,
+    "bundle_complete": true,
+    "canonical_state": true,
+    "checkpoint_file_sha256": true,
+    "checkpoint_internal_digest": true,
+    "chemical_accuracy_retained": true,
+    "cumulative_energy_budget": true,
+    "endpoint_winners": true,
+    "energy_blind_selection": true,
+    "measurement_cost_unclaimed": true,
+    "no_ansatz_growth": true,
+    "queue_complete_and_ordered": true,
+    "s0_manifest": true,
+    "s5_bundle": true,
+    "s5_selection_replay": true,
+    "s5_summary": true,
+    "search_status_preserved": true,
+    "source_energy": true,
+    "source_resources": true,
+    "source_state": true
+  },
+  "claim_boundary": "Independent observed-case audit; no global-optimum or generalization claim.",
+  "failed_checks": [
+    "attempt_audits"
+  ],
+  "passed": false,
+  "schema_version": "1.0.0",
+  "summary_digest": "acdff79d376743e607933af148a0fa11ee10b8fa3ed04d9eeee20e204df1a244",
+  "summary_sha256": "1e67263f8c72a5eb69539483e512850115b78015728142f8d360d0a5694b6d73",
+  "transaction_sha256": {
+    "transactions/committed/v4.1-h6-1p5-attempt-01-97143d896ccb/attempt.json": "985dad6ee72c0c62a9367b653d5b41106460f5cd146918bc1e2a2eddad46494e",
+    "transactions/committed/v4.1-h6-1p5-attempt-01-97143d896ccb/commit.json": "957fd0b32780933b7b1d39e0c942e41495a2a9a66e953a067be25469a6cb26a8",
+    "transactions/committed/v4.1-h6-1p5-attempt-01-97143d896ccb/snapshot.json": "8f707f9624d2994f72ad78a3e0409782768e9ad7995f337e37c76162480f14da",
+    "transactions/committed/v4.1-h6-1p5-attempt-01-97143d896ccb/trial.json": "383dcd9a52e47e896e3f34fd7506b7dbc1ec1ddd71ab9c335123b5ce40d29025",
+    "transactions/committed/v4.1-h6-1p5-attempt-03-2c1c525310e7/attempt.json": "1fcc6a9c165b381ad35a6c3c18b1bb08f66191e9214ac3b6c3808e205d209369",
+    "transactions/committed/v4.1-h6-1p5-attempt-03-2c1c525310e7/commit.json": "2d4f96270a2909a14ca550b186de38a4d3766d37135ce9abfe38fa8f278ec26b",
+    "transactions/committed/v4.1-h6-1p5-attempt-03-2c1c525310e7/snapshot.json": "8f707f9624d2994f72ad78a3e0409782768e9ad7995f337e37c76162480f14da",
+    "transactions/committed/v4.1-h6-1p5-attempt-03-2c1c525310e7/trial.json": "dc58829dd94d64e500a40f146637b2ffdee2610caec332e1680063e0ea322d86",
+    "transactions/committed/v4.1-h6-1p5-attempt-04-8b53bcd5f9e7/attempt.json": "20790251b4d03c8032e4143226577b01b938e1a26ae466954e0551b978673c70",
+    "transactions/committed/v4.1-h6-1p5-attempt-04-8b53bcd5f9e7/commit.json": "e4696c8821b2f1cf200108e98b1aab36bad67a1b1960e319c9224619023faa6d",
+    "transactions/committed/v4.1-h6-1p5-attempt-04-8b53bcd5f9e7/snapshot.json": "8f707f9624d2994f72ad78a3e0409782768e9ad7995f337e37c76162480f14da",
+    "transactions/committed/v4.1-h6-1p5-attempt-04-8b53bcd5f9e7/trial.json": "c558302d05f781cd2cb435002e77c0c8587b969891d90b0fdffc9d3a6db7dc69",
+    "transactions/failed/v4.1-h6-1p5-attempt-02-2219a08eac9f/attempt.json": "a6953dd8cbbc0f118694c002c9cc688d1eddd59012924c48cf12382fa9d3c2ea",
+    "transactions/failed/v4.1-h6-1p5-attempt-02-2219a08eac9f/rollback.json": "a67e9d8cb617522f918f57c4c1f54e1abe15810151c95ab940b502f87cbc2a39",
+    "transactions/failed/v4.1-h6-1p5-attempt-02-2219a08eac9f/snapshot.json": "8f707f9624d2994f72ad78a3e0409782768e9ad7995f337e37c76162480f14da",
+    "transactions/failed/v4.1-h6-1p5-attempt-02-2219a08eac9f/trial.json": "0face43f09b34c722041ce2facd5681bffe4ccdb837677e06c1756091ab786dc"
+  }
+}

@@ -41,7 +41,7 @@ from .v4_1_multisystem import replay_selection_from_resource_evidence
 from .v4_1_protocol import DEFAULT_MANIFEST, audit_manifest
 
 
-EXACT_CODE_TAG = "dvg-obs-v4.1-s7-s9-exact-code-v1.1"
+EXACT_CODE_TAG = "dvg-obs-v4.1-s7-s9-exact-code-v1.2"
 S5_RESULT_TAG = "dvg-obs-v4.1-s5-sentinel-freeze-v1"
 S5_ROOT = ROOT / "artifacts/v4.1/s5-sentinels-rerun-v5"
 OUTPUT_ROOT = ROOT / "artifacts/v4.1/multisystem"

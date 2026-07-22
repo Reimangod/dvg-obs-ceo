@@ -16,7 +16,12 @@ from .block_ir import enumerate_candidates, recover_dvg_blocks
 from .composition import compose_registered_candidates
 from .identity import canonical_json_bytes
 from .multisystem_checkpoint import _algorithm
-from .resources import AnsatzStructure, evaluate_full_circuit_resources, paper_era_backend
+from .resources import (
+    AnsatzStructure,
+    evaluate_full_circuit_resources,
+    paper_era_backend,
+    resources_to_dict,
+)
 from .s8_probe import _state_vector
 from .transaction import RuntimeSnapshot
 from .v3_protocol import _write_exclusive
@@ -51,6 +56,16 @@ def _resource_snapshots_equal(physical: dict[str, Any], structural: dict[str, An
     """Compare counted resources while retaining distinct policy provenance."""
 
     return physical["snapshot"] == structural["snapshot"]
+
+
+def _same_unique_candidate_set(left: list[str], right: list[str]) -> bool:
+    """Candidate composition is order-independent but duplicate candidates are invalid."""
+
+    return (
+        len(left) == len(set(left))
+        and len(right) == len(set(right))
+        and sorted(left) == sorted(right)
+    )
 
 
 def audit_case(case_id: str, artifact_path: Path | None = None) -> dict[str, Any]:
@@ -124,7 +139,7 @@ def audit_case(case_id: str, artifact_path: Path | None = None) -> dict[str, Any
                 transaction_hashes[str(path.relative_to(bundle))] = _sha256(path)
         checks = {
             "queue_identity": (
-                attempt["candidate_ids"] == frozen["candidate_ids"]
+                _same_unique_candidate_set(attempt["candidate_ids"], frozen["candidate_ids"])
                 and attempt["constraint_semantic_id"] == frozen["constraint_semantic_id"]
                 and attempt["constraint_numerical_id"] == frozen["constraint_numerical_id"]
             ),
@@ -137,7 +152,7 @@ def audit_case(case_id: str, artifact_path: Path | None = None) -> dict[str, Any
             "independent_energy_recomputed": abs(energy - float(selected["independent_energy_hartree"])) <= 1e-10,
             "gradient_recomputed": abs(float(np.max(np.abs(gradient))) - float(selected["gradient_infinity"])) <= 1e-8,
             "state_normalized": abs(float(np.vdot(state, state).real) - 1.0) <= 1e-10,
-            "resources_recomputed": asdict(resources) == attempt["physical_resources"],
+            "resources_recomputed": resources_to_dict(resources) == attempt["physical_resources"],
             # The two records intentionally name different coefficient policies.
             # Acceptance is bound to the synthesized resource snapshot itself.
             "physical_structural_snapshot_equal": _resource_snapshots_equal(
@@ -247,10 +262,10 @@ def audit_case(case_id: str, artifact_path: Path | None = None) -> dict[str, Any
         "claim_boundary": "Independent observed-case audit; no global-optimum or generalization claim.",
     }
     result["artifact_digest"] = _digest(result)
-    if failed:
-        raise V41ExactAuditError("independent exact audit failed: " + ", ".join(failed))
     if artifact_path is not None:
         _write_exclusive(artifact_path, result)
+    if failed:
+        raise V41ExactAuditError("independent exact audit failed: " + ", ".join(failed))
     return result
 
 
