@@ -1,0 +1,158 @@
+{
+  "actual_or_exact_energy_used": false,
+  "artifact_digest": "8782335b254177d28518bee6d567ab1b5b037cf6ed7813713630c150f5e29fb5",
+  "artifact_kind": "v4.1-s3-scale-aware-certificate-audit",
+  "claim_boundary": "Frozen-candidate quadratic replay only; no search reranking, exact energy, optimizer, resource selection, or VQE execution.",
+  "molecule_specific_thresholds": false,
+  "passed": true,
+  "protocol_id": "dvg-obs-v4.1-scale-transfer-protocol-v1",
+  "s0_manifest_sha256": "daeab27726a7c3a3f6a4ef11c8dccc8be112649e4bbc0952876666bf32613b46",
+  "schema_version": "1.0.0",
+  "sentinels": [
+    {
+      "actual_or_exact_energy_used": false,
+      "candidate_id_mapping": [
+        {
+          "v4_1_candidate_id": "candidate-v1:9dbaa72da546d06f29108614f460e04caff2ae22ee555409ea4b5f7d5aa2aac5",
+          "v4_candidate_id": "candidate-v1:b7f2fc067bbe96ba4f67869bb054403354c725650d2746554abc4f9a5253740d"
+        },
+        {
+          "v4_1_candidate_id": "candidate-v1:5987d2d7476c6e25b37bb0307b8f2e4cdb7f358a0a1f751b9c6b52f90bae0d7b",
+          "v4_candidate_id": "candidate-v1:21b274206af9bfe8968d678a243f176833274f9ffb0ad092533526a6a7641b74"
+        },
+        {
+          "v4_1_candidate_id": "candidate-v1:655372bf9c460d34d1143245cf6d306d1e561dd91e2e24d7570e846719c11fe1",
+          "v4_candidate_id": "candidate-v1:45876591e4949a3c45459ef962137b64819e1ed09f6c43bbbf500796a7928004"
+        },
+        {
+          "v4_1_candidate_id": "candidate-v1:6e3542457a8537def3d6ea4355418bfcd934cbebb23c9ef1609996fa3d959202",
+          "v4_candidate_id": "candidate-v1:00cd033f811b20f307f4b6f44110f373376999bc7872a40dff110e323d660c06"
+        },
+        {
+          "v4_1_candidate_id": "candidate-v1:3171599d232bfa4cb1ce3d5a4217114729a2e5f84e9e358023f869f67ed3d126",
+          "v4_candidate_id": "candidate-v1:1b2361040c65908de3860e103d9e3ee089547a43cf39e4a026d8ad9555ec2045"
+        },
+        {
+          "v4_1_candidate_id": "candidate-v1:fee57570317cefecd098021e01e91aa4024d57bd376a56e2db1fdb4a70c9e5c4",
+          "v4_candidate_id": "candidate-v1:d16cae27369d54c5e275f94de11383e3e1d10181430e16c7c7a27da9c890c1c1"
+        },
+        {
+          "v4_1_candidate_id": "candidate-v1:ffb7dec28f716b1242f858fbcb8262d78579decb7dfd370ffbc2cc11a69b144c",
+          "v4_candidate_id": "candidate-v1:f798031dd6f0c034f571937c461fc7b1b1d98cdac6f625aa21950f497636aca9"
+        }
+      ],
+      "case_id": "lih-3.0-v4-accepted",
+      "constraint_semantic_id": "constraint-semantic-v1:5bf8def006e5acf70e67ea1748d8c3bbac9010477cf892af02f4109ffba84aca",
+      "diagnostics": {
+        "constraint_direction_coverage": 1.0,
+        "constraint_rank": 7,
+        "constraint_schur_condition_number": 11.13058501552155,
+        "held_out_evidence_available": false,
+        "held_out_projected_secants": {
+          "count": 0,
+          "maximum_relative_residual": null,
+          "rms_relative_residual": null
+        },
+        "internal_projected_secants": {
+          "count": 24,
+          "maximum_relative_residual": 0.060552113445269444,
+          "rms_relative_residual": 0.02201518058216852
+        },
+        "target_hessian_condition_number": 17.927015488990484,
+        "target_hessian_equilibrated_condition_number": 9.56334793315156,
+        "target_hessian_relative_backward_error": 4.328336650700538e-17,
+        "target_hessian_relative_solve_residual": 1.5022833726734592e-16
+      },
+      "passed": true,
+      "predicted_change_from_current_hartree": 8.696638018141847e-05,
+      "quality": {
+        "checks": {
+          "constraint_direction_coverage": true,
+          "constraint_schur_condition": true,
+          "held_out_evidence": true,
+          "held_out_projected_residual": true,
+          "internal_projected_residual": true,
+          "target_hessian_condition": true,
+          "target_hessian_equilibrated_condition": true,
+          "target_hessian_relative_backward_error": true,
+          "target_hessian_relative_solve_residual": true
+        },
+        "passed": true,
+        "policy": {
+          "maximum_constraint_schur_condition_number": 100.0,
+          "maximum_equilibrated_target_hessian_condition_number": 1000000000000.0,
+          "maximum_held_out_projected_residual": 1000000000000.0,
+          "maximum_internal_projected_residual": 0.5,
+          "maximum_target_hessian_condition_number": 100.0,
+          "maximum_target_hessian_relative_backward_error": 1e-10,
+          "maximum_target_hessian_relative_solve_residual": 1e-10,
+          "minimum_constraint_direction_coverage": 0.99,
+          "require_held_out_evidence": false,
+          "target_hessian_condition_is_scientific_gate": false
+        }
+      },
+      "v4_prediction_delta_hartree": 0.0
+    },
+    {
+      "actual_or_exact_energy_used": false,
+      "candidate_id_mapping": [
+        {
+          "v4_1_candidate_id": "candidate-v1:37d2df6a2f8d5154f8714b319d3852a3805462e5ac52158b3dd67d8a5d2f4532",
+          "v4_candidate_id": "candidate-v1:38ffe204efcfa7dd8aa2b4e62894b0930e218bcb2760eed645ce10bff8634719"
+        }
+      ],
+      "case_id": "h6-1.5-sentinel",
+      "constraint_semantic_id": "constraint-semantic-v1:9dbbf8c1d4ad85b31b89ad1195b355ffa547f45bd39cd93ca54e409e920f8edd",
+      "diagnostics": {
+        "constraint_direction_coverage": 1.0,
+        "constraint_rank": 1,
+        "constraint_schur_condition_number": 1.0,
+        "held_out_evidence_available": false,
+        "held_out_projected_secants": {
+          "count": 0,
+          "maximum_relative_residual": null,
+          "rms_relative_residual": null
+        },
+        "internal_projected_secants": {
+          "count": 609,
+          "maximum_relative_residual": 0.048456127893760165,
+          "rms_relative_residual": 0.016469246817148172
+        },
+        "target_hessian_condition_number": 50605.79823195516,
+        "target_hessian_equilibrated_condition_number": 44892.41136503905,
+        "target_hessian_relative_backward_error": 6.417749495484332e-17,
+        "target_hessian_relative_solve_residual": 6.324999038849981e-16
+      },
+      "passed": true,
+      "predicted_change_from_current_hartree": 6.986488191458385e-05,
+      "quality": {
+        "checks": {
+          "constraint_direction_coverage": true,
+          "constraint_schur_condition": true,
+          "held_out_evidence": true,
+          "held_out_projected_residual": true,
+          "internal_projected_residual": true,
+          "target_hessian_condition": true,
+          "target_hessian_equilibrated_condition": true,
+          "target_hessian_relative_backward_error": true,
+          "target_hessian_relative_solve_residual": true
+        },
+        "passed": true,
+        "policy": {
+          "maximum_constraint_schur_condition_number": 100.0,
+          "maximum_equilibrated_target_hessian_condition_number": 1000000000000.0,
+          "maximum_held_out_projected_residual": 1000000000000.0,
+          "maximum_internal_projected_residual": 0.5,
+          "maximum_target_hessian_condition_number": 100.0,
+          "maximum_target_hessian_relative_backward_error": 1e-10,
+          "maximum_target_hessian_relative_solve_residual": 1e-10,
+          "minimum_constraint_direction_coverage": 0.99,
+          "require_held_out_evidence": false,
+          "target_hessian_condition_is_scientific_gate": false
+        }
+      },
+      "v4_prediction_delta_hartree": 0.0
+    }
+  ],
+  "source_inverse_hessian_modified": false
+}

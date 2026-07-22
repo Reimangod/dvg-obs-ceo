@@ -8,6 +8,7 @@ from dvg_obs_ceo.quadratic import (
     QuadraticModelError,
     predict_constrained_optimum,
     solve_spd,
+    solve_spd_equilibrated,
     target_native_model,
     target_newton_direction,
     validate_spd,
@@ -269,3 +270,56 @@ def test_model_inputs_are_defensively_copied_and_immutable() -> None:
     assert source.theta[0] == pytest.approx(0.1)
     with pytest.raises(ValueError):
         source.theta[0] = 2.0
+
+
+def test_diagonal_equilibration_maps_solution_back_to_physical_coordinates() -> None:
+    matrix = np.array(
+        [[1e-4, 2e-3, 0.0], [2e-3, 4.0, 3e2], [0.0, 3e2, 1e6]],
+        dtype=float,
+    )
+    rhs = np.array([1e-2, -2.0, 3e3])
+    certified = solve_spd_equilibrated(matrix, rhs)
+    np.testing.assert_allclose(matrix @ certified.value, rhs, rtol=1e-10, atol=1e-12)
+    assert certified.certificate.raw.condition_number > 1e9
+    assert certified.certificate.equilibrated.condition_number < 10.0
+    assert certified.certificate.relative_backward_error <= 1e-10
+
+
+def test_target_physical_optimum_is_invariant_under_diagonal_coordinate_scaling() -> None:
+    hessian = np.array(
+        [[3.0, 0.2, 0.1], [0.2, 2.0, -0.1], [0.1, -0.1, 4.0]]
+    )
+    source = model([0.4, -0.3, 0.7], [0.2, -0.1, 0.3], hessian)
+    base = deletion_ir(3, (2,))
+    base_native = target_native_model(source, base)
+    coordinate_scale = np.diag([1e-3, 1e3])
+    scaled = ConstraintTargetIR.create(
+        constraint_matrix=base.constraint_matrix,
+        constraint_rhs=base.constraint_rhs,
+        offset=base.offset,
+        jacobian=base.jacobian @ coordinate_scale,
+        source_slots=base.source_slots,
+        target_slots=("scaled-left", "scaled-right"),
+        generator_normalization=base.generator_normalization,
+        orientation="diagonally-rescaled-test",
+    )
+    scaled_native = target_native_model(source, scaled)
+    np.testing.assert_allclose(
+        scaled_native.optimum_source_theta, base_native.optimum_source_theta, atol=2e-10
+    )
+    assert scaled_native.source_model_change_from_current == pytest.approx(
+        base_native.source_model_change_from_current, abs=1e-11
+    )
+    np.testing.assert_allclose(
+        coordinate_scale @ scaled_native.optimum_coordinates,
+        base_native.optimum_coordinates,
+        atol=2e-10,
+    )
+    assert scaled_native.solve_certificate is not None
+    assert scaled_native.solve_certificate.equilibrated.condition_number < 10.0
+
+
+def test_equilibrated_solve_residual_failure_is_fail_closed(monkeypatch) -> None:
+    monkeypatch.setattr(np.linalg, "solve", lambda matrix, rhs: np.zeros_like(rhs))
+    with pytest.raises(QuadraticModelError, match="relative residual"):
+        solve_spd_equilibrated(np.eye(2), [1.0, -1.0])

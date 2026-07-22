@@ -20,7 +20,7 @@ from numpy.typing import ArrayLike, NDArray
 
 
 FloatArray = NDArray[np.float64]
-KERNEL_VERSION = "quadratic-kernel-v1"
+KERNEL_VERSION = "quadratic-kernel-v1.1"
 
 
 class QuadraticModelError(ValueError):
@@ -55,6 +55,24 @@ class MatrixDiagnostics:
     symmetry_relative_residual: float
     condition_number: float
     minimum_cholesky_diagonal: float
+
+
+@dataclass(frozen=True)
+class ScaleAwareSolveCertificate:
+    """Numerical evidence for a diagonally equilibrated physical solve."""
+
+    raw: MatrixDiagnostics
+    equilibrated: MatrixDiagnostics
+    minimum_coordinate_scale: float
+    maximum_coordinate_scale: float
+    relative_residual: float
+    relative_backward_error: float
+
+
+@dataclass(frozen=True)
+class CertifiedSPDSolution:
+    value: FloatArray
+    certificate: ScaleAwareSolveCertificate
 
 
 @dataclass(frozen=True)
@@ -217,6 +235,7 @@ class TargetNativeModel:
     optimum_source_theta: FloatArray
     source_model_change_from_current: float
     diagnostics: MatrixDiagnostics
+    solve_certificate: ScaleAwareSolveCertificate | None = None
 
 
 def _vector(name: str, value: ArrayLike) -> FloatArray:
@@ -309,6 +328,78 @@ def solve_spd(
     return np.asarray(solution, dtype=np.float64)
 
 
+def solve_spd_equilibrated(
+    matrix: ArrayLike,
+    rhs: ArrayLike,
+    policy: NumericalPolicy = NumericalPolicy(),
+) -> CertifiedSPDSolution:
+    """Solve an SPD system after canonical symmetric diagonal equilibration.
+
+    The input matrix and right-hand side are never modified.  The returned
+    solution is mapped back to the original physical coordinates, and both a
+    relative residual and normwise relative backward error are checked there.
+    """
+
+    value = _matrix("SPD matrix", matrix)
+    raw = validate_spd(value, policy)
+    right = np.asarray(rhs, dtype=np.float64)
+    if (
+        right.ndim not in (1, 2)
+        or right.shape[0] != value.shape[0]
+        or not np.all(np.isfinite(right))
+    ):
+        raise QuadraticModelError("solve RHS is finite but dimensionally incompatible")
+    symmetric = (value + value.T) * 0.5
+    diagonal = np.diag(symmetric)
+    if np.any(~np.isfinite(diagonal)) or np.any(diagonal <= 0.0):
+        raise QuadraticModelError("SPD equilibration requires finite positive diagonal")
+    scale = 1.0 / np.sqrt(diagonal)
+    if np.any(~np.isfinite(scale)) or np.any(scale <= 0.0):
+        raise QuadraticModelError("SPD equilibration produced invalid coordinate scales")
+    equilibrated_matrix = scale[:, None] * symmetric * scale[None, :]
+    equilibrated = validate_spd(equilibrated_matrix, policy)
+    equilibrated_rhs = scale[:, None] * right if right.ndim == 2 else scale * right
+    factor = np.linalg.cholesky(equilibrated_matrix)
+    equilibrated_solution = np.linalg.solve(
+        factor.T, np.linalg.solve(factor, equilibrated_rhs)
+    )
+    solution = (
+        scale[:, None] * equilibrated_solution
+        if right.ndim == 2
+        else scale * equilibrated_solution
+    )
+    residual_vector = symmetric @ solution - right
+    residual_norm = float(np.linalg.norm(residual_vector))
+    rhs_norm = float(np.linalg.norm(right))
+    operator_solution = float(np.linalg.norm(symmetric) * np.linalg.norm(solution))
+    tiny = np.finfo(np.float64).tiny
+    relative_residual = residual_norm / max(rhs_norm, tiny)
+    backward_error = residual_norm / max(operator_solution + rhs_norm, tiny)
+    if (
+        not math.isfinite(relative_residual)
+        or relative_residual > policy.solve_relative_tolerance
+    ):
+        raise QuadraticModelError("equilibrated SPD relative residual exceeds policy")
+    if (
+        not math.isfinite(backward_error)
+        or backward_error > policy.solve_relative_tolerance
+    ):
+        raise QuadraticModelError("equilibrated SPD backward error exceeds policy")
+    result = np.asarray(solution, dtype=np.float64)
+    result.flags.writeable = False
+    return CertifiedSPDSolution(
+        result,
+        ScaleAwareSolveCertificate(
+            raw=raw,
+            equilibrated=equilibrated,
+            minimum_coordinate_scale=float(np.min(scale)),
+            maximum_coordinate_scale=float(np.max(scale)),
+            relative_residual=relative_residual,
+            relative_backward_error=backward_error,
+        ),
+    )
+
+
 def quadratic_change(
     model: QuadraticModel,
     candidate_theta: ArrayLike,
@@ -385,15 +476,17 @@ def target_native_model(
             optimum_source_theta=source,
             source_model_change_from_current=quadratic_change(model, source, policy),
             diagnostics=MatrixDiagnostics(0, 0.0, 1.0, math.inf),
+            solve_certificate=None,
         )
     hessian_jacobian = solve_spd(model.inverse_hessian, jacobian, policy)
     target_hessian = jacobian.T @ hessian_jacobian
     diagnostics = validate_spd(target_hessian, policy)
-    target_inverse = solve_spd(
+    target_inverse_solve = solve_spd_equilibrated(
         target_hessian,
         np.eye(target_hessian.shape[0], dtype=np.float64),
         policy,
     )
+    target_inverse = target_inverse_solve.value
     target_inverse = (target_inverse + target_inverse.T) * 0.5
     hessian_theta_minus_offset = solve_spd(
         model.inverse_hessian,
@@ -401,7 +494,8 @@ def target_native_model(
         policy,
     )
     rhs = jacobian.T @ (hessian_theta_minus_offset - model.gradient)
-    coordinates = solve_spd(target_hessian, rhs, policy)
+    coordinate_solve = solve_spd_equilibrated(target_hessian, rhs, policy)
+    coordinates = coordinate_solve.value
     source = transformation.offset + jacobian @ coordinates
     feasibility = _absolute_max(
         transformation.constraint_matrix @ source - transformation.constraint_rhs
@@ -415,6 +509,7 @@ def target_native_model(
         optimum_source_theta=np.asarray(source, dtype=np.float64),
         source_model_change_from_current=quadratic_change(model, source, policy),
         diagnostics=diagnostics,
+        solve_certificate=coordinate_solve.certificate,
     )
 
 

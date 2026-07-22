@@ -22,7 +22,7 @@ from .quadratic import (
 
 
 FloatArray = NDArray[np.float64]
-JOINT_PREDICTION_VERSION = "joint-obs-prediction-v1"
+JOINT_PREDICTION_VERSION = "joint-obs-prediction-v1.1"
 
 
 class JointPredictionError(RuntimeError):
@@ -41,6 +41,9 @@ class JointPredictionDiagnostics:
     constraint_rank: int
     constraint_schur_condition_number: float
     target_hessian_condition_number: float
+    target_hessian_equilibrated_condition_number: float
+    target_hessian_relative_solve_residual: float
+    target_hessian_relative_backward_error: float
     constraint_direction_coverage: float
     internal_projected_secants: ProjectedSecantStatistics
     held_out_projected_secants: ProjectedSecantStatistics
@@ -55,6 +58,10 @@ class JointQualityPolicy:
     maximum_internal_projected_residual: float = math.inf
     maximum_held_out_projected_residual: float = math.inf
     require_held_out_evidence: bool = False
+    target_hessian_condition_is_scientific_gate: bool = True
+    maximum_equilibrated_target_hessian_condition_number: float = 1e12
+    maximum_target_hessian_relative_solve_residual: float = 1e-10
+    maximum_target_hessian_relative_backward_error: float = 1e-10
 
     def validate(self) -> None:
         if (
@@ -65,6 +72,12 @@ class JointQualityPolicy:
             or not 0.0 <= self.minimum_constraint_direction_coverage <= 1.0
             or self.maximum_internal_projected_residual < 0
             or self.maximum_held_out_projected_residual < 0
+            or not math.isfinite(self.maximum_equilibrated_target_hessian_condition_number)
+            or self.maximum_equilibrated_target_hessian_condition_number <= 0
+            or not math.isfinite(self.maximum_target_hessian_relative_solve_residual)
+            or self.maximum_target_hessian_relative_solve_residual <= 0
+            or not math.isfinite(self.maximum_target_hessian_relative_backward_error)
+            or self.maximum_target_hessian_relative_backward_error <= 0
         ):
             raise JointPredictionError("joint quality policy is invalid")
 
@@ -197,6 +210,21 @@ def joint_obs_prediction(
         matrix.shape[0],
         schur_condition,
         native.diagnostics.condition_number,
+        (
+            native.solve_certificate.equilibrated.condition_number
+            if native.solve_certificate is not None
+            else 1.0
+        ),
+        (
+            native.solve_certificate.relative_residual
+            if native.solve_certificate is not None
+            else 0.0
+        ),
+        (
+            native.solve_certificate.relative_backward_error
+            if native.solve_certificate is not None
+            else 0.0
+        ),
         _direction_coverage(
             basis, internal_pairs, numerical_policy.rank_relative_tolerance
         ),
@@ -229,8 +257,23 @@ def evaluate_joint_quality(
     checks = {
         "constraint_schur_condition": diagnostics["constraint_schur_condition_number"]
         <= policy.maximum_constraint_schur_condition_number,
-        "target_hessian_condition": diagnostics["target_hessian_condition_number"]
-        <= policy.maximum_target_hessian_condition_number,
+        "target_hessian_condition": (
+            not policy.target_hessian_condition_is_scientific_gate
+            or diagnostics["target_hessian_condition_number"]
+            <= policy.maximum_target_hessian_condition_number
+        ),
+        "target_hessian_equilibrated_condition": diagnostics[
+            "target_hessian_equilibrated_condition_number"
+        ]
+        <= policy.maximum_equilibrated_target_hessian_condition_number,
+        "target_hessian_relative_solve_residual": diagnostics[
+            "target_hessian_relative_solve_residual"
+        ]
+        <= policy.maximum_target_hessian_relative_solve_residual,
+        "target_hessian_relative_backward_error": diagnostics[
+            "target_hessian_relative_backward_error"
+        ]
+        <= policy.maximum_target_hessian_relative_backward_error,
         "constraint_direction_coverage": diagnostics["constraint_direction_coverage"]
         >= policy.minimum_constraint_direction_coverage,
         "internal_projected_residual": internal["maximum_relative_residual"] is not None

@@ -113,3 +113,30 @@ def test_overlapping_secant_roles_and_singular_solve_fail_closed() -> None:
             [0.0, 0.0], [0.0, 0.0], [[1.0, 0.0], [0.0, 0.0]], transform,
             internal_pairs=[pair],
         )
+
+
+def test_raw_target_condition_can_be_telemetry_with_scale_certificate_gate() -> None:
+    hessian = np.diag([1.0, 1e6])
+    transform = _transform(np.zeros((0, 2)), [], np.eye(2))
+    result = joint_obs_prediction(
+        [0.2, -0.1],
+        [0.0, 0.0],
+        np.diag([1.0, 1e-6]),
+        transform,
+        internal_pairs=[_pair([1.0, 0.0], hessian), _pair([0.0, 1.0], hessian)],
+    )
+    diagnostics = result["diagnostics"]
+    assert diagnostics["target_hessian_condition_number"] > 100.0
+    assert diagnostics["target_hessian_equilibrated_condition_number"] == pytest.approx(1.0)
+    quality = evaluate_joint_quality(
+        result,
+        JointQualityPolicy(
+            maximum_target_hessian_condition_number=100.0,
+            target_hessian_condition_is_scientific_gate=False,
+            maximum_equilibrated_target_hessian_condition_number=1e12,
+            minimum_constraint_direction_coverage=0.99,
+            maximum_internal_projected_residual=1e-12,
+        ),
+    )
+    assert quality["passed"]
+    assert quality["checks"]["target_hessian_condition"]
