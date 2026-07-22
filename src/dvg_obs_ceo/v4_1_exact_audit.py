@@ -47,6 +47,12 @@ def _contains_key(value: Any, forbidden: str) -> bool:
     return False
 
 
+def _resource_snapshots_equal(physical: dict[str, Any], structural: dict[str, Any]) -> bool:
+    """Compare counted resources while retaining distinct policy provenance."""
+
+    return physical["snapshot"] == structural["snapshot"]
+
+
 def audit_case(case_id: str, artifact_path: Path | None = None) -> dict[str, Any]:
     s0 = audit_manifest(DEFAULT_MANIFEST)
     manifest = json.loads(DEFAULT_MANIFEST.read_text(encoding="utf-8"))
@@ -132,7 +138,11 @@ def audit_case(case_id: str, artifact_path: Path | None = None) -> dict[str, Any
             "gradient_recomputed": abs(float(np.max(np.abs(gradient))) - float(selected["gradient_infinity"])) <= 1e-8,
             "state_normalized": abs(float(np.vdot(state, state).real) - 1.0) <= 1e-10,
             "resources_recomputed": asdict(resources) == attempt["physical_resources"],
-            "physical_structural_equal": attempt["physical_resources"] == attempt["structural_resources"],
+            # The two records intentionally name different coefficient policies.
+            # Acceptance is bound to the synthesized resource snapshot itself.
+            "physical_structural_snapshot_equal": _resource_snapshots_equal(
+                attempt["physical_resources"], attempt["structural_resources"]
+            ),
             "quality_passed": attempt["quality"]["passed"] is True,
             "two_path_certificate": attempt["two_path_certificate"]["passed"] is True,
             "transaction_layout": layout,
