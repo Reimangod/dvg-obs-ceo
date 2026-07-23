@@ -1,0 +1,188 @@
+{
+  "schema_version": "1.0.0",
+  "artifact_kind": "v5-s9-audited-development-summary",
+  "inputs": [
+    {
+      "case_id": "lih-3.0",
+      "result_path": "artifacts/v5/s8/lih-energy-aware-width2-round3-v1/summary.json",
+      "result_sha256": "ae2c3a93d4eef86f0a7ec8df9895c712c1b0d939dd7118c822076973e91c961a",
+      "audit_path": "artifacts/v5/s8/lih-energy-aware-width2-round3-v1-audit.json",
+      "audit_sha256": "fd155e7b7762694e6d35ebe139bdbfac6c53dd50ac722172b4759d72b95edd9a",
+      "classification": "outcome-informed-calibration-carry-forward"
+    },
+    {
+      "case_id": "h6-1.5",
+      "result_path": "artifacts/v5/s9/h6-1.5-v1/summary.json",
+      "result_sha256": "d6a67dd321acd8b4a0da5f160e7f2faac8c065fa19969aba45de60d7698cda7c",
+      "audit_path": "artifacts/v5/s9/h6-1.5-v1-audit.json",
+      "audit_sha256": "bdcaf5298920e97f82fa09b3d8aa6b33740cc2511e19aff1e97831f97385f0ab",
+      "classification": "frozen-development-reevaluation"
+    },
+    {
+      "case_id": "h6-3.0",
+      "result_path": "artifacts/v5/s9/h6-3.0-v1/summary.json",
+      "result_sha256": "9f6f09d9adf1e47e0f7780d399037c62d3a1d8f79fd2a5e43d3f8b24be10581f",
+      "audit_path": "artifacts/v5/s9/h6-3.0-v1-audit.json",
+      "audit_sha256": "b890f620007c8b93913088629fd870553085082fed7ce8ddc6d4dc089a4d4c7a",
+      "classification": "frozen-development-reevaluation"
+    },
+    {
+      "case_id": "beh2-3.0",
+      "result_path": "artifacts/v5/s9/beh2-3.0-v1/summary.json",
+      "result_sha256": "23b113229680d7f6e9cc4c401aa9f8122cf3cf5dd06d8a49025bccb221ee9ad9",
+      "audit_path": "artifacts/v5/s9/beh2-3.0-v1-audit.json",
+      "audit_sha256": "a850ee47dc8f87a3f48bc18aef859370d2118ec2897abda4424b2cb4c30baafa",
+      "classification": "frozen-development-reevaluation"
+    }
+  ],
+  "cases": [
+    {
+      "case_id": "lih-3.0",
+      "strict_primary_success": false,
+      "source": {
+        "energy_increase_hartree": 0.0,
+        "cnot_count": 107,
+        "parameter_count": 15,
+        "total_depth": 171,
+        "cnot_depth": 30,
+        "logical_block_count": 15
+      },
+      "v4_1_reference": {
+        "energy_increase_hartree": 0.00008690137959188604,
+        "cnot_count": 58,
+        "parameter_count": 8,
+        "total_depth": 92,
+        "cnot_depth": 30,
+        "logical_block_count": 8
+      },
+      "v5_raw_winner": {
+        "energy_increase_hartree": 0.00008690137959188604,
+        "cnot_count": 58,
+        "parameter_count": 8,
+        "total_depth": 92,
+        "cnot_depth": 30,
+        "logical_block_count": 8
+      },
+      "nonregression_release_choice": "V4.1-equivalent"
+    },
+    {
+      "case_id": "h6-1.5",
+      "strict_primary_success": false,
+      "source": {
+        "energy_increase_hartree": 0.0,
+        "cnot_count": 879,
+        "parameter_count": 137,
+        "total_depth": 1595,
+        "cnot_depth": 306,
+        "logical_block_count": 79
+      },
+      "v4_1_reference": {
+        "energy_increase_hartree": 0.00008821426554872502,
+        "cnot_count": 858,
+        "parameter_count": 131,
+        "total_depth": 1546,
+        "cnot_depth": 300,
+        "logical_block_count": 78
+      },
+      "v5_raw_winner": {
+        "energy_increase_hartree": 0.0000846365777271707,
+        "cnot_count": 858,
+        "parameter_count": 132,
+        "total_depth": 1549,
+        "cnot_depth": 301,
+        "logical_block_count": 78
+      },
+      "nonregression_release_choice": "V4.1"
+    },
+    {
+      "case_id": "h6-3.0",
+      "strict_primary_success": true,
+      "source": {
+        "energy_increase_hartree": 0.0,
+        "cnot_count": 785,
+        "parameter_count": 149,
+        "total_depth": 1493,
+        "cnot_depth": 294,
+        "logical_block_count": 95
+      },
+      "v4_1_reference": {
+        "energy_increase_hartree": 0.00007134482751514071,
+        "cnot_count": 768,
+        "parameter_count": 144,
+        "total_depth": 1455,
+        "cnot_depth": 293,
+        "logical_block_count": 94
+      },
+      "v5_strict_success_point": {
+        "energy_increase_hartree": 0.00006915085952652333,
+        "cnot_count": 758,
+        "parameter_count": 142,
+        "total_depth": 1426,
+        "cnot_depth": 283,
+        "logical_block_count": 93
+      },
+      "v5_raw_winner": {
+        "energy_increase_hartree": 0.00007849255583103343,
+        "cnot_count": 741,
+        "parameter_count": 138,
+        "total_depth": 1394,
+        "cnot_depth": 284,
+        "logical_block_count": 92
+      },
+      "nonregression_release_choice": "V5-strict-success-point"
+    },
+    {
+      "case_id": "beh2-3.0",
+      "strict_primary_success": false,
+      "source": {
+        "energy_increase_hartree": 0.0,
+        "cnot_count": 284,
+        "parameter_count": 38,
+        "total_depth": 458,
+        "cnot_depth": 94,
+        "logical_block_count": 32
+      },
+      "v4_1_reference": {
+        "energy_increase_hartree": 0.0000966150316816794,
+        "cnot_count": 239,
+        "parameter_count": 33,
+        "total_depth": 393,
+        "cnot_depth": 89,
+        "logical_block_count": 27
+      },
+      "v5_raw_winner": {
+        "energy_increase_hartree": 0.00009851833251239839,
+        "cnot_count": 221,
+        "parameter_count": 31,
+        "total_depth": 367,
+        "cnot_depth": 85,
+        "logical_block_count": 25
+      },
+      "nonregression_release_choice": "V4.1"
+    }
+  ],
+  "performance_gates": {
+    "all_safety_audits_passed": true,
+    "nonregression_rule_applied": true,
+    "primary_success_case_count": 1,
+    "primary_success_cases": [
+      "h6-3.0"
+    ],
+    "strong_development_success_requires_two_cases_including_h6": true,
+    "strong_development_success_passed": false,
+    "global_v5_superiority_established": false
+  },
+  "s10_decision": {
+    "enter_new_transformation_family_gate": true,
+    "reason": "Current-family sequential search is safe and improves one H6 case, but LiH and H6 1.5 remain at known structural endpoints and strong development success is not met.",
+    "new_family_must_be_separate_version": "V5.1",
+    "floating-coefficient-only_transformations_forbidden": true
+  },
+  "provenance_incident": {
+    "path": "docs/incidents/V5_S9_EXECUTION_FREEZE_SERIALIZATION.md",
+    "scientific_results_affected": false,
+    "mitigation": "Independent reconstruction of the freeze record and canonical source path ID."
+  },
+  "paper_measurement_cost": null,
+  "claim_boundary": "Development-only noiseless exact-statevector evidence. One strict H6 success does not establish global or out-of-sample superiority."
+}
