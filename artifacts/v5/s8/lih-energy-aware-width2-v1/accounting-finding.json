@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "artifact_kind": "v5-s8-work-accounting-finding",
+  "result_sha256": "2fce9eadf3b61261cb9e39c2279f19bbc4a18cec5b36f40a8a41975b8630a4a4",
+  "quantum_result_status": "not_invalidated",
+  "aggregate_work_status": "incomplete",
+  "finding": "A terminal parent catalog with zero proposals was built but never attached to an exact outcome, so its work was absent from aggregate_work.",
+  "evidence": {
+    "catalog_count": 3,
+    "catalog_parent_count_with_exact_attempt": 2,
+    "terminal_parent_path_id": "path-v5:3f66c6c0132b77778579079b9759be27766a6ce441c482e8bacfc1e1b806d046",
+    "terminal_catalog_expanded_search_states": 17,
+    "terminal_catalog_full_resource_recounts": 1,
+    "terminal_catalog_candidate_batch_count": 0
+  },
+  "claim_boundary": "Energy, gradient, acceptance, and circuit-resource values remain inspectable, but aggregate work from this artifact must not be used for comparison."
+}
