@@ -97,6 +97,64 @@ def test_width_one_uses_one_active_path_per_round() -> None:
     assert result["exact_attempts"] == 2
 
 
+def test_energy_aware_beam_retains_resource_dominated_low_energy_path() -> None:
+    def first_round_only(parent):
+        if parent.candidate_history:
+            return ()
+        return (
+            proposal(parent, "a", 0, "cnot_count"),
+            proposal(parent, "b", 1, "parameter_count"),
+        )
+
+    def energy_tradeoff_executor(item, parent, attempt):
+        outcome = executor(item, parent, attempt)
+        label = next(
+            label
+            for label in ("a", "b")
+            if item.candidate_id.endswith(sha256_hex(label))
+        )
+        energy = 9e-5 if label == "a" else 1e-6
+        dominated_resources = resources(
+            70 if label == "a" else 90,
+            7 if label == "a" else 9,
+            "energy-tradeoff-" + label,
+        )
+        return replace(
+            outcome,
+            cumulative_energy_increase_hartree=energy,
+            resources=dominated_resources,
+            diversity_key=label,
+        )
+
+    resource_only = run_multitrajectory(
+        SOURCE,
+        catalog_builder=first_round_only,
+        exact_executor=energy_tradeoff_executor,
+        config=MultiTrajectoryConfig(2, 2, 1, 2),
+    )
+    energy_aware = run_multitrajectory(
+        SOURCE,
+        catalog_builder=first_round_only,
+        exact_executor=energy_tradeoff_executor,
+        config=MultiTrajectoryConfig(
+            2, 2, 1, 2, beam_dominance="resources-plus-energy"
+        ),
+    )
+    assert len(resource_only["trajectory"][0]["active_path_ids_after"]) == 1
+    assert len(energy_aware["trajectory"][0]["active_path_ids_after"]) == 2
+    assert energy_aware["beam_dominance_rule"] == "resources-plus-energy"
+
+
+def test_unknown_beam_dominance_fails_closed() -> None:
+    import pytest
+    from dvg_obs_ceo.v5_multitrajectory import V5MultiTrajectoryError
+
+    with pytest.raises(V5MultiTrajectoryError, match="dominance policy"):
+        MultiTrajectoryConfig(
+            2, 2, 1, 2, beam_dominance="unknown"
+        ).validate()
+
+
 def test_executor_cannot_accept_outside_cumulative_budget() -> None:
     def unsafe(item, parent, attempt):
         return replace(executor(item, parent, attempt), cumulative_energy_increase_hartree=2e-4)

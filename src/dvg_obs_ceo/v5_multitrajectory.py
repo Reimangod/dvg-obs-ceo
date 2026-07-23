@@ -162,6 +162,7 @@ class MultiTrajectoryConfig:
     maximum_exact_attempts: int
     endpoint_quota: int = 1
     cumulative_energy_budget_hartree: float = 1e-4
+    beam_dominance: str = "resources-only"
 
     def validate(self) -> None:
         integers = (
@@ -174,6 +175,8 @@ class MultiTrajectoryConfig:
             raise V5MultiTrajectoryError("width must be one of the preregistered values {1,2,4,8}")
         if not math.isfinite(self.cumulative_energy_budget_hartree) or self.cumulative_energy_budget_hartree < 0:
             raise V5MultiTrajectoryError("multi-trajectory energy budget is invalid")
+        if self.beam_dominance not in ("resources-only", "resources-plus-energy"):
+            raise V5MultiTrajectoryError("beam dominance policy is invalid")
 
 
 CatalogBuilder = Callable[[TrajectoryState], Sequence[ExpansionProposal]]
@@ -195,9 +198,28 @@ def _resource_values(state: TrajectoryState) -> tuple[int, ...]:
     return tuple(int(getattr(state.resources, field)) for field in RESOURCE_FIELDS)
 
 
-def _dominates_resources(left: TrajectoryState, right: TrajectoryState) -> bool:
+def _dominates(
+    left: TrajectoryState,
+    right: TrajectoryState,
+    *,
+    include_energy: bool,
+) -> bool:
     a, b = _resource_values(left), _resource_values(right)
-    return all(x <= y for x, y in zip(a, b)) and any(x < y for x, y in zip(a, b))
+    resource_nonworse = all(x <= y for x, y in zip(a, b))
+    resource_strict = any(x < y for x, y in zip(a, b))
+    if not include_energy:
+        return resource_nonworse and resource_strict
+    energy_nonworse = (
+        left.cumulative_energy_increase_hartree
+        <= right.cumulative_energy_increase_hartree
+    )
+    energy_strict = (
+        left.cumulative_energy_increase_hartree
+        < right.cumulative_energy_increase_hartree
+    )
+    return resource_nonworse and energy_nonworse and (
+        resource_strict or energy_strict
+    )
 
 
 def _winner_key(state: TrajectoryState) -> tuple[Any, ...]:
@@ -219,7 +241,10 @@ def _select_beam(states: Sequence[TrajectoryState], config: MultiTrajectoryConfi
         if incumbent is None or _winner_key(state) < _winner_key(incumbent):
             by_state[key] = state
     unique = list(by_state.values())
-    pareto = _nondominated(unique)
+    pareto = _nondominated(
+        unique,
+        include_energy=config.beam_dominance == "resources-plus-energy",
+    )
     selected: list[TrajectoryState] = []
     seen_paths: set[str] = set()
     seen_diversity: set[str] = set()
@@ -248,11 +273,19 @@ def _select_beam(states: Sequence[TrajectoryState], config: MultiTrajectoryConfi
     return selected
 
 
-def _nondominated(states: Sequence[TrajectoryState]) -> list[TrajectoryState]:
+def _nondominated(
+    states: Sequence[TrajectoryState],
+    *,
+    include_energy: bool,
+) -> list[TrajectoryState]:
     return sorted(
         [
             state for state in states
-            if not any(_dominates_resources(other, state) for other in states if other is not state)
+            if not any(
+                _dominates(other, state, include_energy=include_energy)
+                for other in states
+                if other is not state
+            )
         ],
         key=_winner_key,
     )
@@ -397,7 +430,10 @@ def run_multitrajectory(
             stop_reason = "maximum-exact-attempts"
             break
 
-    endpoints = _nondominated(all_states[1:] or [source])
+    endpoints = _nondominated(
+        all_states[1:] or [source],
+        include_energy=config.beam_dominance == "resources-plus-energy",
+    )
     winner = min(endpoints, key=_winner_key)
     result = {
         "version": MULTITRAJECTORY_VERSION,
@@ -423,6 +459,7 @@ def run_multitrajectory(
             "endpoint-quota first pass requires distinct diversity keys; deterministic "
             "resource-ranked fill may reuse a diversity key only to fill remaining width"
         ),
+        "beam_dominance_rule": config.beam_dominance,
         "paper_measurement_cost": None,
     }
     result["result_digest"] = _digest(result)

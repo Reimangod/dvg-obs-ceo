@@ -69,7 +69,13 @@ def _work_delta(after: V5WorkCounters, before: V5WorkCounters) -> dict[str, int]
     return result
 
 
-def run(output: Path = OUTPUT) -> dict[str, Any]:
+def run(
+    output: Path = OUTPUT,
+    *,
+    runner_version: str = RUNNER_VERSION,
+    beam_dominance: str = "resources-only",
+    artifact_kind: str = "v5-s8-lih-width2-multitrajectory",
+) -> dict[str, Any]:
     if output.exists():
         raise V5S8LiHMultiTrajectoryError("refusing to overwrite width-two output")
     threads = {name: os.environ.get(name) for name in REQUIRED_THREADS}
@@ -104,7 +110,7 @@ def run(output: Path = OUTPUT) -> dict[str, Any]:
         work=WorkCounters(),
         adapt_iteration=checkpoint["adapt_iteration"],
         metadata={
-            "run_id": RUNNER_VERSION,
+            "run_id": runner_version,
             "resource_structure_digest": source_resources.structure_digest,
             "budget_reference_energy_hartree": checkpoint["energy_hartree"],
             "checkpoint_digest": checkpoint["checkpoint_digest"],
@@ -117,7 +123,7 @@ def run(output: Path = OUTPUT) -> dict[str, Any]:
     })
     source_state_id = _state_id(source_runtime)
     source_path_id = versioned_id("path-v5", {
-        "runner_version": RUNNER_VERSION,
+        "runner_version": runner_version,
         "checkpoint_digest": checkpoint["checkpoint_digest"],
         "role": "source",
     })
@@ -257,12 +263,13 @@ def run(output: Path = OUTPUT) -> dict[str, Any]:
             maximum_exact_attempts=4,
             endpoint_quota=1,
             cumulative_energy_budget_hartree=1e-4,
+            beam_dominance=beam_dominance,
         ),
     )
     payload = {
         "schema_version": "1.0.0",
-        "artifact_kind": "v5-s8-lih-width2-multitrajectory",
-        "runner_version": RUNNER_VERSION,
+        "artifact_kind": artifact_kind,
+        "runner_version": runner_version,
         "source_energy_hartree": checkpoint["energy_hartree"],
         "source_resources": asdict(source_resources),
         "result": result,
