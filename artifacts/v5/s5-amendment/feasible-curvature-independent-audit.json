@@ -1,0 +1,241 @@
+{
+  "artifact_kind": "v5-s5-matrix-free-kkt-independent-audit",
+  "checks": {
+    "curvature_is_checked_on_feasible_subspace": true,
+    "explicit_matches_existing_obs": true,
+    "failure_categories_are_deterministic": true,
+    "finite_difference_gradient_work_is_counted": true,
+    "finite_difference_matches_analytic": true,
+    "matrix_free_matches_explicit": true,
+    "matrix_free_work_is_counted": true,
+    "measurement_cost_not_relabelled": true,
+    "no_silent_damping": true
+  },
+  "claim_boundary": "Synthetic quadratic/KKT validation only; no molecular VQE performance claim.",
+  "constrained_indefinite_result": {
+    "candidate_theta": [
+      -1.3877787807814457e-16,
+      -0.20000000000000012
+    ],
+    "config": {
+      "damping": 0.0,
+      "damping_reason": null,
+      "explicit_validation_dimension": 12,
+      "maximum_constraint_residual": 1e-10,
+      "maximum_hessian_vector_products": 512,
+      "maximum_iterations": 500,
+      "maximum_relative_backward_error": 1e-10,
+      "maximum_relative_residual": 1e-10,
+      "maximum_stationarity_residual": 1e-08,
+      "minimum_curvature": 1e-12,
+      "minres_tolerance": 1e-13,
+      "symmetry_relative_tolerance": 1e-10
+    },
+    "constraint_residual_infinity": 1.3877787807814457e-16,
+    "curvature_space": "constraint-nullspace",
+    "damping": 0.0,
+    "damping_reason": null,
+    "displacement": [
+      -0.20000000000000015,
+      -0.10000000000000012
+    ],
+    "explicit_validation_used": true,
+    "feasible_dimension": 1,
+    "hessian_norm_estimate": 2.9999999999999996,
+    "lagrange_multipliers": [
+      -0.8
+    ],
+    "minimum_curvature": 3.0,
+    "paper_measurement_cost": null,
+    "predicted_change_hartree": -0.13500000000000015,
+    "relative_backward_error": 1.2879063321724097e-16,
+    "relative_residual": 9.234295239604357e-16,
+    "solver": "scipy-minres-affine-kkt",
+    "stationarity_residual_infinity": 3.885780586188048e-16,
+    "success": true,
+    "symmetry_relative_error": 0.0,
+    "version": "v5-matrix-free-affine-kkt-v1",
+    "work": {
+      "certification_products": 0,
+      "curvature_products": 0,
+      "gradient_vector_evaluations": 0,
+      "hessian_vector_products": 2,
+      "minres_iterations": 3,
+      "solver_products": 0,
+      "validation_products": 2
+    }
+  },
+  "explicit_result": {
+    "candidate_theta": [
+      0.16276901004304162,
+      -0.11276901004304163,
+      0.2979435676709708
+    ],
+    "config": {
+      "damping": 0.0,
+      "damping_reason": null,
+      "explicit_validation_dimension": 12,
+      "maximum_constraint_residual": 1e-10,
+      "maximum_hessian_vector_products": 512,
+      "maximum_iterations": 500,
+      "maximum_relative_backward_error": 1e-10,
+      "maximum_relative_residual": 1e-10,
+      "maximum_stationarity_residual": 1e-08,
+      "minimum_curvature": 1e-12,
+      "minres_tolerance": 1e-13,
+      "symmetry_relative_tolerance": 1e-10
+    },
+    "constraint_residual_infinity": 1.3877787807814457e-17,
+    "curvature_space": "constraint-nullspace",
+    "damping": 0.0,
+    "damping_reason": null,
+    "displacement": [
+      -0.03723098995695841,
+      -0.012769010043041627,
+      -0.002056432329029174
+    ],
+    "explicit_validation_used": true,
+    "feasible_dimension": 2,
+    "hessian_norm_estimate": 5.688930475086227,
+    "lagrange_multipliers": [
+      0.16933524629363958
+    ],
+    "minimum_curvature": 2.9221280737849,
+    "paper_measurement_cost": null,
+    "predicted_change_hartree": 0.004165112386417987,
+    "relative_backward_error": 1.0672888734836423e-16,
+    "relative_residual": 1.4118058931541823e-15,
+    "solver": "scipy-minres-affine-kkt",
+    "stationarity_residual_infinity": 1.1102230246251565e-16,
+    "success": true,
+    "symmetry_relative_error": 0.0,
+    "version": "v5-matrix-free-affine-kkt-v1",
+    "work": {
+      "certification_products": 0,
+      "curvature_products": 0,
+      "gradient_vector_evaluations": 0,
+      "hessian_vector_products": 3,
+      "minres_iterations": 4,
+      "solver_products": 0,
+      "validation_products": 3
+    }
+  },
+  "failure_categories": {
+    "asymmetric": "asymmetric-hessian",
+    "budget": "hvp-budget-exceeded",
+    "indefinite": "nonpositive-curvature",
+    "singular": "nonpositive-curvature"
+  },
+  "finite_difference_result": {
+    "candidate_theta": [
+      0.16276901004302424,
+      -0.11276901004302421,
+      0.2979435676710435
+    ],
+    "config": {
+      "damping": 0.0,
+      "damping_reason": null,
+      "explicit_validation_dimension": 12,
+      "maximum_constraint_residual": 1e-10,
+      "maximum_hessian_vector_products": 512,
+      "maximum_iterations": 500,
+      "maximum_relative_backward_error": 1e-10,
+      "maximum_relative_residual": 1e-10,
+      "maximum_stationarity_residual": 1e-08,
+      "minimum_curvature": 1e-12,
+      "minres_tolerance": 1e-13,
+      "symmetry_relative_tolerance": 1e-10
+    },
+    "constraint_residual_infinity": 2.7755575615628914e-17,
+    "curvature_space": "constraint-nullspace",
+    "damping": 0.0,
+    "damping_reason": null,
+    "displacement": [
+      -0.03723098995697578,
+      -0.012769010043024203,
+      -0.002056432328956472
+    ],
+    "explicit_validation_used": true,
+    "feasible_dimension": 2,
+    "hessian_norm_estimate": 5.688930475090099,
+    "lagrange_multipliers": [
+      0.1693352462936929
+    ],
+    "minimum_curvature": 2.92212807377703,
+    "paper_measurement_cost": null,
+    "predicted_change_hartree": 0.004165112386419088,
+    "relative_backward_error": 2.6611037481237446e-17,
+    "relative_residual": 3.5200984918319104e-16,
+    "solver": "scipy-minres-affine-kkt",
+    "stationarity_residual_infinity": 2.7755575615628914e-17,
+    "success": true,
+    "symmetry_relative_error": 1.139407308147451e-12,
+    "version": "v5-matrix-free-affine-kkt-v1",
+    "work": {
+      "certification_products": 0,
+      "curvature_products": 0,
+      "gradient_vector_evaluations": 6,
+      "hessian_vector_products": 3,
+      "minres_iterations": 4,
+      "solver_products": 0,
+      "validation_products": 3
+    }
+  },
+  "matrix_free_result": {
+    "candidate_theta": [
+      0.16276901004304162,
+      -0.1127690100430416,
+      0.2979435676709708
+    ],
+    "config": {
+      "damping": 0.0,
+      "damping_reason": null,
+      "explicit_validation_dimension": 0,
+      "maximum_constraint_residual": 1e-10,
+      "maximum_hessian_vector_products": 512,
+      "maximum_iterations": 500,
+      "maximum_relative_backward_error": 1e-10,
+      "maximum_relative_residual": 1e-10,
+      "maximum_stationarity_residual": 1e-08,
+      "minimum_curvature": 1e-12,
+      "minres_tolerance": 1e-13,
+      "symmetry_relative_tolerance": 1e-10
+    },
+    "constraint_residual_infinity": 1.3877787807814457e-17,
+    "curvature_space": "constraint-nullspace",
+    "damping": 0.0,
+    "damping_reason": null,
+    "displacement": [
+      -0.03723098995695839,
+      -0.0127690100430416,
+      -0.002056432329029175
+    ],
+    "explicit_validation_used": false,
+    "feasible_dimension": 2,
+    "hessian_norm_estimate": 5.6889304750862255,
+    "lagrange_multipliers": [
+      0.16933524629363933
+    ],
+    "minimum_curvature": 2.9221280737849002,
+    "paper_measurement_cost": null,
+    "predicted_change_hartree": 0.0041651123864179795,
+    "relative_backward_error": 3.8954570128794436e-17,
+    "relative_residual": 5.152896562447175e-16,
+    "solver": "scipy-minres-affine-kkt",
+    "stationarity_residual_infinity": 5.551115123125783e-17,
+    "success": true,
+    "symmetry_relative_error": 0.0,
+    "version": "v5-matrix-free-affine-kkt-v1",
+    "work": {
+      "certification_products": 1,
+      "curvature_products": 5,
+      "gradient_vector_evaluations": 0,
+      "hessian_vector_products": 15,
+      "minres_iterations": 4,
+      "solver_products": 5,
+      "validation_products": 4
+    }
+  },
+  "passed": true,
+  "schema_version": "1.0.0"
+}
