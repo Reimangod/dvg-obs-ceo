@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "v5-s8-lih-width1-transfer-v1",
+  "case_id": "lih-3.0",
+  "role": "held-out-development-transfer-after-small-system-choice",
+  "code_tag_to_create_before_execution": "dvg-obs-v5-s8-lih-width1-transfer-code-v1",
+  "decision_manifest": "manifests/v5-s8-small-system-decision-v1.json",
+  "input_checkpoint": {
+    "path": "artifacts/s10/lih-3a-first-accuracy-primary-v1-2/checkpoint.json",
+    "sha256": "1ef38be983595fdb094f2a47287e6047193351e0eff4a7c589630ef023ad98eb"
+  },
+  "algorithm": {
+    "ablation": "C",
+    "search": "width-one-sequential",
+    "selector": "v5-risk-aware-pareto-selector-v1",
+    "curvature": "recycled-only",
+    "maximum_attempted_rounds": 2,
+    "maximum_exact_vqe_attempts": 2,
+    "source_relative_energy_budget_hartree": 0.0001,
+    "logical_block_guard": true,
+    "count_rejected_work": true,
+    "fresh_hessian_or_hvp": false
+  },
+  "runtime_freeze": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "noise_model": "none-exact-statevector"
+  },
+  "claim_boundary": [
+    "LiH is development transfer and not an unseen confirmatory case.",
+    "No CEO-star or ordinary-ADAPT rerun is performed.",
+    "Work counters are not renamed as paper Measurement Cost."
+  ],
+  "paper_measurement_cost": null
+}

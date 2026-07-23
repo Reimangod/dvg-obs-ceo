@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0.0",
+  "decision_id": "v5-s8-small-system-decision-v1",
+  "status": "frozen-before-lih-transfer",
+  "evidence": [
+    {
+      "role": "H2-H4 predictor calibration",
+      "path": "artifacts/v5/s8/small-system-calibration.json",
+      "sha256": "e1add555a56f5d6b71aaabc3e25755028b13670de4d1809f609b493807689e44"
+    },
+    {
+      "role": "H4 conditional-HVP diagnostic",
+      "path": "artifacts/v5/s8/h4-hvp-sentinels-damped.json",
+      "sha256": "58bcc0b01a76cbd83416c666720ed6ee78de6fe13a89517bf2960c9a51f2fc4b"
+    },
+    {
+      "role": "H4 deployed recycled width-one",
+      "path": "artifacts/v5/s8/h4-width1-recycled-v1-1/summary.json",
+      "sha256": "0198844c1c62376f46d42dd0627e469a8c541862cca7fb86404d581ad8237f07"
+    },
+    {
+      "role": "independent H4 audit",
+      "path": "artifacts/v5/s8/h4-width1-recycled-v1-1-audit.json",
+      "sha256": "4e1d22055edc74b6ac0b9fb48168444d40bb77efa6f928589cc14278dd13c1c1"
+    }
+  ],
+  "observations": {
+    "h2_candidate_count": 1,
+    "h2_complete_safe_count": 0,
+    "h4_recycled_width1_accepted_rounds": 2,
+    "h4_energy_increase_hartree": 0.000051901648685959145,
+    "h4_resource_change": {
+      "cnot_count": -26,
+      "cnot_depth": -13,
+      "total_depth": -48,
+      "parameter_count": -6,
+      "logical_block_count": -2
+    },
+    "h4_fresh_hessian_false_exclusions_recovered_diagnostic_only": 30
+  },
+  "lih_transfer_choice": {
+    "ablation": "C",
+    "search": "width-one-sequential",
+    "curvature": "recycled-only",
+    "maximum_attempted_rounds": 2,
+    "maximum_exact_vqe_attempts": 2,
+    "energy_budget_hartree": 0.0001,
+    "threshold_changes": false
+  },
+  "deferred_features": {
+    "multi_trajectory_D": "not justified on H4 because width-one accepted both allowed rounds",
+    "conditional_hvp_E": "diagnostically justified for false-exclusion recovery but not invoked unless the frozen recycled path exposes a registered quality or eligibility stall",
+    "conditional_polishing_F": "not invoked unless the primary optimizer fails a registered acceptance gate"
+  },
+  "anti_overfitting_boundary": [
+    "LiH outcomes were unopened when this decision was frozen.",
+    "No threshold was selected from one molecule.",
+    "LiH is development transfer, not confirmatory validation."
+  ],
+  "paper_measurement_cost": null
+}

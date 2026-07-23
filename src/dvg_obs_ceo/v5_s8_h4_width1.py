@@ -394,6 +394,11 @@ class H4WidthOneAdapter:
         )
 
 
+# The implementation is chemistry-agnostic; retain the historical class name
+# for artifact compatibility while exposing the scientifically accurate name.
+MolecularWidthOneAdapter = H4WidthOneAdapter
+
+
 def _load_checkpoint() -> dict[str, Any]:
     checkpoint = json.loads(CHECKPOINT.read_text(encoding="utf-8"))
     observed = checkpoint.pop("checkpoint_digest")
