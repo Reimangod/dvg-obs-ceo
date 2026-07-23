@@ -45,6 +45,9 @@ def run_audit(
     code_tag: str = CODE_TAG,
     expected_attempts: int = 4,
     expected_rounds: int = 2,
+    expected_active_width: int = 2,
+    expected_terminal_catalogs: int = 1,
+    terminal_catalog_expected_work: tuple[int, int] | None = (17, 1),
     scientific_status: str = "valid-accounting-complete-no-endpoint-improvement",
 ) -> dict[str, Any]:
     summary = json.loads(result_path.read_text(encoding="utf-8"))
@@ -108,19 +111,24 @@ def run_audit(
         "catalog_work_complete": catalog_sum == result["catalog_work"],
         "aggregate_work_complete": total_sum == result["aggregate_work"],
         "catalog_work_matches_diagnostics": all(catalog_diagnostic_checks),
-        "zero_candidate_terminal_catalog_retained": (
-            len(terminal_paths) == expected_rounds - 1
-            and all(
-                catalog_entries[path_id]["expanded_search_states"] == 17
-                and catalog_entries[path_id]["full_resource_recounts"] == 1
-                for path_id in terminal_paths
+        "terminal_catalog_work_retained": (
+            len(terminal_paths) == expected_terminal_catalogs
+            and (
+                terminal_catalog_expected_work is None
+                or all(
+                    catalog_entries[path_id]["expanded_search_states"]
+                    == terminal_catalog_expected_work[0]
+                    and catalog_entries[path_id]["full_resource_recounts"]
+                    == terminal_catalog_expected_work[1]
+                    for path_id in terminal_paths
+                )
             )
         ),
-        "energy_aware_beam_retained_two_paths": (
+        "energy_aware_beam_retained_expected_width": (
             result["config"]["beam_dominance"] == "resources-plus-energy"
             and len(result["trajectory"]) == expected_rounds
             and all(
-                len(round_record["active_path_ids_after"]) == 2
+                len(round_record["active_path_ids_after"]) == expected_active_width
                 for round_record in result["trajectory"]
             )
         ),

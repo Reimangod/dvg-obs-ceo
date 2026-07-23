@@ -1,0 +1,230 @@
+{
+  "artifact_kind": "v5-s8-lih-energy-aware-width2-v2-independent-audit",
+  "audit_digest": "b02b85142b9327ebf02deeb7526817cb61cad52875ffdec856d6b19407d1a2ec",
+  "checks": {
+    "aggregate_work_complete": true,
+    "all_exact_branches_accepted": true,
+    "branch_parents_isolated": true,
+    "catalog_work_complete": true,
+    "catalog_work_matches_diagnostics": true,
+    "code_tag_is_ancestor": true,
+    "energy_aware_beam_retained_expected_width": true,
+    "exact_attempt_work_complete": true,
+    "expected_unique_exact_attempts": true,
+    "independent_branch_energies": true,
+    "independent_branch_gradients": true,
+    "independent_branch_resources": true,
+    "known_endpoint_not_exceeded": true,
+    "nested_result_digest": true,
+    "paper_measurement_cost_undefined": true,
+    "physical_structural_recounts": true,
+    "source_relative_energy_budget": true,
+    "source_runtime_unchanged": true,
+    "summary_digest": true,
+    "terminal_catalog_work_retained": true
+  },
+  "claim_boundary": "Known LiH calibration only. Work counters are implementation-defined and are not the paper Measurement Cost.",
+  "independent_branch_recomputations": [
+    {
+      "candidate_id": "candidate-v5:8a24f0b21420ce3b9f4ec52a6dba8ede0ef9fb30961aea386742f660b9aaf0ef",
+      "energy_difference_hartree": 0.0,
+      "gradient_infinity": 6.3719367560111095e-09,
+      "resources": {
+        "cnot_count": 58,
+        "cnot_depth": 30,
+        "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 8,
+        "parameter_count": 8,
+        "structure_digest": "802e9bc3b364b62ee12c32adaec63c33a3614cebb3887a8763e8cee54555cc52",
+        "total_depth": 92
+      }
+    },
+    {
+      "candidate_id": "candidate-v5:e4232f618a0dedf6437f35acd4e074a07453a9f327a77b99e2ca6f2a6e5e3130",
+      "energy_difference_hartree": 0.0,
+      "gradient_infinity": 6.586161275211333e-09,
+      "resources": {
+        "cnot_count": 98,
+        "cnot_depth": 30,
+        "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 14,
+        "parameter_count": 14,
+        "structure_digest": "bbc35a4f22ddccfcf1ba9cb7a8f9e711e5bd645fdba5010253b6a16d8e28aa03",
+        "total_depth": 158
+      }
+    },
+    {
+      "candidate_id": "candidate-v5:978ff14f3af287993eb88bbce57adc6a90533c22f688530a9d5f22d4285859c2",
+      "energy_difference_hartree": 0.0,
+      "gradient_infinity": 9.964418179464474e-12,
+      "resources": {
+        "cnot_count": 60,
+        "cnot_depth": 30,
+        "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 9,
+        "parameter_count": 9,
+        "structure_digest": "1d7ed661668ecb1a9f13a181b5be7d69561ceb0c8e9740250b69ceaee58294e0",
+        "total_depth": 99
+      }
+    },
+    {
+      "candidate_id": "candidate-v5:975b989533877c13a8f5bdddf8cbc7a40091870f9b3455035026ef460a4efbf4",
+      "energy_difference_hartree": 0.0,
+      "gradient_infinity": 5.650003642027057e-11,
+      "resources": {
+        "cnot_count": 89,
+        "cnot_depth": 30,
+        "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 13,
+        "parameter_count": 13,
+        "structure_digest": "0dec3d7fe1d296f236f62583d8a95d4463e7097d7a0db2482ed378dd32bf4b36",
+        "total_depth": 145
+      }
+    },
+    {
+      "candidate_id": "candidate-v5:d745d59d6a51f1a12f1330aaac64a7292f823738408306ef2892ecab61fa2fdd",
+      "energy_difference_hartree": 0.0,
+      "gradient_infinity": 1.7976353738902162e-09,
+      "resources": {
+        "cnot_count": 58,
+        "cnot_depth": 30,
+        "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 8,
+        "parameter_count": 8,
+        "structure_digest": "802e9bc3b364b62ee12c32adaec63c33a3614cebb3887a8763e8cee54555cc52",
+        "total_depth": 92
+      }
+    },
+    {
+      "candidate_id": "candidate-v5:e081f5619a5387bfe9b7fbf44c214697732dcabb8d240a02371672912390c8e6",
+      "energy_difference_hartree": 0.0,
+      "gradient_infinity": 1.0233774114590255e-09,
+      "resources": {
+        "cnot_count": 58,
+        "cnot_depth": 30,
+        "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 8,
+        "parameter_count": 8,
+        "structure_digest": "802e9bc3b364b62ee12c32adaec63c33a3614cebb3887a8763e8cee54555cc52",
+        "total_depth": 92
+      }
+    },
+    {
+      "candidate_id": "candidate-v5:b9da5d55392a2cc4f9eccbcc5544f930fa01f2c8ae89abac393c601beec61e60",
+      "energy_difference_hartree": 0.0,
+      "gradient_infinity": 6.59875265540677e-10,
+      "resources": {
+        "cnot_count": 58,
+        "cnot_depth": 30,
+        "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 8,
+        "parameter_count": 8,
+        "structure_digest": "802e9bc3b364b62ee12c32adaec63c33a3614cebb3887a8763e8cee54555cc52",
+        "total_depth": 92
+      }
+    },
+    {
+      "candidate_id": "candidate-v5:c9215ba8f917e6772377afee0c29e363689c62201f66ca5b8f214021fbda1f36",
+      "energy_difference_hartree": 0.0,
+      "gradient_infinity": 3.558656930451475e-09,
+      "resources": {
+        "cnot_count": 96,
+        "cnot_depth": 30,
+        "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 13,
+        "parameter_count": 13,
+        "structure_digest": "8de88ad6c39bf0778e6a2b741ef1bce42e963960532fb413765863249c7a609c",
+        "total_depth": 151
+      }
+    },
+    {
+      "candidate_id": "candidate-v5:8f79165e8141959cdc481507b968f919ad48cc185fdb903b8168a53dd6b846e3",
+      "energy_difference_hartree": 0.0,
+      "gradient_infinity": 3.3873980417695938e-09,
+      "resources": {
+        "cnot_count": 87,
+        "cnot_depth": 30,
+        "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 12,
+        "parameter_count": 12,
+        "structure_digest": "e66443a4b071aa3879b3138fec588854ffde3244de8b7384413c0bf6ca863beb",
+        "total_depth": 138
+      }
+    },
+    {
+      "candidate_id": "candidate-v5:2b7743e484e48bbdeaae3f7a08acb37d77635cc98a45f39dc6a99ea0d9db1d95",
+      "energy_difference_hartree": 0.0,
+      "gradient_infinity": 2.687093282258135e-09,
+      "resources": {
+        "cnot_count": 60,
+        "cnot_depth": 30,
+        "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 9,
+        "parameter_count": 9,
+        "structure_digest": "1d7ed661668ecb1a9f13a181b5be7d69561ceb0c8e9740250b69ceaee58294e0",
+        "total_depth": 99
+      }
+    },
+    {
+      "candidate_id": "candidate-v5:1673702c59bced00b2d56159b03d3349a1a4a27d9e488718c7d90bbee1c43c69",
+      "energy_difference_hartree": 0.0,
+      "gradient_infinity": 8.279671813327008e-09,
+      "resources": {
+        "cnot_count": 60,
+        "cnot_depth": 30,
+        "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 9,
+        "parameter_count": 9,
+        "structure_digest": "1d7ed661668ecb1a9f13a181b5be7d69561ceb0c8e9740250b69ceaee58294e0",
+        "total_depth": 99
+      }
+    },
+    {
+      "candidate_id": "candidate-v5:653fae0cb61ae5472273d0ae2f7cb4e862745191fe252153a11b817f0eb5cd2d",
+      "energy_difference_hartree": 0.0,
+      "gradient_infinity": 2.547213116982484e-09,
+      "resources": {
+        "cnot_count": 89,
+        "cnot_depth": 30,
+        "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 13,
+        "parameter_count": 13,
+        "structure_digest": "f5199dea2a2438f41a18011d2e899b342cec807ca08e873b96477ec5d4bcc4d7",
+        "total_depth": 145
+      }
+    }
+  ],
+  "interpretation": "Width four exact-evaluated source ranks one through four and eight second-round candidates. It retained four paths but did not improve the 58-CNOT, 8-parameter endpoint. The preregistered stop rule blocks width eight because extra breadth did not justify its work.",
+  "paper_measurement_cost": null,
+  "passed": true,
+  "schema_version": "1.0.0",
+  "scientific_result": {
+    "aggregate_work": {
+      "accepted_rounds": 12,
+      "analytic_hvp_calls": 0,
+      "attempted_rounds": 20,
+      "energy_evaluations": 451,
+      "exact_vqe_attempts": 12,
+      "expanded_search_states": 895,
+      "finite_difference_hvp_calls": 55,
+      "full_resource_recounts": 251,
+      "gradient_component_equivalents": 5948,
+      "gradient_vector_evaluations": 485,
+      "optimizer_iterations": 73,
+      "optimizer_starts": 19,
+      "quadratic_solve_iterations": 0,
+      "statevector_evaluations": 74
+    },
+    "status": "valid-width4-no-endpoint-improvement-structural-floor-supported",
+    "winner_energy_increase_hartree": 8.690137959099786e-05,
+    "winner_resources": {
+      "cnot_count": 58,
+      "cnot_depth": 30,
+      "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+      "logical_block_count": 8,
+      "parameter_count": 8,
+      "structure_digest": "802e9bc3b364b62ee12c32adaec63c33a3614cebb3887a8763e8cee54555cc52",
+      "total_depth": 92
+    }
+  }
+}

@@ -20,6 +20,7 @@ def audit_round3(*, recompute_quantum: bool = True):
         code_tag=CODE_TAG,
         expected_attempts=6,
         expected_rounds=3,
+        expected_terminal_catalogs=2,
         scientific_status=(
             "valid-round3-no-endpoint-improvement-structural-floor-indicated"
         ),
