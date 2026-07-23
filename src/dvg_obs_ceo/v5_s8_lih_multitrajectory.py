@@ -348,6 +348,7 @@ def run(
         "schema_version": "1.0.0",
         "artifact_kind": artifact_kind,
         "runner_version": runner_version,
+        "execution_freeze": execution_freeze,
         "source_energy_hartree": checkpoint["energy_hartree"],
         "case_id": case_id,
         "source_resources": asdict(source_resources),
