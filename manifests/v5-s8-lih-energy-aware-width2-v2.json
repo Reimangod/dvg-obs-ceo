@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "v5-s8-lih-energy-aware-width2-v2",
+  "status": "frozen-before-execution",
+  "code_tag_to_create_before_execution": "dvg-obs-v5-s8-lih-energy-aware-width2-code-v2",
+  "entry_gate": {
+    "incomplete_result_path": "artifacts/v5/s8/lih-energy-aware-width2-v1/summary.json",
+    "incomplete_result_sha256": "2fce9eadf3b61261cb9e39c2279f19bbc4a18cec5b36f40a8a41975b8630a4a4",
+    "accounting_finding_path": "artifacts/v5/s8/lih-energy-aware-width2-v1/accounting-finding.json",
+    "accounting_finding_sha256": "5ab8e7de3bd68985107015a4dde074bae1bb55775e1c66102f040dad3b34b658"
+  },
+  "protocol": {
+    "scientific_search_configuration_changed": false,
+    "width": 2,
+    "top_k_per_parent": 2,
+    "maximum_rounds": 2,
+    "maximum_exact_attempts": 4,
+    "source_relative_energy_budget_hartree": 0.0001,
+    "beam_dominance": "resources-plus-energy",
+    "winner_rule_changed": false,
+    "acceptance_gates_changed": false
+  },
+  "accounting_correction": {
+    "every_parent_catalog_charged_once": true,
+    "zero_candidate_terminal_catalog_charged": true,
+    "every_exact_attempt_charged_once": true,
+    "work_categories_reported_separately": [
+      "exact_attempt_work",
+      "catalog_work",
+      "aggregate_work"
+    ]
+  },
+  "claim_boundary": "This is a protocol-identical rerun whose only intended change is complete work accounting. The earlier artifact remains preserved.",
+  "paper_measurement_cost": null
+}

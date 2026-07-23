@@ -4,7 +4,7 @@ from dataclasses import replace
 from pathlib import Path
 
 from dvg_obs_ceo.v5_ledger import V5WorkCounters
-from dvg_obs_ceo.v5_s8_lih_multitrajectory import _work_delta
+from dvg_obs_ceo.v5_s8_lih_multitrajectory import _sum_work, _work_delta
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -22,6 +22,18 @@ def test_branch_work_delta_counts_one_exact_attempt():
     assert delta["energy_evaluations"] == 5
     assert delta["full_resource_recounts"] == 2
     assert delta["exact_vqe_attempts"] == 1
+
+
+def test_work_sum_retains_zero_attempt_terminal_catalog():
+    exact = {"energy_evaluations": 7, "exact_vqe_attempts": 2}
+    productive_catalog = {"full_resource_recounts": 5, "expanded_search_states": 20}
+    terminal_catalog = {"full_resource_recounts": 1, "expanded_search_states": 4}
+    assert _sum_work(exact, productive_catalog, terminal_catalog) == {
+        "energy_evaluations": 7,
+        "exact_vqe_attempts": 2,
+        "expanded_search_states": 24,
+        "full_resource_recounts": 6,
+    }
 
 
 def test_width_two_manifest_binds_inputs_and_budgets():

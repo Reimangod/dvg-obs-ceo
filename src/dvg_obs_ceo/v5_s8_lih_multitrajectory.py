@@ -69,6 +69,14 @@ def _work_delta(after: V5WorkCounters, before: V5WorkCounters) -> dict[str, int]
     return result
 
 
+def _sum_work(*items: dict[str, int]) -> dict[str, int]:
+    names = set().union(*(item.keys() for item in items))
+    return {
+        name: sum(int(item.get(name, 0)) for item in items)
+        for name in sorted(names)
+    }
+
+
 def run(
     output: Path = OUTPUT,
     *,
@@ -142,7 +150,6 @@ def run(
     adapters: dict[str, MolecularWidthOneAdapter] = {}
     candidates_by_path: dict[str, dict[str, Any]] = {}
     catalog_work: dict[str, V5WorkCounters] = {}
-    catalog_charged: set[str] = set()
     branch_records: list[dict[str, Any]] = []
 
     def adapter_for(path_id: str) -> MolecularWidthOneAdapter:
@@ -203,11 +210,6 @@ def run(
             trial, candidate, parent_round(parent) + 1, exact_attempt
         )
         work = _work_delta(execution.work, catalog_work[parent.path_id])
-        if parent.path_id not in catalog_charged:
-            for key, value in catalog_work[parent.path_id].to_dict().items():
-                if key != "exact_vqe_attempts":
-                    work[key] += value
-            catalog_charged.add(parent.path_id)
         parent_unchanged = (
             runtimes[parent.path_id].snapshot().snapshot_digest == parent_digest_before
         )
@@ -266,6 +268,21 @@ def run(
             beam_dominance=beam_dominance,
         ),
     )
+    exact_attempt_work = dict(result["aggregate_work"])
+    catalog_work_by_path = {
+        path_id: work.to_dict() for path_id, work in sorted(catalog_work.items())
+    }
+    all_catalog_work = _sum_work(*catalog_work_by_path.values())
+    result["exact_attempt_work"] = exact_attempt_work
+    result["catalog_work_by_path"] = catalog_work_by_path
+    result["catalog_work"] = all_catalog_work
+    result["aggregate_work"] = _sum_work(exact_attempt_work, all_catalog_work)
+    result["work_accounting_rule"] = (
+        "every parent catalog once, including zero-candidate terminal catalogs; "
+        "every exact attempt once"
+    )
+    result.pop("result_digest")
+    result["result_digest"] = _digest(result)
     payload = {
         "schema_version": "1.0.0",
         "artifact_kind": artifact_kind,
