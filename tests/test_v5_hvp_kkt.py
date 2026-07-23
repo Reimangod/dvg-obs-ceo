@@ -146,3 +146,18 @@ def test_minres_nonconvergence_has_stable_failure_category() -> None:
             ),
         )
     assert captured.value.category == "minres-nonconvergence"
+
+
+def test_indefinite_full_hessian_is_allowed_when_reduced_hessian_is_spd() -> None:
+    hessian = np.diag([-2.0, 3.0])
+    result = solve_affine_kkt_hvp(
+        [0.2, -0.1],
+        [0.4, 0.3],
+        [[1.0, 0.0]],
+        [0.0],
+        lambda value: hessian @ value,
+        config=config(),
+    )
+    assert result["feasible_dimension"] == 1
+    assert result["minimum_curvature"] == pytest.approx(3.0)
+    np.testing.assert_allclose(result["candidate_theta"], [0.0, -0.2], atol=1e-11)

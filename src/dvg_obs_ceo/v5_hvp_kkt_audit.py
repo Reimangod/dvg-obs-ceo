@@ -61,7 +61,7 @@ def run_audit() -> dict[str, Any]:
     failures: dict[str, str] = {}
     probes = {
         "indefinite": np.diag([1.0, -1.0, 2.0]),
-        "singular": np.diag([1.0, 0.0, 2.0]),
+        "singular": np.diag([1.0, 0.0, 0.0]),
         "asymmetric": np.asarray([[2.0, 1.0, 0.0], [0.0, 2.0, 0.0], [0.0, 0.0, 2.0]]),
     }
     for name, probe in probes.items():
@@ -73,6 +73,11 @@ def run_audit() -> dict[str, Any]:
         solve_affine_kkt_hvp(theta, gradient, matrix, rhs, lambda vector: hessian @ vector, config=HVPKKTConfig(explicit_validation_dimension=12, maximum_hessian_vector_products=1, **{key: value for key, value in fixed.items() if key != "maximum_hessian_vector_products"}))
     except HVPRefinementError as error:
         failures["budget"] = error.category
+    constrained_indefinite = solve_affine_kkt_hvp(
+        [0.2, -0.1], [0.4, 0.3], [[1.0, 0.0]], [0.0],
+        lambda vector: np.diag([-2.0, 3.0]) @ vector,
+        config=HVPKKTConfig(explicit_validation_dimension=12, **fixed),
+    )
 
     checks = {
         "explicit_matches_existing_obs": np.allclose(explicit["candidate_theta"], legacy.constrained_theta, atol=1e-11, rtol=1e-11),
@@ -88,6 +93,10 @@ def run_audit() -> dict[str, Any]:
         "finite_difference_gradient_work_is_counted": finite_difference["work"]["gradient_vector_evaluations"] == 6,
         "no_silent_damping": explicit["damping"] == 0.0 and explicit["damping_reason"] is None,
         "measurement_cost_not_relabelled": explicit["paper_measurement_cost"] is None,
+        "curvature_is_checked_on_feasible_subspace": (
+            constrained_indefinite["feasible_dimension"] == 1
+            and abs(constrained_indefinite["minimum_curvature"] - 3.0) <= 1e-12
+        ),
     }
     result = {
         "schema_version": "1.0.0",
@@ -98,6 +107,7 @@ def run_audit() -> dict[str, Any]:
         "explicit_result": explicit,
         "matrix_free_result": matrix_free,
         "finite_difference_result": finite_difference,
+        "constrained_indefinite_result": constrained_indefinite,
         "claim_boundary": "Synthetic quadratic/KKT validation only; no molecular VQE performance claim.",
     }
     if not result["passed"]:

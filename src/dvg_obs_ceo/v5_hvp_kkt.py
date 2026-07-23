@@ -161,6 +161,12 @@ def solve_affine_kkt_hvp(
     rhs_value = _vector("constraint RHS", constraint_rhs, matrix.shape[0])
     if matrix.shape[0] and np.linalg.matrix_rank(matrix) != matrix.shape[0]:
         raise HVPRefinementError("rank-deficient-constraints", "constraint rows are not independent")
+    if matrix.shape[0]:
+        _, _, right = np.linalg.svd(matrix, full_matrices=True)
+        feasible_basis = np.asarray(right[matrix.shape[0] :].T, dtype=np.float64)
+    else:
+        feasible_basis = np.eye(dimension, dtype=np.float64)
+    feasible_dimension = feasible_basis.shape[1]
     ledger = HVPWorkLedger()
     initial_gradient_evaluations = int(getattr(hessian_product, "gradient_evaluations", 0))
 
@@ -193,7 +199,8 @@ def solve_affine_kkt_hvp(
             if symmetry_error > config.symmetry_relative_tolerance:
                 raise HVPRefinementError("asymmetric-hessian", f"relative asymmetry {symmetry_error:.3e}", work())
             explicit_hessian = (observed + observed.T) * 0.5
-            eigenvalues = np.linalg.eigvalsh(explicit_hessian)
+            reduced_hessian = feasible_basis.T @ explicit_hessian @ feasible_basis
+            eigenvalues = np.linalg.eigvalsh(reduced_hessian)
             minimum_curvature = float(eigenvalues[0]) if eigenvalues.size else math.inf
             hessian_norm = float(np.linalg.norm(explicit_hessian, ord=2)) if dimension else 0.0
         else:
@@ -208,18 +215,35 @@ def solve_affine_kkt_hvp(
                 symmetry_error = max(symmetry_error, abs(float(left @ h_right - right @ h_left)) / denominator)
             if symmetry_error > config.symmetry_relative_tolerance:
                 raise HVPRefinementError("asymmetric-hessian", f"probe asymmetry {symmetry_error:.3e}", work())
-            if dimension == 1:
-                only = float(product(np.ones(1), "curvature_products")[0])
+            if feasible_dimension == 0:
+                minimum_curvature = math.inf
+            elif feasible_dimension == 1:
+                direction = feasible_basis[:, 0]
+                only = float(direction @ product(direction, "curvature_products"))
                 minimum_curvature = only
-                hessian_norm = abs(only)
             else:
-                hop = LinearOperator((dimension, dimension), matvec=lambda vector: product(vector, "curvature_products"), dtype=np.float64)
+                reduced_operator = LinearOperator(
+                    (feasible_dimension, feasible_dimension),
+                    matvec=lambda vector: feasible_basis.T
+                    @ product(feasible_basis @ vector, "curvature_products"),
+                    dtype=np.float64,
+                )
                 try:
-                    minimum_curvature = float(eigsh(hop, k=1, which="SA", return_eigenvectors=False, tol=config.minres_tolerance, maxiter=config.maximum_iterations)[0])
-                    largest_magnitude = float(abs(eigsh(hop, k=1, which="LM", return_eigenvectors=False, tol=config.minres_tolerance, maxiter=config.maximum_iterations)[0]))
+                    minimum_curvature = float(eigsh(reduced_operator, k=1, which="SA", return_eigenvectors=False, tol=config.minres_tolerance, maxiter=config.maximum_iterations)[0])
                 except ArpackNoConvergence as error:
                     raise HVPRefinementError("curvature-nonconvergence", repr(error), work()) from error
-                hessian_norm = largest_magnitude
+            if dimension == 1:
+                hessian_norm = abs(float(product(np.ones(1), "curvature_products")[0]))
+            else:
+                full_operator = LinearOperator(
+                    (dimension, dimension),
+                    matvec=lambda vector: product(vector, "curvature_products"),
+                    dtype=np.float64,
+                )
+                try:
+                    hessian_norm = float(abs(eigsh(full_operator, k=1, which="LM", return_eigenvectors=False, tol=config.minres_tolerance, maxiter=config.maximum_iterations)[0]))
+                except ArpackNoConvergence as error:
+                    raise HVPRefinementError("norm-estimation-nonconvergence", repr(error), work()) from error
         if minimum_curvature < config.minimum_curvature:
             raise HVPRefinementError("nonpositive-curvature", f"minimum curvature {minimum_curvature:.3e}", work())
 
@@ -299,6 +323,8 @@ def solve_affine_kkt_hvp(
         "relative_residual": relative_residual,
         "relative_backward_error": backward_error,
         "minimum_curvature": minimum_curvature,
+        "curvature_space": "constraint-nullspace",
+        "feasible_dimension": feasible_dimension,
         "symmetry_relative_error": symmetry_error,
         "hessian_norm_estimate": hessian_norm,
         "damping": config.damping,
