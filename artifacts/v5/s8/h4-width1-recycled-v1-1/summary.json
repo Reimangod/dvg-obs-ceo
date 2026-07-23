@@ -1,0 +1,3808 @@
+{
+  "artifact_kind": "v5-s8-h4-width1-recycled",
+  "case_id": "h4-1.5-iteration-12-or-convergence",
+  "catalog_diagnostics_by_runtime": {
+    "247fae36cf4be977119921cd940ff71e5dc2894ac0ba9b710733e18e9825f76f": {
+      "candidate_count": 36,
+      "numerical_failures": [],
+      "selection": {
+        "assessments": [
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:00677a3750e6c66874365782936bcca637d1af7eac6c4f23ab7e42f562c3e589",
+            "eligible": true,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [],
+            "risk_adjusted_loss_hartree": 9.465246900438457e-07,
+            "structure_digest": "9bbda66731563586a18ab557e4bcb449e2e3e55da5f1e04563943efd33431ce4"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:05658f1bcab5c7f3c56d5bddf990ff5776a6c42231a36a6b7d476344689d0f4a",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.0002725777776652672,
+            "structure_digest": "1c472e0ecbdb837d83675cf7761655392e03abd5d162c2b40021bb82da38c2bf"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:06a920e5cd8cb9a85e4a8ef544d583026070e4db855d1c321f14586b7295bc7d",
+            "eligible": true,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [],
+            "risk_adjusted_loss_hartree": 9.746787617319882e-05,
+            "structure_digest": "3c63a97c6bf3590a67234020f1fc938d0b0611f85c62af13f8cd7cde25316a80"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:0d1abb6eb846a2a4bfdc93dfdec589cfa2b57524e5f245f28734bf45854debf5",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.013851051866113098,
+            "structure_digest": "969c3f6861b9d15688e22c7e0d1cb01a883169300d4d3c28575867a25477b1e7"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:14a5425ee7350d1ab0557022e8f2770f54491aae75d1170cf9e7fa77d2179184",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.0004209498555271087,
+            "structure_digest": "6bfc4776433399c439e10ff25e76d0634469fc08a2542a0403e8687be814a2fb"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:20eb343fd1d5d6146e547ad5929847665271877d47492197a8ff3a73fcc90130",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.00028931959850322177,
+            "structure_digest": "d736225be083f68b16f947d7e718ea50af3f78316aba5a203e23afdeac232a39"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:229eb5276e1f06f03f60642fc1c0adadd1d71cd28b191c3e94ebfe57bbd29563",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.011164270562456145,
+            "structure_digest": "ffd5518d914a9de6d43b9092970baa341ce9980e179f71caf1fc01da01c59703"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:2428c19867726b83a90ec0be3b63e76b2953560869a1a4248a3465f9f0c64864",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.019742442885396415,
+            "structure_digest": "7368a99c05a8f207534e4fd739a1339b9c7583c861d7675bf2cfc40cdc36bbf9"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:2926693913cc2177d807226b41ec69e084d27fe15d6d227997550db41baf4141",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.00978791067696987,
+            "structure_digest": "1e4751328fc4c7dba93186a68918fbd75733ba1b4e0f6626f2cea987da8a2110"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:2f0e9b0df80c61fe300af6dd3dd4289f8445eea9cace87ebbef740ddc83c4a0f",
+            "eligible": true,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [],
+            "risk_adjusted_loss_hartree": 5.262274155480202e-05,
+            "structure_digest": "4362db5fffa61ace628b55419a5437723cf5e7cf3626d13cfa52b1e7e7dfc715"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:35b51f2aa4e129c868185520fe1f4c20d06e1b9a67a75c8519fd9e5503e5f323",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.012723520272814244,
+            "structure_digest": "469e31335adec9b2f66ffdad3cc2a9760e7f24da35247557af3990a8c00e44e9"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:38fc52ba6a23c191f6deebec3d06332be933b5a933269b50d31ce304f620fbf3",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.00015812185420029966,
+            "structure_digest": "7f295b9c65fd02e5eb9995f6cacba68864f368ef5a6883d200b4d8274b7b61d0"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:3d49fd9da8ddcae583cc4fe6707814b716cba4a16741ef9117039b2c791dca13",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.006222460595374753,
+            "structure_digest": "4a24f52557da4b20efd68c0089b564f7ff4d5bb527f676b98ce99dddf76e9876"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:3e7833bb08e57151fbcb4b54c05de097ac3ff3aaf2e8a27e67f43467fcf6251f",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.00014242334805619194,
+            "structure_digest": "4fcae8fb89e1f77c23b22282fb3ee9d6f46fdee30347a2aad1a481cdcc5a6346"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:48675d0215a65f03d5e89fd53e650ec15a510762304c2fee251d6f4c3826b532",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.006426701917145351,
+            "structure_digest": "259685383339312fab5d6692492961e82a40d3542bcb400fc2efcdc3fb839a81"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:4bfdcd531780b5b38e1f0eb70564946c009ddf918d0c0f7e0cdf257675ec01c6",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.0037196490139228045,
+            "structure_digest": "070cdaf01114f5e31f4fafbd42b773f5eb8907e8747db01adf2da20dcf6e5545"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:4c79447b4860932edb9733279de161a8d956b7368fe045ba8f4875377a0f55ed",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.013129757814578593,
+            "structure_digest": "88f21db6e62ca05171bf86cfe7b72dc5224633d5035c44677211e9db30c8207b"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:762b40e9dbb83d2e979eac6ecdcc3f6af240e5390511a155d3fb1a7abb3b6a13",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.0393302561170478,
+            "structure_digest": "6cdf5a3da2bdfacdfa747814c61204def975df6571bdb7461ce56a5cef5554b5"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:80030373fb2af0dc8234e42a77846bfdc49352bc0bb8128093de24b545fac10a",
+            "eligible": true,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [],
+            "risk_adjusted_loss_hartree": 5.95961988614654e-05,
+            "structure_digest": "0a63cf60ec5cfb74279281cc775a723ca072e48382887ef3e8407e22449a7de0"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:80632a0bb1734e79bfed1634d42eddc418c8d5cc98db778daf6f3698ad8ad231",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.001103611617732947,
+            "structure_digest": "ac9fcbce6f68e9c99fc2a56b8ff0a7f50eed7814e80b27ff5a9600e47c516ed9"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:8fd0c33575a9082469d58676be7bca718b076b5f63534972de2f53c877601635",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.014423238198028506,
+            "structure_digest": "0120ab23b0e1a0d7466a4203704f157f27114142f3699898eb33565426e95115"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:901cf57f19be87118dc662a7c5939d575b5f8fc80fa835ed60c0ba79e7bf6f33",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.010559215299590252,
+            "structure_digest": "60fd0fe748d5679a3984e2969bdd622d0f3f21353ccf5d7f898f521ee36c3c10"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:a0ba58a43be97a30a86b44230aa67a7cec50d942e6800b352fcad41f69267d97",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.0003056433140904599,
+            "structure_digest": "4ddf993ec30bc16ee1f9b3d452c3f596202cc19d3feedb4f98eab0c353ba0a8e"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:a7d2a7668dfc0de8431a04f2648e7d1c7af5ff86b76ff3930af383d710c8bc07",
+            "eligible": true,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [],
+            "risk_adjusted_loss_hartree": 5.280087147033342e-05,
+            "structure_digest": "af73b525f140857e81af24acac21e196867ad48b61cb515226a6c2a7d04a1587"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:b53539d55076bc260305f91024d89459b44986e0499cb3784ad069843908da3f",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.020874916865245965,
+            "structure_digest": "a7b275a84646aabfd2357e399cf229967eac96423b4e0c51b0e5f7355e048858"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:bef5709cb706f9336474dfca463553762b18afbbc8a131fa1a908d2c1c71bc0e",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.03252793054946599,
+            "structure_digest": "80e76e0143966e0c20d1da26c74d87f3e7b5556e869ebff30e8b16bd1b2cbcf3"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:c044317f80006755fb72d57e27a6176a2d2e679f6cd1125a2a67228cb1f4dd85",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.00020776493386915365,
+            "structure_digest": "ca2072f5cd4887214c1c37669af4e31c0aeed9ec87dd2d03fc1aca8ef237d7c6"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:c15e9a1eabb6d2d8f6f8234c80232f46588cddb6695dca1e19ca7c0bd487e7fa",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.006989443302114225,
+            "structure_digest": "c2043b0f5c4b6dd0a084b1ece39d184b6120f30d4660c778fe300b997f881eac"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:c268320d7ef58bd3eb3df8b8b081ffdd8059e06b43f1358b8c6864f1b38c58db",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.01964549755002098,
+            "structure_digest": "dcd6a212b5d9cb191561c263e7c9c17bc23488d8643e1ed8195f2f6be05eb537"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:d0c91f4599b78f4d0fadc472e9d63c1c47889bd2afce7ed01b5df893c11129be",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.03429773293113835,
+            "structure_digest": "8d2d31255fe8cda656a34ad0074b289375941e6702e08d321bf5848288a7397f"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:d0cb9513fd74f53eb590da7f95ce5e829b4c152f5fe7e00a8827d1bbf993f2a1",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.010270333693353414,
+            "structure_digest": "70b839dba2b6434f4cf46c82686bcbd96b51591cb1de07fb73fa88c52f0e29e0"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:d3b92a6df4538705cd594bb89bc85a838d462077f08746d9f92730b5fb0ca12d",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.002234454535879622,
+            "structure_digest": "95267a5bbb9f5e1ecdae9440aad78471e2be17bb2f37b8e689619585bc9e09ca"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:d5fcde3d1dd22b101f8bc9116251b2bad2f4b0455262c9135ff8264528d078cd",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.00010984868643512866,
+            "structure_digest": "3e23b9f072a286a06f12fe3ba176e3099e3afd4c11e33818b2fb2ae1ae6a87fb"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:e1793a4f4a63cae05837ac2164c2d82023c0600c4325b6cad5a1297edad69e06",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.03281650543795993,
+            "structure_digest": "2a5f0bd0970295ef7f38408cf7d61a776511582d84c6506b2aaf15579538232f"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:ea97cf5706122657d4fa2ffc4e2bfb931b002f18a18a415740daa5ee5a358a49",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.0059657991915285065,
+            "structure_digest": "8e8e18facf55360afffc79915eb787bcd85ce6b3f52c832ace172059b4a63cbd"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:f0c2421b2d04c4679dbb9f6f7941afba36265e625be57f1b0f6c8ea9e0c891d8",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.03236049749678768,
+            "structure_digest": "4572de4473710c8f6e5d3b0e9f9e50fe8e8af2c2c5844a0e234d9f29a69fdbae"
+          }
+        ],
+        "deduplicated_structure_count": 36,
+        "eligible_count": 5,
+        "endpoint_semantic_ids": {
+          "cnot_count": [
+            "constraint-semantic-v1:00677a3750e6c66874365782936bcca637d1af7eac6c4f23ab7e42f562c3e589"
+          ],
+          "cnot_depth": [
+            "constraint-semantic-v1:00677a3750e6c66874365782936bcca637d1af7eac6c4f23ab7e42f562c3e589"
+          ],
+          "logical_block_count": [
+            "constraint-semantic-v1:00677a3750e6c66874365782936bcca637d1af7eac6c4f23ab7e42f562c3e589"
+          ],
+          "parameter_count": [
+            "constraint-semantic-v1:00677a3750e6c66874365782936bcca637d1af7eac6c4f23ab7e42f562c3e589"
+          ],
+          "total_depth": [
+            "constraint-semantic-v1:00677a3750e6c66874365782936bcca637d1af7eac6c4f23ab7e42f562c3e589"
+          ]
+        },
+        "input_count": 36,
+        "maximum_unique_attempts": 4,
+        "pareto_axes": [
+          "cnot_count",
+          "cnot_depth",
+          "total_depth",
+          "parameter_count",
+          "logical_block_count",
+          "risk_adjusted_loss_hartree"
+        ],
+        "pareto_semantic_ids": [
+          "constraint-semantic-v1:00677a3750e6c66874365782936bcca637d1af7eac6c4f23ab7e42f562c3e589"
+        ],
+        "refinement_semantic_ids": [],
+        "require_no_component_regression": true,
+        "scientific_boundary": "Risk diagnostics rank or request refinement; exact independent acceptance alone authorizes a committed state.",
+        "screening_budget_hartree": 0.0001,
+        "selection_digest": "6c4a0c7c1af59569d37b1d93db94cb9fca6d93623e2310452dcf907b3fb50c1f",
+        "source_structure_digest": "c325404d0ad710782263c735162159769d01eab50e8f4a39707cb4fea891060f",
+        "structure_aliases": {
+          "0120ab23b0e1a0d7466a4203704f157f27114142f3699898eb33565426e95115": [
+            "constraint-semantic-v1:8fd0c33575a9082469d58676be7bca718b076b5f63534972de2f53c877601635"
+          ],
+          "070cdaf01114f5e31f4fafbd42b773f5eb8907e8747db01adf2da20dcf6e5545": [
+            "constraint-semantic-v1:4bfdcd531780b5b38e1f0eb70564946c009ddf918d0c0f7e0cdf257675ec01c6"
+          ],
+          "0a63cf60ec5cfb74279281cc775a723ca072e48382887ef3e8407e22449a7de0": [
+            "constraint-semantic-v1:80030373fb2af0dc8234e42a77846bfdc49352bc0bb8128093de24b545fac10a"
+          ],
+          "1c472e0ecbdb837d83675cf7761655392e03abd5d162c2b40021bb82da38c2bf": [
+            "constraint-semantic-v1:05658f1bcab5c7f3c56d5bddf990ff5776a6c42231a36a6b7d476344689d0f4a"
+          ],
+          "1e4751328fc4c7dba93186a68918fbd75733ba1b4e0f6626f2cea987da8a2110": [
+            "constraint-semantic-v1:2926693913cc2177d807226b41ec69e084d27fe15d6d227997550db41baf4141"
+          ],
+          "259685383339312fab5d6692492961e82a40d3542bcb400fc2efcdc3fb839a81": [
+            "constraint-semantic-v1:48675d0215a65f03d5e89fd53e650ec15a510762304c2fee251d6f4c3826b532"
+          ],
+          "2a5f0bd0970295ef7f38408cf7d61a776511582d84c6506b2aaf15579538232f": [
+            "constraint-semantic-v1:e1793a4f4a63cae05837ac2164c2d82023c0600c4325b6cad5a1297edad69e06"
+          ],
+          "3c63a97c6bf3590a67234020f1fc938d0b0611f85c62af13f8cd7cde25316a80": [
+            "constraint-semantic-v1:06a920e5cd8cb9a85e4a8ef544d583026070e4db855d1c321f14586b7295bc7d"
+          ],
+          "3e23b9f072a286a06f12fe3ba176e3099e3afd4c11e33818b2fb2ae1ae6a87fb": [
+            "constraint-semantic-v1:d5fcde3d1dd22b101f8bc9116251b2bad2f4b0455262c9135ff8264528d078cd"
+          ],
+          "4362db5fffa61ace628b55419a5437723cf5e7cf3626d13cfa52b1e7e7dfc715": [
+            "constraint-semantic-v1:2f0e9b0df80c61fe300af6dd3dd4289f8445eea9cace87ebbef740ddc83c4a0f"
+          ],
+          "4572de4473710c8f6e5d3b0e9f9e50fe8e8af2c2c5844a0e234d9f29a69fdbae": [
+            "constraint-semantic-v1:f0c2421b2d04c4679dbb9f6f7941afba36265e625be57f1b0f6c8ea9e0c891d8"
+          ],
+          "469e31335adec9b2f66ffdad3cc2a9760e7f24da35247557af3990a8c00e44e9": [
+            "constraint-semantic-v1:35b51f2aa4e129c868185520fe1f4c20d06e1b9a67a75c8519fd9e5503e5f323"
+          ],
+          "4a24f52557da4b20efd68c0089b564f7ff4d5bb527f676b98ce99dddf76e9876": [
+            "constraint-semantic-v1:3d49fd9da8ddcae583cc4fe6707814b716cba4a16741ef9117039b2c791dca13"
+          ],
+          "4ddf993ec30bc16ee1f9b3d452c3f596202cc19d3feedb4f98eab0c353ba0a8e": [
+            "constraint-semantic-v1:a0ba58a43be97a30a86b44230aa67a7cec50d942e6800b352fcad41f69267d97"
+          ],
+          "4fcae8fb89e1f77c23b22282fb3ee9d6f46fdee30347a2aad1a481cdcc5a6346": [
+            "constraint-semantic-v1:3e7833bb08e57151fbcb4b54c05de097ac3ff3aaf2e8a27e67f43467fcf6251f"
+          ],
+          "60fd0fe748d5679a3984e2969bdd622d0f3f21353ccf5d7f898f521ee36c3c10": [
+            "constraint-semantic-v1:901cf57f19be87118dc662a7c5939d575b5f8fc80fa835ed60c0ba79e7bf6f33"
+          ],
+          "6bfc4776433399c439e10ff25e76d0634469fc08a2542a0403e8687be814a2fb": [
+            "constraint-semantic-v1:14a5425ee7350d1ab0557022e8f2770f54491aae75d1170cf9e7fa77d2179184"
+          ],
+          "6cdf5a3da2bdfacdfa747814c61204def975df6571bdb7461ce56a5cef5554b5": [
+            "constraint-semantic-v1:762b40e9dbb83d2e979eac6ecdcc3f6af240e5390511a155d3fb1a7abb3b6a13"
+          ],
+          "70b839dba2b6434f4cf46c82686bcbd96b51591cb1de07fb73fa88c52f0e29e0": [
+            "constraint-semantic-v1:d0cb9513fd74f53eb590da7f95ce5e829b4c152f5fe7e00a8827d1bbf993f2a1"
+          ],
+          "7368a99c05a8f207534e4fd739a1339b9c7583c861d7675bf2cfc40cdc36bbf9": [
+            "constraint-semantic-v1:2428c19867726b83a90ec0be3b63e76b2953560869a1a4248a3465f9f0c64864"
+          ],
+          "7f295b9c65fd02e5eb9995f6cacba68864f368ef5a6883d200b4d8274b7b61d0": [
+            "constraint-semantic-v1:38fc52ba6a23c191f6deebec3d06332be933b5a933269b50d31ce304f620fbf3"
+          ],
+          "80e76e0143966e0c20d1da26c74d87f3e7b5556e869ebff30e8b16bd1b2cbcf3": [
+            "constraint-semantic-v1:bef5709cb706f9336474dfca463553762b18afbbc8a131fa1a908d2c1c71bc0e"
+          ],
+          "88f21db6e62ca05171bf86cfe7b72dc5224633d5035c44677211e9db30c8207b": [
+            "constraint-semantic-v1:4c79447b4860932edb9733279de161a8d956b7368fe045ba8f4875377a0f55ed"
+          ],
+          "8d2d31255fe8cda656a34ad0074b289375941e6702e08d321bf5848288a7397f": [
+            "constraint-semantic-v1:d0c91f4599b78f4d0fadc472e9d63c1c47889bd2afce7ed01b5df893c11129be"
+          ],
+          "8e8e18facf55360afffc79915eb787bcd85ce6b3f52c832ace172059b4a63cbd": [
+            "constraint-semantic-v1:ea97cf5706122657d4fa2ffc4e2bfb931b002f18a18a415740daa5ee5a358a49"
+          ],
+          "95267a5bbb9f5e1ecdae9440aad78471e2be17bb2f37b8e689619585bc9e09ca": [
+            "constraint-semantic-v1:d3b92a6df4538705cd594bb89bc85a838d462077f08746d9f92730b5fb0ca12d"
+          ],
+          "969c3f6861b9d15688e22c7e0d1cb01a883169300d4d3c28575867a25477b1e7": [
+            "constraint-semantic-v1:0d1abb6eb846a2a4bfdc93dfdec589cfa2b57524e5f245f28734bf45854debf5"
+          ],
+          "9bbda66731563586a18ab557e4bcb449e2e3e55da5f1e04563943efd33431ce4": [
+            "constraint-semantic-v1:00677a3750e6c66874365782936bcca637d1af7eac6c4f23ab7e42f562c3e589"
+          ],
+          "a7b275a84646aabfd2357e399cf229967eac96423b4e0c51b0e5f7355e048858": [
+            "constraint-semantic-v1:b53539d55076bc260305f91024d89459b44986e0499cb3784ad069843908da3f"
+          ],
+          "ac9fcbce6f68e9c99fc2a56b8ff0a7f50eed7814e80b27ff5a9600e47c516ed9": [
+            "constraint-semantic-v1:80632a0bb1734e79bfed1634d42eddc418c8d5cc98db778daf6f3698ad8ad231"
+          ],
+          "af73b525f140857e81af24acac21e196867ad48b61cb515226a6c2a7d04a1587": [
+            "constraint-semantic-v1:a7d2a7668dfc0de8431a04f2648e7d1c7af5ff86b76ff3930af383d710c8bc07"
+          ],
+          "c2043b0f5c4b6dd0a084b1ece39d184b6120f30d4660c778fe300b997f881eac": [
+            "constraint-semantic-v1:c15e9a1eabb6d2d8f6f8234c80232f46588cddb6695dca1e19ca7c0bd487e7fa"
+          ],
+          "ca2072f5cd4887214c1c37669af4e31c0aeed9ec87dd2d03fc1aca8ef237d7c6": [
+            "constraint-semantic-v1:c044317f80006755fb72d57e27a6176a2d2e679f6cd1125a2a67228cb1f4dd85"
+          ],
+          "d736225be083f68b16f947d7e718ea50af3f78316aba5a203e23afdeac232a39": [
+            "constraint-semantic-v1:20eb343fd1d5d6146e547ad5929847665271877d47492197a8ff3a73fcc90130"
+          ],
+          "dcd6a212b5d9cb191561c263e7c9c17bc23488d8643e1ed8195f2f6be05eb537": [
+            "constraint-semantic-v1:c268320d7ef58bd3eb3df8b8b081ffdd8059e06b43f1358b8c6864f1b38c58db"
+          ],
+          "ffd5518d914a9de6d43b9092970baa341ce9980e179f71caf1fc01da01c59703": [
+            "constraint-semantic-v1:229eb5276e1f06f03f60642fc1c0adadd1d71cd28b191c3e94ebfe57bbd29563"
+          ]
+        },
+        "top_k_per_endpoint": 2,
+        "unique_attempt_semantic_ids": [
+          "constraint-semantic-v1:00677a3750e6c66874365782936bcca637d1af7eac6c4f23ab7e42f562c3e589"
+        ],
+        "version": "v5-risk-aware-pareto-selector-v1"
+      }
+    },
+    "b42747539d21236c8337e77206a67a9a1c6a1d427d2e2253651d01acc994245f": {
+      "candidate_count": 49,
+      "numerical_failures": [],
+      "selection": {
+        "assessments": [
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:03a0065dc218c89759d94bee34d5c34291a5413da37a6876871eea42cc3b677a",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.00029295766427129725,
+            "structure_digest": "54f7dfa63ad5c290fb6cf885efcf351655f9f2395a1844d5618f36a89b210768"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:089fc4169e605ef41dccd05e22b8f9dd6d2bfc199e3cc8f77a4dd2ae666aafd2",
+            "eligible": true,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [],
+            "risk_adjusted_loss_hartree": 5.55955394567117e-05,
+            "structure_digest": "6ac62b23f1a9af30fc96e44793df1002943904acee7d27389b6fbcd783f2dd1b"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:0c38eaababaea49b1ce7517d8bfc9985cfdcff12c9f230aac7313ea2572f1d90",
+            "eligible": true,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [],
+            "risk_adjusted_loss_hartree": 2.1379590929020163e-05,
+            "structure_digest": "1c18d1b1d6da98dc07cc9036dcc1aed957f32acf6b0ac382f0700d02ce8af662"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:0cbb79ad2388db010720885d49745c78a8c322d45fe434490b85112dddf6b83f",
+            "eligible": true,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [],
+            "risk_adjusted_loss_hartree": 3.357313744453806e-05,
+            "structure_digest": "cdc24a33fab8e6434f3e998b8223cff7b1bec73fa265788b40484cc4852e02f8"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:0f492e29ecacf2cb840a6d3a049cff049bf9feb1e30e05e5db9d0d0480c4eb85",
+            "eligible": true,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [],
+            "risk_adjusted_loss_hartree": 9.458165300742315e-06,
+            "structure_digest": "b73c012398072ac722bc9e3751e468df9b2d14669db35c66fee5fc2ac5733067"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:128420f3734377bcdec7b5d41f7f56f370b5b84b6373fe5a73922f26da836f44",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.006163968956556808,
+            "structure_digest": "8a06437fd679b7235ac567e9c3c30d2176159be14e3812eaa0e47f2d04698ef1"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:1e5ca29d163d79de2aa5138e831ba1910541ecb09d99b25f79bcd25e890d1284",
+            "eligible": true,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [],
+            "risk_adjusted_loss_hartree": 3.33554950140816e-05,
+            "structure_digest": "1eb5de5231e97d240cf17f44b7c267a0c9b611b9501fb69f67e2dbda68128151"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:1e8bedd9a397199c18dccfdef2fd2354e5eb50eb1cc302c09710fec5536d5977",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.01077281005014473,
+            "structure_digest": "5eeb385e176e5e4f8058d19e33c0d38244ebca4f81686de1e15324d708e79037"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:224aa0120207190d4aa10a90e981243ca40195f411bfbffd2314eada50394630",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.00014924967696711006,
+            "structure_digest": "6c8ca1c1758d736a2263e4ec00ec4aaf041e45a0473cc9756bc2d77dbf706343"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:2849c16b684b7385ddba98873304beabed66992a1076a5bfa71f89f354318881",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.021963020569312052,
+            "structure_digest": "7820fdb89e82332cbb43583223533b43a00284080feb1f0ca272716e6eb10a47"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:33f63f75d80cd26bca749879a30d43d2beb3963dd10ed016f5278b61e9b816e2",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.0003506686387255369,
+            "structure_digest": "ca2963d6740c7a48b31668db3e2818723d8fca8a8e12e177c98b96c14a528324"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:395668f75aa706467cf81f4ba5c5139e8a6b33c9fc7ae28aa3c2ef20eaf03e73",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.010642829633550028,
+            "structure_digest": "9eaafd2fb5c1d2373835c69d0112327411ecf85e89bd087990e154e64df5a834"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:3b695019973acc0b7ac26296cdb5b5ffc78231e35381c900a6395ff7a968e390",
+            "eligible": true,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [],
+            "risk_adjusted_loss_hartree": 6.0161877845011243e-05,
+            "structure_digest": "bd551bc38633fc67ae39749a84b2d8bd0110d75811828a29e4cc968ae2eb3eba"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:42a65ff562780d52139a0b70cadb5be571a4f07d51c5355d8f6701c6517dc330",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.0001681805207329546,
+            "structure_digest": "4e9bd35bf89dba0330b8f377e598873d075a75ca136cd494b274b9551f5a3256"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:4476f417ab44b391a9fb75dae200b69e7c38c2d2bdec36a30f6f1379a07e4a2b",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.0004600685415482203,
+            "structure_digest": "51b617ec045125b4a1e7c8da66bbb4c8b8ed5fa92af0c5119c5f264384908970"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:4e18012ca295ec0bb3978502ed2aad066212bc3b753e6df5121baeccb24393d0",
+            "eligible": true,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [],
+            "risk_adjusted_loss_hartree": 3.442661821173873e-05,
+            "structure_digest": "b0ffeda98e90fff204e59a9edf643907328d396cb76c3716c4599e90a341bf6a"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:5029c328b78f11b54ac87dabe739db2e5ca649f7d8408a2f4d91b5e73c16b7fa",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.02162343343509191,
+            "structure_digest": "71f83708554a8add3bfaac368a0a669dd6a39ff53c8163c4fdcf42a4ccd751b6"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:56642e19aa1f5fe009fdcc2d29cbeed4427a277cddefba68aef54e945bd1c9b1",
+            "eligible": true,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [],
+            "risk_adjusted_loss_hartree": 3.3754630123357724e-05,
+            "structure_digest": "4937dc47ae0f38e985446b990ec514c656f130f902966d04d219a1c5427f552d"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:5a888aa0f05b04b0bedc6c3f4e88c7363852b9066e7b54dc2c918c606ee3f3fa",
+            "eligible": true,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [],
+            "risk_adjusted_loss_hartree": 3.5218657127712346e-05,
+            "structure_digest": "210bc898d6b13444ab379512e44039f5119cfb27e6bd9620865c7b2273286149"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:6030cc160a153731b2a426d2353eba427ee330b3793d78be54d0ecc61a42a8e4",
+            "eligible": true,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [],
+            "risk_adjusted_loss_hartree": 3.179684390265248e-05,
+            "structure_digest": "089a3847ee993d21d40090d2cbdece965ea7eb2fbb97991c10c7c8eb095cf35e"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:700d5eccf2c9798fd5065d876f26668281211aa00114507918ed092604b08006",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.009634315048771585,
+            "structure_digest": "a4f17ce686a07f553c09854d7909ea74e79d209285b24a2cd28dd422ae929b26"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:73eacf3cf062d634827fa36585e35338fabf8e0955b05e86e0b3ed9af4e1f909",
+            "eligible": true,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [],
+            "risk_adjusted_loss_hartree": 3.5237007214071234e-05,
+            "structure_digest": "c325404d0ad710782263c735162159769d01eab50e8f4a39707cb4fea891060f"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:875f7a276fd49d20d9c938cf43564a66ed8a3e684373e22a68358989e081a675",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.02731317597789704,
+            "structure_digest": "4db395727fb355130d8d8f2cdac233793a99d857f93eba82b674bb0623103474"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:8d19b40180a429fa7188b731ed0e3806eeb2a2d7cc7180458d6dd16d6ec2da67",
+            "eligible": true,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [],
+            "risk_adjusted_loss_hartree": 5.710878629149311e-05,
+            "structure_digest": "351977458c95b3452ae59f9e94d7a479fbfab96cc2c6a5bf94b017ec2cca58ec"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:8f9678602e06e7b98b31f6bdd6801891f21b83efd61617db19b905f99cd94b31",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.016061445721323394,
+            "structure_digest": "44f94ef25243f22e290af6258410c987ddbd12f30495536758814d65f29b9c74"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:9c4e19de4f384f94c3f27c367ebe52140a7255cf3473cb014ec369c6f8f72517",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.00010101891939197852,
+            "structure_digest": "77eed1f83fd642e9699d6dd6af58019d38618c76f9d645ad91f443bb3e3960ee"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:a01fb11e71db82d172872bd030c49e289ad9b971d462c325b54175913d77518f",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.009578810743076023,
+            "structure_digest": "b820964c6e077f1bdc8b18a658d48e5c5a269f62679e9b59b20821fcb6989741"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:a40e81c87d045765897dc9c4442bac53d289f7c3d49191634c7d4cbaea474e7d",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.0019778656406669363,
+            "structure_digest": "bd91ded2cbc5eb126609bedf7d77fdc004ff1c262891cf1eb0d17a372de52812"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:a7daa3765234188fa4e9d90bf096dc64e915db706922bf53a777442c1bee90f5",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.0001154789238307321,
+            "structure_digest": "e61d78df1d8c9a4aa673d1979c8303325daac8e39aaa4dbac5d4a69ba867e907"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:add330f821471652f86556c5ac088e53b31f083b0b276877d530168f6991bddd",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.0014647426536501273,
+            "structure_digest": "14400e65db321170800c56f366c421b558d7d08763ea6227205368be544cd3b2"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:ae89d7dec0830a53ddc27ea86540777fb36c5495038e26434f4ab76dd89a28af",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.0003118876322764947,
+            "structure_digest": "28574352efb35e63450d613b2e60415c89659b321f3630144abc9337aa21cf48"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:afe28e7df27f86ec8f299d3018e7e43419673dd349680fbd88876e3f17f2414b",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.004653342683893783,
+            "structure_digest": "e8076fa0703c94b66ba59e52baafaf39e0de8a6cd8f3f7b65c23ef76b4028b80"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:b64643d2766963b17eb65018470687a85f03776a01b553e5d0c6c9d3a82c312b",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.00016806455945283133,
+            "structure_digest": "25e4a8160b22af34d1341b34b55e1be9303f9af054b27203be5a2422d59595f8"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:b6b02eb3e83de7c1b31542ccbb97fcc94d58533cdc269aaf0c6ac4f43d1e969a",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.0004938477731065199,
+            "structure_digest": "d9dc34161122b3a323ad20e31b6d92e98a78af6e2bc6fdf4d8e7f3c12edc3c73"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:b885ee5074fbf32b12579e7bc68bf75f0c57fc9a65300b86d8d6d282759e7a57",
+            "eligible": true,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [],
+            "risk_adjusted_loss_hartree": 3.473553206589766e-05,
+            "structure_digest": "8b051debaa4168ee64e040515f8a94200839f30b0bb6d3ac1f08caa3d72d606b"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:b9e38f69d17c94e9c686c43d421e40a5a9833829adc51122c6f92ca32a9b17b9",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.002325140042622816,
+            "structure_digest": "3d2f3f91e72c314490d4faf7dcaf6429f887416fd93a3298087b295f8dfb539c"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:bd90fd9413c601b625497511ff2df8f3fc721f46423a08b253ab718ee435a93c",
+            "eligible": true,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [],
+            "risk_adjusted_loss_hartree": 3.058007375178321e-05,
+            "structure_digest": "03dc768fb5490fb693cfd51d56ab4187a13a166acc6d93634a63e2c81e153d67"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:c378d4139191cda9bc7d81488af0f8a33cb869cec06bace8927e0e5b9a01b0fe",
+            "eligible": true,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [],
+            "risk_adjusted_loss_hartree": 2.231364369222262e-05,
+            "structure_digest": "79f397734484986f014f5635ca3d1d2f823881a85b2c703980a087359851e6c0"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:c764c1515344d01d76ff642480abda489323aa2cd786707260677cda4e080b19",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.029621593573264528,
+            "structure_digest": "f9c0eea266a02ba2a77f24c90b4eea4259171bbe8ada47150958cd47aacae36b"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:d14400039f1cf5b544c82c6ee9c71a3e525e93060bf7f90238679fc9aa869cbb",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.002661357312733285,
+            "structure_digest": "613838528400101efb071c42497b600fbc070e3eba061f47e650860c00b05c0c"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:d208218040d8ff3df4a8da19f41fb2df1c1684fe53e550b0698452cdc6796e61",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.012624888958771093,
+            "structure_digest": "7e55ae6a1e455a36003bb3b455e1e50578ddbf14fe3b8e99f554fca193a42861"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:d9517e4cab00aa725f1574edc2985d58cc0e7cb07c49c5517f01689ae6573a84",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.00022192315838532036,
+            "structure_digest": "84761fc66bb05d178534ac5db331459b9e7eca608e4ecc4ca584e240809e9c56"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:dcedee4850377077005d8e2cfeae8a91714fb61035de865e6c392eb49595a75b",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.010902084168720051,
+            "structure_digest": "e2ce0ce671b86cef78c06b9fd7934d8826ad9737ab7bf06e83b1cdf70a137281"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:e03ad4fc5168302a01138ab68441396a0e7dd9f5f917db014930e5c95b32165d",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.00551345687553622,
+            "structure_digest": "8cf864fc879b22375e3ee100e6a80ccfce75047456637ff714bc935802cc29b3"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:e9cde9db3d098dcbf48e7e96f223c7ff056b9a2db825bbfd6a070f9db4b7050a",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.00962741649400156,
+            "structure_digest": "c692f7f05a0cf8110965a0c9f1758a1a721b018345133289442c59b5bb6663be"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:ea80f5e0b49166f173c3fb45e4fb173b66411b62b42e4b07c41ec8023db689c3",
+            "eligible": true,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [],
+            "risk_adjusted_loss_hartree": 3.331748815028622e-05,
+            "structure_digest": "1e882cc514c8c5e7a4bd666dfd0fabdda3139a36c428a59f98167f1e2048f56f"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:ecb98ad7ca536254b7b0fcaefbce7b9bbf1ea4ec5cbf6901f3b3f803e3ead86e",
+            "eligible": true,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [],
+            "risk_adjusted_loss_hartree": 1.320105868002343e-07,
+            "structure_digest": "e8af2c9f4931cf0b12d0b8957def6ab583c7a1349c6bbe3a7d6501a684985640"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:ef065ac66721320a6361d96ed6474cabc69fface051e522254759dcfb423ee9d",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.015913562436201786,
+            "structure_digest": "2931d2e4d91c618da71a94098b2ee3c6675ae62f8bd75fc8ddb7171972c37bb1"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:f7d2a6a645efe05cc270fa18de50b31de9adcdc3b04f5f0badf2d67e9cd55a25",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.00028635268511124104,
+            "structure_digest": "dc2cc4a5b46346449a57c9744c54aa6ea29d1783174b263609c0c33680369848"
+          }
+        ],
+        "deduplicated_structure_count": 49,
+        "eligible_count": 17,
+        "endpoint_semantic_ids": {
+          "cnot_count": [
+            "constraint-semantic-v1:73eacf3cf062d634827fa36585e35338fabf8e0955b05e86e0b3ed9af4e1f909",
+            "constraint-semantic-v1:0f492e29ecacf2cb840a6d3a049cff049bf9feb1e30e05e5db9d0d0480c4eb85"
+          ],
+          "cnot_depth": [
+            "constraint-semantic-v1:73eacf3cf062d634827fa36585e35338fabf8e0955b05e86e0b3ed9af4e1f909",
+            "constraint-semantic-v1:0f492e29ecacf2cb840a6d3a049cff049bf9feb1e30e05e5db9d0d0480c4eb85"
+          ],
+          "logical_block_count": [
+            "constraint-semantic-v1:73eacf3cf062d634827fa36585e35338fabf8e0955b05e86e0b3ed9af4e1f909",
+            "constraint-semantic-v1:ecb98ad7ca536254b7b0fcaefbce7b9bbf1ea4ec5cbf6901f3b3f803e3ead86e"
+          ],
+          "parameter_count": [
+            "constraint-semantic-v1:73eacf3cf062d634827fa36585e35338fabf8e0955b05e86e0b3ed9af4e1f909",
+            "constraint-semantic-v1:0f492e29ecacf2cb840a6d3a049cff049bf9feb1e30e05e5db9d0d0480c4eb85"
+          ],
+          "total_depth": [
+            "constraint-semantic-v1:73eacf3cf062d634827fa36585e35338fabf8e0955b05e86e0b3ed9af4e1f909",
+            "constraint-semantic-v1:0f492e29ecacf2cb840a6d3a049cff049bf9feb1e30e05e5db9d0d0480c4eb85"
+          ]
+        },
+        "input_count": 49,
+        "maximum_unique_attempts": 4,
+        "pareto_axes": [
+          "cnot_count",
+          "cnot_depth",
+          "total_depth",
+          "parameter_count",
+          "logical_block_count",
+          "risk_adjusted_loss_hartree"
+        ],
+        "pareto_semantic_ids": [
+          "constraint-semantic-v1:0f492e29ecacf2cb840a6d3a049cff049bf9feb1e30e05e5db9d0d0480c4eb85",
+          "constraint-semantic-v1:73eacf3cf062d634827fa36585e35338fabf8e0955b05e86e0b3ed9af4e1f909",
+          "constraint-semantic-v1:ecb98ad7ca536254b7b0fcaefbce7b9bbf1ea4ec5cbf6901f3b3f803e3ead86e"
+        ],
+        "refinement_semantic_ids": [],
+        "require_no_component_regression": true,
+        "scientific_boundary": "Risk diagnostics rank or request refinement; exact independent acceptance alone authorizes a committed state.",
+        "screening_budget_hartree": 0.0001,
+        "selection_digest": "b8aece605a34cfb8c707b284ce9aeade20183bcc6b6c3df5335f0ccc2f3126d5",
+        "source_structure_digest": "8fb1e388fb2590d0235f072251fd06c0368edf96184b735d6220b37fdf3852b4",
+        "structure_aliases": {
+          "03dc768fb5490fb693cfd51d56ab4187a13a166acc6d93634a63e2c81e153d67": [
+            "constraint-semantic-v1:bd90fd9413c601b625497511ff2df8f3fc721f46423a08b253ab718ee435a93c"
+          ],
+          "089a3847ee993d21d40090d2cbdece965ea7eb2fbb97991c10c7c8eb095cf35e": [
+            "constraint-semantic-v1:6030cc160a153731b2a426d2353eba427ee330b3793d78be54d0ecc61a42a8e4"
+          ],
+          "14400e65db321170800c56f366c421b558d7d08763ea6227205368be544cd3b2": [
+            "constraint-semantic-v1:add330f821471652f86556c5ac088e53b31f083b0b276877d530168f6991bddd"
+          ],
+          "1c18d1b1d6da98dc07cc9036dcc1aed957f32acf6b0ac382f0700d02ce8af662": [
+            "constraint-semantic-v1:0c38eaababaea49b1ce7517d8bfc9985cfdcff12c9f230aac7313ea2572f1d90"
+          ],
+          "1e882cc514c8c5e7a4bd666dfd0fabdda3139a36c428a59f98167f1e2048f56f": [
+            "constraint-semantic-v1:ea80f5e0b49166f173c3fb45e4fb173b66411b62b42e4b07c41ec8023db689c3"
+          ],
+          "1eb5de5231e97d240cf17f44b7c267a0c9b611b9501fb69f67e2dbda68128151": [
+            "constraint-semantic-v1:1e5ca29d163d79de2aa5138e831ba1910541ecb09d99b25f79bcd25e890d1284"
+          ],
+          "210bc898d6b13444ab379512e44039f5119cfb27e6bd9620865c7b2273286149": [
+            "constraint-semantic-v1:5a888aa0f05b04b0bedc6c3f4e88c7363852b9066e7b54dc2c918c606ee3f3fa"
+          ],
+          "25e4a8160b22af34d1341b34b55e1be9303f9af054b27203be5a2422d59595f8": [
+            "constraint-semantic-v1:b64643d2766963b17eb65018470687a85f03776a01b553e5d0c6c9d3a82c312b"
+          ],
+          "28574352efb35e63450d613b2e60415c89659b321f3630144abc9337aa21cf48": [
+            "constraint-semantic-v1:ae89d7dec0830a53ddc27ea86540777fb36c5495038e26434f4ab76dd89a28af"
+          ],
+          "2931d2e4d91c618da71a94098b2ee3c6675ae62f8bd75fc8ddb7171972c37bb1": [
+            "constraint-semantic-v1:ef065ac66721320a6361d96ed6474cabc69fface051e522254759dcfb423ee9d"
+          ],
+          "351977458c95b3452ae59f9e94d7a479fbfab96cc2c6a5bf94b017ec2cca58ec": [
+            "constraint-semantic-v1:8d19b40180a429fa7188b731ed0e3806eeb2a2d7cc7180458d6dd16d6ec2da67"
+          ],
+          "3d2f3f91e72c314490d4faf7dcaf6429f887416fd93a3298087b295f8dfb539c": [
+            "constraint-semantic-v1:b9e38f69d17c94e9c686c43d421e40a5a9833829adc51122c6f92ca32a9b17b9"
+          ],
+          "44f94ef25243f22e290af6258410c987ddbd12f30495536758814d65f29b9c74": [
+            "constraint-semantic-v1:8f9678602e06e7b98b31f6bdd6801891f21b83efd61617db19b905f99cd94b31"
+          ],
+          "4937dc47ae0f38e985446b990ec514c656f130f902966d04d219a1c5427f552d": [
+            "constraint-semantic-v1:56642e19aa1f5fe009fdcc2d29cbeed4427a277cddefba68aef54e945bd1c9b1"
+          ],
+          "4db395727fb355130d8d8f2cdac233793a99d857f93eba82b674bb0623103474": [
+            "constraint-semantic-v1:875f7a276fd49d20d9c938cf43564a66ed8a3e684373e22a68358989e081a675"
+          ],
+          "4e9bd35bf89dba0330b8f377e598873d075a75ca136cd494b274b9551f5a3256": [
+            "constraint-semantic-v1:42a65ff562780d52139a0b70cadb5be571a4f07d51c5355d8f6701c6517dc330"
+          ],
+          "51b617ec045125b4a1e7c8da66bbb4c8b8ed5fa92af0c5119c5f264384908970": [
+            "constraint-semantic-v1:4476f417ab44b391a9fb75dae200b69e7c38c2d2bdec36a30f6f1379a07e4a2b"
+          ],
+          "54f7dfa63ad5c290fb6cf885efcf351655f9f2395a1844d5618f36a89b210768": [
+            "constraint-semantic-v1:03a0065dc218c89759d94bee34d5c34291a5413da37a6876871eea42cc3b677a"
+          ],
+          "5eeb385e176e5e4f8058d19e33c0d38244ebca4f81686de1e15324d708e79037": [
+            "constraint-semantic-v1:1e8bedd9a397199c18dccfdef2fd2354e5eb50eb1cc302c09710fec5536d5977"
+          ],
+          "613838528400101efb071c42497b600fbc070e3eba061f47e650860c00b05c0c": [
+            "constraint-semantic-v1:d14400039f1cf5b544c82c6ee9c71a3e525e93060bf7f90238679fc9aa869cbb"
+          ],
+          "6ac62b23f1a9af30fc96e44793df1002943904acee7d27389b6fbcd783f2dd1b": [
+            "constraint-semantic-v1:089fc4169e605ef41dccd05e22b8f9dd6d2bfc199e3cc8f77a4dd2ae666aafd2"
+          ],
+          "6c8ca1c1758d736a2263e4ec00ec4aaf041e45a0473cc9756bc2d77dbf706343": [
+            "constraint-semantic-v1:224aa0120207190d4aa10a90e981243ca40195f411bfbffd2314eada50394630"
+          ],
+          "71f83708554a8add3bfaac368a0a669dd6a39ff53c8163c4fdcf42a4ccd751b6": [
+            "constraint-semantic-v1:5029c328b78f11b54ac87dabe739db2e5ca649f7d8408a2f4d91b5e73c16b7fa"
+          ],
+          "77eed1f83fd642e9699d6dd6af58019d38618c76f9d645ad91f443bb3e3960ee": [
+            "constraint-semantic-v1:9c4e19de4f384f94c3f27c367ebe52140a7255cf3473cb014ec369c6f8f72517"
+          ],
+          "7820fdb89e82332cbb43583223533b43a00284080feb1f0ca272716e6eb10a47": [
+            "constraint-semantic-v1:2849c16b684b7385ddba98873304beabed66992a1076a5bfa71f89f354318881"
+          ],
+          "79f397734484986f014f5635ca3d1d2f823881a85b2c703980a087359851e6c0": [
+            "constraint-semantic-v1:c378d4139191cda9bc7d81488af0f8a33cb869cec06bace8927e0e5b9a01b0fe"
+          ],
+          "7e55ae6a1e455a36003bb3b455e1e50578ddbf14fe3b8e99f554fca193a42861": [
+            "constraint-semantic-v1:d208218040d8ff3df4a8da19f41fb2df1c1684fe53e550b0698452cdc6796e61"
+          ],
+          "84761fc66bb05d178534ac5db331459b9e7eca608e4ecc4ca584e240809e9c56": [
+            "constraint-semantic-v1:d9517e4cab00aa725f1574edc2985d58cc0e7cb07c49c5517f01689ae6573a84"
+          ],
+          "8a06437fd679b7235ac567e9c3c30d2176159be14e3812eaa0e47f2d04698ef1": [
+            "constraint-semantic-v1:128420f3734377bcdec7b5d41f7f56f370b5b84b6373fe5a73922f26da836f44"
+          ],
+          "8b051debaa4168ee64e040515f8a94200839f30b0bb6d3ac1f08caa3d72d606b": [
+            "constraint-semantic-v1:b885ee5074fbf32b12579e7bc68bf75f0c57fc9a65300b86d8d6d282759e7a57"
+          ],
+          "8cf864fc879b22375e3ee100e6a80ccfce75047456637ff714bc935802cc29b3": [
+            "constraint-semantic-v1:e03ad4fc5168302a01138ab68441396a0e7dd9f5f917db014930e5c95b32165d"
+          ],
+          "9eaafd2fb5c1d2373835c69d0112327411ecf85e89bd087990e154e64df5a834": [
+            "constraint-semantic-v1:395668f75aa706467cf81f4ba5c5139e8a6b33c9fc7ae28aa3c2ef20eaf03e73"
+          ],
+          "a4f17ce686a07f553c09854d7909ea74e79d209285b24a2cd28dd422ae929b26": [
+            "constraint-semantic-v1:700d5eccf2c9798fd5065d876f26668281211aa00114507918ed092604b08006"
+          ],
+          "b0ffeda98e90fff204e59a9edf643907328d396cb76c3716c4599e90a341bf6a": [
+            "constraint-semantic-v1:4e18012ca295ec0bb3978502ed2aad066212bc3b753e6df5121baeccb24393d0"
+          ],
+          "b73c012398072ac722bc9e3751e468df9b2d14669db35c66fee5fc2ac5733067": [
+            "constraint-semantic-v1:0f492e29ecacf2cb840a6d3a049cff049bf9feb1e30e05e5db9d0d0480c4eb85"
+          ],
+          "b820964c6e077f1bdc8b18a658d48e5c5a269f62679e9b59b20821fcb6989741": [
+            "constraint-semantic-v1:a01fb11e71db82d172872bd030c49e289ad9b971d462c325b54175913d77518f"
+          ],
+          "bd551bc38633fc67ae39749a84b2d8bd0110d75811828a29e4cc968ae2eb3eba": [
+            "constraint-semantic-v1:3b695019973acc0b7ac26296cdb5b5ffc78231e35381c900a6395ff7a968e390"
+          ],
+          "bd91ded2cbc5eb126609bedf7d77fdc004ff1c262891cf1eb0d17a372de52812": [
+            "constraint-semantic-v1:a40e81c87d045765897dc9c4442bac53d289f7c3d49191634c7d4cbaea474e7d"
+          ],
+          "c325404d0ad710782263c735162159769d01eab50e8f4a39707cb4fea891060f": [
+            "constraint-semantic-v1:73eacf3cf062d634827fa36585e35338fabf8e0955b05e86e0b3ed9af4e1f909"
+          ],
+          "c692f7f05a0cf8110965a0c9f1758a1a721b018345133289442c59b5bb6663be": [
+            "constraint-semantic-v1:e9cde9db3d098dcbf48e7e96f223c7ff056b9a2db825bbfd6a070f9db4b7050a"
+          ],
+          "ca2963d6740c7a48b31668db3e2818723d8fca8a8e12e177c98b96c14a528324": [
+            "constraint-semantic-v1:33f63f75d80cd26bca749879a30d43d2beb3963dd10ed016f5278b61e9b816e2"
+          ],
+          "cdc24a33fab8e6434f3e998b8223cff7b1bec73fa265788b40484cc4852e02f8": [
+            "constraint-semantic-v1:0cbb79ad2388db010720885d49745c78a8c322d45fe434490b85112dddf6b83f"
+          ],
+          "d9dc34161122b3a323ad20e31b6d92e98a78af6e2bc6fdf4d8e7f3c12edc3c73": [
+            "constraint-semantic-v1:b6b02eb3e83de7c1b31542ccbb97fcc94d58533cdc269aaf0c6ac4f43d1e969a"
+          ],
+          "dc2cc4a5b46346449a57c9744c54aa6ea29d1783174b263609c0c33680369848": [
+            "constraint-semantic-v1:f7d2a6a645efe05cc270fa18de50b31de9adcdc3b04f5f0badf2d67e9cd55a25"
+          ],
+          "e2ce0ce671b86cef78c06b9fd7934d8826ad9737ab7bf06e83b1cdf70a137281": [
+            "constraint-semantic-v1:dcedee4850377077005d8e2cfeae8a91714fb61035de865e6c392eb49595a75b"
+          ],
+          "e61d78df1d8c9a4aa673d1979c8303325daac8e39aaa4dbac5d4a69ba867e907": [
+            "constraint-semantic-v1:a7daa3765234188fa4e9d90bf096dc64e915db706922bf53a777442c1bee90f5"
+          ],
+          "e8076fa0703c94b66ba59e52baafaf39e0de8a6cd8f3f7b65c23ef76b4028b80": [
+            "constraint-semantic-v1:afe28e7df27f86ec8f299d3018e7e43419673dd349680fbd88876e3f17f2414b"
+          ],
+          "e8af2c9f4931cf0b12d0b8957def6ab583c7a1349c6bbe3a7d6501a684985640": [
+            "constraint-semantic-v1:ecb98ad7ca536254b7b0fcaefbce7b9bbf1ea4ec5cbf6901f3b3f803e3ead86e"
+          ],
+          "f9c0eea266a02ba2a77f24c90b4eea4259171bbe8ada47150958cd47aacae36b": [
+            "constraint-semantic-v1:c764c1515344d01d76ff642480abda489323aa2cd786707260677cda4e080b19"
+          ]
+        },
+        "top_k_per_endpoint": 2,
+        "unique_attempt_semantic_ids": [
+          "constraint-semantic-v1:73eacf3cf062d634827fa36585e35338fabf8e0955b05e86e0b3ed9af4e1f909",
+          "constraint-semantic-v1:0f492e29ecacf2cb840a6d3a049cff049bf9feb1e30e05e5db9d0d0480c4eb85",
+          "constraint-semantic-v1:ecb98ad7ca536254b7b0fcaefbce7b9bbf1ea4ec5cbf6901f3b3f803e3ead86e"
+        ],
+        "version": "v5-risk-aware-pareto-selector-v1"
+      }
+    },
+    "f23ba58273f1e567b6a1dabdcb0a4ac6b1a65a8eb597f459dc4d32f5bdeb3cde": {
+      "candidate_count": 62,
+      "numerical_failures": [],
+      "selection": {
+        "assessments": [
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:009bdadb541b058a95c5ac93e58e7ab01878fd922498c981d7e88d3754a729d5",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.010717272789290157,
+            "structure_digest": "95bd67de787a8cd25193631f38ece09f831e59cd595dce32aa1825bff08e7ac4"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:0667b2939c2e1eeacd867c66f64a1cd47440215075602d1733e0c118a7319d8c",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.004541940054843444,
+            "structure_digest": "5c16bd175d3be4a61037b818f7b565d9a616b18db247775c851c4745a66642ee"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:0c02eb092738ed1e8f054c537e432f04fd9317209de4844234dc55e55272c72b",
+            "eligible": true,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [],
+            "risk_adjusted_loss_hartree": 3.893169223343959e-05,
+            "structure_digest": "288bc3ea9cbdc8fc56b26e8c7e38c40dfc919677c6a66dc32cf3d10fcd793ecf"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:0e361ca109dc22043ec54ac0ef798348e4438b52d91a460963fe3d8736c433e5",
+            "eligible": true,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [],
+            "risk_adjusted_loss_hartree": 4.7980006121651964e-05,
+            "structure_digest": "026a042342eab070853216b0192fae7e31cc8507e803d25bd2f71e9863ae8ac1"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:11083277e107050fc65b62a663c690fc4b39149dc8807b7602ed546e5ba9f2be",
+            "eligible": true,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [],
+            "risk_adjusted_loss_hartree": 4.98180154813151e-05,
+            "structure_digest": "4f0d8f9fdfa14b8b3668db398cc9594a2fd34bc50813557b6d7b8fcfe9e9960c"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:14a0ab3de966b7c5ba29fa0e3b77a4dc557621b37db628d19b16b6d0c3666393",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.020265194016204812,
+            "structure_digest": "78e3d15d9a211d4365cba368a1ce2efc7862a71ba861475417e9890329ceb85a"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:178d11bac4b3f409937079d6bcb81dbda9fcf69f3fb94bf6b3a02869659bb83e",
+            "eligible": true,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [],
+            "risk_adjusted_loss_hartree": 4.595195789938574e-05,
+            "structure_digest": "699d3cfe2b8e32d9fcd3b907de9d58f36058b30e8db2a2f818be1f4c5df4b0e5"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:1824531d18c0ce714e4392bf6df9b88e06f22704c952dab57c8807ab407f8980",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.02439080521229619,
+            "structure_digest": "c3fc43f8ee62d836565deabc8f3dc7e1577709ff56a303f22a9290c72d9be8d6"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:195469ee8f5cfd858e9e01d5fe6ccbbacdfa0781fb303ee2a8da5e344ceb8243",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.00499337238328874,
+            "structure_digest": "1b36eb2860cc155d8bdabbc7bb40298f3540611d9db8faaaad8bd1ba008d8381"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:27da6caf4be2e64112603ca9617dbe2a17385dcdfa3c4e04e308da81554d1053",
+            "eligible": true,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [],
+            "risk_adjusted_loss_hartree": 2.53607681003921e-07,
+            "structure_digest": "106a22f489697c4970d04384009909e59aaf2d4e2b604bfafa027afeff3e2de4"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:29bd139b40be517a483096280c3a0d599a69bd241407f5c3b96b4fa5c1c7433d",
+            "eligible": true,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [],
+            "risk_adjusted_loss_hartree": 4.793176213979079e-05,
+            "structure_digest": "74169c8d3e5094c968df1793e33060aef9dff98147ba6988c6e0f1d56a26681e"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:2f47b996dc9f5104d6b6cba9519dcd81e29177518b9faa8d15b56340d9fb76ab",
+            "eligible": true,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [],
+            "risk_adjusted_loss_hartree": 5.196184022661202e-05,
+            "structure_digest": "8fb1e388fb2590d0235f072251fd06c0368edf96184b735d6220b37fdf3852b4"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:2fd80395f7363818b70ff0924faa8117f29170249f2d2fe119879d5c4f221529",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.007516874664135877,
+            "structure_digest": "95f1ab3a0e29e3647b79d8ec45cd8f3bb2b0b5f0a0dbc9641d0a4052039860b2"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:3bf84c71fd3faa74a7d94221291be22f3d0599e410f49e2532976a18aab23c07",
+            "eligible": true,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [],
+            "risk_adjusted_loss_hartree": 4.777816821227601e-05,
+            "structure_digest": "5ba03b50a482cf2b3328b4800e46f86f8583e18f8a759f388efcd2b4a8c50e14"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:3d1714ac5e0ff0ca31af6dc3127b0eca72e9a7f359ec8db549a602ef0a121f40",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.0014434312581432815,
+            "structure_digest": "3132dbba64c8d3608afe2a1005f93de107e550972aeb4d17cb31dbf4bbc02275"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:40166bb04041eead1b5f3dd92de07489b6fbc756c57a0ab4818f569b7f4a28be",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.029168128925462212,
+            "structure_digest": "d9c8762cb55aaac97f4e793ad5ab1b2e96c63ed6b6191986d16f99d5a3824379"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:40ae33550e7e495a900c5c570098dbad712787990c63009514495a8ec5fdb316",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.0054494299075378535,
+            "structure_digest": "c2b7a557ed09c5807f4c6ea2c649d251d0006faf32fe8c5188a0ae7205f7d51c"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:568753f83b2448fb4bf36efe6a60b87e2b20332386f3537a31d0af2248951b80",
+            "eligible": true,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [],
+            "risk_adjusted_loss_hartree": 4.9682039856026834e-05,
+            "structure_digest": "9592e1c584250f2e31480785dedba089679adcc9b3567ff10284f9f116f6b4e5"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:58ea10fb16e23af1c09b26d5deebf91dbf3c22e5d397b2859c2ab6fb1cbc677a",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.0015004985799750815,
+            "structure_digest": "2d6d15228a4b45f6b0689437e80416b1388249a75a762b076e9b0bdd0eddf8f2"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:5a215e27ba8bf834a6ba165d389209cd50393f7049533c2dd0dc9d4937f6111f",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.00030177809388521465,
+            "structure_digest": "58b61b5f8b3bb0bd1f524a5030f14d5e47e3ff6b3979af7dd7c3fcd52544baec"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:712dae931b73a839437f4836f709818142887c5fda6cc0a6e1749f85d9768284",
+            "eligible": true,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [],
+            "risk_adjusted_loss_hartree": 2.0497230442333212e-05,
+            "structure_digest": "61dfa0488f6127a89eac433290bfcec7301f2199d838f30d2800a20457e185eb"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:720c8a5b98fad068db314d88758317dc3ecda374f7fc358874c1f69b8ec36a9e",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.00013557213279831863,
+            "structure_digest": "5032277f31c4fb01b85b04018df9c48c8db8735084f2ea4fb1810c668ae46b30"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:73e9f5c124ef30fd53d367e0c95b01645b1b60246dafa58c2661062d45ec47f0",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.014877484411025849,
+            "structure_digest": "51f24f7f9d1c293306c07e425a89d5e183412ac32a63ecbd98087d78d531ecf6"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:744b0bd149cbd408cbcb4ff1bb496a5b80cd2ae687d139e772141c0c105a298e",
+            "eligible": true,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [],
+            "risk_adjusted_loss_hartree": 4.770080251994846e-05,
+            "structure_digest": "5a8fee7f17f9541817ffbe39bccad7665583e1dbf0e98af369bfb6cd45a01f4c"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:75678cc24d8f224d5c38b5ba225fecfb53641c11b1e4ab34b6ef86c397201891",
+            "eligible": true,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [],
+            "risk_adjusted_loss_hartree": 2.190656523526004e-05,
+            "structure_digest": "6c3d6203f56505526df77a80b26e73f567b38164add524741e78ec49adea8a3e"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:79f71c5137926bca861a3551706471bacf65f600761eac388a5d9d3f7f7f1abf",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.0072955009039240674,
+            "structure_digest": "7a1e0a562689131fe78ae52db6bd4c029c8aca6ccbae3a860cb00faef43b7f92"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:7f8502d8e4ab60e5eb43cab2ffc3833569632f0c7d7ccd4cd4fcaac0392c974f",
+            "eligible": true,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [],
+            "risk_adjusted_loss_hartree": 3.271646658055297e-05,
+            "structure_digest": "1c3c076c3adf3808b60d9a8c01c6880e0538015fb86fdcb0c268f8c3bfac17e5"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:81bcf20abbe61690a700693ef2763fd4eed04c49b68057e6957218f3b773d103",
+            "eligible": true,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [],
+            "risk_adjusted_loss_hartree": 4.7757603770096545e-05,
+            "structure_digest": "9f3e1852f30cb27f4c407a185b438453560a343964584b97d70361b86bfa5030"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:81be9c2bf7c0171b578225014781e242a943db788a29d77ecae40c01dc54e457",
+            "eligible": true,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [],
+            "risk_adjusted_loss_hartree": 4.7700802646982225e-05,
+            "structure_digest": "5308a08a044c94a8d566d7733cdbf9e23522ed2cdafb9e7edddaba6a9da5e751"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:8f6b9e055fb41dc89819a6f2a51ee58e750e2fa5b4807aecbc1a236cd92c31d7",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.005377581794802033,
+            "structure_digest": "bc6de1def428408742808370fdefc0be20f0b51f1adeaebe14eaf4552755f1dc"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:90f71b09247b5b957098b08d610081297264d456e367018ef8bca24bdbab035f",
+            "eligible": true,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [],
+            "risk_adjusted_loss_hartree": 8.860774395966959e-05,
+            "structure_digest": "2bccbd12279184f25f9a6ddd8c13735b331c87621c829d5122663a9ee6c61b1e"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:91669ddcec9f3884674044c7ad72aa9417657d01dc96e9dbddd81659f68cafc9",
+            "eligible": true,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [],
+            "risk_adjusted_loss_hartree": 5.222387687842318e-05,
+            "structure_digest": "b24eaf29d8e77a3785ded2fae6ab6b8d84d98f3f6a3bcc38ca7f58b2ec548a11"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:96c42c140ccf2339636ebcbdcd7a925c791669f435118746196b171b0aa3c159",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.009821838192936371,
+            "structure_digest": "6288c2720abf7c49159ed74f5c8367e3c1b4aa57c0df9b8a692b6c54d087caa5"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:9a9ec1dcbf1f95ef66d3cee2ebfba3ca439ef5fca3a0fe4bd5f74b71c19e0105",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.03420808395277214,
+            "structure_digest": "8846e0256701b57d4f96c219b91521b4779ea6890f04e77cd7911cc412e3936a"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:9e21f10af442fa814bf8a4af3c4ad8e246726ba7a7bfa9f80994a6434c29c64c",
+            "eligible": true,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [],
+            "risk_adjusted_loss_hartree": 3.057521317628211e-05,
+            "structure_digest": "675fcd234439e7d9e0510a292813399f2d27b5141eb9d3787a7bf73d756eeee1"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:abf218889ccac9c9cd419a831ed617fee597018a260426b86ab39192700fe414",
+            "eligible": true,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [],
+            "risk_adjusted_loss_hartree": 4.813829281847226e-05,
+            "structure_digest": "aa35f47e2b0f7ebac75313a3f1ea48bee2023b58462d919abc3c8121cdb986ea"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:b3d4f752c417aa3b20a1f5d054eed7210798a8354640507eddd6f77fdc08aa12",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.015315461924707612,
+            "structure_digest": "dcb9b9c320a48f5a84d9beeebf2bbf71a08dff5f0a00be07583e61ccaace5d25"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:baba908f8e4931ae8504f770a738507f18e285f9f4d1f6738f13b41c373efbf4",
+            "eligible": true,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [],
+            "risk_adjusted_loss_hartree": 4.955332841326778e-05,
+            "structure_digest": "16b8b639bf0d0bcf5c65d26c8af7a8894f3681d32b86d3d48431e461d167339b"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:c174d3a5c93f7d6489b77f324da60a3c21f1ab3973dbfa99662fbe2b7e25b924",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.03523447260099345,
+            "structure_digest": "adc5d10c60c1675b9cc50111d26290b0568a58cce53eaa646b1ab867a993b327"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:c1c87d9890bc525e4aeb1b26ebe4bd891cb50fbc49fef266994f7612854df946",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.031843730488262764,
+            "structure_digest": "d8ee135aad68bba62d9b00955dbda416d4e8f40edce6490daca672c48f566817"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:c218f7120470dab17f439b592f483ae5d72d685e3c299ff9febc01b1e5ac125a",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.008250402816749061,
+            "structure_digest": "3be817712728f28cbe62edb5ec8f09ebcd5cdce724cba68be55c18208bce95df"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:c5ebe6de588f2699dcb152a63eecf368310cb5be79cb59924fa3f4c5f8b6c45e",
+            "eligible": true,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [],
+            "risk_adjusted_loss_hartree": 5.1912222193702965e-05,
+            "structure_digest": "fea6f0ec19fe0fdfb814bbfa5e94ea167e4c5b9cca7bdcff3345b12edf652ca5"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:c780b8d1cff382353ffd0bc391e55e7c3fe9190eda20956481dce29a09427e4d",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.014938604906172225,
+            "structure_digest": "a68c33a1d2dc6a18a37d65571b6d57254ad71e9c04c0c76bb309a61840046949"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:c91f1704c1c24f2927124b1c2b3a7352c1bf7a0f5f702238846daca2985bd2db",
+            "eligible": true,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [],
+            "risk_adjusted_loss_hartree": 2.0496920813877938e-05,
+            "structure_digest": "2eb67c18eee903d427ea435136a96d7a9ce5029c682672b9d2a2ea8abd3a0d28"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:cd668879a4b7bda45cfa2c6ccc020839df983e9eceb27042ddd8da8dc62f1a10",
+            "eligible": true,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [],
+            "risk_adjusted_loss_hartree": 4.7795635738583114e-05,
+            "structure_digest": "fc4d736e2e735840d8b38ddca5b0b11c311ca48c3fdb7a7d6f2637660866253b"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:d4cf53e00c2b1bd484a68e40303d154a1464c312e94c9b807059ab6af3d3b504",
+            "eligible": true,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [],
+            "risk_adjusted_loss_hartree": 5.2635588459308185e-05,
+            "structure_digest": "5829d3249b4b74e9e199d00c8b8516fdcc30c2d8f1436e41fdf4459915150f12"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:d5dd4889bde55f6f31ac1ad2bf552ac038672709ec6200282356cde48542f0e2",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.00037391140978133597,
+            "structure_digest": "1d23ed9849ea7c902b40ba0c55851c2797c6c10d696234e6f4a151214093d6e9"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:d80e1b98f505d41128c61444e2c1e24be4590e1953cfb7653384222944a06b20",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.0002400095150653446,
+            "structure_digest": "705fcc4f42de98fe2c56917e788b8f15bd74009304ec0a9dae5dec383cc1ba93"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:da9ab7029c2f31e6669d20269b1c2ef85d2c39f3186fc07ea57af9830b42b10a",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.00018835599669377989,
+            "structure_digest": "aac9f59bee4bc1c37e1c4b15f8b3b44fc6f0516cae83a1861abb04d2e9cf3d5f"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:dd21dace6f3932db29abce2fc2bacd7cdac2d718b8545f6a0eeb1dadde1c8b56",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.0005064069938483464,
+            "structure_digest": "8a44b3db04ef2e2df90b6077ffbae0add804bc67b47fb03a6e56bbdda638e310"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:de26cee41da411f48553b29442f5167c10b2f7cbbd383e4e652f3efd683e95eb",
+            "eligible": true,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [],
+            "risk_adjusted_loss_hartree": 2.2312436965878194e-05,
+            "structure_digest": "e297fb5ada6a80a63b17a8606e925a4bd6ca94a6ace63b950df6a6600c5f3094"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:de68cc9dbf69e73caf3af60b36b6229dfde14440b4e9174873ba1fdd9dc678fd",
+            "eligible": true,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [],
+            "risk_adjusted_loss_hartree": 4.7830155987084483e-05,
+            "structure_digest": "f2b8edc9822ffa84453100664bf585f888a5281c6aef81ea4d14936f2c51021a"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:e07b358858625dfd5b4e3f8eb20fb262094726d4ca5672e34d0e08222e4abd07",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.000301356018341664,
+            "structure_digest": "05742bf925560bdf54c56811d66aaeb38e83717cc1efa567f87fc14334098bae"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:e3191180a1fbb162c113ff74818af74113ba124ad698a5df90bea7cff681cdb6",
+            "eligible": true,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [],
+            "risk_adjusted_loss_hartree": 2.2146275726886398e-07,
+            "structure_digest": "f7901644de4e363bc9ef46f7266eda4dbf74c716f02d96691e8bb3c49ef0c592"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:e57830b6993c622c7d3f3d6fe29f81f754725fadb4643ec0fc2292ca0dca9c9d",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.00017249959481929135,
+            "structure_digest": "83bc8796bb8a9e57189824dcbbe1ed8703a1d48f54bc0c1bdcad76429006ede7"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:f31e24199d6facfd437f1d64dd5b6733053100b8e9640fc2baf382b262bd4d09",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.005225751686447528,
+            "structure_digest": "32fa38159592fadcf69687a73251df82a3e20d4f7a7c8fe04a43b7fca5120798"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:f3bdbd3967b20f2885341b0b72d79c259d60a07d52f3b6a7a42c5f0ee5a6f51d",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.0082222031323596,
+            "structure_digest": "9b788e1b586e39d0f0c445b7564a323afd095355f04629b65d74231912bc9171"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:f3f9d588258bcc0fe2ec2a6da8c8bb27e64478b421c2f864a9cd9715a779586f",
+            "eligible": true,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [],
+            "risk_adjusted_loss_hartree": 2.683545008776012e-05,
+            "structure_digest": "27b344116e8e78414f9010ec42272b7dc03bf30385fab5154d73ae233d132810"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:f55d9f9b8ffd62d83896c6c4d189e8126be789fba0c177c20765722c9049d4c1",
+            "eligible": true,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [],
+            "risk_adjusted_loss_hartree": 3.266118309558283e-05,
+            "structure_digest": "4426931dd56598823a9b2c676093d749b7195665c208cf26fb903c39cc1f7c77"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:fae99ff77df223938abb118d8f214eb3c2cdc225c36ba024f6bf7e84fabf53e1",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.00034882340055725523,
+            "structure_digest": "03482f8a11f411f3d92974803392f1cb6ba11085faf159dcda86ac55dc38d3fc"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:fbd4f03bc4284da397b2cf8e2b220dd8fb036d23b74b20a7cc7338226fa4feba",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.005396373775949015,
+            "structure_digest": "990105a9af769fd52ae33f8928c9ec08999de0527e8393923d84ffc63f62f7f8"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:fe4c9175b0a43848a87a2d7e78cb8a490b55f1a42f49ae4ca5464ab3a076a02b",
+            "eligible": true,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [],
+            "risk_adjusted_loss_hartree": 4.7901884797382165e-05,
+            "structure_digest": "eca59478f70b7a1d6886c2935b3be5455268ae16869bd71f34528c2a5b5c4283"
+          }
+        ],
+        "deduplicated_structure_count": 62,
+        "eligible_count": 30,
+        "endpoint_semantic_ids": {
+          "cnot_count": [
+            "constraint-semantic-v1:2f47b996dc9f5104d6b6cba9519dcd81e29177518b9faa8d15b56340d9fb76ab",
+            "constraint-semantic-v1:712dae931b73a839437f4836f709818142887c5fda6cc0a6e1749f85d9768284"
+          ],
+          "cnot_depth": [
+            "constraint-semantic-v1:e3191180a1fbb162c113ff74818af74113ba124ad698a5df90bea7cff681cdb6",
+            "constraint-semantic-v1:712dae931b73a839437f4836f709818142887c5fda6cc0a6e1749f85d9768284"
+          ],
+          "logical_block_count": [
+            "constraint-semantic-v1:2f47b996dc9f5104d6b6cba9519dcd81e29177518b9faa8d15b56340d9fb76ab",
+            "constraint-semantic-v1:e3191180a1fbb162c113ff74818af74113ba124ad698a5df90bea7cff681cdb6"
+          ],
+          "parameter_count": [
+            "constraint-semantic-v1:2f47b996dc9f5104d6b6cba9519dcd81e29177518b9faa8d15b56340d9fb76ab",
+            "constraint-semantic-v1:712dae931b73a839437f4836f709818142887c5fda6cc0a6e1749f85d9768284"
+          ],
+          "total_depth": [
+            "constraint-semantic-v1:2f47b996dc9f5104d6b6cba9519dcd81e29177518b9faa8d15b56340d9fb76ab",
+            "constraint-semantic-v1:712dae931b73a839437f4836f709818142887c5fda6cc0a6e1749f85d9768284"
+          ]
+        },
+        "input_count": 62,
+        "maximum_unique_attempts": 4,
+        "pareto_axes": [
+          "cnot_count",
+          "cnot_depth",
+          "total_depth",
+          "parameter_count",
+          "logical_block_count",
+          "risk_adjusted_loss_hartree"
+        ],
+        "pareto_semantic_ids": [
+          "constraint-semantic-v1:2f47b996dc9f5104d6b6cba9519dcd81e29177518b9faa8d15b56340d9fb76ab",
+          "constraint-semantic-v1:712dae931b73a839437f4836f709818142887c5fda6cc0a6e1749f85d9768284",
+          "constraint-semantic-v1:e3191180a1fbb162c113ff74818af74113ba124ad698a5df90bea7cff681cdb6"
+        ],
+        "refinement_semantic_ids": [],
+        "require_no_component_regression": true,
+        "scientific_boundary": "Risk diagnostics rank or request refinement; exact independent acceptance alone authorizes a committed state.",
+        "screening_budget_hartree": 0.0001,
+        "selection_digest": "deb58ba95e019c7f4bc3ad7bf8c4854e08179811b7454caf24256e7da6d4658f",
+        "source_structure_digest": "5a30bd86da6ff690a994860b8d7f2c5d38f728bc3a2f2f9be2099b02b223ac87",
+        "structure_aliases": {
+          "026a042342eab070853216b0192fae7e31cc8507e803d25bd2f71e9863ae8ac1": [
+            "constraint-semantic-v1:0e361ca109dc22043ec54ac0ef798348e4438b52d91a460963fe3d8736c433e5"
+          ],
+          "03482f8a11f411f3d92974803392f1cb6ba11085faf159dcda86ac55dc38d3fc": [
+            "constraint-semantic-v1:fae99ff77df223938abb118d8f214eb3c2cdc225c36ba024f6bf7e84fabf53e1"
+          ],
+          "05742bf925560bdf54c56811d66aaeb38e83717cc1efa567f87fc14334098bae": [
+            "constraint-semantic-v1:e07b358858625dfd5b4e3f8eb20fb262094726d4ca5672e34d0e08222e4abd07"
+          ],
+          "106a22f489697c4970d04384009909e59aaf2d4e2b604bfafa027afeff3e2de4": [
+            "constraint-semantic-v1:27da6caf4be2e64112603ca9617dbe2a17385dcdfa3c4e04e308da81554d1053"
+          ],
+          "16b8b639bf0d0bcf5c65d26c8af7a8894f3681d32b86d3d48431e461d167339b": [
+            "constraint-semantic-v1:baba908f8e4931ae8504f770a738507f18e285f9f4d1f6738f13b41c373efbf4"
+          ],
+          "1b36eb2860cc155d8bdabbc7bb40298f3540611d9db8faaaad8bd1ba008d8381": [
+            "constraint-semantic-v1:195469ee8f5cfd858e9e01d5fe6ccbbacdfa0781fb303ee2a8da5e344ceb8243"
+          ],
+          "1c3c076c3adf3808b60d9a8c01c6880e0538015fb86fdcb0c268f8c3bfac17e5": [
+            "constraint-semantic-v1:7f8502d8e4ab60e5eb43cab2ffc3833569632f0c7d7ccd4cd4fcaac0392c974f"
+          ],
+          "1d23ed9849ea7c902b40ba0c55851c2797c6c10d696234e6f4a151214093d6e9": [
+            "constraint-semantic-v1:d5dd4889bde55f6f31ac1ad2bf552ac038672709ec6200282356cde48542f0e2"
+          ],
+          "27b344116e8e78414f9010ec42272b7dc03bf30385fab5154d73ae233d132810": [
+            "constraint-semantic-v1:f3f9d588258bcc0fe2ec2a6da8c8bb27e64478b421c2f864a9cd9715a779586f"
+          ],
+          "288bc3ea9cbdc8fc56b26e8c7e38c40dfc919677c6a66dc32cf3d10fcd793ecf": [
+            "constraint-semantic-v1:0c02eb092738ed1e8f054c537e432f04fd9317209de4844234dc55e55272c72b"
+          ],
+          "2bccbd12279184f25f9a6ddd8c13735b331c87621c829d5122663a9ee6c61b1e": [
+            "constraint-semantic-v1:90f71b09247b5b957098b08d610081297264d456e367018ef8bca24bdbab035f"
+          ],
+          "2d6d15228a4b45f6b0689437e80416b1388249a75a762b076e9b0bdd0eddf8f2": [
+            "constraint-semantic-v1:58ea10fb16e23af1c09b26d5deebf91dbf3c22e5d397b2859c2ab6fb1cbc677a"
+          ],
+          "2eb67c18eee903d427ea435136a96d7a9ce5029c682672b9d2a2ea8abd3a0d28": [
+            "constraint-semantic-v1:c91f1704c1c24f2927124b1c2b3a7352c1bf7a0f5f702238846daca2985bd2db"
+          ],
+          "3132dbba64c8d3608afe2a1005f93de107e550972aeb4d17cb31dbf4bbc02275": [
+            "constraint-semantic-v1:3d1714ac5e0ff0ca31af6dc3127b0eca72e9a7f359ec8db549a602ef0a121f40"
+          ],
+          "32fa38159592fadcf69687a73251df82a3e20d4f7a7c8fe04a43b7fca5120798": [
+            "constraint-semantic-v1:f31e24199d6facfd437f1d64dd5b6733053100b8e9640fc2baf382b262bd4d09"
+          ],
+          "3be817712728f28cbe62edb5ec8f09ebcd5cdce724cba68be55c18208bce95df": [
+            "constraint-semantic-v1:c218f7120470dab17f439b592f483ae5d72d685e3c299ff9febc01b1e5ac125a"
+          ],
+          "4426931dd56598823a9b2c676093d749b7195665c208cf26fb903c39cc1f7c77": [
+            "constraint-semantic-v1:f55d9f9b8ffd62d83896c6c4d189e8126be789fba0c177c20765722c9049d4c1"
+          ],
+          "4f0d8f9fdfa14b8b3668db398cc9594a2fd34bc50813557b6d7b8fcfe9e9960c": [
+            "constraint-semantic-v1:11083277e107050fc65b62a663c690fc4b39149dc8807b7602ed546e5ba9f2be"
+          ],
+          "5032277f31c4fb01b85b04018df9c48c8db8735084f2ea4fb1810c668ae46b30": [
+            "constraint-semantic-v1:720c8a5b98fad068db314d88758317dc3ecda374f7fc358874c1f69b8ec36a9e"
+          ],
+          "51f24f7f9d1c293306c07e425a89d5e183412ac32a63ecbd98087d78d531ecf6": [
+            "constraint-semantic-v1:73e9f5c124ef30fd53d367e0c95b01645b1b60246dafa58c2661062d45ec47f0"
+          ],
+          "5308a08a044c94a8d566d7733cdbf9e23522ed2cdafb9e7edddaba6a9da5e751": [
+            "constraint-semantic-v1:81be9c2bf7c0171b578225014781e242a943db788a29d77ecae40c01dc54e457"
+          ],
+          "5829d3249b4b74e9e199d00c8b8516fdcc30c2d8f1436e41fdf4459915150f12": [
+            "constraint-semantic-v1:d4cf53e00c2b1bd484a68e40303d154a1464c312e94c9b807059ab6af3d3b504"
+          ],
+          "58b61b5f8b3bb0bd1f524a5030f14d5e47e3ff6b3979af7dd7c3fcd52544baec": [
+            "constraint-semantic-v1:5a215e27ba8bf834a6ba165d389209cd50393f7049533c2dd0dc9d4937f6111f"
+          ],
+          "5a8fee7f17f9541817ffbe39bccad7665583e1dbf0e98af369bfb6cd45a01f4c": [
+            "constraint-semantic-v1:744b0bd149cbd408cbcb4ff1bb496a5b80cd2ae687d139e772141c0c105a298e"
+          ],
+          "5ba03b50a482cf2b3328b4800e46f86f8583e18f8a759f388efcd2b4a8c50e14": [
+            "constraint-semantic-v1:3bf84c71fd3faa74a7d94221291be22f3d0599e410f49e2532976a18aab23c07"
+          ],
+          "5c16bd175d3be4a61037b818f7b565d9a616b18db247775c851c4745a66642ee": [
+            "constraint-semantic-v1:0667b2939c2e1eeacd867c66f64a1cd47440215075602d1733e0c118a7319d8c"
+          ],
+          "61dfa0488f6127a89eac433290bfcec7301f2199d838f30d2800a20457e185eb": [
+            "constraint-semantic-v1:712dae931b73a839437f4836f709818142887c5fda6cc0a6e1749f85d9768284"
+          ],
+          "6288c2720abf7c49159ed74f5c8367e3c1b4aa57c0df9b8a692b6c54d087caa5": [
+            "constraint-semantic-v1:96c42c140ccf2339636ebcbdcd7a925c791669f435118746196b171b0aa3c159"
+          ],
+          "675fcd234439e7d9e0510a292813399f2d27b5141eb9d3787a7bf73d756eeee1": [
+            "constraint-semantic-v1:9e21f10af442fa814bf8a4af3c4ad8e246726ba7a7bfa9f80994a6434c29c64c"
+          ],
+          "699d3cfe2b8e32d9fcd3b907de9d58f36058b30e8db2a2f818be1f4c5df4b0e5": [
+            "constraint-semantic-v1:178d11bac4b3f409937079d6bcb81dbda9fcf69f3fb94bf6b3a02869659bb83e"
+          ],
+          "6c3d6203f56505526df77a80b26e73f567b38164add524741e78ec49adea8a3e": [
+            "constraint-semantic-v1:75678cc24d8f224d5c38b5ba225fecfb53641c11b1e4ab34b6ef86c397201891"
+          ],
+          "705fcc4f42de98fe2c56917e788b8f15bd74009304ec0a9dae5dec383cc1ba93": [
+            "constraint-semantic-v1:d80e1b98f505d41128c61444e2c1e24be4590e1953cfb7653384222944a06b20"
+          ],
+          "74169c8d3e5094c968df1793e33060aef9dff98147ba6988c6e0f1d56a26681e": [
+            "constraint-semantic-v1:29bd139b40be517a483096280c3a0d599a69bd241407f5c3b96b4fa5c1c7433d"
+          ],
+          "78e3d15d9a211d4365cba368a1ce2efc7862a71ba861475417e9890329ceb85a": [
+            "constraint-semantic-v1:14a0ab3de966b7c5ba29fa0e3b77a4dc557621b37db628d19b16b6d0c3666393"
+          ],
+          "7a1e0a562689131fe78ae52db6bd4c029c8aca6ccbae3a860cb00faef43b7f92": [
+            "constraint-semantic-v1:79f71c5137926bca861a3551706471bacf65f600761eac388a5d9d3f7f7f1abf"
+          ],
+          "83bc8796bb8a9e57189824dcbbe1ed8703a1d48f54bc0c1bdcad76429006ede7": [
+            "constraint-semantic-v1:e57830b6993c622c7d3f3d6fe29f81f754725fadb4643ec0fc2292ca0dca9c9d"
+          ],
+          "8846e0256701b57d4f96c219b91521b4779ea6890f04e77cd7911cc412e3936a": [
+            "constraint-semantic-v1:9a9ec1dcbf1f95ef66d3cee2ebfba3ca439ef5fca3a0fe4bd5f74b71c19e0105"
+          ],
+          "8a44b3db04ef2e2df90b6077ffbae0add804bc67b47fb03a6e56bbdda638e310": [
+            "constraint-semantic-v1:dd21dace6f3932db29abce2fc2bacd7cdac2d718b8545f6a0eeb1dadde1c8b56"
+          ],
+          "8fb1e388fb2590d0235f072251fd06c0368edf96184b735d6220b37fdf3852b4": [
+            "constraint-semantic-v1:2f47b996dc9f5104d6b6cba9519dcd81e29177518b9faa8d15b56340d9fb76ab"
+          ],
+          "9592e1c584250f2e31480785dedba089679adcc9b3567ff10284f9f116f6b4e5": [
+            "constraint-semantic-v1:568753f83b2448fb4bf36efe6a60b87e2b20332386f3537a31d0af2248951b80"
+          ],
+          "95bd67de787a8cd25193631f38ece09f831e59cd595dce32aa1825bff08e7ac4": [
+            "constraint-semantic-v1:009bdadb541b058a95c5ac93e58e7ab01878fd922498c981d7e88d3754a729d5"
+          ],
+          "95f1ab3a0e29e3647b79d8ec45cd8f3bb2b0b5f0a0dbc9641d0a4052039860b2": [
+            "constraint-semantic-v1:2fd80395f7363818b70ff0924faa8117f29170249f2d2fe119879d5c4f221529"
+          ],
+          "990105a9af769fd52ae33f8928c9ec08999de0527e8393923d84ffc63f62f7f8": [
+            "constraint-semantic-v1:fbd4f03bc4284da397b2cf8e2b220dd8fb036d23b74b20a7cc7338226fa4feba"
+          ],
+          "9b788e1b586e39d0f0c445b7564a323afd095355f04629b65d74231912bc9171": [
+            "constraint-semantic-v1:f3bdbd3967b20f2885341b0b72d79c259d60a07d52f3b6a7a42c5f0ee5a6f51d"
+          ],
+          "9f3e1852f30cb27f4c407a185b438453560a343964584b97d70361b86bfa5030": [
+            "constraint-semantic-v1:81bcf20abbe61690a700693ef2763fd4eed04c49b68057e6957218f3b773d103"
+          ],
+          "a68c33a1d2dc6a18a37d65571b6d57254ad71e9c04c0c76bb309a61840046949": [
+            "constraint-semantic-v1:c780b8d1cff382353ffd0bc391e55e7c3fe9190eda20956481dce29a09427e4d"
+          ],
+          "aa35f47e2b0f7ebac75313a3f1ea48bee2023b58462d919abc3c8121cdb986ea": [
+            "constraint-semantic-v1:abf218889ccac9c9cd419a831ed617fee597018a260426b86ab39192700fe414"
+          ],
+          "aac9f59bee4bc1c37e1c4b15f8b3b44fc6f0516cae83a1861abb04d2e9cf3d5f": [
+            "constraint-semantic-v1:da9ab7029c2f31e6669d20269b1c2ef85d2c39f3186fc07ea57af9830b42b10a"
+          ],
+          "adc5d10c60c1675b9cc50111d26290b0568a58cce53eaa646b1ab867a993b327": [
+            "constraint-semantic-v1:c174d3a5c93f7d6489b77f324da60a3c21f1ab3973dbfa99662fbe2b7e25b924"
+          ],
+          "b24eaf29d8e77a3785ded2fae6ab6b8d84d98f3f6a3bcc38ca7f58b2ec548a11": [
+            "constraint-semantic-v1:91669ddcec9f3884674044c7ad72aa9417657d01dc96e9dbddd81659f68cafc9"
+          ],
+          "bc6de1def428408742808370fdefc0be20f0b51f1adeaebe14eaf4552755f1dc": [
+            "constraint-semantic-v1:8f6b9e055fb41dc89819a6f2a51ee58e750e2fa5b4807aecbc1a236cd92c31d7"
+          ],
+          "c2b7a557ed09c5807f4c6ea2c649d251d0006faf32fe8c5188a0ae7205f7d51c": [
+            "constraint-semantic-v1:40ae33550e7e495a900c5c570098dbad712787990c63009514495a8ec5fdb316"
+          ],
+          "c3fc43f8ee62d836565deabc8f3dc7e1577709ff56a303f22a9290c72d9be8d6": [
+            "constraint-semantic-v1:1824531d18c0ce714e4392bf6df9b88e06f22704c952dab57c8807ab407f8980"
+          ],
+          "d8ee135aad68bba62d9b00955dbda416d4e8f40edce6490daca672c48f566817": [
+            "constraint-semantic-v1:c1c87d9890bc525e4aeb1b26ebe4bd891cb50fbc49fef266994f7612854df946"
+          ],
+          "d9c8762cb55aaac97f4e793ad5ab1b2e96c63ed6b6191986d16f99d5a3824379": [
+            "constraint-semantic-v1:40166bb04041eead1b5f3dd92de07489b6fbc756c57a0ab4818f569b7f4a28be"
+          ],
+          "dcb9b9c320a48f5a84d9beeebf2bbf71a08dff5f0a00be07583e61ccaace5d25": [
+            "constraint-semantic-v1:b3d4f752c417aa3b20a1f5d054eed7210798a8354640507eddd6f77fdc08aa12"
+          ],
+          "e297fb5ada6a80a63b17a8606e925a4bd6ca94a6ace63b950df6a6600c5f3094": [
+            "constraint-semantic-v1:de26cee41da411f48553b29442f5167c10b2f7cbbd383e4e652f3efd683e95eb"
+          ],
+          "eca59478f70b7a1d6886c2935b3be5455268ae16869bd71f34528c2a5b5c4283": [
+            "constraint-semantic-v1:fe4c9175b0a43848a87a2d7e78cb8a490b55f1a42f49ae4ca5464ab3a076a02b"
+          ],
+          "f2b8edc9822ffa84453100664bf585f888a5281c6aef81ea4d14936f2c51021a": [
+            "constraint-semantic-v1:de68cc9dbf69e73caf3af60b36b6229dfde14440b4e9174873ba1fdd9dc678fd"
+          ],
+          "f7901644de4e363bc9ef46f7266eda4dbf74c716f02d96691e8bb3c49ef0c592": [
+            "constraint-semantic-v1:e3191180a1fbb162c113ff74818af74113ba124ad698a5df90bea7cff681cdb6"
+          ],
+          "fc4d736e2e735840d8b38ddca5b0b11c311ca48c3fdb7a7d6f2637660866253b": [
+            "constraint-semantic-v1:cd668879a4b7bda45cfa2c6ccc020839df983e9eceb27042ddd8da8dc62f1a10"
+          ],
+          "fea6f0ec19fe0fdfb814bbfa5e94ea167e4c5b9cca7bdcff3345b12edf652ca5": [
+            "constraint-semantic-v1:c5ebe6de588f2699dcb152a63eecf368310cb5be79cb59924fa3f4c5f8b6c45e"
+          ]
+        },
+        "top_k_per_endpoint": 2,
+        "unique_attempt_semantic_ids": [
+          "constraint-semantic-v1:2f47b996dc9f5104d6b6cba9519dcd81e29177518b9faa8d15b56340d9fb76ab",
+          "constraint-semantic-v1:e3191180a1fbb162c113ff74818af74113ba124ad698a5df90bea7cff681cdb6",
+          "constraint-semantic-v1:712dae931b73a839437f4836f709818142887c5fda6cc0a6e1749f85d9768284"
+        ],
+        "version": "v5-risk-aware-pareto-selector-v1"
+      }
+    }
+  },
+  "checkpoint_digest": "1f7831428b8a36010649d8bcb51c5a0bd23eb7221796d551e6d8f6ec38ebee71",
+  "claim_boundary": [
+    "Development H4 ablation C only; not a molecular superiority claim.",
+    "Uses recycled curvature only; no exact Hessian or HVP enters screening.",
+    "All rejected exact work remains counted although state rollback is exact.",
+    "paper_measurement_cost is undefined and not inferred from work counters."
+  ],
+  "exact_attempt_records": [
+    {
+      "acceptance": {
+        "accepted": true,
+        "after_parameter_count": 21,
+        "after_structure_digest": "8fb1e388fb2590d0235f072251fd06c0368edf96184b735d6220b37fdf3852b4",
+        "before_parameter_count": 24,
+        "before_structure_digest": "5a30bd86da6ff690a994860b8d7f2c5d38f728bc3a2f2f9be2099b02b223ac87",
+        "budget_reference_energy_hartree": -1.9961503255188093,
+        "candidate_energy_hartree": -1.9961503255188089,
+        "checks": {
+          "constraint": true,
+          "cumulative_energy_budget": true,
+          "finite": true,
+          "independent_energy_agreement": true,
+          "independent_state_fidelity": true,
+          "kkt": true,
+          "optimizer_path_reviewed": true,
+          "pareto_nonworse": true,
+          "physical_scalar_domain": true,
+          "resource_improved": true,
+          "resource_recount": true,
+          "transformation_semantics": true
+        },
+        "evidence_digest": "91aebcae94d65c589cc6527b40bd1829050b472086ad7ad961cb841c76793020",
+        "rejection_reasons": [],
+        "source_energy_hartree": -1.9961503255188093,
+        "version": "runtime-kkt-cumulative-resource-guard-v2"
+      },
+      "atomic_candidate_ids": [
+        "candidate-v1:3816bd383bb7c464614ffdc9571a6ecb879e4d4c1c14e8204d01d5dde6e91dc2"
+      ],
+      "before_resources": {
+        "cnot_count": 158,
+        "cnot_depth": 73,
+        "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 14,
+        "parameter_count": 24,
+        "structure_digest": "5a30bd86da6ff690a994860b8d7f2c5d38f728bc3a2f2f9be2099b02b223ac87",
+        "total_depth": 270
+      },
+      "constraint_numerical_id": "constraint-numerical-v1:6ca6a4235195b015ef7de82f2f8a471d09d95034cf9c59ef76a4dc49db8df2bf",
+      "constraint_residual_infinity": 0.0,
+      "constraint_semantic_id": "constraint-semantic-v1:2f47b996dc9f5104d6b6cba9519dcd81e29177518b9faa8d15b56340d9fb76ab",
+      "exact_attempt": 1,
+      "fallback": null,
+      "paper_measurement_cost": null,
+      "physical_resources": {
+        "cnot_count": 145,
+        "cnot_depth": 73,
+        "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 13,
+        "parameter_count": 21,
+        "structure_digest": "8fb1e388fb2590d0235f072251fd06c0368edf96184b735d6220b37fdf3852b4",
+        "total_depth": 246
+      },
+      "prediction": {
+        "constraint_residual_infinity": 1.0408340855860843e-17,
+        "direct_quadratic_change_from_current_hartree": 5.1961840226612014e-05,
+        "predicted_change_from_current_hartree": 5.196184022661202e-05,
+        "predicted_constraint_penalty_hartree": 5.196184022666539e-05,
+        "reference_energy_kind": "current-checkpoint-quadratic-model"
+      },
+      "primary": {
+        "coordinates": [
+          -0.37159925903998925,
+          -0.1146625972369224,
+          0.21313866399122505,
+          0.20342526650152595,
+          -0.1271849823843589,
+          -0.09033016390549548,
+          -0.1455110057314218,
+          0.5339905425511411,
+          -0.17069408548655515,
+          0.1962997959080229,
+          0.07508565187779041,
+          -0.3398969173077089,
+          0.3953111049068783,
+          -0.045947414561203555,
+          -0.07408313400282823,
+          0.7972775517470563,
+          0.7446868501435691,
+          0.05004287534454755,
+          0.08466004674875974,
+          -0.05375569107010701,
+          0.0011161975593535897
+        ],
+        "energy_hartree": -1.9961503255188089,
+        "final_inverse_hessian": [
+          [
+            14.837297317014398,
+            -4.794966833841475,
+            -3.522332710199022,
+            0.35111304955686856,
+            4.275152020874383,
+            -3.8057384364011684,
+            0.9420598907046407,
+            -77.07955197369401,
+            0.7432725823446809,
+            -2.804655162721172,
+            -0.7685603596160762,
+            -8.953853799460266,
+            11.198852457997232,
+            -0.7844967554334741,
+            -0.5961472163391597,
+            7.216915044243363,
+            4.5077917266083,
+            -1.127936464151981,
+            -37.764881960579565,
+            22.244959706970942,
+            0.6030614448888095
+          ],
+          [
+            -4.79496683384149,
+            2.4700754497033035,
+            1.1462253026577018,
+            -0.22071472435152956,
+            -1.8716136342002674,
+            0.9529601272668669,
+            -0.22944186375585016,
+            29.080722330737487,
+            -0.5626318993471277,
+            0.37876607712466615,
+            0.8962332547801767,
+            5.824305814591671,
+            -6.9484904640864515,
+            -0.7671548329697125,
+            -0.4415496657238834,
+            -3.167736984183417,
+            -1.2701161601373854,
+            1.2044987923511261,
+            14.137191565859442,
+            -7.624781800974265,
+            -0.03851942461062091
+          ],
+          [
+            -3.5223327101990276,
+            1.1462253026576972,
+            2.0834594171667136,
+            -0.03946159382583613,
+            -1.5569439861128327,
+            1.182071697827279,
+            0.09114120829530549,
+            19.932479592107953,
+            -0.022168819733944217,
+            -0.34674414926419816,
+            0.37813231244920115,
+            -4.799813688304098,
+            4.232939829230882,
+            -0.17931932305480122,
+            -0.36136713398085873,
+            -1.8730100482356449,
+            -1.0411452376628016,
+            0.5962488612167769,
+            10.016321340387496,
+            -7.606523104248839,
+            -0.253890570307134
+          ],
+          [
+            0.3511130495568683,
+            -0.22071472435152878,
+            -0.03946159382583473,
+            1.2882351176570148,
+            0.5354318508440269,
+            -0.6117550470647162,
+            0.33513784733854046,
+            -2.281873842589241,
+            0.21153380790189216,
+            -0.8977157542971912,
+            0.023869632886580474,
+            10.354035364827112,
+            -9.790534272669348,
+            -0.04521401602415559,
+            0.15320795406973298,
+            0.20931326942883838,
+            0.03651645586130065,
+            -0.06549491455425732,
+            -0.879244088318001,
+            3.318423694909986,
+            0.17518855794910546
+          ],
+          [
+            4.275152020874391,
+            -1.8716136342002618,
+            -1.5569439861128325,
+            0.5354318508440256,
+            3.478506134890898,
+            -1.8725281196871815,
+            0.40375029703841,
+            -27.312098412943854,
+            0.5466985011692291,
+            0.25189441605429663,
+            -0.885367100927648,
+            17.804755705735626,
+            -14.374018079898445,
+            -0.2488152049848838,
+            1.219477015583195,
+            1.8257446330537213,
+            2.063175977694031,
+            -2.7335868775924306,
+            -13.317610803477733,
+            12.813032878979113,
+            0.43254874988379083
+          ],
+          [
+            -3.805738436401164,
+            0.95296012726686,
+            1.1820716978272716,
+            -0.6117550470647186,
+            -1.8725281196871801,
+            2.785312775002197,
+            -0.25878493579651624,
+            18.660565590841667,
+            0.2073569332720214,
+            1.4721042039517829,
+            -0.10132005680943877,
+            -22.65692017845128,
+            19.869574226817655,
+            1.810232520704218,
+            -0.16921469159216063,
+            -0.1719192721595863,
+            -2.3818788398274893,
+            1.3313265894698296,
+            9.213839872656623,
+            -11.498554239860315,
+            -0.41944197362677266
+          ],
+          [
+            0.9420598907046358,
+            -0.22944186375585,
+            0.09114120829530675,
+            0.335137847338541,
+            0.4037502970384086,
+            -0.25878493579651496,
+            1.0996436320167602,
+            -4.622699938151949,
+            0.40692046775723184,
+            -0.9026522883589921,
+            -0.3426291781737512,
+            0.9266502977527903,
+            -0.8505359479028979,
+            0.16129459897220094,
+            0.2535560006582275,
+            0.28077888376975935,
+            0.47310536279428195,
+            -0.5075954829351481,
+            -1.9330944460062696,
+            1.6751466761600518,
+            0.6377923237938661
+          ],
+          [
+            -77.07955197369392,
+            29.08072233073738,
+            19.932479592107935,
+            -2.2818738425892215,
+            -27.31209841294376,
+            18.660565590841642,
+            -4.6226999381519445,
+            457.1298116894477,
+            -6.919587020162547,
+            14.793236380187691,
+            8.95733136597963,
+            70.4938797985493,
+            -86.45291071532277,
+            -2.6744500338022172,
+            -2.134860550047504,
+            -47.04499757204231,
+            -22.854730951829573,
+            13.512857405625157,
+            219.9539631117962,
+            -125.7785014067977,
+            -7.866916449521259
+          ],
+          [
+            0.7432725823446835,
+            -0.5626318993471295,
+            -0.022168819733947073,
+            0.21153380790189147,
+            0.5466985011692272,
+            0.20735693327201962,
+            0.4069204677572305,
+            -6.91958702016255,
+            1.5208813449836807,
+            -0.4760351190168365,
+            -0.6815647466940855,
+            -4.4981399324717515,
+            5.216955354794387,
+            1.0435444665183713,
+            0.34140288298751237,
+            1.5582416002743453,
+            -0.385090612855676,
+            -0.5983179167162769,
+            -2.9513106265172695,
+            0.8703889469328233,
+            0.6227045021891262
+          ],
+          [
+            -2.804655162721118,
+            0.3787660771246901,
+            -0.34674414926422514,
+            -0.8977157542971975,
+            0.2518944160542731,
+            1.4721042039517567,
+            -0.9026522883589901,
+            14.793236380187775,
+            -0.47603511901685436,
+            9.74120934384146,
+            -0.16310512659822224,
+            3.0819708887374366,
+            -3.1959935242673216,
+            0.6739208952288668,
+            1.508723607688971,
+            -1.529614697277789,
+            -1.0317573708363708,
+            -1.6402652251810088,
+            5.123911638494221,
+            -3.759665825290716,
+            -1.6406527739760641
+          ],
+          [
+            -0.7685603596160955,
+            0.8962332547801747,
+            0.37813231244920514,
+            0.023869632886576432,
+            -0.8853671009276562,
+            -0.10132005680942542,
+            -0.34262917817375155,
+            8.957331365979577,
+            -0.6815647466940811,
+            -0.1631051265982167,
+            8.038718883257264,
+            1.4705402843383557,
+            -1.7661010580505976,
+            -8.038293197872909,
+            -1.047996414711751,
+            -1.4282458300264558,
+            -0.05649174959522599,
+            0.8165073061699248,
+            4.2060155317030885,
+            -2.0004045979195126,
+            -0.4932558749231175
+          ],
+          [
+            -8.953853799460207,
+            5.824305814591705,
+            -4.799813688304093,
+            10.354035364827089,
+            17.80475570573563,
+            -22.656920178451262,
+            0.9266502977528034,
+            70.49387979854865,
+            -4.498139932471759,
+            3.08197088873711,
+            1.4705402843384086,
+            571.8238910390527,
+            -500.9744874721843,
+            -29.448287707671078,
+            12.13392811315752,
+            -40.56949532025366,
+            22.842397344464953,
+            -30.144575919329327,
+            30.826170533834002,
+            112.83786771577962,
+            -0.6653548126603785
+          ],
+          [
+            11.19885245799732,
+            -6.948490464086516,
+            4.232939829230869,
+            -9.790534272669325,
+            -14.374018079898422,
+            19.86957422681758,
+            -0.8505359479029273,
+            -86.45291071532331,
+            5.216955354794405,
+            -3.1959935242667568,
+            -1.7661010580507268,
+            -500.97448747218414,
+            464.5930868286941,
+            22.44688233326574,
+            -9.410390954554792,
+            34.246674935090084,
+            -14.798771006516077,
+            18.870625169285542,
+            -38.555802795490635,
+            -95.08262207058172,
+            0.7069056406004259
+          ],
+          [
+            -0.7844967554334741,
+            -0.7671548329697081,
+            -0.17931932305480525,
+            -0.04521401602415147,
+            -0.24881520498487192,
+            1.8102325207042007,
+            0.16129459897219828,
+            -2.6744500338020867,
+            1.0435444665183637,
+            0.6739208952288943,
+            -8.038293197872932,
+            -29.44828770767097,
+            22.446882333265513,
+            18.986795592932577,
+            0.7093376497276516,
+            5.841364810984111,
+            -4.966612694259968,
+            4.833058176809991,
+            -1.1030507415218727,
+            -6.279760978192818,
+            0.018734797253659393
+          ],
+          [
+            -0.5961472163391268,
+            -0.4415496657238815,
+            -0.3613671339808573,
+            0.15320795406973237,
+            1.2194770155831969,
+            -0.16921469159217706,
+            0.25355600065823214,
+            -2.1348605500476516,
+            0.34140288298751204,
+            1.5087236076889177,
+            -1.0479964147117284,
+            12.133928113157594,
+            -9.410390954554838,
+            0.7093376497276314,
+            9.36708774903144,
+            0.10462248671473914,
+            0.18296158396089113,
+            -10.628033945528859,
+            -1.0224010052614094,
+            3.251492834521347,
+            0.1698493041357384
+          ],
+          [
+            7.21691504424336,
+            -3.167736984183408,
+            -1.8730100482356389,
+            0.2093132694288429,
+            1.8257446330537195,
+            -0.17191927215959923,
+            0.2807788837697574,
+            -47.04499757204237,
+            1.5582416002743429,
+            -1.529614697277779,
+            -1.428245830026472,
+            -40.56949532025365,
+            34.24667493509001,
+            5.841364810984147,
+            0.10462248671471222,
+            14.698208293112303,
+            -6.008032784866876,
+            1.6530947557499112,
+            -22.28649111191289,
+            5.599055830298651,
+            1.0708390303616027
+          ],
+          [
+            4.5077917266082945,
+            -1.2701161601373818,
+            -1.0411452376627994,
+            0.03651645586129911,
+            2.063175977694032,
+            -2.38187883982748,
+            0.47310536279428217,
+            -22.854730951829616,
+            -0.3850906128556747,
+            -1.031757370836385,
+            -0.05649174959521376,
+            22.842397344464935,
+            -14.798771006516063,
+            -4.966612694259992,
+            0.18296158396088935,
+            -6.00803278486687,
+            10.151848800889477,
+            -3.5318204188589037,
+            -11.277551821809828,
+            11.996869345341626,
+            0.43605109675336795
+          ],
+          [
+            -1.1279364641520218,
+            1.204498792351129,
+            0.5962488612167742,
+            -0.06549491455425835,
+            -2.733586877592428,
+            1.3313265894698532,
+            -0.5075954829351536,
+            13.512857405625454,
+            -0.5983179167162801,
+            -1.6402652251809475,
+            0.8165073061699027,
+            -30.144575919329245,
+            18.870625169285496,
+            4.833058176810001,
+            -10.62803394552881,
+            1.653094755749869,
+            -3.5318204188588975,
+            21.925693441134023,
+            6.496715411616898,
+            -10.246139378485278,
+            -0.7013585374736933
+          ],
+          [
+            -37.76488196057952,
+            14.137191565859409,
+            10.016321340387503,
+            -0.8792440883179946,
+            -13.317610803477736,
+            9.213839872656614,
+            -1.9330944460062605,
+            219.95396311179633,
+            -2.9513106265172713,
+            5.12391163849408,
+            4.206015531703146,
+            30.82617053383411,
+            -38.55580279549038,
+            -1.103050741521945,
+            -1.0224010052614174,
+            -22.286491111912845,
+            -11.277551821809826,
+            6.496715411616815,
+            107.56142731398336,
+            -61.53794988558256,
+            -3.183152621244531
+          ],
+          [
+            22.244959706970967,
+            -7.624781800974233,
+            -7.606523104248838,
+            3.318423694909991,
+            12.813032878979119,
+            -11.498554239860354,
+            1.675146676160058,
+            -125.77850140679779,
+            0.8703889469328016,
+            -3.7596658252908517,
+            -2.0004045979195086,
+            112.83786771577982,
+            -95.0826220705824,
+            -6.27976097819285,
+            3.251492834521321,
+            5.599055830298623,
+            11.996869345341677,
+            -10.246139378485221,
+            -61.537949885582556,
+            67.58061670301376,
+            2.2983584202817107
+          ],
+          [
+            0.6030614448888073,
+            -0.03851942461062077,
+            -0.2538905703071331,
+            0.17518855794910607,
+            0.43254874988379166,
+            -0.41944197362677405,
+            0.6377923237938653,
+            -7.866916449521266,
+            0.6227045021891281,
+            -1.640652773976054,
+            -0.49325587492312317,
+            -0.6653548126603944,
+            0.7069056406004293,
+            0.018734797253669704,
+            0.16984930413573518,
+            1.0708390303616042,
+            0.43605109675336634,
+            -0.701358537473687,
+            -3.183152621244539,
+            2.2983584202817164,
+            4.718914648764574
+          ]
+        ],
+        "finite": true,
+        "gradient": [
+          3.1459377325404603e-09,
+          4.996822643155152e-09,
+          -5.340110842671358e-10,
+          1.7961712603375979e-09,
+          -1.4815449830493654e-09,
+          -5.56123674194664e-09,
+          3.1571094219820517e-09,
+          -3.564354922325208e-10,
+          -5.376596751149876e-09,
+          2.020309752825966e-09,
+          3.31510719309841e-09,
+          -2.6178325132630853e-10,
+          -4.629227574187711e-10,
+          1.1048356986231855e-09,
+          4.301098051502639e-09,
+          4.880611609303642e-10,
+          -4.370189869706831e-10,
+          -2.682900946543443e-09,
+          -5.157407695355332e-10,
+          -4.732565153566654e-10,
+          -4.4893522233024896e-10
+        ],
+        "gradient_infinity": 5.56123674194664e-09,
+        "gradient_l2": 1.2405411706448012e-08,
+        "independent_energy_difference_hartree": 0.0,
+        "independent_energy_hartree": -1.9961503255188089,
+        "independent_state_recomputation_fidelity": 1.0000000000000004,
+        "independent_work": {
+          "energy_evaluations": 1,
+          "explicit_state_recomputations": 2,
+          "gradient_vector_evaluations": 1,
+          "initial_energy_evaluations_for_audit": 1
+        },
+        "optimizer": {
+          "function_evaluations": 31,
+          "gradient_component_equivalent": 651,
+          "gradient_tolerance": 1e-08,
+          "gradient_vector_evaluations": 31,
+          "implementation": "pinned-upstream-minimize_bfgs",
+          "iterations": 30,
+          "maximum_iterations": 200,
+          "message": "Optimization terminated successfully.",
+          "status": 0,
+          "success": true
+        },
+        "paper_measurement_cost": null,
+        "source_candidate_state_fidelity": 0.9999999999999989,
+        "wall_time_seconds": 1.3161335419863462
+      },
+      "round_index": 1,
+      "selected_optimizer_path": "recycled-obs",
+      "sequential_candidate_id": "candidate-v5:31092f298a433f060f89c505ee9b2d358048e029510a739835ed755e0cb02b9a",
+      "structural_resources": {
+        "cnot_count": 145,
+        "cnot_depth": 73,
+        "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 13,
+        "parameter_count": 21,
+        "structure_digest": "8fb1e388fb2590d0235f072251fd06c0368edf96184b735d6220b37fdf3852b4",
+        "total_depth": 246
+      },
+      "two_path_certificate": {
+        "componentwise_difference": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "componentwise_limit": [
+          1.0000003145937733e-10,
+          1.0000004996822644e-10,
+          1.0000000534011084e-10,
+          1.000000179617126e-10,
+          1.0000001481544983e-10,
+          1.0000005561236742e-10,
+          1.0000003157109422e-10,
+          1.0000000356435493e-10,
+          1.0000005376596752e-10,
+          1.0000002020309753e-10,
+          1.0000003315107194e-10,
+          1.0000000261783251e-10,
+          1.0000000462922757e-10,
+          1.00000011048357e-10,
+          1.0000004301098052e-10,
+          1.0000000488061161e-10,
+          1.0000000437018988e-10,
+          1.0000002682900946e-10,
+          1.000000051574077e-10,
+          1.0000000473256515e-10,
+          1.0000000448935222e-10
+        ],
+        "componentwise_pass": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "coordinates": [
+          -0.37159925903998925,
+          -0.1146625972369224,
+          0.21313866399122505,
+          0.20342526650152595,
+          -0.1271849823843589,
+          -0.09033016390549548,
+          -0.1455110057314218,
+          0.5339905425511411,
+          -0.17069408548655515,
+          0.1962997959080229,
+          0.07508565187779041,
+          -0.3398969173077089,
+          0.3953111049068783,
+          -0.045947414561203555,
+          -0.07408313400282823,
+          0.7972775517470563,
+          0.7446868501435691,
+          0.05004287534454755,
+          0.08466004674875974,
+          -0.05375569107010701,
+          0.0011161975593535897
+        ],
+        "difference_infinity": 0.0,
+        "difference_l2": 0.0,
+        "mapped_source_coordinates": [
+          -0.37159925903998925,
+          -0.1146625972369224,
+          0.21313866399122505,
+          0.20342526650152595,
+          -0.1271849823843589,
+          -0.09033016390549548,
+          -0.1455110057314218,
+          0.5339905425511411,
+          -0.17069408548655515,
+          0.1962997959080229,
+          0.07508565187779041,
+          -0.3398969173077089,
+          0.3953111049068783,
+          -0.045947414561203555,
+          -0.07408313400282823,
+          0.7972775517470563,
+          0.7446868501435691,
+          0.05004287534454755,
+          0.0,
+          0.0,
+          0.0,
+          0.08466004674875974,
+          -0.05375569107010701,
+          0.0011161975593535897
+        ],
+        "passed": true,
+        "policy": {
+          "absolute_tolerance": 1e-10,
+          "relative_tolerance": 1e-08
+        },
+        "projected_gradient_infinity": 5.56123674194664e-09,
+        "projected_source_gradient": [
+          3.1459377325404603e-09,
+          4.996822643155152e-09,
+          -5.340110842671358e-10,
+          1.7961712603375979e-09,
+          -1.4815449830493654e-09,
+          -5.56123674194664e-09,
+          3.1571094219820517e-09,
+          -3.564354922325208e-10,
+          -5.376596751149876e-09,
+          2.020309752825966e-09,
+          3.31510719309841e-09,
+          -2.6178325132630853e-10,
+          -4.629227574187711e-10,
+          1.1048356986231855e-09,
+          4.301098051502639e-09,
+          4.880611609303642e-10,
+          -4.370189869706831e-10,
+          -2.682900946543443e-09,
+          -5.157407695355332e-10,
+          -4.732565153566654e-10,
+          -4.4893522233024896e-10
+        ],
+        "source_energy_hartree": -1.9961503255188089,
+        "source_gradient": [
+          3.1459377325404603e-09,
+          4.996822643155152e-09,
+          -5.340110842671358e-10,
+          1.7961712603375979e-09,
+          -1.4815449830493654e-09,
+          -5.56123674194664e-09,
+          3.1571094219820517e-09,
+          -3.564354922325208e-10,
+          -5.376596751149876e-09,
+          2.020309752825966e-09,
+          3.31510719309841e-09,
+          -2.6178325132630853e-10,
+          -4.629227574187711e-10,
+          1.1048356986231855e-09,
+          4.301098051502639e-09,
+          4.880611609303642e-10,
+          -4.370189869706831e-10,
+          -2.682900946543443e-09,
+          -1.0974414176023739e-08,
+          -6.022856625324119e-10,
+          -1.5877276160480847e-09,
+          -5.157407695355332e-10,
+          -4.732565153566654e-10,
+          -4.4893522233024896e-10
+        ],
+        "source_target_energy_difference_hartree": 0.0,
+        "source_target_state_fidelity": 1.0,
+        "target_energy_hartree": -1.9961503255188089,
+        "target_gradient_infinity": 5.56123674194664e-09,
+        "target_native_gradient": [
+          3.1459377325404603e-09,
+          4.996822643155152e-09,
+          -5.340110842671358e-10,
+          1.7961712603375979e-09,
+          -1.4815449830493654e-09,
+          -5.56123674194664e-09,
+          3.1571094219820517e-09,
+          -3.564354922325208e-10,
+          -5.376596751149876e-09,
+          2.020309752825966e-09,
+          3.31510719309841e-09,
+          -2.6178325132630853e-10,
+          -4.629227574187711e-10,
+          1.1048356986231855e-09,
+          4.301098051502639e-09,
+          4.880611609303642e-10,
+          -4.370189869706831e-10,
+          -2.682900946543443e-09,
+          -5.157407695355332e-10,
+          -4.732565153566654e-10,
+          -4.4893522233024896e-10
+        ],
+        "work": {
+          "energy_evaluations": 2,
+          "paper_measurement_cost": null,
+          "source_gradient_component_equivalent": 24,
+          "source_gradient_vector_evaluations": 1,
+          "statevector_recomputations": 2,
+          "target_gradient_component_equivalent": 21,
+          "target_gradient_vector_evaluations": 1
+        }
+      }
+    },
+    {
+      "acceptance": {
+        "accepted": true,
+        "after_parameter_count": 18,
+        "after_structure_digest": "c325404d0ad710782263c735162159769d01eab50e8f4a39707cb4fea891060f",
+        "before_parameter_count": 21,
+        "before_structure_digest": "8fb1e388fb2590d0235f072251fd06c0368edf96184b735d6220b37fdf3852b4",
+        "budget_reference_energy_hartree": -1.9961503255188093,
+        "candidate_energy_hartree": -1.9960984238701234,
+        "checks": {
+          "constraint": true,
+          "cumulative_energy_budget": true,
+          "finite": true,
+          "independent_energy_agreement": true,
+          "independent_state_fidelity": true,
+          "kkt": true,
+          "optimizer_path_reviewed": true,
+          "pareto_nonworse": true,
+          "physical_scalar_domain": true,
+          "resource_improved": true,
+          "resource_recount": true,
+          "transformation_semantics": true
+        },
+        "evidence_digest": "0893b7f9f494d534a5e13dadd30e44ff993f581bb9291cd4db8577932734c8aa",
+        "rejection_reasons": [],
+        "source_energy_hartree": -1.9961503255188089,
+        "version": "runtime-kkt-cumulative-resource-guard-v2"
+      },
+      "atomic_candidate_ids": [
+        "candidate-v1:e48c048e341dc6ba769e1de308f753140a93f789216fde0a8139ed7d19c249b6"
+      ],
+      "before_resources": {
+        "cnot_count": 145,
+        "cnot_depth": 73,
+        "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 13,
+        "parameter_count": 21,
+        "structure_digest": "8fb1e388fb2590d0235f072251fd06c0368edf96184b735d6220b37fdf3852b4",
+        "total_depth": 246
+      },
+      "constraint_numerical_id": "constraint-numerical-v1:dc6b2a95b51ea127a7449eb937e4faaa5d33724cc3f8852548ebe0a757fc8b23",
+      "constraint_residual_infinity": 0.0,
+      "constraint_semantic_id": "constraint-semantic-v1:73eacf3cf062d634827fa36585e35338fabf8e0955b05e86e0b3ed9af4e1f909",
+      "exact_attempt": 2,
+      "fallback": null,
+      "paper_measurement_cost": null,
+      "physical_resources": {
+        "cnot_count": 132,
+        "cnot_depth": 60,
+        "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 12,
+        "parameter_count": 18,
+        "structure_digest": "c325404d0ad710782263c735162159769d01eab50e8f4a39707cb4fea891060f",
+        "total_depth": 222
+      },
+      "prediction": {
+        "constraint_residual_infinity": 1.3877787807814457e-17,
+        "direct_quadratic_change_from_current_hartree": 3.523700721407124e-05,
+        "predicted_change_from_current_hartree": 3.5237007214071234e-05,
+        "predicted_constraint_penalty_hartree": 3.52370072145918e-05,
+        "reference_energy_kind": "current-checkpoint-quadratic-model"
+      },
+      "primary": {
+        "coordinates": [
+          -0.3458762313927635,
+          -0.12682770051875752,
+          0.20504379792666677,
+          0.20504378033819712,
+          -0.11742341006216726,
+          -0.09988559106585626,
+          -0.1443405130979695,
+          0.34202006981479677,
+          -0.1702290535382095,
+          0.1754830000861307,
+          0.07416249604580959,
+          -0.3631478914354017,
+          0.42224584131408677,
+          -0.04748815450079515,
+          -0.0746223591101373,
+          0.8150146131117074,
+          0.7558133942572706,
+          0.04793814617011182
+        ],
+        "energy_hartree": -1.9960984238701234,
+        "final_inverse_hessian": [
+          [
+            1.5208440179660507,
+            0.1705795131748522,
+            0.04496596876739367,
+            0.030336841368469678,
+            -0.6037322404812983,
+            -0.4996546545472333,
+            0.3254294722305357,
+            -0.2532679377532985,
+            -0.19678214876816233,
+            -1.7455197666825741,
+            1.0486705064094939,
+            -0.27621031828217113,
+            -0.615869044545043,
+            -1.5189727953448033,
+            -0.9127726030496595,
+            -0.45681591120876885,
+            0.5168951224053047,
+            1.3836587228214186
+          ],
+          [
+            0.17057951317485195,
+            0.55761631145618,
+            -0.15806708291167373,
+            -0.1605249189302825,
+            -0.20521364595120345,
+            -0.16646374806554334,
+            -0.045608949619262,
+            0.276566324961386,
+            -0.20697572754565904,
+            -0.22416316912045775,
+            0.42581519708080984,
+            0.0020127949761260533,
+            -0.2916309307909496,
+            -0.5919847924096707,
+            -0.33261148283008296,
+            -0.17946249189270702,
+            0.13505301674520462,
+            0.5082936205827582
+          ],
+          [
+            0.044965968767393734,
+            -0.15806708291167368,
+            1.0647860104272042,
+            0.23503326181740816,
+            -0.039136130113899895,
+            -0.04480201437874539,
+            0.318860144607823,
+            -0.8086036679166722,
+            0.23828519828586298,
+            -1.2560947039826598,
+            0.0041115312138985255,
+            2.8978018794729437,
+            -1.6646693399045551,
+            -0.5779179693541301,
+            -0.10098080700730735,
+            -0.41098385390777925,
+            0.501407283978311,
+            -0.5243234311819797
+          ],
+          [
+            0.03033684136846943,
+            -0.16052491893028278,
+            0.23503326181740833,
+            1.0700404736055482,
+            -0.05358763281312665,
+            -0.023065610743703974,
+            0.2996884856019629,
+            -0.7135036748053166,
+            0.26082039902502613,
+            -1.1747609069705496,
+            0.08972646967019948,
+            -3.217213378598828,
+            2.321402923558246,
+            0.5499349406016365,
+            -0.08368170508341126,
+            0.7781771721937097,
+            -0.587141558555713,
+            0.6931865919147869
+          ],
+          [
+            -0.6037322404812979,
+            -0.20521364595120326,
+            -0.039136130113900075,
+            -0.05358763281312682,
+            1.0727319387673169,
+            0.3241067328271982,
+            0.03426665451217498,
+            0.1347567412451825,
+            0.3253458268705371,
+            1.4358095583648414,
+            -0.7816346723248484,
+            0.1282894889942532,
+            0.3724580060614495,
+            1.1719799092105507,
+            0.6531539869626561,
+            0.23103270984541946,
+            -0.2609335660110449,
+            -1.0650889659810732
+          ],
+          [
+            -0.49965465454723257,
+            -0.16646374806554348,
+            -0.04480201437874541,
+            -0.02306561074370391,
+            0.32410673282719743,
+            0.8361940277254625,
+            -0.0022408560465526275,
+            0.024164950325241817,
+            0.30862522847517876,
+            1.2193763646164972,
+            -0.5989248284173524,
+            0.04345112278214169,
+            0.5427978872277224,
+            0.829502210352821,
+            0.43055355131991296,
+            0.35098992287188646,
+            -0.3716352020109756,
+            -0.6262735318019653
+          ],
+          [
+            0.3254294722305348,
+            -0.04560894961926199,
+            0.3188601446078229,
+            0.29968848560196326,
+            0.03426665451217523,
+            -0.0022408560465525477,
+            1.0142895740251963,
+            -0.8348428972837693,
+            0.3365738360037004,
+            -1.1525878014922584,
+            -0.15639481496159174,
+            -0.2772139293072309,
+            0.04626336631867667,
+            0.14201921489356012,
+            0.19693507703326313,
+            -0.09873150899659336,
+            0.2555715760234024,
+            -0.21506075028764376
+          ],
+          [
+            -0.2532679377532975,
+            0.2765663249613855,
+            -0.8086036679166722,
+            -0.7135036748053166,
+            0.1347567412451822,
+            0.024164950325241956,
+            -0.8348428972837707,
+            9.399638256371986,
+            -0.8705760596493572,
+            7.265166038783705,
+            -0.17906623744090078,
+            0.8270623209249575,
+            -1.4406110157353593,
+            0.41982791734245295,
+            -0.038006714061019964,
+            -0.9639568458243358,
+            -0.3852905384761063,
+            0.18872493964208403
+          ],
+          [
+            -0.1967821487681621,
+            -0.20697572754565902,
+            0.23828519828586286,
+            0.260820399025026,
+            0.32534582687053737,
+            0.3086252284751792,
+            0.33657383600370044,
+            -0.8705760596493567,
+            1.3721631008206459,
+            -0.3709227485391153,
+            -0.5804252145955331,
+            0.09820075067463563,
+            0.8797695511890162,
+            0.896590516081859,
+            0.38867821661246676,
+            0.6946672887893756,
+            -0.5314121003501507,
+            -0.6291078475321044
+          ],
+          [
+            -1.7455197666825708,
+            -0.22416316912045797,
+            -1.25609470398266,
+            -1.1747609069705511,
+            1.4358095583648403,
+            1.2193763646164981,
+            -1.152587801492259,
+            7.26516603878371,
+            -0.370922748539116,
+            13.951599724508414,
+            -1.5911188602517163,
+            0.6496932206410282,
+            0.08653968556422065,
+            2.207283843815888,
+            1.6070735342749665,
+            -0.27821655297331954,
+            -0.9856648003733953,
+            -2.5921607720506126
+          ],
+          [
+            1.0486705064094954,
+            0.42581519708080995,
+            0.00411153121389838,
+            0.08972646967020032,
+            -0.7816346723248498,
+            -0.5989248284173523,
+            -0.15639481496159144,
+            -0.179066237440902,
+            -0.5804252145955329,
+            -1.5911188602517168,
+            9.505185683407603,
+            7.319427461198249,
+            -7.773178098587426,
+            -10.223630305908394,
+            -1.0133634513921583,
+            -0.852072722445859,
+            0.6372076016704508,
+            1.3097071051336444
+          ],
+          [
+            -0.27621031828217757,
+            0.0020127949761266084,
+            2.8978018794729437,
+            -3.2172133785988275,
+            0.12828948899425408,
+            0.04345112278214147,
+            -0.277213929307234,
+            0.8270623209249841,
+            0.09820075067463518,
+            0.6496932206410158,
+            7.319427461198238,
+            676.5207938489109,
+            -603.3577579243506,
+            -32.73271974699393,
+            6.4114440091109035,
+            -39.49327145054613,
+            25.235482391976895,
+            -31.532105475871433
+          ],
+          [
+            -0.6158690445450399,
+            -0.2916309307909498,
+            -1.664669339904556,
+            2.3214029235582445,
+            0.3724580060614482,
+            0.5427978872277228,
+            0.04626336631867933,
+            -1.4406110157353575,
+            0.8797695511890189,
+            0.08653968556422598,
+            -7.773178098587426,
+            -603.3577579243504,
+            563.7846668267448,
+            27.06307308922045,
+            -4.443373703339247,
+            31.625097957160744,
+            -18.472447768654114,
+            20.536340739216488
+          ],
+          [
+            -1.518972795344805,
+            -0.5919847924096722,
+            -0.5779179693541304,
+            0.5499349406016363,
+            1.1719799092105516,
+            0.8295022103528215,
+            0.14201921489355898,
+            0.4198279173424543,
+            0.896590516081858,
+            2.207283843815896,
+            -10.223630305908394,
+            -32.73271974699392,
+            27.063073089220463,
+            21.354906394671257,
+            1.0731258192339221,
+            5.706177465822208,
+            -4.997589140247479,
+            3.509680590354822
+          ],
+          [
+            -0.9127726030496597,
+            -0.33261148283008285,
+            -0.1009808070073078,
+            -0.08368170508341152,
+            0.6531539869626556,
+            0.4305535513199129,
+            0.19693507703326213,
+            -0.038006714061015204,
+            0.3886782166124659,
+            1.607073534274971,
+            -1.0133634513921534,
+            6.4114440091109035,
+            -4.443373703339235,
+            1.0731258192339173,
+            9.109471055658203,
+            0.20783948980236763,
+            -0.21249102024892474,
+            -10.17045562768303
+          ],
+          [
+            -0.45681591120876885,
+            -0.17946249189270697,
+            -0.4109838539077789,
+            0.7781771721937095,
+            0.2310327098454194,
+            0.3509899228718865,
+            -0.09873150899659294,
+            -0.9639568458243355,
+            0.6946672887893759,
+            -0.27821655297332093,
+            -0.8520727224458601,
+            -39.49327145054613,
+            31.625097957160744,
+            5.706177465822207,
+            0.20783948980236736,
+            10.263269432237356,
+            -8.25747425296887,
+            3.0338796297855932
+          ],
+          [
+            0.5168951224053053,
+            0.13505301674520495,
+            0.5014072839783106,
+            -0.5871415585557141,
+            -0.2609335660110452,
+            -0.3716352020109756,
+            0.25557157602340197,
+            -0.38529053847610495,
+            -0.5314121003501511,
+            -0.9856648003733948,
+            0.6372076016704522,
+            25.235482391976888,
+            -18.472447768654114,
+            -4.997589140247477,
+            -0.21249102024892397,
+            -8.257474252968871,
+            8.780972869314931,
+            -2.6148222790594646
+          ],
+          [
+            1.383658722821416,
+            0.5082936205827575,
+            -0.5243234311819797,
+            0.6931865919147874,
+            -1.0650889659810718,
+            -0.6262735318019651,
+            -0.2150607502876426,
+            0.18872493964207857,
+            -0.6291078475321044,
+            -2.592160772050615,
+            1.3097071051336395,
+            -31.53210547587141,
+            20.536340739216485,
+            3.509680590354828,
+            -10.17045562768302,
+            3.0338796297855932,
+            -2.614822279059464,
+            21.835378058535863
+          ]
+        ],
+        "finite": true,
+        "gradient": [
+          1.7235444182972515e-09,
+          3.4668345832988834e-09,
+          7.172942036344498e-10,
+          -1.3246426872060013e-10,
+          -7.929899124500817e-10,
+          2.7477050218438492e-09,
+          -2.348482493544357e-10,
+          -4.478571350146482e-09,
+          -1.3857062233779693e-09,
+          5.950983421321165e-10,
+          -3.6718876463698313e-10,
+          1.4716021040639404e-09,
+          -2.420814096057433e-09,
+          9.049400378352557e-10,
+          -3.0654604766047755e-09,
+          8.295447245787457e-09,
+          8.343682446343426e-09,
+          -1.6891312324546215e-09
+        ],
+        "gradient_infinity": 8.343682446343426e-09,
+        "gradient_l2": 1.4343946164724494e-08,
+        "independent_energy_difference_hartree": 0.0,
+        "independent_energy_hartree": -1.9960984238701234,
+        "independent_state_recomputation_fidelity": 1.0000000000000009,
+        "independent_work": {
+          "energy_evaluations": 1,
+          "explicit_state_recomputations": 2,
+          "gradient_vector_evaluations": 1,
+          "initial_energy_evaluations_for_audit": 1
+        },
+        "optimizer": {
+          "function_evaluations": 14,
+          "gradient_component_equivalent": 252,
+          "gradient_tolerance": 1e-08,
+          "gradient_vector_evaluations": 14,
+          "implementation": "pinned-upstream-minimize_bfgs",
+          "iterations": 13,
+          "maximum_iterations": 200,
+          "message": "Optimization terminated successfully.",
+          "status": 0,
+          "success": true
+        },
+        "paper_measurement_cost": null,
+        "source_candidate_state_fidelity": 0.9999505235004135,
+        "wall_time_seconds": 0.5367097080452368
+      },
+      "round_index": 2,
+      "selected_optimizer_path": "recycled-obs",
+      "sequential_candidate_id": "candidate-v5:cd30dae115ab354bd42dabe09bef079c26de9a8dd7457a13d60ea42173608788",
+      "structural_resources": {
+        "cnot_count": 132,
+        "cnot_depth": 60,
+        "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 12,
+        "parameter_count": 18,
+        "structure_digest": "c325404d0ad710782263c735162159769d01eab50e8f4a39707cb4fea891060f",
+        "total_depth": 222
+      },
+      "two_path_certificate": {
+        "componentwise_difference": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "componentwise_limit": [
+          1.0000001723544419e-10,
+          1.0000003466834584e-10,
+          1.0000000717294204e-10,
+          1.000000013246427e-10,
+          1.0000000792989913e-10,
+          1.0000002747705022e-10,
+          1.000000023484825e-10,
+          1.0000004478571351e-10,
+          1.0000001385706223e-10,
+          1.0000000595098343e-10,
+          1.0000000367188765e-10,
+          1.0000001471602104e-10,
+          1.0000002420814097e-10,
+          1.0000000904940038e-10,
+          1.0000003065460477e-10,
+          1.0000008295447246e-10,
+          1.0000008343682447e-10,
+          1.0000001689131233e-10
+        ],
+        "componentwise_pass": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "coordinates": [
+          -0.3458762313927635,
+          -0.12682770051875752,
+          0.20504379792666677,
+          0.20504378033819712,
+          -0.11742341006216726,
+          -0.09988559106585626,
+          -0.1443405130979695,
+          0.34202006981479677,
+          -0.1702290535382095,
+          0.1754830000861307,
+          0.07416249604580959,
+          -0.3631478914354017,
+          0.42224584131408677,
+          -0.04748815450079515,
+          -0.0746223591101373,
+          0.8150146131117074,
+          0.7558133942572706,
+          0.04793814617011182
+        ],
+        "difference_infinity": 0.0,
+        "difference_l2": 0.0,
+        "mapped_source_coordinates": [
+          -0.3458762313927635,
+          -0.12682770051875752,
+          0.20504379792666677,
+          0.20504378033819712,
+          -0.11742341006216726,
+          -0.09988559106585626,
+          -0.1443405130979695,
+          0.34202006981479677,
+          -0.1702290535382095,
+          0.1754830000861307,
+          0.07416249604580959,
+          -0.3631478914354017,
+          0.42224584131408677,
+          -0.04748815450079515,
+          -0.0746223591101373,
+          0.8150146131117074,
+          0.7558133942572706,
+          0.04793814617011182,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "passed": true,
+        "policy": {
+          "absolute_tolerance": 1e-10,
+          "relative_tolerance": 1e-08
+        },
+        "projected_gradient_infinity": 8.343682446343426e-09,
+        "projected_source_gradient": [
+          1.7235444182972515e-09,
+          3.4668345832988834e-09,
+          7.172942036344498e-10,
+          -1.3246426872060013e-10,
+          -7.929899124500817e-10,
+          2.7477050218438492e-09,
+          -2.348482493544357e-10,
+          -4.478571350146482e-09,
+          -1.3857062233779693e-09,
+          5.950983421321165e-10,
+          -3.6718876463698313e-10,
+          1.4716021040639404e-09,
+          -2.420814096057433e-09,
+          9.049400378352557e-10,
+          -3.0654604766047755e-09,
+          8.295447245787457e-09,
+          8.343682446343426e-09,
+          -1.6891312324546215e-09
+        ],
+        "source_energy_hartree": -1.9960984238701234,
+        "source_gradient": [
+          1.7235444182972515e-09,
+          3.4668345832988834e-09,
+          7.172942036344498e-10,
+          -1.3246426872060013e-10,
+          -7.929899124500817e-10,
+          2.7477050218438492e-09,
+          -2.348482493544357e-10,
+          -4.478571350146482e-09,
+          -1.3857062233779693e-09,
+          5.950983421321165e-10,
+          -3.6718876463698313e-10,
+          1.4716021040639404e-09,
+          -2.420814096057433e-09,
+          9.049400378352557e-10,
+          -3.0654604766047755e-09,
+          8.295447245787457e-09,
+          8.343682446343426e-09,
+          -1.6891312324546215e-09,
+          -0.0013971745435201015,
+          0.0001029656485665247,
+          -0.0007784974875484629
+        ],
+        "source_target_energy_difference_hartree": 0.0,
+        "source_target_state_fidelity": 1.0,
+        "target_energy_hartree": -1.9960984238701234,
+        "target_gradient_infinity": 8.343682446343426e-09,
+        "target_native_gradient": [
+          1.7235444182972515e-09,
+          3.4668345832988834e-09,
+          7.172942036344498e-10,
+          -1.3246426872060013e-10,
+          -7.929899124500817e-10,
+          2.7477050218438492e-09,
+          -2.348482493544357e-10,
+          -4.478571350146482e-09,
+          -1.3857062233779693e-09,
+          5.950983421321165e-10,
+          -3.6718876463698313e-10,
+          1.4716021040639404e-09,
+          -2.420814096057433e-09,
+          9.049400378352557e-10,
+          -3.0654604766047755e-09,
+          8.295447245787457e-09,
+          8.343682446343426e-09,
+          -1.6891312324546215e-09
+        ],
+        "work": {
+          "energy_evaluations": 2,
+          "paper_measurement_cost": null,
+          "source_gradient_component_equivalent": 21,
+          "source_gradient_vector_evaluations": 1,
+          "statevector_recomputations": 2,
+          "target_gradient_component_equivalent": 18,
+          "target_gradient_vector_evaluations": 1
+        }
+      }
+    }
+  ],
+  "paper_measurement_cost": null,
+  "result": {
+    "accepted_rounds": 2,
+    "actual_cumulative_energy_increase_hartree": 5.1901648685959145e-05,
+    "exact_attempts": 2,
+    "final_checkpoint_digest": "cea3319caf01a7261739183b8d59b7928c51b87cd5f36d0d18411628e5752583",
+    "final_energy_hartree": -1.9960984238701234,
+    "result_digest": "fce321919b63e67ed82055541cf6987df9e1a38b9f130636a98f331696b69135",
+    "source_reference_energy_hartree": -1.9961503255188093,
+    "stop_reason": "maximum-attempted-rounds",
+    "terminal_work": {
+      "accepted_rounds": 2,
+      "analytic_hvp_calls": 0,
+      "attempted_rounds": 2,
+      "energy_evaluations": 53,
+      "exact_vqe_attempts": 2,
+      "expanded_search_states": 111,
+      "finite_difference_hvp_calls": 0,
+      "full_resource_recounts": 117,
+      "gradient_component_equivalents": 1026,
+      "gradient_vector_evaluations": 51,
+      "optimizer_iterations": 43,
+      "optimizer_starts": 2,
+      "quadratic_solve_iterations": 0,
+      "statevector_evaluations": 10
+    },
+    "trajectory": [
+      {
+        "accepted": true,
+        "actual_cumulative_energy_increase_hartree": 4.440892098500626e-16,
+        "candidate_id": "candidate-v5:31092f298a433f060f89c505ee9b2d358048e029510a739835ed755e0cb02b9a",
+        "catalog_digest_after": "d50948e0627861d757742da73f167fb12c2229db48f552cf7553cd476437768d",
+        "catalog_digest_before": "f01b97dd2f5602d59e16b5b0c73452f46f8818d8918e4cdb2416f2baa007453b",
+        "checkpoint_digest": "651e0c500ff3f9137e1762eb1618dbff224f151caad18a6284a68801f01c7036",
+        "parent_checkpoint_digest": "1adcd15520267cf3b40ff435b53dc8145a0e40530d1d0b9fff51ac99459e6eee",
+        "resources": {
+          "cnot_count": 145,
+          "cnot_depth": 73,
+          "logical_block_count": 13,
+          "parameter_count": 21,
+          "total_depth": 246
+        },
+        "round_index": 1,
+        "work_after_attempt": {
+          "accepted_rounds": 1,
+          "analytic_hvp_calls": 0,
+          "attempted_rounds": 1,
+          "energy_evaluations": 35,
+          "exact_vqe_attempts": 1,
+          "expanded_search_states": 62,
+          "finite_difference_hvp_calls": 0,
+          "full_resource_recounts": 65,
+          "gradient_component_equivalents": 717,
+          "gradient_vector_evaluations": 34,
+          "optimizer_iterations": 30,
+          "optimizer_starts": 1,
+          "quadratic_solve_iterations": 0,
+          "statevector_evaluations": 5
+        }
+      },
+      {
+        "accepted": true,
+        "actual_cumulative_energy_increase_hartree": 5.1901648685959145e-05,
+        "candidate_id": "candidate-v5:cd30dae115ab354bd42dabe09bef079c26de9a8dd7457a13d60ea42173608788",
+        "catalog_digest_after": "a55de2b92b17e407b8dd0726c08221c289b9d9877f861318ec4838566e091bdb",
+        "catalog_digest_before": "d50948e0627861d757742da73f167fb12c2229db48f552cf7553cd476437768d",
+        "checkpoint_digest": "cea3319caf01a7261739183b8d59b7928c51b87cd5f36d0d18411628e5752583",
+        "parent_checkpoint_digest": "651e0c500ff3f9137e1762eb1618dbff224f151caad18a6284a68801f01c7036",
+        "resources": {
+          "cnot_count": 132,
+          "cnot_depth": 60,
+          "logical_block_count": 12,
+          "parameter_count": 18,
+          "total_depth": 222
+        },
+        "round_index": 2,
+        "work_after_attempt": {
+          "accepted_rounds": 2,
+          "analytic_hvp_calls": 0,
+          "attempted_rounds": 2,
+          "energy_evaluations": 53,
+          "exact_vqe_attempts": 2,
+          "expanded_search_states": 111,
+          "finite_difference_hvp_calls": 0,
+          "full_resource_recounts": 117,
+          "gradient_component_equivalents": 1026,
+          "gradient_vector_evaluations": 51,
+          "optimizer_iterations": 43,
+          "optimizer_starts": 2,
+          "quadratic_solve_iterations": 0,
+          "statevector_evaluations": 10
+        }
+      }
+    ],
+    "version": "v5-sequential-width1-v1"
+  },
+  "result_digest": "b11897bfbcecb354004db7cdcaa56c99ffd1b9fa82bac3eb80992d70f8756e4d",
+  "runner_version": "v5-s8-h4-width1-recycled-v1.1",
+  "schema_version": "1.0.0",
+  "source_energy_hartree": -1.9961503255188093,
+  "source_reconstruction": {
+    "energy_difference_hartree": 4.440892098500626e-16,
+    "independent_energy_hartree": -1.9961503255188089,
+    "matches_checkpoint_statevector": true,
+    "statevector_sha256": "d8d48b9c4a3248da57eecf747b77b856b647ecc046b62109a786f6e779c6de76"
+  },
+  "source_resources": {
+    "cnot_count": 158,
+    "cnot_depth": 73,
+    "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+    "logical_block_count": 14,
+    "parameter_count": 24,
+    "structure_digest": "5a30bd86da6ff690a994860b8d7f2c5d38f728bc3a2f2f9be2099b02b223ac87",
+    "total_depth": 270
+  }
+}
