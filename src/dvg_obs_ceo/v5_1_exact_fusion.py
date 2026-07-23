@@ -194,6 +194,76 @@ def apply_exact_fusion(
         raise ExactFusionError("fusion produced an invalid ansatz structure") from error
 
 
+def apply_exact_fusions(
+    pool: Any,
+    source: AnsatzStructure,
+    candidates: Sequence[ExactFusionCandidate],
+) -> AnsatzStructure:
+    """Apply a nonoverlapping exact fusion batch against one immutable source."""
+
+    selected = tuple(candidates)
+    if not selected:
+        raise ExactFusionError("joint fusion requires at least one candidate")
+    identifiers = [candidate.candidate_id for candidate in selected]
+    if len(identifiers) != len(set(identifiers)):
+        raise ExactFusionError("joint fusion contains a duplicate candidate")
+    blocks = recover_dvg_blocks(
+        pool,
+        source.indices,
+        source.coefficients,
+        source.cumulative_parameter_counts,
+    )
+    refreshed = {
+        candidate.candidate_id: candidate
+        for candidate in enumerate_exact_fusions(pool, blocks)
+    }
+    if any(refreshed.get(candidate.candidate_id) != candidate for candidate in selected):
+        raise ExactFusionError("joint fusion candidate is stale or absent")
+    occupied: set[int] = set()
+    for candidate in selected:
+        positions = {candidate.ovp_position, *candidate.mvp_positions}
+        if occupied & positions:
+            raise ExactFusionError("joint fusion candidates overlap source blocks")
+        occupied.update(positions)
+
+    coefficients = list(source.coefficients)
+    removed_positions: set[int] = set()
+    removal_iterations: list[int] = []
+    block_by_id = {block.block_id: block for block in blocks}
+    for candidate in selected:
+        ovp_coordinate = source.coefficients[candidate.ovp_position]
+        for position, weight in zip(
+            candidate.mvp_positions, candidate.exact_signed_relation
+        ):
+            coefficients[position] += float(weight) * ovp_coordinate
+        removed_positions.add(candidate.ovp_position)
+        removal_iterations.append(
+            block_by_id[candidate.ovp_block_id].selection_iterations[0]
+        )
+    indices = [
+        index
+        for position, index in enumerate(source.indices)
+        if position not in removed_positions
+    ]
+    target_coefficients = [
+        coefficient
+        for position, coefficient in enumerate(coefficients)
+        if position not in removed_positions
+    ]
+    counts = tuple(
+        count
+        - sum(
+            removal_iteration <= iteration
+            for removal_iteration in removal_iterations
+        )
+        for iteration, count in enumerate(source.cumulative_parameter_counts, 1)
+    )
+    try:
+        return AnsatzStructure.create(indices, target_coefficients, counts)
+    except ResourceEvaluationError as error:
+        raise ExactFusionError("joint fusion produced an invalid ansatz structure") from error
+
+
 def validate_exact_fusion_generators(
     candidate: ExactFusionCandidate,
     ovp_generator: ComplexArray,
@@ -254,4 +324,3 @@ def validate_exact_fusion_generators(
             target = expm(float(coordinate) * generator) @ target
         if np.linalg.norm(source - target) > tolerance:
             raise ExactFusionError("fusion source and target unitaries differ")
-

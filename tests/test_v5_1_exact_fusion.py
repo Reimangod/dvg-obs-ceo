@@ -6,6 +6,7 @@ from dvg_obs_ceo.resources import AnsatzStructure
 from dvg_obs_ceo.v5_1_exact_fusion import (
     ExactFusionError,
     apply_exact_fusion,
+    apply_exact_fusions,
     enumerate_exact_fusions,
     validate_exact_fusion_generators,
 )
@@ -75,3 +76,38 @@ def test_generator_and_unitary_identity_is_independently_checked():
     with pytest.raises(ExactFusionError, match="identity failed"):
         validate_exact_fusion_generators(candidate, first - second, [first, second])
 
+
+def test_joint_fusion_uses_one_immutable_source_and_rejects_duplicates():
+    pool = FakePool()
+    disjoint = type(pool.operators[0])(
+        type(pool.get_q_op(0))({((1, "X"), (3, "Y")): 0.5j}),
+        {1, 3},
+        [3],
+        [1],
+    )
+    pool.operators.append(disjoint)
+    source = AnsatzStructure.create(
+        [2, 4, 0, 1, 3, 4, 0, 1],
+        [0.2, 0.4, 0.3, -0.1, -0.25, 0.5, 0.1, 0.2],
+        [1, 2, 4, 5, 6, 8],
+    )
+    candidates = enumerate_exact_fusions(
+        pool,
+        recover_dvg_blocks(
+            pool, source.indices, source.coefficients, source.cumulative_parameter_counts
+        ),
+    )
+    # There can be cross-pair candidates too; select the two local corridors.
+    selected = [
+        candidate
+        for candidate in candidates
+        if (candidate.ovp_position, candidate.mvp_positions)
+        in {(0, (2, 3)), (4, (6, 7))}
+    ]
+    assert len(selected) == 2
+    target = apply_exact_fusions(pool, source, selected)
+    assert target.indices == (4, 0, 1, 4, 0, 1)
+    assert target.coefficients == pytest.approx((0.4, 0.5, 0.1, 0.5, -0.15, 0.45))
+    assert target.cumulative_parameter_counts == (0, 1, 3, 3, 4, 6)
+    with pytest.raises(ExactFusionError, match="duplicate"):
+        apply_exact_fusions(pool, source, [selected[0], selected[0]])
