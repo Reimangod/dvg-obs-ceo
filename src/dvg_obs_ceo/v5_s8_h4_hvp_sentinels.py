@@ -27,7 +27,7 @@ from .v5_s8_protocol import DEFAULT_MANIFEST, audit_manifest
 
 
 CASE_ID = "h4-1.5-iteration-12-or-convergence"
-CODE_TAG = "dvg-obs-v5-s8-h4-hvp-sentinels-code-v1.2"
+CODE_TAG = "dvg-obs-v5-s8-h4-hvp-sentinels-code-v1.3"
 REQUIRED_THREADS = {"OMP_NUM_THREADS": "1", "OPENBLAS_NUM_THREADS": "1", "MKL_NUM_THREADS": "1"}
 
 
@@ -340,8 +340,6 @@ def run(manifest_path: Path = DEFAULT_MANIFEST) -> dict[str, Any]:
         ),
     }
     result["result_digest"] = _digest(result)
-    if not result["passed"]:
-        raise RuntimeError("V5-S8 late-H4 HVP sentinel study failed")
     return result
 
 
@@ -357,6 +355,9 @@ def main() -> None:
         "full_hessian_minimum_eigenvalue": result["full_hessian_minimum_eigenvalue"],
         "posthoc": result["posthoc_diagnostics"],
     }, sort_keys=True))
+    if not result["passed"]:
+        failed = sorted(name for name, passed in result["checks"].items() if not passed)
+        raise RuntimeError("V5-S8 late-H4 HVP sentinel study failed: " + ",".join(failed))
 
 
 if __name__ == "__main__":
