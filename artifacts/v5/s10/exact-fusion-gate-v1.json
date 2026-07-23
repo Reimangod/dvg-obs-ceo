@@ -1,0 +1,300 @@
+{
+  "adoption_gate_passed": true,
+  "artifact_kind": "v5-s10-exact-fusion-gate-result",
+  "authorized_next_stage": "V5.1-S11",
+  "cases": [
+    {
+      "block_count": 15,
+      "candidate_count": 0,
+      "candidates": [],
+      "case_id": "lih-3.0",
+      "certified_count": 0,
+      "checkpoint_path": "artifacts/s10/lih-3a-first-accuracy-primary-v1-2/checkpoint.json",
+      "checkpoint_sha256": "1ef38be983595fdb094f2a47287e6047193351e0eff4a7c589630ef023ad98eb",
+      "work": {
+        "energy_evaluations": 1,
+        "full_resource_recounts": 2,
+        "optimizer_iterations": 0,
+        "optimizer_starts": 0,
+        "paper_measurement_cost": null,
+        "statevector_evaluations": 1
+      }
+    },
+    {
+      "block_count": 79,
+      "candidate_count": 2,
+      "candidates": [
+        {
+          "absolute_energy_drift_hartree": 4.440892098500626e-16,
+          "candidate": {
+            "candidate_id": "fusion-v1:b88d87d2d419fd877cd35ade248d35462c9a534348ed85c4e672fa5e14ae5172",
+            "exact_signed_relation": [
+              1,
+              1
+            ],
+            "intervening_block_ids": [
+              "block-v1:17a6d1c74db685b759b0183cd8a69596032b5383d68ca29e84d5433e30ed14c0",
+              "block-v1:00d7ec5aaf81d8348c7fb46b8218f2deb98752ff69213d6f87cb0d7ca91f9b91"
+            ],
+            "ir_version": "v5.1-exact-cross-iteration-ceo-fusion-v1",
+            "mvp_block_id": "block-v1:a90e0f11fa168d25044126d9ff5a5fcebfce3eb97900f8958e2b74c62c80bcff",
+            "mvp_numerical_context_digest": "844464e27848f9d01c4b39925cfc31570f1fc2a1f745671e5ec2e308cf08a401",
+            "mvp_positions": [
+              24,
+              25
+            ],
+            "ovp_block_id": "block-v1:de410e3a9c013a5bf3d239229b3e42da6507ba2872e5c2492f1813df918c4291",
+            "ovp_numerical_context_digest": "2a91868d8ea5f8ce6023ad8a9141a4b6b497b5db212dd256a0aa1af57ba5744d",
+            "ovp_position": 19,
+            "parent_pool_indices": [
+              492,
+              493
+            ],
+            "source_parameter_count": 3,
+            "support_qubits": [
+              4,
+              5,
+              6,
+              7
+            ],
+            "symbolic_provenance": "registered-OVP-parent-metadata",
+            "target_parameter_count": 2
+          },
+          "certified": true,
+          "checks": {
+            "cnot_reduction": true,
+            "commutators": true,
+            "energy": true,
+            "generator_identity": true,
+            "guarded_nonincrease": true,
+            "parameter_reduction": true,
+            "physical_structural_resources": true,
+            "state": true
+          },
+          "operator_audit": {
+            "commutators": [
+              {
+                "operator_number": 0,
+                "residual": 0.0
+              },
+              {
+                "operator_number": 1,
+                "residual": 0.0
+              },
+              {
+                "operator_number": 2,
+                "residual": 0.0
+              },
+              {
+                "operator_number": 3,
+                "residual": 0.0
+              },
+              {
+                "operator_number": 4,
+                "residual": 0.0
+              },
+              {
+                "operator_number": 5,
+                "residual": 0.0
+              },
+              {
+                "operator_number": "parent-0-parent-1",
+                "residual": 0.0
+              }
+            ],
+            "generator_identity_residual": 0.0,
+            "maximum_commutator_residual": 0.0
+          },
+          "source_energy_hartree": -2.9941735303246584,
+          "source_resources": {
+            "cnot_count": 879,
+            "cnot_depth": 306,
+            "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+            "logical_block_count": 79,
+            "parameter_count": 137,
+            "structure_digest": "db3d5477a79296be02655c582574e67617fb25061f41d21a4af1874ebb7ed6d7",
+            "total_depth": 1595
+          },
+          "state_fidelity": 1.0000000000000004,
+          "target_energy_hartree": -2.994173530324659,
+          "target_resources": {
+            "cnot_count": 870,
+            "cnot_depth": 306,
+            "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+            "logical_block_count": 78,
+            "parameter_count": 136,
+            "structure_digest": "e0dcf0aad1686ead6d79fc85adc04b94f3f03a1ba57c56e781f4f483f79503bc",
+            "total_depth": 1582
+          }
+        },
+        {
+          "absolute_energy_drift_hartree": 4.440892098500626e-16,
+          "candidate": {
+            "candidate_id": "fusion-v1:95a9194dbc2d46a5b58a53f89f9e834014071b05662cdcb3ed25cfd2f64e8b95",
+            "exact_signed_relation": [
+              1,
+              -1
+            ],
+            "intervening_block_ids": [
+              "block-v1:58243bb21264523a3e7ca62946c1788681549a629b98a57750fe08dfa49dfc8c",
+              "block-v1:c8bc4aad5b285ed84657915ad8ce80d2084a7d357c54a4dead816312e07054c5",
+              "block-v1:ec66f816eb9988005d9f77fe381b3234a8bfd5b31ee511916bfb72fbe9bf6948"
+            ],
+            "ir_version": "v5.1-exact-cross-iteration-ceo-fusion-v1",
+            "mvp_block_id": "block-v1:acdfa10ef19fa450bedc1d3ca9fc62b24727887d14309a656ba7fa93912d30e4",
+            "mvp_numerical_context_digest": "4b896b03059dafc769a810971d33848a0b7b8943a5b4920ec501b04702a93a5e",
+            "mvp_positions": [
+              33,
+              34
+            ],
+            "ovp_block_id": "block-v1:283f7b117ec5a3c8f84feafe18ccc218c0099bcbe62281cfb5588fb980d6a6d9",
+            "ovp_numerical_context_digest": "64ec80ded848a3f09ca5d9543b8d3eb6bb76557dbc6d3131c88486a775a8b638",
+            "ovp_position": 27,
+            "parent_pool_indices": [
+              508,
+              509
+            ],
+            "source_parameter_count": 3,
+            "support_qubits": [
+              4,
+              5,
+              10,
+              11
+            ],
+            "symbolic_provenance": "registered-OVP-parent-metadata",
+            "target_parameter_count": 2
+          },
+          "certified": true,
+          "checks": {
+            "cnot_reduction": true,
+            "commutators": true,
+            "energy": true,
+            "generator_identity": true,
+            "guarded_nonincrease": true,
+            "parameter_reduction": true,
+            "physical_structural_resources": true,
+            "state": true
+          },
+          "operator_audit": {
+            "commutators": [
+              {
+                "operator_number": 0,
+                "residual": 0.0
+              },
+              {
+                "operator_number": 1,
+                "residual": 0.0
+              },
+              {
+                "operator_number": 2,
+                "residual": 0.0
+              },
+              {
+                "operator_number": 3,
+                "residual": 0.0
+              },
+              {
+                "operator_number": 4,
+                "residual": 0.0
+              },
+              {
+                "operator_number": 5,
+                "residual": 0.0
+              },
+              {
+                "operator_number": 6,
+                "residual": 0.0
+              },
+              {
+                "operator_number": "parent-0-parent-1",
+                "residual": 0.0
+              }
+            ],
+            "generator_identity_residual": 0.0,
+            "maximum_commutator_residual": 0.0
+          },
+          "source_energy_hartree": -2.9941735303246584,
+          "source_resources": {
+            "cnot_count": 879,
+            "cnot_depth": 306,
+            "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+            "logical_block_count": 79,
+            "parameter_count": 137,
+            "structure_digest": "db3d5477a79296be02655c582574e67617fb25061f41d21a4af1874ebb7ed6d7",
+            "total_depth": 1595
+          },
+          "state_fidelity": 1.0000000000000004,
+          "target_energy_hartree": -2.994173530324658,
+          "target_resources": {
+            "cnot_count": 870,
+            "cnot_depth": 306,
+            "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+            "logical_block_count": 78,
+            "parameter_count": 136,
+            "structure_digest": "4f6cca9c5cfd5af6e08ff7ab41ec22a25ead27b3b8a9af2bfc6593511085be68",
+            "total_depth": 1582
+          }
+        }
+      ],
+      "case_id": "h6-1.5",
+      "certified_count": 2,
+      "checkpoint_path": "artifacts/full-figures/ceo-star/h6-1.5/checkpoint.json",
+      "checkpoint_sha256": "2c994c6ac2d4478c7174b71b661f496c9fda8a14e3a7ca08d01e9130515fe491",
+      "work": {
+        "energy_evaluations": 3,
+        "full_resource_recounts": 6,
+        "optimizer_iterations": 0,
+        "optimizer_starts": 0,
+        "paper_measurement_cost": null,
+        "statevector_evaluations": 3
+      }
+    },
+    {
+      "block_count": 95,
+      "candidate_count": 0,
+      "candidates": [],
+      "case_id": "h6-3.0",
+      "certified_count": 0,
+      "checkpoint_path": "artifacts/full-figures/ceo-star/h6-3.0/checkpoint.json",
+      "checkpoint_sha256": "40a59c46b12e27551b3b156125cf1f2bd6f75ec49da1831eba13cdc27be24a88",
+      "work": {
+        "energy_evaluations": 1,
+        "full_resource_recounts": 2,
+        "optimizer_iterations": 0,
+        "optimizer_starts": 0,
+        "paper_measurement_cost": null,
+        "statevector_evaluations": 1
+      }
+    },
+    {
+      "block_count": 32,
+      "candidate_count": 0,
+      "candidates": [],
+      "case_id": "beh2-3.0",
+      "certified_count": 0,
+      "checkpoint_path": "artifacts/full-figures/ceo-star/beh2-3.0/checkpoint.json",
+      "checkpoint_sha256": "4344d203bbf161fd53814f1fb51af2bbc8531d7c77587a477a3654b3b1ec626c",
+      "work": {
+        "energy_evaluations": 1,
+        "full_resource_recounts": 2,
+        "optimizer_iterations": 0,
+        "optimizer_starts": 0,
+        "paper_measurement_cost": null,
+        "statevector_evaluations": 1
+      }
+    }
+  ],
+  "certified_candidate_count": 2,
+  "claim_boundary": "A positive gate proves existence and exactness of a new structural rewrite on development checkpoints; it does not establish V5.1 performance superiority.",
+  "execution_freeze": {
+    "code_tag": "dvg-obs-v5-s10-fusion-gate-code-v1.1",
+    "head": "3a22b5bd7915a6babe6f71efd3284e481d75edf1",
+    "manifest_sha256": "6c85c170e3d17a36073330b03ab75234daef9438ffddc90f583f0498c524ba4f",
+    "output_absent_before_execution": true
+  },
+  "manifest_path": "manifests/v5-s10-exact-fusion-gate-v1.json",
+  "manifest_sha256": "6c85c170e3d17a36073330b03ab75234daef9438ffddc90f583f0498c524ba4f",
+  "paper_measurement_cost": null,
+  "result_digest": "f9fffc31cb4b189cd36818aeec67c698fa5d43cee524d8a40f40b41d979c784c",
+  "schema_version": "1.0.0"
+}
