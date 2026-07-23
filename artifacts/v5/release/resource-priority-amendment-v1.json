@@ -1,0 +1,87 @@
+{
+  "schema_version": "1.0.0",
+  "artifact_kind": "v5-resource-priority-release-amendment",
+  "classification": "post-outcome-user-authorized-selection-policy",
+  "supersedes_release_choice_only": true,
+  "scientific_results_modified": false,
+  "inputs": [
+    {
+      "path": "artifacts/v5/release/summary-v1.json",
+      "sha256": "f86eb9d838f390f94359b4c205fc8e2546b9c813da244855d6c4360d6449f85d"
+    },
+    {
+      "path": "artifacts/v5/s8/lih-energy-aware-width2-round3-v1/summary.json",
+      "sha256": "ae2c3a93d4eef86f0a7ec8df9895c712c1b0d939dd7118c822076973e91c961a"
+    },
+    {
+      "path": "artifacts/v5/s11/h6-1.5-exact-fusion-v1.json",
+      "sha256": "1fa2981c1fa50fcf495426480406cee99401350f1733595777ab43917e5b6b6a"
+    },
+    {
+      "path": "artifacts/v5/s9/h6-3.0-v1/summary.json",
+      "sha256": "9f6f09d9adf1e47e0f7780d399037c62d3a1d8f79fd2a5e43d3f8b24be10581f"
+    },
+    {
+      "path": "artifacts/v5/s9/beh2-3.0-v1/summary.json",
+      "sha256": "23b113229680d7f6e9cc4c401aa9f8122cf3cf5dd06d8a49025bccb221ee9ad9"
+    }
+  ],
+  "selection_rule": {
+    "accuracy_guard_required": true,
+    "maximum_cumulative_energy_increase_hartree": 0.0001,
+    "strict_chemical_accuracy_required": true,
+    "resource_pareto_point_may_have_higher_energy_than_conservative_comparator": true,
+    "energy_increase_must_remain_explicit": true,
+    "primary_resource_order": [
+      "cnot_count",
+      "parameter_count",
+      "total_depth",
+      "cnot_depth",
+      "logical_block_count"
+    ],
+    "does_not_reclassify_original_strict_success_tests": true
+  },
+  "selected_points": [
+    {
+      "case_id": "lih-3.0",
+      "point": "V4.1-equivalent",
+      "energy_increase_hartree": 0.00008690137959188604,
+      "cnot_count": 58,
+      "parameter_count": 8,
+      "total_depth": 92,
+      "cnot_depth": 30,
+      "logical_block_count": 8
+    },
+    {
+      "case_id": "h6-1.5",
+      "point": "V5.1-resource-point",
+      "energy_increase_hartree": 0.0000882142655496132,
+      "cnot_count": 840,
+      "parameter_count": 129,
+      "total_depth": 1520,
+      "cnot_depth": 300,
+      "logical_block_count": 76
+    },
+    {
+      "case_id": "h6-3.0",
+      "point": "V5-raw-resource-winner",
+      "energy_increase_hartree": 0.00007849255583103343,
+      "cnot_count": 741,
+      "parameter_count": 138,
+      "total_depth": 1394,
+      "cnot_depth": 284,
+      "logical_block_count": 92
+    },
+    {
+      "case_id": "beh2-3.0",
+      "point": "V5-raw-resource-winner",
+      "energy_increase_hartree": 0.00009851833251239839,
+      "cnot_count": 221,
+      "parameter_count": 31,
+      "total_depth": 367,
+      "cnot_depth": 85,
+      "logical_block_count": 25
+    }
+  ],
+  "claim_boundary": "Post-outcome application choice prioritizing circuit resources within the existing frozen accuracy guard. Original strict comparison outcomes remain unchanged."
+}
