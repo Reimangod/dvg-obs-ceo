@@ -1,0 +1,273 @@
+{
+  "artifact_kind": "v5-s7-multitrajectory-independent-audit",
+  "checks": {
+    "catalog_order_invariant": true,
+    "exact_attempt_work_matches_calls": true,
+    "known_duplicate_states_not_evaluated_twice": true,
+    "measurement_cost_not_relabelled": true,
+    "width1_candidate_history_matches_s3": true,
+    "width1_energy_matches_s3": true,
+    "width1_exact_attempts_match_s3": true,
+    "width1_resources_match_s3": true
+  },
+  "claim_boundary": "Synthetic state-identity and search audit only; no molecular VQE performance claim.",
+  "passed": true,
+  "s3_width1_reference": {
+    "accepted_rounds": 2,
+    "actual_cumulative_energy_increase_hartree": 5.999999999994898e-05,
+    "exact_attempts": 2,
+    "final_checkpoint_digest": "92213270c753b32a5efd32722098e9a7d6ec9912b03820610df3ade7d15afc0d",
+    "final_energy_hartree": -0.99994,
+    "result_digest": "5ed18334cf59913e007e05766b2d5da47a396129b7c1c8c86234b2a89c4964cc",
+    "source_reference_energy_hartree": -1.0,
+    "stop_reason": "no-eligible-candidate",
+    "trajectory": [
+      {
+        "accepted": true,
+        "actual_cumulative_energy_increase_hartree": 2.999999999997449e-05,
+        "candidate_id": "candidate-v5:bd8a219f2d6193c9b733d6227f2bebfeab455a61ec1d9814047942ebf678cc7e",
+        "catalog_digest_after": "2ef4fd97467fde94310b417f1273b9fc122e52380efd4bad246be7f8c2da7774",
+        "catalog_digest_before": "53116fd34f64f4f6fd586550484388bfb032a1d738755b13a080be83cfa02d2d",
+        "checkpoint_digest": "ae9a67e1519cd176304dddb15d5192e7a56fcb43a9bb5501039954a01d53b09a",
+        "parent_checkpoint_digest": "d0aba59b6229c84b3ecd78e017ba890ab16f07bd04a0d75e4f194724883cfe2a",
+        "resources": {
+          "cnot_count": 20,
+          "cnot_depth": 6,
+          "logical_block_count": 2,
+          "parameter_count": 2,
+          "total_depth": 30
+        },
+        "round_index": 1
+      },
+      {
+        "accepted": true,
+        "actual_cumulative_energy_increase_hartree": 5.999999999994898e-05,
+        "candidate_id": "candidate-v5:eb441ba74712a18a4b1b63145ab345cf69796a995127dec1b9e8c2cdff20d365",
+        "catalog_digest_after": "0c46c8ad6ee64bdcb94292c26465b855b411ef4b451bb7153de127e941d108ae",
+        "catalog_digest_before": "2ef4fd97467fde94310b417f1273b9fc122e52380efd4bad246be7f8c2da7774",
+        "checkpoint_digest": "92213270c753b32a5efd32722098e9a7d6ec9912b03820610df3ade7d15afc0d",
+        "parent_checkpoint_digest": "ae9a67e1519cd176304dddb15d5192e7a56fcb43a9bb5501039954a01d53b09a",
+        "resources": {
+          "cnot_count": 10,
+          "cnot_depth": 3,
+          "logical_block_count": 1,
+          "parameter_count": 1,
+          "total_depth": 15
+        },
+        "round_index": 2
+      }
+    ],
+    "version": "v5-sequential-width1-v1"
+  },
+  "s7_width1": {
+    "aggregate_work": {
+      "energy_evaluations": 2,
+      "exact_vqe_attempts": 2
+    },
+    "config": {
+      "cumulative_energy_budget_hartree": 0.0001,
+      "endpoint_quota": 1,
+      "maximum_exact_attempts": 3,
+      "maximum_rounds": 3,
+      "top_k_per_parent": 2,
+      "width": 1
+    },
+    "diversity_rule": "endpoint-quota first pass requires distinct diversity keys; deterministic resource-ranked fill may reuse a diversity key only to fill remaining width",
+    "exact_attempts": 2,
+    "frontier_path_ids": [
+      "path-v5:3a3223606c525004e0adde30f16d990f67b32dd2728676d62a6f7f452295ec4b"
+    ],
+    "paper_measurement_cost": null,
+    "result_digest": "25c2a59936abf09cb0d6160ea758724368d58b3c6a7da9143a4c057a8e5b5cfc",
+    "stop_reason": "no-new-exact-task",
+    "trajectory": [
+      {
+        "active_path_ids_after": [
+          "path-v5:0bbeb466d45e843f2de1c0c33080e54581af8d7e62d72104a1464f01040c33fc"
+        ],
+        "attempts": [
+          {
+            "accepted": true,
+            "candidate_id": "candidate-v5:bd8a219f2d6193c9b733d6227f2bebfeab455a61ec1d9814047942ebf678cc7e",
+            "child_path_id": "path-v5:0bbeb466d45e843f2de1c0c33080e54581af8d7e62d72104a1464f01040c33fc",
+            "exact_task_id": "exact-task-v5:59f406d9d9eb5b5168234daa181dbd51a044230d273739937ffcdaaf16d1293f",
+            "final_state_duplicate": false,
+            "parent_path_id": "path-v5:9ce13d6666579001a5786be15a316b4ca58017c1c406a0a47dd1453458dc3507",
+            "proposal_id": "proposal-v5:f20a90d747d27bb0a0f596b51fb99aa6f4dcd3dc058f3a803888bf1aacf774a2",
+            "rejection_reasons": [],
+            "work": {
+              "energy_evaluations": 1,
+              "exact_vqe_attempts": 1
+            }
+          }
+        ],
+        "duplicate_exact_tasks_skipped": 1,
+        "frozen_proposal_ids": [
+          "proposal-v5:f20a90d747d27bb0a0f596b51fb99aa6f4dcd3dc058f3a803888bf1aacf774a2",
+          "proposal-v5:f0283624c8b7bdc8b30a2b23487064037d006cd723b2a86ad3778d2cedb5e1dd"
+        ],
+        "round_index": 1,
+        "unique_exact_task_ids": [
+          "exact-task-v5:59f406d9d9eb5b5168234daa181dbd51a044230d273739937ffcdaaf16d1293f"
+        ]
+      },
+      {
+        "active_path_ids_after": [
+          "path-v5:3a3223606c525004e0adde30f16d990f67b32dd2728676d62a6f7f452295ec4b"
+        ],
+        "attempts": [
+          {
+            "accepted": true,
+            "candidate_id": "candidate-v5:eb441ba74712a18a4b1b63145ab345cf69796a995127dec1b9e8c2cdff20d365",
+            "child_path_id": "path-v5:3a3223606c525004e0adde30f16d990f67b32dd2728676d62a6f7f452295ec4b",
+            "exact_task_id": "exact-task-v5:18896788709ff3393ff48e73ddc5d61e8fa07c579c09d278281af722935c5129",
+            "final_state_duplicate": false,
+            "parent_path_id": "path-v5:0bbeb466d45e843f2de1c0c33080e54581af8d7e62d72104a1464f01040c33fc",
+            "proposal_id": "proposal-v5:008f94d59e50acc0f5bd3d8cea97957517e0426fb1e52684399e90ac4a9588ed",
+            "rejection_reasons": [],
+            "work": {
+              "energy_evaluations": 1,
+              "exact_vqe_attempts": 1
+            }
+          }
+        ],
+        "duplicate_exact_tasks_skipped": 1,
+        "frozen_proposal_ids": [
+          "proposal-v5:008f94d59e50acc0f5bd3d8cea97957517e0426fb1e52684399e90ac4a9588ed",
+          "proposal-v5:ba08cae6c08441ac0db68f9a9081b83b2246a610aacf5ebe26d5b332857ffa82"
+        ],
+        "round_index": 2,
+        "unique_exact_task_ids": [
+          "exact-task-v5:18896788709ff3393ff48e73ddc5d61e8fa07c579c09d278281af722935c5129"
+        ]
+      }
+    ],
+    "unique_exact_tasks": 2,
+    "unique_final_states": 3,
+    "unique_proposed_states": 5,
+    "version": "v5-budgeted-multitrajectory-v1",
+    "winner_candidate_history": [
+      "candidate-v5:bd8a219f2d6193c9b733d6227f2bebfeab455a61ec1d9814047942ebf678cc7e",
+      "candidate-v5:eb441ba74712a18a4b1b63145ab345cf69796a995127dec1b9e8c2cdff20d365"
+    ],
+    "winner_cumulative_energy_increase_hartree": 6e-05,
+    "winner_path_id": "path-v5:3a3223606c525004e0adde30f16d990f67b32dd2728676d62a6f7f452295ec4b",
+    "winner_resources": {
+      "cnot_count": 10,
+      "cnot_depth": 3,
+      "counter_version": "v5-s7-audit-counter-v1",
+      "logical_block_count": 1,
+      "parameter_count": 1,
+      "structure_digest": "109d856be098e94f2b1292e8148bc9187e902e94ad283cc2923a252a0655c5eb",
+      "total_depth": 15
+    },
+    "winner_rule": "accepted resource nondominance; minimum CNOT, parameters, total depth, CNOT depth, actual source-relative energy, canonical path ID",
+    "winner_state_preparation_id": "state-v1:14aef51c5ee11a8857a4072045344409584f0fdda69ce7cfc4aa872d042dfe93"
+  },
+  "s7_width2": {
+    "aggregate_work": {
+      "energy_evaluations": 2,
+      "exact_vqe_attempts": 2
+    },
+    "config": {
+      "cumulative_energy_budget_hartree": 0.0001,
+      "endpoint_quota": 1,
+      "maximum_exact_attempts": 3,
+      "maximum_rounds": 3,
+      "top_k_per_parent": 2,
+      "width": 2
+    },
+    "diversity_rule": "endpoint-quota first pass requires distinct diversity keys; deterministic resource-ranked fill may reuse a diversity key only to fill remaining width",
+    "exact_attempts": 2,
+    "frontier_path_ids": [
+      "path-v5:3a3223606c525004e0adde30f16d990f67b32dd2728676d62a6f7f452295ec4b"
+    ],
+    "paper_measurement_cost": null,
+    "result_digest": "1799f41e540039e785f696f2ddf17043a5e73c8935d948328fb600e380f27670",
+    "stop_reason": "no-new-exact-task",
+    "trajectory": [
+      {
+        "active_path_ids_after": [
+          "path-v5:0bbeb466d45e843f2de1c0c33080e54581af8d7e62d72104a1464f01040c33fc"
+        ],
+        "attempts": [
+          {
+            "accepted": true,
+            "candidate_id": "candidate-v5:bd8a219f2d6193c9b733d6227f2bebfeab455a61ec1d9814047942ebf678cc7e",
+            "child_path_id": "path-v5:0bbeb466d45e843f2de1c0c33080e54581af8d7e62d72104a1464f01040c33fc",
+            "exact_task_id": "exact-task-v5:59f406d9d9eb5b5168234daa181dbd51a044230d273739937ffcdaaf16d1293f",
+            "final_state_duplicate": false,
+            "parent_path_id": "path-v5:9ce13d6666579001a5786be15a316b4ca58017c1c406a0a47dd1453458dc3507",
+            "proposal_id": "proposal-v5:f20a90d747d27bb0a0f596b51fb99aa6f4dcd3dc058f3a803888bf1aacf774a2",
+            "rejection_reasons": [],
+            "work": {
+              "energy_evaluations": 1,
+              "exact_vqe_attempts": 1
+            }
+          }
+        ],
+        "duplicate_exact_tasks_skipped": 1,
+        "frozen_proposal_ids": [
+          "proposal-v5:f20a90d747d27bb0a0f596b51fb99aa6f4dcd3dc058f3a803888bf1aacf774a2",
+          "proposal-v5:f0283624c8b7bdc8b30a2b23487064037d006cd723b2a86ad3778d2cedb5e1dd"
+        ],
+        "round_index": 1,
+        "unique_exact_task_ids": [
+          "exact-task-v5:59f406d9d9eb5b5168234daa181dbd51a044230d273739937ffcdaaf16d1293f"
+        ]
+      },
+      {
+        "active_path_ids_after": [
+          "path-v5:3a3223606c525004e0adde30f16d990f67b32dd2728676d62a6f7f452295ec4b"
+        ],
+        "attempts": [
+          {
+            "accepted": true,
+            "candidate_id": "candidate-v5:eb441ba74712a18a4b1b63145ab345cf69796a995127dec1b9e8c2cdff20d365",
+            "child_path_id": "path-v5:3a3223606c525004e0adde30f16d990f67b32dd2728676d62a6f7f452295ec4b",
+            "exact_task_id": "exact-task-v5:18896788709ff3393ff48e73ddc5d61e8fa07c579c09d278281af722935c5129",
+            "final_state_duplicate": false,
+            "parent_path_id": "path-v5:0bbeb466d45e843f2de1c0c33080e54581af8d7e62d72104a1464f01040c33fc",
+            "proposal_id": "proposal-v5:008f94d59e50acc0f5bd3d8cea97957517e0426fb1e52684399e90ac4a9588ed",
+            "rejection_reasons": [],
+            "work": {
+              "energy_evaluations": 1,
+              "exact_vqe_attempts": 1
+            }
+          }
+        ],
+        "duplicate_exact_tasks_skipped": 1,
+        "frozen_proposal_ids": [
+          "proposal-v5:008f94d59e50acc0f5bd3d8cea97957517e0426fb1e52684399e90ac4a9588ed",
+          "proposal-v5:ba08cae6c08441ac0db68f9a9081b83b2246a610aacf5ebe26d5b332857ffa82"
+        ],
+        "round_index": 2,
+        "unique_exact_task_ids": [
+          "exact-task-v5:18896788709ff3393ff48e73ddc5d61e8fa07c579c09d278281af722935c5129"
+        ]
+      }
+    ],
+    "unique_exact_tasks": 2,
+    "unique_final_states": 3,
+    "unique_proposed_states": 5,
+    "version": "v5-budgeted-multitrajectory-v1",
+    "winner_candidate_history": [
+      "candidate-v5:bd8a219f2d6193c9b733d6227f2bebfeab455a61ec1d9814047942ebf678cc7e",
+      "candidate-v5:eb441ba74712a18a4b1b63145ab345cf69796a995127dec1b9e8c2cdff20d365"
+    ],
+    "winner_cumulative_energy_increase_hartree": 6e-05,
+    "winner_path_id": "path-v5:3a3223606c525004e0adde30f16d990f67b32dd2728676d62a6f7f452295ec4b",
+    "winner_resources": {
+      "cnot_count": 10,
+      "cnot_depth": 3,
+      "counter_version": "v5-s7-audit-counter-v1",
+      "logical_block_count": 1,
+      "parameter_count": 1,
+      "structure_digest": "109d856be098e94f2b1292e8148bc9187e902e94ad283cc2923a252a0655c5eb",
+      "total_depth": 15
+    },
+    "winner_rule": "accepted resource nondominance; minimum CNOT, parameters, total depth, CNOT depth, actual source-relative energy, canonical path ID",
+    "winner_state_preparation_id": "state-v1:14aef51c5ee11a8857a4072045344409584f0fdda69ce7cfc4aa872d042dfe93"
+  },
+  "schema_version": "1.0.0"
+}
