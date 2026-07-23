@@ -6,7 +6,9 @@ from dataclasses import asdict
 import argparse
 import hashlib
 import json
+import os
 from pathlib import Path
+import subprocess
 from typing import Any
 
 import numpy as np
@@ -27,6 +29,7 @@ from .v5_1_exact_fusion import apply_exact_fusion, enumerate_exact_fusions
 
 MANIFEST = ROOT / "manifests/v5-s10-exact-fusion-gate-v1.json"
 OUTPUT = ROOT / "artifacts/v5/s10/exact-fusion-gate-v1.json"
+CODE_TAG = "dvg-obs-v5-s10-fusion-gate-code-v1.1"
 
 
 class V5S10FusionGateError(RuntimeError):
@@ -39,6 +42,51 @@ def _sha256(path: Path) -> str:
 
 def _digest(value: Any) -> str:
     return hashlib.sha256(canonical_json_bytes(value)).hexdigest()
+
+
+def _verify_execution_freeze(output: Path) -> dict[str, Any]:
+    head = subprocess.check_output(
+        ["git", "-C", str(ROOT), "rev-parse", "HEAD"], text=True
+    ).strip()
+    tagged = subprocess.check_output(
+        ["git", "-C", str(ROOT), "rev-parse", f"{CODE_TAG}^{{}}"], text=True
+    ).strip()
+    dirty = subprocess.check_output(
+        ["git", "-C", str(ROOT), "status", "--porcelain"], text=True
+    ).strip()
+    if head != tagged or dirty or output.exists():
+        raise V5S10FusionGateError(
+            "S10 requires the clean frozen code tag and an absent output"
+        )
+    return {
+        "head": head,
+        "code_tag": CODE_TAG,
+        "manifest_sha256": _sha256(MANIFEST),
+        "output_absent_before_execution": True,
+    }
+
+
+def _write_exclusive(path: Path, value: dict[str, Any]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    descriptor = os.open(path, os.O_CREAT | os.O_EXCL | os.O_WRONLY, 0o644)
+    payload = (
+        json.dumps(value, indent=2, sort_keys=True, allow_nan=False) + "\n"
+    ).encode("utf-8")
+    try:
+        offset = 0
+        while offset < len(payload):
+            written = os.write(descriptor, payload[offset:])
+            if written <= 0:
+                raise V5S10FusionGateError("artifact write made no progress")
+            offset += written
+        os.fsync(descriptor)
+    finally:
+        os.close(descriptor)
+    directory = os.open(path.parent, os.O_RDONLY)
+    try:
+        os.fsync(directory)
+    finally:
+        os.close(directory)
 
 
 def _operator_residual(operator: Any) -> float:
@@ -110,8 +158,7 @@ def _resource_record(resources: Any) -> dict[str, Any]:
 
 
 def execute(output: Path = OUTPUT) -> dict[str, Any]:
-    if output.exists():
-        raise FileExistsError(output)
+    execution_freeze = _verify_execution_freeze(output)
     manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
     tolerance = manifest["acceptance"]
     cases: list[dict[str, Any]] = []
@@ -256,6 +303,7 @@ def execute(output: Path = OUTPUT) -> dict[str, Any]:
         "artifact_kind": "v5-s10-exact-fusion-gate-result",
         "manifest_path": str(MANIFEST.relative_to(ROOT)),
         "manifest_sha256": _sha256(MANIFEST),
+        "execution_freeze": execution_freeze,
         "cases": cases,
         "certified_candidate_count": certified_total,
         "adoption_gate_passed": certified_total > 0,
@@ -264,11 +312,7 @@ def execute(output: Path = OUTPUT) -> dict[str, Any]:
         "claim_boundary": manifest["claim_boundary"],
     }
     result["result_digest"] = _digest(result)
-    output.parent.mkdir(parents=True, exist_ok=True)
-    output.write_text(
-        json.dumps(result, indent=2, sort_keys=True, allow_nan=False) + "\n",
-        encoding="utf-8",
-    )
+    _write_exclusive(output, result)
     return result
 
 

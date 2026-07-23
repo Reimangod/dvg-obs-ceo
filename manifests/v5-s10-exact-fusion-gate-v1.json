@@ -3,7 +3,7 @@
   "stage": "V5-S10",
   "status": "frozen-before-execution",
   "extension_version": "V5.1",
-  "code_tag_to_create": "dvg-obs-v5-s10-fusion-gate-code-v1",
+  "code_tag_to_create": "dvg-obs-v5-s10-fusion-gate-code-v1.1",
   "hypothesis": "Registered OVP and MVP blocks built from the same parent QEs can be fused exactly when every intervening generator commutes, removing one physical OVP block without reducing variational expressivity.",
   "candidate_family": {
     "name": "exact-cross-iteration-OVP-to-MVP-absorption",
