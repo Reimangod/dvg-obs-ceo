@@ -27,7 +27,8 @@ from .v5_s8_protocol import DEFAULT_MANIFEST, audit_manifest
 
 
 CASE_ID = "h4-1.5-iteration-12-or-convergence"
-CODE_TAG = "dvg-obs-v5-s8-h4-hvp-sentinels-code-v1.3"
+CODE_TAG = "dvg-obs-v5-s8-h4-hvp-sentinels-code-v1.4"
+AMENDMENT_PATH = ROOT / "manifests/v5-s8-near-singular-damping-amendment-v1.json"
 REQUIRED_THREADS = {"OMP_NUM_THREADS": "1", "OPENBLAS_NUM_THREADS": "1", "MKL_NUM_THREADS": "1"}
 
 
@@ -136,10 +137,38 @@ def map_versioned_rows_to_current_candidates(
     return mapping
 
 
+def _minimum_feasible_curvature(hessian: np.ndarray, matrix: np.ndarray) -> float:
+    if matrix.shape[0]:
+        if np.linalg.matrix_rank(matrix) != matrix.shape[0]:
+            raise RuntimeError("candidate constraint matrix is rank deficient")
+        _, _, right = np.linalg.svd(matrix, full_matrices=True)
+        basis = np.asarray(right[matrix.shape[0] :].T, dtype=np.float64)
+    else:
+        basis = np.eye(hessian.shape[0], dtype=np.float64)
+    if basis.shape[1] == 0:
+        return math.inf
+    reduced = basis.T @ ((hessian + hessian.T) * 0.5) @ basis
+    return float(np.min(np.linalg.eigvalsh(reduced)))
+
+
 def run(manifest_path: Path = DEFAULT_MANIFEST) -> dict[str, Any]:
     freeze = verify_freeze()
     protocol = audit_manifest(manifest_path)
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    amendment = json.loads(AMENDMENT_PATH.read_text(encoding="utf-8"))
+    failed_artifact = json.loads(
+        (ROOT / amendment["triggering_failed_artifact"]["path"]).read_text(encoding="utf-8")
+    )
+    if (
+        failed_artifact["result_digest"]
+        != amendment["triggering_failed_artifact"]["result_digest"]
+        or failed_artifact["passed"] is not False
+        or amendment["registered_fallback"]["actual_or_fci_energy_used_to_select_damping"] is not False
+        or amendment["registered_fallback"]["resource_result_used_to_select_damping"] is not False
+    ):
+        raise RuntimeError("near-singular damping amendment provenance is invalid")
+    damping_grid = [float(value) for value in amendment["registered_fallback"]["damping_grid"]]
+    lower_bound = float(amendment["registered_fallback"]["near_singular_lower_bound"])
     record = next(item for item in manifest["inputs"] if item["case_id"] == CASE_ID)
     checkpoint = json.loads((ROOT / record["checkpoint_path"]).read_text(encoding="utf-8"))
     row_paths = sorted((ROOT / record["rows_directory"]).glob(record["row_prefix"] + "*.json"))
@@ -181,14 +210,6 @@ def run(manifest_path: Path = DEFAULT_MANIFEST) -> dict[str, Any]:
     frozen_to_current = map_versioned_rows_to_current_candidates(rows, tuple(candidates.values()))
     row_by_id = {row["candidate"]["candidate_id"]: row for row in rows}
 
-    explicit_config = HVPKKTConfig(
-        explicit_validation_dimension=32,
-        minimum_curvature=1e-10,
-        minres_tolerance=1e-11,
-        maximum_relative_residual=1e-9,
-        maximum_relative_backward_error=1e-9,
-        maximum_hessian_vector_products=4096,
-    )
     oracle_records: list[dict[str, Any]] = []
     transformations = {}
     for candidate_id in sorted(row_by_id):
@@ -196,33 +217,75 @@ def run(manifest_path: Path = DEFAULT_MANIFEST) -> dict[str, Any]:
         embedded = embed_block_transformation(theta.size, block_by_id[candidate.source_block_id], candidate)
         transformations[candidate_id] = embedded.transformation
         row = row_by_id[candidate_id]
-        try:
-            solve = solve_affine_kkt_hvp(
-                theta,
-                gradient,
-                embedded.transformation.constraint_matrix,
-                embedded.transformation.constraint_rhs,
-                lambda vector, hessian=hessian: hessian @ vector,
-                config=explicit_config,
-            )
+        feasible_curvature = _minimum_feasible_curvature(
+            hessian, embedded.transformation.constraint_matrix
+        )
+        attempts = []
+        solve = None
+        if feasible_curvature >= lower_bound:
+            for damping in damping_grid:
+                try:
+                    solve = solve_affine_kkt_hvp(
+                        theta,
+                        gradient,
+                        embedded.transformation.constraint_matrix,
+                        embedded.transformation.constraint_rhs,
+                        lambda vector, hessian=hessian: hessian @ vector,
+                        config=HVPKKTConfig(
+                            explicit_validation_dimension=32,
+                            minimum_curvature=1e-10,
+                            minres_tolerance=1e-11,
+                            maximum_relative_residual=1e-9,
+                            maximum_relative_backward_error=1e-9,
+                            maximum_hessian_vector_products=4096,
+                            damping=damping,
+                            damping_reason=(
+                                None if damping == 0.0
+                                else "near-singular-curvature-fallback"
+                            ),
+                        ),
+                    )
+                    attempts.append({"damping": damping, "status": "solved", "work": solve["work"]})
+                    break
+                except HVPRefinementError as error:
+                    attempts.append({
+                        "damping": damping,
+                        "status": "failed-closed",
+                        "failure_category": error.category,
+                        "work": error.work,
+                    })
+        if solve is not None:
             oracle_records.append({
                 "candidate_id": candidate_id,
                 "status": "solved",
                 "recycled_prediction_hartree": float(row["predictors"]["general_constraint_obs"]),
                 "fresh_hessian_prediction_hartree": solve["predicted_change_hartree"],
+                "undamped_minimum_feasible_curvature": feasible_curvature,
+                "selected_damping": solve["damping"],
                 "feasible_dimension": solve["feasible_dimension"],
                 "minimum_feasible_curvature": solve["minimum_curvature"],
                 "work": solve["work"],
+                "damping_attempts": attempts,
                 "posthoc_actual_change_hartree": float(row["actual_change_hartree"]),
                 "posthoc_complete_safe": bool(row["safe"]),
             })
-        except HVPRefinementError as error:
+        else:
             oracle_records.append({
                 "candidate_id": candidate_id,
                 "status": "failed-closed",
-                "failure_category": error.category,
+                "failure_category": (
+                    "true-indefinite-feasible-curvature"
+                    if feasible_curvature < lower_bound else "damping-grid-exhausted"
+                ),
+                "undamped_minimum_feasible_curvature": feasible_curvature,
                 "recycled_prediction_hartree": float(row["predictors"]["general_constraint_obs"]),
-                "work": error.work,
+                "work": (
+                    attempts[-1]["work"] if attempts else {
+                        "hessian_vector_products": 0,
+                        "gradient_vector_evaluations": 0,
+                    }
+                ),
+                "damping_attempts": attempts,
                 "posthoc_actual_change_hartree": float(row["actual_change_hartree"]),
                 "posthoc_complete_safe": bool(row["safe"]),
             })
@@ -241,41 +304,72 @@ def run(manifest_path: Path = DEFAULT_MANIFEST) -> dict[str, Any]:
             ),
             relative_step=relative_step,
         )
-        try:
-            solve = solve_affine_kkt_hvp(
-                theta,
-                gradient,
-                transformation.constraint_matrix,
-                transformation.constraint_rhs,
-                callback,
-                config=HVPKKTConfig(
-                    explicit_validation_dimension=0,
-                    minimum_curvature=1e-10,
-                    symmetry_relative_tolerance=1e-8,
-                    minres_tolerance=1e-10,
-                    maximum_relative_residual=1e-8,
-                    maximum_relative_backward_error=1e-8,
-                    maximum_hessian_vector_products=4096,
-                ),
-            )
-            oracle = next(item for item in oracle_records if item["candidate_id"] == candidate_id)
+        oracle = next(item for item in oracle_records if item["candidate_id"] == candidate_id)
+        matrix_attempts = []
+        solve = None
+        if oracle["undamped_minimum_feasible_curvature"] >= lower_bound:
+            for damping in damping_grid:
+                try:
+                    solve = solve_affine_kkt_hvp(
+                        theta,
+                        gradient,
+                        transformation.constraint_matrix,
+                        transformation.constraint_rhs,
+                        callback,
+                        config=HVPKKTConfig(
+                            explicit_validation_dimension=0,
+                            minimum_curvature=1e-10,
+                            symmetry_relative_tolerance=1e-8,
+                            minres_tolerance=1e-10,
+                            maximum_relative_residual=1e-8,
+                            maximum_relative_backward_error=1e-8,
+                            maximum_hessian_vector_products=4096,
+                            damping=damping,
+                            damping_reason=(
+                                None if damping == 0.0
+                                else "near-singular-curvature-fallback"
+                            ),
+                        ),
+                    )
+                    matrix_attempts.append({"damping": damping, "status": "solved", "work": solve["work"]})
+                    break
+                except HVPRefinementError as error:
+                    matrix_attempts.append({
+                        "damping": damping,
+                        "status": "failed-closed",
+                        "failure_category": error.category,
+                        "work": error.work,
+                    })
+        if solve is not None:
             matrix_free_records.append({
                 **sentinel,
                 "status": "solved",
                 "prediction_hartree": solve["predicted_change_hartree"],
+                "selected_damping": solve["damping"],
                 "explicit_oracle_prediction_hartree": oracle.get("fresh_hessian_prediction_hartree"),
                 "absolute_oracle_difference_hartree": (
                     None if oracle["status"] != "solved"
                     else abs(solve["predicted_change_hartree"] - oracle["fresh_hessian_prediction_hartree"])
                 ),
                 "work": solve["work"],
+                "damping_attempts": matrix_attempts,
             })
-        except HVPRefinementError as error:
+        else:
             matrix_free_records.append({
                 **sentinel,
                 "status": "failed-closed",
-                "failure_category": error.category,
-                "work": error.work,
+                "failure_category": (
+                    "true-indefinite-feasible-curvature"
+                    if oracle["undamped_minimum_feasible_curvature"] < lower_bound
+                    else "damping-grid-exhausted"
+                ),
+                "work": (
+                    matrix_attempts[-1]["work"] if matrix_attempts else {
+                        "hessian_vector_products": 0,
+                        "gradient_vector_evaluations": 0,
+                    }
+                ),
+                "damping_attempts": matrix_attempts,
             })
 
     solved = [item for item in oracle_records if item["status"] == "solved"]
@@ -310,6 +404,13 @@ def run(manifest_path: Path = DEFAULT_MANIFEST) -> dict[str, Any]:
         "checks": checks,
         "execution_freeze": freeze,
         "protocol_manifest_sha256": protocol["manifest_sha256"],
+        "damping_amendment": {
+            "path": str(AMENDMENT_PATH.relative_to(ROOT)),
+            "sha256": hashlib.sha256(AMENDMENT_PATH.read_bytes()).hexdigest(),
+            "grid": damping_grid,
+            "selection_rule": amendment["registered_fallback"]["selection_rule"],
+            "actual_or_fci_used": False,
+        },
         "case_id": CASE_ID,
         "source_dimension": theta.size,
         "candidate_identity_mapping": {
