@@ -74,6 +74,7 @@ dvg-obs-v4-1-release-audit = "dvg_obs_ceo.v4_1_release_audit:main"
 dvg-obs-v5-protocol = "dvg_obs_ceo.v5_protocol:main"
 dvg-obs-v5-ledger-audit = "dvg_obs_ceo.v5_ledger_audit:main"
 dvg-obs-v5-nested-audit = "dvg_obs_ceo.v5_nested_audit:main"
+dvg-obs-v5-sequential-audit = "dvg_obs_ceo.v5_sequential_audit:main"
 dvg-obs-paper-equivalent-figures = "dvg_obs_ceo.paper_equivalent_figures:main"
 dvg-obs-multisystem-checkpoint = "dvg_obs_ceo.multisystem_checkpoint:main"
 
