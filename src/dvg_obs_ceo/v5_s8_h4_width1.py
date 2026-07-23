@@ -35,6 +35,11 @@ from .transaction import (
 )
 from .v4_lih import _energy, _gradient
 from .v5_ledger import V5WorkCounters, versioned_id
+from .v5_conditional_polishing import (
+    ConditionalPolishingConfig,
+    PolishingEligibility,
+    polish_target_native_conditionally,
+)
 from .v5_nested_transaction import PathCheckpointStore
 from .v5_pareto import RiskAwareCandidate, RiskDiagnostics, select_risk_aware_pareto
 from .v5_sequential import (
@@ -101,11 +106,16 @@ class H4WidthOneAdapter:
         *,
         problem_id: str,
         screening_budget_hartree: float = 1e-4,
+        enable_conditional_polishing: bool = False,
+        polishing_config: ConditionalPolishingConfig = ConditionalPolishingConfig(),
     ) -> None:
         self.algorithm = algorithm
         self.pool = pool
         self.problem_id = problem_id
         self.screening_budget_hartree = screening_budget_hartree
+        polishing_config.validate()
+        self.enable_conditional_polishing = enable_conditional_polishing
+        self.polishing_config = polishing_config
         self.work = V5WorkCounters()
         self._catalog_cache: dict[str, CatalogSnapshot] = {}
         self._selection_cache: dict[str, dict[str, Any]] = {}
@@ -271,6 +281,7 @@ class H4WidthOneAdapter:
         )
         fallback = None
         selected = primary
+        selected_path = "recycled-obs"
         if not primary["optimizer"]["success"]:
             fallback = _optimize_target(
                 self.algorithm,
@@ -280,6 +291,101 @@ class H4WidthOneAdapter:
                 source_state,
             )
             selected = fallback
+            selected_path = "least-squares-fallback"
+        polishing = None
+        polishing_optimizer_outcome = None
+        if (
+            self.enable_conditional_polishing
+            and float(selected["gradient_infinity"]) > 1e-8
+        ):
+            rejected_coordinates = np.asarray(selected["coordinates"], dtype=np.float64)
+            projected_source = (
+                plan.transformation.offset
+                + plan.transformation.jacobian @ rejected_coordinates
+            )
+            polishing = polish_target_native_conditionally(
+                plan.transformation,
+                projected_source,
+                np.asarray(source.coefficients, dtype=np.float64),
+                lambda theta: _energy(self.algorithm, theta, source.indices),
+                lambda theta: _gradient(self.algorithm, theta, source.indices),
+                PolishingEligibility(
+                    semantics_validated=True,
+                    physical_resource_benefit=True,
+                    predicted_energy_within_budget=True,
+                    refinement_required=True,
+                ),
+                config=self.polishing_config,
+            )
+            if polishing["success"]:
+                polished_coordinates = np.asarray(
+                    polishing["target_coordinates"], dtype=np.float64
+                )
+                polished_energy = _energy(
+                    self.algorithm, polished_coordinates, plan.target_indices
+                )
+                polished_independent_energy = _energy(
+                    self.algorithm, polished_coordinates, plan.target_indices
+                )
+                polished_gradient = _gradient(
+                    self.algorithm, polished_coordinates, plan.target_indices
+                )
+                polished_state_first = _state_vector(
+                    self.algorithm, polished_coordinates, plan.target_indices
+                )
+                polished_state_second = _state_vector(
+                    self.algorithm, polished_coordinates, plan.target_indices
+                )
+                selected_attempt = next(
+                    item["result"] for item in polishing["attempts"]
+                    if item["start"] == polishing["selected_start"]
+                )
+                selected = {
+                    "coordinates": polished_coordinates.tolist(),
+                    "energy_hartree": polished_energy,
+                    "independent_energy_hartree": polished_independent_energy,
+                    "independent_energy_difference_hartree": abs(
+                        polished_energy - polished_independent_energy
+                    ),
+                    "gradient": polished_gradient.tolist(),
+                    "gradient_l2": float(np.linalg.norm(polished_gradient)),
+                    "gradient_infinity": float(np.max(np.abs(polished_gradient))),
+                    "optimizer": {
+                        "implementation": "v5-conditional-target-native-polishing-v1",
+                        "success": True,
+                        "status": int(selected_attempt["status"]),
+                        "message": str(selected_attempt["message"]),
+                        "iterations": int(selected_attempt["iterations"]),
+                        "function_evaluations": int(polishing["work"]["energy_evaluations"]),
+                        "gradient_vector_evaluations": int(polishing["work"]["gradient_vector_evaluations"]),
+                    },
+                    "independent_work": {
+                        "energy_evaluations": 1,
+                        "gradient_vector_evaluations": 1,
+                        "explicit_state_recomputations": 2,
+                    },
+                    "finite": bool(
+                        math.isfinite(polished_energy)
+                        and math.isfinite(polished_independent_energy)
+                        and np.all(np.isfinite(polished_coordinates))
+                        and np.all(np.isfinite(polished_gradient))
+                    ),
+                    "independent_state_recomputation_fidelity": float(
+                        abs(np.vdot(polished_state_first, polished_state_second)) ** 2
+                    ),
+                    "source_candidate_state_fidelity": float(
+                        abs(np.vdot(source_state, polished_state_first)) ** 2
+                    ),
+                    "final_inverse_hessian": np.asarray(target_inverse).tolist(),
+                    "paper_measurement_cost": None,
+                }
+                selected_path = "conditional-target-native-polishing"
+                polishing_optimizer_outcome = OptimizerOutcome(
+                    True,
+                    str(selected_attempt["status"]),
+                    str(selected_attempt["message"]),
+                    True,
+                )
         coordinates = np.asarray(selected["coordinates"], dtype=np.float64)
         target = AnsatzStructure.create(
             plan.target_indices, coordinates, plan.target_iteration_counts
@@ -327,7 +433,11 @@ class H4WidthOneAdapter:
             full_resource_recount_succeeded=physical.snapshot == structural.snapshot,
             transformation_semantics_validated=semantics,
             primary_optimizer=_optimizer(primary),
-            fallback_optimizer=None if fallback is None else _optimizer(fallback),
+            fallback_optimizer=(
+                polishing_optimizer_outcome
+                if polishing_optimizer_outcome is not None
+                else None if fallback is None else _optimizer(fallback)
+            ),
         ), criteria)
 
         self.attempt_records.append({
@@ -346,7 +456,8 @@ class H4WidthOneAdapter:
             },
             "primary": primary,
             "fallback": fallback,
-            "selected_optimizer_path": "recycled-obs" if fallback is None else "least-squares-fallback",
+            "conditional_polishing": polishing,
+            "selected_optimizer_path": selected_path,
             "two_path_certificate": certificate,
             "constraint_residual_infinity": residual,
             "before_resources": asdict(before.snapshot),
@@ -363,24 +474,56 @@ class H4WidthOneAdapter:
         runtime.statevector = _state_vector(self.algorithm, coordinates, plan.target_indices)
         runtime.metadata["resource_structure_digest"] = physical.snapshot.structure_digest
         paths = [primary] if fallback is None else [primary, fallback]
+        polishing_work = (
+            {"energy_evaluations": 0, "gradient_vector_evaluations": 0,
+             "hessian_vector_products": 0, "hessian_vector_gradient_evaluations": 0}
+            if polishing is None else polishing["work"]
+        )
+        polishing_iterations = 0 if polishing is None else sum(
+            int(item["result"]["iterations"]) for item in polishing["attempts"]
+        )
         optimizer_energy = sum(int(path["optimizer"]["function_evaluations"]) + 2 for path in paths)
         optimizer_gradients = sum(int(path["optimizer"]["gradient_vector_evaluations"]) + 1 for path in paths)
         self.work = replace(
             self.work,
-            energy_evaluations=self.work.energy_evaluations + optimizer_energy + 2,
-            gradient_vector_evaluations=self.work.gradient_vector_evaluations + optimizer_gradients + 2,
+            energy_evaluations=(
+                self.work.energy_evaluations + optimizer_energy + 2
+                + int(polishing_work["energy_evaluations"])
+                + (2 if polishing_optimizer_outcome is not None else 0)
+            ),
+            gradient_vector_evaluations=(
+                self.work.gradient_vector_evaluations + optimizer_gradients + 2
+                + int(polishing_work["gradient_vector_evaluations"])
+                + (1 if polishing_optimizer_outcome is not None else 0)
+            ),
             gradient_component_equivalents=(
                 self.work.gradient_component_equivalents
                 + optimizer_gradients * len(plan.target_indices)
                 + len(plan.target_indices) + len(source.indices)
+                + int(polishing_work["gradient_vector_evaluations"]) * len(source.indices)
+                + (len(plan.target_indices) if polishing_optimizer_outcome is not None else 0)
+            ),
+            finite_difference_hvp_calls=(
+                self.work.finite_difference_hvp_calls
+                + int(polishing_work["hessian_vector_products"])
             ),
             exact_vqe_attempts=exact_attempt,
-            optimizer_iterations=self.work.optimizer_iterations + sum(int(path["optimizer"]["iterations"]) for path in paths),
-            optimizer_starts=self.work.optimizer_starts + len(paths),
+            optimizer_iterations=(
+                self.work.optimizer_iterations
+                + sum(int(path["optimizer"]["iterations"]) for path in paths)
+                + polishing_iterations
+            ),
+            optimizer_starts=(
+                self.work.optimizer_starts + len(paths)
+                + (len(polishing["attempts"]) if polishing is not None else 0)
+            ),
             full_resource_recounts=self.work.full_resource_recounts + 2,
             attempted_rounds=round_index,
             accepted_rounds=self.work.accepted_rounds + (1 if decision.accepted else 0),
-            statevector_evaluations=self.work.statevector_evaluations + 2 * len(paths) + 3,
+            statevector_evaluations=(
+                self.work.statevector_evaluations + 2 * len(paths) + 3
+                + (2 if polishing_optimizer_outcome is not None else 0)
+            ),
         )
         state_id = _state_id(runtime)
         return SequentialExecution(

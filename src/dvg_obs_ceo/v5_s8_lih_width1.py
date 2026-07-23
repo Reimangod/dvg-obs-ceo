@@ -19,6 +19,7 @@ from .telemetry import WorkCounters
 from .transaction import CompressionRuntime
 from .v4_lih import _energy
 from .v5_ledger import versioned_id
+from .v5_conditional_polishing import ConditionalPolishingConfig
 from .v5_nested_transaction import PathCheckpointStore
 from .v5_s8_h4_width1 import (
     MolecularWidthOneAdapter,
@@ -52,7 +53,13 @@ def _load_checkpoint() -> dict:
     return checkpoint
 
 
-def run(output: Path = OUTPUT) -> dict:
+def run(
+    output: Path = OUTPUT,
+    *,
+    runner_version: str = RUNNER_VERSION,
+    enable_conditional_polishing: bool = False,
+    polishing_config: ConditionalPolishingConfig = ConditionalPolishingConfig(),
+) -> dict:
     threads = {name: os.environ.get(name) for name in REQUIRED_THREADS}
     if threads != REQUIRED_THREADS:
         raise V5S8LiHWidthOneError(f"single-thread freeze missing: {threads}")
@@ -94,10 +101,16 @@ def run(output: Path = OUTPUT) -> dict:
         "hamiltonian_context": "stored-pinned-lih-3.0-angstrom-sto-3g",
         "checkpoint_digest": checkpoint["checkpoint_digest"],
     })
-    adapter = MolecularWidthOneAdapter(algorithm, pool, problem_id=problem_id)
+    adapter = MolecularWidthOneAdapter(
+        algorithm,
+        pool,
+        problem_id=problem_id,
+        enable_conditional_polishing=enable_conditional_polishing,
+        polishing_config=polishing_config,
+    )
     source_catalog = adapter.catalog_builder(runtime)
     path_id = versioned_id("path-v5", {
-        "runner_version": RUNNER_VERSION,
+        "runner_version": runner_version,
         "case_id": CASE_ID,
         "checkpoint_digest": checkpoint["checkpoint_digest"],
     })
@@ -121,8 +134,11 @@ def run(output: Path = OUTPUT) -> dict:
     )
     payload = {
         "schema_version": "1.0.0",
-        "artifact_kind": "v5-s8-lih-width1-transfer",
-        "runner_version": RUNNER_VERSION,
+        "artifact_kind": (
+            "v5-s8-lih-width1-conditional-polishing-integration"
+            if enable_conditional_polishing else "v5-s8-lih-width1-transfer"
+        ),
+        "runner_version": runner_version,
         "case_id": CASE_ID,
         "checkpoint_digest": checkpoint["checkpoint_digest"],
         "source_energy_hartree": checkpoint["energy_hartree"],

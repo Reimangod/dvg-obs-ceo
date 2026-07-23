@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "v5-s8-lih-cp-integration-v1",
+  "status": "frozen-before-fresh-integration-run",
+  "code_tag_to_create_before_execution": "dvg-obs-v5-s8-lih-cp-integration-code-v1",
+  "calibration_evidence": {
+    "probe_path": "artifacts/v5/s8/lih-polishing-l2-alignment-probe-v1.json",
+    "probe_sha256": "662fd7f2dcb310dfd63fa5e6d94a1b83dd4846e2d16379bbd34118851f84a363",
+    "audit_path": "artifacts/v5/s8/lih-polishing-l2-alignment-probe-v1-audit.json",
+    "audit_sha256": "9d5a38e677ca5860efcaa3184c26d70dc4140819fe14f0ef157ae40ada132706"
+  },
+  "algorithm": {
+    "name": "V5-C-plus-conditional-polishing-calibration-variant",
+    "full_ablation_F": false,
+    "screening": "unchanged-ablation-C-recycled-risk-aware-width-one",
+    "maximum_rounds": 2,
+    "maximum_exact_attempts": 2,
+    "conditional_trigger": "selected-BFGS-path-gradient-infinity-greater-than-1e-8",
+    "polisher": "target-native-trust-ncg-central-gradient-hvp-v1",
+    "polisher_gradient_l2_tolerance": 1e-8,
+    "scientific_gradient_infinity_gate": 1e-8,
+    "energy_budget_hartree": 0.0001,
+    "candidate_reselection": false,
+    "threshold_relaxation": false,
+    "fresh_execution": true,
+    "probe_coordinates_reused": false
+  },
+  "work_accounting": {
+    "failed_BFGS_starts_counted": true,
+    "polishing_energy_and_gradient_calls_counted": true,
+    "finite_difference_hvp_calls_counted": true,
+    "rejected_attempts_counted": true,
+    "paper_measurement_cost": null
+  },
+  "claim_boundary": [
+    "Calibration integration on known LiH development data; not confirmation.",
+    "The successful probe result is not reused as a committed state.",
+    "This is C plus polishing, not the preregistered full F combination."
+  ],
+  "paper_measurement_cost": null
+}
