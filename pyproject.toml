@@ -79,6 +79,7 @@ dvg-obs-v5-pareto-audit = "dvg_obs_ceo.v5_pareto_audit:main"
 dvg-obs-v5-hvp-kkt-audit = "dvg_obs_ceo.v5_hvp_kkt_audit:main"
 dvg-obs-v5-polishing-audit = "dvg_obs_ceo.v5_conditional_polishing_audit:main"
 dvg-obs-v5-multitrajectory-audit = "dvg_obs_ceo.v5_multitrajectory_audit:main"
+dvg-obs-v5-s8-protocol = "dvg_obs_ceo.v5_s8_protocol:main"
 dvg-obs-paper-equivalent-figures = "dvg_obs_ceo.paper_equivalent_figures:main"
 dvg-obs-multisystem-checkpoint = "dvg_obs_ceo.multisystem_checkpoint:main"
 
