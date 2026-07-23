@@ -1,0 +1,18 @@
+{
+  "artifact_kind": "v5-s2-nested-transaction-independent-audit",
+  "checks": {
+    "committed_checkpoint_tamper_detected": true,
+    "concurrent_writer_rejected": true,
+    "later_failure_does_not_erase_prior_commit": true,
+    "later_failure_restores_last_commit": true,
+    "orphan_recovery_is_auditable": true,
+    "orphan_restores_durable_parent": true,
+    "partial_failure_evidence_preserved": true
+  },
+  "claim_boundary": "Synthetic nested-transaction durability and rollback evidence only; no molecular performance claim.",
+  "evidence": {
+    "committed_chain_length": 2
+  },
+  "passed": true,
+  "schema_version": "1.0.0"
+}
