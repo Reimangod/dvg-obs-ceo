@@ -1,0 +1,36 @@
+{
+  "artifact_kind": "v5-s8-lih-polishing-l2-alignment-probe-audit",
+  "audit_digest": "3d00da08654b5f3871bf1d771b8ccc9b4d9616f05f21ef44221fa650cebf7858",
+  "checks": {
+    "all_independent_acceptance_checks_pass": true,
+    "code_tag_is_ancestor": true,
+    "componentwise_resource_nonregression": true,
+    "incremental_hvp_work_counted": true,
+    "l2_implies_infinity_certificate": true,
+    "measurement_cost_undefined": true,
+    "operational_success_is_status_zero": true,
+    "original_c_work_retained": true,
+    "physical_structural_recounts_match": true,
+    "result_digest": true,
+    "single_registered_change": true,
+    "strict_resource_improvement": true
+  },
+  "claim_boundary": "Successful causal probe only; no committed path or final V5 claim until fresh integration rerun.",
+  "paper_measurement_cost": null,
+  "passed": true,
+  "schema_version": "1.0.0",
+  "scientific_result": {
+    "energy_hartree": -7.797909682479916,
+    "gradient_infinity": 6.586161275211333e-09,
+    "resources": {
+      "cnot_count": 98,
+      "cnot_depth": 30,
+      "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+      "logical_block_count": 14,
+      "parameter_count": 14,
+      "structure_digest": "bbc35a4f22ddccfcf1ba9cb7a8f9e711e5bd645fdba5010253b6a16d8e28aa03",
+      "total_depth": 158
+    },
+    "status": "successful-causal-probe-requires-fresh-sequential-integration"
+  }
+}
