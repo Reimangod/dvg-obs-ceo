@@ -38,6 +38,8 @@ def test_versioned_ids_are_mapped_by_physical_primitive() -> None:
         "target_pool_indices": [],
         "removed_source_slots": [0],
         "exact_generator_relation": None,
+        "target_operator_digests": [],
+        "semantic_conflict_positions": [0],
     }
     current = SimpleNamespace(
         candidate_id="new-id",
@@ -46,7 +48,9 @@ def test_versioned_ids_are_mapped_by_physical_primitive() -> None:
         target_family="empty",
         target_pool_indices=(),
         removed_source_slots=(0,),
-        exact_generator_relation=None,
+        exact_generator_relation=(1,),
+        target_operator_digests=(),
+        semantic_conflict_positions=(0,),
     )
     mapping = map_versioned_rows_to_current_candidates([{"candidate": stored}], [current])
     assert mapping == {"old-id": current}

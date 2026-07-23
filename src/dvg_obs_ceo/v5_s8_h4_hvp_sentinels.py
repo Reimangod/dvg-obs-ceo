@@ -27,7 +27,7 @@ from .v5_s8_protocol import DEFAULT_MANIFEST, audit_manifest
 
 
 CASE_ID = "h4-1.5-iteration-12-or-convergence"
-CODE_TAG = "dvg-obs-v5-s8-h4-hvp-sentinels-code-v1.1"
+CODE_TAG = "dvg-obs-v5-s8-h4-hvp-sentinels-code-v1.2"
 REQUIRED_THREADS = {"OMP_NUM_THREADS": "1", "OPENBLAS_NUM_THREADS": "1", "MKL_NUM_THREADS": "1"}
 
 
@@ -95,7 +95,8 @@ def _semantic_primitive(value: Any) -> tuple[Any, ...]:
             value["target_family"],
             tuple(value["target_pool_indices"]),
             tuple(value["removed_source_slots"]),
-            None if value.get("exact_generator_relation") is None else tuple(value["exact_generator_relation"]),
+            tuple(value["target_operator_digests"]),
+            tuple(value["semantic_conflict_positions"]),
         )
     return (
         value.kind,
@@ -103,14 +104,20 @@ def _semantic_primitive(value: Any) -> tuple[Any, ...]:
         value.target_family,
         tuple(value.target_pool_indices),
         tuple(value.removed_source_slots),
-        None if value.exact_generator_relation is None else tuple(value.exact_generator_relation),
+        tuple(value.target_operator_digests),
+        tuple(value.semantic_conflict_positions),
     )
 
 
 def map_versioned_rows_to_current_candidates(
     rows: Sequence[dict[str, Any]], candidates: Sequence[Any]
 ) -> dict[str, Any]:
-    """Map old candidate IDs by physical primitive, never by versioned digest."""
+    """Map old IDs by physical primitive, never by a versioned digest.
+
+    ``exact_generator_relation`` is intentionally omitted because it was added
+    to the newer schema; target operators and conflict positions bind the same
+    physical transformation across that schema amendment.
+    """
 
     by_primitive: dict[tuple[Any, ...], list[Any]] = {}
     for candidate in candidates:
