@@ -21,7 +21,10 @@ from .baseline import ROOT
 from .block_ir import enumerate_candidates, recover_dvg_blocks
 from .calibration import least_squares_native_coordinates, obs_warm_start
 from .composition import compose_registered_candidates
+from .constraint_state import ConstraintStateError
+from .composition import GlobalCompatibilityError
 from .identity import canonical_json_bytes
+from .joint_prediction import JointScreeningContext
 from .resources import AnsatzStructure, evaluate_full_circuit_resources, paper_era_backend
 from .s8_probe import _algorithm, _optimize_target, _state_vector
 from .stationarity import GradientAgreementPolicy, audit_gradient_paths
@@ -49,6 +52,7 @@ from .v5_sequential import (
     WidthOneConfig,
     run_width_one,
 )
+from .search import SearchCandidate, SearchConfig, SearchEvaluation, deterministic_search
 
 
 RUNNER_VERSION = "v5-s8-h4-width1-recycled-v1.1"
@@ -108,6 +112,11 @@ class H4WidthOneAdapter:
         screening_budget_hartree: float = 1e-4,
         enable_conditional_polishing: bool = False,
         polishing_config: ConditionalPolishingConfig = ConditionalPolishingConfig(),
+        enable_joint_search: bool = False,
+        maximum_expanded_nodes: int = 20000,
+        maximum_completed_states: int = 10000,
+        maximum_quadratic_solves: int = 10000,
+        maximum_full_resource_recounts: int = 10000,
     ) -> None:
         self.algorithm = algorithm
         self.pool = pool
@@ -116,6 +125,16 @@ class H4WidthOneAdapter:
         polishing_config.validate()
         self.enable_conditional_polishing = enable_conditional_polishing
         self.polishing_config = polishing_config
+        self.enable_joint_search = enable_joint_search
+        search_limits = (
+            maximum_expanded_nodes,
+            maximum_completed_states,
+            maximum_quadratic_solves,
+            maximum_full_resource_recounts,
+        )
+        if any(not isinstance(value, int) or value <= 0 for value in search_limits):
+            raise V5S8H4WidthOneError("joint-search limits must be positive integers")
+        self.search_limits = search_limits
         self.work = V5WorkCounters()
         self._catalog_cache: dict[str, CatalogSnapshot] = {}
         self._selection_cache: dict[str, dict[str, Any]] = {}
@@ -135,12 +154,73 @@ class H4WidthOneAdapter:
         representatives: dict[str, Any] = {}
         for candidate in enumerate_candidates(self.pool, blocks):
             representatives.setdefault(candidate.equivalence_class_id, candidate)
+        by_id = {candidate.candidate_id: candidate for candidate in representatives.values()}
+        search_evidence = None
+        if self.enable_joint_search:
+            screening = JointScreeningContext.create(
+                source.coefficients, runtime.gradient, runtime.inverse_hessian
+            )
+
+            def evaluate(candidate_ids: tuple[str, ...]) -> SearchEvaluation:
+                try:
+                    plan = compose_registered_candidates(
+                        source, blocks, tuple(by_id[value] for value in candidate_ids)
+                    )
+                    predicted = max(
+                        0.0, float(screening.predicted_change(plan.transformation))
+                    )
+                    return SearchEvaluation(
+                        "valid",
+                        plan.state.constraint_semantic_id,
+                        plan.state.constraint_numerical_id,
+                        predicted,
+                    )
+                except (ConstraintStateError, GlobalCompatibilityError) as error:
+                    return SearchEvaluation(
+                        "semantic-composition-failure", None, None, None,
+                        reason=repr(error),
+                    )
+                except Exception as error:
+                    return SearchEvaluation(
+                        "candidate-numerical-failure", None, None, None,
+                        reason=repr(error),
+                    )
+
+            expanded, completed, solves, _ = self.search_limits
+            search_evidence = deterministic_search(
+                tuple(
+                    SearchCandidate(candidate.candidate_id, candidate.source_block_id)
+                    for candidate in by_id.values()
+                ),
+                evaluate,
+                SearchConfig(
+                    self.screening_budget_hartree,
+                    expanded,
+                    completed,
+                    solves,
+                ),
+            )
+            candidate_batches = [
+                tuple(record["candidate_ids"])
+                for record in search_evidence["records"]
+                if record["eligible"]
+            ][: self.search_limits[3]]
+            expanded_state_count = int(search_evidence["counts"]["expanded"])
+        else:
+            candidate_batches = [
+                (candidate.candidate_id,)
+                for candidate in sorted(
+                    representatives.values(), key=lambda item: item.candidate_id
+                )
+            ]
+            expanded_state_count = len(representatives)
         risk_candidates: list[RiskAwareCandidate] = []
         by_semantic: dict[str, dict[str, Any]] = {}
         numerical_failures: list[dict[str, str]] = []
-        for candidate in sorted(representatives.values(), key=lambda item: item.candidate_id):
+        for candidate_ids in candidate_batches:
             try:
-                plan = compose_registered_candidates(source, blocks, (candidate,))
+                batch = tuple(by_id[value] for value in candidate_ids)
+                plan = compose_registered_candidates(source, blocks, batch)
                 initial, target_inverse, prediction = obs_warm_start(
                     source.coefficients,
                     runtime.gradient,
@@ -166,14 +246,14 @@ class H4WidthOneAdapter:
                 stratum = "good" if condition <= 1e8 else "boundary" if quality_passed else "poor"
                 evidence = {
                     "runner_version": RUNNER_VERSION,
-                    "candidate_id": candidate.candidate_id,
+                    "candidate_ids": list(candidate_ids),
                     "constraint_semantic_id": plan.state.constraint_semantic_id,
                     "constraint_numerical_id": plan.state.constraint_numerical_id,
                     "target_inverse_condition_number": condition,
                     "predictor": "recycled-general-constraint-obs",
                 }
                 risk = RiskAwareCandidate(
-                    candidate_ids=(candidate.candidate_id,),
+                    candidate_ids=tuple(candidate_ids),
                     constraint_semantic_id=plan.state.constraint_semantic_id,
                     constraint_numerical_id=plan.state.constraint_numerical_id,
                     predicted_loss_hartree=predicted,
@@ -190,7 +270,7 @@ class H4WidthOneAdapter:
                 )
                 risk_candidates.append(risk)
                 by_semantic[plan.state.constraint_semantic_id] = {
-                    "candidate": candidate,
+                    "candidate_ids": list(candidate_ids),
                     "initial": np.asarray(initial).tolist(),
                     "target_inverse_hessian": np.asarray(target_inverse).tolist(),
                     "prediction": predicted,
@@ -198,7 +278,7 @@ class H4WidthOneAdapter:
                 }
             except Exception as error:  # fail one candidate closed, preserve category
                 numerical_failures.append({
-                    "candidate_id": candidate.candidate_id,
+                    "candidate_ids": list(candidate_ids),
                     "error_type": type(error).__name__,
                     "error": str(error),
                 })
@@ -213,9 +293,8 @@ class H4WidthOneAdapter:
         queue: list[SequentialCandidate] = []
         for semantic_id in selection["unique_attempt_semantic_ids"]:
             stored = by_semantic[semantic_id]
-            candidate = stored["candidate"]
             evidence = {
-                "atomic_candidate_ids": [candidate.candidate_id],
+                "atomic_candidate_ids": list(stored["candidate_ids"]),
                 "constraint_semantic_id": semantic_id,
                 "constraint_numerical_id": stored["constraint_numerical_id"],
                 "selection_digest": selection["selection_digest"],
@@ -231,12 +310,14 @@ class H4WidthOneAdapter:
         self._selection_cache[runtime_digest] = {
             "selection": selection,
             "candidate_count": len(representatives),
+            "candidate_batch_count": len(candidate_batches),
+            "joint_search": search_evidence,
             "numerical_failures": numerical_failures,
         }
         self.work = replace(
             self.work,
             full_resource_recounts=self.work.full_resource_recounts + 1 + len(risk_candidates),
-            expanded_search_states=self.work.expanded_search_states + len(representatives),
+            expanded_search_states=self.work.expanded_search_states + expanded_state_count,
         )
         return catalog
 

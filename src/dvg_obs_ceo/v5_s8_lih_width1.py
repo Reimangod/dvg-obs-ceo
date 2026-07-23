@@ -59,6 +59,7 @@ def run(
     runner_version: str = RUNNER_VERSION,
     enable_conditional_polishing: bool = False,
     polishing_config: ConditionalPolishingConfig = ConditionalPolishingConfig(),
+    enable_joint_search: bool = False,
 ) -> dict:
     threads = {name: os.environ.get(name) for name in REQUIRED_THREADS}
     if threads != REQUIRED_THREADS:
@@ -107,6 +108,7 @@ def run(
         problem_id=problem_id,
         enable_conditional_polishing=enable_conditional_polishing,
         polishing_config=polishing_config,
+        enable_joint_search=enable_joint_search,
     )
     source_catalog = adapter.catalog_builder(runtime)
     path_id = versioned_id("path-v5", {
@@ -135,8 +137,12 @@ def run(
     payload = {
         "schema_version": "1.0.0",
         "artifact_kind": (
-            "v5-s8-lih-width1-conditional-polishing-integration"
-            if enable_conditional_polishing else "v5-s8-lih-width1-transfer"
+            "v5-s8-lih-joint-sequential-integration"
+            if enable_joint_search
+            else (
+                "v5-s8-lih-width1-conditional-polishing-integration"
+                if enable_conditional_polishing else "v5-s8-lih-width1-transfer"
+            )
         ),
         "runner_version": runner_version,
         "case_id": CASE_ID,
