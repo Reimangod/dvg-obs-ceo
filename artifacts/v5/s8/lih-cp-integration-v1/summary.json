@@ -1,0 +1,2300 @@
+{
+  "artifact_kind": "v5-s8-lih-width1-conditional-polishing-integration",
+  "case_id": "lih-3.0",
+  "catalog_diagnostics_by_runtime": {
+    "27248f48abe27f0d6af1e766866e5fc63d66cbb4d6d9772bebff48da511fbc75": {
+      "candidate_count": 14,
+      "numerical_failures": [],
+      "selection": {
+        "assessments": [
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:0364590b692d279c4758a41b9aab5677210217d30b0fd5f851690ab1409c38dd",
+            "eligible": true,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [],
+            "risk_adjusted_loss_hartree": 5.484516222271758e-06,
+            "structure_digest": "8de88ad6c39bf0778e6a2b741ef1bce42e963960532fb413765863249c7a609c"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:0dc70c03d0d1d283b5233ec8b3b6cfe18eaafddab3f73faafb14496ce933f137",
+            "eligible": true,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [],
+            "risk_adjusted_loss_hartree": 8.508887510439891e-06,
+            "structure_digest": "2f348f59cb01870fd0981083cb57bfd0bc18494b2ae30271abd697de9f398d22"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:40d3cd2d853a80585ca07a103379b7d58480ad7aeea6bde89a92116ed992e915",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.0032429317190662294,
+            "structure_digest": "855cfffcce69a528f889e2c05fe42e8a63056d934cc92343fa6ad1060525758c"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:58162be3dbd89af95a1ca356ef8db28c2ef78d7cf1da5d8548fb9ebecdd4d857",
+            "eligible": true,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [],
+            "risk_adjusted_loss_hartree": 1.1866451990259317e-05,
+            "structure_digest": "0dec3d7fe1d296f236f62583d8a95d4463e7097d7a0db2482ed378dd32bf4b36"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:58b364cb4de9776d5f31bac0648d0066d0f731f2769a7b4a015a818740f1a666",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.3084233263201137,
+            "structure_digest": "1d8508ae19344a34a1bf12a3d42331579280f69d336c4e10ceab469e194501d5"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:71a6d919ef203b77588263904129fea7809304ebd657ba9bdbf6e17ef511e9db",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.014426614741648958,
+            "structure_digest": "ad30934bdc43e73d2051a528bd1b08790fc18917882a6ca510962d28cc439e14"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:7d8b1663a95e5f1076b167d20f03bc1fb475f13d65ab0faa04ac38f40c26d2e7",
+            "eligible": true,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [],
+            "risk_adjusted_loss_hartree": 2.6860806908263155e-05,
+            "structure_digest": "0fb0b41a552bb16ea06c9153677231b8b9b8623743e15ffb87d456eb15cb37ed"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:8ea56eaf526555fb2a85a216a667fc5beb3a622fa6afc373c78258304dac3275",
+            "eligible": true,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [],
+            "risk_adjusted_loss_hartree": 1.0342315719670509e-05,
+            "structure_digest": "f5199dea2a2438f41a18011d2e899b342cec807ca08e873b96477ec5d4bcc4d7"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:973c570d23d8108f40d38eba921c1148e83e6453cb463cbccd3149802660c9f7",
+            "eligible": true,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [],
+            "risk_adjusted_loss_hartree": 3.4004542020257326e-05,
+            "structure_digest": "c72453a6390fa771d65d08c2682da034f315c18b99b790301d6dd99dcb77d68d"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:97bedabdddefa5711aed6fd4cc4276762f4b1c9df3eb35bcefbafd6d8f9f9d7a",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.012840523443061545,
+            "structure_digest": "b0198b0a0b933745677016d9fde5e88d61ea456817b2b2351389a533a768e0d9"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:bcbaf0e2626f10f25b8eaa64670558d61cd7eac12e8d8d46f8b7370a9bacd206",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.0018550708254693282,
+            "structure_digest": "7a2cb63e0ae48760658bed2b297fda0ac76369b1548d59f9f5483d3010ba84cd"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:d8fca807cf1ee7dda790795e1a99f6922fa2b6ebeb6c425923d2f12c3e4a5440",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.018408990510165046,
+            "structure_digest": "254444ab0c94683c954000c4d092323879c1b752d6a03c2c22f99c29912a8765"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:dfb449fd4c181066938e92df2f97e292e25ef6e5c37bef345e18130d71ff110e",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.026205120721088673,
+            "structure_digest": "408f1865122353767d8e2c50ea7c4d1f19ef2316afb4e9a051fb840e0a63b788"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:fd56839bd3d6680c66de2d941752d69b0c959f3fbe42902fbd5d3fb18b4a7dbd",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.00015463732428734855,
+            "structure_digest": "f41a95851c2c27c0c3eef240e50f15d4bc66d1a76c9d8e2ed9c5d5a055712752"
+          }
+        ],
+        "deduplicated_structure_count": 14,
+        "eligible_count": 6,
+        "endpoint_semantic_ids": {
+          "cnot_count": [
+            "constraint-semantic-v1:8ea56eaf526555fb2a85a216a667fc5beb3a622fa6afc373c78258304dac3275",
+            "constraint-semantic-v1:0364590b692d279c4758a41b9aab5677210217d30b0fd5f851690ab1409c38dd"
+          ],
+          "cnot_depth": [
+            "constraint-semantic-v1:0364590b692d279c4758a41b9aab5677210217d30b0fd5f851690ab1409c38dd",
+            "constraint-semantic-v1:8ea56eaf526555fb2a85a216a667fc5beb3a622fa6afc373c78258304dac3275"
+          ],
+          "logical_block_count": [
+            "constraint-semantic-v1:0364590b692d279c4758a41b9aab5677210217d30b0fd5f851690ab1409c38dd",
+            "constraint-semantic-v1:8ea56eaf526555fb2a85a216a667fc5beb3a622fa6afc373c78258304dac3275"
+          ],
+          "parameter_count": [
+            "constraint-semantic-v1:0364590b692d279c4758a41b9aab5677210217d30b0fd5f851690ab1409c38dd",
+            "constraint-semantic-v1:8ea56eaf526555fb2a85a216a667fc5beb3a622fa6afc373c78258304dac3275"
+          ],
+          "total_depth": [
+            "constraint-semantic-v1:8ea56eaf526555fb2a85a216a667fc5beb3a622fa6afc373c78258304dac3275",
+            "constraint-semantic-v1:0364590b692d279c4758a41b9aab5677210217d30b0fd5f851690ab1409c38dd"
+          ]
+        },
+        "input_count": 14,
+        "maximum_unique_attempts": 4,
+        "pareto_axes": [
+          "cnot_count",
+          "cnot_depth",
+          "total_depth",
+          "parameter_count",
+          "logical_block_count",
+          "risk_adjusted_loss_hartree"
+        ],
+        "pareto_semantic_ids": [
+          "constraint-semantic-v1:0364590b692d279c4758a41b9aab5677210217d30b0fd5f851690ab1409c38dd",
+          "constraint-semantic-v1:8ea56eaf526555fb2a85a216a667fc5beb3a622fa6afc373c78258304dac3275"
+        ],
+        "refinement_semantic_ids": [],
+        "require_no_component_regression": true,
+        "scientific_boundary": "Risk diagnostics rank or request refinement; exact independent acceptance alone authorizes a committed state.",
+        "screening_budget_hartree": 0.0001,
+        "selection_digest": "eea2d08634b209dc18bdfb30d1d2a1a2f110c2447e4b09abec51469fa12b011b",
+        "source_structure_digest": "bbc35a4f22ddccfcf1ba9cb7a8f9e711e5bd645fdba5010253b6a16d8e28aa03",
+        "structure_aliases": {
+          "0dec3d7fe1d296f236f62583d8a95d4463e7097d7a0db2482ed378dd32bf4b36": [
+            "constraint-semantic-v1:58162be3dbd89af95a1ca356ef8db28c2ef78d7cf1da5d8548fb9ebecdd4d857"
+          ],
+          "0fb0b41a552bb16ea06c9153677231b8b9b8623743e15ffb87d456eb15cb37ed": [
+            "constraint-semantic-v1:7d8b1663a95e5f1076b167d20f03bc1fb475f13d65ab0faa04ac38f40c26d2e7"
+          ],
+          "1d8508ae19344a34a1bf12a3d42331579280f69d336c4e10ceab469e194501d5": [
+            "constraint-semantic-v1:58b364cb4de9776d5f31bac0648d0066d0f731f2769a7b4a015a818740f1a666"
+          ],
+          "254444ab0c94683c954000c4d092323879c1b752d6a03c2c22f99c29912a8765": [
+            "constraint-semantic-v1:d8fca807cf1ee7dda790795e1a99f6922fa2b6ebeb6c425923d2f12c3e4a5440"
+          ],
+          "2f348f59cb01870fd0981083cb57bfd0bc18494b2ae30271abd697de9f398d22": [
+            "constraint-semantic-v1:0dc70c03d0d1d283b5233ec8b3b6cfe18eaafddab3f73faafb14496ce933f137"
+          ],
+          "408f1865122353767d8e2c50ea7c4d1f19ef2316afb4e9a051fb840e0a63b788": [
+            "constraint-semantic-v1:dfb449fd4c181066938e92df2f97e292e25ef6e5c37bef345e18130d71ff110e"
+          ],
+          "7a2cb63e0ae48760658bed2b297fda0ac76369b1548d59f9f5483d3010ba84cd": [
+            "constraint-semantic-v1:bcbaf0e2626f10f25b8eaa64670558d61cd7eac12e8d8d46f8b7370a9bacd206"
+          ],
+          "855cfffcce69a528f889e2c05fe42e8a63056d934cc92343fa6ad1060525758c": [
+            "constraint-semantic-v1:40d3cd2d853a80585ca07a103379b7d58480ad7aeea6bde89a92116ed992e915"
+          ],
+          "8de88ad6c39bf0778e6a2b741ef1bce42e963960532fb413765863249c7a609c": [
+            "constraint-semantic-v1:0364590b692d279c4758a41b9aab5677210217d30b0fd5f851690ab1409c38dd"
+          ],
+          "ad30934bdc43e73d2051a528bd1b08790fc18917882a6ca510962d28cc439e14": [
+            "constraint-semantic-v1:71a6d919ef203b77588263904129fea7809304ebd657ba9bdbf6e17ef511e9db"
+          ],
+          "b0198b0a0b933745677016d9fde5e88d61ea456817b2b2351389a533a768e0d9": [
+            "constraint-semantic-v1:97bedabdddefa5711aed6fd4cc4276762f4b1c9df3eb35bcefbafd6d8f9f9d7a"
+          ],
+          "c72453a6390fa771d65d08c2682da034f315c18b99b790301d6dd99dcb77d68d": [
+            "constraint-semantic-v1:973c570d23d8108f40d38eba921c1148e83e6453cb463cbccd3149802660c9f7"
+          ],
+          "f41a95851c2c27c0c3eef240e50f15d4bc66d1a76c9d8e2ed9c5d5a055712752": [
+            "constraint-semantic-v1:fd56839bd3d6680c66de2d941752d69b0c959f3fbe42902fbd5d3fb18b4a7dbd"
+          ],
+          "f5199dea2a2438f41a18011d2e899b342cec807ca08e873b96477ec5d4bcc4d7": [
+            "constraint-semantic-v1:8ea56eaf526555fb2a85a216a667fc5beb3a622fa6afc373c78258304dac3275"
+          ]
+        },
+        "top_k_per_endpoint": 2,
+        "unique_attempt_semantic_ids": [
+          "constraint-semantic-v1:8ea56eaf526555fb2a85a216a667fc5beb3a622fa6afc373c78258304dac3275",
+          "constraint-semantic-v1:0364590b692d279c4758a41b9aab5677210217d30b0fd5f851690ab1409c38dd"
+        ],
+        "version": "v5-risk-aware-pareto-selector-v1"
+      }
+    },
+    "6e594627a1e8c0fd137377c9e1325f6e7f12bcebe5e2351587c5ea929a6a0458": {
+      "candidate_count": 13,
+      "numerical_failures": [],
+      "selection": {
+        "assessments": [
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:02a880cf1a4c2ea2f31a3494682e7ed4f43e9ab1ae5cd930a355630d07d4c119",
+            "eligible": true,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [],
+            "risk_adjusted_loss_hartree": 1.2367755686273233e-05,
+            "structure_digest": "613c0f6992ef9ed48df17dd3e180e9f55880b0089e89242132de94c5cf088e13"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:0a95e998092f448ff154343b18086b67cf860f2ac302c97223fa0e43358eb9c8",
+            "eligible": true,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [],
+            "risk_adjusted_loss_hartree": 5.512459179600234e-06,
+            "structure_digest": "38ac19286bab5cb825e64dc7c7c68911cc9e80843ef5ea6f8c371c2c28f92b94"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:15d4d106c71dcacfbb05481732396852d67d9bd5e01b0180dd6ed76ecd4765a4",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.00332394860500454,
+            "structure_digest": "234c5e7d461ef3842a14daf9b94e02f7cdbe0c698d4110ba1964fe2eb0dcbbb9"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:2e72d200551c8a7587f3874874e200a8a27a4c55411e9b42ece6539c485371a5",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.018712218333288684,
+            "structure_digest": "0f3427b6d47287701a980bb25a8b6ec4a730bdc819a3150e0d72eccd1ba68bc7"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:628a6a1de32a7e6bc584814970797f3304ddec7d32b12bb0878c4a9cc84abe71",
+            "eligible": true,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [],
+            "risk_adjusted_loss_hartree": 3.5838120958358514e-05,
+            "structure_digest": "da0f167c0159b8c80f178ec3aaae8ea2ef819f6df484df55fd5d9cf0803a746f"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:93e98b8cc440e5e1191555a5a3043286ce77d28ff2578fefec713d9c84d6ec32",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.026744522496633564,
+            "structure_digest": "ce197b7f5a10d79faa8a8c71eea5f09d99e5547d4cd999a6fba16c5047a40bd2"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:accfc991c8100a2f4c03445d6b1563f9773455cab5a2121bd31dda942c31b634",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.28458473616337243,
+            "structure_digest": "c16acce0db7917d2c22b60c71655f1807befc33813e8976e144b37b580a96e88"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:c329a23628874d7c461a74d86619fa3da789d7b10210ac48c523c6c31c9a8367",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.012856300301107536,
+            "structure_digest": "4fea71d73b2186bd898add0e8e84ddfc2018f37615b1d9dce1b4b992ec862812"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:c59ff94f4a7aa6ace927bffedbcf2191347c047b3dcd0566107bf278aa9df82f",
+            "eligible": true,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [],
+            "risk_adjusted_loss_hartree": 2.717604424878001e-05,
+            "structure_digest": "f15c6ee77e374250235e6d46bfd7510e58f44f3f406c8b42677b532678748212"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:cb420144f981c00cf0ee83c7b55bf805dc2aafe92fb660a666a3e3a18027a3bd",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.013142603469264054,
+            "structure_digest": "3f0f439551f382808e8d30d5f969c21ea37eacb1f94be75ecd65772711cea2c7"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:d49e1a802195a170e794a229796499ee4739af89b50eb8ce544489cb5318287b",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.0018600245859684186,
+            "structure_digest": "762c45a0a77c335919a2a15486ad0a711e388dd8dcf63ff70b9c7bf1e9ec709c"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:e9316b6d05b8a8d61338d691e818f9656a8c2cbfad177f83c9e4c175f1759f3e",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.00015151117607563832,
+            "structure_digest": "8bdf79876606971f450ea875172d4e59e80f2fb0370300692078c7917aa2401b"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:e972771911defe6679895af6fc24d29a25cbccc87bec683e9a0691f229f374d8",
+            "eligible": true,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [],
+            "risk_adjusted_loss_hartree": 8.747943589694384e-06,
+            "structure_digest": "a58cb37b927c37c1687a4d9764e94beeb8e72d1099999597c40258b3f9bc5aeb"
+          }
+        ],
+        "deduplicated_structure_count": 13,
+        "eligible_count": 5,
+        "endpoint_semantic_ids": {
+          "cnot_count": [
+            "constraint-semantic-v1:02a880cf1a4c2ea2f31a3494682e7ed4f43e9ab1ae5cd930a355630d07d4c119",
+            "constraint-semantic-v1:0a95e998092f448ff154343b18086b67cf860f2ac302c97223fa0e43358eb9c8"
+          ],
+          "cnot_depth": [
+            "constraint-semantic-v1:0a95e998092f448ff154343b18086b67cf860f2ac302c97223fa0e43358eb9c8",
+            "constraint-semantic-v1:02a880cf1a4c2ea2f31a3494682e7ed4f43e9ab1ae5cd930a355630d07d4c119"
+          ],
+          "logical_block_count": [
+            "constraint-semantic-v1:0a95e998092f448ff154343b18086b67cf860f2ac302c97223fa0e43358eb9c8",
+            "constraint-semantic-v1:02a880cf1a4c2ea2f31a3494682e7ed4f43e9ab1ae5cd930a355630d07d4c119"
+          ],
+          "parameter_count": [
+            "constraint-semantic-v1:0a95e998092f448ff154343b18086b67cf860f2ac302c97223fa0e43358eb9c8",
+            "constraint-semantic-v1:02a880cf1a4c2ea2f31a3494682e7ed4f43e9ab1ae5cd930a355630d07d4c119"
+          ],
+          "total_depth": [
+            "constraint-semantic-v1:02a880cf1a4c2ea2f31a3494682e7ed4f43e9ab1ae5cd930a355630d07d4c119",
+            "constraint-semantic-v1:0a95e998092f448ff154343b18086b67cf860f2ac302c97223fa0e43358eb9c8"
+          ]
+        },
+        "input_count": 13,
+        "maximum_unique_attempts": 4,
+        "pareto_axes": [
+          "cnot_count",
+          "cnot_depth",
+          "total_depth",
+          "parameter_count",
+          "logical_block_count",
+          "risk_adjusted_loss_hartree"
+        ],
+        "pareto_semantic_ids": [
+          "constraint-semantic-v1:02a880cf1a4c2ea2f31a3494682e7ed4f43e9ab1ae5cd930a355630d07d4c119",
+          "constraint-semantic-v1:0a95e998092f448ff154343b18086b67cf860f2ac302c97223fa0e43358eb9c8"
+        ],
+        "refinement_semantic_ids": [],
+        "require_no_component_regression": true,
+        "scientific_boundary": "Risk diagnostics rank or request refinement; exact independent acceptance alone authorizes a committed state.",
+        "screening_budget_hartree": 0.0001,
+        "selection_digest": "11ed6c9ca82800e0f5579dc524f32774e7780eba41502075c0834cf711b653f5",
+        "source_structure_digest": "f5199dea2a2438f41a18011d2e899b342cec807ca08e873b96477ec5d4bcc4d7",
+        "structure_aliases": {
+          "0f3427b6d47287701a980bb25a8b6ec4a730bdc819a3150e0d72eccd1ba68bc7": [
+            "constraint-semantic-v1:2e72d200551c8a7587f3874874e200a8a27a4c55411e9b42ece6539c485371a5"
+          ],
+          "234c5e7d461ef3842a14daf9b94e02f7cdbe0c698d4110ba1964fe2eb0dcbbb9": [
+            "constraint-semantic-v1:15d4d106c71dcacfbb05481732396852d67d9bd5e01b0180dd6ed76ecd4765a4"
+          ],
+          "38ac19286bab5cb825e64dc7c7c68911cc9e80843ef5ea6f8c371c2c28f92b94": [
+            "constraint-semantic-v1:0a95e998092f448ff154343b18086b67cf860f2ac302c97223fa0e43358eb9c8"
+          ],
+          "3f0f439551f382808e8d30d5f969c21ea37eacb1f94be75ecd65772711cea2c7": [
+            "constraint-semantic-v1:cb420144f981c00cf0ee83c7b55bf805dc2aafe92fb660a666a3e3a18027a3bd"
+          ],
+          "4fea71d73b2186bd898add0e8e84ddfc2018f37615b1d9dce1b4b992ec862812": [
+            "constraint-semantic-v1:c329a23628874d7c461a74d86619fa3da789d7b10210ac48c523c6c31c9a8367"
+          ],
+          "613c0f6992ef9ed48df17dd3e180e9f55880b0089e89242132de94c5cf088e13": [
+            "constraint-semantic-v1:02a880cf1a4c2ea2f31a3494682e7ed4f43e9ab1ae5cd930a355630d07d4c119"
+          ],
+          "762c45a0a77c335919a2a15486ad0a711e388dd8dcf63ff70b9c7bf1e9ec709c": [
+            "constraint-semantic-v1:d49e1a802195a170e794a229796499ee4739af89b50eb8ce544489cb5318287b"
+          ],
+          "8bdf79876606971f450ea875172d4e59e80f2fb0370300692078c7917aa2401b": [
+            "constraint-semantic-v1:e9316b6d05b8a8d61338d691e818f9656a8c2cbfad177f83c9e4c175f1759f3e"
+          ],
+          "a58cb37b927c37c1687a4d9764e94beeb8e72d1099999597c40258b3f9bc5aeb": [
+            "constraint-semantic-v1:e972771911defe6679895af6fc24d29a25cbccc87bec683e9a0691f229f374d8"
+          ],
+          "c16acce0db7917d2c22b60c71655f1807befc33813e8976e144b37b580a96e88": [
+            "constraint-semantic-v1:accfc991c8100a2f4c03445d6b1563f9773455cab5a2121bd31dda942c31b634"
+          ],
+          "ce197b7f5a10d79faa8a8c71eea5f09d99e5547d4cd999a6fba16c5047a40bd2": [
+            "constraint-semantic-v1:93e98b8cc440e5e1191555a5a3043286ce77d28ff2578fefec713d9c84d6ec32"
+          ],
+          "da0f167c0159b8c80f178ec3aaae8ea2ef819f6df484df55fd5d9cf0803a746f": [
+            "constraint-semantic-v1:628a6a1de32a7e6bc584814970797f3304ddec7d32b12bb0878c4a9cc84abe71"
+          ],
+          "f15c6ee77e374250235e6d46bfd7510e58f44f3f406c8b42677b532678748212": [
+            "constraint-semantic-v1:c59ff94f4a7aa6ace927bffedbcf2191347c047b3dcd0566107bf278aa9df82f"
+          ]
+        },
+        "top_k_per_endpoint": 2,
+        "unique_attempt_semantic_ids": [
+          "constraint-semantic-v1:02a880cf1a4c2ea2f31a3494682e7ed4f43e9ab1ae5cd930a355630d07d4c119",
+          "constraint-semantic-v1:0a95e998092f448ff154343b18086b67cf860f2ac302c97223fa0e43358eb9c8"
+        ],
+        "version": "v5-risk-aware-pareto-selector-v1"
+      }
+    },
+    "89c0567c398caf318526cd4ca07a36b2faebf297fb0edbe3c9269fe8a76851a6": {
+      "candidate_count": 15,
+      "numerical_failures": [],
+      "selection": {
+        "assessments": [
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:085cc58928617e52f6b2d25064b836edff68ced0c30db56a914c07980938da92",
+            "eligible": true,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [],
+            "risk_adjusted_loss_hartree": 3.400452673897747e-05,
+            "structure_digest": "4ad58f286c42d8b532574d54280c9048fab247aaf60a8c84a2cd6657b7e7690e"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:10fa39b02eeec19b1a636723d55d8201614a611172443357776371a4e79df877",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.30835948348124465,
+            "structure_digest": "9679985b5fbec5025c6d96d8746ac12c08a8703b73265dd7f89e7218e6a13219"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:2d670174c45b2aa80d3fdac670159d25050c56fce4ec73c8d21e42c477addd03",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.026205119077649698,
+            "structure_digest": "a573fa68bc8f14a5bda45632b18694fa98387bcb607f379808dbff9dfe6178f1"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:45e2e05e0ca4723ece113ef7b60b7a30981c4e2740096b16d6a9fc7790d76ea5",
+            "eligible": true,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [],
+            "risk_adjusted_loss_hartree": 1.0217525759870273e-06,
+            "structure_digest": "7d6599f365e096216760d419d5c6cdf37f31bd963d33bcb0a9493ffeab209591"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:47835e0f863fe835f982a7a7c05366c905acbac6ec0dbc1a2c81137f69a78566",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.0032428746032317777,
+            "structure_digest": "cb7b7ea9294689c36b9d38f564e02ffd47f3b059767426d432058aa2263d9da8"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:620eeed0e8d5463c48abb18b84510a54f776fac6b83209d257b2f83c31949ac8",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.012840441858941287,
+            "structure_digest": "3db9a96c5a36d516b63685716ca3b39b33a5787a3b19121280321ae6ee55fbc1"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:7809594a0a0a1e1c62a261807a6fc4ddf2d7a4d77e600d087f63ab397440b562",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.0018550601145229863,
+            "structure_digest": "377440312e956a329356247b9fcb356a8425f7a59c34399ec55887d3849f37b9"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:9cdb412127c1ac49eeb7323eabd04e24dd3594f1424688e93221ec6533549160",
+            "eligible": true,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [],
+            "risk_adjusted_loss_hartree": 8.508877637397078e-06,
+            "structure_digest": "6e0fad49085ec7fdff5c65dcb0eb82112ce0bc2de6ee8c9df9192c2f107f9e24"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:a2546f67fc8a00b5e03bb4b96d1b80998821ccb6126b5f7df6b869901987a159",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.018408978444567715,
+            "structure_digest": "2a39bbb099004080a492c045eb2809667eeb8ba66c7c298a61e89e07b07f50d7"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:b56bc412ca4bb657e3c757f34f4e8c431ad818a726695933d1c1a33755733f2a",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.00015462488057618582,
+            "structure_digest": "ebf8829e99a45d1a5eb7bbdf091569e3ab949b01770638769debe4c44d292f28"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:c3f46163cb7aa8437444cb7bad13905bede26779e9d3083055ef4f99f520a11b",
+            "eligible": true,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [],
+            "risk_adjusted_loss_hartree": 5.484093312533144e-06,
+            "structure_digest": "c4a6f639a2edb0f1add704097beb1fe1df4f967b86f050b7dd00fd66327e939c"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:e5d01aea53fba6aa4f25bc3705e4b68b6adc912fa6c2c31f1d5ab4a6485f13a3",
+            "eligible": true,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [],
+            "risk_adjusted_loss_hartree": 3.796066518614031e-12,
+            "structure_digest": "bbc35a4f22ddccfcf1ba9cb7a8f9e711e5bd645fdba5010253b6a16d8e28aa03"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:fc41e38e4a92c8754c3192174d4d81af604d8a35be69fe43ba013d177cbb0878",
+            "eligible": true,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [],
+            "risk_adjusted_loss_hartree": 1.0342269473302586e-05,
+            "structure_digest": "527b91d76ade4f2075edea48e30380f202f0f34752e1835bcc416772be5b47d7"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:fdfcebe64cd2b8e232b485f358ed5832abdf7e473372c881dd0116e2ce6bcda5",
+            "eligible": true,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [],
+            "risk_adjusted_loss_hartree": 2.6860444669330193e-05,
+            "structure_digest": "4f993ef68009b3d8a1f80c463e665fc8bd58d3ea35fd67d4d1d20187b26f84d7"
+          },
+          {
+            "constraint_semantic_id": "constraint-semantic-v1:ffeaffcbaa07288434df9a71b697016a5cee637b89abe8736f782f90d960d251",
+            "eligible": false,
+            "quality_stratum": "good",
+            "refinement_required": false,
+            "rejection_reasons": [
+              "predicted-energy-budget"
+            ],
+            "risk_adjusted_loss_hartree": 0.014424508707974385,
+            "structure_digest": "136050fc387458b6ce0930e8028cea51b00bd9fc65ee8e8a63d30d7be5b70508"
+          }
+        ],
+        "deduplicated_structure_count": 15,
+        "eligible_count": 7,
+        "endpoint_semantic_ids": {
+          "cnot_count": [
+            "constraint-semantic-v1:e5d01aea53fba6aa4f25bc3705e4b68b6adc912fa6c2c31f1d5ab4a6485f13a3"
+          ],
+          "cnot_depth": [
+            "constraint-semantic-v1:e5d01aea53fba6aa4f25bc3705e4b68b6adc912fa6c2c31f1d5ab4a6485f13a3"
+          ],
+          "logical_block_count": [
+            "constraint-semantic-v1:e5d01aea53fba6aa4f25bc3705e4b68b6adc912fa6c2c31f1d5ab4a6485f13a3"
+          ],
+          "parameter_count": [
+            "constraint-semantic-v1:e5d01aea53fba6aa4f25bc3705e4b68b6adc912fa6c2c31f1d5ab4a6485f13a3"
+          ],
+          "total_depth": [
+            "constraint-semantic-v1:e5d01aea53fba6aa4f25bc3705e4b68b6adc912fa6c2c31f1d5ab4a6485f13a3"
+          ]
+        },
+        "input_count": 15,
+        "maximum_unique_attempts": 4,
+        "pareto_axes": [
+          "cnot_count",
+          "cnot_depth",
+          "total_depth",
+          "parameter_count",
+          "logical_block_count",
+          "risk_adjusted_loss_hartree"
+        ],
+        "pareto_semantic_ids": [
+          "constraint-semantic-v1:e5d01aea53fba6aa4f25bc3705e4b68b6adc912fa6c2c31f1d5ab4a6485f13a3"
+        ],
+        "refinement_semantic_ids": [],
+        "require_no_component_regression": true,
+        "scientific_boundary": "Risk diagnostics rank or request refinement; exact independent acceptance alone authorizes a committed state.",
+        "screening_budget_hartree": 0.0001,
+        "selection_digest": "05d8f421e0d9f87d4504fb2d70d2962c9180dbe51f55a838140e7b0518747f8b",
+        "source_structure_digest": "7562e62fee3f14594995a4dbb3c599a54df63ec879346388eb03656cc9ef22a8",
+        "structure_aliases": {
+          "136050fc387458b6ce0930e8028cea51b00bd9fc65ee8e8a63d30d7be5b70508": [
+            "constraint-semantic-v1:ffeaffcbaa07288434df9a71b697016a5cee637b89abe8736f782f90d960d251"
+          ],
+          "2a39bbb099004080a492c045eb2809667eeb8ba66c7c298a61e89e07b07f50d7": [
+            "constraint-semantic-v1:a2546f67fc8a00b5e03bb4b96d1b80998821ccb6126b5f7df6b869901987a159"
+          ],
+          "377440312e956a329356247b9fcb356a8425f7a59c34399ec55887d3849f37b9": [
+            "constraint-semantic-v1:7809594a0a0a1e1c62a261807a6fc4ddf2d7a4d77e600d087f63ab397440b562"
+          ],
+          "3db9a96c5a36d516b63685716ca3b39b33a5787a3b19121280321ae6ee55fbc1": [
+            "constraint-semantic-v1:620eeed0e8d5463c48abb18b84510a54f776fac6b83209d257b2f83c31949ac8"
+          ],
+          "4ad58f286c42d8b532574d54280c9048fab247aaf60a8c84a2cd6657b7e7690e": [
+            "constraint-semantic-v1:085cc58928617e52f6b2d25064b836edff68ced0c30db56a914c07980938da92"
+          ],
+          "4f993ef68009b3d8a1f80c463e665fc8bd58d3ea35fd67d4d1d20187b26f84d7": [
+            "constraint-semantic-v1:fdfcebe64cd2b8e232b485f358ed5832abdf7e473372c881dd0116e2ce6bcda5"
+          ],
+          "527b91d76ade4f2075edea48e30380f202f0f34752e1835bcc416772be5b47d7": [
+            "constraint-semantic-v1:fc41e38e4a92c8754c3192174d4d81af604d8a35be69fe43ba013d177cbb0878"
+          ],
+          "6e0fad49085ec7fdff5c65dcb0eb82112ce0bc2de6ee8c9df9192c2f107f9e24": [
+            "constraint-semantic-v1:9cdb412127c1ac49eeb7323eabd04e24dd3594f1424688e93221ec6533549160"
+          ],
+          "7d6599f365e096216760d419d5c6cdf37f31bd963d33bcb0a9493ffeab209591": [
+            "constraint-semantic-v1:45e2e05e0ca4723ece113ef7b60b7a30981c4e2740096b16d6a9fc7790d76ea5"
+          ],
+          "9679985b5fbec5025c6d96d8746ac12c08a8703b73265dd7f89e7218e6a13219": [
+            "constraint-semantic-v1:10fa39b02eeec19b1a636723d55d8201614a611172443357776371a4e79df877"
+          ],
+          "a573fa68bc8f14a5bda45632b18694fa98387bcb607f379808dbff9dfe6178f1": [
+            "constraint-semantic-v1:2d670174c45b2aa80d3fdac670159d25050c56fce4ec73c8d21e42c477addd03"
+          ],
+          "bbc35a4f22ddccfcf1ba9cb7a8f9e711e5bd645fdba5010253b6a16d8e28aa03": [
+            "constraint-semantic-v1:e5d01aea53fba6aa4f25bc3705e4b68b6adc912fa6c2c31f1d5ab4a6485f13a3"
+          ],
+          "c4a6f639a2edb0f1add704097beb1fe1df4f967b86f050b7dd00fd66327e939c": [
+            "constraint-semantic-v1:c3f46163cb7aa8437444cb7bad13905bede26779e9d3083055ef4f99f520a11b"
+          ],
+          "cb7b7ea9294689c36b9d38f564e02ffd47f3b059767426d432058aa2263d9da8": [
+            "constraint-semantic-v1:47835e0f863fe835f982a7a7c05366c905acbac6ec0dbc1a2c81137f69a78566"
+          ],
+          "ebf8829e99a45d1a5eb7bbdf091569e3ab949b01770638769debe4c44d292f28": [
+            "constraint-semantic-v1:b56bc412ca4bb657e3c757f34f4e8c431ad818a726695933d1c1a33755733f2a"
+          ]
+        },
+        "top_k_per_endpoint": 2,
+        "unique_attempt_semantic_ids": [
+          "constraint-semantic-v1:e5d01aea53fba6aa4f25bc3705e4b68b6adc912fa6c2c31f1d5ab4a6485f13a3"
+        ],
+        "version": "v5-risk-aware-pareto-selector-v1"
+      }
+    }
+  },
+  "checkpoint_digest": "667dedeb56d115df83dedbafaac57379b294800b5948733ea0024bbab286721f",
+  "claim_boundary": [
+    "Held-out development transfer after the H2/H4 choice; not confirmatory.",
+    "Uses recycled curvature only; no LiH outcome selected a threshold.",
+    "No CEO-star or ordinary-ADAPT rerun and no measurement-cost claim."
+  ],
+  "exact_attempt_records": [
+    {
+      "acceptance": {
+        "accepted": true,
+        "after_parameter_count": 14,
+        "after_structure_digest": "bbc35a4f22ddccfcf1ba9cb7a8f9e711e5bd645fdba5010253b6a16d8e28aa03",
+        "before_parameter_count": 15,
+        "before_structure_digest": "7562e62fee3f14594995a4dbb3c599a54df63ec879346388eb03656cc9ef22a8",
+        "budget_reference_energy_hartree": -7.797909682469515,
+        "candidate_energy_hartree": -7.797909682479916,
+        "checks": {
+          "constraint": true,
+          "cumulative_energy_budget": true,
+          "finite": true,
+          "independent_energy_agreement": true,
+          "independent_state_fidelity": true,
+          "kkt": true,
+          "optimizer_path_reviewed": true,
+          "pareto_nonworse": true,
+          "physical_scalar_domain": true,
+          "resource_improved": true,
+          "resource_recount": true,
+          "transformation_semantics": true
+        },
+        "evidence_digest": "c375095cb683e93d1b9dfeb5b05b1f6bf2a44b5e54d94cc363f15f2057469074",
+        "rejection_reasons": [],
+        "source_energy_hartree": -7.797909682469515,
+        "version": "runtime-kkt-cumulative-resource-guard-v2"
+      },
+      "atomic_candidate_ids": [
+        "candidate-v1:6e3542457a8537def3d6ea4355418bfcd934cbebb23c9ef1609996fa3d959202"
+      ],
+      "before_resources": {
+        "cnot_count": 107,
+        "cnot_depth": 30,
+        "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 15,
+        "parameter_count": 15,
+        "structure_digest": "7562e62fee3f14594995a4dbb3c599a54df63ec879346388eb03656cc9ef22a8",
+        "total_depth": 171
+      },
+      "conditional_polishing": {
+        "attempts": [
+          {
+            "result": {
+              "config": {
+                "acceptance_eta": 0.15,
+                "certification_infinity_threshold": 1e-08,
+                "damping": 0.0,
+                "fallback_policy": "none-fail-closed",
+                "gradient_l2_tolerance": 1e-08,
+                "initial_trust_radius": 0.05,
+                "maximum_energy_evaluations": 16,
+                "maximum_gradient_vector_evaluations": 128,
+                "maximum_hessian_vector_products": 64,
+                "maximum_iterations": 8,
+                "maximum_trust_radius": 0.5,
+                "permitted_success_statuses": [
+                  0
+                ],
+                "relative_hvp_step": 6.055454452393343e-06
+              },
+              "coordinates": [
+                -0.1882071907013618,
+                -0.002217210749275829,
+                -0.2741019632307588,
+                -0.0025228901032609413,
+                -0.004904066558359531,
+                0.22433262687864805,
+                -0.05781565699049715,
+                -0.2745759146212981,
+                -0.0014375680886731872,
+                -0.785398107584794,
+                -0.13773781100532453,
+                0.29667045612670767,
+                0.001621057044040448,
+                -0.0021142555162650695
+              ],
+              "energy_hartree": -7.797909682479916,
+              "failure_reason": null,
+              "gradient": [
+                -1.9782175897375964e-10,
+                -6.586161275211333e-09,
+                3.124075328601988e-11,
+                -3.282496214944419e-11,
+                -3.5726548930659757e-14,
+                -4.9980456497009064e-11,
+                -1.053052820227798e-11,
+                -6.92364549502977e-12,
+                2.976849723890446e-10,
+                1.569980057010466e-14,
+                9.743458482396252e-12,
+                -6.1119297345302455e-12,
+                3.0579848610952475e-10,
+                6.666135392007538e-11
+              ],
+              "gradient_infinity": 6.586161275211333e-09,
+              "gradient_l2": 6.603640603056499e-09,
+              "iterations": 1,
+              "message": "Optimization terminated successfully.",
+              "preflight": {
+                "certified": false,
+                "gradient_infinity": 2.328718325844123e-08,
+                "performed": true,
+                "threshold": 1e-08
+              },
+              "scipy_reported": {
+                "dummy_hessian_initializations": 1,
+                "function_evaluations": 2,
+                "gradient_evaluations_excluding_hvp": 2,
+                "hessian_evaluations_including_dummy": 26
+              },
+              "status": 0,
+              "success": true,
+              "termination_origin": "scipy-trust-ncg",
+              "version": "target-native-trust-ncg-central-gradient-hvp-v1",
+              "work": {
+                "energy_evaluations": 3,
+                "gradient_vector_evaluations": 53,
+                "hessian_vector_gradient_evaluations": 50,
+                "hessian_vector_products": 25,
+                "paper_measurement_cost": null
+              }
+            },
+            "start": "obs-hvp-projection"
+          }
+        ],
+        "blocked_reasons": [],
+        "config": {
+          "enable_second_least_squares_start": false,
+          "maximum_constraint_residual": 1e-10,
+          "maximum_total_energy_evaluations": 32,
+          "maximum_total_gradient_vector_evaluations": 256,
+          "maximum_total_hessian_vector_products": 128,
+          "minimum_second_start_distance": 1e-08,
+          "polisher": {
+            "acceptance_eta": 0.15,
+            "certification_infinity_threshold": 1e-08,
+            "damping": 0.0,
+            "fallback_policy": "none-fail-closed",
+            "gradient_l2_tolerance": 1e-08,
+            "initial_trust_radius": 0.05,
+            "maximum_energy_evaluations": 16,
+            "maximum_gradient_vector_evaluations": 128,
+            "maximum_hessian_vector_products": 64,
+            "maximum_iterations": 8,
+            "maximum_trust_radius": 0.5,
+            "permitted_success_statuses": [
+              0
+            ],
+            "relative_hvp_step": 6.055454452393343e-06
+          },
+          "required_gradient_infinity": 1e-08,
+          "second_start_trigger": null
+        },
+        "constraint_residual_infinity": 0.0,
+        "gradient_infinity": 6.586161275211333e-09,
+        "gradient_rms": 1.764897188716191e-09,
+        "paper_measurement_cost": null,
+        "performed": true,
+        "selected_start": "obs-hvp-projection",
+        "source_theta": [
+          -0.1882071907013618,
+          -0.002217210749275829,
+          -0.2741019632307588,
+          -0.0025228901032609413,
+          -0.004904066558359531,
+          0.22433262687864805,
+          0.0,
+          -0.05781565699049715,
+          -0.2745759146212981,
+          -0.0014375680886731872,
+          -0.785398107584794,
+          -0.13773781100532453,
+          0.29667045612670767,
+          0.001621057044040448,
+          -0.0021142555162650695
+        ],
+        "success": true,
+        "target_coordinates": [
+          -0.1882071907013618,
+          -0.002217210749275829,
+          -0.2741019632307588,
+          -0.0025228901032609413,
+          -0.004904066558359531,
+          0.22433262687864805,
+          -0.05781565699049715,
+          -0.2745759146212981,
+          -0.0014375680886731872,
+          -0.785398107584794,
+          -0.13773781100532453,
+          0.29667045612670767,
+          0.001621057044040448,
+          -0.0021142555162650695
+        ],
+        "version": "v5-conditional-target-native-polishing-v1",
+        "work": {
+          "energy_evaluations": 3,
+          "gradient_vector_evaluations": 53,
+          "hessian_vector_gradient_evaluations": 50,
+          "hessian_vector_products": 25,
+          "paper_measurement_cost": null
+        }
+      },
+      "constraint_numerical_id": "constraint-numerical-v1:8b7020a1bb3b901a7005c20e25eea390ad79fc717f5418a4a1332fb6955b688a",
+      "constraint_residual_infinity": 0.0,
+      "constraint_semantic_id": "constraint-semantic-v1:e5d01aea53fba6aa4f25bc3705e4b68b6adc912fa6c2c31f1d5ab4a6485f13a3",
+      "exact_attempt": 1,
+      "fallback": {
+        "coordinates": [
+          -0.18820719206269798,
+          -0.0022172094703283027,
+          -0.2741019605079277,
+          -0.0025228899024443475,
+          -0.0014392044529809864,
+          0.2243326266156434,
+          -0.057815671886772994,
+          -0.27457591729917386,
+          -0.0014375679130845369,
+          -0.7853336086795994,
+          -0.13773781527700146,
+          0.2966704566612536,
+          0.001621055669729338,
+          -0.0021142549316075037
+        ],
+        "energy_hartree": -7.797909682465741,
+        "final_inverse_hessian": [
+          [
+            1.379303058063705,
+            0.007345325475809517,
+            -0.5447394013931643,
+            -0.00970940225601999,
+            -0.008149421066316342,
+            -0.29718872342903113,
+            0.03124035457693474,
+            -0.3319984438636472,
+            -0.004882063144633592,
+            -0.0004827463146850772,
+            -0.5610645061822517,
+            2.3451269666191994,
+            0.0174487827403583,
+            -0.021123021305532695
+          ],
+          [
+            0.007345325475809517,
+            0.09150917994101947,
+            -0.0020527124238163717,
+            -0.0001668365620023594,
+            -0.006609143119104256,
+            -0.0006231472588657071,
+            0.014511180303721116,
+            -0.004919909557099752,
+            -0.0007674599351247645,
+            -0.00040236889364964415,
+            -0.01791076062094571,
+            0.01895494638163267,
+            0.0005275698332030284,
+            0.00010385947786045805
+          ],
+          [
+            -0.5447394013931643,
+            -0.0020527124238163717,
+            2.0406302642074037,
+            0.017604079652652038,
+            0.024083830749326966,
+            0.7690933750635425,
+            -0.559214705296571,
+            0.5763398409426634,
+            0.014910729596996422,
+            0.001506937052043107,
+            -0.4272032206486461,
+            -3.2200688736656846,
+            -0.01585152442242744,
+            0.021183203322723443
+          ],
+          [
+            -0.00970940225601999,
+            -0.0001668365620023594,
+            0.017604079652652038,
+            0.09359006304307961,
+            0.00767451343630484,
+            0.011603827627109153,
+            -0.014155726245748828,
+            0.004874160741644009,
+            -0.00011185342391404105,
+            0.00047957151880497644,
+            -0.013469374745942418,
+            -0.04023272529429753,
+            -0.0055703719265311116,
+            -0.006710949683850864
+          ],
+          [
+            -0.008149421066316342,
+            -0.006609143119104256,
+            0.024083830749326966,
+            0.00767451343630484,
+            1.0133555207629528,
+            0.020385595329158155,
+            -0.14363781705241357,
+            0.048916583860335865,
+            -0.008023649675939472,
+            0.0009654973099441915,
+            -0.09986787865233869,
+            -0.011405125050261092,
+            0.013287069682225013,
+            0.010998566288103315
+          ],
+          [
+            -0.29718872342903113,
+            -0.0006231472588657071,
+            0.7690933750635425,
+            0.011603827627109153,
+            0.020385595329158155,
+            1.7441765925233186,
+            -0.13116529304123292,
+            0.11611609793701944,
+            -0.006011647987232957,
+            0.0011361852029683523,
+            -0.96875182587903,
+            -1.726327632948675,
+            -0.009331161901260435,
+            0.013800485876639849
+          ],
+          [
+            0.03124035457693474,
+            0.014511180303721116,
+            -0.559214705296571,
+            -0.014155726245748828,
+            -0.14363781705241357,
+            -0.13116529304123292,
+            10.808031577093022,
+            -0.6026269660860883,
+            0.017343648990440087,
+            -0.009150114630799223,
+            0.6116147032282678,
+            0.5539999047065001,
+            -0.0121045761706207,
+            -0.03476842560421459
+          ],
+          [
+            -0.3319984438636472,
+            -0.004919909557099752,
+            0.5763398409426634,
+            0.004874160741644009,
+            0.048916583860335865,
+            0.11611609793701944,
+            -0.6026269660860883,
+            1.4384961962189915,
+            0.008424656817942508,
+            0.0030450166750531317,
+            0.07142228146445818,
+            -1.7504576738009185,
+            0.008306848384011356,
+            -0.0040690888650293765
+          ],
+          [
+            -0.004882063144633592,
+            -0.0007674599351247645,
+            0.014910729596996422,
+            -0.00011185342391404105,
+            -0.008023649675939472,
+            -0.006011647987232957,
+            0.017343648990440087,
+            0.008424656817942508,
+            0.09991002842276384,
+            -0.0004940557482891622,
+            0.008675352837343182,
+            -0.041680936187077536,
+            -0.00027210160781714234,
+            0.0019252317525975849
+          ],
+          [
+            -0.0004827463146850772,
+            -0.00040236889364964415,
+            0.001506937052043107,
+            0.00047957151880497644,
+            0.0009654973099441915,
+            0.0011361852029683523,
+            -0.009150114630799223,
+            0.0030450166750531317,
+            -0.0004940557482891622,
+            1.000005730374121,
+            -0.0062595911132870405,
+            -0.0005795445718564665,
+            0.0007913889300114375,
+            0.0006897245082748379
+          ],
+          [
+            -0.5610645061822517,
+            -0.01791076062094571,
+            -0.4272032206486461,
+            -0.013469374745942418,
+            -0.09986787865233869,
+            -0.96875182587903,
+            0.6116147032282678,
+            0.07142228146445818,
+            0.008675352837343182,
+            -0.0062595911132870405,
+            5.113471790177519,
+            -2.066663709417112,
+            0.004171881436928624,
+            -0.006187518770168734
+          ],
+          [
+            2.3451269666191994,
+            0.01895494638163267,
+            -3.2200688736656846,
+            -0.04023272529429753,
+            -0.011405125050261092,
+            -1.726327632948675,
+            0.5539999047065001,
+            -1.7504576738009185,
+            -0.041680936187077536,
+            -0.0005795445718564665,
+            -2.066663709417112,
+            13.570029772137763,
+            0.04896533205949141,
+            -0.0530399925143259
+          ],
+          [
+            0.0174487827403583,
+            0.0005275698332030284,
+            -0.01585152442242744,
+            -0.0055703719265311116,
+            0.013287069682225013,
+            -0.009331161901260435,
+            -0.0121045761706207,
+            0.008306848384011356,
+            -0.00027210160781714234,
+            0.0007913889300114375,
+            0.004171881436928624,
+            0.04896533205949141,
+            0.23956768649118426,
+            -0.0020201736173133906
+          ],
+          [
+            -0.021123021305532695,
+            0.00010385947786045805,
+            0.021183203322723443,
+            -0.006710949683850864,
+            0.010998566288103315,
+            0.013800485876639849,
+            -0.03476842560421459,
+            -0.0040690888650293765,
+            0.0019252317525975849,
+            0.0006897245082748379,
+            -0.006187518770168734,
+            -0.0530399925143259,
+            -0.0020201736173133906,
+            0.26267102925004276
+          ]
+        ],
+        "finite": true,
+        "gradient": [
+          -2.3381092617569266e-09,
+          2.1992768489600273e-09,
+          2.2435987644856965e-09,
+          5.405383525763224e-10,
+          7.751433798784793e-09,
+          -1.721106576349626e-09,
+          -2.6924416413624183e-09,
+          -3.759771447649228e-09,
+          1.5386887962224628e-09,
+          2.328718325844123e-08,
+          -1.0966019497143393e-09,
+          2.242671415983439e-10,
+          -6.305236745595568e-09,
+          2.34675744518038e-09
+        ],
+        "gradient_infinity": 2.328718325844123e-08,
+        "gradient_l2": 2.6291407867494902e-08,
+        "independent_energy_difference_hartree": 0.0,
+        "independent_energy_hartree": -7.797909682465741,
+        "independent_state_recomputation_fidelity": 1.0000000000000004,
+        "independent_work": {
+          "energy_evaluations": 1,
+          "explicit_state_recomputations": 2,
+          "gradient_vector_evaluations": 1,
+          "initial_energy_evaluations_for_audit": 1
+        },
+        "optimizer": {
+          "function_evaluations": 56,
+          "gradient_component_equivalent": 616,
+          "gradient_tolerance": 1e-08,
+          "gradient_vector_evaluations": 44,
+          "implementation": "pinned-upstream-minimize_bfgs",
+          "iterations": 0,
+          "maximum_iterations": 200,
+          "message": "Desired error not necessarily achieved due to precision loss.",
+          "status": 2,
+          "success": false
+        },
+        "paper_measurement_cost": null,
+        "source_candidate_state_fidelity": 0.9999999999993039,
+        "wall_time_seconds": 5.855429625022225
+      },
+      "paper_measurement_cost": null,
+      "physical_resources": {
+        "cnot_count": 98,
+        "cnot_depth": 30,
+        "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 14,
+        "parameter_count": 14,
+        "structure_digest": "bbc35a4f22ddccfcf1ba9cb7a8f9e711e5bd645fdba5010253b6a16d8e28aa03",
+        "total_depth": 158
+      },
+      "prediction": {
+        "constraint_residual_infinity": 1.0587911840678754e-22,
+        "direct_quadratic_change_from_current_hartree": 3.796066518614029e-12,
+        "predicted_change_from_current_hartree": 3.796066518614031e-12,
+        "predicted_constraint_penalty_hartree": 3.79615236168294e-12,
+        "reference_energy_kind": "current-checkpoint-quadratic-model"
+      },
+      "primary": {
+        "coordinates": [
+          -0.18820718860167318,
+          -0.0022172095476961783,
+          -0.27410196600741327,
+          -0.002522890279683621,
+          -0.001439176072231819,
+          0.22433262098041032,
+          -0.05781564385837684,
+          -0.2745759126797706,
+          -0.0014375680729697888,
+          -0.7853336505157993,
+          -0.13773780269789238,
+          0.29667045489614946,
+          0.0016210573663819733,
+          -0.002114256334230932
+        ],
+        "energy_hartree": -7.797909682465739,
+        "final_inverse_hessian": [
+          [
+            1.389755730932875,
+            0.009889884492709161,
+            -0.5463470039693984,
+            -0.009807322708689508,
+            0.016366017658024604,
+            -0.33972844087188564,
+            -0.03839659724593378,
+            -0.3249627701590456,
+            -0.003405644826987602,
+            0.07220770412370739,
+            -0.5612415393979938,
+            2.3759582722475536,
+            0.009038984325618508,
+            -0.021332655139459894
+          ],
+          [
+            0.009889884492709158,
+            0.09168509620499612,
+            -0.004333023331569823,
+            -0.0004513779742643646,
+            0.0017427785603795374,
+            -0.007087314184809623,
+            0.009984081043973456,
+            -0.001230533345709518,
+            -0.000726750920261328,
+            0.024623344884384012,
+            -0.011174565165961384,
+            0.018287968859544132,
+            0.0007094119173109703,
+            -0.0007126322894702884
+          ],
+          [
+            -0.5463470039693987,
+            -0.004333023331569813,
+            2.0328324032011245,
+            0.01650879880282581,
+            0.03046677658091907,
+            0.7922100146475313,
+            -0.49558623821850195,
+            0.583676288244311,
+            0.013326293024384595,
+            0.02154677563404837,
+            -0.39830292772330894,
+            -3.259617143125073,
+            -0.005064391260610746,
+            0.017955346469348786
+          ],
+          [
+            -0.009807322708689507,
+            -0.0004513779742643646,
+            0.016508798802825804,
+            0.0934377373120581,
+            0.008846165674095224,
+            0.014289804629879119,
+            -0.0061998624505201095,
+            0.005970128038067206,
+            -0.0003130205733770275,
+            0.004107350040229034,
+            -0.009482816889483357,
+            -0.045325347104599685,
+            -0.004181318673197753,
+            -0.007158926397555638
+          ],
+          [
+            0.016366017658024583,
+            0.0017427785603795383,
+            0.03046677658091905,
+            0.008846165674095224,
+            1.0580392892121573,
+            -0.10030345092886449,
+            -0.3737486139389674,
+            0.05479323147602785,
+            -0.0028478228100835322,
+            0.13205110836044887,
+            -0.13672251634801616,
+            0.1048335683600477,
+            -0.01841867070271857,
+            0.014621323080680957
+          ],
+          [
+            -0.3397284408718856,
+            -0.007087314184809637,
+            0.7922100146475313,
+            0.014289804629879131,
+            -0.10030345092886447,
+            1.883157311842786,
+            0.04321961704520172,
+            0.07013930289715925,
+            -0.009223920654755673,
+            -0.35901221291479934,
+            -1.0275141138103294,
+            -1.7800967438261759,
+            0.005336112781200247,
+            0.02136992465031809
+          ],
+          [
+            -0.03839659724593367,
+            0.009984081043973497,
+            -0.49558623821850173,
+            -0.006199862450520111,
+            -0.3737486139389674,
+            0.04321961704520194,
+            10.923878891089538,
+            -0.7048741008073948,
+            0.016435941874507948,
+            -0.6987755485473294,
+            0.4228753113248136,
+            0.5775451232748883,
+            -0.018524492693380135,
+            -0.011927822063940503
+          ],
+          [
+            -0.32496277015904573,
+            -0.0012305333457095188,
+            0.5836762882443108,
+            0.005970128038067204,
+            0.05479323147602785,
+            0.07013930289715925,
+            -0.7048741008073945,
+            1.434422626947544,
+            0.010838799361618898,
+            0.019304261300271533,
+            0.04108991059182439,
+            -1.6932831690809964,
+            -0.007288143060245908,
+            -0.0007987772212033396
+          ],
+          [
+            -0.0034056448269876045,
+            -0.0007267509202613285,
+            0.013326293024384595,
+            -0.0003130205733770273,
+            -0.0028478228100835305,
+            -0.009223920654755673,
+            0.016435941874507948,
+            0.010838799361618903,
+            0.09988955539682184,
+            0.01504065615340058,
+            0.013521794814067761,
+            -0.04319860647298347,
+            0.00014180717974242307,
+            0.0013455794607415796
+          ],
+          [
+            0.07220770412370736,
+            0.02462334488438401,
+            0.021546775634048308,
+            0.004107350040229035,
+            0.13205110836044887,
+            -0.35901221291479923,
+            -0.6987755485473295,
+            0.019304261300271533,
+            0.015040656153400578,
+            1.3843638826988467,
+            -0.1195343113849876,
+            0.34889741707694905,
+            -0.09453334101209121,
+            0.011882877454848615
+          ],
+          [
+            -0.5612415393979939,
+            -0.011174565165961397,
+            -0.3983029277233089,
+            -0.009482816889483357,
+            -0.1367225163480162,
+            -1.0275141138103292,
+            0.4228753113248136,
+            0.04108991059182438,
+            0.013521794814067758,
+            -0.11953431138498759,
+            5.009852317379134,
+            -1.942269039693995,
+            -0.029757676051580556,
+            0.005516189705508805
+          ],
+          [
+            2.375958272247554,
+            0.01828796885954415,
+            -3.2596171431250727,
+            -0.04532534710459967,
+            0.1048335683600477,
+            -1.7800967438261754,
+            0.5775451232748887,
+            -1.6932831690809966,
+            -0.043198606472983486,
+            0.34889741707694893,
+            -1.9422690396939948,
+            13.510382878922886,
+            0.06523348100608006,
+            -0.06776286640234652
+          ],
+          [
+            0.009038984325618529,
+            0.0007094119173109686,
+            -0.0050643912606106786,
+            -0.004181318673197751,
+            -0.01841867070271857,
+            0.005336112781200192,
+            -0.018524492693380246,
+            -0.007288143060245907,
+            0.00014180717974242307,
+            -0.09453334101209121,
+            -0.029757676051580542,
+            0.06523348100608004,
+            0.23513069649403728,
+            0.0019956054319429876
+          ],
+          [
+            -0.021332655139459894,
+            -0.0007126322894702871,
+            0.017955346469348786,
+            -0.007158926397555638,
+            0.014621323080680957,
+            0.021369924650318096,
+            -0.011927822063940503,
+            -0.0007987772212033387,
+            0.0013455794607415794,
+            0.011882877454848619,
+            0.005516189705508805,
+            -0.06776286640234652,
+            0.0019956054319429876,
+            0.26135415238319815
+          ]
+        ],
+        "finite": true,
+        "gradient": [
+          2.949307909005938e-09,
+          1.6734503797879302e-09,
+          -1.347303060514528e-09,
+          -3.588458169067471e-09,
+          7.751487529534205e-09,
+          -2.1967779486999973e-09,
+          -2.93413698469133e-11,
+          2.544128682877182e-09,
+          1.6999098029007401e-10,
+          2.3272080605038808e-08,
+          1.0061832756342136e-09,
+          -8.027002139269664e-10,
+          1.41261770504571e-09,
+          -3.367197114463658e-09
+        ],
+        "gradient_infinity": 2.3272080605038808e-08,
+        "gradient_l2": 2.5577037065654553e-08,
+        "independent_energy_difference_hartree": 0.0,
+        "independent_energy_hartree": -7.797909682465739,
+        "independent_state_recomputation_fidelity": 0.9999999999999998,
+        "independent_work": {
+          "energy_evaluations": 1,
+          "explicit_state_recomputations": 2,
+          "gradient_vector_evaluations": 1,
+          "initial_energy_evaluations_for_audit": 1
+        },
+        "optimizer": {
+          "function_evaluations": 56,
+          "gradient_component_equivalent": 630,
+          "gradient_tolerance": 1e-08,
+          "gradient_vector_evaluations": 45,
+          "implementation": "pinned-upstream-minimize_bfgs",
+          "iterations": 1,
+          "maximum_iterations": 200,
+          "message": "Desired error not necessarily achieved due to precision loss.",
+          "status": 2,
+          "success": false
+        },
+        "paper_measurement_cost": null,
+        "source_candidate_state_fidelity": 0.9999999999993034,
+        "wall_time_seconds": 6.1725733340135776
+      },
+      "round_index": 1,
+      "selected_optimizer_path": "conditional-target-native-polishing",
+      "sequential_candidate_id": "candidate-v5:58dc54b5d1f274bf875266b316e4944581e8b6de19c5586b48b775d15d91d2f5",
+      "structural_resources": {
+        "cnot_count": 98,
+        "cnot_depth": 30,
+        "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 14,
+        "parameter_count": 14,
+        "structure_digest": "bbc35a4f22ddccfcf1ba9cb7a8f9e711e5bd645fdba5010253b6a16d8e28aa03",
+        "total_depth": 158
+      },
+      "two_path_certificate": {
+        "componentwise_difference": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "componentwise_limit": [
+          1.000000019782176e-10,
+          1.0000006586161275e-10,
+          1.0000000031240754e-10,
+          1.0000000032824962e-10,
+          1.0000000000035727e-10,
+          1.0000000049980457e-10,
+          1.0000000010530529e-10,
+          1.0000000006923646e-10,
+          1.0000000297684973e-10,
+          1.00000000000157e-10,
+          1.0000000009743459e-10,
+          1.000000000611193e-10,
+          1.0000000305798487e-10,
+          1.0000000066661354e-10
+        ],
+        "componentwise_pass": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "coordinates": [
+          -0.1882071907013618,
+          -0.002217210749275829,
+          -0.2741019632307588,
+          -0.0025228901032609413,
+          -0.004904066558359531,
+          0.22433262687864805,
+          -0.05781565699049715,
+          -0.2745759146212981,
+          -0.0014375680886731872,
+          -0.785398107584794,
+          -0.13773781100532453,
+          0.29667045612670767,
+          0.001621057044040448,
+          -0.0021142555162650695
+        ],
+        "difference_infinity": 0.0,
+        "difference_l2": 0.0,
+        "mapped_source_coordinates": [
+          -0.1882071907013618,
+          -0.002217210749275829,
+          -0.2741019632307588,
+          -0.0025228901032609413,
+          -0.004904066558359531,
+          0.22433262687864805,
+          0.0,
+          -0.05781565699049715,
+          -0.2745759146212981,
+          -0.0014375680886731872,
+          -0.785398107584794,
+          -0.13773781100532453,
+          0.29667045612670767,
+          0.001621057044040448,
+          -0.0021142555162650695
+        ],
+        "passed": true,
+        "policy": {
+          "absolute_tolerance": 1e-10,
+          "relative_tolerance": 1e-08
+        },
+        "projected_gradient_infinity": 6.586161275211333e-09,
+        "projected_source_gradient": [
+          -1.9782175897375964e-10,
+          -6.586161275211333e-09,
+          3.124075328601988e-11,
+          -3.282496214944419e-11,
+          -3.5726548930659757e-14,
+          -4.9980456497009064e-11,
+          -1.053052820227798e-11,
+          -6.92364549502977e-12,
+          2.976849723890446e-10,
+          1.569980057010466e-14,
+          9.743458482396252e-12,
+          -6.1119297345302455e-12,
+          3.0579848610952475e-10,
+          6.666135392007538e-11
+        ],
+        "source_energy_hartree": -7.797909682479916,
+        "source_gradient": [
+          -1.9782175897375964e-10,
+          -6.586161275211333e-09,
+          3.124075328601988e-11,
+          -3.282496214944419e-11,
+          -3.5726548930659757e-14,
+          -4.9980456497009064e-11,
+          7.270692127883501e-06,
+          -1.053052820227798e-11,
+          -6.92364549502977e-12,
+          2.976849723890446e-10,
+          1.569980057010466e-14,
+          9.743458482396252e-12,
+          -6.1119297345302455e-12,
+          3.0579848610952475e-10,
+          6.666135392007538e-11
+        ],
+        "source_target_energy_difference_hartree": 0.0,
+        "source_target_state_fidelity": 1.0,
+        "target_energy_hartree": -7.797909682479916,
+        "target_gradient_infinity": 6.586161275211333e-09,
+        "target_native_gradient": [
+          -1.9782175897375964e-10,
+          -6.586161275211333e-09,
+          3.124075328601988e-11,
+          -3.282496214944419e-11,
+          -3.5726548930659757e-14,
+          -4.9980456497009064e-11,
+          -1.053052820227798e-11,
+          -6.92364549502977e-12,
+          2.976849723890446e-10,
+          1.569980057010466e-14,
+          9.743458482396252e-12,
+          -6.1119297345302455e-12,
+          3.0579848610952475e-10,
+          6.666135392007538e-11
+        ],
+        "work": {
+          "energy_evaluations": 2,
+          "paper_measurement_cost": null,
+          "source_gradient_component_equivalent": 15,
+          "source_gradient_vector_evaluations": 1,
+          "statevector_recomputations": 2,
+          "target_gradient_component_equivalent": 14,
+          "target_gradient_vector_evaluations": 1
+        }
+      }
+    },
+    {
+      "acceptance": {
+        "accepted": true,
+        "after_parameter_count": 13,
+        "after_structure_digest": "f5199dea2a2438f41a18011d2e899b342cec807ca08e873b96477ec5d4bcc4d7",
+        "before_parameter_count": 14,
+        "before_structure_digest": "bbc35a4f22ddccfcf1ba9cb7a8f9e711e5bd645fdba5010253b6a16d8e28aa03",
+        "budget_reference_energy_hartree": -7.797909682469515,
+        "candidate_energy_hartree": -7.797899451787923,
+        "checks": {
+          "constraint": true,
+          "cumulative_energy_budget": true,
+          "finite": true,
+          "independent_energy_agreement": true,
+          "independent_state_fidelity": true,
+          "kkt": true,
+          "optimizer_path_reviewed": true,
+          "pareto_nonworse": true,
+          "physical_scalar_domain": true,
+          "resource_improved": true,
+          "resource_recount": true,
+          "transformation_semantics": true
+        },
+        "evidence_digest": "30ba0198320e44638c0876243c91baf409bc43b12919a0072ca176da20ab60f9",
+        "rejection_reasons": [],
+        "source_energy_hartree": -7.797909682479916,
+        "version": "runtime-kkt-cumulative-resource-guard-v2"
+      },
+      "atomic_candidate_ids": [
+        "candidate-v1:81c0bae69fe0f4e497ead72181749734d7c6815e12b64c08497290a5110987af"
+      ],
+      "before_resources": {
+        "cnot_count": 98,
+        "cnot_depth": 30,
+        "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 14,
+        "parameter_count": 14,
+        "structure_digest": "bbc35a4f22ddccfcf1ba9cb7a8f9e711e5bd645fdba5010253b6a16d8e28aa03",
+        "total_depth": 158
+      },
+      "conditional_polishing": null,
+      "constraint_numerical_id": "constraint-numerical-v1:ff7dde4514be51339f0ab4ff5f5e8126c47e31bef64eea20ac4aa34d4b32dbd8",
+      "constraint_residual_infinity": 0.0,
+      "constraint_semantic_id": "constraint-semantic-v1:8ea56eaf526555fb2a85a216a667fc5beb3a622fa6afc373c78258304dac3275",
+      "exact_attempt": 2,
+      "fallback": null,
+      "paper_measurement_cost": null,
+      "physical_resources": {
+        "cnot_count": 89,
+        "cnot_depth": 30,
+        "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 13,
+        "parameter_count": 13,
+        "structure_digest": "f5199dea2a2438f41a18011d2e899b342cec807ca08e873b96477ec5d4bcc4d7",
+        "total_depth": 145
+      },
+      "prediction": {
+        "constraint_residual_infinity": 0.0,
+        "direct_quadratic_change_from_current_hartree": 1.0342315719670512e-05,
+        "predicted_change_from_current_hartree": 1.0342315719670509e-05,
+        "predicted_constraint_penalty_hartree": 1.0342315719672557e-05,
+        "reference_energy_kind": "current-checkpoint-quadratic-model"
+      },
+      "primary": {
+        "coordinates": [
+          -0.1882599802286588,
+          -0.0022283846192106896,
+          -0.27405723228073275,
+          -0.0025289564756708492,
+          -0.005018324405428764,
+          0.22436945547820666,
+          -0.057810869109352,
+          -0.27454243536878054,
+          -0.785405137146957,
+          -0.13773060753345956,
+          0.29651192965037204,
+          0.0015984647426168675,
+          -0.0020931169364572354
+        ],
+        "energy_hartree": -7.797899451787923,
+        "final_inverse_hessian": [
+          [
+            1.378383336313385,
+            0.007350996962259127,
+            -0.5306665225944488,
+            -0.006973741826037598,
+            -0.024438358754522514,
+            -0.25813326288171073,
+            0.0161322481803311,
+            -0.36927870246409494,
+            -0.06925784108486072,
+            -0.6431508759703715,
+            2.3534850491743176,
+            0.010353588236987163,
+            -0.01998901527486434
+          ],
+          [
+            0.007350996962259153,
+            0.09136167237841286,
+            -0.009578680407053793,
+            -0.00025486052172627946,
+            -0.00651211547829931,
+            -7.037570383440527e-05,
+            0.004364088000436218,
+            -0.006987880022325785,
+            0.00016520447449154795,
+            -0.01790168217657372,
+            0.03501976832546329,
+            -0.0003689904940969789,
+            -0.00025629399748708256
+          ],
+          [
+            -0.5306665225944488,
+            -0.009578680407053826,
+            2.0069070684523425,
+            0.009606658030903548,
+            0.05631259882459468,
+            0.7273427131364412,
+            -0.4499371234413682,
+            0.6118292572271395,
+            0.13760818454285934,
+            -0.3032158441418428,
+            -3.0895687783433843,
+            -0.0006873175884606342,
+            0.028660559226636025
+          ],
+          [
+            -0.00697374182603764,
+            -0.0002548605217262803,
+            0.00960665803090352,
+            0.08922930665541745,
+            0.016530961063688513,
+            0.0032130503365140894,
+            -0.010360256051288291,
+            0.008457251538120105,
+            0.038348136234819565,
+            0.006495234820403789,
+            -0.011278637710331704,
+            -0.000626018196188155,
+            -0.0010428438227561287
+          ],
+          [
+            -0.024438358754522514,
+            -0.006512115478299311,
+            0.056312598824594676,
+            0.01653096106368851,
+            1.0181141219892167,
+            0.033847182265461066,
+            -0.12744748535939687,
+            0.05845381968530516,
+            0.02226422002937356,
+            -0.10968019777020664,
+            -0.024945651790914652,
+            0.0034801005788039786,
+            0.008409972057846528
+          ],
+          [
+            -0.2581332628817105,
+            -7.037570383436483e-05,
+            0.7273427131364412,
+            0.003213050336514124,
+            0.03384718226546107,
+            1.9152085346214593,
+            -0.11685332751355867,
+            0.07004398656827739,
+            0.058123656260158474,
+            -1.09010019748431,
+            -1.4906425392025957,
+            -0.00014964477936584702,
+            0.01594120194213467
+          ],
+          [
+            0.01613224818033096,
+            0.0043640880004361905,
+            -0.4499371234413681,
+            -0.010360256051288298,
+            -0.12744748535939693,
+            -0.1168533275135589,
+            11.029208194414478,
+            -0.6318061689016096,
+            0.0551142596022858,
+            0.5726199203391441,
+            0.627663152747007,
+            -0.013516426332595581,
+            -0.0043812528899055125
+          ],
+          [
+            -0.3692787024640946,
+            -0.006987880022325779,
+            0.6118292572271395,
+            0.008457251538120153,
+            0.058453819685305136,
+            0.07004398656827723,
+            -0.6318061689016107,
+            1.409139921147693,
+            0.0381118281231998,
+            0.056911317950881564,
+            -1.682671469414383,
+            -0.007247307053035095,
+            0.019244014991722923
+          ],
+          [
+            -0.06925784108486079,
+            0.0001652044744915473,
+            0.1376081845428593,
+            0.038348136234819565,
+            0.02226422002937356,
+            0.05812365626015845,
+            0.05511425960228589,
+            0.038111828123199805,
+            1.0837918322714577,
+            -0.05494768772879771,
+            -0.050492326450835685,
+            -0.041313832902104414,
+            -0.010061744285717527
+          ],
+          [
+            -0.6431508759703712,
+            -0.017901682176573754,
+            -0.303215844141843,
+            0.006495234820403775,
+            -0.10968019777020663,
+            -1.0901001974843092,
+            0.5726199203391433,
+            0.05691131795088167,
+            -0.054947687728797684,
+            5.099319728489792,
+            -2.226403772086253,
+            -0.031126557029598143,
+            0.014460515451454927
+          ],
+          [
+            2.3534850491743176,
+            0.035019768325463316,
+            -3.089568778343385,
+            -0.01127863771033169,
+            -0.02494565179091466,
+            -1.4906425392025957,
+            0.6276631527470067,
+            -1.6826714694143832,
+            -0.05049232645083561,
+            -2.2264037720862535,
+            13.225133055859768,
+            0.04111129524094846,
+            -0.10658984946818074
+          ],
+          [
+            0.010353588236987205,
+            -0.00036899049409698113,
+            -0.0006873175884605787,
+            -0.000626018196188162,
+            0.0034801005788039855,
+            -0.0001496447793658054,
+            -0.013516426332595692,
+            -0.007247307053035012,
+            -0.041313832902104414,
+            -0.03112655702959813,
+            0.04111129524094845,
+            0.23175590036331786,
+            -0.0032700514507817257
+          ],
+          [
+            -0.019989015274864366,
+            -0.0002562939974870874,
+            0.028660559226635983,
+            -0.0010428438227561253,
+            0.008409972057846528,
+            0.015941201942134605,
+            -0.004381252889905471,
+            0.0192440149917229,
+            -0.01006174428571752,
+            0.014460515451454839,
+            -0.10658984946818068,
+            -0.0032700514507817136,
+            0.25040955859834546
+          ]
+        ],
+        "finite": true,
+        "gradient": [
+          9.236211795382587e-11,
+          -7.985258040736631e-10,
+          -1.0658893473365658e-10,
+          2.380854626730239e-09,
+          -5.98430993616341e-10,
+          -3.920591717623172e-10,
+          2.8552997529857326e-11,
+          -3.7636304481391533e-10,
+          -2.547213116982484e-09,
+          -3.3977447254500625e-10,
+          -2.9705254595352044e-10,
+          -9.333250091527073e-10,
+          -1.1902641893938712e-09
+        ],
+        "gradient_infinity": 2.547213116982484e-09,
+        "gradient_l2": 3.99500996526037e-09,
+        "independent_energy_difference_hartree": 0.0,
+        "independent_energy_hartree": -7.797899451787923,
+        "independent_state_recomputation_fidelity": 1.0,
+        "independent_work": {
+          "energy_evaluations": 1,
+          "explicit_state_recomputations": 2,
+          "gradient_vector_evaluations": 1,
+          "initial_energy_evaluations_for_audit": 1
+        },
+        "optimizer": {
+          "function_evaluations": 6,
+          "gradient_component_equivalent": 78,
+          "gradient_tolerance": 1e-08,
+          "gradient_vector_evaluations": 6,
+          "implementation": "pinned-upstream-minimize_bfgs",
+          "iterations": 5,
+          "maximum_iterations": 200,
+          "message": "Optimization terminated successfully.",
+          "status": 0,
+          "success": true
+        },
+        "paper_measurement_cost": null,
+        "source_candidate_state_fidelity": 0.9999982129145677,
+        "wall_time_seconds": 0.9506684169755317
+      },
+      "round_index": 2,
+      "selected_optimizer_path": "recycled-obs",
+      "sequential_candidate_id": "candidate-v5:1799b0291631d367753ab8c17ab4fde232cab0afac939a9027fe88cb9f934b61",
+      "structural_resources": {
+        "cnot_count": 89,
+        "cnot_depth": 30,
+        "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 13,
+        "parameter_count": 13,
+        "structure_digest": "f5199dea2a2438f41a18011d2e899b342cec807ca08e873b96477ec5d4bcc4d7",
+        "total_depth": 145
+      },
+      "two_path_certificate": {
+        "componentwise_difference": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "componentwise_limit": [
+          1.0000000092362118e-10,
+          1.0000000798525805e-10,
+          1.0000000106588935e-10,
+          1.0000002380854627e-10,
+          1.0000000598430994e-10,
+          1.0000000392059173e-10,
+          1.0000000028552998e-10,
+          1.0000000376363046e-10,
+          1.0000002547213117e-10,
+          1.0000000339774473e-10,
+          1.0000000297052546e-10,
+          1.000000093332501e-10,
+          1.000000119026419e-10
+        ],
+        "componentwise_pass": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "coordinates": [
+          -0.1882599802286588,
+          -0.0022283846192106896,
+          -0.27405723228073275,
+          -0.0025289564756708492,
+          -0.005018324405428764,
+          0.22436945547820666,
+          -0.057810869109352,
+          -0.27454243536878054,
+          -0.785405137146957,
+          -0.13773060753345956,
+          0.29651192965037204,
+          0.0015984647426168675,
+          -0.0020931169364572354
+        ],
+        "difference_infinity": 0.0,
+        "difference_l2": 0.0,
+        "mapped_source_coordinates": [
+          -0.1882599802286588,
+          -0.0022283846192106896,
+          -0.27405723228073275,
+          -0.0025289564756708492,
+          -0.005018324405428764,
+          0.22436945547820666,
+          -0.057810869109352,
+          -0.27454243536878054,
+          0.0,
+          -0.785405137146957,
+          -0.13773060753345956,
+          0.29651192965037204,
+          0.0015984647426168675,
+          -0.0020931169364572354
+        ],
+        "passed": true,
+        "policy": {
+          "absolute_tolerance": 1e-10,
+          "relative_tolerance": 1e-08
+        },
+        "projected_gradient_infinity": 2.547213116982484e-09,
+        "projected_source_gradient": [
+          9.236211795382587e-11,
+          -7.985258040736631e-10,
+          -1.0658893473365658e-10,
+          2.380854626730239e-09,
+          -5.98430993616341e-10,
+          -3.920591717623172e-10,
+          2.8552997529857326e-11,
+          -3.7636304481391533e-10,
+          -2.547213116982484e-09,
+          -3.3977447254500625e-10,
+          -2.9705254595352044e-10,
+          -9.333250091527073e-10,
+          -1.1902641893938712e-09
+        ],
+        "source_energy_hartree": -7.797899451787923,
+        "source_gradient": [
+          9.236211795382587e-11,
+          -7.985258040736631e-10,
+          -1.0658893473365658e-10,
+          2.380854626730239e-09,
+          -5.98430993616341e-10,
+          -3.920591717623172e-10,
+          2.8552997529857326e-11,
+          -3.7636304481391533e-10,
+          0.014233283877766857,
+          -2.547213116982484e-09,
+          -3.3977447254500625e-10,
+          -2.9705254595352044e-10,
+          -9.333250091527073e-10,
+          -1.1902641893938712e-09
+        ],
+        "source_target_energy_difference_hartree": 0.0,
+        "source_target_state_fidelity": 1.0,
+        "target_energy_hartree": -7.797899451787923,
+        "target_gradient_infinity": 2.547213116982484e-09,
+        "target_native_gradient": [
+          9.236211795382587e-11,
+          -7.985258040736631e-10,
+          -1.0658893473365658e-10,
+          2.380854626730239e-09,
+          -5.98430993616341e-10,
+          -3.920591717623172e-10,
+          2.8552997529857326e-11,
+          -3.7636304481391533e-10,
+          -2.547213116982484e-09,
+          -3.3977447254500625e-10,
+          -2.9705254595352044e-10,
+          -9.333250091527073e-10,
+          -1.1902641893938712e-09
+        ],
+        "work": {
+          "energy_evaluations": 2,
+          "paper_measurement_cost": null,
+          "source_gradient_component_equivalent": 14,
+          "source_gradient_vector_evaluations": 1,
+          "statevector_recomputations": 2,
+          "target_gradient_component_equivalent": 13,
+          "target_gradient_vector_evaluations": 1
+        }
+      }
+    }
+  ],
+  "paper_measurement_cost": null,
+  "result": {
+    "accepted_rounds": 2,
+    "actual_cumulative_energy_increase_hartree": 1.0230681592560131e-05,
+    "exact_attempts": 2,
+    "final_checkpoint_digest": "ec738942641bc18a8393689d553cbc26ae703538586c3b41bcfffbdd3a730eb4",
+    "final_energy_hartree": -7.797899451787923,
+    "result_digest": "94b503f344223a267c8b9d60deaa7c5461f4b617561d5242d2143ff2a6d3d27f",
+    "source_reference_energy_hartree": -7.797909682469515,
+    "stop_reason": "maximum-attempted-rounds",
+    "terminal_work": {
+      "accepted_rounds": 2,
+      "analytic_hvp_calls": 0,
+      "attempted_rounds": 2,
+      "energy_evaluations": 133,
+      "exact_vqe_attempts": 2,
+      "expanded_search_states": 29,
+      "finite_difference_hvp_calls": 25,
+      "full_resource_recounts": 35,
+      "gradient_component_equivalents": 2230,
+      "gradient_vector_evaluations": 156,
+      "optimizer_iterations": 7,
+      "optimizer_starts": 4,
+      "quadratic_solve_iterations": 0,
+      "statevector_evaluations": 14
+    },
+    "trajectory": [
+      {
+        "accepted": true,
+        "actual_cumulative_energy_increase_hartree": -1.0400569294688466e-11,
+        "candidate_id": "candidate-v5:58dc54b5d1f274bf875266b316e4944581e8b6de19c5586b48b775d15d91d2f5",
+        "catalog_digest_after": "faaf4fec1448d4c565b85d9660067bf30cf5b6f970393ddd0a2e0c1651bb5029",
+        "catalog_digest_before": "b63c5524d2b9926d5239cf50deba341fca04822142c7b8a85a189a62c1174ac6",
+        "checkpoint_digest": "6d4edf1e90d611042deb52b460a9b85044e04981f9893f75f1f1d2b3080af731",
+        "parent_checkpoint_digest": "813c6454dd506fc96c7a2f82cb2582ab04346cc77b3e20251f2e3b2527519b68",
+        "resources": {
+          "cnot_count": 98,
+          "cnot_depth": 30,
+          "logical_block_count": 14,
+          "parameter_count": 14,
+          "total_depth": 158
+        },
+        "round_index": 1,
+        "work_after_attempt": {
+          "accepted_rounds": 1,
+          "analytic_hvp_calls": 0,
+          "attempted_rounds": 1,
+          "energy_evaluations": 123,
+          "exact_vqe_attempts": 1,
+          "expanded_search_states": 15,
+          "finite_difference_hvp_calls": 25,
+          "full_resource_recounts": 18,
+          "gradient_component_equivalents": 2112,
+          "gradient_vector_evaluations": 147,
+          "optimizer_iterations": 2,
+          "optimizer_starts": 3,
+          "quadratic_solve_iterations": 0,
+          "statevector_evaluations": 9
+        }
+      },
+      {
+        "accepted": true,
+        "actual_cumulative_energy_increase_hartree": 1.0230681592560131e-05,
+        "candidate_id": "candidate-v5:1799b0291631d367753ab8c17ab4fde232cab0afac939a9027fe88cb9f934b61",
+        "catalog_digest_after": "03852ab1e172a53e62d404d2535185fb5857862b23c13fe9dc4ef1e2bb3d403a",
+        "catalog_digest_before": "faaf4fec1448d4c565b85d9660067bf30cf5b6f970393ddd0a2e0c1651bb5029",
+        "checkpoint_digest": "ec738942641bc18a8393689d553cbc26ae703538586c3b41bcfffbdd3a730eb4",
+        "parent_checkpoint_digest": "6d4edf1e90d611042deb52b460a9b85044e04981f9893f75f1f1d2b3080af731",
+        "resources": {
+          "cnot_count": 89,
+          "cnot_depth": 30,
+          "logical_block_count": 13,
+          "parameter_count": 13,
+          "total_depth": 145
+        },
+        "round_index": 2,
+        "work_after_attempt": {
+          "accepted_rounds": 2,
+          "analytic_hvp_calls": 0,
+          "attempted_rounds": 2,
+          "energy_evaluations": 133,
+          "exact_vqe_attempts": 2,
+          "expanded_search_states": 29,
+          "finite_difference_hvp_calls": 25,
+          "full_resource_recounts": 35,
+          "gradient_component_equivalents": 2230,
+          "gradient_vector_evaluations": 156,
+          "optimizer_iterations": 7,
+          "optimizer_starts": 4,
+          "quadratic_solve_iterations": 0,
+          "statevector_evaluations": 14
+        }
+      }
+    ],
+    "version": "v5-sequential-width1-v1"
+  },
+  "result_digest": "d2ba111d56e51ef58d6c3be8b0872529fdb32a6178514da12900d81467d4db6a",
+  "runner_version": "v5-s8-lih-cp-integration-v1",
+  "schema_version": "1.0.0",
+  "source_energy_hartree": -7.797909682469515,
+  "source_reconstruction": {
+    "energy_difference_hartree": 0.0,
+    "independent_energy_hartree": -7.797909682469515,
+    "matches_checkpoint_statevector": true,
+    "statevector_sha256": "127f801fff2c311b1cc4a32da6830f7311bfcebcabfbfd25b95d77211b87db03"
+  },
+  "source_resources": {
+    "cnot_count": 107,
+    "cnot_depth": 30,
+    "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+    "logical_block_count": 15,
+    "parameter_count": 15,
+    "structure_digest": "7562e62fee3f14594995a4dbb3c599a54df63ec879346388eb03656cc9ef22a8",
+    "total_depth": 171
+  }
+}

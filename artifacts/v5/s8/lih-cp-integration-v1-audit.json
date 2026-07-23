@@ -1,0 +1,64 @@
+{
+  "artifact_kind": "v5-s8-lih-cp-integration-independent-audit",
+  "audit_digest": "7821490f7ec79adfb24efcdf54a94d1db00ca92a46f96f7941aa3a56983c6462",
+  "checks": {
+    "all_acceptance_checks_pass": true,
+    "checkpoint_chain": true,
+    "code_tag_is_ancestor": true,
+    "finite_difference_hvp_work_counted": true,
+    "independent_final_energy": true,
+    "independent_final_gradient": true,
+    "independent_final_resources": true,
+    "independent_final_state": true,
+    "no_hidden_catalog_failure": true,
+    "paper_measurement_cost_undefined": true,
+    "polishing_only_when_triggered": true,
+    "resource_recounts_match": true,
+    "resource_trajectory_matches_checkpoints": true,
+    "screening_information_firewall": true,
+    "source_reconstruction": true,
+    "source_relative_energy_budget": true,
+    "summary_digest": true,
+    "two_fresh_exact_attempts": true
+  },
+  "claim_boundary": "Successful known-LiH calibration integration; joint-catalog V5 and frozen S9 remain pending.",
+  "independent_final_recomputation": {
+    "energy_difference_hartree": 0.0,
+    "gradient_infinity": 2.547213116982484e-09,
+    "gradient_stored_max_difference": 0.0,
+    "resources": {
+      "cnot_count": 89,
+      "cnot_depth": 30,
+      "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+      "logical_block_count": 13,
+      "parameter_count": 13,
+      "structure_digest": "f5199dea2a2438f41a18011d2e899b342cec807ca08e873b96477ec5d4bcc4d7",
+      "total_depth": 145
+    },
+    "statevector_stored_max_difference": 0.0
+  },
+  "paper_measurement_cost": null,
+  "passed": true,
+  "schema_version": "1.0.0",
+  "scientific_result": {
+    "accepted_rounds": 2,
+    "energy_increase_hartree": 1.0230681592560131e-05,
+    "final_resources": {
+      "cnot_count": 89,
+      "cnot_depth": 30,
+      "logical_block_count": 13,
+      "parameter_count": 13,
+      "total_depth": 145
+    },
+    "source_resources": {
+      "cnot_count": 107,
+      "cnot_depth": 30,
+      "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+      "logical_block_count": 15,
+      "parameter_count": 15,
+      "structure_digest": "7562e62fee3f14594995a4dbb3c599a54df63ec879346388eb03656cc9ef22a8",
+      "total_depth": 171
+    },
+    "status": "successful-calibration-integration-not-final-V5"
+  }
+}
