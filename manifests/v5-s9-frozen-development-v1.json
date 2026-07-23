@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0.0",
+  "stage": "V5-S9",
+  "status": "frozen-before-execution",
+  "code_tag_to_create": "dvg-obs-v5-s9-frozen-code-v1",
+  "s8_freeze": {
+    "tag": "dvg-obs-v5-s8-calibration-freeze-v1",
+    "manifest_path": "manifests/v5-s8-calibration-freeze-v1.json",
+    "manifest_sha256": "a7e17d15f3c61bd6cc4309c50a133cf0c807b5dffc51e55d400d583dbd7848ad"
+  },
+  "cases": [
+    {
+      "case_id": "h6-1.5",
+      "checkpoint_path": "artifacts/full-figures/ceo-star/h6-1.5/checkpoint.json",
+      "checkpoint_sha256": "2c994c6ac2d4478c7174b71b661f496c9fda8a14e3a7ca08d01e9130515fe491"
+    },
+    {
+      "case_id": "h6-3.0",
+      "checkpoint_path": "artifacts/full-figures/ceo-star/h6-3.0/checkpoint.json",
+      "checkpoint_sha256": "40a59c46b12e27551b3b156125cf1f2bd6f75ec49da1831eba13cdc27be24a88"
+    },
+    {
+      "case_id": "beh2-3.0",
+      "checkpoint_path": "artifacts/full-figures/ceo-star/beh2-3.0/checkpoint.json",
+      "checkpoint_sha256": "4344d203bbf161fd53814f1fb51af2bbc8531d7c77587a477a3654b3b1ec626c"
+    }
+  ],
+  "lih_handling": {
+    "new_execution": false,
+    "reason": "The adopted protocol is the audited LiH S8 round-three run itself; rerunning it would add no frozen reevaluation information.",
+    "carry_forward_path": "artifacts/v5/s8/lih-energy-aware-width2-round3-v1/summary.json",
+    "carry_forward_sha256": "ae2c3a93d4eef86f0a7ec8df9895c712c1b0d939dd7118c822076973e91c961a",
+    "carry_forward_audit_path": "artifacts/v5/s8/lih-energy-aware-width2-round3-v1-audit.json",
+    "carry_forward_audit_sha256": "fd155e7b7762694e6d35ebe139bdbfac6c53dd50ac722172b4759d72b95edd9a",
+    "classification": "outcome-informed-calibration-carry-forward"
+  },
+  "protocol": {
+    "width": 2,
+    "top_k_per_parent": 2,
+    "maximum_rounds": 3,
+    "maximum_exact_attempts": 6,
+    "endpoint_quota": 1,
+    "algorithmic_source_relative_energy_budget_hartree": 0.0001,
+    "effective_energy_budget_rule": "min(algorithmic budget, nextafter(chemical-accuracy margin, -infinity))",
+    "target_gradient_infinity_max": 1e-8,
+    "beam_dominance": "resources-plus-energy",
+    "joint_catalog": true,
+    "conditional_target_native_polishing": true,
+    "polishing_gradient_l2_tolerance": 1e-8,
+    "threshold_relaxation": false,
+    "complete_terminal_catalog_accounting": true,
+    "paper_measurement_cost": null
+  },
+  "execution_order": [
+    "h6-1.5",
+    "h6-3.0",
+    "beh2-3.0"
+  ],
+  "incident_policy": "Any scientific-code or threshold change invalidates and reruns every affected S9 case. Results are exclusive and never overwritten.",
+  "claim_boundary": "All cases are development cases; no unseen-system or superiority claim is preregistered."
+}

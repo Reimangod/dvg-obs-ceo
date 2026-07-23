@@ -7,7 +7,7 @@ import hashlib
 import json
 import os
 from pathlib import Path
-from typing import Any
+from typing import Any, Callable
 
 import numpy as np
 
@@ -77,6 +77,40 @@ def _sum_work(*items: dict[str, int]) -> dict[str, int]:
     }
 
 
+def _load_checkpoint_path(path: Path) -> dict[str, Any]:
+    checkpoint = json.loads(path.read_text(encoding="utf-8"))
+    observed = checkpoint.pop("checkpoint_digest")
+    if _digest(checkpoint) != observed:
+        raise V5S8LiHMultiTrajectoryError(
+            f"checkpoint digest mismatch: {path}"
+        )
+    checkpoint["checkpoint_digest"] = observed
+    return checkpoint
+
+
+def _effective_energy_budget(
+    checkpoint: dict[str, Any],
+    *,
+    enforce_chemical_accuracy: bool,
+) -> tuple[float, float | None]:
+    algorithmic_energy_budget = 1e-4
+    if not enforce_chemical_accuracy:
+        return algorithmic_energy_budget, None
+    chemical_accuracy_margin = (
+        float(checkpoint["exact_energy_hartree"])
+        + float(checkpoint["chemical_accuracy_hartree"])
+        - float(checkpoint["energy_hartree"])
+    )
+    if not np.isfinite(chemical_accuracy_margin) or chemical_accuracy_margin <= 0:
+        raise V5S8LiHMultiTrajectoryError(
+            "source checkpoint is not strictly inside chemical accuracy"
+        )
+    return min(
+        algorithmic_energy_budget,
+        float(np.nextafter(chemical_accuracy_margin, -np.inf)),
+    ), chemical_accuracy_margin
+
+
 def run(
     output: Path = OUTPUT,
     *,
@@ -87,14 +121,28 @@ def run(
     top_k_per_parent: int = 2,
     maximum_rounds: int = 2,
     maximum_exact_attempts: int = 4,
+    checkpoint_path: Path | None = None,
+    algorithm_factory: Callable[[dict[str, Any]], tuple[Any, Any]] | None = None,
+    case_id: str = "lih-3.0",
+    hamiltonian_context: str = "stored-pinned-lih-3.0-angstrom-sto-3g",
+    enforce_chemical_accuracy: bool = False,
+    execution_freeze: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
     if output.exists():
         raise V5S8LiHMultiTrajectoryError("refusing to overwrite width-two output")
     threads = {name: os.environ.get(name) for name in REQUIRED_THREADS}
     if threads != REQUIRED_THREADS:
         raise V5S8LiHMultiTrajectoryError(f"single-thread freeze missing: {threads}")
-    checkpoint = _load_checkpoint()
-    algorithm, pool, _ = _lih_algorithm()
+    if checkpoint_path is None:
+        checkpoint = _load_checkpoint()
+        algorithm, pool, _ = _lih_algorithm()
+    else:
+        checkpoint = _load_checkpoint_path(checkpoint_path)
+        if algorithm_factory is None:
+            raise V5S8LiHMultiTrajectoryError(
+                "external checkpoint requires an algorithm factory"
+            )
+        algorithm, pool = algorithm_factory(checkpoint["case"])
     algorithm.initialize()
     source_ansatz = AnsatzStructure.create(
         checkpoint["ansatz_indices"], checkpoint["ansatz_coefficients"], checkpoint["iteration_counts"]
@@ -128,14 +176,22 @@ def run(
             "checkpoint_digest": checkpoint["checkpoint_digest"],
         },
     )
+    algorithmic_energy_budget = 1e-4
+    effective_energy_budget, chemical_accuracy_margin = (
+        _effective_energy_budget(
+            checkpoint,
+            enforce_chemical_accuracy=enforce_chemical_accuracy,
+        )
+    )
     problem_id = versioned_id("problem-v1", {
-        "case_id": "lih-3.0",
+        "case_id": case_id,
         "checkpoint_digest": checkpoint["checkpoint_digest"],
-        "hamiltonian_context": "stored-pinned-lih-3.0-angstrom-sto-3g",
+        "hamiltonian_context": hamiltonian_context,
     })
     source_state_id = _state_id(source_runtime)
     source_path_id = versioned_id("path-v5", {
         "runner_version": runner_version,
+        "execution_freeze": execution_freeze,
         "checkpoint_digest": checkpoint["checkpoint_digest"],
         "role": "source",
     })
@@ -162,6 +218,7 @@ def run(
                 algorithm,
                 pool,
                 problem_id=problem_id,
+                screening_budget_hartree=effective_energy_budget,
                 enable_conditional_polishing=True,
                 polishing_config=ConditionalPolishingConfig(
                     polisher=TrustNCGConfig(gradient_l2_tolerance=1e-8)
@@ -268,7 +325,7 @@ def run(
             maximum_rounds=maximum_rounds,
             maximum_exact_attempts=maximum_exact_attempts,
             endpoint_quota=1,
-            cumulative_energy_budget_hartree=1e-4,
+            cumulative_energy_budget_hartree=effective_energy_budget,
             beam_dominance=beam_dominance,
         ),
     )
@@ -292,7 +349,16 @@ def run(
         "artifact_kind": artifact_kind,
         "runner_version": runner_version,
         "source_energy_hartree": checkpoint["energy_hartree"],
+        "case_id": case_id,
         "source_resources": asdict(source_resources),
+        "energy_guard": {
+            "algorithmic_source_relative_budget_hartree": (
+                algorithmic_energy_budget
+            ),
+            "chemical_accuracy_margin_hartree": chemical_accuracy_margin,
+            "effective_source_relative_budget_hartree": effective_energy_budget,
+            "chemical_accuracy_enforced": enforce_chemical_accuracy,
+        },
         "result": result,
         "branch_records": branch_records,
         "catalog_diagnostics_by_path": {
