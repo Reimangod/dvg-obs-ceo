@@ -1,0 +1,72 @@
+{
+  "artifact_kind": "v5-s3-width1-independent-audit",
+  "checks": {
+    "all_v4_1_queues_nonempty": true,
+    "all_v4_1_round_one_queues_replay": true,
+    "h2_h4_exhaustive_fixture_replay": true,
+    "lih_v4_1_round_one_regression_matches_v4": true,
+    "stored_selection_has_no_actual_or_fci_field": true
+  },
+  "claim_boundary": "Stored V4.1 round-one selector replay and synthetic sequential-kernel evidence; no new molecular VQE execution or V5 performance claim.",
+  "h2_h4_exhaustive_fixture_replay": {
+    "cases": {
+      "h2-1.5-iteration-1": {
+        "candidate_count": 1,
+        "candidate_ids_changed_by_semantic_version": 1,
+        "old_candidate_ids_mapped": 1,
+        "source_resources": {
+          "cnot_count": 9,
+          "cnot_depth": 7,
+          "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+          "logical_block_count": 1,
+          "parameter_count": 1,
+          "structure_digest": "27944cda620643ba83f90fba85f078f7a3b47bcebfbf83e8abac4944c4f735ae",
+          "total_depth": 13
+        },
+        "unique_single_semantic_ids": 1
+      },
+      "h4-1.5-first-chemical-accuracy": {
+        "candidate_count": 16,
+        "candidate_ids_changed_by_semantic_version": 20,
+        "old_candidate_ids_mapped": 20,
+        "source_resources": {
+          "cnot_count": 80,
+          "cnot_depth": 34,
+          "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+          "logical_block_count": 8,
+          "parameter_count": 10,
+          "structure_digest": "6b5c8c5523a537a6107550d8e0350c37e0eb85c8aa587abf4b383a5839540121",
+          "total_depth": 126
+        },
+        "unique_single_semantic_ids": 16
+      }
+    },
+    "paper_measurement_cost": null,
+    "passed": true,
+    "physical_semantics_comparison": "exact atomic RREF and mapped joint target dimensions; semantic IDs are intentionally versioned and are not asserted equal",
+    "single_candidate_replays": 17,
+    "stored_joint_batch_replays": 420
+  },
+  "passed": true,
+  "schema_version": "1.0.0",
+  "v4_1_round_one_replay": {
+    "beh2-3.0": {
+      "first_exact_semantic_id": "constraint-semantic-v1:e1e9ac6d53c48e91456d023634b494b42490dd8ada75bfc47ce675060e326d58",
+      "matches_stored": true,
+      "queue_length": 4,
+      "selection_digest": "f98bada4376e005f8c44e57f4e5c8b64911a800e57701254abb4351bfd5dadd5"
+    },
+    "h6-1.5": {
+      "first_exact_semantic_id": "constraint-semantic-v1:7b3c651bfe4c55cd956fc411e37caaebe650db87217f318159d397143d896ccb",
+      "matches_stored": true,
+      "queue_length": 4,
+      "selection_digest": "5521ca787f1539da5f0d5611a936eaba7ebb808987b1f780f24510c62c8c7247"
+    },
+    "h6-3.0": {
+      "first_exact_semantic_id": "constraint-semantic-v1:efe19911ced213c61309878aeee3df85e5615e5c60e8a0100082557578ac74b3",
+      "matches_stored": true,
+      "queue_length": 4,
+      "selection_digest": "bdafaea707e5d440d1d1bf0e8c9bb1166bedd5538ef7018d048f9d1c51b02c95"
+    }
+  }
+}
