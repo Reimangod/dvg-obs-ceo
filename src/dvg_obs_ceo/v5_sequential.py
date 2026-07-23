@@ -96,6 +96,7 @@ def run_width_one(
 ) -> dict[str, Any]:
     source_reference = float(runtime.metadata["budget_reference_energy_hartree"])
     exact_attempts = store.latest().work["exact_vqe_attempts"]
+    terminal_work = V5WorkCounters(**store.latest().work)
     trajectory: list[dict[str, Any]] = []
     stop_reason = "maximum-attempted-rounds"
 
@@ -134,6 +135,12 @@ def run_width_one(
                 raise V5SequentialError("exact executor returned a different candidate identity")
             if execution.work.exact_vqe_attempts != exact_attempts or execution.work.attempted_rounds < round_index:
                 raise V5SequentialError("sequential exact/round work is inconsistent")
+            if any(
+                execution.work.to_dict()[key] < terminal_work.to_dict()[key]
+                for key in terminal_work.to_dict()
+            ):
+                raise V5SequentialError("sequential executor work regressed")
+            terminal_work = execution.work
             if not execution.decision.accepted:
                 transaction.rollback(";".join(execution.decision.rejection_reasons) or "independent-acceptance-rejected")
                 trajectory.append({
@@ -142,6 +149,7 @@ def run_width_one(
                     "accepted": False,
                     "rejection_reasons": list(execution.decision.rejection_reasons),
                     "parent_checkpoint_digest": latest.checkpoint_digest,
+                    "work_after_attempt": execution.work.to_dict(),
                 })
                 stop_reason = "width-one-candidate-rejected"
                 break
@@ -174,6 +182,7 @@ def run_width_one(
                     "parameter_count": execution.resource_snapshot.parameter_count,
                     "logical_block_count": execution.resource_snapshot.logical_block_count,
                 },
+                "work_after_attempt": execution.work.to_dict(),
             })
 
     result = {
@@ -185,6 +194,7 @@ def run_width_one(
         "exact_attempts": exact_attempts,
         "accepted_rounds": store.latest().round_index,
         "final_checkpoint_digest": store.latest().checkpoint_digest,
+        "terminal_work": terminal_work.to_dict(),
         "trajectory": trajectory,
     }
     result["result_digest"] = hashlib.sha256(canonical_json_bytes(result)).hexdigest()

@@ -117,6 +117,11 @@ def test_width_one_rejected_second_round_keeps_first_commit(tmp_path: Path) -> N
     assert result["stop_reason"] == "width-one-candidate-rejected"
     assert len(store.checkpoints()) == 2
     assert len(runtime.ansatz.indices) == 2
+    assert result["terminal_work"]["exact_vqe_attempts"] == 2
+    assert result["trajectory"][-1]["work_after_attempt"]["exact_vqe_attempts"] == 2
+    # The rejected state's work remains visible even though its quantum state
+    # and parameters are rolled back to the first committed round.
+    assert store.latest().work["exact_vqe_attempts"] == 1
 
 
 def test_width_one_energy_cap_stops_before_execution(tmp_path: Path) -> None:
