@@ -1,0 +1,159 @@
+{
+  "absolute_energy_drift_hartree": 0.0,
+  "artifact_kind": "v5.1-s11b-s9-fusion-integration-result",
+  "candidate_ids": [
+    "fusion-v1:b88d87d2d419fd877cd35ade248d35462c9a534348ed85c4e672fa5e14ae5172",
+    "fusion-v1:95a9194dbc2d46a5b58a53f89f9e834014071b05662cdcb3ed25cfd2f64e8b95"
+  ],
+  "case_id": "h6-1.5",
+  "checks": {
+    "all_resources_nonincrease": true,
+    "cnot_reduction": true,
+    "commutators": true,
+    "energy": true,
+    "generator_identities": true,
+    "parameter_reduction": true,
+    "physical_structural_resources": true,
+    "state": true
+  },
+  "claim_boundary": "Outcome-informed exploratory composition of two previously certified exact fusions with the frozen S9 H6 winner. It is not confirmatory or out-of-sample evidence.",
+  "classification": "outcome-informed-exploratory-integration",
+  "execution_freeze": {
+    "code_tag": "dvg-obs-v5-s11b-s9-fusion-code-v1",
+    "head": "2e04ee790ec3373efec3583aa789e2f4f0caba91",
+    "output_absent": true
+  },
+  "manifest_path": "manifests/v5-s11b-s9-fusion-integration-v1.json",
+  "manifest_sha256": "e9006d50d122ebe4d798e4915ba6362722467c9c6d5c50fc85aef364638e1943",
+  "operator_audits": [
+    {
+      "commutators": [
+        {
+          "operator_number": 0,
+          "residual": 0.0
+        },
+        {
+          "operator_number": 1,
+          "residual": 0.0
+        },
+        {
+          "operator_number": 2,
+          "residual": 0.0
+        },
+        {
+          "operator_number": 3,
+          "residual": 0.0
+        },
+        {
+          "operator_number": 4,
+          "residual": 0.0
+        },
+        {
+          "operator_number": 5,
+          "residual": 0.0
+        },
+        {
+          "operator_number": "parent-0-parent-1",
+          "residual": 0.0
+        }
+      ],
+      "generator_identity_residual": 0.0,
+      "maximum_commutator_residual": 0.0
+    },
+    {
+      "commutators": [
+        {
+          "operator_number": 0,
+          "residual": 0.0
+        },
+        {
+          "operator_number": 1,
+          "residual": 0.0
+        },
+        {
+          "operator_number": 2,
+          "residual": 0.0
+        },
+        {
+          "operator_number": 3,
+          "residual": 0.0
+        },
+        {
+          "operator_number": 4,
+          "residual": 0.0
+        },
+        {
+          "operator_number": 5,
+          "residual": 0.0
+        },
+        {
+          "operator_number": 6,
+          "residual": 0.0
+        },
+        {
+          "operator_number": "parent-0-parent-1",
+          "residual": 0.0
+        }
+      ],
+      "generator_identity_residual": 0.0,
+      "maximum_commutator_residual": 0.0
+    }
+  ],
+  "passed": true,
+  "result_digest": "895736dcf231e558ffeb2caebc6e597438e6d05c2ca086ac432e4c5e977853d4",
+  "schema_version": "1.0.0",
+  "source": {
+    "energy_hartree": -2.9940888937469317,
+    "energy_increase_from_ceo_source_hartree": 8.46365777271707e-05,
+    "kind": "frozen-s9-v5-winner",
+    "resources": {
+      "cnot_count": 858,
+      "cnot_depth": 301,
+      "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+      "logical_block_count": 78,
+      "parameter_count": 132,
+      "structure_digest": "9983c6f087766ed9b17b07a4f13f1e997e466a64e54546a70f42a9b77bf21941",
+      "total_depth": 1549
+    }
+  },
+  "state_fidelity": 1.0000000000000004,
+  "target": {
+    "energy_hartree": -2.9940888937469317,
+    "energy_increase_from_ceo_source_hartree": 8.46365777271707e-05,
+    "kind": "v5.1-s9-winner-plus-joint-exact-fusion",
+    "resources": {
+      "cnot_count": 840,
+      "cnot_depth": 301,
+      "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+      "logical_block_count": 76,
+      "parameter_count": 130,
+      "structure_digest": "10259d55179fd81f2827927dfc43b7b71e2e6fcb1ce031867372fb2f6d223331",
+      "total_depth": 1523
+    }
+  },
+  "v5_1_pareto_context": {
+    "lossless_v4_1_fusion_point": {
+      "energy_hartree": -2.994085316059109,
+      "energy_increase_from_ceo_source_hartree": 8.82142655496132e-05,
+      "kind": "v5.1-joint-exact-fusion",
+      "resources": {
+        "cnot_count": 840,
+        "cnot_depth": 300,
+        "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 76,
+        "parameter_count": 129,
+        "structure_digest": "e4a7790e2e3c3ac54c910175651f2bcd40eb1963ead3adf5000bab30dac2b950",
+        "total_depth": 1520
+      }
+    },
+    "neither_point_dominates_the_other": true
+  },
+  "work": {
+    "energy_evaluations": 2,
+    "full_resource_recounts": 4,
+    "optimizer_iterations": 0,
+    "optimizer_starts": 0,
+    "paper_measurement_cost": null,
+    "statevector_evaluations": 2
+  }
+}
