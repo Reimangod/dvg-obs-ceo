@@ -38,8 +38,16 @@ def _sum_work(items: list[dict[str, int]]) -> dict[str, int]:
     }
 
 
-def run_audit(*, recompute_quantum: bool = True) -> dict[str, Any]:
-    summary = json.loads(RESULT.read_text(encoding="utf-8"))
+def run_audit(
+    *,
+    recompute_quantum: bool = True,
+    result_path=RESULT,
+    code_tag: str = CODE_TAG,
+    expected_attempts: int = 4,
+    expected_rounds: int = 2,
+    scientific_status: str = "valid-accounting-complete-no-endpoint-improvement",
+) -> dict[str, Any]:
+    summary = json.loads(result_path.read_text(encoding="utf-8"))
     content = dict(summary)
     observed_summary_digest = content.pop("result_digest")
     result = summary["result"]
@@ -68,14 +76,14 @@ def run_audit(*, recompute_quantum: bool = True) -> dict[str, Any]:
         "summary_digest": observed_summary_digest == _digest(content),
         "nested_result_digest": observed_result_digest == _digest(result_content),
         "code_tag_is_ancestor": subprocess.run(
-            ["git", "-C", str(ROOT), "merge-base", "--is-ancestor", CODE_TAG, "HEAD"],
+            ["git", "-C", str(ROOT), "merge-base", "--is-ancestor", code_tag, "HEAD"],
             check=False,
         ).returncode == 0,
         "source_runtime_unchanged": summary["source_runtime_unchanged"] is True,
-        "four_unique_exact_attempts": (
-            result["exact_attempts"] == 4
-            and result["unique_exact_tasks"] == 4
-            and len(branches) == 4
+        "expected_unique_exact_attempts": (
+            result["exact_attempts"] == expected_attempts
+            and result["unique_exact_tasks"] == expected_attempts
+            and len(branches) == expected_attempts
         ),
         "all_exact_branches_accepted": all(
             record["decision"]["accepted"]
@@ -101,12 +109,16 @@ def run_audit(*, recompute_quantum: bool = True) -> dict[str, Any]:
         "aggregate_work_complete": total_sum == result["aggregate_work"],
         "catalog_work_matches_diagnostics": all(catalog_diagnostic_checks),
         "zero_candidate_terminal_catalog_retained": (
-            len(terminal_paths) == 1
-            and catalog_entries[terminal_paths[0]]["expanded_search_states"] == 17
-            and catalog_entries[terminal_paths[0]]["full_resource_recounts"] == 1
+            len(terminal_paths) == expected_rounds - 1
+            and all(
+                catalog_entries[path_id]["expanded_search_states"] == 17
+                and catalog_entries[path_id]["full_resource_recounts"] == 1
+                for path_id in terminal_paths
+            )
         ),
         "energy_aware_beam_retained_two_paths": (
             result["config"]["beam_dominance"] == "resources-plus-energy"
+            and len(result["trajectory"]) == expected_rounds
             and all(
                 len(round_record["active_path_ids_after"]) == 2
                 for round_record in result["trajectory"]
@@ -212,7 +224,7 @@ def run_audit(*, recompute_quantum: bool = True) -> dict[str, Any]:
         "checks": checks,
         "independent_branch_recomputations": recomputations,
         "scientific_result": {
-            "status": "valid-accounting-complete-no-endpoint-improvement",
+            "status": scientific_status,
             "winner_energy_increase_hartree": (
                 result["winner_cumulative_energy_increase_hartree"]
             ),
