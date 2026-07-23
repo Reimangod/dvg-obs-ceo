@@ -27,7 +27,7 @@ from .v5_s8_protocol import DEFAULT_MANIFEST, audit_manifest
 
 
 CASE_ID = "h4-1.5-iteration-12-or-convergence"
-CODE_TAG = "dvg-obs-v5-s8-h4-hvp-sentinels-code-v1"
+CODE_TAG = "dvg-obs-v5-s8-h4-hvp-sentinels-code-v1.1"
 REQUIRED_THREADS = {"OMP_NUM_THREADS": "1", "OPENBLAS_NUM_THREADS": "1", "MKL_NUM_THREADS": "1"}
 
 
@@ -87,6 +87,48 @@ def select_prediction_sentinels(rows: Sequence[dict[str, Any]], budget: float) -
     return selected
 
 
+def _semantic_primitive(value: Any) -> tuple[Any, ...]:
+    if isinstance(value, dict):
+        return (
+            value["kind"],
+            tuple(value["source_pool_indices"]),
+            value["target_family"],
+            tuple(value["target_pool_indices"]),
+            tuple(value["removed_source_slots"]),
+            None if value.get("exact_generator_relation") is None else tuple(value["exact_generator_relation"]),
+        )
+    return (
+        value.kind,
+        tuple(value.source_pool_indices),
+        value.target_family,
+        tuple(value.target_pool_indices),
+        tuple(value.removed_source_slots),
+        None if value.exact_generator_relation is None else tuple(value.exact_generator_relation),
+    )
+
+
+def map_versioned_rows_to_current_candidates(
+    rows: Sequence[dict[str, Any]], candidates: Sequence[Any]
+) -> dict[str, Any]:
+    """Map old candidate IDs by physical primitive, never by versioned digest."""
+
+    by_primitive: dict[tuple[Any, ...], list[Any]] = {}
+    for candidate in candidates:
+        by_primitive.setdefault(_semantic_primitive(candidate), []).append(candidate)
+    mapping: dict[str, Any] = {}
+    for row in rows:
+        old_id = row["candidate"]["candidate_id"]
+        matches = by_primitive.get(_semantic_primitive(row["candidate"]), [])
+        if len(matches) != 1:
+            raise RuntimeError(
+                f"frozen candidate primitive does not map uniquely: {old_id} ({len(matches)})"
+            )
+        mapping[old_id] = matches[0]
+    if len(mapping) != len(rows) or len({candidate.candidate_id for candidate in mapping.values()}) != len(rows):
+        raise RuntimeError("frozen/current candidate mapping is not bijective")
+    return mapping
+
+
 def run(manifest_path: Path = DEFAULT_MANIFEST) -> dict[str, Any]:
     freeze = verify_freeze()
     protocol = audit_manifest(manifest_path)
@@ -129,10 +171,8 @@ def run(manifest_path: Path = DEFAULT_MANIFEST) -> dict[str, Any]:
     candidates = {}
     for candidate in enumerate_candidates(pool, blocks):
         candidates.setdefault(candidate.equivalence_class_id, candidate)
-    candidate_by_id = {candidate.candidate_id: candidate for candidate in candidates.values()}
+    frozen_to_current = map_versioned_rows_to_current_candidates(rows, tuple(candidates.values()))
     row_by_id = {row["candidate"]["candidate_id"]: row for row in rows}
-    if set(candidate_by_id) != set(row_by_id):
-        raise RuntimeError("late-H4 candidate catalog differs from frozen rows")
 
     explicit_config = HVPKKTConfig(
         explicit_validation_dimension=32,
@@ -144,8 +184,8 @@ def run(manifest_path: Path = DEFAULT_MANIFEST) -> dict[str, Any]:
     )
     oracle_records: list[dict[str, Any]] = []
     transformations = {}
-    for candidate_id in sorted(candidate_by_id):
-        candidate = candidate_by_id[candidate_id]
+    for candidate_id in sorted(row_by_id):
+        candidate = frozen_to_current[candidate_id]
         embedded = embed_block_transformation(theta.size, block_by_id[candidate.source_block_id], candidate)
         transformations[candidate_id] = embedded.transformation
         row = row_by_id[candidate_id]
@@ -265,6 +305,12 @@ def run(manifest_path: Path = DEFAULT_MANIFEST) -> dict[str, Any]:
         "protocol_manifest_sha256": protocol["manifest_sha256"],
         "case_id": CASE_ID,
         "source_dimension": theta.size,
+        "candidate_identity_mapping": {
+            "mapping_basis": "physical semantic primitive; versioned IDs intentionally differ",
+            "mapped_count": len(frozen_to_current),
+            "old_ids_changed": sum(old_id != candidate.candidate_id for old_id, candidate in frozen_to_current.items()),
+            "mapping_digest": _digest({old_id: candidate.candidate_id for old_id, candidate in sorted(frozen_to_current.items())}),
+        },
         "full_hessian_minimum_eigenvalue": float(np.min(np.linalg.eigvalsh((hessian + hessian.T) * 0.5))),
         "analytic_hessian_work": {
             "analytic_entries": theta.size * (theta.size + 1) // 2,
