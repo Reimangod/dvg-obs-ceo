@@ -66,3 +66,24 @@ def test_round_three_manifest_binds_audited_round_two_and_limits_extension():
     assert protocol["maximum_exact_attempts"] == 6
     assert protocol["threshold_relaxation"] is False
     assert protocol["acceptance_gates_changed"] is False
+
+
+def test_width_four_manifest_binds_round_three_and_freezes_breadth():
+    manifest = json.loads(
+        (
+            ROOT / "manifests/v5-s8-lih-energy-aware-width4-v1.json"
+        ).read_text(encoding="utf-8")
+    )
+    entry = manifest["entry_gate"]
+    for path_key, digest_key in (
+        ("width2_round3_result_path", "width2_round3_result_sha256"),
+        ("width2_round3_audit_path", "width2_round3_audit_sha256"),
+    ):
+        assert hashlib.sha256((ROOT / entry[path_key]).read_bytes()).hexdigest() == (
+            entry[digest_key]
+        )
+    protocol = manifest["protocol"]
+    assert protocol["width"] == 4
+    assert protocol["top_k_per_parent"] == 4
+    assert protocol["maximum_exact_attempts"] == 12
+    assert protocol["threshold_relaxation"] is False

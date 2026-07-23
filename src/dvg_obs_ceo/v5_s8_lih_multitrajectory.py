@@ -83,6 +83,8 @@ def run(
     runner_version: str = RUNNER_VERSION,
     beam_dominance: str = "resources-only",
     artifact_kind: str = "v5-s8-lih-width2-multitrajectory",
+    width: int = 2,
+    top_k_per_parent: int = 2,
     maximum_rounds: int = 2,
     maximum_exact_attempts: int = 4,
 ) -> dict[str, Any]:
@@ -261,8 +263,8 @@ def run(
         catalog_builder=catalog_builder,
         exact_executor=exact_executor,
         config=MultiTrajectoryConfig(
-            width=2,
-            top_k_per_parent=2,
+            width=width,
+            top_k_per_parent=top_k_per_parent,
             maximum_rounds=maximum_rounds,
             maximum_exact_attempts=maximum_exact_attempts,
             endpoint_quota=1,
