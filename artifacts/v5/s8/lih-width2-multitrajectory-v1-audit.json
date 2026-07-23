@@ -1,0 +1,71 @@
+{
+  "artifact_kind": "v5-s8-lih-width2-independent-audit",
+  "audit_digest": "70a77e91437c9b11c2db2ca4cbf1b2887c0c19bae410d6fd92078352f6b7f6af",
+  "checks": {
+    "beam_effectively_collapsed_to_one": true,
+    "both_branches_accepted": true,
+    "code_tag_is_ancestor": true,
+    "collapse_explained_by_resource_dominance": true,
+    "independent_branch_energies": true,
+    "independent_branch_gradients": true,
+    "independent_branch_resources": true,
+    "known_width_one_endpoint_reproduced": true,
+    "paper_measurement_cost_undefined": true,
+    "parents_isolated": true,
+    "physical_structural_recounts": true,
+    "rejected_work_not_hidden": true,
+    "source_relative_energy_budget": true,
+    "source_runtime_unchanged": true,
+    "stopped_without_threshold_relaxation": true,
+    "summary_digest": true,
+    "two_unique_exact_attempts": true
+  },
+  "claim_boundary": "Known LiH calibration only. This run validates accounting and isolation but does not demonstrate a resource improvement beyond V4.1.",
+  "independent_branch_recomputations": [
+    {
+      "candidate_id": "candidate-v5:8a24f0b21420ce3b9f4ec52a6dba8ede0ef9fb30961aea386742f660b9aaf0ef",
+      "energy_difference_hartree": 0.0,
+      "gradient_infinity": 6.3719367560111095e-09,
+      "resources": {
+        "cnot_count": 58,
+        "cnot_depth": 30,
+        "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 8,
+        "parameter_count": 8,
+        "structure_digest": "802e9bc3b364b62ee12c32adaec63c33a3614cebb3887a8763e8cee54555cc52",
+        "total_depth": 92
+      }
+    },
+    {
+      "candidate_id": "candidate-v5:e4232f618a0dedf6437f35acd4e074a07453a9f327a77b99e2ca6f2a6e5e3130",
+      "energy_difference_hartree": 0.0,
+      "gradient_infinity": 6.586161275211333e-09,
+      "resources": {
+        "cnot_count": 98,
+        "cnot_depth": 30,
+        "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 14,
+        "parameter_count": 14,
+        "structure_digest": "bbc35a4f22ddccfcf1ba9cb7a8f9e711e5bd645fdba5010253b6a16d8e28aa03",
+        "total_depth": 158
+      }
+    }
+  ],
+  "paper_measurement_cost": null,
+  "passed": true,
+  "schema_version": "1.0.0",
+  "scientific_result": {
+    "reason": "resource-only nondominance collapsed the nominal width-two beam to one path after the first round",
+    "status": "valid-negative-width-two-calibration",
+    "winner_energy_increase_hartree": 8.690137959188604e-05,
+    "winner_resources": {
+      "cnot_count": 58,
+      "cnot_depth": 30,
+      "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+      "logical_block_count": 8,
+      "parameter_count": 8,
+      "structure_digest": "802e9bc3b364b62ee12c32adaec63c33a3614cebb3887a8763e8cee54555cc52",
+      "total_depth": 92
+    }
+  }
+}
