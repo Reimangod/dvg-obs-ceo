@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.0.0",
+  "stage": "V5-S8",
+  "status": "complete-frozen",
+  "freeze_tag_to_create": "dvg-obs-v5-s8-calibration-freeze-v1",
+  "evidence": [
+    {
+      "role": "h4-width1-result",
+      "path": "artifacts/v5/s8/h4-width1-recycled-v1-1/summary.json",
+      "sha256": "0198844c1c62376f46d42dd0627e469a8c541862cca7fb86404d581ad8237f07"
+    },
+    {
+      "role": "h4-width1-audit",
+      "path": "artifacts/v5/s8/h4-width1-recycled-v1-1-audit.json",
+      "sha256": "4e1d22055edc74b6ac0b9fb48168444d40bb77efa6f928589cc14278dd13c1c1"
+    },
+    {
+      "role": "lih-width1-atomic-result",
+      "path": "artifacts/v5/s8/lih-cp-integration-v1/summary.json",
+      "sha256": "bce1e598898c081e105aafb93c0f29c3af93f8e9544018424c378656ee5dc054"
+    },
+    {
+      "role": "lih-width1-atomic-audit",
+      "path": "artifacts/v5/s8/lih-cp-integration-v1-audit.json",
+      "sha256": "7a085a4f9336958d0f1309a201bd04c8753b4af0fcd36c918b9bb484129f914a"
+    },
+    {
+      "role": "lih-width1-joint-result",
+      "path": "artifacts/v5/s8/lih-joint-sequential-v1/summary.json",
+      "sha256": "4d2c0295d4574c6c59892d71e3596c7856f2f1fd1c0daf0b8e705425f78e7553"
+    },
+    {
+      "role": "lih-width1-joint-audit",
+      "path": "artifacts/v5/s8/lih-joint-sequential-v1-audit.json",
+      "sha256": "30200a11f5b5362b7c2543cfa09eff7354556377e06943b40eadf69f98aa78f4"
+    },
+    {
+      "role": "adopted-width2-round3-result",
+      "path": "artifacts/v5/s8/lih-energy-aware-width2-round3-v1/summary.json",
+      "sha256": "ae2c3a93d4eef86f0a7ec8df9895c712c1b0d939dd7118c822076973e91c961a"
+    },
+    {
+      "role": "adopted-width2-round3-audit",
+      "path": "artifacts/v5/s8/lih-energy-aware-width2-round3-v1-audit.json",
+      "sha256": "fd155e7b7762694e6d35ebe139bdbfac6c53dd50ac722172b4759d72b95edd9a"
+    },
+    {
+      "role": "rejected-width4-result",
+      "path": "artifacts/v5/s8/lih-energy-aware-width4-v1/summary.json",
+      "sha256": "9aa8e4188d1dc14df21d7d6c8a8bb1eeb9b1979bc2c0a367179077bd5224c63e"
+    },
+    {
+      "role": "rejected-width4-audit",
+      "path": "artifacts/v5/s8/lih-energy-aware-width4-v1-audit.json",
+      "sha256": "c255d87fbf3b8a86285303866b0f9e1acc38af9dec8a006d87748d6511324122"
+    }
+  ],
+  "frozen_s9_protocol": {
+    "width": 2,
+    "top_k_per_parent": 2,
+    "maximum_rounds": 3,
+    "maximum_exact_attempts": 6,
+    "endpoint_quota": 1,
+    "source_relative_energy_budget_hartree": 0.0001,
+    "target_gradient_infinity_max": 1e-8,
+    "beam_dominance": "resources-plus-energy",
+    "joint_catalog": true,
+    "conditional_target_native_polishing": true,
+    "polishing_gradient_l2_tolerance": 1e-8,
+    "threshold_relaxation": false,
+    "complete_terminal_catalog_accounting": true,
+    "paper_measurement_cost": null
+  },
+  "calibration_decision": {
+    "width4_adopted": false,
+    "width8_executed": false,
+    "width8_stop_reason": "width4 doubled exact attempts without endpoint improvement and the per-parent frozen queue contains at most four candidates",
+    "v4_1_endpoint_exceeded_on_lih": false,
+    "structural_floor_hypothesis": "supported-development-only-not-proven"
+  },
+  "s9_entry_gate": {
+    "operationally_valid": true,
+    "scientifically_valid": true,
+    "performance_superiority_established": false,
+    "proceed_with_frozen_protocol": true,
+    "fallback_to_v4_1_if_no_pareto_improvement": true
+  },
+  "claim_boundary": "Development calibration only; no unseen-system, global-optimum, hardware, noise, or paper Measurement Cost claim."
+}

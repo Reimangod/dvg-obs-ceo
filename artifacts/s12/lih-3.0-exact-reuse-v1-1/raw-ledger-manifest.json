@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0.0",
+  "artifact_kind": "external-raw-ledger-manifest",
+  "storage_policy": "raw ledgers are excluded from Git because each contains 517893 events; aggregate reports and semantic ledger digests remain in summary.json",
+  "local_root": "artifacts/raw/s12/lih-3.0-exact-reuse-v1-1",
+  "files": [
+    {
+      "name": "reuse_off-ledger.json",
+      "bytes": 271050333,
+      "sha256": "8da89b21035dd91a872863deca79f5a37ce2edc5ae84b06918db15ffb96edfcf",
+      "event_ledger_digest": "90f8e3ab12d71b26bcbba2b7bce83dfac09e16a5cad94945e650e96267155e32"
+    },
+    {
+      "name": "reuse_on-ledger.json",
+      "bytes": 271050708,
+      "sha256": "fe6f57189c90523a1669308e55cf0f8123614dadce7abf4ab725ab22b300ab67",
+      "event_ledger_digest": "966a7216456402b823150f5da91da2e3ce2c881d285d66797f4fc0362f71775d"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "v5-s8-h4-width1-recycled-v1",
+  "ablation": "C",
+  "case_id": "h4-1.5-iteration-12-or-convergence",
+  "code_tag_to_create_before_execution": "dvg-obs-v5-s8-h4-width1-recycled-code-v1",
+  "parent_commit": "8195f724cd74699c7287b063fbc714eaa8bddd82",
+  "parent_protocol": {
+    "path": "manifests/v5-s8-calibration-protocol-v1.json",
+    "sha256": "3e1f7abf80bea0904dca889689e161d9c34d84850c29d45910cd699771b0c6a1"
+  },
+  "input_checkpoint": {
+    "path": "artifacts/s8-1/later-checkpoint-calibration-bundle/checkpoint-h4-1.5-iteration-12-or-convergence.json",
+    "sha256": "43e55458fd6ad71cb6c509a1ec7a927a180d6b1085bdf54a718c2db78af706a7"
+  },
+  "algorithm": {
+    "search": "deterministic-width-one-sequential",
+    "candidate_family": "registered-single-CEO-transformations",
+    "selector": "v5-risk-aware-pareto-selector-v1",
+    "curvature": "recycled-inverse-hessian-only",
+    "fresh_hessian_or_hvp": false,
+    "maximum_attempted_rounds": 2,
+    "maximum_exact_vqe_attempts": 2,
+    "source_relative_energy_budget_hartree": 0.0001,
+    "componentwise_nonworse_resources": true,
+    "logical_block_guard": true,
+    "rebuild_catalog_after_each_commit": true,
+    "count_rejected_work": true
+  },
+  "runtime_freeze": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "resource_counter": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+    "noise_model": "none-exact-statevector"
+  },
+  "stop_and_amend": [
+    "checkpoint or resource digest drift",
+    "non-deterministic catalog replay",
+    "candidate constraint identity drift",
+    "non-finite predictor or optimizer evidence",
+    "incomplete rollback or work-counter regression",
+    "unregistered threshold change"
+  ],
+  "claim_boundary": [
+    "Development H4 ablation C only.",
+    "No H4 tuning may be transferred silently to LiH or larger molecules.",
+    "A negative or rolled-back result is retained.",
+    "Work counters are not the paper Measurement Cost."
+  ],
+  "paper_measurement_cost": null
+}

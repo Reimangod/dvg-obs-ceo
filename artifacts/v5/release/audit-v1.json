@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0.0",
+  "artifact_kind": "v5-v5.1-release-audit",
+  "checks": {
+    "V5-S9:sha256": true,
+    "V5-S10:sha256": true,
+    "V5.1-S11:sha256": true,
+    "V5.1-S11b:sha256": true,
+    "s10_digest": true,
+    "s11_digest": true,
+    "s11b_digest": true,
+    "core_v5_success_list": true,
+    "core_v5_strong_false": true,
+    "s10_two_certified": true,
+    "s11_passed": true,
+    "s11b_passed": true,
+    "fusion_no_optimizer": true,
+    "measurement_cost_undefined": true,
+    "outcome_informed_not_confirmatory": true,
+    "old_artifacts_declared_immutable": true,
+    "pareto_values": true
+  },
+  "passed": true,
+  "summary_sha256": "f86eb9d838f390f94359b4c205fc8e2546b9c813da244855d6c4360d6449f85d",
+  "paper_measurement_cost": null
+}

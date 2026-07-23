@@ -1,0 +1,77 @@
+{
+  "artifact_kind": "v4-s6-calibration-independent-audit",
+  "checks": {
+    "calibration_row_count": true,
+    "configuration_digest": true,
+    "deterministic_budgets_cover_four_h4_exhaustive_runs": true,
+    "exact_attempt_bounds_match_s0": true,
+    "held_out_absence_not_hidden": true,
+    "input_hashes": true,
+    "no_actual_positive_class": true,
+    "no_predicted_positive_class": true,
+    "positive_metrics_explicitly_unavailable": true,
+    "quality_bounds_enclose_s3": true,
+    "s0_audit": true,
+    "stop_rules_fail_closed": true
+  },
+  "claim_boundary": "The quality envelope is deterministic fail-closed range control, not a calibrated probability of safety. Accuracy is established only by independent exact acceptance.",
+  "configuration_digest": "836cd1d4142051e36d43f7d78758b10e673fb942086a9e82f94ae3f5b9acfb18",
+  "execution_freeze": {
+    "head": "273a35a55b69ca3764d1106083cd9cf9a3441e89",
+    "protocol_tag": "dvg-obs-v4-s6-calibration-v1",
+    "threads": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    }
+  },
+  "failed_checks": [],
+  "input_sha256": {
+    "primary_single_candidate_outcomes": "2e962f55545639dcdee88ab45b667d7f6c0388871fe9d90a73ea1eb8e486befb",
+    "s3_joint_prediction": "00851eeb2c8711a7aff26c20b5f540568bc2ed5fc7f60ab9669dc1824662d536",
+    "s4_search": "49052b4bcff64f7f42b6b31450a044995d40c420d5528925c518b221cb314702",
+    "s5_resources": "c8aea6015c225a4388d07812adc7da74f1562810bd78eb98092b4e715e474fe2"
+  },
+  "observed": {
+    "actual_positive_count": 0,
+    "calibration_rows": 17,
+    "h4_exhaustive_counts": {
+      "candidate_numerical_failures": 0,
+      "completed": 2303,
+      "deduplicated": 0,
+      "expanded": 3823,
+      "pruned_predicted_loss": 0,
+      "pruned_resource_bound": 0,
+      "pruned_semantic_infeasible": 0,
+      "quadratic_solves": 2303
+    },
+    "maximum_actual_minus_predicted_hartree": 0.0015897328541446196,
+    "predicted_positive_count": 0,
+    "s3_diagnostic_ranges": {
+      "constraint_direction_coverage": [
+        0.9999999999999996,
+        1.0
+      ],
+      "constraint_schur_condition_number": [
+        1.1117460077629675,
+        51.900172993424555
+      ],
+      "held_out_projected_residual": null,
+      "internal_projected_max_relative_residual": [
+        0.04835978051417971,
+        0.44551288096940667
+      ],
+      "target_hessian_condition_number": [
+        2.749050523242027,
+        49.598737571329366
+      ]
+    }
+  },
+  "passed": true,
+  "schema_version": "1.0.0",
+  "work": {
+    "new_molecular_executions": 0,
+    "paper_measurement_cost": null,
+    "vqe_energy_evaluations": 0
+  }
+}

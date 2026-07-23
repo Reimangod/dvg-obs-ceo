@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0.0",
+  "stage": "S5",
+  "status": "complete",
+  "completed_at": "2026-07-20",
+  "diagnostics_version": "hessian-diagnostics-v1",
+  "upstream": {
+    "commit": "a3f89d03e6a03c89767d3cf8ee7657a57653dda0",
+    "git_tree": "794d847f5c1be1590d93da81b905a915dfa17d13"
+  },
+  "registered_h2_off_on": {
+    "exact_parity": true,
+    "optimizer_invocations": 1,
+    "optimizer_iterations": 4,
+    "captured_secant_pairs": 4,
+    "function_evaluations": 5,
+    "gradient_evaluations": 5,
+    "additional_energy_evaluations": 0,
+    "additional_gradient_evaluations": 0,
+    "final_gradient_l2": 1.4253661584362476e-9,
+    "minimum_inverse_hessian_eigenvalue": 0.7236341907057654,
+    "condition_number": 1.0,
+    "age_steps": 0,
+    "secant_direction_coverage": 1.0,
+    "internal_secant_max_relative_residual": 0.06911580093004739,
+    "held_out_secant_count": 0
+  },
+  "verification": {
+    "s5_tests_passed_local": 7,
+    "full_suite_tests_passed_local": 46,
+    "observer_restoration_tested": true,
+    "nested_capture_rejected": true,
+    "missing_first_secant_regression_tested": true,
+    "internal_held_out_overlap_rejected": true,
+    "nonfinite_matrix_serializable_and_rejected": true
+  },
+  "artifacts": {
+    "capture_code_sha256": "3924583676785e2c97b02518f300b742723f037b35811b4d42a06300dd965ba2",
+    "probe_code_sha256": "9f359b31f2735f3ec958e8c32d1ba2d221036a12bbb68342474053e9d5c574aa",
+    "tests_sha256": "e2f4786fadbf0039d96569f7ac16c6dbc620222564db4b45b7c0568eb3fa01e4",
+    "observer_on_baseline_sha256": "53515b8098283bbf9624cba39ebc4513fef562a64dd688dede1af5d5e2de64d3",
+    "parity_diagnostics_sha256": "6e1268d8249583feb7a3830ea92f6631a42ea01b595a822c9347cea2f72ddffb",
+    "dependency_lock_sha256": "4d6b778d7608058a9aed93e6a43b6df198ea1ef2441afbe86d3e5a24e9c6ee01"
+  },
+  "claim_boundary": [
+    "S5 proves non-invasive complete capture on registered H2.",
+    "Numerical Hessian usability is not held-out predictor calibration.",
+    "S5 makes no circuit-resource or molecular-performance claim."
+  ]
+}

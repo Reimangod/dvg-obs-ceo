@@ -1,0 +1,173 @@
+{
+  "artifact_kind": "v5-s4-risk-aware-pareto-independent-audit",
+  "candidate_records": [
+    {
+      "candidate_ids": [
+        "candidate-v5:ac8d8342bbb2362d13f0a559a3621bb407011368895164b628a54f7fc33fc43c"
+      ],
+      "constraint_numerical_id": "constraint-numerical-v1:75caf83fc0f9cdc9a237b869545a2b87389d72cf87fd23c52ca0a7b9b6c66da2",
+      "constraint_semantic_id": "constraint-semantic-v1:07603737bf8cc70d8794965ecce44276c25f5ca575c20823d85d6ad5a0077417",
+      "diagnostics": {
+        "evidence_digest": "8414cd31c1a9cb176c3b5060d6acae3e6bff5ed2b2d97a5411ab7daadb6c4ba0",
+        "quality_gate_passed": true,
+        "quality_stratum": "good",
+        "refinement_required": false,
+        "uncertainty_margin_hartree": 1e-06
+      },
+      "full_resource_recount_succeeded": true,
+      "predicted_loss_hartree": 0.0,
+      "resources": {
+        "cnot_count": 70,
+        "cnot_depth": 43,
+        "counter_version": "v5-s4-audit-counter-v1",
+        "logical_block_count": 9,
+        "parameter_count": 10,
+        "structure_digest": "2cf6dd7a5f6ea547243618bfbd16e8dec862b19d620831f256be0dba765dc035",
+        "total_depth": 125
+      },
+      "semantics_validated": true
+    },
+    {
+      "candidate_ids": [
+        "candidate-v5:c100f95c1913f9c72fc1f4ef0847e1e723ffe0bde0b36e5f36c13f81fe8c26ed"
+      ],
+      "constraint_numerical_id": "constraint-numerical-v1:1d265eb943f516603e86da6d9caf2b58b0abd3ed77d6f437b38a1f03f103f029",
+      "constraint_semantic_id": "constraint-semantic-v1:96b979dd71ee80a3948a8f4dc2954295bc69da7adab720d32a8b52fc4e2f2fe0",
+      "diagnostics": {
+        "evidence_digest": "f10f8363e6d87194666a7002f5a39c04b320284fe434180293ed7ad419cdbb75",
+        "quality_gate_passed": true,
+        "quality_stratum": "boundary",
+        "refinement_required": true,
+        "uncertainty_margin_hartree": 2e-06
+      },
+      "full_resource_recount_succeeded": true,
+      "predicted_loss_hartree": 2e-05,
+      "resources": {
+        "cnot_count": 65,
+        "cnot_depth": 47,
+        "counter_version": "v5-s4-audit-counter-v1",
+        "logical_block_count": 9,
+        "parameter_count": 11,
+        "structure_digest": "c3a4cc7857992bc70e62b75ea9c884a879c1d4d4d026ed8c96560fb096ed7e47",
+        "total_depth": 130
+      },
+      "semantics_validated": true
+    },
+    {
+      "candidate_ids": [
+        "candidate-v5:879923da020d1533f4d8e921ea7bac61e8ba41d3c89d17a4d14e3a89c6780d5d"
+      ],
+      "constraint_numerical_id": "constraint-numerical-v1:0d105d4a3d7a7aedd0b0ff2ea7368862c3261592ca3bc398a7df66389113c839",
+      "constraint_semantic_id": "constraint-semantic-v1:87bf63bc36a820516ac21a9ef2e9d7256343bd01db2e65d4cb57c6cc590ae2ef",
+      "diagnostics": {
+        "evidence_digest": "cc1e3dc88f802eeedce61d1cc4af2977628cecdb35abf8ba29c54ef273517e61",
+        "quality_gate_passed": false,
+        "quality_stratum": "poor",
+        "refinement_required": true,
+        "uncertainty_margin_hartree": 4e-05
+      },
+      "full_resource_recount_succeeded": true,
+      "predicted_loss_hartree": 1e-05,
+      "resources": {
+        "cnot_count": 75,
+        "cnot_depth": 40,
+        "counter_version": "v5-s4-audit-counter-v1",
+        "logical_block_count": 8,
+        "parameter_count": 9,
+        "structure_digest": "278e50e9e1f1f36a1330a4337193a3cbd96270148e3ee1407d46b416dfb36c47",
+        "total_depth": 120
+      },
+      "semantics_validated": true
+    },
+    {
+      "candidate_ids": [
+        "candidate-v5:26b9dec758d9d387d11366845ac64a1e5b04b180e7c6d44bdd0b2dae85e87bca"
+      ],
+      "constraint_numerical_id": "constraint-numerical-v1:5bb3451d41030c891aa7c49ee6d507acd00ed25d05ee19549d8e159e3a5fe8c9",
+      "constraint_semantic_id": "constraint-semantic-v1:c0efaebaeb06327c9931868e6ab391227c712cd436ac2422a78ae9a323b51437",
+      "diagnostics": {
+        "evidence_digest": "1d60689edd6321348dac81f5a89fd679b9c97b41df89bd42e661c474e37ea8c5",
+        "quality_gate_passed": true,
+        "quality_stratum": "good",
+        "refinement_required": false,
+        "uncertainty_margin_hartree": 0.0
+      },
+      "full_resource_recount_succeeded": true,
+      "predicted_loss_hartree": 1e-06,
+      "resources": {
+        "cnot_count": 60,
+        "cnot_depth": 52,
+        "counter_version": "v5-s4-audit-counter-v1",
+        "logical_block_count": 7,
+        "parameter_count": 8,
+        "structure_digest": "157dfc313bb5a4fd33d3ad5dd7c2fca2a6bf71b7c642c5b976cebf8de41636d4",
+        "total_depth": 110
+      },
+      "semantics_validated": true
+    },
+    {
+      "candidate_ids": [
+        "candidate-v5:e4febf1a8c98f1238453c2c45f191d47ff6773984a0161f325bf28c5a3e78733"
+      ],
+      "constraint_numerical_id": "constraint-numerical-v1:9b27270399196911f223a1322e46183884edb8ba5c7dd70502f0b27f18934ea1",
+      "constraint_semantic_id": "constraint-semantic-v1:d08691fbc63e9f7e522d2e75461823a49eceb8571b7b54846e0a7d9bf79b1370",
+      "diagnostics": {
+        "evidence_digest": "235043b99a0060fb9375365ece27e64200e6ffd4e5d094a9bcd64312f8fdcdc1",
+        "quality_gate_passed": true,
+        "quality_stratum": "good",
+        "refinement_required": false,
+        "uncertainty_margin_hartree": 0.0
+      },
+      "full_resource_recount_succeeded": true,
+      "predicted_loss_hartree": 1e-06,
+      "resources": {
+        "cnot_count": 100,
+        "cnot_depth": 50,
+        "counter_version": "v5-s4-audit-counter-v1",
+        "logical_block_count": 10,
+        "parameter_count": 12,
+        "structure_digest": "5b05f269e42bed0b7d44de8c0cd1ea5a61014ff0438b176a1706257585b89f67",
+        "total_depth": 160
+      },
+      "semantics_validated": true
+    }
+  ],
+  "checks": {
+    "candidate_order_permutation_invariant": true,
+    "component_regression_rejected": true,
+    "forbidden_outcome_fields_fail_closed": true,
+    "near_zero_loss_is_finite_without_scalar_ratio": true,
+    "no_physical_benefit_rejected": true,
+    "pareto_axes_remain_separate": true,
+    "positive_resource_scaling_invariant": true,
+    "quality_failure_not_in_production_queue": true,
+    "quality_sentinel_strata_are_preregistered": true
+  },
+  "claim_boundary": "Synthetic selector audit only. It proves deterministic, energy-blind ranking properties and does not establish molecular energy or circuit improvement.",
+  "pareto_count": 2,
+  "passed": true,
+  "schema_version": "1.0.0",
+  "selected_count": 2,
+  "selection_digest": "eea52cb734b7bcedc7e272c941e1a798269371d73a2d69fadab313a3e7738d4a",
+  "sentinel_selection": {
+    "maximum_sentinels": 3,
+    "quality_strata": [
+      "good",
+      "boundary",
+      "poor"
+    ],
+    "selection_digest": "6adcf52d9153b6357bc6e936f81ed1a3e9543240f5658412f9425274b17f934a",
+    "sentinel_semantic_ids": [
+      "constraint-semantic-v1:07603737bf8cc70d8794965ecce44276c25f5ca575c20823d85d6ad5a0077417",
+      "constraint-semantic-v1:96b979dd71ee80a3948a8f4dc2954295bc69da7adab720d32a8b52fc4e2f2fe0",
+      "constraint-semantic-v1:87bf63bc36a820516ac21a9ef2e9d7256343bd01db2e65d4cb57c6cc590ae2ef"
+    ],
+    "sentinel_strata": [
+      "good",
+      "boundary",
+      "poor"
+    ],
+    "usage_boundary": "Calibration-only false-exclusion audit; never production ranking or acceptance.",
+    "version": "v5-quality-stratified-sentinel-selector-v1"
+  }
+}

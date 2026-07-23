@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "v5-s8-lih-energy-aware-width2-v1",
+  "status": "frozen-before-execution",
+  "code_tag_to_create_before_execution": "dvg-obs-v5-s8-lih-energy-aware-width2-code-v1",
+  "entry_gate": {
+    "resource_only_result_path": "artifacts/v5/s8/lih-width2-multitrajectory-v1/summary.json",
+    "resource_only_result_sha256": "bc3f50d68702f74c49c306e25d1ee182b71b7198ab84520d6e2c7072697227f5",
+    "resource_only_audit_path": "artifacts/v5/s8/lih-width2-multitrajectory-v1-audit.json",
+    "resource_only_audit_sha256": "ea1ca60cf3f1d000ccfd29689461ac9d3a0b44737f83ae816a8d98a0ceb16e68",
+    "observed_limitation": "resource-only dominance discarded the accepted 98-CNOT path despite its approximately zero source-relative energy increase"
+  },
+  "algorithm": {
+    "name": "V5-energy-aware-width2-joint-multitrajectory",
+    "width": 2,
+    "top_k_per_parent": 2,
+    "maximum_rounds": 2,
+    "maximum_exact_attempts": 4,
+    "endpoint_quota": 1,
+    "source_relative_energy_budget_hartree": 0.0001,
+    "beam_dominance": "resources-plus-energy",
+    "winner_rule_changed": false,
+    "acceptance_gates_changed": false,
+    "threshold_relaxation": false
+  },
+  "rationale": "Energy increase is an explicit beam objective because remaining energy budget has option value for later sequential compression. No scalar weight is fitted to LiH.",
+  "work_accounting": {
+    "shared_parent_catalog_charged_once": true,
+    "each_exact_attempt_charged_once": true,
+    "rejected_and_nonwinning_work_retained": true,
+    "paper_measurement_cost": null
+  },
+  "claim_boundary": [
+    "Known LiH calibration, not confirmatory evidence.",
+    "The correction is justified by the already frozen negative run, not by the future outcome.",
+    "Retention does not imply acceptance; every child still passes exact energy, KKT, semantic, and resource gates."
+  ],
+  "paper_measurement_cost": null
+}

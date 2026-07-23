@@ -1,0 +1,375 @@
+{
+  "actual_change_hartree": 0.08727579887702375,
+  "calibration_version": "predictor-calibration-v1",
+  "candidate": {
+    "candidate_id": "candidate-v1:a9dbe642deb55cc69fbd01a1342ab2358430f66630037c8b84b682ec5b539f04",
+    "constraint_matrix": [
+      [
+        1.0
+      ]
+    ],
+    "constraint_rhs": [
+      0.0
+    ],
+    "equivalence_class_id": "transform-v1:879f892194d0e0a4899cfe08c6f62d890c94435eece5f647bd1326e131b7ace7",
+    "generator_normalization": "paper-era-pool-arrange-v1",
+    "jacobian": [
+      []
+    ],
+    "kind": "block-deletion",
+    "numerical_context_digest": "69f748f1e49451734bf7346612d61c676dd29e78ca10ece392da525c8a19e8be",
+    "offset": [
+      0.0
+    ],
+    "orientation": "deletion",
+    "removed_source_slots": [
+      0
+    ],
+    "semantic_conflict_positions": [
+      0
+    ],
+    "source_block_id": "block-v1:e1e7edf0804d82b5b212fc2904d4ec8e0bdf5ab027f6d7c5e8e76d62191c1fb3",
+    "source_pool_indices": [
+      4
+    ],
+    "source_slots": [
+      "block-v1:e1e7edf0804d82b5b212fc2904d4ec8e0bdf5ab027f6d7c5e8e76d62191c1fb3:slot:0"
+    ],
+    "target_family": "empty",
+    "target_operator_digests": [],
+    "target_pool_indices": [],
+    "target_slots": [],
+    "units": "radian"
+  },
+  "candidate_shared_work": {
+    "paper_measurement_cost": null,
+    "prediction_wall_time_seconds": 0.0015417500108014792,
+    "source_state_recomputations": 1,
+    "total_candidate_wall_time_seconds": 0.005628166982205585
+  },
+  "case_id": "h2-1.5-iteration-1",
+  "checkpoint_digest": "793ce53f6dc435e7bc8c8fa777d3f0396bd91efd14b01cbfb27e30755d968371",
+  "constraint_prediction": {
+    "predicted_change_from_current_hartree": 0.09122008965824073,
+    "predicted_constraint_penalty_hartree": 0.09122008965824073,
+    "reference_energy_kind": "current-checkpoint-quadratic-model"
+  },
+  "global_constraint_shape": [
+    1,
+    1
+  ],
+  "global_jacobian_shape": [
+    1,
+    0
+  ],
+  "paper_measurement_cost": null,
+  "paths": {
+    "projection_off": {
+      "actual_change_hartree": 0.08727579887702375,
+      "constraint_residual_infinity": 0.0,
+      "coordinates": [],
+      "deterministic_structural_resources": {
+        "circuit_qasm_digest": "5755c7b234e536c23f89c8bfd4e10b543095f3477a28426d7390ca4165854ca7",
+        "cnot_count_by_iteration": [
+          0,
+          0
+        ],
+        "cnot_depth_by_iteration": [
+          0,
+          0
+        ],
+        "coefficient_policy": "deterministic-structural",
+        "evaluator_version": "paper-era-full-circuit-resource-v1",
+        "segments": [
+          {
+            "adapt_iteration": 1,
+            "cumulative_cnot_count": 0,
+            "cumulative_cnot_depth": 0,
+            "cumulative_total_depth": 0,
+            "parameter_count": 0
+          }
+        ],
+        "snapshot": {
+          "cnot_count": 0,
+          "cnot_depth": 0,
+          "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+          "logical_block_count": 0,
+          "parameter_count": 0,
+          "structure_digest": "5c56262591e02329197510000ab5fb95e66e26202218a7098bc7049dfe66ebcb",
+          "total_depth": 0
+        },
+        "total_depth_by_iteration": [
+          0,
+          0
+        ]
+      },
+      "energy_hartree": -0.9108735545943865,
+      "final_inverse_hessian": [],
+      "finite": true,
+      "gradient": [],
+      "gradient_infinity": 0.0,
+      "gradient_l2": 0.0,
+      "independent_energy_difference_hartree": 0.0,
+      "independent_energy_hartree": -0.9108735545943865,
+      "independent_state_recomputation_fidelity": 1.0,
+      "independent_work": {
+        "energy_evaluations": 1,
+        "explicit_state_recomputations": 2,
+        "gradient_vector_evaluations": 0,
+        "initial_energy_evaluations_for_audit": 1
+      },
+      "initial_coordinates": [],
+      "initial_energy_hartree": -0.9108735545943865,
+      "optimizer": {
+        "function_evaluations": 0,
+        "gradient_component_equivalent": 0,
+        "gradient_tolerance": 1e-08,
+        "gradient_vector_evaluations": 0,
+        "implementation": "pinned-upstream-minimize_bfgs",
+        "iterations": 0,
+        "maximum_iterations": 200,
+        "message": "exact zero-dimensional target",
+        "status": 0,
+        "success": true
+      },
+      "paper_measurement_cost": null,
+      "resource_delta": {
+        "cnot_count": -9,
+        "cnot_depth": -7,
+        "logical_block_count": -1,
+        "parameter_count": -1,
+        "total_depth": -13
+      },
+      "resource_recount_consistent": true,
+      "resources": {
+        "circuit_qasm_digest": "5755c7b234e536c23f89c8bfd4e10b543095f3477a28426d7390ca4165854ca7",
+        "cnot_count_by_iteration": [
+          0,
+          0
+        ],
+        "cnot_depth_by_iteration": [
+          0,
+          0
+        ],
+        "coefficient_policy": "physical",
+        "evaluator_version": "paper-era-full-circuit-resource-v1",
+        "segments": [
+          {
+            "adapt_iteration": 1,
+            "cumulative_cnot_count": 0,
+            "cumulative_cnot_depth": 0,
+            "cumulative_total_depth": 0,
+            "parameter_count": 0
+          }
+        ],
+        "snapshot": {
+          "cnot_count": 0,
+          "cnot_depth": 0,
+          "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+          "logical_block_count": 0,
+          "parameter_count": 0,
+          "structure_digest": "5c56262591e02329197510000ab5fb95e66e26202218a7098bc7049dfe66ebcb",
+          "total_depth": 0
+        },
+        "total_depth_by_iteration": [
+          0,
+          0
+        ]
+      },
+      "safe": false,
+      "safe_checks": {
+        "chemical_accuracy": false,
+        "constraint": true,
+        "finite": true,
+        "independent_energy": true,
+        "independent_state": true,
+        "kkt": true,
+        "local_energy_budget": false,
+        "optimizer_path": true,
+        "pareto_nonworse": true,
+        "resource_improved": true,
+        "resource_recount_consistent": true
+      },
+      "source_candidate_state_fidelity": 0.8736884966237467,
+      "wall_time_seconds": 0.0005796250188723207
+    },
+    "projection_on": {
+      "actual_change_hartree": 0.08727579887702375,
+      "constraint_residual_infinity": 0.0,
+      "coordinates": [],
+      "deterministic_structural_resources": {
+        "circuit_qasm_digest": "5755c7b234e536c23f89c8bfd4e10b543095f3477a28426d7390ca4165854ca7",
+        "cnot_count_by_iteration": [
+          0,
+          0
+        ],
+        "cnot_depth_by_iteration": [
+          0,
+          0
+        ],
+        "coefficient_policy": "deterministic-structural",
+        "evaluator_version": "paper-era-full-circuit-resource-v1",
+        "segments": [
+          {
+            "adapt_iteration": 1,
+            "cumulative_cnot_count": 0,
+            "cumulative_cnot_depth": 0,
+            "cumulative_total_depth": 0,
+            "parameter_count": 0
+          }
+        ],
+        "snapshot": {
+          "cnot_count": 0,
+          "cnot_depth": 0,
+          "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+          "logical_block_count": 0,
+          "parameter_count": 0,
+          "structure_digest": "5c56262591e02329197510000ab5fb95e66e26202218a7098bc7049dfe66ebcb",
+          "total_depth": 0
+        },
+        "total_depth_by_iteration": [
+          0,
+          0
+        ]
+      },
+      "energy_hartree": -0.9108735545943865,
+      "final_inverse_hessian": [],
+      "finite": true,
+      "gradient": [],
+      "gradient_infinity": 0.0,
+      "gradient_l2": 0.0,
+      "independent_energy_difference_hartree": 0.0,
+      "independent_energy_hartree": -0.9108735545943865,
+      "independent_state_recomputation_fidelity": 1.0,
+      "independent_work": {
+        "energy_evaluations": 1,
+        "explicit_state_recomputations": 2,
+        "gradient_vector_evaluations": 0,
+        "initial_energy_evaluations_for_audit": 1
+      },
+      "initial_coordinates": [],
+      "initial_energy_hartree": -0.9108735545943865,
+      "optimizer": {
+        "function_evaluations": 0,
+        "gradient_component_equivalent": 0,
+        "gradient_tolerance": 1e-08,
+        "gradient_vector_evaluations": 0,
+        "implementation": "pinned-upstream-minimize_bfgs",
+        "iterations": 0,
+        "maximum_iterations": 200,
+        "message": "exact zero-dimensional target",
+        "status": 0,
+        "success": true
+      },
+      "paper_measurement_cost": null,
+      "resource_delta": {
+        "cnot_count": -9,
+        "cnot_depth": -7,
+        "logical_block_count": -1,
+        "parameter_count": -1,
+        "total_depth": -13
+      },
+      "resource_recount_consistent": true,
+      "resources": {
+        "circuit_qasm_digest": "5755c7b234e536c23f89c8bfd4e10b543095f3477a28426d7390ca4165854ca7",
+        "cnot_count_by_iteration": [
+          0,
+          0
+        ],
+        "cnot_depth_by_iteration": [
+          0,
+          0
+        ],
+        "coefficient_policy": "physical",
+        "evaluator_version": "paper-era-full-circuit-resource-v1",
+        "segments": [
+          {
+            "adapt_iteration": 1,
+            "cumulative_cnot_count": 0,
+            "cumulative_cnot_depth": 0,
+            "cumulative_total_depth": 0,
+            "parameter_count": 0
+          }
+        ],
+        "snapshot": {
+          "cnot_count": 0,
+          "cnot_depth": 0,
+          "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+          "logical_block_count": 0,
+          "parameter_count": 0,
+          "structure_digest": "5c56262591e02329197510000ab5fb95e66e26202218a7098bc7049dfe66ebcb",
+          "total_depth": 0
+        },
+        "total_depth_by_iteration": [
+          0,
+          0
+        ]
+      },
+      "safe": false,
+      "safe_checks": {
+        "chemical_accuracy": false,
+        "constraint": true,
+        "finite": true,
+        "independent_energy": true,
+        "independent_state": true,
+        "kkt": true,
+        "local_energy_budget": false,
+        "optimizer_path": true,
+        "pareto_nonworse": true,
+        "resource_improved": true,
+        "resource_recount_consistent": true
+      },
+      "source_candidate_state_fidelity": 0.8736884966237467,
+      "wall_time_seconds": 0.0005463340203277767
+    }
+  },
+  "predictors": {
+    "diagonal_hessian": 0.09122008965824073,
+    "exact_hessian_oracle": 0.09122008974172785,
+    "general_constraint_obs": 0.09122008965824073,
+    "magnitude": 0.1320199507623559,
+    "magnitude_position": 0.1320199507623559,
+    "single_coordinate_obs": 0.09122008965824073
+  },
+  "primary_actual_path": "projection_on",
+  "safe": false,
+  "source_block": {
+    "ansatz_positions": [
+      0
+    ],
+    "block_id": "block-v1:e1e7edf0804d82b5b212fc2904d4ec8e0bdf5ab027f6d7c5e8e76d62191c1fb3",
+    "circuit_implementation_id": "paper-era-ovp-ceo-circuit-v1",
+    "coefficients": [
+      -0.3633454977873758
+    ],
+    "constituent_qe_ids": [
+      "qe:abbe2c6e2e6dc28f888cc78188813082264926873b224ad897f32212bea77487",
+      "qe:b4803bdf6cda3fea0a5c3ab13bce89cd42977a7e9981c84287c176d308f266f3"
+    ],
+    "family": "OVP",
+    "generator_digests": [
+      "58ccb82b1113408c0723251bda1303bd9ea2cfa912821369760819dbc6884c76"
+    ],
+    "normalization": "paper-era-pool-arrange-v1",
+    "numerical_context_digest": "69f748f1e49451734bf7346612d61c676dd29e78ca10ece392da525c8a19e8be",
+    "orientation": "sum",
+    "pool_indices": [
+      4
+    ],
+    "selection_iterations": [
+      1
+    ],
+    "support_qubits": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "symmetry_quantum_numbers": [
+      "delta_particles=0;delta_alpha=0;delta_beta=0"
+    ],
+    "tetris_layer_positions": [
+      0
+    ]
+  }
+}

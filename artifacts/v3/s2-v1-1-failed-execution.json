@@ -1,0 +1,10 @@
+{
+  "schema_version": "1.0.0",
+  "artifact_kind": "v3-s2-failed-execution-incident",
+  "protocol_id": "dvg-obs-v3-s2-polishing-protocol-v1.1",
+  "execution_head": "611bdc8",
+  "passed": false,
+  "lih_evaluations": 0,
+  "failure": "strict JSON serialization rejected a non-finite failed-polisher diagnostic before the evidence bundle could be persisted",
+  "resolution_boundary": "V1.2 changes only failed numerical serialization from NaN to JSON null and associated finite checks; solver settings and scientific thresholds remain unchanged."
+}

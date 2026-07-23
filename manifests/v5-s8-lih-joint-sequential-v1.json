@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "v5-s8-lih-joint-sequential-v1",
+  "status": "frozen-before-execution",
+  "code_tag_to_create_before_execution": "dvg-obs-v5-s8-lih-joint-sequential-code-v1",
+  "parent_single_catalog_evidence": {
+    "result_path": "artifacts/v5/s8/lih-cp-integration-v1/summary.json",
+    "result_sha256": "bce1e598898c081e105aafb93c0f29c3af93f8e9544018424c378656ee5dc054",
+    "audit_path": "artifacts/v5/s8/lih-cp-integration-v1-audit.json",
+    "audit_sha256": "7a085a4f9336958d0f1309a201bd04c8753b4af0fcd36c918b9bb484129f914a"
+  },
+  "search_budget_source": {
+    "path": "manifests/v4-s6-frozen-config-v1.json",
+    "sha256": "31fb276ae4f4c57b3602c1fbcfe7e1b9d988563f87e936953600d2ed8e9d1332"
+  },
+  "algorithm": {
+    "name": "V5-joint-catalog-sequential-with-conditional-polishing",
+    "candidate_catalog": "compatible-global-compositions-of-registered-CEO-transformations",
+    "maximum_one_transformation_per_source_block": true,
+    "search": "deterministic-global-obs-search-v1",
+    "maximum_expanded_nodes_per_round": 20000,
+    "maximum_completed_states_per_round": 10000,
+    "maximum_quadratic_solves_per_round": 10000,
+    "maximum_full_resource_recounts_per_round": 10000,
+    "screening_energy_budget_hartree": 0.0001,
+    "selector": "v5-risk-aware-pareto-selector-v1",
+    "maximum_attempted_rounds": 2,
+    "maximum_exact_attempts": 2,
+    "catalog_rebuilt_after_commit": true,
+    "conditional_polishing": true,
+    "polisher_gradient_l2_tolerance": 1e-8,
+    "scientific_gradient_infinity_gate": 1e-8,
+    "threshold_relaxation": false
+  },
+  "causal_question": "Does restoring joint global candidates remove the single-catalog structural bottleneck while sequential rebuild adds further compression?",
+  "claim_boundary": [
+    "Known LiH development calibration, not confirmatory evidence.",
+    "Search budgets are inherited rather than tuned to LiH outcomes.",
+    "Every joint plan retains exact symbolic composition and full physical recount."
+  ],
+  "paper_measurement_cost": null
+}

@@ -1,0 +1,1422 @@
+{
+  "artifact_kind": "pinned-upstream-full-circuit-resource-probe",
+  "backend_version": "paper-era-qasm-counter-a3f89d0",
+  "barrier_policy": "preserve-paper-era-block-and-iteration-barriers",
+  "candidate_results": [
+    {
+      "candidate": {
+        "candidate_id": "candidate-v1:a9dbe642deb55cc69fbd01a1342ab2358430f66630037c8b84b682ec5b539f04",
+        "constraint_matrix": [
+          [
+            1.0
+          ]
+        ],
+        "constraint_rhs": [
+          0.0
+        ],
+        "equivalence_class_id": "transform-v1:879f892194d0e0a4899cfe08c6f62d890c94435eece5f647bd1326e131b7ace7",
+        "generator_normalization": "paper-era-pool-arrange-v1",
+        "jacobian": [
+          []
+        ],
+        "kind": "block-deletion",
+        "numerical_context_digest": "6d06878f8ce36e0d763af8ee5f90bed6ce68c1d234528e06e2bc2cd047704bd1",
+        "offset": [
+          0.0
+        ],
+        "orientation": "deletion",
+        "removed_source_slots": [
+          0
+        ],
+        "semantic_conflict_positions": [
+          0
+        ],
+        "source_block_id": "block-v1:e1e7edf0804d82b5b212fc2904d4ec8e0bdf5ab027f6d7c5e8e76d62191c1fb3",
+        "source_pool_indices": [
+          4
+        ],
+        "source_slots": [
+          "block-v1:e1e7edf0804d82b5b212fc2904d4ec8e0bdf5ab027f6d7c5e8e76d62191c1fb3:slot:0"
+        ],
+        "target_family": "empty",
+        "target_operator_digests": [],
+        "target_pool_indices": [],
+        "target_slots": [],
+        "units": "radian"
+      },
+      "delta": {
+        "cnot_count": -9,
+        "cnot_depth": -7,
+        "logical_block_count": -1,
+        "parameter_count": -1,
+        "total_depth": -13
+      },
+      "resources": {
+        "circuit_qasm_digest": "07f9d112400f6714a3548d87d3d05bef81c000db51b76069c1d5efeb9723b343",
+        "cnot_count_by_iteration": [
+          0,
+          13,
+          15
+        ],
+        "cnot_depth_by_iteration": [
+          0,
+          13,
+          15
+        ],
+        "coefficient_policy": "physical",
+        "evaluator_version": "paper-era-full-circuit-resource-v1",
+        "segments": [
+          {
+            "adapt_iteration": 1,
+            "cumulative_cnot_count": 13,
+            "cumulative_cnot_depth": 13,
+            "cumulative_total_depth": 24,
+            "parameter_count": 2
+          },
+          {
+            "adapt_iteration": 2,
+            "cumulative_cnot_count": 15,
+            "cumulative_cnot_depth": 15,
+            "cumulative_total_depth": 31,
+            "parameter_count": 1
+          }
+        ],
+        "snapshot": {
+          "cnot_count": 15,
+          "cnot_depth": 15,
+          "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+          "logical_block_count": 2,
+          "parameter_count": 3,
+          "structure_digest": "ad8daf551b5226cbcd4105c944740bc887f2ede9622a61d35df00258f5460833",
+          "total_depth": 31
+        },
+        "total_depth_by_iteration": [
+          0,
+          24,
+          31
+        ]
+      },
+      "target_coordinates_for_resource_probe_only": [],
+      "transformed_indices": [
+        2,
+        3,
+        0
+      ],
+      "transformed_iteration_counts": [
+        2,
+        3
+      ]
+    },
+    {
+      "candidate": {
+        "candidate_id": "candidate-v1:bb3c3f09aba1304a77417ab9af72277715ec4554129ed65a55e8247f4139918a",
+        "constraint_matrix": [
+          [
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0
+          ]
+        ],
+        "constraint_rhs": [
+          0.0,
+          0.0
+        ],
+        "equivalence_class_id": "transform-v1:7b1a18ecbd8ebd1cd416dd9c43f80631c4347d3faf34c0593b838c407042a8ac",
+        "generator_normalization": "paper-era-pool-arrange-v1",
+        "jacobian": [
+          [],
+          []
+        ],
+        "kind": "mvp-whole-deletion",
+        "numerical_context_digest": "8fde58b9d37715f011fc1544c89256a756e4942e62d4e1d30c8b66a56c144925",
+        "offset": [
+          0.0,
+          0.0
+        ],
+        "orientation": "deletion",
+        "removed_source_slots": [
+          0,
+          1
+        ],
+        "semantic_conflict_positions": [
+          1,
+          2
+        ],
+        "source_block_id": "block-v1:f4ce2c58c0125a18a18e46be8b337349678c1969f662faa2ab9cc2bb79a35665",
+        "source_pool_indices": [
+          2,
+          3
+        ],
+        "source_slots": [
+          "block-v1:f4ce2c58c0125a18a18e46be8b337349678c1969f662faa2ab9cc2bb79a35665:slot:0",
+          "block-v1:f4ce2c58c0125a18a18e46be8b337349678c1969f662faa2ab9cc2bb79a35665:slot:1"
+        ],
+        "target_family": "empty",
+        "target_operator_digests": [],
+        "target_pool_indices": [],
+        "target_slots": [],
+        "units": "radian"
+      },
+      "delta": {
+        "cnot_count": -13,
+        "cnot_depth": -13,
+        "logical_block_count": -1,
+        "parameter_count": -2,
+        "total_depth": -24
+      },
+      "resources": {
+        "circuit_qasm_digest": "643485903e74932ca638e5d83d419a53f179b20e03ea8e6cc3c6f2ba757b7e32",
+        "cnot_count_by_iteration": [
+          0,
+          9,
+          11
+        ],
+        "cnot_depth_by_iteration": [
+          0,
+          7,
+          9
+        ],
+        "coefficient_policy": "physical",
+        "evaluator_version": "paper-era-full-circuit-resource-v1",
+        "segments": [
+          {
+            "adapt_iteration": 1,
+            "cumulative_cnot_count": 9,
+            "cumulative_cnot_depth": 7,
+            "cumulative_total_depth": 13,
+            "parameter_count": 1
+          },
+          {
+            "adapt_iteration": 2,
+            "cumulative_cnot_count": 11,
+            "cumulative_cnot_depth": 9,
+            "cumulative_total_depth": 20,
+            "parameter_count": 1
+          }
+        ],
+        "snapshot": {
+          "cnot_count": 11,
+          "cnot_depth": 9,
+          "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+          "logical_block_count": 2,
+          "parameter_count": 2,
+          "structure_digest": "ed88b505220e294f27a305fc3287896ddaea4120a716618e939f8b729a3e4791",
+          "total_depth": 20
+        },
+        "total_depth_by_iteration": [
+          0,
+          13,
+          20
+        ]
+      },
+      "target_coordinates_for_resource_probe_only": [],
+      "transformed_indices": [
+        4,
+        0
+      ],
+      "transformed_iteration_counts": [
+        1,
+        2
+      ]
+    },
+    {
+      "candidate": {
+        "candidate_id": "candidate-v1:7a576a40fb57fce29b8c3f757dfab66ae3d5d5797193d2f1699fa242cc3f89d2",
+        "constraint_matrix": [
+          [
+            1.0,
+            -0.0
+          ]
+        ],
+        "constraint_rhs": [
+          0.0
+        ],
+        "equivalence_class_id": "transform-v1:61fcb5b0ae51f9a10f83c412220084076f1012a1ce4e8ca6fa4eb882926643af",
+        "generator_normalization": "paper-era-pool-arrange-v1",
+        "jacobian": [
+          [
+            0.0
+          ],
+          [
+            1.0
+          ]
+        ],
+        "kind": "mvp-constituent-deletion",
+        "numerical_context_digest": "8fde58b9d37715f011fc1544c89256a756e4942e62d4e1d30c8b66a56c144925",
+        "offset": [
+          0.0,
+          0.0
+        ],
+        "orientation": "ordered-subset",
+        "removed_source_slots": [
+          0
+        ],
+        "semantic_conflict_positions": [
+          1,
+          2
+        ],
+        "source_block_id": "block-v1:f4ce2c58c0125a18a18e46be8b337349678c1969f662faa2ab9cc2bb79a35665",
+        "source_pool_indices": [
+          2,
+          3
+        ],
+        "source_slots": [
+          "block-v1:f4ce2c58c0125a18a18e46be8b337349678c1969f662faa2ab9cc2bb79a35665:slot:0",
+          "block-v1:f4ce2c58c0125a18a18e46be8b337349678c1969f662faa2ab9cc2bb79a35665:slot:1"
+        ],
+        "target_family": "single-QE",
+        "target_operator_digests": [
+          "b4803bdf6cda3fea0a5c3ab13bce89cd42977a7e9981c84287c176d308f266f3"
+        ],
+        "target_pool_indices": [
+          3
+        ],
+        "target_slots": [
+          "target:0"
+        ],
+        "units": "radian"
+      },
+      "delta": {
+        "cnot_count": 0,
+        "cnot_depth": -2,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -3
+      },
+      "resources": {
+        "circuit_qasm_digest": "916346e7f3489c8b98a2947894e1d9959099494ad494d7b27550e65e5cbfcdc1",
+        "cnot_count_by_iteration": [
+          0,
+          22,
+          24
+        ],
+        "cnot_depth_by_iteration": [
+          0,
+          18,
+          20
+        ],
+        "coefficient_policy": "physical",
+        "evaluator_version": "paper-era-full-circuit-resource-v1",
+        "segments": [
+          {
+            "adapt_iteration": 1,
+            "cumulative_cnot_count": 22,
+            "cumulative_cnot_depth": 18,
+            "cumulative_total_depth": 34,
+            "parameter_count": 2
+          },
+          {
+            "adapt_iteration": 2,
+            "cumulative_cnot_count": 24,
+            "cumulative_cnot_depth": 20,
+            "cumulative_total_depth": 41,
+            "parameter_count": 1
+          }
+        ],
+        "snapshot": {
+          "cnot_count": 24,
+          "cnot_depth": 20,
+          "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+          "logical_block_count": 3,
+          "parameter_count": 3,
+          "structure_digest": "64f1f7b55de1d12f59cbce3a6e98c2ef8b81a178e6315fdf25c434f7027e657f",
+          "total_depth": 41
+        },
+        "total_depth_by_iteration": [
+          0,
+          34,
+          41
+        ]
+      },
+      "target_coordinates_for_resource_probe_only": [
+        0.123
+      ],
+      "transformed_indices": [
+        4,
+        3,
+        0
+      ],
+      "transformed_iteration_counts": [
+        2,
+        3
+      ]
+    },
+    {
+      "candidate": {
+        "candidate_id": "candidate-v1:0639c369e1cd4581a198a3724d6dca0c5c7a71a8e6ac3a66c86b961592ac0959",
+        "constraint_matrix": [
+          [
+            -0.0,
+            1.0
+          ]
+        ],
+        "constraint_rhs": [
+          0.0
+        ],
+        "equivalence_class_id": "transform-v1:20bce1476f8acfeae6ea5e546725ec28e9f48bd17c49f3b8d92adb9ff2e3bc13",
+        "generator_normalization": "paper-era-pool-arrange-v1",
+        "jacobian": [
+          [
+            1.0
+          ],
+          [
+            0.0
+          ]
+        ],
+        "kind": "mvp-constituent-deletion",
+        "numerical_context_digest": "8fde58b9d37715f011fc1544c89256a756e4942e62d4e1d30c8b66a56c144925",
+        "offset": [
+          0.0,
+          0.0
+        ],
+        "orientation": "ordered-subset",
+        "removed_source_slots": [
+          1
+        ],
+        "semantic_conflict_positions": [
+          1,
+          2
+        ],
+        "source_block_id": "block-v1:f4ce2c58c0125a18a18e46be8b337349678c1969f662faa2ab9cc2bb79a35665",
+        "source_pool_indices": [
+          2,
+          3
+        ],
+        "source_slots": [
+          "block-v1:f4ce2c58c0125a18a18e46be8b337349678c1969f662faa2ab9cc2bb79a35665:slot:0",
+          "block-v1:f4ce2c58c0125a18a18e46be8b337349678c1969f662faa2ab9cc2bb79a35665:slot:1"
+        ],
+        "target_family": "single-QE",
+        "target_operator_digests": [
+          "abbe2c6e2e6dc28f888cc78188813082264926873b224ad897f32212bea77487"
+        ],
+        "target_pool_indices": [
+          2
+        ],
+        "target_slots": [
+          "target:0"
+        ],
+        "units": "radian"
+      },
+      "delta": {
+        "cnot_count": 0,
+        "cnot_depth": -2,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -3
+      },
+      "resources": {
+        "circuit_qasm_digest": "f3d392fb18612f8ddba1132345c8248e49ab3ff64f14c94f6daf96ec04480a34",
+        "cnot_count_by_iteration": [
+          0,
+          22,
+          24
+        ],
+        "cnot_depth_by_iteration": [
+          0,
+          18,
+          20
+        ],
+        "coefficient_policy": "physical",
+        "evaluator_version": "paper-era-full-circuit-resource-v1",
+        "segments": [
+          {
+            "adapt_iteration": 1,
+            "cumulative_cnot_count": 22,
+            "cumulative_cnot_depth": 18,
+            "cumulative_total_depth": 34,
+            "parameter_count": 2
+          },
+          {
+            "adapt_iteration": 2,
+            "cumulative_cnot_count": 24,
+            "cumulative_cnot_depth": 20,
+            "cumulative_total_depth": 41,
+            "parameter_count": 1
+          }
+        ],
+        "snapshot": {
+          "cnot_count": 24,
+          "cnot_depth": 20,
+          "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+          "logical_block_count": 3,
+          "parameter_count": 3,
+          "structure_digest": "5db7b634e05908ee20b90987d6796e8f66e92834b299eb0b4734c65ab3289821",
+          "total_depth": 41
+        },
+        "total_depth_by_iteration": [
+          0,
+          34,
+          41
+        ]
+      },
+      "target_coordinates_for_resource_probe_only": [
+        0.123
+      ],
+      "transformed_indices": [
+        4,
+        2,
+        0
+      ],
+      "transformed_iteration_counts": [
+        2,
+        3
+      ]
+    },
+    {
+      "candidate": {
+        "candidate_id": "candidate-v1:b04b773d07cd509bc43b7969446de173304d07d1487f59001df3e6b8f97156c9",
+        "constraint_matrix": [
+          [
+            -0.0,
+            1.0
+          ]
+        ],
+        "constraint_rhs": [
+          0.0
+        ],
+        "equivalence_class_id": "transform-v1:20bce1476f8acfeae6ea5e546725ec28e9f48bd17c49f3b8d92adb9ff2e3bc13",
+        "generator_normalization": "paper-era-pool-arrange-v1",
+        "jacobian": [
+          [
+            1.0
+          ],
+          [
+            0.0
+          ]
+        ],
+        "kind": "mvp-to-single-qe",
+        "numerical_context_digest": "8fde58b9d37715f011fc1544c89256a756e4942e62d4e1d30c8b66a56c144925",
+        "offset": [
+          0.0,
+          0.0
+        ],
+        "orientation": "canonical-qe",
+        "removed_source_slots": [
+          1
+        ],
+        "semantic_conflict_positions": [
+          1,
+          2
+        ],
+        "source_block_id": "block-v1:f4ce2c58c0125a18a18e46be8b337349678c1969f662faa2ab9cc2bb79a35665",
+        "source_pool_indices": [
+          2,
+          3
+        ],
+        "source_slots": [
+          "block-v1:f4ce2c58c0125a18a18e46be8b337349678c1969f662faa2ab9cc2bb79a35665:slot:0",
+          "block-v1:f4ce2c58c0125a18a18e46be8b337349678c1969f662faa2ab9cc2bb79a35665:slot:1"
+        ],
+        "target_family": "single-QE",
+        "target_operator_digests": [
+          "abbe2c6e2e6dc28f888cc78188813082264926873b224ad897f32212bea77487"
+        ],
+        "target_pool_indices": [
+          2
+        ],
+        "target_slots": [
+          "target:0"
+        ],
+        "units": "radian"
+      },
+      "delta": {
+        "cnot_count": 0,
+        "cnot_depth": -2,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -3
+      },
+      "resources": {
+        "circuit_qasm_digest": "f3d392fb18612f8ddba1132345c8248e49ab3ff64f14c94f6daf96ec04480a34",
+        "cnot_count_by_iteration": [
+          0,
+          22,
+          24
+        ],
+        "cnot_depth_by_iteration": [
+          0,
+          18,
+          20
+        ],
+        "coefficient_policy": "physical",
+        "evaluator_version": "paper-era-full-circuit-resource-v1",
+        "segments": [
+          {
+            "adapt_iteration": 1,
+            "cumulative_cnot_count": 22,
+            "cumulative_cnot_depth": 18,
+            "cumulative_total_depth": 34,
+            "parameter_count": 2
+          },
+          {
+            "adapt_iteration": 2,
+            "cumulative_cnot_count": 24,
+            "cumulative_cnot_depth": 20,
+            "cumulative_total_depth": 41,
+            "parameter_count": 1
+          }
+        ],
+        "snapshot": {
+          "cnot_count": 24,
+          "cnot_depth": 20,
+          "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+          "logical_block_count": 3,
+          "parameter_count": 3,
+          "structure_digest": "5db7b634e05908ee20b90987d6796e8f66e92834b299eb0b4734c65ab3289821",
+          "total_depth": 41
+        },
+        "total_depth_by_iteration": [
+          0,
+          34,
+          41
+        ]
+      },
+      "target_coordinates_for_resource_probe_only": [
+        0.123
+      ],
+      "transformed_indices": [
+        4,
+        2,
+        0
+      ],
+      "transformed_iteration_counts": [
+        2,
+        3
+      ]
+    },
+    {
+      "candidate": {
+        "candidate_id": "candidate-v1:32f1e0e2a4678e16e6d11f53c6d9261ec1114f582a97c899806df882087a4462",
+        "constraint_matrix": [
+          [
+            1.0,
+            -0.0
+          ]
+        ],
+        "constraint_rhs": [
+          0.0
+        ],
+        "equivalence_class_id": "transform-v1:61fcb5b0ae51f9a10f83c412220084076f1012a1ce4e8ca6fa4eb882926643af",
+        "generator_normalization": "paper-era-pool-arrange-v1",
+        "jacobian": [
+          [
+            0.0
+          ],
+          [
+            1.0
+          ]
+        ],
+        "kind": "mvp-to-single-qe",
+        "numerical_context_digest": "8fde58b9d37715f011fc1544c89256a756e4942e62d4e1d30c8b66a56c144925",
+        "offset": [
+          0.0,
+          0.0
+        ],
+        "orientation": "canonical-qe",
+        "removed_source_slots": [
+          0
+        ],
+        "semantic_conflict_positions": [
+          1,
+          2
+        ],
+        "source_block_id": "block-v1:f4ce2c58c0125a18a18e46be8b337349678c1969f662faa2ab9cc2bb79a35665",
+        "source_pool_indices": [
+          2,
+          3
+        ],
+        "source_slots": [
+          "block-v1:f4ce2c58c0125a18a18e46be8b337349678c1969f662faa2ab9cc2bb79a35665:slot:0",
+          "block-v1:f4ce2c58c0125a18a18e46be8b337349678c1969f662faa2ab9cc2bb79a35665:slot:1"
+        ],
+        "target_family": "single-QE",
+        "target_operator_digests": [
+          "b4803bdf6cda3fea0a5c3ab13bce89cd42977a7e9981c84287c176d308f266f3"
+        ],
+        "target_pool_indices": [
+          3
+        ],
+        "target_slots": [
+          "target:0"
+        ],
+        "units": "radian"
+      },
+      "delta": {
+        "cnot_count": 0,
+        "cnot_depth": -2,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -3
+      },
+      "resources": {
+        "circuit_qasm_digest": "916346e7f3489c8b98a2947894e1d9959099494ad494d7b27550e65e5cbfcdc1",
+        "cnot_count_by_iteration": [
+          0,
+          22,
+          24
+        ],
+        "cnot_depth_by_iteration": [
+          0,
+          18,
+          20
+        ],
+        "coefficient_policy": "physical",
+        "evaluator_version": "paper-era-full-circuit-resource-v1",
+        "segments": [
+          {
+            "adapt_iteration": 1,
+            "cumulative_cnot_count": 22,
+            "cumulative_cnot_depth": 18,
+            "cumulative_total_depth": 34,
+            "parameter_count": 2
+          },
+          {
+            "adapt_iteration": 2,
+            "cumulative_cnot_count": 24,
+            "cumulative_cnot_depth": 20,
+            "cumulative_total_depth": 41,
+            "parameter_count": 1
+          }
+        ],
+        "snapshot": {
+          "cnot_count": 24,
+          "cnot_depth": 20,
+          "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+          "logical_block_count": 3,
+          "parameter_count": 3,
+          "structure_digest": "64f1f7b55de1d12f59cbce3a6e98c2ef8b81a178e6315fdf25c434f7027e657f",
+          "total_depth": 41
+        },
+        "total_depth_by_iteration": [
+          0,
+          34,
+          41
+        ]
+      },
+      "target_coordinates_for_resource_probe_only": [
+        0.123
+      ],
+      "transformed_indices": [
+        4,
+        3,
+        0
+      ],
+      "transformed_iteration_counts": [
+        2,
+        3
+      ]
+    },
+    {
+      "candidate": {
+        "candidate_id": "candidate-v1:193ce68c924a53d70f340353b9eb43ff773cd1633fcd976be6cbebd341e7163c",
+        "constraint_matrix": [
+          [
+            -1.0,
+            1.0
+          ]
+        ],
+        "constraint_rhs": [
+          0.0
+        ],
+        "equivalence_class_id": "transform-v1:b2308ffcbdf6a07fd3ec5dfbe8d19d0b68e9a0c38a8e263fb7bdc08e9ef53ec8",
+        "generator_normalization": "paper-era-pool-arrange-v1",
+        "jacobian": [
+          [
+            0.9999999999999998
+          ],
+          [
+            0.9999999999999998
+          ]
+        ],
+        "kind": "mvp-to-ovp-sum",
+        "numerical_context_digest": "8fde58b9d37715f011fc1544c89256a756e4942e62d4e1d30c8b66a56c144925",
+        "offset": [
+          0.0,
+          0.0
+        ],
+        "orientation": "sum",
+        "removed_source_slots": [],
+        "semantic_conflict_positions": [
+          1,
+          2
+        ],
+        "source_block_id": "block-v1:f4ce2c58c0125a18a18e46be8b337349678c1969f662faa2ab9cc2bb79a35665",
+        "source_pool_indices": [
+          2,
+          3
+        ],
+        "source_slots": [
+          "block-v1:f4ce2c58c0125a18a18e46be8b337349678c1969f662faa2ab9cc2bb79a35665:slot:0",
+          "block-v1:f4ce2c58c0125a18a18e46be8b337349678c1969f662faa2ab9cc2bb79a35665:slot:1"
+        ],
+        "target_family": "OVP",
+        "target_operator_digests": [
+          "58ccb82b1113408c0723251bda1303bd9ea2cfa912821369760819dbc6884c76"
+        ],
+        "target_pool_indices": [
+          4
+        ],
+        "target_slots": [
+          "target:0"
+        ],
+        "units": "radian"
+      },
+      "delta": {
+        "cnot_count": -4,
+        "cnot_depth": -6,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -11
+      },
+      "resources": {
+        "circuit_qasm_digest": "9432eba78fa3660b4368d6a63e5d793293a564fc8ff8fa4beec876485adfe426",
+        "cnot_count_by_iteration": [
+          0,
+          18,
+          20
+        ],
+        "cnot_depth_by_iteration": [
+          0,
+          14,
+          16
+        ],
+        "coefficient_policy": "physical",
+        "evaluator_version": "paper-era-full-circuit-resource-v1",
+        "segments": [
+          {
+            "adapt_iteration": 1,
+            "cumulative_cnot_count": 18,
+            "cumulative_cnot_depth": 14,
+            "cumulative_total_depth": 26,
+            "parameter_count": 2
+          },
+          {
+            "adapt_iteration": 2,
+            "cumulative_cnot_count": 20,
+            "cumulative_cnot_depth": 16,
+            "cumulative_total_depth": 33,
+            "parameter_count": 1
+          }
+        ],
+        "snapshot": {
+          "cnot_count": 20,
+          "cnot_depth": 16,
+          "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+          "logical_block_count": 3,
+          "parameter_count": 3,
+          "structure_digest": "72e39af5a6fe2e4c0b03b70d50ea304a25299cff8d487a962fb45bce12575a41",
+          "total_depth": 33
+        },
+        "total_depth_by_iteration": [
+          0,
+          26,
+          33
+        ]
+      },
+      "target_coordinates_for_resource_probe_only": [
+        0.123
+      ],
+      "transformed_indices": [
+        4,
+        4,
+        0
+      ],
+      "transformed_iteration_counts": [
+        2,
+        3
+      ]
+    },
+    {
+      "candidate": {
+        "candidate_id": "candidate-v1:290c6aea7e8e6e267a788bfce0309ca9c0d74d40204aca609cb386464a127846",
+        "constraint_matrix": [
+          [
+            1.0,
+            1.0
+          ]
+        ],
+        "constraint_rhs": [
+          0.0
+        ],
+        "equivalence_class_id": "transform-v1:8fb871f6d8fb36b6d77dcd35af2cbe507c7b659a031072ccc21fa3205698b0a9",
+        "generator_normalization": "paper-era-pool-arrange-v1",
+        "jacobian": [
+          [
+            0.9999999999999998
+          ],
+          [
+            -0.9999999999999998
+          ]
+        ],
+        "kind": "mvp-to-ovp-diff",
+        "numerical_context_digest": "8fde58b9d37715f011fc1544c89256a756e4942e62d4e1d30c8b66a56c144925",
+        "offset": [
+          0.0,
+          0.0
+        ],
+        "orientation": "diff",
+        "removed_source_slots": [],
+        "semantic_conflict_positions": [
+          1,
+          2
+        ],
+        "source_block_id": "block-v1:f4ce2c58c0125a18a18e46be8b337349678c1969f662faa2ab9cc2bb79a35665",
+        "source_pool_indices": [
+          2,
+          3
+        ],
+        "source_slots": [
+          "block-v1:f4ce2c58c0125a18a18e46be8b337349678c1969f662faa2ab9cc2bb79a35665:slot:0",
+          "block-v1:f4ce2c58c0125a18a18e46be8b337349678c1969f662faa2ab9cc2bb79a35665:slot:1"
+        ],
+        "target_family": "OVP",
+        "target_operator_digests": [
+          "bdc6eb7decce80f545634890fbede9f3b330b0abddbf6c12b7bdf4c3d688a720"
+        ],
+        "target_pool_indices": [
+          5
+        ],
+        "target_slots": [
+          "target:0"
+        ],
+        "units": "radian"
+      },
+      "delta": {
+        "cnot_count": -4,
+        "cnot_depth": -6,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -11
+      },
+      "resources": {
+        "circuit_qasm_digest": "405e088561bd7366103f6188a0157e86c3dba4fe20ee143863abc6c9b476b472",
+        "cnot_count_by_iteration": [
+          0,
+          18,
+          20
+        ],
+        "cnot_depth_by_iteration": [
+          0,
+          14,
+          16
+        ],
+        "coefficient_policy": "physical",
+        "evaluator_version": "paper-era-full-circuit-resource-v1",
+        "segments": [
+          {
+            "adapt_iteration": 1,
+            "cumulative_cnot_count": 18,
+            "cumulative_cnot_depth": 14,
+            "cumulative_total_depth": 26,
+            "parameter_count": 2
+          },
+          {
+            "adapt_iteration": 2,
+            "cumulative_cnot_count": 20,
+            "cumulative_cnot_depth": 16,
+            "cumulative_total_depth": 33,
+            "parameter_count": 1
+          }
+        ],
+        "snapshot": {
+          "cnot_count": 20,
+          "cnot_depth": 16,
+          "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+          "logical_block_count": 3,
+          "parameter_count": 3,
+          "structure_digest": "785e5bd6764a07fe7e0c1759ece84060d9a15fab8fee71d87048f9e43ca09d30",
+          "total_depth": 33
+        },
+        "total_depth_by_iteration": [
+          0,
+          26,
+          33
+        ]
+      },
+      "target_coordinates_for_resource_probe_only": [
+        0.123
+      ],
+      "transformed_indices": [
+        4,
+        5,
+        0
+      ],
+      "transformed_iteration_counts": [
+        2,
+        3
+      ]
+    },
+    {
+      "candidate": {
+        "candidate_id": "candidate-v1:fa442aaa8aa2ab8dc17d19a0b80fff4a9297e9d636ce9ec51eb253285023326f",
+        "constraint_matrix": [
+          [
+            1.0
+          ]
+        ],
+        "constraint_rhs": [
+          0.0
+        ],
+        "equivalence_class_id": "transform-v1:9653a4bf3398b22822a5dcee0798d6b1963f3373d6ca57a565ca3934fbad6e42",
+        "generator_normalization": "paper-era-pool-arrange-v1",
+        "jacobian": [
+          []
+        ],
+        "kind": "block-deletion",
+        "numerical_context_digest": "2ba590d1c59ea658873e38fd3112e7502cfd281176c39f4766a2fb84e7c2487f",
+        "offset": [
+          0.0
+        ],
+        "orientation": "deletion",
+        "removed_source_slots": [
+          0
+        ],
+        "semantic_conflict_positions": [
+          3
+        ],
+        "source_block_id": "block-v1:3e06c7568fe458e35ffc05192d4750ff14da0c071f3c980071b3597ae864d424",
+        "source_pool_indices": [
+          0
+        ],
+        "source_slots": [
+          "block-v1:3e06c7568fe458e35ffc05192d4750ff14da0c071f3c980071b3597ae864d424:slot:0"
+        ],
+        "target_family": "empty",
+        "target_operator_digests": [],
+        "target_pool_indices": [],
+        "target_slots": [],
+        "units": "radian"
+      },
+      "delta": {
+        "cnot_count": -2,
+        "cnot_depth": -2,
+        "logical_block_count": -1,
+        "parameter_count": -1,
+        "total_depth": -7
+      },
+      "resources": {
+        "circuit_qasm_digest": "bd6443e81e01d9c314aab2dd3a9c80fa7dc477103c48a4fa7c3696ae7c7cbd41",
+        "cnot_count_by_iteration": [
+          0,
+          22,
+          22
+        ],
+        "cnot_depth_by_iteration": [
+          0,
+          20,
+          20
+        ],
+        "coefficient_policy": "physical",
+        "evaluator_version": "paper-era-full-circuit-resource-v1",
+        "segments": [
+          {
+            "adapt_iteration": 1,
+            "cumulative_cnot_count": 22,
+            "cumulative_cnot_depth": 20,
+            "cumulative_total_depth": 37,
+            "parameter_count": 3
+          },
+          {
+            "adapt_iteration": 2,
+            "cumulative_cnot_count": 22,
+            "cumulative_cnot_depth": 20,
+            "cumulative_total_depth": 37,
+            "parameter_count": 0
+          }
+        ],
+        "snapshot": {
+          "cnot_count": 22,
+          "cnot_depth": 20,
+          "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+          "logical_block_count": 2,
+          "parameter_count": 3,
+          "structure_digest": "3d3a0cbc69171b25ebf1ad9f9055f60749fce80d8c673eb3df821e5c647ac461",
+          "total_depth": 37
+        },
+        "total_depth_by_iteration": [
+          0,
+          37,
+          37
+        ]
+      },
+      "target_coordinates_for_resource_probe_only": [],
+      "transformed_indices": [
+        4,
+        2,
+        3
+      ],
+      "transformed_iteration_counts": [
+        3,
+        3
+      ]
+    }
+  ],
+  "claim_boundary": [
+    "Probe coordinates are structural test values, not optimized energies.",
+    "Resource reductions are full-circuit counts but are not accuracy-accepted results.",
+    "No barrier removal, transpilation, or measurement-cost claim is included."
+  ],
+  "evaluator_version": "paper-era-full-circuit-resource-v1",
+  "global_transpilation": false,
+  "h2_parity": {
+    "circuit_qasm_digest": "39ff4e5da2ae130f8abe8ec7f1182e313a2961dc36de5cec2471c29dcc04ceb6",
+    "cnot_count_by_iteration": [
+      0,
+      9
+    ],
+    "cnot_depth_by_iteration": [
+      0,
+      7
+    ],
+    "coefficient_policy": "physical",
+    "evaluator_version": "paper-era-full-circuit-resource-v1",
+    "segments": [
+      {
+        "adapt_iteration": 1,
+        "cumulative_cnot_count": 9,
+        "cumulative_cnot_depth": 7,
+        "cumulative_total_depth": 13,
+        "parameter_count": 1
+      }
+    ],
+    "snapshot": {
+      "cnot_count": 9,
+      "cnot_depth": 7,
+      "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+      "logical_block_count": 1,
+      "parameter_count": 1,
+      "structure_digest": "27944cda620643ba83f90fba85f078f7a3b47bcebfbf83e8abac4944c4f735ae",
+      "total_depth": 13
+    },
+    "total_depth_by_iteration": [
+      0,
+      13
+    ]
+  },
+  "lih_canonical_parity": {
+    "checks": {
+      "cnot_count_by_iteration": true,
+      "cnot_depth_by_iteration": true,
+      "parameter_count": true,
+      "physical_structural_snapshot_equal": true
+    },
+    "reference_artifact": "/Users/rei/Documents/Codex/2026-07-13/users-rei-documents-ceo-adapt-vqe/dvg-obs-ceo/artifacts/s1/lih-3a-baseline-rerun.json",
+    "resource_only_pool_scope": "circuit reconstruction only; never energy or state preparation",
+    "resources": {
+      "circuit_qasm_digest": "17f0540b24c6155a706491a8934f96dacf9957c532e1ca308cd759c24c53ff24",
+      "cnot_count_by_iteration": [
+        0,
+        18,
+        45,
+        72,
+        99,
+        107
+      ],
+      "cnot_depth_by_iteration": [
+        0,
+        7,
+        14,
+        21,
+        28,
+        30
+      ],
+      "coefficient_policy": "physical",
+      "evaluator_version": "paper-era-full-circuit-resource-v1",
+      "segments": [
+        {
+          "adapt_iteration": 1,
+          "cumulative_cnot_count": 18,
+          "cumulative_cnot_depth": 7,
+          "cumulative_total_depth": 26,
+          "parameter_count": 2
+        },
+        {
+          "adapt_iteration": 2,
+          "cumulative_cnot_count": 45,
+          "cumulative_cnot_depth": 14,
+          "cumulative_total_depth": 65,
+          "parameter_count": 3
+        },
+        {
+          "adapt_iteration": 3,
+          "cumulative_cnot_count": 72,
+          "cumulative_cnot_depth": 21,
+          "cumulative_total_depth": 104,
+          "parameter_count": 3
+        },
+        {
+          "adapt_iteration": 4,
+          "cumulative_cnot_count": 99,
+          "cumulative_cnot_depth": 28,
+          "cumulative_total_depth": 143,
+          "parameter_count": 3
+        },
+        {
+          "adapt_iteration": 5,
+          "cumulative_cnot_count": 107,
+          "cumulative_cnot_depth": 30,
+          "cumulative_total_depth": 171,
+          "parameter_count": 4
+        }
+      ],
+      "snapshot": {
+        "cnot_count": 107,
+        "cnot_depth": 30,
+        "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 15,
+        "parameter_count": 15,
+        "structure_digest": "7562e62fee3f14594995a4dbb3c599a54df63ec879346388eb03656cc9ef22a8",
+        "total_depth": 171
+      },
+      "total_depth_by_iteration": [
+        0,
+        26,
+        65,
+        104,
+        143,
+        171
+      ]
+    }
+  },
+  "schema_version": "1.0.0",
+  "source": {
+    "blocks": [
+      {
+        "ansatz_positions": [
+          0
+        ],
+        "block_id": "block-v1:e1e7edf0804d82b5b212fc2904d4ec8e0bdf5ab027f6d7c5e8e76d62191c1fb3",
+        "circuit_implementation_id": "paper-era-ovp-ceo-circuit-v1",
+        "coefficients": [
+          0.2
+        ],
+        "constituent_qe_ids": [
+          "qe:abbe2c6e2e6dc28f888cc78188813082264926873b224ad897f32212bea77487",
+          "qe:b4803bdf6cda3fea0a5c3ab13bce89cd42977a7e9981c84287c176d308f266f3"
+        ],
+        "family": "OVP",
+        "generator_digests": [
+          "58ccb82b1113408c0723251bda1303bd9ea2cfa912821369760819dbc6884c76"
+        ],
+        "normalization": "paper-era-pool-arrange-v1",
+        "numerical_context_digest": "6d06878f8ce36e0d763af8ee5f90bed6ce68c1d234528e06e2bc2cd047704bd1",
+        "orientation": "sum",
+        "pool_indices": [
+          4
+        ],
+        "selection_iterations": [
+          1
+        ],
+        "support_qubits": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "symmetry_quantum_numbers": [
+          "delta_particles=0;delta_alpha=0;delta_beta=0"
+        ],
+        "tetris_layer_positions": [
+          0
+        ]
+      },
+      {
+        "ansatz_positions": [
+          1,
+          2
+        ],
+        "block_id": "block-v1:f4ce2c58c0125a18a18e46be8b337349678c1969f662faa2ab9cc2bb79a35665",
+        "circuit_implementation_id": "paper-era-mvp-ceo-circuit-v1",
+        "coefficients": [
+          0.3,
+          -0.1
+        ],
+        "constituent_qe_ids": [
+          "qe:abbe2c6e2e6dc28f888cc78188813082264926873b224ad897f32212bea77487",
+          "qe:b4803bdf6cda3fea0a5c3ab13bce89cd42977a7e9981c84287c176d308f266f3"
+        ],
+        "family": "MVP",
+        "generator_digests": [
+          "abbe2c6e2e6dc28f888cc78188813082264926873b224ad897f32212bea77487",
+          "b4803bdf6cda3fea0a5c3ab13bce89cd42977a7e9981c84287c176d308f266f3"
+        ],
+        "normalization": "paper-era-pool-arrange-v1",
+        "numerical_context_digest": "8fde58b9d37715f011fc1544c89256a756e4942e62d4e1d30c8b66a56c144925",
+        "orientation": "independent-qe-parameters",
+        "pool_indices": [
+          2,
+          3
+        ],
+        "selection_iterations": [
+          1,
+          1
+        ],
+        "support_qubits": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "symmetry_quantum_numbers": [
+          "delta_particles=0;delta_alpha=0;delta_beta=0"
+        ],
+        "tetris_layer_positions": [
+          1,
+          2
+        ]
+      },
+      {
+        "ansatz_positions": [
+          3
+        ],
+        "block_id": "block-v1:3e06c7568fe458e35ffc05192d4750ff14da0c071f3c980071b3597ae864d424",
+        "circuit_implementation_id": "paper-era-qe-circuit-v1",
+        "coefficients": [
+          0.4
+        ],
+        "constituent_qe_ids": [
+          "qe:d8adc00fedaf14c82651a9b235a1e0b91ff619d33bbf69a35f4e0f169f173c71"
+        ],
+        "family": "single-QE",
+        "generator_digests": [
+          "d8adc00fedaf14c82651a9b235a1e0b91ff619d33bbf69a35f4e0f169f173c71"
+        ],
+        "normalization": "paper-era-pool-arrange-v1",
+        "numerical_context_digest": "2ba590d1c59ea658873e38fd3112e7502cfd281176c39f4766a2fb84e7c2487f",
+        "orientation": "canonical-qe",
+        "pool_indices": [
+          0
+        ],
+        "selection_iterations": [
+          2
+        ],
+        "support_qubits": [
+          0,
+          2
+        ],
+        "symmetry_quantum_numbers": [
+          "delta_particles=0;delta_alpha=0;delta_beta=0"
+        ],
+        "tetris_layer_positions": [
+          0
+        ]
+      }
+    ],
+    "coefficients": [
+      0.2,
+      0.3,
+      -0.1,
+      0.4
+    ],
+    "deterministic_structural_resources": {
+      "circuit_qasm_digest": "f38690477dd0e5a9f5b7adc3a91fdd3ca9a4f7c273a15087f615eb5e5194ea77",
+      "cnot_count_by_iteration": [
+        0,
+        22,
+        24
+      ],
+      "cnot_depth_by_iteration": [
+        0,
+        20,
+        22
+      ],
+      "coefficient_policy": "deterministic-structural",
+      "evaluator_version": "paper-era-full-circuit-resource-v1",
+      "segments": [
+        {
+          "adapt_iteration": 1,
+          "cumulative_cnot_count": 22,
+          "cumulative_cnot_depth": 20,
+          "cumulative_total_depth": 37,
+          "parameter_count": 3
+        },
+        {
+          "adapt_iteration": 2,
+          "cumulative_cnot_count": 24,
+          "cumulative_cnot_depth": 22,
+          "cumulative_total_depth": 44,
+          "parameter_count": 1
+        }
+      ],
+      "snapshot": {
+        "cnot_count": 24,
+        "cnot_depth": 22,
+        "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 3,
+        "parameter_count": 4,
+        "structure_digest": "79c2c00f6390ddd042634759b13e97f4ca3afc103f0e1d4e701fe6284f43780a",
+        "total_depth": 44
+      },
+      "total_depth_by_iteration": [
+        0,
+        37,
+        44
+      ]
+    },
+    "indices": [
+      4,
+      2,
+      3,
+      0
+    ],
+    "iteration_counts": [
+      3,
+      4
+    ],
+    "physical_resources": {
+      "circuit_qasm_digest": "89325f479676017b3ad6c56f2ae8e119b5e44c436e69d09722436dc24142457b",
+      "cnot_count_by_iteration": [
+        0,
+        22,
+        24
+      ],
+      "cnot_depth_by_iteration": [
+        0,
+        20,
+        22
+      ],
+      "coefficient_policy": "physical",
+      "evaluator_version": "paper-era-full-circuit-resource-v1",
+      "segments": [
+        {
+          "adapt_iteration": 1,
+          "cumulative_cnot_count": 22,
+          "cumulative_cnot_depth": 20,
+          "cumulative_total_depth": 37,
+          "parameter_count": 3
+        },
+        {
+          "adapt_iteration": 2,
+          "cumulative_cnot_count": 24,
+          "cumulative_cnot_depth": 22,
+          "cumulative_total_depth": 44,
+          "parameter_count": 1
+        }
+      ],
+      "snapshot": {
+        "cnot_count": 24,
+        "cnot_depth": 22,
+        "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 3,
+        "parameter_count": 4,
+        "structure_digest": "79c2c00f6390ddd042634759b13e97f4ca3afc103f0e1d4e701fe6284f43780a",
+        "total_depth": 44
+      },
+      "total_depth_by_iteration": [
+        0,
+        37,
+        44
+      ]
+    },
+    "physical_structural_snapshot_equal": true
+  },
+  "upstream": {
+    "commit": "a3f89d03e6a03c89767d3cf8ee7657a57653dda0",
+    "git_tree": "794d847f5c1be1590d93da81b905a915dfa17d13",
+    "worktree_clean": "true"
+  }
+}

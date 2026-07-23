@@ -1,0 +1,59 @@
+{
+  "artifact_kind": "v4-s10-local-release-audit",
+  "audit_freeze": {
+    "head": "1b6287b16c85664d4194c6fde5c1b262647edea7",
+    "release_audit_tag": "dvg-obs-v4-s10-release-v1",
+    "threads": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    }
+  },
+  "checks": {
+    "full_test_suite": true,
+    "no_hidden_v4_staging": true,
+    "raw_artifacts_not_tracked": true,
+    "report_claim_boundary": true,
+    "report_freeze_tag_resolves": true,
+    "report_headline_reproduced": true,
+    "report_outputs_match_hashes": true,
+    "report_sources_match_hashes": true,
+    "required_tags_resolve": true,
+    "s7_independent_audit_passed": true,
+    "s7_no_new_baseline_growth": true,
+    "s8_honestly_deferred": true,
+    "strict_json_inputs": true,
+    "submodule_pinned_and_clean": true
+  },
+  "claim_boundary": "Local integrity and reproducibility release gate; LiH remains development-only and paper Measurement Cost remains unavailable.",
+  "details": {
+    "report_sha256": "f7522a1b3e87b556df095f7276c8017a048b7d7ba41b177b2543b092f02423f4",
+    "required_tag_commits": {
+      "dvg-obs-v3-result-v1": "f0d61abcf876791b140c31b32cc73d7f9ae7fcfc",
+      "dvg-obs-v4-s0-preregistration-result-v1": "0b644a178bc183856595e38cd9c045c9e470cee0",
+      "dvg-obs-v4-s6-calibration-result-v1": "60a9c90663317e1db6a6e9c69f2333b6acd033f2",
+      "dvg-obs-v4-s7-lih-audit-result-v1": "9d04be3fa126f62bb24f2666c5fb5dba979c73a8",
+      "dvg-obs-v4-s7-lih-result-v1.2": "81d48f86885e5949abb1d74b27810dd3abb81c00",
+      "dvg-obs-v4-s8-deferred-v1": "a38379972ddce4699bac40fffaf46fa3372acff8",
+      "dvg-obs-v4-s9-report-result-v1.1": "f56c9bd9c784ddb32445e1a877708fb4f56f48a4"
+    },
+    "s7_audit_sha256": "d7909e4d7fd7ce4004670f029a62e3825e84e3e2468d2f16151252664dd32869",
+    "s7_summary_sha256": "f07ecc935f1edd26b27dc4c36868d394a9b9215266a823b098eb1991c8f875ad",
+    "s8_gate_sha256": "14fc040962c73d396927bb7b6b691b08f688a04f21b0634daa812fc970022ddb",
+    "submodule_status": "a3f89d03e6a03c89767d3cf8ee7657a57653dda0 vendor/ceo-adapt-vqe (a3f89d0)",
+    "tracked_raw_paths": []
+  },
+  "failed_checks": [],
+  "passed": true,
+  "remote_checks": {
+    "github_actions": "verified separately after push",
+    "github_visibility": "verified separately from GitHub API after local artifact commit"
+  },
+  "schema_version": "1.0.0",
+  "test_suite": {
+    "exit_code": 0,
+    "passed": true,
+    "passed_count": 162,
+    "summary_tail": "162 passed, 95 warnings in 28.57s"
+  }
+}

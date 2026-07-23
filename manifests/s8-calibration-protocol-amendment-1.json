@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "stage": "S8",
+  "amendment": 1,
+  "registered_at": "2026-07-20",
+  "registered_before_any_s8_molecular_calibration_result": true,
+  "parent_protocol_tag": "dvg-obs-s8-calibration-protocol-v1",
+  "reason": "The original safe-label list omitted the optimizer-path completion gate already required by S7.",
+  "additions_to_safe_label": {
+    "finite_outputs": true,
+    "independent_energy_agreement_hartree_at_most": 1e-10,
+    "independent_state_recomputation_fidelity_at_least": 0.9999999999,
+    "optimizer_path": "primary optimizer success is required; a zero-dimensional target is an exact completed evaluation"
+  },
+  "unchanged": [
+    "molecules",
+    "geometries",
+    "checkpoints",
+    "candidate universe",
+    "predictors",
+    "energy threshold",
+    "optimizer budget",
+    "resource gate"
+  ]
+}

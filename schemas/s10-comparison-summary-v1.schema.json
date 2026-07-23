@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://reimangod.github.io/dvg-obs-ceo/schemas/s10-comparison-summary-v1.schema.json",
+  "type": "object",
+  "required": [
+    "schema_version", "artifact_kind", "run_id", "protocol_id",
+    "selector_digest", "checkpoint", "clone_audit", "selection",
+    "no_pruning", "dvg_obs_ceo", "work", "offline_evaluation",
+    "paper_measurement_cost", "claim_boundary"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "artifact_kind": {"const": "s10-lih-first-accuracy-paired-comparison"},
+    "run_id": {"type": "string", "minLength": 1},
+    "protocol_id": {"const": "dvg-obs-s10-lih-paired-protocol-v1.2"},
+    "selector_digest": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "checkpoint": {
+      "type": "object",
+      "required": ["adapt_iteration", "energy_hartree", "parameter_count", "resources"],
+      "properties": {
+        "adapt_iteration": {"const": 5},
+        "energy_hartree": {"type": "number"},
+        "parameter_count": {"const": 15},
+        "resources": {"type": "object"}
+      }
+    },
+    "clone_audit": {
+      "type": "object",
+      "required": ["exact", "source_snapshot_digest", "no_pruning_snapshot_digest", "v2_snapshot_digest"],
+      "properties": {"exact": {"const": true}}
+    },
+    "selection": {
+      "type": "object",
+      "required": ["candidate_count", "eligible_count", "chosen_candidate_id", "decision"]
+    },
+    "no_pruning": {"type": "object"},
+    "dvg_obs_ceo": {
+      "type": "object",
+      "required": ["status", "accepted", "energy_hartree", "resources"],
+      "properties": {
+        "status": {"enum": ["no-selection", "accepted", "rolled-back"]},
+        "accepted": {"type": "boolean"},
+        "energy_hartree": {"type": "number"},
+        "resources": {"type": "object"}
+      }
+    },
+    "work": {"type": "object"},
+    "offline_evaluation": {"type": "object"},
+    "paper_measurement_cost": {"type": "null"},
+    "claim_boundary": {"type": "array", "minItems": 4, "items": {"type": "string"}}
+  },
+  "additionalProperties": true
+}

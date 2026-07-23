@@ -1,0 +1,32 @@
+{
+  "artifact_kind": "s11-lih-comparison-source-audit",
+  "checks": {
+    "all_reported_scalars_finite": true,
+    "ceo_reaches_chemical_accuracy": true,
+    "ceo_trajectory_resource_alignment": true,
+    "counterfactual_failed_kkt_only": true,
+    "counterfactual_is_rejected": true,
+    "gsd_energy_nonincreasing": true,
+    "gsd_final_row_matches_summary": true,
+    "gsd_iterations_sequential": true,
+    "gsd_jsonl_exactly_matches_summary": true,
+    "gsd_one_parameter_per_iteration": true,
+    "gsd_reaches_chemical_accuracy": true,
+    "gsd_reproduces_paper_cnot": true,
+    "gsd_reproduces_paper_cnot_depth": true,
+    "gsd_resources_nondecreasing": true,
+    "gsd_schema_valid": true,
+    "measurement_cost_not_relabelled": true,
+    "v2_primary_is_rollback": true
+  },
+  "comparison_id": "dvg-obs-s11-lih-matched-comparison-v1.1",
+  "failed_checks": [],
+  "passed": true,
+  "schema_version": "1.0.0",
+  "source_sha256": {
+    "gsd_summary": "1804669ecad7c9891bf6c46afb54e2de347e57c56b7a887374a3c49ce22a6369",
+    "gsd_trajectory_jsonl": "de29c5b6d008f86283034fc6a52697a7dfa65e4e3ff27a44e175a4e815073cec",
+    "s10_checkpoint": "1ef38be983595fdb094f2a47287e6047193351e0eff4a7c589630ef023ad98eb",
+    "s10_summary": "aa911e6bbdaede6290242f8309845c11259c3a3e90a8b97b0299777b89e2f0e4"
+  }
+}

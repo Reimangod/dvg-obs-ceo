@@ -1,0 +1,4 @@
+method,status,energy_hartree,energy_change_hartree,parameters,cnot,cnot_depth,total_depth,paper_measurement_cost
+stored-ceo-star-reference,reference,-7.797909682469515,0.0,15,107,30,171,N/A
+v2-counterfactual,rolled-back-kkt,-7.797909682465736,3.779199175824033e-12,14,98,30,158,N/A
+v4-global-obs,accepted-development,-7.797822781089923,8.690137959188604e-05,8,58,30,92,N/A

@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "v5-s8-lih-conditional-polishing-probe-v1",
+  "status": "frozen-before-probe",
+  "code_tag_to_create_before_execution": "dvg-obs-v5-s8-lih-polishing-probe-code-v1",
+  "trigger_evidence": {
+    "result_path": "artifacts/v5/s8/lih-width1-transfer-v1/summary.json",
+    "result_sha256": "441166dabebdac544ef5a309dd3953ccec8eca54926bfcec966f56f76bb281f9",
+    "audit_path": "artifacts/v5/s8/lih-width1-transfer-v1-audit.json",
+    "audit_sha256": "1740935a450b29538d1481b97cd83c6c10b0ca35de4525ecc072269fa05fb77a",
+    "only_failed_acceptance_gate": "kkt",
+    "observed_gradient_infinity": 2.328718325844123e-8,
+    "required_gradient_infinity": 1e-8
+  },
+  "algorithm": {
+    "role": "conditional-polishing-causal-probe-not-full-ablation-F",
+    "candidate": "exactly-the-frozen-rejected-ablation-C-candidate",
+    "candidate_reselection": false,
+    "optimizer": "v5-conditional-target-native-polishing-v1",
+    "coordinate_space": "exact-target-native",
+    "hvp": "central-analytic-gradient-finite-difference",
+    "maximum_iterations": 8,
+    "maximum_energy_evaluations": 16,
+    "maximum_gradient_vector_evaluations": 128,
+    "maximum_hessian_vector_products": 64,
+    "gradient_infinity_gate": 1e-8,
+    "constraint_residual_gate": 1e-10,
+    "energy_budget_hartree": 0.0001,
+    "second_start": false,
+    "threshold_relaxation": false
+  },
+  "decision_after_probe": {
+    "success": "permits a separately frozen sequential C-plus-polishing integration run",
+    "failure": "retain the valid C rollback and investigate full E/F only under a new freeze"
+  },
+  "claim_boundary": [
+    "This is an outcome-triggered causal rescue probe allowed by the registered polishing rule.",
+    "It is not full ablation F and cannot itself establish an adopted sequential result.",
+    "The original C result and work remain visible."
+  ],
+  "paper_measurement_cost": null
+}

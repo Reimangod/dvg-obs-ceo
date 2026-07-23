@@ -1,0 +1,174 @@
+{
+  "artifact_kind": "v5-s9-independent-case-audit",
+  "audit_digest": "02aaa47f1de52725e083cfc665a316e9ef286f67fbaa5f1a98e4d5b37651ee88",
+  "case_id": "h6-1.5",
+  "checks": {
+    "accepted_branches_pass_all_gates": true,
+    "aggregate_work_complete": true,
+    "all_branch_parents_isolated": true,
+    "all_catalog_work_matches_diagnostics": true,
+    "all_physical_structural_recounts": true,
+    "bounded_exact_attempts": true,
+    "bounded_rounds_and_width": true,
+    "case_identity": true,
+    "catalog_work_complete": true,
+    "chemical_accuracy_guard": true,
+    "exact_attempt_work_complete": true,
+    "execution_freeze_cryptographically_bound_to_source_path": true,
+    "independent_accepted_gradients": true,
+    "independent_all_branch_energies": true,
+    "independent_all_branch_resources": true,
+    "independent_source_energy": true,
+    "independent_source_resources": true,
+    "independent_source_state": true,
+    "nested_result_digest": true,
+    "paper_measurement_cost_undefined": true,
+    "rejected_branches_have_reasons": true,
+    "result_tag_is_ancestor": true,
+    "source_resource_identity": true,
+    "source_runtime_unchanged": true,
+    "summary_digest": true
+  },
+  "claim_boundary": "Development-case exact-statevector comparison only. Strict success requires no larger actual energy increase and componentwise nonworse guarded resources with a strict CNOT or parameter improvement.",
+  "independent_recomputations": [
+    {
+      "accepted": true,
+      "energy_difference_hartree": 0.0,
+      "gradient_infinity": 5.659503941879418e-09,
+      "proposal_id": "proposal-v5:7cdda57f364b401ec38e1fc46f8096dee5ba422ae19a2558c93acdad49fc899d",
+      "resources": {
+        "cnot_count": 858,
+        "cnot_depth": 301,
+        "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 78,
+        "parameter_count": 132,
+        "structure_digest": "9983c6f087766ed9b17b07a4f13f1e997e466a64e54546a70f42a9b77bf21941",
+        "total_depth": 1549
+      }
+    },
+    {
+      "accepted": false,
+      "energy_difference_hartree": 0.0,
+      "gradient_infinity": 1.243468394918068e-08,
+      "proposal_id": "proposal-v5:e7d49fdfd6394ab77f76c269655b6b1bbc96f0d13d84c49869489979c64c730b",
+      "resources": {
+        "cnot_count": 871,
+        "cnot_depth": 298,
+        "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 79,
+        "parameter_count": 131,
+        "structure_digest": "9716b07b1e79b22408f8db76ac8df954ecb00f97db8365b91f26dae834f607bf",
+        "total_depth": 1567
+      }
+    },
+    {
+      "accepted": false,
+      "energy_difference_hartree": 0.0,
+      "gradient_infinity": 1.7448659690721957e-08,
+      "proposal_id": "proposal-v5:f5900b76240cc7c36c602885b81993fc9650ac08d68464bc764e91da4ac723e9",
+      "resources": {
+        "cnot_count": 826,
+        "cnot_depth": 301,
+        "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 75,
+        "parameter_count": 126,
+        "structure_digest": "60c0cc231639d808f7b700f1dcaf70ed73a3c6b33f3d6738b0f01cb86863104e",
+        "total_depth": 1483
+      }
+    },
+    {
+      "accepted": false,
+      "energy_difference_hartree": 0.0,
+      "gradient_infinity": 1.4296738015673327e-08,
+      "proposal_id": "proposal-v5:de81230179e6017a0c2b32b5b66290ae926a735984d1b8f22eb9c012f253e9d5",
+      "resources": {
+        "cnot_count": 854,
+        "cnot_depth": 300,
+        "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 78,
+        "parameter_count": 130,
+        "structure_digest": "930e72257a9f3c755386a64979f469b26c3d7f3981fada3fe67a11666b7ea18d",
+        "total_depth": 1535
+      }
+    }
+  ],
+  "paper_measurement_cost": null,
+  "passed": true,
+  "provenance_incident": {
+    "mitigation": "The exact freeze record is independently reconstructed and verified against the cryptographically bound source path ID.",
+    "reexecution_required": false,
+    "scientific_result_affected": false,
+    "type": "human-readable-execution-freeze-serialization-omission"
+  },
+  "schema_version": "1.0.0",
+  "strict_primary_success": false,
+  "strict_primary_success_pairs": [],
+  "v4_1_accepted_frontier_inputs": [
+    {
+      "cnot_count": 858,
+      "cnot_depth": 300,
+      "energy_increase_hartree": 8.821426554872502e-05,
+      "id": "constraint-semantic-v1:7b3c651bfe4c55cd956fc411e37caaebe650db87217f318159d397143d896ccb",
+      "logical_block_count": 78,
+      "parameter_count": 131,
+      "total_depth": 1546
+    },
+    {
+      "cnot_count": 858,
+      "cnot_depth": 301,
+      "energy_increase_hartree": 8.46365777271707e-05,
+      "id": "constraint-semantic-v1:de97bdce937b959c7afc6899ae6341122b4ac94ce852b4a092092c1c525310e7",
+      "logical_block_count": 78,
+      "parameter_count": 132,
+      "total_depth": 1549
+    },
+    {
+      "cnot_count": 865,
+      "cnot_depth": 298,
+      "energy_increase_hartree": 5.763815775194914e-05,
+      "id": "constraint-semantic-v1:af997d649990f161895399a2965dc00daf44ed88e27b8fc0afeb8b53bcd5f9e7",
+      "logical_block_count": 78,
+      "parameter_count": 130,
+      "total_depth": 1552
+    }
+  ],
+  "v5_accepted_frontier_inputs": [
+    {
+      "cnot_count": 858,
+      "cnot_depth": 301,
+      "energy_increase_hartree": 8.46365777271707e-05,
+      "id": "proposal-v5:7cdda57f364b401ec38e1fc46f8096dee5ba422ae19a2558c93acdad49fc899d",
+      "logical_block_count": 78,
+      "parameter_count": 132,
+      "total_depth": 1549
+    }
+  ],
+  "winner": {
+    "energy_increase_hartree": 8.46365777271707e-05,
+    "resources": {
+      "cnot_count": 858,
+      "cnot_depth": 301,
+      "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+      "logical_block_count": 78,
+      "parameter_count": 132,
+      "structure_digest": "9983c6f087766ed9b17b07a4f13f1e997e466a64e54546a70f42a9b77bf21941",
+      "total_depth": 1549
+    }
+  },
+  "work": {
+    "accepted_rounds": 1,
+    "analytic_hvp_calls": 0,
+    "attempted_rounds": 6,
+    "energy_evaluations": 516,
+    "exact_vqe_attempts": 4,
+    "expanded_search_states": 26010,
+    "finite_difference_hvp_calls": 192,
+    "full_resource_recounts": 4218,
+    "gradient_component_equivalents": 109382,
+    "gradient_vector_evaluations": 835,
+    "optimizer_iterations": 259,
+    "optimizer_starts": 10,
+    "quadratic_solve_iterations": 0,
+    "statevector_evaluations": 26
+  }
+}

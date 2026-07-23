@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0.0",
+  "artifact_kind": "v4.1-s5-superseded-telemetry-audit",
+  "screening_code_commit": "79cea46e6b2a166be16c1560808b2dbfcc30ab88",
+  "affected_case": "h6-1.5",
+  "affected_bundle": "artifacts/v4.1/s5-sentinels-rerun-v3/h6-1.5",
+  "affected_bundle_sha256": {
+    "summary.json": "9b6131de8f183af1a5e0156cab9e22b3970c63212c1ae5a0d2e9f828020f5cbe",
+    "bundle-manifest.json": "1ebaeaf24d11e33c0c304886d27faa873ba15f61f74be9d06eeb24005a7380d7"
+  },
+  "observed_scientific_counts": {
+    "completed_search_states": 10000,
+    "semantic_composition_failures": 0,
+    "candidate_numerical_failures": 0,
+    "energy_eligible_states": 2145,
+    "quality_passed_resource_candidates": 1201,
+    "sentinels": 4,
+    "actual_candidate_energy_evaluations": 0
+  },
+  "defect": "maximum_full_prediction_live_set was reported as 1 although full prediction records were retained in the evidence map for all 1201 quality-passed candidates",
+  "scientific_selection_impact": "none-observed; candidate energies, quality gates, resource recounts, and selection are unchanged",
+  "auditability_impact": "material-computation-telemetry-understatement",
+  "status": "superseded-not-final-evidence",
+  "h6_3_run": "cleanly-interrupted-before-canonical-output; lease removed lock and incomplete staging",
+  "recovery": "retain this bundle, correct retained-record telemetry and storage, freeze a new tag, and replay all cases from a new root"
+}

@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0.0",
+  "stage": "V5.1-S11",
+  "status": "frozen-before-execution",
+  "code_tag_to_create": "dvg-obs-v5-s11-h6-fusion-code-v1",
+  "case_id": "h6-1.5",
+  "inputs": {
+    "s10_gate": {
+      "path": "artifacts/v5/s10/exact-fusion-gate-v1.json",
+      "sha256": "ff6d5e9113dc05f51cbf06919f78d2bdbe3246847c4cd73f26009005efb9925f"
+    },
+    "checkpoint": {
+      "path": "artifacts/full-figures/ceo-star/h6-1.5/checkpoint.json",
+      "sha256": "2c994c6ac2d4478c7174b71b661f496c9fda8a14e3a7ca08d01e9130515fe491"
+    },
+    "v4_1_result": {
+      "path": "artifacts/v4.1/multisystem/h6-1.5/summary.json",
+      "sha256": "a3af2d964b44f40c375f9b700c38fae5f48246c0a597dd8a807407510166c2ca",
+      "attempt_number": 1
+    },
+    "v5_s9_result": {
+      "path": "artifacts/v5/s9/h6-1.5-v1/summary.json",
+      "sha256": "d6a67dd321acd8b4a0da5f160e7f2faac8c065fa19969aba45de60d7698cda7c"
+    }
+  },
+  "frozen_candidate_ids": [
+    "fusion-v1:b88d87d2d419fd877cd35ade248d35462c9a534348ed85c4e672fa5e14ae5172",
+    "fusion-v1:95a9194dbc2d46a5b58a53f89f9e834014071b05662cdcb3ed25cfd2f64e8b95"
+  ],
+  "execution": {
+    "apply_jointly_against_one_immutable_source": true,
+    "optimizer_starts": 0,
+    "threshold_tuning": false,
+    "generic_compilation": false,
+    "source_attempt_must_be_accepted": true
+  },
+  "acceptance": {
+    "maximum_absolute_energy_drift_hartree": 1e-10,
+    "minimum_state_fidelity": 0.9999999999,
+    "maximum_operator_identity_residual": 1e-12,
+    "maximum_commutator_residual": 1e-12,
+    "physical_structural_resource_equality": true,
+    "cnot_reduction_required": true,
+    "parameter_reduction_required": true,
+    "cnot_depth_nonincrease_required": true,
+    "total_depth_nonincrease_required": true,
+    "logical_block_nonincrease_required": true
+  },
+  "claim_boundary": "Lossless development-case postprocessing of one frozen V4.1 H6 point. No unseen-system, global-superiority, or paper Measurement Cost claim."
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0.0",
+  "amendment_id": "dvg-obs-v5-s8-near-singular-damping-amendment-v1",
+  "parent_protocol_id": "dvg-obs-v5-s8-calibration-protocol-v1",
+  "triggering_failed_artifact": {
+    "path": "artifacts/v5/s8/h4-hvp-sentinels.json",
+    "result_digest": "84db2d43a1f9984c281acb19774a655819c37cf4266613a12579f097315b10ef",
+    "failed_check": "at_least_one_feasible_subspace_solved",
+    "failure_category": "nonpositive-curvature",
+    "candidate_count": 62,
+    "full_hessian_minimum_eigenvalue": -2.478773461396455e-10
+  },
+  "registered_fallback": {
+    "reason": "near-singular-curvature-fallback",
+    "damping_grid": [0.0, 1e-10, 1e-08, 1e-06],
+    "minimum_required_feasible_curvature": 1e-10,
+    "near_singular_lower_bound": -1e-08,
+    "selection_rule": "smallest damping whose feasible-curvature, MINRES residual, backward-error, constraint, and stationarity certificates all pass",
+    "true_indefinite_rule": "minimum feasible curvature below -1e-8 fails closed without escalating damping",
+    "all_failed_attempt_work_reported": true,
+    "pre_and_post_damping_predictions_reported": true,
+    "actual_or_fci_energy_used_to_select_damping": false,
+    "resource_result_used_to_select_damping": false,
+    "paper_measurement_cost": null
+  },
+  "scope": [
+    "late-H4 development curvature oracle",
+    "three outcome-blind late-H4 matrix-free sentinels"
+  ],
+  "claim_boundary": "Numerical fallback amendment after an audited fail-closed result. The grid and winner rule use solver certificates only, never actual energy or circuit-resource outcomes."
+}

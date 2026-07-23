@@ -1,0 +1,643 @@
+{
+  "artifact_kind": "v5-s8-small-system-calibration",
+  "budget_sensitivity_diagnostic_only": {
+    "0.0001": {
+      "diagonal_hessian": {
+        "false_exclusion": 60,
+        "false_safe": 0
+      },
+      "exact_hessian_oracle": {
+        "false_exclusion": 0,
+        "false_safe": 0
+      },
+      "general_constraint_obs": {
+        "false_exclusion": 32,
+        "false_safe": 0
+      },
+      "magnitude": {
+        "false_exclusion": 60,
+        "false_safe": 0
+      },
+      "magnitude_position": {
+        "false_exclusion": 60,
+        "false_safe": 0
+      },
+      "single_coordinate_obs": {
+        "false_exclusion": 16,
+        "false_safe": 0
+      }
+    },
+    "0.0002": {
+      "diagonal_hessian": {
+        "false_exclusion": 53,
+        "false_safe": 0
+      },
+      "exact_hessian_oracle": {
+        "false_exclusion": 0,
+        "false_safe": 0
+      },
+      "general_constraint_obs": {
+        "false_exclusion": 29,
+        "false_safe": 0
+      },
+      "magnitude": {
+        "false_exclusion": 59,
+        "false_safe": 0
+      },
+      "magnitude_position": {
+        "false_exclusion": 57,
+        "false_safe": 0
+      },
+      "single_coordinate_obs": {
+        "false_exclusion": 15,
+        "false_safe": 0
+      }
+    },
+    "5e-05": {
+      "diagonal_hessian": {
+        "false_exclusion": 60,
+        "false_safe": 0
+      },
+      "exact_hessian_oracle": {
+        "false_exclusion": 0,
+        "false_safe": 0
+      },
+      "general_constraint_obs": {
+        "false_exclusion": 37,
+        "false_safe": 0
+      },
+      "magnitude": {
+        "false_exclusion": 60,
+        "false_safe": 0
+      },
+      "magnitude_position": {
+        "false_exclusion": 60,
+        "false_safe": 0
+      },
+      "single_coordinate_obs": {
+        "false_exclusion": 16,
+        "false_safe": 0
+      }
+    }
+  },
+  "cases": {
+    "h2-1.5-iteration-1": {
+      "actual_change_range_hartree": [
+        0.08727579887702375,
+        0.08727579887702375
+      ],
+      "candidate_count": 1,
+      "complete_safe_count": 0,
+      "energy_safe_count": 0,
+      "predictors": {
+        "diagonal_hessian": {
+          "absolute_error_quantiles_hartree": {
+            "q100": 0.003944290781216983,
+            "q50": 0.003944290781216983,
+            "q90": 0.003944290781216983,
+            "q95": 0.003944290781216983
+          },
+          "available": true,
+          "coverage": 1,
+          "energy_false_exclusion_count": 0,
+          "energy_false_safe_count": 0,
+          "maximum_absolute_error_hartree": 0.003944290781216983,
+          "mean_absolute_error_hartree": 0.003944290781216983,
+          "mean_signed_error_hartree": 0.003944290781216983,
+          "median_absolute_error_hartree": 0.003944290781216983,
+          "observed_energy_safe_count": 0,
+          "overprediction_count": 1,
+          "predicted_energy_safe_count": 0,
+          "root_mean_square_error_hartree": 0.003944290781216983,
+          "underprediction_count": 0
+        },
+        "exact_hessian_oracle": {
+          "absolute_error_quantiles_hartree": {
+            "q100": 0.003944290864704103,
+            "q50": 0.003944290864704103,
+            "q90": 0.003944290864704103,
+            "q95": 0.003944290864704103
+          },
+          "available": true,
+          "coverage": 1,
+          "energy_false_exclusion_count": 0,
+          "energy_false_safe_count": 0,
+          "maximum_absolute_error_hartree": 0.003944290864704103,
+          "mean_absolute_error_hartree": 0.003944290864704103,
+          "mean_signed_error_hartree": 0.003944290864704103,
+          "median_absolute_error_hartree": 0.003944290864704103,
+          "observed_energy_safe_count": 0,
+          "overprediction_count": 1,
+          "predicted_energy_safe_count": 0,
+          "root_mean_square_error_hartree": 0.003944290864704103,
+          "underprediction_count": 0
+        },
+        "general_constraint_obs": {
+          "absolute_error_quantiles_hartree": {
+            "q100": 0.003944290781216983,
+            "q50": 0.003944290781216983,
+            "q90": 0.003944290781216983,
+            "q95": 0.003944290781216983
+          },
+          "available": true,
+          "coverage": 1,
+          "energy_false_exclusion_count": 0,
+          "energy_false_safe_count": 0,
+          "maximum_absolute_error_hartree": 0.003944290781216983,
+          "mean_absolute_error_hartree": 0.003944290781216983,
+          "mean_signed_error_hartree": 0.003944290781216983,
+          "median_absolute_error_hartree": 0.003944290781216983,
+          "observed_energy_safe_count": 0,
+          "overprediction_count": 1,
+          "predicted_energy_safe_count": 0,
+          "root_mean_square_error_hartree": 0.003944290781216983,
+          "underprediction_count": 0
+        },
+        "magnitude": {
+          "absolute_error_quantiles_hartree": {
+            "q100": 0.04474415188533215,
+            "q50": 0.04474415188533215,
+            "q90": 0.04474415188533215,
+            "q95": 0.04474415188533215
+          },
+          "available": true,
+          "coverage": 1,
+          "energy_false_exclusion_count": 0,
+          "energy_false_safe_count": 0,
+          "maximum_absolute_error_hartree": 0.04474415188533215,
+          "mean_absolute_error_hartree": 0.04474415188533215,
+          "mean_signed_error_hartree": 0.04474415188533215,
+          "median_absolute_error_hartree": 0.04474415188533215,
+          "observed_energy_safe_count": 0,
+          "overprediction_count": 1,
+          "predicted_energy_safe_count": 0,
+          "root_mean_square_error_hartree": 0.04474415188533215,
+          "underprediction_count": 0
+        },
+        "magnitude_position": {
+          "absolute_error_quantiles_hartree": {
+            "q100": 0.04474415188533215,
+            "q50": 0.04474415188533215,
+            "q90": 0.04474415188533215,
+            "q95": 0.04474415188533215
+          },
+          "available": true,
+          "coverage": 1,
+          "energy_false_exclusion_count": 0,
+          "energy_false_safe_count": 0,
+          "maximum_absolute_error_hartree": 0.04474415188533215,
+          "mean_absolute_error_hartree": 0.04474415188533215,
+          "mean_signed_error_hartree": 0.04474415188533215,
+          "median_absolute_error_hartree": 0.04474415188533215,
+          "observed_energy_safe_count": 0,
+          "overprediction_count": 1,
+          "predicted_energy_safe_count": 0,
+          "root_mean_square_error_hartree": 0.04474415188533215,
+          "underprediction_count": 0
+        },
+        "single_coordinate_obs": {
+          "absolute_error_quantiles_hartree": {
+            "q100": 0.003944290781216983,
+            "q50": 0.003944290781216983,
+            "q90": 0.003944290781216983,
+            "q95": 0.003944290781216983
+          },
+          "available": true,
+          "coverage": 1,
+          "energy_false_exclusion_count": 0,
+          "energy_false_safe_count": 0,
+          "maximum_absolute_error_hartree": 0.003944290781216983,
+          "mean_absolute_error_hartree": 0.003944290781216983,
+          "mean_signed_error_hartree": 0.003944290781216983,
+          "median_absolute_error_hartree": 0.003944290781216983,
+          "observed_energy_safe_count": 0,
+          "overprediction_count": 1,
+          "predicted_energy_safe_count": 0,
+          "root_mean_square_error_hartree": 0.003944290781216983,
+          "underprediction_count": 0
+        }
+      },
+      "row_set_digest": "73279dc44522fae166f2cb498af0ee5fb153f9ce19b237101e4b4d6f65cb11a7"
+    },
+    "h4-1.5-first-chemical-accuracy": {
+      "actual_change_range_hartree": [
+        0.00011278944956583103,
+        0.020026272746967777
+      ],
+      "candidate_count": 16,
+      "complete_safe_count": 0,
+      "energy_safe_count": 0,
+      "predictors": {
+        "diagonal_hessian": {
+          "absolute_error_quantiles_hartree": {
+            "q100": 0.056811022240690456,
+            "q50": 0.0037993970647465167,
+            "q90": 0.014286981735824923,
+            "q95": 0.025032768752143334
+          },
+          "available": true,
+          "coverage": 16,
+          "energy_false_exclusion_count": 0,
+          "energy_false_safe_count": 0,
+          "maximum_absolute_error_hartree": 0.056811022240690456,
+          "mean_absolute_error_hartree": 0.008433891638720048,
+          "mean_signed_error_hartree": 0.008433891638720048,
+          "median_absolute_error_hartree": 0.0037993970647465167,
+          "observed_energy_safe_count": 0,
+          "overprediction_count": 16,
+          "predicted_energy_safe_count": 0,
+          "root_mean_square_error_hartree": 0.015590099019556063,
+          "underprediction_count": 0
+        },
+        "exact_hessian_oracle": {
+          "absolute_error_quantiles_hartree": {
+            "q100": 0.033292462086842695,
+            "q50": 0.0004997862283642992,
+            "q90": 0.00203320814076289,
+            "q95": 0.010196228762202374
+          },
+          "available": true,
+          "coverage": 16,
+          "energy_false_exclusion_count": 0,
+          "energy_false_safe_count": 0,
+          "maximum_absolute_error_hartree": 0.033292462086842695,
+          "mean_absolute_error_hartree": 0.002736970566109568,
+          "mean_signed_error_hartree": 0.002736970566109568,
+          "median_absolute_error_hartree": 0.0004997862283642992,
+          "observed_energy_safe_count": 0,
+          "overprediction_count": 16,
+          "predicted_energy_safe_count": 0,
+          "root_mean_square_error_hartree": 0.008374073756799667,
+          "underprediction_count": 0
+        },
+        "general_constraint_obs": {
+          "absolute_error_quantiles_hartree": {
+            "q100": 0.032619998678405725,
+            "q50": 0.0006114606159675663,
+            "q90": 0.002051377778836597,
+            "q95": 0.010039766697247862
+          },
+          "available": true,
+          "coverage": 16,
+          "energy_false_exclusion_count": 0,
+          "energy_false_safe_count": 0,
+          "maximum_absolute_error_hartree": 0.032619998678405725,
+          "mean_absolute_error_hartree": 0.002787915712566688,
+          "mean_signed_error_hartree": 0.0022759056283148103,
+          "median_absolute_error_hartree": 0.0006114606159675663,
+          "observed_energy_safe_count": 0,
+          "overprediction_count": 9,
+          "predicted_energy_safe_count": 0,
+          "root_mean_square_error_hartree": 0.008223814849162618,
+          "underprediction_count": 7
+        },
+        "magnitude": {
+          "absolute_error_quantiles_hartree": {
+            "q100": 0.2390743041576143,
+            "q50": 0.028775641796713727,
+            "q90": 0.12582699531090874,
+            "q95": 0.1578193821482706
+          },
+          "available": true,
+          "coverage": 16,
+          "energy_false_exclusion_count": 0,
+          "energy_false_safe_count": 0,
+          "maximum_absolute_error_hartree": 0.2390743041576143,
+          "mean_absolute_error_hartree": 0.057668812455463715,
+          "mean_signed_error_hartree": 0.057668812455463715,
+          "median_absolute_error_hartree": 0.028775641796713727,
+          "observed_energy_safe_count": 0,
+          "overprediction_count": 16,
+          "predicted_energy_safe_count": 0,
+          "root_mean_square_error_hartree": 0.08701239311990366,
+          "underprediction_count": 0
+        },
+        "magnitude_position": {
+          "absolute_error_quantiles_hartree": {
+            "q100": 0.13572613726729355,
+            "q50": 0.016295502353555504,
+            "q90": 0.09051393589971773,
+            "q95": 0.11647355141842716
+          },
+          "available": true,
+          "coverage": 16,
+          "energy_false_exclusion_count": 0,
+          "energy_false_safe_count": 0,
+          "maximum_absolute_error_hartree": 0.13572613726729355,
+          "mean_absolute_error_hartree": 0.03343461681122762,
+          "mean_signed_error_hartree": 0.03328660492655966,
+          "median_absolute_error_hartree": 0.016295502353555504,
+          "observed_energy_safe_count": 0,
+          "overprediction_count": 15,
+          "predicted_energy_safe_count": 0,
+          "root_mean_square_error_hartree": 0.05288954913541827,
+          "underprediction_count": 1
+        },
+        "single_coordinate_obs": {
+          "absolute_error_quantiles_hartree": {
+            "q100": 0.032619998678405725,
+            "q50": 0.0008617960960645584,
+            "q90": 0.004692759436570719,
+            "q95": 0.018656379057488195
+          },
+          "available": true,
+          "coverage": 10,
+          "energy_false_exclusion_count": 0,
+          "energy_false_safe_count": 0,
+          "maximum_absolute_error_hartree": 0.032619998678405725,
+          "mean_absolute_error_hartree": 0.003940677457703275,
+          "mean_signed_error_hartree": 0.0031848493759467416,
+          "median_absolute_error_hartree": 0.0008617960960645584,
+          "observed_energy_safe_count": 0,
+          "overprediction_count": 5,
+          "predicted_energy_safe_count": 0,
+          "root_mean_square_error_hartree": 0.010357099858525901,
+          "underprediction_count": 5
+        }
+      },
+      "row_set_digest": "26118ec32d119d27b885a16f86a112c3d857db45ee78baad995cc20eabd677b4"
+    },
+    "h4-1.5-iteration-12-or-convergence": {
+      "actual_change_range_hartree": [
+        -1.3322676295501878e-15,
+        1.6330374164041928e-08
+      ],
+      "candidate_count": 62,
+      "complete_safe_count": 59,
+      "energy_safe_count": 62,
+      "predictors": {
+        "diagonal_hessian": {
+          "absolute_error_quantiles_hartree": {
+            "q100": 0.18442378616322752,
+            "q50": 0.002370795561742667,
+            "q90": 0.07634158664816657,
+            "q95": 0.15335010464137236
+          },
+          "available": true,
+          "coverage": 62,
+          "energy_false_exclusion_count": 60,
+          "energy_false_safe_count": 0,
+          "maximum_absolute_error_hartree": 0.18442378616322752,
+          "mean_absolute_error_hartree": 0.024561362573680582,
+          "mean_signed_error_hartree": 0.024561362573680582,
+          "median_absolute_error_hartree": 0.002370795561742667,
+          "observed_energy_safe_count": 62,
+          "overprediction_count": 62,
+          "predicted_energy_safe_count": 2,
+          "root_mean_square_error_hartree": 0.05118634376966226,
+          "underprediction_count": 0
+        },
+        "exact_hessian_oracle": {
+          "available": false,
+          "coverage": 0
+        },
+        "general_constraint_obs": {
+          "absolute_error_quantiles_hartree": {
+            "q100": 0.035234472600993896,
+            "q50": 0.00015403586380947112,
+            "q90": 0.015277776222853917,
+            "q95": 0.028929262739804968
+          },
+          "available": true,
+          "coverage": 62,
+          "energy_false_exclusion_count": 32,
+          "energy_false_safe_count": 0,
+          "maximum_absolute_error_hartree": 0.035234472600993896,
+          "mean_absolute_error_hartree": 0.004996474276788625,
+          "mean_signed_error_hartree": 0.004996474276788625,
+          "median_absolute_error_hartree": 0.00015403586380947112,
+          "observed_energy_safe_count": 62,
+          "overprediction_count": 62,
+          "predicted_energy_safe_count": 30,
+          "root_mean_square_error_hartree": 0.010304782422206116,
+          "underprediction_count": 0
+        },
+        "magnitude": {
+          "absolute_error_quantiles_hartree": {
+            "q100": 0.7824352557007771,
+            "q50": 0.007103945632444384,
+            "q90": 0.5553754833925914,
+            "q95": 0.6292350843773862
+          },
+          "available": true,
+          "coverage": 62,
+          "energy_false_exclusion_count": 60,
+          "energy_false_safe_count": 0,
+          "maximum_absolute_error_hartree": 0.7824352557007771,
+          "mean_absolute_error_hartree": 0.11870041807502557,
+          "mean_signed_error_hartree": 0.11870041807502557,
+          "median_absolute_error_hartree": 0.007103945632444384,
+          "observed_energy_safe_count": 62,
+          "overprediction_count": 62,
+          "predicted_energy_safe_count": 2,
+          "root_mean_square_error_hartree": 0.2369975114999373,
+          "underprediction_count": 0
+        },
+        "magnitude_position": {
+          "absolute_error_quantiles_hartree": {
+            "q100": 0.47989362349647674,
+            "q50": 0.005533791483094151,
+            "q90": 0.32855288798317517,
+            "q95": 0.3669732767037975
+          },
+          "available": true,
+          "coverage": 62,
+          "energy_false_exclusion_count": 60,
+          "energy_false_safe_count": 0,
+          "maximum_absolute_error_hartree": 0.47989362349647674,
+          "mean_absolute_error_hartree": 0.0760472826413586,
+          "mean_signed_error_hartree": 0.0760472826413586,
+          "median_absolute_error_hartree": 0.005533791483094151,
+          "observed_energy_safe_count": 62,
+          "overprediction_count": 62,
+          "predicted_energy_safe_count": 2,
+          "root_mean_square_error_hartree": 0.14546537009695412,
+          "underprediction_count": 0
+        },
+        "single_coordinate_obs": {
+          "absolute_error_quantiles_hartree": {
+            "q100": 0.03420808395277258,
+            "q50": 0.0009086713339628639,
+            "q90": 0.01666075665636841,
+            "q95": 0.027832688689074625
+          },
+          "available": true,
+          "coverage": 24,
+          "energy_false_exclusion_count": 16,
+          "energy_false_safe_count": 0,
+          "maximum_absolute_error_hartree": 0.03420808395277258,
+          "mean_absolute_error_hartree": 0.005655263548760302,
+          "mean_signed_error_hartree": 0.005655263548760302,
+          "median_absolute_error_hartree": 0.0009086713339628639,
+          "observed_energy_safe_count": 24,
+          "overprediction_count": 24,
+          "predicted_energy_safe_count": 8,
+          "root_mean_square_error_hartree": 0.010712989127078493,
+          "underprediction_count": 0
+        }
+      },
+      "row_set_digest": "e239d9a3d5ad301ea5e0099fdecf16d53da3a61f2ca6a5f63c4f3c6c2b402cb5"
+    }
+  },
+  "checks": {
+    "all_preregistered_rows_loaded": true,
+    "early_h2_is_negative_control": true,
+    "early_h4_is_boundary_control": true,
+    "exact_hessian_oracle_not_misrepresented_as_complete": true,
+    "fixed_budget_not_tuned": true,
+    "general_constraint_obs_complete": true,
+    "late_h4_is_positive_control": true,
+    "measurement_cost_not_relabelled": true
+  },
+  "claim_boundary": "Existing H2/H4 development observations only. Predictor errors are post-outcome diagnostics and are not screening features or molecular performance claims.",
+  "complete_coverage_predictors": [
+    "diagonal_hessian",
+    "general_constraint_obs",
+    "magnitude",
+    "magnitude_position"
+  ],
+  "energy_budget_hartree": 0.0001,
+  "paper_measurement_cost": null,
+  "passed": true,
+  "pooled_candidate_count": 79,
+  "pooled_predictor_metrics": {
+    "diagonal_hessian": {
+      "absolute_error_quantiles_hartree": {
+        "q100": 0.18442378616322752,
+        "q50": 0.0037767277217058957,
+        "q90": 0.06774402300027739,
+        "q95": 0.09932604914404629
+      },
+      "available": true,
+      "coverage": 79,
+      "energy_false_exclusion_count": 60,
+      "energy_false_safe_count": 0,
+      "maximum_absolute_error_hartree": 0.18442378616322752,
+      "mean_absolute_error_hartree": 0.021034063754037137,
+      "mean_signed_error_hartree": 0.021034063754037137,
+      "median_absolute_error_hartree": 0.0037767277217058957,
+      "observed_energy_safe_count": 62,
+      "overprediction_count": 79,
+      "predicted_energy_safe_count": 2,
+      "root_mean_square_error_hartree": 0.045887447239182845,
+      "underprediction_count": 0
+    },
+    "exact_hessian_oracle": {
+      "absolute_error_quantiles_hartree": {
+        "q100": 0.033292462086842695,
+        "q50": 0.0005759989602690044,
+        "q90": 0.003076206938275002,
+        "q95": 0.0098139251091318
+      },
+      "available": true,
+      "coverage": 17,
+      "energy_false_exclusion_count": 0,
+      "energy_false_safe_count": 0,
+      "maximum_absolute_error_hartree": 0.033292462086842695,
+      "mean_absolute_error_hartree": 0.0028079894072033647,
+      "mean_signed_error_hartree": 0.0028079894072033647,
+      "median_absolute_error_hartree": 0.0005759989602690044,
+      "observed_energy_safe_count": 0,
+      "overprediction_count": 17,
+      "predicted_energy_safe_count": 0,
+      "root_mean_square_error_hartree": 0.008180174063208171,
+      "underprediction_count": 0
+    },
+    "general_constraint_obs": {
+      "absolute_error_quantiles_hartree": {
+        "q100": 0.035234472600993896,
+        "q50": 0.0002400095150657887,
+        "q90": 0.015013976309879615,
+        "q95": 0.029435689081743252
+      },
+      "available": true,
+      "coverage": 79,
+      "energy_false_exclusion_count": 32,
+      "energy_false_safe_count": 0,
+      "maximum_absolute_error_hartree": 0.035234472600993896,
+      "mean_absolute_error_hartree": 0.004535852498014921,
+      "mean_signed_error_hartree": 0.0044321542531031485,
+      "median_absolute_error_hartree": 0.0002400095150657887,
+      "observed_energy_safe_count": 62,
+      "overprediction_count": 72,
+      "predicted_energy_safe_count": 30,
+      "root_mean_square_error_hartree": 0.009860639725709008,
+      "underprediction_count": 7
+    },
+    "magnitude": {
+      "absolute_error_quantiles_hartree": {
+        "q100": 0.7824352557007771,
+        "q50": 0.014136044392338504,
+        "q90": 0.2967744251883172,
+        "q95": 0.5766312464667113
+      },
+      "available": true,
+      "coverage": 79,
+      "energy_false_exclusion_count": 60,
+      "energy_false_safe_count": 0,
+      "maximum_absolute_error_hartree": 0.7824352557007771,
+      "mean_absolute_error_hartree": 0.10540343128891562,
+      "mean_signed_error_hartree": 0.10540343128891562,
+      "median_absolute_error_hartree": 0.014136044392338504,
+      "observed_energy_safe_count": 62,
+      "overprediction_count": 79,
+      "predicted_energy_safe_count": 2,
+      "root_mean_square_error_hartree": 0.21363477092112731,
+      "underprediction_count": 0
+    },
+    "magnitude_position": {
+      "absolute_error_quantiles_hartree": {
+        "q100": 0.47989362349647674,
+        "q50": 0.01204181559347341,
+        "q90": 0.21130744773525476,
+        "q95": 0.34625806260497666
+      },
+      "available": true,
+      "coverage": 79,
+      "energy_false_exclusion_count": 60,
+      "energy_false_safe_count": 0,
+      "maximum_absolute_error_hartree": 0.47989362349647674,
+      "mean_absolute_error_hartree": 0.06702062714720515,
+      "mean_signed_error_hartree": 0.0669906500566395,
+      "median_absolute_error_hartree": 0.01204181559347341,
+      "observed_energy_safe_count": 62,
+      "overprediction_count": 78,
+      "predicted_energy_safe_count": 2,
+      "root_mean_square_error_hartree": 0.13114344698557562,
+      "underprediction_count": 1
+    },
+    "single_coordinate_obs": {
+      "absolute_error_quantiles_hartree": {
+        "q100": 0.03420808395277258,
+        "q50": 0.0012258534834203904,
+        "q90": 0.01545927753642275,
+        "q95": 0.030203689851346034
+      },
+      "available": true,
+      "coverage": 35,
+      "energy_false_exclusion_count": 16,
+      "energy_false_safe_count": 0,
+      "maximum_absolute_error_hartree": 0.03420808395277258,
+      "mean_absolute_error_hartree": 0.00511649687224277,
+      "mean_signed_error_hartree": 0.004900545991740904,
+      "median_absolute_error_hartree": 0.0012258534834203904,
+      "observed_energy_safe_count": 24,
+      "overprediction_count": 30,
+      "predicted_energy_safe_count": 8,
+      "root_mean_square_error_hartree": 0.010478123972553776,
+      "underprediction_count": 5
+    }
+  },
+  "protocol_manifest_sha256": "3e1f7abf80bea0904dca889689e161d9c34d84850c29d45910cd699771b0c6a1",
+  "provisional_scientific_decisions": {
+    "global_empirical_energy_margin_hartree": null,
+    "global_margin_reason": "a constant pooled outcome-derived margin would not rank candidates and would leak development outcomes into screening",
+    "hvp_status": "conditional-study-required",
+    "lih_inspected_for_choice": false,
+    "polishing_status": "conditional-repair-only",
+    "predictor": "general_constraint_obs",
+    "predictor_reason": "unchanged V4.1 causal baseline; complete H2/H4 coverage and no post-outcome model substitution"
+  },
+  "result_digest": "677671c539f7126b4be2674be8a35745701b29ae2abe0326e325a03676cb2cf1",
+  "schema_version": "1.0.0"
+}

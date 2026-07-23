@@ -1,0 +1,7 @@
+event,adapt_iteration,compression_iteration,energy_hartree,absolute_error_hartree,parameters,cnot,cnot_depth,total_depth,wall_time_seconds,energy_evaluations,gradient_vector_evaluations,gradient_component_equivalent,operators_or_blocks,paper_measurement_cost
+ceo-star-adapt,1,0,-7.744341964418708,0.05450119508369955,2,18,7,26,N/A,N/A,N/A,N/A,N/A,N/A
+ceo-star-adapt,2,0,-7.7628188830644635,0.036024276437943925,5,45,14,65,N/A,N/A,N/A,N/A,N/A,N/A
+ceo-star-adapt,3,0,-7.775835721125124,0.023007438377283584,8,72,21,104,N/A,N/A,N/A,N/A,N/A,N/A
+ceo-star-adapt,4,0,-7.793211522521806,0.005631636980601762,11,99,28,143,N/A,N/A,N/A,N/A,N/A,N/A
+ceo-star-adapt,5,0,-7.797909682469515,0.0009334770328921493,15,107,30,171,N/A,N/A,N/A,N/A,N/A,N/A
+v4-global-obs-accepted,5,1,-7.797822781089923,0.0010203784124840354,8,58,30,92,1.9720250829705037,197,30,1827,8,N/A

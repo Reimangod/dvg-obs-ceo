@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0.0",
+  "protocol_id": "dvg-obs-v3-s2-polishing-protocol-v1",
+  "execution_tag": "dvg-obs-v3-s2-polishing-protocol-v1",
+  "registered_at": "2026-07-22",
+  "upstream_commit": "a3f89d03e6a03c89767d3cf8ee7657a57653dda0",
+  "inputs": {
+    "s1_manifest": {
+      "path": "manifests/v3-s1-gradient-audit-v1.json",
+      "sha256": "755b119a1f117c199dfaf6b53c422b183fac7c7811e0ac2b676dc4fbe9e1f3c7"
+    },
+    "s1_result": {
+      "path": "artifacts/v3/s1-gradient-calibration-v1.json",
+      "sha256": "fcc9f8867d9a2125e2342900e5a05c5f39ecfc65830f4f965cef2a0e9e0490f1"
+    }
+  },
+  "solver": {
+    "version": "target-native-trust-ncg-central-gradient-hvp-v1",
+    "scipy_version": "1.10.1",
+    "relative_hvp_step": 6.055454452393343e-6,
+    "hvp_step_rule": "eps^(1/3) * max(1, norm(x)) / norm(p)",
+    "damping": 0.0,
+    "initial_trust_radius": 0.05,
+    "maximum_trust_radius": 0.5,
+    "acceptance_eta": 0.15,
+    "gradient_l2_tolerance": 5e-9,
+    "maximum_iterations": 8,
+    "maximum_energy_evaluations": 16,
+    "maximum_gradient_vector_evaluations": 128,
+    "maximum_hessian_vector_products": 64,
+    "permitted_success_statuses": [0],
+    "fallback_policy": "none-fail-closed"
+  },
+  "local_primary_sources": {
+    "scipy.optimize._trustregion": "df9ada02610ac98196c70e907225712ca9c85e132a868f1aedf5bae5b78b3ca4",
+    "scipy.optimize._trustregion_ncg": "cbb6fb4231417e7075c03b5bc27bca0fd0d8a73ef2ecda95ac9f5184d3dc8a9c",
+    "scipy.optimize._numdiff": "a36f64618604317baa7e281e5cd70a36886725a22ca9f93cb00dc859682be7c8"
+  },
+  "work_accounting": {
+    "authoritative_hvp_count": "direct callable ledger",
+    "scipy_nhev_dummy_hessian_initialization_offset": 1,
+    "explanation": "SciPy 1.10.1 _prepare_scalar_function installs and evaluates one dummy Hessian when only hessp is supplied"
+  },
+  "calibration_acceptance": {
+    "maximum_final_gradient_infinity": 1e-8,
+    "maximum_independent_energy_difference_hartree": 1e-10,
+    "maximum_energy_increase_from_stored_endpoint_hartree": 1e-10,
+    "deterministic_replays": 2,
+    "require_exact_work_reconciliation": true,
+    "require_identical_replay_artifacts": true
+  },
+  "scope": {
+    "cases": ["h2-1.5-iteration-1", "h4-1.5-first-chemical-accuracy"],
+    "candidate_count": 17,
+    "solver_family_count": 1,
+    "configuration_count": 1,
+    "ordinary_gsd_adapt_iterations": 0,
+    "ceo_star_adapt_iterations": 0,
+    "lih_evaluations": 0,
+    "fci_used": false,
+    "paper_measurement_cost": null
+  },
+  "numerical_environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  }
+}

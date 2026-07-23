@@ -1,0 +1,140 @@
+{
+  "artifact_kind": "v5-s8-h4-width1-recycled-independent-audit",
+  "audit_digest": "4270770c370aa6144338af07c5e2991aec658d6def834eb1598f27a4f2f763ca",
+  "checks": {
+    "all_adopted_acceptance_checks_pass": true,
+    "attempt_evidence_complete": true,
+    "checkpoint_chain": true,
+    "code_tag_is_execution_ancestor": true,
+    "final_state_identity": true,
+    "independent_final_energy": true,
+    "independent_final_gradient": true,
+    "independent_final_resources": true,
+    "independent_final_state": true,
+    "no_hidden_catalog_failure": true,
+    "paper_measurement_cost_undefined": true,
+    "physical_structural_recounts_match": true,
+    "pilot_and_amended_scientific_results_match": true,
+    "resource_trajectory_matches_checkpoints": true,
+    "screening_information_firewall": true,
+    "source_reconstruction": true,
+    "source_relative_budget": true,
+    "summary_digest": true,
+    "work_monotone_and_rejected_visible": true
+  },
+  "claim_boundary": [
+    "Audited development H4 ablation C only.",
+    "No fresh Hessian/HVP, larger-molecule, or measurement-cost claim.",
+    "Pilot is retained solely to demonstrate that evidence-only amendment did not change scientific outputs."
+  ],
+  "independent_final_recomputation": {
+    "energy_difference_hartree": 0.0,
+    "energy_hartree": -1.9960984238701234,
+    "gradient_infinity": 8.343682446343426e-09,
+    "gradient_stored_max_difference": 0.0,
+    "resources": {
+      "cnot_count": 132,
+      "cnot_depth": 60,
+      "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+      "logical_block_count": 12,
+      "parameter_count": 18,
+      "structure_digest": "c325404d0ad710782263c735162159769d01eab50e8f4a39707cb4fea891060f",
+      "total_depth": 222
+    },
+    "statevector_sha256": "eb18ac0f781391200c33f25aaa4905bf471ed945f98f5fdc475c3bcb3584e3d4",
+    "stored_statevector_sha256": "eb18ac0f781391200c33f25aaa4905bf471ed945f98f5fdc475c3bcb3584e3d4"
+  },
+  "paper_measurement_cost": null,
+  "passed": true,
+  "schema_version": "1.0.0",
+  "scientific_result": {
+    "accepted_rounds": 2,
+    "actual_cumulative_energy_increase_hartree": 5.1901648685959145e-05,
+    "exact_attempts": 2,
+    "final_energy_hartree": -1.9960984238701234,
+    "source_energy_hartree": -1.9961503255188093,
+    "source_resources": {
+      "cnot_count": 158,
+      "cnot_depth": 73,
+      "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+      "logical_block_count": 14,
+      "parameter_count": 24,
+      "structure_digest": "5a30bd86da6ff690a994860b8d7f2c5d38f728bc3a2f2f9be2099b02b223ac87",
+      "total_depth": 270
+    },
+    "terminal_work": {
+      "accepted_rounds": 2,
+      "analytic_hvp_calls": 0,
+      "attempted_rounds": 2,
+      "energy_evaluations": 53,
+      "exact_vqe_attempts": 2,
+      "expanded_search_states": 111,
+      "finite_difference_hvp_calls": 0,
+      "full_resource_recounts": 117,
+      "gradient_component_equivalents": 1026,
+      "gradient_vector_evaluations": 51,
+      "optimizer_iterations": 43,
+      "optimizer_starts": 2,
+      "quadratic_solve_iterations": 0,
+      "statevector_evaluations": 10
+    },
+    "trajectory": [
+      {
+        "accepted": true,
+        "actual_cumulative_energy_increase_hartree": 4.440892098500626e-16,
+        "resources": {
+          "cnot_count": 145,
+          "cnot_depth": 73,
+          "logical_block_count": 13,
+          "parameter_count": 21,
+          "total_depth": 246
+        },
+        "round_index": 1,
+        "work_after_attempt": {
+          "accepted_rounds": 1,
+          "analytic_hvp_calls": 0,
+          "attempted_rounds": 1,
+          "energy_evaluations": 35,
+          "exact_vqe_attempts": 1,
+          "expanded_search_states": 62,
+          "finite_difference_hvp_calls": 0,
+          "full_resource_recounts": 65,
+          "gradient_component_equivalents": 717,
+          "gradient_vector_evaluations": 34,
+          "optimizer_iterations": 30,
+          "optimizer_starts": 1,
+          "quadratic_solve_iterations": 0,
+          "statevector_evaluations": 5
+        }
+      },
+      {
+        "accepted": true,
+        "actual_cumulative_energy_increase_hartree": 5.1901648685959145e-05,
+        "resources": {
+          "cnot_count": 132,
+          "cnot_depth": 60,
+          "logical_block_count": 12,
+          "parameter_count": 18,
+          "total_depth": 222
+        },
+        "round_index": 2,
+        "work_after_attempt": {
+          "accepted_rounds": 2,
+          "analytic_hvp_calls": 0,
+          "attempted_rounds": 2,
+          "energy_evaluations": 53,
+          "exact_vqe_attempts": 2,
+          "expanded_search_states": 111,
+          "finite_difference_hvp_calls": 0,
+          "full_resource_recounts": 117,
+          "gradient_component_equivalents": 1026,
+          "gradient_vector_evaluations": 51,
+          "optimizer_iterations": 43,
+          "optimizer_starts": 2,
+          "quadratic_solve_iterations": 0,
+          "statevector_evaluations": 10
+        }
+      }
+    ]
+  }
+}

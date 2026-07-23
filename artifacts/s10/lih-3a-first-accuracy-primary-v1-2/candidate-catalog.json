@@ -1,0 +1,602 @@
+[
+  {
+    "candidate_id": "candidate-v1:073ec39f670f3f44e600b9ddecb483eebff5092b4ac9a650dd34912f32caba32",
+    "constraint_matrix": [
+      [
+        1.0
+      ]
+    ],
+    "constraint_rhs": [
+      0.0
+    ],
+    "equivalence_class_id": "transform-v1:b4ad926690066f3ca0c5dbb4e47f665f95998f4c8231b62233fe5bb3bd2ed0ad",
+    "generator_normalization": "paper-era-pool-arrange-v1",
+    "jacobian": [
+      []
+    ],
+    "kind": "block-deletion",
+    "numerical_context_digest": "5d119d1d7105e417a6b81af6a8890c876378d6b032fcb4dc4aefede8da458857",
+    "offset": [
+      0.0
+    ],
+    "orientation": "deletion",
+    "removed_source_slots": [
+      0
+    ],
+    "semantic_conflict_positions": [
+      0
+    ],
+    "source_block_id": "block-v1:7c0bbd2f1a7327a62834c60b32fe934dd3bcfd15cad035aaa88c0e6219019c9c",
+    "source_pool_indices": [
+      970
+    ],
+    "source_slots": [
+      "block-v1:7c0bbd2f1a7327a62834c60b32fe934dd3bcfd15cad035aaa88c0e6219019c9c:slot:0"
+    ],
+    "target_family": "empty",
+    "target_operator_digests": [],
+    "target_pool_indices": [],
+    "target_slots": [],
+    "units": "radian"
+  },
+  {
+    "candidate_id": "candidate-v1:b7f2fc067bbe96ba4f67869bb054403354c725650d2746554abc4f9a5253740d",
+    "constraint_matrix": [
+      [
+        1.0
+      ]
+    ],
+    "constraint_rhs": [
+      0.0
+    ],
+    "equivalence_class_id": "transform-v1:cd31ee338ba76ddfa6010e3d7a1e455c29895eeb207747bc3f545a2277187e81",
+    "generator_normalization": "paper-era-pool-arrange-v1",
+    "jacobian": [
+      []
+    ],
+    "kind": "block-deletion",
+    "numerical_context_digest": "c6cd59b591d7114df44cb6b25d49a4118d2d889d975447dfb4ef51d84c8497af",
+    "offset": [
+      0.0
+    ],
+    "orientation": "deletion",
+    "removed_source_slots": [
+      0
+    ],
+    "semantic_conflict_positions": [
+      1
+    ],
+    "source_block_id": "block-v1:a18ef671e96317dbcb9adcd0634e1a35d144dec3113240600279c4820db36860",
+    "source_pool_indices": [
+      588
+    ],
+    "source_slots": [
+      "block-v1:a18ef671e96317dbcb9adcd0634e1a35d144dec3113240600279c4820db36860:slot:0"
+    ],
+    "target_family": "empty",
+    "target_operator_digests": [],
+    "target_pool_indices": [],
+    "target_slots": [],
+    "units": "radian"
+  },
+  {
+    "candidate_id": "candidate-v1:c3afa8b329ffd8286e39f79b02f679207573c91397da9c2cae3cc50b9892294b",
+    "constraint_matrix": [
+      [
+        1.0
+      ]
+    ],
+    "constraint_rhs": [
+      0.0
+    ],
+    "equivalence_class_id": "transform-v1:bba010e307c8ed1e57efef3cf42e8afb861118cad9c80a5b4d507fb923645dc7",
+    "generator_normalization": "paper-era-pool-arrange-v1",
+    "jacobian": [
+      []
+    ],
+    "kind": "block-deletion",
+    "numerical_context_digest": "3eb9d06d0b84d5a695dabc5aff72cda0eb98733f8c0fb4af71a89d68f3ea4438",
+    "offset": [
+      0.0
+    ],
+    "orientation": "deletion",
+    "removed_source_slots": [
+      0
+    ],
+    "semantic_conflict_positions": [
+      2
+    ],
+    "source_block_id": "block-v1:08a921e1e5c87145dd41424d3fb36413acdc6fa8f7a95e5078ea198e2948501e",
+    "source_pool_indices": [
+      946
+    ],
+    "source_slots": [
+      "block-v1:08a921e1e5c87145dd41424d3fb36413acdc6fa8f7a95e5078ea198e2948501e:slot:0"
+    ],
+    "target_family": "empty",
+    "target_operator_digests": [],
+    "target_pool_indices": [],
+    "target_slots": [],
+    "units": "radian"
+  },
+  {
+    "candidate_id": "candidate-v1:21b274206af9bfe8968d678a243f176833274f9ffb0ad092533526a6a7641b74",
+    "constraint_matrix": [
+      [
+        1.0
+      ]
+    ],
+    "constraint_rhs": [
+      0.0
+    ],
+    "equivalence_class_id": "transform-v1:9d7777e46ed85cf441228bde18de20510a1862ea561c88448fade2f93774e37d",
+    "generator_normalization": "paper-era-pool-arrange-v1",
+    "jacobian": [
+      []
+    ],
+    "kind": "block-deletion",
+    "numerical_context_digest": "55e7aaf84dd192c1e01cefa0fb2e4c14b073179f63c56ea1caf4d16d42401bdb",
+    "offset": [
+      0.0
+    ],
+    "orientation": "deletion",
+    "removed_source_slots": [
+      0
+    ],
+    "semantic_conflict_positions": [
+      3
+    ],
+    "source_block_id": "block-v1:1bc253c5bc44d3d42d105580b822c11039aca22275e96a236449064ecaeabfae",
+    "source_pool_indices": [
+      612
+    ],
+    "source_slots": [
+      "block-v1:1bc253c5bc44d3d42d105580b822c11039aca22275e96a236449064ecaeabfae:slot:0"
+    ],
+    "target_family": "empty",
+    "target_operator_digests": [],
+    "target_pool_indices": [],
+    "target_slots": [],
+    "units": "radian"
+  },
+  {
+    "candidate_id": "candidate-v1:45876591e4949a3c45459ef962137b64819e1ed09f6c43bbbf500796a7928004",
+    "constraint_matrix": [
+      [
+        1.0
+      ]
+    ],
+    "constraint_rhs": [
+      0.0
+    ],
+    "equivalence_class_id": "transform-v1:2a84050ec0d923037327f1bc5b93b0f2a4567e042874ce6956e4caa6b2922849",
+    "generator_normalization": "paper-era-pool-arrange-v1",
+    "jacobian": [
+      []
+    ],
+    "kind": "block-deletion",
+    "numerical_context_digest": "0beaf1c65fb9b2a6ee0d5f0641b483e9f6741e9436d79e4698ac37a094c0c38e",
+    "offset": [
+      0.0
+    ],
+    "orientation": "deletion",
+    "removed_source_slots": [
+      0
+    ],
+    "semantic_conflict_positions": [
+      4
+    ],
+    "source_block_id": "block-v1:37017348139b56b8868c1d4245d84a9532a69d8c5fc504bdd99e8f2d45869316",
+    "source_pool_indices": [
+      1160
+    ],
+    "source_slots": [
+      "block-v1:37017348139b56b8868c1d4245d84a9532a69d8c5fc504bdd99e8f2d45869316:slot:0"
+    ],
+    "target_family": "empty",
+    "target_operator_digests": [],
+    "target_pool_indices": [],
+    "target_slots": [],
+    "units": "radian"
+  },
+  {
+    "candidate_id": "candidate-v1:e22241c22a3955d4007b48bf92e2bbd6178081425a44ba1cb2d4fe2c95e8a90f",
+    "constraint_matrix": [
+      [
+        1.0
+      ]
+    ],
+    "constraint_rhs": [
+      0.0
+    ],
+    "equivalence_class_id": "transform-v1:5f1837caace6f1936120ae8adca28da808206a411cd031beeb44dddd3586aaa7",
+    "generator_normalization": "paper-era-pool-arrange-v1",
+    "jacobian": [
+      []
+    ],
+    "kind": "block-deletion",
+    "numerical_context_digest": "4f7d587cdb61bc6220ebacea811060aca44eec06623e8d75bc8b16f85a168462",
+    "offset": [
+      0.0
+    ],
+    "orientation": "deletion",
+    "removed_source_slots": [
+      0
+    ],
+    "semantic_conflict_positions": [
+      5
+    ],
+    "source_block_id": "block-v1:1cb4048afb4d2bad21f94d97b11574ff8d38daf38552b44d580707f47fe3717d",
+    "source_pool_indices": [
+      952
+    ],
+    "source_slots": [
+      "block-v1:1cb4048afb4d2bad21f94d97b11574ff8d38daf38552b44d580707f47fe3717d:slot:0"
+    ],
+    "target_family": "empty",
+    "target_operator_digests": [],
+    "target_pool_indices": [],
+    "target_slots": [],
+    "units": "radian"
+  },
+  {
+    "candidate_id": "candidate-v1:00cd033f811b20f307f4b6f44110f373376999bc7872a40dff110e323d660c06",
+    "constraint_matrix": [
+      [
+        1.0
+      ]
+    ],
+    "constraint_rhs": [
+      0.0
+    ],
+    "equivalence_class_id": "transform-v1:0ca39a7c2fc113c6d6c432dc1e0051706dd3c84471153246a0f2b65f4c73f7a9",
+    "generator_normalization": "paper-era-pool-arrange-v1",
+    "jacobian": [
+      []
+    ],
+    "kind": "block-deletion",
+    "numerical_context_digest": "a816a3e9f0dcea708167ca122531cf5af1af2d27371f80558f256da3c4415b86",
+    "offset": [
+      0.0
+    ],
+    "orientation": "deletion",
+    "removed_source_slots": [
+      0
+    ],
+    "semantic_conflict_positions": [
+      6
+    ],
+    "source_block_id": "block-v1:ade98b25335241f48928ddedb48a42c2beae4dec8639d1d6ff17570faf49309b",
+    "source_pool_indices": [
+      602
+    ],
+    "source_slots": [
+      "block-v1:ade98b25335241f48928ddedb48a42c2beae4dec8639d1d6ff17570faf49309b:slot:0"
+    ],
+    "target_family": "empty",
+    "target_operator_digests": [],
+    "target_pool_indices": [],
+    "target_slots": [],
+    "units": "radian"
+  },
+  {
+    "candidate_id": "candidate-v1:f89f300a39b00eb564eace8739dd4bd2d97110517f7035591c16c5b01db515cd",
+    "constraint_matrix": [
+      [
+        1.0
+      ]
+    ],
+    "constraint_rhs": [
+      0.0
+    ],
+    "equivalence_class_id": "transform-v1:5612c6b78703e89990efd6893980ef8facfc1f54f329de844a1b3f6bfe023ae9",
+    "generator_normalization": "paper-era-pool-arrange-v1",
+    "jacobian": [
+      []
+    ],
+    "kind": "block-deletion",
+    "numerical_context_digest": "9ef0cad92f3fc72dba5a7ac238e592a196bc98a9c130ea6d5c525325a793eaa1",
+    "offset": [
+      0.0
+    ],
+    "orientation": "deletion",
+    "removed_source_slots": [
+      0
+    ],
+    "semantic_conflict_positions": [
+      7
+    ],
+    "source_block_id": "block-v1:281a8edecc0fb9f8c98c4b1ae6bd07708c3becec1d1c6a52dc541cec80b19606",
+    "source_pool_indices": [
+      1154
+    ],
+    "source_slots": [
+      "block-v1:281a8edecc0fb9f8c98c4b1ae6bd07708c3becec1d1c6a52dc541cec80b19606:slot:0"
+    ],
+    "target_family": "empty",
+    "target_operator_digests": [],
+    "target_pool_indices": [],
+    "target_slots": [],
+    "units": "radian"
+  },
+  {
+    "candidate_id": "candidate-v1:49c0a3be01f3c83d7a6c80740db9529c3356d9d6efba018c4b0dcfdbcdf30692",
+    "constraint_matrix": [
+      [
+        1.0
+      ]
+    ],
+    "constraint_rhs": [
+      0.0
+    ],
+    "equivalence_class_id": "transform-v1:8b6af6b0c238a81e75009b36301fed38352a2ac74b4c56c54eee50ee94a9be75",
+    "generator_normalization": "paper-era-pool-arrange-v1",
+    "jacobian": [
+      []
+    ],
+    "kind": "block-deletion",
+    "numerical_context_digest": "62b8731af1eb49313beadca22d07a0d40d086e3c90cd7c83c9248e19586d86ea",
+    "offset": [
+      0.0
+    ],
+    "orientation": "deletion",
+    "removed_source_slots": [
+      0
+    ],
+    "semantic_conflict_positions": [
+      8
+    ],
+    "source_block_id": "block-v1:73518f72f2a9acc999a0f3cc71aa5c91e012c41cecda743b08956ea74f8ca25b",
+    "source_pool_indices": [
+      940
+    ],
+    "source_slots": [
+      "block-v1:73518f72f2a9acc999a0f3cc71aa5c91e012c41cecda743b08956ea74f8ca25b:slot:0"
+    ],
+    "target_family": "empty",
+    "target_operator_digests": [],
+    "target_pool_indices": [],
+    "target_slots": [],
+    "units": "radian"
+  },
+  {
+    "candidate_id": "candidate-v1:1b2361040c65908de3860e103d9e3ee089547a43cf39e4a026d8ad9555ec2045",
+    "constraint_matrix": [
+      [
+        1.0
+      ]
+    ],
+    "constraint_rhs": [
+      0.0
+    ],
+    "equivalence_class_id": "transform-v1:f29ba17722255a663a76b5d5f9ac1694faa119885c37b71fdd6d2dbce86114c8",
+    "generator_normalization": "paper-era-pool-arrange-v1",
+    "jacobian": [
+      []
+    ],
+    "kind": "block-deletion",
+    "numerical_context_digest": "b58bea0c3eb2f5d18971efa50e9abc4a42eae10aff69764c866d40e236cbb18b",
+    "offset": [
+      0.0
+    ],
+    "orientation": "deletion",
+    "removed_source_slots": [
+      0
+    ],
+    "semantic_conflict_positions": [
+      9
+    ],
+    "source_block_id": "block-v1:f62e11051cca69c158ad0e6e48e8b927dedd066ab6ff5f08fd205fe5a89a6504",
+    "source_pool_indices": [
+      618
+    ],
+    "source_slots": [
+      "block-v1:f62e11051cca69c158ad0e6e48e8b927dedd066ab6ff5f08fd205fe5a89a6504:slot:0"
+    ],
+    "target_family": "empty",
+    "target_operator_digests": [],
+    "target_pool_indices": [],
+    "target_slots": [],
+    "units": "radian"
+  },
+  {
+    "candidate_id": "candidate-v1:70038b6739f4fc1e80c57536f5be7a5175ff42afdf82e6e7693b550badfedfe0",
+    "constraint_matrix": [
+      [
+        1.0
+      ]
+    ],
+    "constraint_rhs": [
+      0.0
+    ],
+    "equivalence_class_id": "transform-v1:a0d8458fce4c386bf6a9476cc15c36802015a039df72b371a2c024fd59035924",
+    "generator_normalization": "paper-era-pool-arrange-v1",
+    "jacobian": [
+      []
+    ],
+    "kind": "block-deletion",
+    "numerical_context_digest": "b4d8ff1c4a2494bb7c1135522c0c545e2203268dc6cadae7a1b9f6a91d3d02e4",
+    "offset": [
+      0.0
+    ],
+    "orientation": "deletion",
+    "removed_source_slots": [
+      0
+    ],
+    "semantic_conflict_positions": [
+      10
+    ],
+    "source_block_id": "block-v1:67de7b74b138b7fbfe69564cab48149a6234f9a4057d37558f968932079eada9",
+    "source_pool_indices": [
+      1182
+    ],
+    "source_slots": [
+      "block-v1:67de7b74b138b7fbfe69564cab48149a6234f9a4057d37558f968932079eada9:slot:0"
+    ],
+    "target_family": "empty",
+    "target_operator_digests": [],
+    "target_pool_indices": [],
+    "target_slots": [],
+    "units": "radian"
+  },
+  {
+    "candidate_id": "candidate-v1:dd37a8a9764c2cfa09906c42ab708cf436ef9785f275220ef60092e3dfe5cf2f",
+    "constraint_matrix": [
+      [
+        1.0
+      ]
+    ],
+    "constraint_rhs": [
+      0.0
+    ],
+    "equivalence_class_id": "transform-v1:6949f3104a4a111d33c3c33b75b68a916aea8b539b982f97dba46e4e76446b6b",
+    "generator_normalization": "paper-era-pool-arrange-v1",
+    "jacobian": [
+      []
+    ],
+    "kind": "block-deletion",
+    "numerical_context_digest": "5cdabbc4a593d1a61328c0a38d8a7a4abd4ae9f5766f3359357ae948f93334f2",
+    "offset": [
+      0.0
+    ],
+    "orientation": "deletion",
+    "removed_source_slots": [
+      0
+    ],
+    "semantic_conflict_positions": [
+      11
+    ],
+    "source_block_id": "block-v1:2f4d34f1e25fe6fb713f716f098cd6f7145faccc1e46d28c6e74954d0ab6bca2",
+    "source_pool_indices": [
+      14
+    ],
+    "source_slots": [
+      "block-v1:2f4d34f1e25fe6fb713f716f098cd6f7145faccc1e46d28c6e74954d0ab6bca2:slot:0"
+    ],
+    "target_family": "empty",
+    "target_operator_digests": [],
+    "target_pool_indices": [],
+    "target_slots": [],
+    "units": "radian"
+  },
+  {
+    "candidate_id": "candidate-v1:e53397d62e92b6fcc09a84017a1f2edeca970ca0d06a911275cbaf1b1c71b003",
+    "constraint_matrix": [
+      [
+        1.0
+      ]
+    ],
+    "constraint_rhs": [
+      0.0
+    ],
+    "equivalence_class_id": "transform-v1:3cdecd2275ba37e3acad070c342b84458c28405bac1a582ebc5e5ab829a5cd7e",
+    "generator_normalization": "paper-era-pool-arrange-v1",
+    "jacobian": [
+      []
+    ],
+    "kind": "block-deletion",
+    "numerical_context_digest": "bb8adc6b6140c57c474de347090069cf0df0b713ade9a7324fc0c0a3476603a1",
+    "offset": [
+      0.0
+    ],
+    "orientation": "deletion",
+    "removed_source_slots": [
+      0
+    ],
+    "semantic_conflict_positions": [
+      12
+    ],
+    "source_block_id": "block-v1:291f3e81598ef522179f2d4389fa3f026c4fb2b27a4db2317e567546cf4eb14a",
+    "source_pool_indices": [
+      10
+    ],
+    "source_slots": [
+      "block-v1:291f3e81598ef522179f2d4389fa3f026c4fb2b27a4db2317e567546cf4eb14a:slot:0"
+    ],
+    "target_family": "empty",
+    "target_operator_digests": [],
+    "target_pool_indices": [],
+    "target_slots": [],
+    "units": "radian"
+  },
+  {
+    "candidate_id": "candidate-v1:d16cae27369d54c5e275f94de11383e3e1d10181430e16c7c7a27da9c890c1c1",
+    "constraint_matrix": [
+      [
+        1.0
+      ]
+    ],
+    "constraint_rhs": [
+      0.0
+    ],
+    "equivalence_class_id": "transform-v1:b22b54439883ac8887e5425df1034a84406df6c863e3a31c11b8d3a1d0aa4868",
+    "generator_normalization": "paper-era-pool-arrange-v1",
+    "jacobian": [
+      []
+    ],
+    "kind": "block-deletion",
+    "numerical_context_digest": "cbaf4666d93868ad304bae97f2b1ba3d6bc9bffc49266adfdb0d9a48968471e4",
+    "offset": [
+      0.0
+    ],
+    "orientation": "deletion",
+    "removed_source_slots": [
+      0
+    ],
+    "semantic_conflict_positions": [
+      13
+    ],
+    "source_block_id": "block-v1:18a68f26a6495bae2037d247f30efdf61e732322e321223cba9c80ebc9f0f2a6",
+    "source_pool_indices": [
+      4
+    ],
+    "source_slots": [
+      "block-v1:18a68f26a6495bae2037d247f30efdf61e732322e321223cba9c80ebc9f0f2a6:slot:0"
+    ],
+    "target_family": "empty",
+    "target_operator_digests": [],
+    "target_pool_indices": [],
+    "target_slots": [],
+    "units": "radian"
+  },
+  {
+    "candidate_id": "candidate-v1:f798031dd6f0c034f571937c461fc7b1b1d98cdac6f625aa21950f497636aca9",
+    "constraint_matrix": [
+      [
+        1.0
+      ]
+    ],
+    "constraint_rhs": [
+      0.0
+    ],
+    "equivalence_class_id": "transform-v1:119a4d4daff0ca9cd374adaa80d01b49c55cc25f967f3be332f9f52738ae6eb4",
+    "generator_normalization": "paper-era-pool-arrange-v1",
+    "jacobian": [
+      []
+    ],
+    "kind": "block-deletion",
+    "numerical_context_digest": "59badedc29ec2a655e19fb001a2a32d548f190676d4286357ba952948cba6f6c",
+    "offset": [
+      0.0
+    ],
+    "orientation": "deletion",
+    "removed_source_slots": [
+      0
+    ],
+    "semantic_conflict_positions": [
+      14
+    ],
+    "source_block_id": "block-v1:ca2d84b45f721e40a35d1980680d40a404c76de5be6d24a79d633c4da42ec38a",
+    "source_pool_indices": [
+      9
+    ],
+    "source_slots": [
+      "block-v1:ca2d84b45f721e40a35d1980680d40a404c76de5be6d24a79d633c4da42ec38a:slot:0"
+    ],
+    "target_family": "empty",
+    "target_operator_digests": [],
+    "target_pool_indices": [],
+    "target_slots": [],
+    "units": "radian"
+  }
+]

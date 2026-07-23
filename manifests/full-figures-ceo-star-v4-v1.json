@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0.0",
+  "protocol_id": "full-paper-fig11-14-15-ceo-star-v4-v1",
+  "status": "exploratory-frozen-before-new-molecular-runs",
+  "cases": [
+    {"case_id": "h6-3.0", "molecule": "H6", "distance_angstrom": 3.0, "figure_role": ["fig11"], "gradient_threshold": 1e-6},
+    {"case_id": "beh2-3.0", "molecule": "BeH2", "distance_angstrom": 3.0, "figure_role": ["fig11"], "gradient_threshold": 1e-5},
+    {"case_id": "h6-1.5", "molecule": "H6", "distance_angstrom": 1.5, "figure_role": ["fig14", "fig15"], "gradient_threshold": 1e-6},
+    {"case_id": "beh2-2.0", "molecule": "BeH2", "distance_angstrom": 2.0, "figure_role": ["fig14", "fig15"], "gradient_threshold": 1e-5}
+  ],
+  "shared_existing_case": {"case_id": "lih-3.0", "molecule": "LiH", "distance_angstrom": 3.0, "figure_role": ["fig11", "fig14", "fig15"], "gradient_threshold": 1e-6},
+  "ceo_star": {
+    "pool": "DVG_CEO",
+    "tetris": true,
+    "optimized_gradient_measurement": true,
+    "recycle_hessian": true,
+    "selection_criterion": "gradient",
+    "convergence_criterion": "total_g_norm",
+    "checkpoint_rule": "first strict chemical accuracy below 0.0015936 Ha",
+    "maximum_adapt_iterations": 100,
+    "maximum_optimizer_iterations": 10000,
+    "shots": null,
+    "noise": null,
+    "random_seed": 0,
+    "blas_threads": 1
+  },
+  "v4": {
+    "configuration": "manifests/v4-s6-frozen-config-v1.json",
+    "threshold_changes": false,
+    "molecule_specific_tuning": false,
+    "actual_energy_used_for_ranking": false,
+    "fci_used_for_ranking_or_acceptance": false
+  },
+  "claim_boundary": [
+    "The new H6 and BeH2 cases are exploratory because the systems were selected after observing the paper and LiH V4 result.",
+    "The original Fig. 11 used non-star CEO with an energy-change stopping rule; this requested figure uses CEO* and the registered first-chemical-accuracy rule.",
+    "The requested figures compare CEO* and V4 only and are not exact reproductions of the original comparator sets.",
+    "Paper Measurement Cost remains unavailable unless its accounting is independently reconstructed."
+  ]
+}

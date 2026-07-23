@@ -1,0 +1,271 @@
+{
+  "artifact_kind": "v5-s9-independent-case-audit",
+  "audit_digest": "c9029f0ada069f627fd16e556ff9928c7b6c2fa524788bd89d4ac37ee21dbf9f",
+  "case_id": "h6-3.0",
+  "checks": {
+    "accepted_branches_pass_all_gates": true,
+    "aggregate_work_complete": true,
+    "all_branch_parents_isolated": true,
+    "all_catalog_work_matches_diagnostics": true,
+    "all_physical_structural_recounts": true,
+    "bounded_exact_attempts": true,
+    "bounded_rounds_and_width": true,
+    "case_identity": true,
+    "catalog_work_complete": true,
+    "chemical_accuracy_guard": true,
+    "exact_attempt_work_complete": true,
+    "execution_freeze_cryptographically_bound_to_source_path": true,
+    "independent_accepted_gradients": true,
+    "independent_all_branch_energies": true,
+    "independent_all_branch_resources": true,
+    "independent_source_energy": true,
+    "independent_source_resources": true,
+    "independent_source_state": true,
+    "nested_result_digest": true,
+    "paper_measurement_cost_undefined": true,
+    "rejected_branches_have_reasons": true,
+    "result_tag_is_ancestor": true,
+    "source_resource_identity": true,
+    "source_runtime_unchanged": true,
+    "summary_digest": true
+  },
+  "claim_boundary": "Development-case exact-statevector comparison only. Strict success requires no larger actual energy increase and componentwise nonworse guarded resources with a strict CNOT or parameter improvement.",
+  "independent_recomputations": [
+    {
+      "accepted": true,
+      "energy_difference_hartree": 0.0,
+      "gradient_infinity": 7.522465816922619e-09,
+      "proposal_id": "proposal-v5:a56fc3e5746e52df9cde5e9d0c68155417fd86028c671eb54fac48e1c8ef8cec",
+      "resources": {
+        "cnot_count": 766,
+        "cnot_depth": 294,
+        "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 93,
+        "parameter_count": 145,
+        "structure_digest": "b71e1ac12fb41aba6269bcf8028a7303e4ce3f996dcc2f44c8119da72d2b4504",
+        "total_depth": 1451
+      }
+    },
+    {
+      "accepted": true,
+      "energy_difference_hartree": 0.0,
+      "gradient_infinity": 6.820087457021923e-09,
+      "proposal_id": "proposal-v5:0f572037630f2616f1bd707ee11fb25b85a956c19806ebfab8843fecd6f7fa45",
+      "resources": {
+        "cnot_count": 785,
+        "cnot_depth": 293,
+        "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "structure_digest": "a0de5b3d0920aa0184ffffbd092e972bc319ad18ed44a9d9a600e67bafdddd3b",
+        "total_depth": 1490
+      }
+    },
+    {
+      "accepted": true,
+      "energy_difference_hartree": 0.0,
+      "gradient_infinity": 6.607539404512863e-09,
+      "proposal_id": "proposal-v5:feff0255afbddce043ee9475f6405146d9e3ae0efbd13a415c3e37b9ca70c3dd",
+      "resources": {
+        "cnot_count": 770,
+        "cnot_depth": 293,
+        "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 93,
+        "parameter_count": 145,
+        "structure_digest": "c78a8458fcb1ca434e0a1174adbe1e595ce56ba880b61378cbe521ec130e4092",
+        "total_depth": 1459
+      }
+    },
+    {
+      "accepted": true,
+      "energy_difference_hartree": 0.0,
+      "gradient_infinity": 9.464636604832044e-09,
+      "proposal_id": "proposal-v5:6c4b106b74b23e718d8378a8ca2dca8245d1c798a0a9c4f43462b2d70f515123",
+      "resources": {
+        "cnot_count": 741,
+        "cnot_depth": 284,
+        "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 92,
+        "parameter_count": 138,
+        "structure_digest": "ad465826d9e94bb5bdbed43d9d997280ac5c467b868f99f36ef21dea326013cf",
+        "total_depth": 1394
+      }
+    },
+    {
+      "accepted": true,
+      "energy_difference_hartree": 0.0,
+      "gradient_infinity": 7.838381983413245e-09,
+      "proposal_id": "proposal-v5:edec696bbdf3d0ef0cb779854e151ac01ad955e0319fd5193a73b6cf349b8d35",
+      "resources": {
+        "cnot_count": 781,
+        "cnot_depth": 291,
+        "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 146,
+        "structure_digest": "824f185af9bb571a8fe3ec21ecab1a8c7cf99d69601d47dddd495c924f8ddd32",
+        "total_depth": 1476
+      }
+    },
+    {
+      "accepted": true,
+      "energy_difference_hartree": 0.0,
+      "gradient_infinity": 7.432374715676815e-09,
+      "proposal_id": "proposal-v5:f928a6a6367af21e7407a59776df5500ef9362325c54b77c0c412bee5d1b147b",
+      "resources": {
+        "cnot_count": 758,
+        "cnot_depth": 283,
+        "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 93,
+        "parameter_count": 142,
+        "structure_digest": "9b302bc783f27c85c2dfd982147f86e807c9bd261e360aefde1575fd58dc7241",
+        "total_depth": 1426
+      }
+    }
+  ],
+  "paper_measurement_cost": null,
+  "passed": true,
+  "provenance_incident": {
+    "mitigation": "The exact freeze record is independently reconstructed and verified against the cryptographically bound source path ID.",
+    "reexecution_required": false,
+    "scientific_result_affected": false,
+    "type": "human-readable-execution-freeze-serialization-omission"
+  },
+  "schema_version": "1.0.0",
+  "strict_primary_success": true,
+  "strict_primary_success_pairs": [
+    {
+      "v4_id": "constraint-semantic-v1:246a6e4cd4ac146a38df0e17e6e165104d57d6b52c134b976f9845783ae07b08",
+      "v5_id": "proposal-v5:6c4b106b74b23e718d8378a8ca2dca8245d1c798a0a9c4f43462b2d70f515123"
+    },
+    {
+      "v4_id": "constraint-semantic-v1:efe19911ced213c61309878aeee3df85e5615e5c60e8a0100082557578ac74b3",
+      "v5_id": "proposal-v5:f928a6a6367af21e7407a59776df5500ef9362325c54b77c0c412bee5d1b147b"
+    },
+    {
+      "v4_id": "constraint-semantic-v1:246a6e4cd4ac146a38df0e17e6e165104d57d6b52c134b976f9845783ae07b08",
+      "v5_id": "proposal-v5:f928a6a6367af21e7407a59776df5500ef9362325c54b77c0c412bee5d1b147b"
+    }
+  ],
+  "v4_1_accepted_frontier_inputs": [
+    {
+      "cnot_count": 768,
+      "cnot_depth": 293,
+      "energy_increase_hartree": 7.134482751514071e-05,
+      "id": "constraint-semantic-v1:efe19911ced213c61309878aeee3df85e5615e5c60e8a0100082557578ac74b3",
+      "logical_block_count": 94,
+      "parameter_count": 144,
+      "total_depth": 1455
+    },
+    {
+      "cnot_count": 770,
+      "cnot_depth": 294,
+      "energy_increase_hartree": 7.860940808024353e-05,
+      "id": "constraint-semantic-v1:246a6e4cd4ac146a38df0e17e6e165104d57d6b52c134b976f9845783ae07b08",
+      "logical_block_count": 93,
+      "parameter_count": 143,
+      "total_depth": 1456
+    },
+    {
+      "cnot_count": 768,
+      "cnot_depth": 293,
+      "energy_increase_hartree": 6.0131969608967495e-05,
+      "id": "constraint-semantic-v1:17caede499581e7d9c7ecb0ba7b91adf4db6848d51386dd90386708f61a1f645",
+      "logical_block_count": 94,
+      "parameter_count": 145,
+      "total_depth": 1455
+    },
+    {
+      "cnot_count": 770,
+      "cnot_depth": 294,
+      "energy_increase_hartree": 4.0239965857225e-05,
+      "id": "constraint-semantic-v1:97ef8d4f1832d508a4ab3929ea30495a225a8eee45c2c5dd154c466caec21050",
+      "logical_block_count": 93,
+      "parameter_count": 143,
+      "total_depth": 1459
+    }
+  ],
+  "v5_accepted_frontier_inputs": [
+    {
+      "cnot_count": 766,
+      "cnot_depth": 294,
+      "energy_increase_hartree": 3.8274873813026744e-05,
+      "id": "proposal-v5:a56fc3e5746e52df9cde5e9d0c68155417fd86028c671eb54fac48e1c8ef8cec",
+      "logical_block_count": 93,
+      "parameter_count": 145,
+      "total_depth": 1451
+    },
+    {
+      "cnot_count": 785,
+      "cnot_depth": 293,
+      "energy_increase_hartree": -1.6073747729716814e-05,
+      "id": "proposal-v5:0f572037630f2616f1bd707ee11fb25b85a956c19806ebfab8843fecd6f7fa45",
+      "logical_block_count": 95,
+      "parameter_count": 148,
+      "total_depth": 1490
+    },
+    {
+      "cnot_count": 770,
+      "cnot_depth": 293,
+      "energy_increase_hartree": 4.734518575455482e-05,
+      "id": "proposal-v5:feff0255afbddce043ee9475f6405146d9e3ae0efbd13a415c3e37b9ca70c3dd",
+      "logical_block_count": 93,
+      "parameter_count": 145,
+      "total_depth": 1459
+    },
+    {
+      "cnot_count": 741,
+      "cnot_depth": 284,
+      "energy_increase_hartree": 7.849255583103343e-05,
+      "id": "proposal-v5:6c4b106b74b23e718d8378a8ca2dca8245d1c798a0a9c4f43462b2d70f515123",
+      "logical_block_count": 92,
+      "parameter_count": 138,
+      "total_depth": 1394
+    },
+    {
+      "cnot_count": 781,
+      "cnot_depth": 291,
+      "energy_increase_hartree": 1.1799032014980781e-05,
+      "id": "proposal-v5:edec696bbdf3d0ef0cb779854e151ac01ad955e0319fd5193a73b6cf349b8d35",
+      "logical_block_count": 95,
+      "parameter_count": 146,
+      "total_depth": 1476
+    },
+    {
+      "cnot_count": 758,
+      "cnot_depth": 283,
+      "energy_increase_hartree": 6.915085952652333e-05,
+      "id": "proposal-v5:f928a6a6367af21e7407a59776df5500ef9362325c54b77c0c412bee5d1b147b",
+      "logical_block_count": 93,
+      "parameter_count": 142,
+      "total_depth": 1426
+    }
+  ],
+  "winner": {
+    "energy_increase_hartree": 7.849255583103343e-05,
+    "resources": {
+      "cnot_count": 741,
+      "cnot_depth": 284,
+      "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+      "logical_block_count": 92,
+      "parameter_count": 138,
+      "structure_digest": "ad465826d9e94bb5bdbed43d9d997280ac5c467b868f99f36ef21dea326013cf",
+      "total_depth": 1394
+    }
+  },
+  "work": {
+    "accepted_rounds": 6,
+    "analytic_hvp_calls": 0,
+    "attempted_rounds": 10,
+    "energy_evaluations": 431,
+    "exact_vqe_attempts": 6,
+    "expanded_search_states": 45273,
+    "finite_difference_hvp_calls": 0,
+    "full_resource_recounts": 2832,
+    "gradient_component_equivalents": 61827,
+    "gradient_vector_evaluations": 425,
+    "optimizer_iterations": 381,
+    "optimizer_starts": 6,
+    "quadratic_solve_iterations": 0,
+    "statevector_evaluations": 30
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "artifact_digest": "450ab0478e9038fafc188b2403d4b5c323c71008eb345729b5b5e7e6314b3540",
+  "artifact_kind": "v4.1-s6-independent-regression-audit",
+  "audit_freeze": {
+    "head": "4a2d111df61af1acb9097579f6ec5d7dff850b07",
+    "tag": "dvg-obs-v4.1-s6-regression-result-v1",
+    "threads": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    }
+  },
+  "bundle_digest": "9c9d9ba6bebc750dd906ab5fbfe1d4b9146671862b9c0acff515b63550cd1432",
+  "checks": {
+    "accepted_transaction": true,
+    "canonical_bundle": true,
+    "deterministic_rejection": true,
+    "h2_h4_passed": true,
+    "independent_semantics": true,
+    "lih_prediction_unchanged": true,
+    "measurement_cost_unclaimed": true,
+    "no_runtime_residue": true,
+    "rollback_payload_covers_all_mutable_state": true,
+    "rollback_snapshot_round_trip": true,
+    "summary_digest": true,
+    "v4_final_energy_reproduced": true,
+    "v4_resources_reproduced": true
+  },
+  "claim_boundary": "Independent S6 regression and transaction-integrity audit; LiH remains observed development evidence.",
+  "failed_checks": [],
+  "paper_measurement_cost": null,
+  "passed": true,
+  "result": {
+    "accepted_energy_hartree": -7.797822781089923,
+    "accepted_resources": {
+      "cnot_count": 58,
+      "cnot_depth": 30,
+      "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+      "logical_block_count": 8,
+      "parameter_count": 8,
+      "structure_digest": "802e9bc3b364b62ee12c32adaec63c33a3614cebb3887a8763e8cee54555cc52",
+      "total_depth": 92
+    },
+    "rejection_reasons": [
+      "cumulative_energy_budget"
+    ],
+    "rollback_snapshot_digest": "4e2d3ea65c784d5620df2670501098cebd0c7637f26ec02bac627f0c8b107512",
+    "source_energy_hartree": -7.797909682469515
+  },
+  "schema_version": "1.0.0",
+  "summary_digest": "d1245c4a132194d8f9f15092d8163a00960fdd7f1697bba63a5af1d4f0bab8bf"
+}

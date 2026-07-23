@@ -1,0 +1,51 @@
+{
+  "artifact_kind": "v5-s8-lih-width1-transfer-independent-audit",
+  "audit_digest": "c739c86a312b44454734e1f1b950ad4614d387041c8acf04af45c94032272c0e",
+  "checks": {
+    "candidate_had_real_resource_benefit": true,
+    "code_tag_is_ancestor": true,
+    "exact_attempt_evidence_complete": true,
+    "independent_rollback_energy": true,
+    "independent_rollback_gradient": true,
+    "independent_rollback_resources": true,
+    "independent_rollback_state": true,
+    "kkt_threshold_not_relaxed": true,
+    "no_hidden_catalog_failure": true,
+    "paper_measurement_cost_undefined": true,
+    "rejected_work_not_erased": true,
+    "rejection_is_only_frozen_kkt_gate": true,
+    "rollback_kept_only_source_checkpoint": true,
+    "screening_information_firewall": true,
+    "source_reconstruction": true,
+    "summary_digest": true
+  },
+  "claim_boundary": "Valid LiH development-transfer negative result; no threshold relaxation or superiority claim.",
+  "failed_acceptance_checks": [
+    "kkt"
+  ],
+  "independent_rollback_recomputation": {
+    "energy_difference_hartree": 0.0,
+    "gradient_stored_max_difference": 5.551110887961046e-16,
+    "resources": {
+      "cnot_count": 107,
+      "cnot_depth": 30,
+      "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+      "logical_block_count": 15,
+      "parameter_count": 15,
+      "structure_digest": "7562e62fee3f14594995a4dbb3c599a54df63ec879346388eb03656cc9ef22a8",
+      "total_depth": 171
+    },
+    "statevector_stored_max_difference": 0.0
+  },
+  "paper_measurement_cost": null,
+  "passed": true,
+  "schema_version": "1.0.0",
+  "scientific_result": {
+    "accepted_rounds": 0,
+    "exact_attempts": 1,
+    "failed_gate": "kkt",
+    "observed_gradient_infinity": 2.328718325844123e-08,
+    "required_gradient_infinity": 1e-08,
+    "status": "valid-negative-ablation-C-triggering-conditional-polishing"
+  }
+}

@@ -1,0 +1,212 @@
+{
+  "actual_candidate_energy_evaluations": 0,
+  "artifact_digest": "f34ceabd7fd56a36d6c39b7a5eccac4c46b73ad45b6ebefaa234009ee89e3e8b",
+  "artifact_kind": "v4.1-s5-independent-sentinel-freeze-audit",
+  "cases": {
+    "beh2-3.0": {
+      "bundle_digest": "c72af13f4e5323ff32220696eae882d95ea3458b4c5977a15d53fe4ef511ac03",
+      "checks": {
+        "canonical_bundle": true,
+        "case_id": true,
+        "checkpoint": true,
+        "known_failure_counts_zero": true,
+        "measurement_cost_unclaimed": true,
+        "no_actual_or_fci_energy": true,
+        "no_runtime_residue": true,
+        "protocol": true,
+        "resource_evidence_complete": true,
+        "selection_replay": true,
+        "sentinel_quality_and_resources": true,
+        "sentinel_queue": true,
+        "v1_4_common_science_reproduced": true,
+        "work_telemetry": true
+      },
+      "energy_eligible_count": 1325,
+      "failed_checks": [],
+      "quality_passed_resource_candidate_count": 75,
+      "search_counts": {
+        "candidate_numerical_failures": 0,
+        "completed": 10000,
+        "deduplicated": 0,
+        "expanded": 14780,
+        "pruned_predicted_loss": 8675,
+        "pruned_resource_bound": 0,
+        "pruned_semantic_infeasible": 0,
+        "quadratic_solves": 10000,
+        "semantic_composition_failures": 0
+      },
+      "search_status": "budget-truncated",
+      "sentinel_count": 4,
+      "sentinel_reductions": [
+        {
+          "cnot": 45,
+          "cnot_depth": 5,
+          "constraint_semantic_id": "constraint-semantic-v1:e1e9ac6d53c48e91456d023634b494b42490dd8ada75bfc47ce675060e326d58",
+          "parameters": 5,
+          "total_depth": 65
+        },
+        {
+          "cnot": 17,
+          "cnot_depth": 11,
+          "constraint_semantic_id": "constraint-semantic-v1:1aff40ab875d018fdb924e40d8db7c1062bfa9066512dc330bbb43dc4b794540",
+          "parameters": 3,
+          "total_depth": 35
+        },
+        {
+          "cnot": 36,
+          "cnot_depth": 5,
+          "constraint_semantic_id": "constraint-semantic-v1:b432edc81284aabeaaa45393e15165c8b889e6acc8ca1dd641972921922765b2",
+          "parameters": 4,
+          "total_depth": 52
+        },
+        {
+          "cnot": 13,
+          "cnot_depth": 7,
+          "constraint_semantic_id": "constraint-semantic-v1:8f96869307860a913f77e564984ba1d62a173bbeec137ce7b09dd27b305a6456",
+          "parameters": 3,
+          "total_depth": 27
+        }
+      ],
+      "summary_digest": "e94a1fad405496bab057fc3b513144f3d46fe9cc0a7c4a49014a25137a5907b5"
+    },
+    "h6-1.5": {
+      "bundle_digest": "70cd0e6dab9da1477d035ec1cba178216d38e6e92bc93f38b16f1e7ecf406efa",
+      "checks": {
+        "canonical_bundle": true,
+        "case_id": true,
+        "checkpoint": true,
+        "known_failure_counts_zero": true,
+        "measurement_cost_unclaimed": true,
+        "no_actual_or_fci_energy": true,
+        "no_runtime_residue": true,
+        "protocol": true,
+        "resource_evidence_complete": true,
+        "selection_replay": true,
+        "sentinel_quality_and_resources": true,
+        "sentinel_queue": true,
+        "v1_4_common_science_reproduced": true,
+        "work_telemetry": true
+      },
+      "energy_eligible_count": 2145,
+      "failed_checks": [],
+      "quality_passed_resource_candidate_count": 1201,
+      "search_counts": {
+        "candidate_numerical_failures": 0,
+        "completed": 10000,
+        "deduplicated": 0,
+        "expanded": 12221,
+        "pruned_predicted_loss": 7855,
+        "pruned_resource_bound": 0,
+        "pruned_semantic_infeasible": 0,
+        "quadratic_solves": 10000,
+        "semantic_composition_failures": 0
+      },
+      "search_status": "budget-truncated",
+      "sentinel_count": 4,
+      "sentinel_reductions": [
+        {
+          "cnot": 21,
+          "cnot_depth": 6,
+          "constraint_semantic_id": "constraint-semantic-v1:7b3c651bfe4c55cd956fc411e37caaebe650db87217f318159d397143d896ccb",
+          "parameters": 6,
+          "total_depth": 49
+        },
+        {
+          "cnot": 14,
+          "cnot_depth": 8,
+          "constraint_semantic_id": "constraint-semantic-v1:064a551bde13f206714e651167b518649a98c431941cf529715b2219a08eac9f",
+          "parameters": 8,
+          "total_depth": 46
+        },
+        {
+          "cnot": 21,
+          "cnot_depth": 5,
+          "constraint_semantic_id": "constraint-semantic-v1:de97bdce937b959c7afc6899ae6341122b4ac94ce852b4a092092c1c525310e7",
+          "parameters": 5,
+          "total_depth": 46
+        },
+        {
+          "cnot": 14,
+          "cnot_depth": 8,
+          "constraint_semantic_id": "constraint-semantic-v1:af997d649990f161895399a2965dc00daf44ed88e27b8fc0afeb8b53bcd5f9e7",
+          "parameters": 7,
+          "total_depth": 43
+        }
+      ],
+      "summary_digest": "10c3db7fddeef64b6b4c3cf97a0a7d686a91bbbb89f295dc5f247de4199bebb6"
+    },
+    "h6-3.0": {
+      "bundle_digest": "3388ec095f92f24eb04d230df28b2d0aa623ab9ada1aab201b45455af99f4cf6",
+      "checks": {
+        "canonical_bundle": true,
+        "case_id": true,
+        "checkpoint": true,
+        "known_failure_counts_zero": true,
+        "measurement_cost_unclaimed": true,
+        "no_actual_or_fci_energy": true,
+        "no_runtime_residue": true,
+        "protocol": true,
+        "resource_evidence_complete": true,
+        "selection_replay": true,
+        "sentinel_quality_and_resources": true,
+        "sentinel_queue": true,
+        "v1_4_common_science_reproduced": true,
+        "work_telemetry": true
+      },
+      "energy_eligible_count": 1396,
+      "failed_checks": [],
+      "quality_passed_resource_candidate_count": 340,
+      "search_counts": {
+        "candidate_numerical_failures": 0,
+        "completed": 10000,
+        "deduplicated": 0,
+        "expanded": 14137,
+        "pruned_predicted_loss": 8604,
+        "pruned_resource_bound": 0,
+        "pruned_semantic_infeasible": 0,
+        "quadratic_solves": 10000,
+        "semantic_composition_failures": 0
+      },
+      "search_status": "budget-truncated",
+      "sentinel_count": 4,
+      "sentinel_reductions": [
+        {
+          "cnot": 17,
+          "cnot_depth": 1,
+          "constraint_semantic_id": "constraint-semantic-v1:efe19911ced213c61309878aeee3df85e5615e5c60e8a0100082557578ac74b3",
+          "parameters": 5,
+          "total_depth": 38
+        },
+        {
+          "cnot": 15,
+          "cnot_depth": 0,
+          "constraint_semantic_id": "constraint-semantic-v1:246a6e4cd4ac146a38df0e17e6e165104d57d6b52c134b976f9845783ae07b08",
+          "parameters": 6,
+          "total_depth": 37
+        },
+        {
+          "cnot": 17,
+          "cnot_depth": 1,
+          "constraint_semantic_id": "constraint-semantic-v1:17caede499581e7d9c7ecb0ba7b91adf4db6848d51386dd90386708f61a1f645",
+          "parameters": 4,
+          "total_depth": 38
+        },
+        {
+          "cnot": 15,
+          "cnot_depth": 0,
+          "constraint_semantic_id": "constraint-semantic-v1:97ef8d4f1832d508a4ab3929ea30495a225a8eee45c2c5dd154c466caec21050",
+          "parameters": 6,
+          "total_depth": 34
+        }
+      ],
+      "summary_digest": "fa8be4649f5678919f5294e8fe78916f6179c3eb67393b6e7801fc69c3d969fb"
+    }
+  },
+  "claim_boundary": "Energy-blind, budget-truncated sentinel screening only; no exact VQE performance, global optimum, or generalization claim.",
+  "failed_checks": [],
+  "paper_measurement_cost": null,
+  "passed": true,
+  "protocol_id": "dvg-obs-v4.1-scale-transfer-protocol-v1",
+  "s0_manifest_sha256": "daeab27726a7c3a3f6a4ef11c8dccc8be112649e4bbc0952876666bf32613b46",
+  "schema_version": "1.0.0"
+}

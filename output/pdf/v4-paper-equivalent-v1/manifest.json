@@ -1,0 +1,52 @@
+{
+  "artifact_kind": "v4-paper-fig11-14-15-equivalent-bundle",
+  "claim_boundary": [
+    "LiH 3 A development comparison only; not a three-molecule reproduction.",
+    "V4 is a single accepted compression point, not an ADAPT growth trajectory.",
+    "QEB-ADAPT and qubit-ADAPT trajectories required by the original Fig. 11 are unavailable.",
+    "Paper Measurement Cost remains unavailable for V4; endpoint paper references are citations, not recomputed values."
+  ],
+  "figure_correspondence": {
+    "fig11": "error versus ADAPT iteration, parameter count, and CNOT count; available GSD/CEO* trajectories plus V4 point",
+    "fig14": "error versus ADAPT iteration, CNOT count, and CNOT depth; stored GSD/CEO* trajectories plus V4 point",
+    "fig15": "error versus parameter count; paper Measurement Cost trajectory unavailable and not substituted"
+  },
+  "generation_freeze": {
+    "head": "3ab22ad078a804289c9c61fa29582948c8055655",
+    "protocol_tag": "dvg-obs-v4-paper-equivalent-figures-protocol-v1"
+  },
+  "output_sha256": {
+    "fig11-equivalent-lih3a.pdf": "e4e6dc4454d46247c33ab00b4f6c75e88904f3065ae32ab9cbe61bc5437a0680",
+    "fig11-equivalent-lih3a.png": "ac24ea0eb52773ef8af51cbecae15034b0238e9a90abb5944177b04fa612ce8b",
+    "fig11-equivalent-lih3a.svg": "551aeb215b6c7c5506bce22843ed21d3116305a621170fbff36c5872d77ae15c",
+    "fig14-equivalent-lih3a.pdf": "e12a0bd5eab52ba26fb4d5c65ab429e98a3c94fdd8c7d4ada790f09d3be4876f",
+    "fig14-equivalent-lih3a.png": "87fec5a52f4ccf46c5c3bd6f867a9396f594a1ff2d7198d0b311faa02d499b0c",
+    "fig14-equivalent-lih3a.svg": "98cb09cfac348d45112f5db02e5e523604f588277664ab51976392244bdb12a2",
+    "fig15-equivalent-lih3a.pdf": "1f64312ea3c6832504c022d03458f4ff7a075c981cddd8488819cf25e616f678",
+    "fig15-equivalent-lih3a.png": "743c7d028b9a7c0e9646fe4cbde01514134f790eaa9e0946907e25eda4a537dd",
+    "fig15-equivalent-lih3a.svg": "83c5e1fa467f3d6ac6ce8324fa87a483840c9979147144f3b7b9e7f8dc186397",
+    "figure-data.csv": "14f27e4e8076580a319e7b9b8f5832665c6dc2ed5a430347caf671cdb659ae5a",
+    "paper-fig11-14-15-equivalents.pdf": "3cf1ae4115cc2396dc11329d5eb4d31c91079ed9d0a07a2994b4233ac97b5956"
+  },
+  "problem": {
+    "distance_angstrom": 3.0,
+    "molecule": "LiH",
+    "noise": null
+  },
+  "schema_version": "1.0.0",
+  "source_checks": {
+    "ceo_first_accuracy_matches_paper_cnot": true,
+    "ceo_first_accuracy_matches_paper_depth": true,
+    "gsd_first_accuracy_matches_paper_cnot": true,
+    "gsd_first_accuracy_matches_paper_depth": true,
+    "measurement_cost_unavailable": true,
+    "problem_is_lih_3a": true,
+    "v4_is_accepted": true,
+    "v4_within_chemical_accuracy": true
+  },
+  "source_sha256": {
+    "s11_comparison": "ff21e48a5eec173ebb0032bfa30983001ad79cd1cb6ebf866961bc0605825b31",
+    "v4_report": "f7522a1b3e87b556df095f7276c8017a048b7d7ba41b177b2543b092f02423f4",
+    "v4_summary": "f07ecc935f1edd26b27dc4c36868d394a9b9215266a823b098eb1991c8f875ad"
+  }
+}

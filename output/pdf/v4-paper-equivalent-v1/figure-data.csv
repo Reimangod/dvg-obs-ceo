@@ -1,0 +1,13 @@
+series,evidence_status,adapt_iteration,compression_iteration,energy_hartree,error_hartree,parameter_count,cnot_count,cnot_depth,total_depth,paper_measurement_cost
+GSD-ADAPT,direct-accepted-trajectory,1,0,-7.744257991821097,0.054585167681310054,1,48,48,72,
+GSD-ADAPT,direct-accepted-trajectory,2,0,-7.76272257239292,0.03612058710948762,2,192,192,240,
+GSD-ADAPT,direct-accepted-trajectory,3,0,-7.775440924976592,0.02340223452581558,3,304,304,376,
+GSD-ADAPT,direct-accepted-trajectory,4,0,-7.7930540602561,0.005789099246307217,4,352,348,448,
+GSD-ADAPT,direct-accepted-trajectory,5,0,-7.795661166527098,0.003181992975309633,5,360,356,462,
+GSD-ADAPT,direct-accepted-trajectory,6,0,-7.79815882803421,0.0006843314681974633,6,392,384,500,
+CEO-ADAPT-VQE*,direct-accepted-trajectory,1,0,-7.744341964418708,0.05450119508369955,2,18,7,26,N/A
+CEO-ADAPT-VQE*,direct-accepted-trajectory,2,0,-7.7628188830644635,0.036024276437943925,5,45,14,65,N/A
+CEO-ADAPT-VQE*,direct-accepted-trajectory,3,0,-7.775835721125124,0.023007438377283584,8,72,21,104,N/A
+CEO-ADAPT-VQE*,direct-accepted-trajectory,4,0,-7.793211522521806,0.005631636980601762,11,99,28,143,N/A
+CEO-ADAPT-VQE*,direct-accepted-trajectory,5,0,-7.797909682469515,0.0009334770328921493,15,107,30,171,N/A
+V4 Global OBS,accepted-development,5,1,-7.797822781089923,0.0010203784124840354,8,58,30,92,

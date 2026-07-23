@@ -1,0 +1,61 @@
+{
+  "artifact_kind": "v5-s8-lih-joint-sequential-independent-audit",
+  "audit_digest": "6944df66ae88a58401454205a0e6d71bcbff3179c2f09c99e9990002f149f197",
+  "checks": {
+    "all_acceptance_checks_pass": true,
+    "code_tag_is_ancestor": true,
+    "energy_budget": true,
+    "independent_final_energy": true,
+    "independent_final_gradient": true,
+    "independent_final_resources": true,
+    "independent_final_state": true,
+    "joint_search_executed": true,
+    "known_joint_endpoint_reproduced": true,
+    "no_hidden_catalog_failure": true,
+    "one_joint_commit": true,
+    "paper_measurement_cost_undefined": true,
+    "physical_structural_recount": true,
+    "postcommit_catalog_rebuilt": true,
+    "screening_information_firewall": true,
+    "source_reconstruction": true,
+    "summary_digest": true
+  },
+  "claim_boundary": "Known LiH calibration; reproduces the joint endpoint but does not exceed it.",
+  "independent_final_recomputation": {
+    "energy_difference_hartree": 0.0,
+    "gradient_infinity": 6.3719367560111095e-09,
+    "resources": {
+      "cnot_count": 58,
+      "cnot_depth": 30,
+      "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+      "logical_block_count": 8,
+      "parameter_count": 8,
+      "structure_digest": "802e9bc3b364b62ee12c32adaec63c33a3614cebb3887a8763e8cee54555cc52",
+      "total_depth": 92
+    },
+    "statevector_stored_max_difference": 0.0
+  },
+  "paper_measurement_cost": null,
+  "passed": true,
+  "schema_version": "1.0.0",
+  "scientific_result": {
+    "energy_increase_hartree": 8.690137959188604e-05,
+    "final_resources": {
+      "cnot_count": 58,
+      "cnot_depth": 30,
+      "logical_block_count": 8,
+      "parameter_count": 8,
+      "total_depth": 92
+    },
+    "source_resources": {
+      "cnot_count": 107,
+      "cnot_depth": 30,
+      "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+      "logical_block_count": 15,
+      "parameter_count": 15,
+      "structure_digest": "7562e62fee3f14594995a4dbb3c599a54df63ec879346388eb03656cc9ef22a8",
+      "total_depth": 171
+    },
+    "status": "joint-catalog-reproduces-one-shot-endpoint-no-sequential-extension"
+  }
+}

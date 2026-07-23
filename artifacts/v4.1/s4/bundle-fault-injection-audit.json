@@ -1,0 +1,21 @@
+{
+  "artifact_digest": "d2d7fe387760acd21720e51aa4a8c64a4caea5c321f7511576092f363681aead",
+  "artifact_kind": "v4.1-s4-bundle-fault-injection-audit",
+  "checks": {
+    "atomic_promotion_valid": true,
+    "complete_duplicate_classified": true,
+    "existing_canonical_refused": true,
+    "orphan_retained_and_classified": true,
+    "post_finalize_tamper_refused": true,
+    "second_writer_refused": true,
+    "tampered_staging_retained": true
+  },
+  "claim_boundary": "Filesystem lifecycle fault injection only; no scientific computation or VQE execution.",
+  "failed_checks": [],
+  "passed": true,
+  "production_artifacts_modified": false,
+  "protocol_id": "dvg-obs-v4.1-scale-transfer-protocol-v1",
+  "s0_manifest_sha256": "daeab27726a7c3a3f6a4ef11c8dccc8be112649e4bbc0952876666bf32613b46",
+  "schema_version": "1.0.0",
+  "temporary_fault_injection_only": true
+}

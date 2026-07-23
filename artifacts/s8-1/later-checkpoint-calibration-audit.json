@@ -1,0 +1,38 @@
+{
+  "artifact_kind": "s8-calibration-bundle-independent-audit",
+  "bundle": "artifacts/s8-1/later-checkpoint-calibration-bundle",
+  "catalog_candidates": 74,
+  "checkpoint_digests": {
+    "checkpoint-h4-1.5-iteration-12-or-convergence.json": "1f7831428b8a36010649d8bcb51c5a0bd23eb7221796d551e6d8f6ec38ebee71"
+  },
+  "checks": {
+    "catalog_count": true,
+    "checkpoint_digest:checkpoint-h4-1.5-iteration-12-or-convergence.json": true,
+    "checkpoint_failure_content:checkpoint-failure-h4-1.5-iteration-8.json": true,
+    "checkpoint_failure_count": true,
+    "checkpoint_failure_files": true,
+    "checkpoint_files": true,
+    "csv_success_rows": true,
+    "failure_count": true,
+    "jsonl_matches_durable_rows": true,
+    "jsonl_unique_candidate_ids": true,
+    "measurement_cost_unclaimed": true,
+    "metrics_recomputed_exactly": true,
+    "plots_exist": true,
+    "primary_projection_binding": true,
+    "representative_count": true,
+    "representatives_match_rows": true,
+    "required_files": true,
+    "row_file_unique_candidate_ids": true,
+    "safe_count": true,
+    "safe_is_conjunction": true,
+    "success_count": true
+  },
+  "claim_boundary": "Consistency validation only; this audit adds no performance claim.",
+  "executed_candidates": 62,
+  "failed_candidates": 0,
+  "passed": true,
+  "safe_candidates": 59,
+  "schema_version": "1.0.0",
+  "successful_candidates": 62
+}

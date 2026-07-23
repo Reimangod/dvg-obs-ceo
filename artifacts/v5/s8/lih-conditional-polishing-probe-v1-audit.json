@@ -1,0 +1,26 @@
+{
+  "artifact_kind": "v5-s8-lih-conditional-polishing-probe-audit",
+  "audit_digest": "dd2b87f7a25624cc80ebffe7aa0b81f607cac8f328d722a35ef920d38bb7df50",
+  "checks": {
+    "all_incremental_work_counted": true,
+    "candidate_not_reselected": true,
+    "code_tag_is_ancestor": true,
+    "diagnostic_gradient_not_misreported_as_success": true,
+    "measurement_cost_undefined": true,
+    "result_digest": true,
+    "status_failure_remains_fail_closed": true,
+    "threshold_not_relaxed": true,
+    "trigger_audit_still_bound": true,
+    "trigger_result_still_bound": true
+  },
+  "claim_boundary": "The certified gradient alone does not override the frozen optimizer-status gate.",
+  "paper_measurement_cost": null,
+  "passed": true,
+  "schema_version": "1.0.0",
+  "scientific_result": {
+    "accepted": false,
+    "diagnostic_gradient_infinity": 6.586161275211333e-09,
+    "optimizer_status": 2,
+    "status": "valid-negative-polishing-probe"
+  }
+}

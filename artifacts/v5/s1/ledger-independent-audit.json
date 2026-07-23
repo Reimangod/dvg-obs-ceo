@@ -1,0 +1,24 @@
+{
+  "artifact_kind": "v5-s1-ledger-independent-audit",
+  "checks": {
+    "actual_values_are_exact_only": true,
+    "all_failure_injections_detected": true,
+    "path_is_hash_chained": true,
+    "seven_events_recorded": true,
+    "valid_ledger_passes": true,
+    "work_is_monotonic": true
+  },
+  "claim_boundary": "Synthetic schema, information-firewall, and failure-injection evidence only; no molecular candidate or performance claim.",
+  "event_count": 7,
+  "failure_injections": {
+    "cross_path_injection": true,
+    "duplicate_event_id": true,
+    "noncontiguous_sequence": true,
+    "parent_checkpoint_tamper": true,
+    "screening_actual_energy_leak": true,
+    "work_counter_regression": true
+  },
+  "last_event_digest": "76baa957c26e7b708ef869211243cd799b939c9dab2b648e6e6a3abe727c18b5",
+  "passed": true,
+  "schema_version": "1.0.0"
+}

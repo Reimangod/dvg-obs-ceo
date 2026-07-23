@@ -1,0 +1,146 @@
+{
+  "artifact_kind": "v5-s8-lih-energy-aware-width2-v2-independent-audit",
+  "audit_digest": "cca9123f3dd1e39fdff74a2ea7417623c3ba852f286c7ea40490dcf9604801f3",
+  "checks": {
+    "aggregate_work_complete": true,
+    "all_exact_branches_accepted": true,
+    "branch_parents_isolated": true,
+    "catalog_work_complete": true,
+    "catalog_work_matches_diagnostics": true,
+    "code_tag_is_ancestor": true,
+    "energy_aware_beam_retained_two_paths": true,
+    "exact_attempt_work_complete": true,
+    "expected_unique_exact_attempts": true,
+    "independent_branch_energies": true,
+    "independent_branch_gradients": true,
+    "independent_branch_resources": true,
+    "known_endpoint_not_exceeded": true,
+    "nested_result_digest": true,
+    "paper_measurement_cost_undefined": true,
+    "physical_structural_recounts": true,
+    "source_relative_energy_budget": true,
+    "source_runtime_unchanged": true,
+    "summary_digest": true,
+    "zero_candidate_terminal_catalog_retained": true
+  },
+  "claim_boundary": "Known LiH calibration only. Work counters are implementation-defined and are not the paper Measurement Cost.",
+  "independent_branch_recomputations": [
+    {
+      "candidate_id": "candidate-v5:8a24f0b21420ce3b9f4ec52a6dba8ede0ef9fb30961aea386742f660b9aaf0ef",
+      "energy_difference_hartree": 0.0,
+      "gradient_infinity": 6.3719367560111095e-09,
+      "resources": {
+        "cnot_count": 58,
+        "cnot_depth": 30,
+        "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 8,
+        "parameter_count": 8,
+        "structure_digest": "802e9bc3b364b62ee12c32adaec63c33a3614cebb3887a8763e8cee54555cc52",
+        "total_depth": 92
+      }
+    },
+    {
+      "candidate_id": "candidate-v5:e4232f618a0dedf6437f35acd4e074a07453a9f327a77b99e2ca6f2a6e5e3130",
+      "energy_difference_hartree": 0.0,
+      "gradient_infinity": 6.586161275211333e-09,
+      "resources": {
+        "cnot_count": 98,
+        "cnot_depth": 30,
+        "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 14,
+        "parameter_count": 14,
+        "structure_digest": "bbc35a4f22ddccfcf1ba9cb7a8f9e711e5bd645fdba5010253b6a16d8e28aa03",
+        "total_depth": 158
+      }
+    },
+    {
+      "candidate_id": "candidate-v5:b9da5d55392a2cc4f9eccbcc5544f930fa01f2c8ae89abac393c601beec61e60",
+      "energy_difference_hartree": 0.0,
+      "gradient_infinity": 6.59875265540677e-10,
+      "resources": {
+        "cnot_count": 58,
+        "cnot_depth": 30,
+        "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 8,
+        "parameter_count": 8,
+        "structure_digest": "802e9bc3b364b62ee12c32adaec63c33a3614cebb3887a8763e8cee54555cc52",
+        "total_depth": 92
+      }
+    },
+    {
+      "candidate_id": "candidate-v5:c9215ba8f917e6772377afee0c29e363689c62201f66ca5b8f214021fbda1f36",
+      "energy_difference_hartree": 0.0,
+      "gradient_infinity": 3.558656930451475e-09,
+      "resources": {
+        "cnot_count": 96,
+        "cnot_depth": 30,
+        "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 13,
+        "parameter_count": 13,
+        "structure_digest": "8de88ad6c39bf0778e6a2b741ef1bce42e963960532fb413765863249c7a609c",
+        "total_depth": 151
+      }
+    },
+    {
+      "candidate_id": "candidate-v5:605571bc5d8cbfd9168f32defe66c2c261b786fdce280a63a2e91e4fdf8050d4",
+      "energy_difference_hartree": 0.0,
+      "gradient_infinity": 1.9023470862813974e-09,
+      "resources": {
+        "cnot_count": 58,
+        "cnot_depth": 30,
+        "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 8,
+        "parameter_count": 8,
+        "structure_digest": "802e9bc3b364b62ee12c32adaec63c33a3614cebb3887a8763e8cee54555cc52",
+        "total_depth": 92
+      }
+    },
+    {
+      "candidate_id": "candidate-v5:877fd88bcc90f2086fed823d0815e03999b98700e795364ff6e5aa333e48dc4a",
+      "energy_difference_hartree": 0.0,
+      "gradient_infinity": 2.305069472509738e-09,
+      "resources": {
+        "cnot_count": 94,
+        "cnot_depth": 30,
+        "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 12,
+        "parameter_count": 12,
+        "structure_digest": "a14b4e39e205d780092e990d8f96ec3f058e2d16b09f746661c8d7368d1529f3",
+        "total_depth": 144
+      }
+    }
+  ],
+  "interpretation": "The low-energy branch continued to 94 CNOT and 12 parameters, while the stronger branch again converged to the catalog-terminal 58-CNOT, 8-parameter structure. More rounds are not justified without expanding the transformation family.",
+  "paper_measurement_cost": null,
+  "passed": true,
+  "schema_version": "1.0.0",
+  "scientific_result": {
+    "aggregate_work": {
+      "accepted_rounds": 6,
+      "analytic_hvp_calls": 0,
+      "attempted_rounds": 12,
+      "energy_evaluations": 283,
+      "exact_vqe_attempts": 6,
+      "expanded_search_states": 877,
+      "finite_difference_hvp_calls": 25,
+      "full_resource_recounts": 238,
+      "gradient_component_equivalents": 3392,
+      "gradient_vector_evaluations": 277,
+      "optimizer_iterations": 46,
+      "optimizer_starts": 11,
+      "quadratic_solve_iterations": 0,
+      "statevector_evaluations": 40
+    },
+    "status": "valid-round3-no-endpoint-improvement-structural-floor-indicated",
+    "winner_energy_increase_hartree": 8.690137959188604e-05,
+    "winner_resources": {
+      "cnot_count": 58,
+      "cnot_depth": 30,
+      "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+      "logical_block_count": 8,
+      "parameter_count": 8,
+      "structure_digest": "802e9bc3b364b62ee12c32adaec63c33a3614cebb3887a8763e8cee54555cc52",
+      "total_depth": 92
+    }
+  }
+}

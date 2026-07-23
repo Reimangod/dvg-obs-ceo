@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "artifact_kind": "v3-s2-failed-execution-incident",
+  "protocol_id": "dvg-obs-v3-s2-polishing-protocol-v1",
+  "execution_head": "6517769",
+  "passed": false,
+  "lih_evaluations": 0,
+  "failed_candidate_ids": [
+    "candidate-v1:a9dbe642deb55cc69fbd01a1342ab2358430f66630037c8b84b682ec5b539f04",
+    "candidate-v1:436b6f9a209a6dd9b2c0bdc6e7df9af0c89e1f77f2438b6fff669524035beea2",
+    "candidate-v1:4d1a87a7bdec5c9a5995c45f8f39773b86e20eb88aa20f93f98cf50dd4e8711d",
+    "candidate-v1:58857b6297c6ea4052c33f3596c196575f4c48f59bd1f611b3571bddf9101ce8",
+    "candidate-v1:7f20067caa031a05345976e1024b170c50ce565c1e60805b9168e4ed0e17b548",
+    "candidate-v1:c53878b41fe0334d430d88bdbc45ebb5f1bc3eab1143b38578e92d2f984fc9d4",
+    "candidate-v1:d23aa90310d38b46684404e6b5d8c53f0297d5b46b7441cdd2908c7ed224d799",
+    "candidate-v1:db5fb02bce1654d5c349d836130ae251308b94fc86608d3a556571a637d73200"
+  ],
+  "failure_injection_passed": true,
+  "observed_defects": [
+    "zero-dimensional targets incorrectly used the SciPy nonzero-dimensional dummy-Hessian reconciliation formula",
+    "targets already below the unchanged 1e-8 infinity-norm certificate were unnecessarily sent to a stricter L2 solver termination test",
+    "the runner raised before writing the detailed failed calibration artifact"
+  ],
+  "resolution_boundary": "V1 remains a failed calibration. V1.1 may repair accounting, evidence retention, and preflight short-circuiting without changing the LiH acceptance threshold, solver family, finite-difference step, trust radii, or evaluation budgets."
+}

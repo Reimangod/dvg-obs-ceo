@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0.0",
+  "protocol_id": "v4-global-obs-multisystem-v1",
+  "protocol_tag": "dvg-obs-v4-multisystem-protocol-v1",
+  "configuration_path": "manifests/v4-s6-frozen-config-v1.json",
+  "configuration_digest": "836cd1d4142051e36d43f7d78758b10e673fb942086a9e82f94ae3f5b9acfb18",
+  "cases": [
+    {
+      "case_id": "h6-1.5",
+      "checkpoint_path": "artifacts/full-figures/ceo-star/h6-1.5/checkpoint.json",
+      "checkpoint_sha256": "2c994c6ac2d4478c7174b71b661f496c9fda8a14e3a7ca08d01e9130515fe491"
+    },
+    {
+      "case_id": "h6-3.0",
+      "checkpoint_path": "artifacts/full-figures/ceo-star/h6-3.0/checkpoint.json",
+      "checkpoint_sha256": "40a59c46b12e27551b3b156125cf1f2bd6f75ec49da1831eba13cdc27be24a88"
+    },
+    {
+      "case_id": "beh2-3.0",
+      "checkpoint_path": "artifacts/full-figures/ceo-star/beh2-3.0/checkpoint.json",
+      "checkpoint_sha256": "4344d203bbf161fd53814f1fb51af2bbc8531d7c77587a477a3654b3b1ec626c"
+    }
+  ],
+  "output_root": "artifacts/v4/multisystem",
+  "scientific_freeze": {
+    "candidate_family": "registered Global OBS block transformations",
+    "threshold_changes": false,
+    "molecule_specific_tuning": false,
+    "actual_energy_or_fci_used_in_ranking": false,
+    "energy_budget_hartree": 0.0001,
+    "componentwise_nonworse_resources": true,
+    "at_least_one_strict_resource_improvement": true,
+    "maximum_exact_attempts": 4
+  },
+  "claim_boundary": [
+    "All three source checkpoints were observed before this V4 protocol was frozen.",
+    "The cases are exploratory multisystem generalization evidence, not blind confirmatory validation.",
+    "A budget-truncated search reports best-found accepted candidates, not a true global optimum.",
+    "Paper Measurement Cost is unavailable and no implementation counter may replace it."
+  ]
+}

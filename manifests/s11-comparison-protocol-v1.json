@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0.0",
+  "comparison_id": "dvg-obs-s11-lih-matched-comparison-v1",
+  "execution_tag": "dvg-obs-s11-lih-comparison-protocol-v1",
+  "sources": {
+    "ordinary_adapt": "artifacts/s11/gsd-lih-3a-first-accuracy-v1",
+    "ceo_star_and_v2": "artifacts/s10/lih-3a-first-accuracy-primary-v1-2"
+  },
+  "primary_endpoint": "first strict chemical-accuracy crossing",
+  "outputs": [
+    "machine-readable source audit",
+    "final comparison JSON and CSV",
+    "Fig. 14-style error/CNOT/CNOT-depth trajectories",
+    "Fig. 15-style error/parameter plot with explicit measurement-cost refusal"
+  ],
+  "evidence_classes": {
+    "GSD-ADAPT": "direct accepted run",
+    "CEO*": "direct accepted run",
+    "V2-primary": "direct accepted state after complete rollback",
+    "V2-candidate": "rejected counterfactual; never a performance claim"
+  },
+  "missing_data_policy": [
+    "Do not infer CEO* per-iteration wall time or work counters.",
+    "Do not relabel local evaluation counts as paper measurement cost.",
+    "Show paper measurement-cost values as references only."
+  ]
+}

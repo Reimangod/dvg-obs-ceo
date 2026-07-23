@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0.0",
+  "stage": "S7",
+  "status": "complete",
+  "completed_at": "2026-07-20",
+  "transaction_version": "compression-transaction-v1",
+  "acceptance_version": "accuracy-kkt-resource-guard-v1",
+  "durability": {
+    "exclusive_create": true,
+    "file_fsync": true,
+    "directory_fsync": true,
+    "atomic_directory_rename": true,
+    "orphan_policy": "fail-closed-rollback",
+    "process_global_transaction_lock": true
+  },
+  "hard_crash_probe": {
+    "exit_code": 17,
+    "bitwise_equivalent_recovery": true,
+    "failed_artifact_retained": true,
+    "snapshot_digest": "a0f78158fae8cd230b2762579d9d59e4eed43aa79c687e2eeedb580f128d6246"
+  },
+  "failure_injections": [
+    "exception",
+    "non-finite-gradient",
+    "partial-artifact-write",
+    "cooperative-deadline",
+    "rejected-acceptance",
+    "nested-transaction",
+    "cross-runtime-concurrent-transaction",
+    "hard-process-exit"
+  ],
+  "verification": {
+    "s7_tests_passed_local": 13,
+    "full_suite_tests_passed_local": 68,
+    "known_paper_stack_warnings": 95
+  },
+  "artifacts": {
+    "transaction_sha256": "9446c0433b0e00753ce7cf5dd7fcf337c4124355042dc7caf7cefa930867d0d2",
+    "probe_runner_sha256": "b50be84e78d39d8fc654c3b77002b4f1c3a4557a144d839589ca6a98bca58e2d",
+    "tests_sha256": "ee3d337b228c444ae966fff2441df04b7182c9f56c8b83d9b365ea913be4e813",
+    "probe_artifact_sha256": "08a1132a748a2c8eb5ab7d1045496cfd45bff032017ed942a959cfc78cc3dda4"
+  },
+  "claim_boundary": [
+    "S7 establishes transaction durability and independent acceptance plumbing only.",
+    "Synthetic probe values are not molecular accuracy or performance evidence.",
+    "Predictor calibration and accepted circuit reduction remain untested at S7."
+  ]
+}

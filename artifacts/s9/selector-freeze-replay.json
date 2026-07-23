@@ -1,0 +1,1215 @@
+{
+  "artifact_kind": "s9-pre-lih-selector-freeze-replay",
+  "claim_boundary": [
+    "Replay actual outcomes are audit labels and were not selector inputs.",
+    "S9 freezes behavior before any new-method LiH execution.",
+    "A no-selection LiH result is valid and must not trigger threshold changes."
+  ],
+  "replay": [
+    {
+      "bundle": "/Users/rei/Documents/Codex/2026-07-13/users-rei-documents-ceo-adapt-vqe/dvg-obs-ceo/artifacts/s8/calibration-bundle",
+      "candidate_count": 1,
+      "case_id": "h2-1.5-iteration-1",
+      "chosen_candidate_id": null,
+      "decision": {
+        "assessments": [
+          {
+            "candidate_id": "candidate-v1:a9dbe642deb55cc69fbd01a1342ab2358430f66630037c8b84b682ec5b539f04",
+            "eligible": false,
+            "predicted_cumulative_change_hartree": 0.09122008965824073,
+            "rejection_reasons": [
+              "predicted-cumulative-energy-budget"
+            ],
+            "resource_delta": {
+              "cnot_count": -9,
+              "cnot_depth": -7,
+              "logical_block_count": -1,
+              "parameter_count": -1,
+              "total_depth": -13
+            }
+          }
+        ],
+        "chosen_candidate_id": null,
+        "selector_digest": "09823d0d82b3029ff7f25eeb2d5e22a6208e4029cdcf6ba28365339cf0a62216",
+        "selector_version": "dvg-obs-selector-v1"
+      },
+      "eligible_count": 0,
+      "offline_actual_change_hartree_for_replay_audit_only": null,
+      "offline_actual_safe_for_replay_audit_only": null
+    },
+    {
+      "bundle": "/Users/rei/Documents/Codex/2026-07-13/users-rei-documents-ceo-adapt-vqe/dvg-obs-ceo/artifacts/s8/calibration-bundle",
+      "candidate_count": 16,
+      "case_id": "h4-1.5-first-chemical-accuracy",
+      "chosen_candidate_id": null,
+      "decision": {
+        "assessments": [
+          {
+            "candidate_id": "candidate-v1:db5fb02bce1654d5c349d836130ae251308b94fc86608d3a556571a637d73200",
+            "eligible": false,
+            "predicted_cumulative_change_hartree": 0.04990965501569213,
+            "rejection_reasons": [
+              "predicted-cumulative-energy-budget"
+            ],
+            "resource_delta": {
+              "cnot_count": -9,
+              "cnot_depth": 0,
+              "logical_block_count": -1,
+              "parameter_count": -1,
+              "total_depth": -13
+            }
+          },
+          {
+            "candidate_id": "candidate-v1:5d7805f7dfc77e353809c27d3c11919946756631254aa0f75804ad48ae336551",
+            "eligible": false,
+            "predicted_cumulative_change_hartree": 0.01881469956966377,
+            "rejection_reasons": [
+              "predicted-cumulative-energy-budget"
+            ],
+            "resource_delta": {
+              "cnot_count": -9,
+              "cnot_depth": 0,
+              "logical_block_count": -1,
+              "parameter_count": -1,
+              "total_depth": -13
+            }
+          },
+          {
+            "candidate_id": "candidate-v1:d23aa90310d38b46684404e6b5d8c53f0297d5b46b7441cdd2908c7ed224d799",
+            "eligible": false,
+            "predicted_cumulative_change_hartree": 0.01863177975589069,
+            "rejection_reasons": [
+              "predicted-cumulative-energy-budget"
+            ],
+            "resource_delta": {
+              "cnot_count": -9,
+              "cnot_depth": 0,
+              "logical_block_count": -1,
+              "parameter_count": -1,
+              "total_depth": -13
+            }
+          },
+          {
+            "candidate_id": "candidate-v1:af69fa8e99373f7d76ca6b2b4d45d396b109756ad087ed6cc28520d4c25a18a2",
+            "eligible": false,
+            "predicted_cumulative_change_hartree": 0.018436539892823157,
+            "rejection_reasons": [
+              "predicted-cumulative-energy-budget"
+            ],
+            "resource_delta": {
+              "cnot_count": -9,
+              "cnot_depth": 0,
+              "logical_block_count": -1,
+              "parameter_count": -1,
+              "total_depth": -13
+            }
+          },
+          {
+            "candidate_id": "candidate-v1:58857b6297c6ea4052c33f3596c196575f4c48f59bd1f611b3571bddf9101ce8",
+            "eligible": false,
+            "predicted_cumulative_change_hartree": 0.005724021481213883,
+            "rejection_reasons": [
+              "predicted-cumulative-energy-budget"
+            ],
+            "resource_delta": {
+              "cnot_count": -9,
+              "cnot_depth": 0,
+              "logical_block_count": -1,
+              "parameter_count": -1,
+              "total_depth": -13
+            }
+          },
+          {
+            "candidate_id": "candidate-v1:9fa58e963f34702253766deeed02aff01661fe0a3ee3b3634013d447c45214c2",
+            "eligible": false,
+            "predicted_cumulative_change_hartree": 0.005373446429576369,
+            "rejection_reasons": [
+              "predicted-cumulative-energy-budget"
+            ],
+            "resource_delta": {
+              "cnot_count": -9,
+              "cnot_depth": 0,
+              "logical_block_count": -1,
+              "parameter_count": -1,
+              "total_depth": -13
+            }
+          },
+          {
+            "candidate_id": "candidate-v1:7f2a090c514c1939fe586e0a34c2257a20232ea354b9081ba42427e996117ab2",
+            "eligible": false,
+            "predicted_cumulative_change_hartree": 0.013344042406371557,
+            "rejection_reasons": [
+              "predicted-cumulative-energy-budget"
+            ],
+            "resource_delta": {
+              "cnot_count": -13,
+              "cnot_depth": 0,
+              "logical_block_count": -1,
+              "parameter_count": -2,
+              "total_depth": -24
+            }
+          },
+          {
+            "candidate_id": "candidate-v1:70b156419fc7f6bc31d927dea9d953a9705ccede9d044e5ae537e6ce5f8fd0e8",
+            "eligible": false,
+            "predicted_cumulative_change_hartree": 0.010311194651419038,
+            "rejection_reasons": [
+              "predicted-cumulative-energy-budget"
+            ],
+            "resource_delta": {
+              "cnot_count": 0,
+              "cnot_depth": 0,
+              "logical_block_count": 0,
+              "parameter_count": -1,
+              "total_depth": -3
+            }
+          },
+          {
+            "candidate_id": "candidate-v1:fff7155780d50642af0896f96640a99e5391604a16074490c8b32a7756155c52",
+            "eligible": false,
+            "predicted_cumulative_change_hartree": 0.006143169062930308,
+            "rejection_reasons": [
+              "predicted-cumulative-energy-budget"
+            ],
+            "resource_delta": {
+              "cnot_count": 0,
+              "cnot_depth": 0,
+              "logical_block_count": 0,
+              "parameter_count": -1,
+              "total_depth": -3
+            }
+          },
+          {
+            "candidate_id": "candidate-v1:7f20067caa031a05345976e1024b170c50ce565c1e60805b9168e4ed0e17b548",
+            "eligible": false,
+            "predicted_cumulative_change_hartree": 0.00988434728437146,
+            "rejection_reasons": [
+              "predicted-cumulative-energy-budget"
+            ],
+            "resource_delta": {
+              "cnot_count": -4,
+              "cnot_depth": 0,
+              "logical_block_count": 0,
+              "parameter_count": -1,
+              "total_depth": -11
+            }
+          },
+          {
+            "candidate_id": "candidate-v1:920d2dd8c375f70c51cf28bcbcf2209142fdbc274f81e80194748d8bfd971d69",
+            "eligible": false,
+            "predicted_cumulative_change_hartree": 0.002084949220546602,
+            "rejection_reasons": [
+              "predicted-cumulative-energy-budget"
+            ],
+            "resource_delta": {
+              "cnot_count": -4,
+              "cnot_depth": 0,
+              "logical_block_count": 0,
+              "parameter_count": -1,
+              "total_depth": -11
+            }
+          },
+          {
+            "candidate_id": "candidate-v1:4d1a87a7bdec5c9a5995c45f8f39773b86e20eb88aa20f93f98cf50dd4e8711d",
+            "eligible": false,
+            "predicted_cumulative_change_hartree": 0.010163233761793521,
+            "rejection_reasons": [
+              "predicted-cumulative-energy-budget"
+            ],
+            "resource_delta": {
+              "cnot_count": -13,
+              "cnot_depth": 0,
+              "logical_block_count": -1,
+              "parameter_count": -2,
+              "total_depth": -24
+            }
+          },
+          {
+            "candidate_id": "candidate-v1:86cf795e09e9c5e0e0708ca83cd8bf0a13333452f778bd5e093c9392f11b32d6",
+            "eligible": false,
+            "predicted_cumulative_change_hartree": 0.009947827566316627,
+            "rejection_reasons": [
+              "predicted-cumulative-energy-budget"
+            ],
+            "resource_delta": {
+              "cnot_count": 0,
+              "cnot_depth": 0,
+              "logical_block_count": 0,
+              "parameter_count": -1,
+              "total_depth": -3
+            }
+          },
+          {
+            "candidate_id": "candidate-v1:c53878b41fe0334d430d88bdbc45ebb5f1bc3eab1143b38578e92d2f984fc9d4",
+            "eligible": false,
+            "predicted_cumulative_change_hartree": 0.0015390781887244238,
+            "rejection_reasons": [
+              "predicted-cumulative-energy-budget"
+            ],
+            "resource_delta": {
+              "cnot_count": 0,
+              "cnot_depth": 0,
+              "logical_block_count": 0,
+              "parameter_count": -1,
+              "total_depth": -3
+            }
+          },
+          {
+            "candidate_id": "candidate-v1:436b6f9a209a6dd9b2c0bdc6e7df9af0c89e1f77f2438b6fff669524035beea2",
+            "eligible": false,
+            "predicted_cumulative_change_hartree": 0.003792833188924769,
+            "rejection_reasons": [
+              "predicted-cumulative-energy-budget"
+            ],
+            "resource_delta": {
+              "cnot_count": -4,
+              "cnot_depth": 0,
+              "logical_block_count": 0,
+              "parameter_count": -1,
+              "total_depth": -11
+            }
+          },
+          {
+            "candidate_id": "candidate-v1:d68e24bbf926e226938c26ab7d92fa01a8b7ab8368675aedb5adfe7cae350655",
+            "eligible": false,
+            "predicted_cumulative_change_hartree": 0.0001089209841942998,
+            "rejection_reasons": [
+              "predicted-cumulative-energy-budget"
+            ],
+            "resource_delta": {
+              "cnot_count": -4,
+              "cnot_depth": 0,
+              "logical_block_count": 0,
+              "parameter_count": -1,
+              "total_depth": -11
+            }
+          }
+        ],
+        "chosen_candidate_id": null,
+        "selector_digest": "09823d0d82b3029ff7f25eeb2d5e22a6208e4029cdcf6ba28365339cf0a62216",
+        "selector_version": "dvg-obs-selector-v1"
+      },
+      "eligible_count": 0,
+      "offline_actual_change_hartree_for_replay_audit_only": null,
+      "offline_actual_safe_for_replay_audit_only": null
+    },
+    {
+      "bundle": "/Users/rei/Documents/Codex/2026-07-13/users-rei-documents-ceo-adapt-vqe/dvg-obs-ceo/artifacts/s8-1/later-checkpoint-calibration-bundle",
+      "candidate_count": 62,
+      "case_id": "h4-1.5-iteration-12-or-convergence",
+      "chosen_candidate_id": "candidate-v1:1334771f370cda2d7a4a8da467c52657b8b453fde4271dbcaa4c81fe48435128",
+      "decision": {
+        "assessments": [
+          {
+            "candidate_id": "candidate-v1:db5fb02bce1654d5c349d836130ae251308b94fc86608d3a556571a637d73200",
+            "eligible": false,
+            "predicted_cumulative_change_hartree": 0.020265194016204812,
+            "rejection_reasons": [
+              "predicted-cumulative-energy-budget"
+            ],
+            "resource_delta": {
+              "cnot_count": -9,
+              "cnot_depth": 0,
+              "logical_block_count": -1,
+              "parameter_count": -1,
+              "total_depth": -13
+            }
+          },
+          {
+            "candidate_id": "candidate-v1:5d7805f7dfc77e353809c27d3c11919946756631254aa0f75804ad48ae336551",
+            "eligible": false,
+            "predicted_cumulative_change_hartree": 0.004541940054843444,
+            "rejection_reasons": [
+              "predicted-cumulative-energy-budget"
+            ],
+            "resource_delta": {
+              "cnot_count": -9,
+              "cnot_depth": 0,
+              "logical_block_count": -1,
+              "parameter_count": -1,
+              "total_depth": -13
+            }
+          },
+          {
+            "candidate_id": "candidate-v1:d23aa90310d38b46684404e6b5d8c53f0297d5b46b7441cdd2908c7ed224d799",
+            "eligible": false,
+            "predicted_cumulative_change_hartree": 0.008250402816749061,
+            "rejection_reasons": [
+              "predicted-cumulative-energy-budget"
+            ],
+            "resource_delta": {
+              "cnot_count": -9,
+              "cnot_depth": 0,
+              "logical_block_count": -1,
+              "parameter_count": -1,
+              "total_depth": -13
+            }
+          },
+          {
+            "candidate_id": "candidate-v1:af69fa8e99373f7d76ca6b2b4d45d396b109756ad087ed6cc28520d4c25a18a2",
+            "eligible": false,
+            "predicted_cumulative_change_hartree": 0.0082222031323596,
+            "rejection_reasons": [
+              "predicted-cumulative-energy-budget"
+            ],
+            "resource_delta": {
+              "cnot_count": -9,
+              "cnot_depth": 0,
+              "logical_block_count": -1,
+              "parameter_count": -1,
+              "total_depth": -13
+            }
+          },
+          {
+            "candidate_id": "candidate-v1:58857b6297c6ea4052c33f3596c196575f4c48f59bd1f611b3571bddf9101ce8",
+            "eligible": false,
+            "predicted_cumulative_change_hartree": 0.0072955009039240674,
+            "rejection_reasons": [
+              "predicted-cumulative-energy-budget"
+            ],
+            "resource_delta": {
+              "cnot_count": -9,
+              "cnot_depth": 0,
+              "logical_block_count": -1,
+              "parameter_count": -1,
+              "total_depth": -13
+            }
+          },
+          {
+            "candidate_id": "candidate-v1:9fa58e963f34702253766deeed02aff01661fe0a3ee3b3634013d447c45214c2",
+            "eligible": false,
+            "predicted_cumulative_change_hartree": 0.00499337238328874,
+            "rejection_reasons": [
+              "predicted-cumulative-energy-budget"
+            ],
+            "resource_delta": {
+              "cnot_count": -9,
+              "cnot_depth": 0,
+              "logical_block_count": -1,
+              "parameter_count": -1,
+              "total_depth": -13
+            }
+          },
+          {
+            "candidate_id": "candidate-v1:7f2a090c514c1939fe586e0a34c2257a20232ea354b9081ba42427e996117ab2",
+            "eligible": false,
+            "predicted_cumulative_change_hartree": 0.014877484411025849,
+            "rejection_reasons": [
+              "predicted-cumulative-energy-budget"
+            ],
+            "resource_delta": {
+              "cnot_count": -13,
+              "cnot_depth": 0,
+              "logical_block_count": -1,
+              "parameter_count": -2,
+              "total_depth": -24
+            }
+          },
+          {
+            "candidate_id": "candidate-v1:70b156419fc7f6bc31d927dea9d953a9705ccede9d044e5ae537e6ce5f8fd0e8",
+            "eligible": false,
+            "predicted_cumulative_change_hartree": 0.005377581794802033,
+            "rejection_reasons": [
+              "predicted-cumulative-energy-budget"
+            ],
+            "resource_delta": {
+              "cnot_count": 0,
+              "cnot_depth": 0,
+              "logical_block_count": 0,
+              "parameter_count": -1,
+              "total_depth": -3
+            }
+          },
+          {
+            "candidate_id": "candidate-v1:fff7155780d50642af0896f96640a99e5391604a16074490c8b32a7756155c52",
+            "eligible": false,
+            "predicted_cumulative_change_hartree": 0.005225751686447528,
+            "rejection_reasons": [
+              "predicted-cumulative-energy-budget"
+            ],
+            "resource_delta": {
+              "cnot_count": 0,
+              "cnot_depth": 0,
+              "logical_block_count": 0,
+              "parameter_count": -1,
+              "total_depth": -3
+            }
+          },
+          {
+            "candidate_id": "candidate-v1:7f20067caa031a05345976e1024b170c50ce565c1e60805b9168e4ed0e17b548",
+            "eligible": false,
+            "predicted_cumulative_change_hartree": 0.010717272789290157,
+            "rejection_reasons": [
+              "predicted-cumulative-energy-budget"
+            ],
+            "resource_delta": {
+              "cnot_count": -4,
+              "cnot_depth": 0,
+              "logical_block_count": 0,
+              "parameter_count": -1,
+              "total_depth": -11
+            }
+          },
+          {
+            "candidate_id": "candidate-v1:920d2dd8c375f70c51cf28bcbcf2209142fdbc274f81e80194748d8bfd971d69",
+            "eligible": false,
+            "predicted_cumulative_change_hartree": 0.0015004985799750815,
+            "rejection_reasons": [
+              "predicted-cumulative-energy-budget"
+            ],
+            "resource_delta": {
+              "cnot_count": -4,
+              "cnot_depth": 0,
+              "logical_block_count": 0,
+              "parameter_count": -1,
+              "total_depth": -11
+            }
+          },
+          {
+            "candidate_id": "candidate-v1:4d1a87a7bdec5c9a5995c45f8f39773b86e20eb88aa20f93f98cf50dd4e8711d",
+            "eligible": false,
+            "predicted_cumulative_change_hartree": 0.009821838192936371,
+            "rejection_reasons": [
+              "predicted-cumulative-energy-budget"
+            ],
+            "resource_delta": {
+              "cnot_count": -13,
+              "cnot_depth": 0,
+              "logical_block_count": -1,
+              "parameter_count": -2,
+              "total_depth": -24
+            }
+          },
+          {
+            "candidate_id": "candidate-v1:86cf795e09e9c5e0e0708ca83cd8bf0a13333452f778bd5e093c9392f11b32d6",
+            "eligible": false,
+            "predicted_cumulative_change_hartree": 0.0054494299075378535,
+            "rejection_reasons": [
+              "predicted-cumulative-energy-budget"
+            ],
+            "resource_delta": {
+              "cnot_count": 0,
+              "cnot_depth": 0,
+              "logical_block_count": 0,
+              "parameter_count": -1,
+              "total_depth": -3
+            }
+          },
+          {
+            "candidate_id": "candidate-v1:c53878b41fe0334d430d88bdbc45ebb5f1bc3eab1143b38578e92d2f984fc9d4",
+            "eligible": false,
+            "predicted_cumulative_change_hartree": 0.0014434312581432815,
+            "rejection_reasons": [
+              "predicted-cumulative-energy-budget"
+            ],
+            "resource_delta": {
+              "cnot_count": 0,
+              "cnot_depth": 0,
+              "logical_block_count": 0,
+              "parameter_count": -1,
+              "total_depth": -3
+            }
+          },
+          {
+            "candidate_id": "candidate-v1:436b6f9a209a6dd9b2c0bdc6e7df9af0c89e1f77f2438b6fff669524035beea2",
+            "eligible": false,
+            "predicted_cumulative_change_hartree": 0.005396373775949015,
+            "rejection_reasons": [
+              "predicted-cumulative-energy-budget"
+            ],
+            "resource_delta": {
+              "cnot_count": -4,
+              "cnot_depth": 0,
+              "logical_block_count": 0,
+              "parameter_count": -1,
+              "total_depth": -11
+            }
+          },
+          {
+            "candidate_id": "candidate-v1:d68e24bbf926e226938c26ab7d92fa01a8b7ab8368675aedb5adfe7cae350655",
+            "eligible": true,
+            "predicted_cumulative_change_hartree": 2.683545008776012e-05,
+            "rejection_reasons": [],
+            "resource_delta": {
+              "cnot_count": -4,
+              "cnot_depth": 0,
+              "logical_block_count": 0,
+              "parameter_count": -1,
+              "total_depth": -11
+            }
+          },
+          {
+            "candidate_id": "candidate-v1:261fd819762917c21ba86e1520295609bad3c445dfda126106be0bdc915cc695",
+            "eligible": false,
+            "predicted_cumulative_change_hartree": 0.0005064069938483464,
+            "rejection_reasons": [
+              "predicted-cumulative-energy-budget"
+            ],
+            "resource_delta": {
+              "cnot_count": -13,
+              "cnot_depth": 0,
+              "logical_block_count": -1,
+              "parameter_count": -2,
+              "total_depth": -24
+            }
+          },
+          {
+            "candidate_id": "candidate-v1:b5efd0a203aea088fbf2ce8754bdc577d756443d2f3f27a2426237793b203964",
+            "eligible": false,
+            "predicted_cumulative_change_hartree": 0.00037391140978133597,
+            "rejection_reasons": [
+              "predicted-cumulative-energy-budget"
+            ],
+            "resource_delta": {
+              "cnot_count": 0,
+              "cnot_depth": 0,
+              "logical_block_count": 0,
+              "parameter_count": -1,
+              "total_depth": -3
+            }
+          },
+          {
+            "candidate_id": "candidate-v1:28aa60d5506448ed91563a1caaf7e64a681c9390c2a0ae656e14a653c1b2f97d",
+            "eligible": false,
+            "predicted_cumulative_change_hartree": 0.00013557213279831863,
+            "rejection_reasons": [
+              "predicted-cumulative-energy-budget"
+            ],
+            "resource_delta": {
+              "cnot_count": 0,
+              "cnot_depth": 0,
+              "logical_block_count": 0,
+              "parameter_count": -1,
+              "total_depth": -3
+            }
+          },
+          {
+            "candidate_id": "candidate-v1:9bc54ebfadadd1a9fc316970a6aea309956300f402afcbae34777ecaf1b96268",
+            "eligible": false,
+            "predicted_cumulative_change_hartree": 0.00018835599669377989,
+            "rejection_reasons": [
+              "predicted-cumulative-energy-budget"
+            ],
+            "resource_delta": {
+              "cnot_count": -4,
+              "cnot_depth": 0,
+              "logical_block_count": 0,
+              "parameter_count": -1,
+              "total_depth": -11
+            }
+          },
+          {
+            "candidate_id": "candidate-v1:ccaf9d6977c042af54e10ed623dde7da5df8cadfe6cfa2f144a4a8c72e9552f4",
+            "eligible": true,
+            "predicted_cumulative_change_hartree": 8.860774395966959e-05,
+            "rejection_reasons": [],
+            "resource_delta": {
+              "cnot_count": -4,
+              "cnot_depth": 0,
+              "logical_block_count": 0,
+              "parameter_count": -1,
+              "total_depth": -11
+            }
+          },
+          {
+            "candidate_id": "candidate-v1:69ec64b828dedab2ab91080ce9034c3ff771716907e84c494435e6a11edf9c09",
+            "eligible": false,
+            "predicted_cumulative_change_hartree": 0.00034882340055725523,
+            "rejection_reasons": [
+              "predicted-cumulative-energy-budget"
+            ],
+            "resource_delta": {
+              "cnot_count": -13,
+              "cnot_depth": 0,
+              "logical_block_count": -1,
+              "parameter_count": -2,
+              "total_depth": -24
+            }
+          },
+          {
+            "candidate_id": "candidate-v1:21d0008b69c31f53d5abc4e6eec2f906ae0a0fe1a54ae9e7dc5ecf4b0271a3dd",
+            "eligible": false,
+            "predicted_cumulative_change_hartree": 0.0002400095150653446,
+            "rejection_reasons": [
+              "predicted-cumulative-energy-budget"
+            ],
+            "resource_delta": {
+              "cnot_count": 0,
+              "cnot_depth": 0,
+              "logical_block_count": 0,
+              "parameter_count": -1,
+              "total_depth": -3
+            }
+          },
+          {
+            "candidate_id": "candidate-v1:de89e59256121fe8d3e3a3acf16c8b8626562054695d783c227751e58d14818d",
+            "eligible": true,
+            "predicted_cumulative_change_hartree": 4.7980006121651964e-05,
+            "rejection_reasons": [],
+            "resource_delta": {
+              "cnot_count": 0,
+              "cnot_depth": 0,
+              "logical_block_count": 0,
+              "parameter_count": -1,
+              "total_depth": -3
+            }
+          },
+          {
+            "candidate_id": "candidate-v1:e7b587f4891c8a5bbf101c01063ebafee50cdf370e7458ecfbac56f8ce7ad2ec",
+            "eligible": false,
+            "predicted_cumulative_change_hartree": 0.00030177809388521465,
+            "rejection_reasons": [
+              "predicted-cumulative-energy-budget"
+            ],
+            "resource_delta": {
+              "cnot_count": -4,
+              "cnot_depth": 0,
+              "logical_block_count": 0,
+              "parameter_count": -1,
+              "total_depth": -11
+            }
+          },
+          {
+            "candidate_id": "candidate-v1:5e497b0da1616e0f7fd5a493a4b02d1f051763d4a52623ef9846713f8db3ae51",
+            "eligible": false,
+            "predicted_cumulative_change_hartree": 0.00017249959481929137,
+            "rejection_reasons": [
+              "predicted-cumulative-energy-budget"
+            ],
+            "resource_delta": {
+              "cnot_count": -4,
+              "cnot_depth": 0,
+              "logical_block_count": 0,
+              "parameter_count": -1,
+              "total_depth": -11
+            }
+          },
+          {
+            "candidate_id": "candidate-v1:24ac72f84d861e932d85c9a3f1ec54946b902fe50ad8b0b48ae9034d7b7796ef",
+            "eligible": false,
+            "predicted_cumulative_change_hartree": 0.03523447260099345,
+            "rejection_reasons": [
+              "predicted-cumulative-energy-budget"
+            ],
+            "resource_delta": {
+              "cnot_count": -13,
+              "cnot_depth": 0,
+              "logical_block_count": -1,
+              "parameter_count": -2,
+              "total_depth": -24
+            }
+          },
+          {
+            "candidate_id": "candidate-v1:70b1d4349733ed4dfba9f97ce812add196ff4aa6cc8ca2f01e7914995a19d325",
+            "eligible": false,
+            "predicted_cumulative_change_hartree": 0.000301356018341664,
+            "rejection_reasons": [
+              "predicted-cumulative-energy-budget"
+            ],
+            "resource_delta": {
+              "cnot_count": 0,
+              "cnot_depth": 0,
+              "logical_block_count": 0,
+              "parameter_count": -1,
+              "total_depth": -3
+            }
+          },
+          {
+            "candidate_id": "candidate-v1:b043a3e775f29314c38af94c35a1e088a422cb584a4d452e83a69ed1a0319b13",
+            "eligible": false,
+            "predicted_cumulative_change_hartree": 0.03420808395277214,
+            "rejection_reasons": [
+              "predicted-cumulative-energy-budget"
+            ],
+            "resource_delta": {
+              "cnot_count": 0,
+              "cnot_depth": 0,
+              "logical_block_count": 0,
+              "parameter_count": -1,
+              "total_depth": -3
+            }
+          },
+          {
+            "candidate_id": "candidate-v1:3ab57c6eec4b65c1248270e46a5a3ac1922dd8102bda399a7e097890558bc545",
+            "eligible": false,
+            "predicted_cumulative_change_hartree": 0.02439080521229619,
+            "rejection_reasons": [
+              "predicted-cumulative-energy-budget"
+            ],
+            "resource_delta": {
+              "cnot_count": -4,
+              "cnot_depth": 0,
+              "logical_block_count": 0,
+              "parameter_count": -1,
+              "total_depth": -11
+            }
+          },
+          {
+            "candidate_id": "candidate-v1:c7b807223dc91a7d570258db38cb0985003f6a96e430cd4c444834f19a5a28c1",
+            "eligible": false,
+            "predicted_cumulative_change_hartree": 0.014938604906172225,
+            "rejection_reasons": [
+              "predicted-cumulative-energy-budget"
+            ],
+            "resource_delta": {
+              "cnot_count": -4,
+              "cnot_depth": 0,
+              "logical_block_count": 0,
+              "parameter_count": -1,
+              "total_depth": -11
+            }
+          },
+          {
+            "candidate_id": "candidate-v1:40e5dbec0110b46777fda0e200e0a5a71f18d7623dfdd6860f54447f48491b62",
+            "eligible": false,
+            "predicted_cumulative_change_hartree": 0.031843730488262764,
+            "rejection_reasons": [
+              "predicted-cumulative-energy-budget"
+            ],
+            "resource_delta": {
+              "cnot_count": -13,
+              "cnot_depth": 0,
+              "logical_block_count": -1,
+              "parameter_count": -2,
+              "total_depth": -24
+            }
+          },
+          {
+            "candidate_id": "candidate-v1:378ad55658417c802ec9723af222d26e960723a198b0bd709acd15b52e6bb838",
+            "eligible": false,
+            "predicted_cumulative_change_hartree": 0.029168128925462212,
+            "rejection_reasons": [
+              "predicted-cumulative-energy-budget"
+            ],
+            "resource_delta": {
+              "cnot_count": 0,
+              "cnot_depth": 0,
+              "logical_block_count": 0,
+              "parameter_count": -1,
+              "total_depth": -3
+            }
+          },
+          {
+            "candidate_id": "candidate-v1:a3b3a2a56b30294a088ab0081598d9b306f8543ed34caf1c472bd054c92ffedc",
+            "eligible": true,
+            "predicted_cumulative_change_hartree": 4.813829281847226e-05,
+            "rejection_reasons": [],
+            "resource_delta": {
+              "cnot_count": 0,
+              "cnot_depth": 0,
+              "logical_block_count": 0,
+              "parameter_count": -1,
+              "total_depth": -3
+            }
+          },
+          {
+            "candidate_id": "candidate-v1:5ea0ab4a8f62cf7c7011bcb3c478cb060dd986101eade574b608f89ce4e4d0ec",
+            "eligible": false,
+            "predicted_cumulative_change_hartree": 0.007516874664135877,
+            "rejection_reasons": [
+              "predicted-cumulative-energy-budget"
+            ],
+            "resource_delta": {
+              "cnot_count": -4,
+              "cnot_depth": 0,
+              "logical_block_count": 0,
+              "parameter_count": -1,
+              "total_depth": -11
+            }
+          },
+          {
+            "candidate_id": "candidate-v1:b6a9d76a3050e9541f006e3f663e4e492b11f92120ccd2464b5c4b09a2106dda",
+            "eligible": false,
+            "predicted_cumulative_change_hartree": 0.015315461924707612,
+            "rejection_reasons": [
+              "predicted-cumulative-energy-budget"
+            ],
+            "resource_delta": {
+              "cnot_count": -4,
+              "cnot_depth": 0,
+              "logical_block_count": 0,
+              "parameter_count": -1,
+              "total_depth": -11
+            }
+          },
+          {
+            "candidate_id": "candidate-v1:1334771f370cda2d7a4a8da467c52657b8b453fde4271dbcaa4c81fe48435128",
+            "eligible": true,
+            "predicted_cumulative_change_hartree": 5.196184022661202e-05,
+            "rejection_reasons": [],
+            "resource_delta": {
+              "cnot_count": -13,
+              "cnot_depth": 0,
+              "logical_block_count": -1,
+              "parameter_count": -3,
+              "total_depth": -24
+            }
+          },
+          {
+            "candidate_id": "candidate-v1:c1fe6a417bf548367c4d081774afaeb2ec49dd3dfaf3d92dc101b43cdb2ba8db",
+            "eligible": true,
+            "predicted_cumulative_change_hartree": 2.0496920813877938e-05,
+            "rejection_reasons": [],
+            "resource_delta": {
+              "cnot_count": 0,
+              "cnot_depth": 0,
+              "logical_block_count": 0,
+              "parameter_count": -1,
+              "total_depth": 0
+            }
+          },
+          {
+            "candidate_id": "candidate-v1:2d03eb716c899cd542732941a694080aee66a0d46ad8bbce59d0cab8a51e83bb",
+            "eligible": true,
+            "predicted_cumulative_change_hartree": 2.2146275726886398e-07,
+            "rejection_reasons": [],
+            "resource_delta": {
+              "cnot_count": 0,
+              "cnot_depth": 0,
+              "logical_block_count": 0,
+              "parameter_count": -1,
+              "total_depth": 0
+            }
+          },
+          {
+            "candidate_id": "candidate-v1:7771db489bd6f565457d5fc92fb379720fbd5522176d0f610443d3e220ef2aa7",
+            "eligible": true,
+            "predicted_cumulative_change_hartree": 4.770080251994846e-05,
+            "rejection_reasons": [],
+            "resource_delta": {
+              "cnot_count": 0,
+              "cnot_depth": 0,
+              "logical_block_count": 0,
+              "parameter_count": -1,
+              "total_depth": 0
+            }
+          },
+          {
+            "candidate_id": "candidate-v1:f8adbee3ab8572b6456fbc0c67a586325da48fbc0b1f1c2b69fe141421d955af",
+            "eligible": true,
+            "predicted_cumulative_change_hartree": 4.7700802646982225e-05,
+            "rejection_reasons": [],
+            "resource_delta": {
+              "cnot_count": 0,
+              "cnot_depth": 0,
+              "logical_block_count": 0,
+              "parameter_count": -2,
+              "total_depth": -3
+            }
+          },
+          {
+            "candidate_id": "candidate-v1:88cbd52288f5271da3c36645617777394e594763f91c5bb0146e126b22bf1263",
+            "eligible": true,
+            "predicted_cumulative_change_hartree": 4.9682039856026834e-05,
+            "rejection_reasons": [],
+            "resource_delta": {
+              "cnot_count": 0,
+              "cnot_depth": 0,
+              "logical_block_count": 0,
+              "parameter_count": -2,
+              "total_depth": -3
+            }
+          },
+          {
+            "candidate_id": "candidate-v1:efbe6c27d60bb02e2957a6492d923e6d4ea05a1a8ebab0a596b7ff9ffa058eb2",
+            "eligible": true,
+            "predicted_cumulative_change_hartree": 3.271646658055297e-05,
+            "rejection_reasons": [],
+            "resource_delta": {
+              "cnot_count": 0,
+              "cnot_depth": 0,
+              "logical_block_count": 0,
+              "parameter_count": -2,
+              "total_depth": -3
+            }
+          },
+          {
+            "candidate_id": "candidate-v1:77fa7b0a736b3614607cf9418fa54fb30a0bac418eee244c98089c5d0832f177",
+            "eligible": true,
+            "predicted_cumulative_change_hartree": 4.7795635738583114e-05,
+            "rejection_reasons": [],
+            "resource_delta": {
+              "cnot_count": -4,
+              "cnot_depth": 0,
+              "logical_block_count": 0,
+              "parameter_count": -2,
+              "total_depth": -11
+            }
+          },
+          {
+            "candidate_id": "candidate-v1:9d42095072619efb650e2852138b0ad8f3f25f20bcf34b5f247898ca2a19a1e0",
+            "eligible": true,
+            "predicted_cumulative_change_hartree": 4.7901884797382165e-05,
+            "rejection_reasons": [],
+            "resource_delta": {
+              "cnot_count": -4,
+              "cnot_depth": 0,
+              "logical_block_count": 0,
+              "parameter_count": -2,
+              "total_depth": -11
+            }
+          },
+          {
+            "candidate_id": "candidate-v1:9aff27accc5c615fce0faaed55d04878d2c3890c396d38309a05050d880aad89",
+            "eligible": true,
+            "predicted_cumulative_change_hartree": 2.0497230442333205e-05,
+            "rejection_reasons": [],
+            "resource_delta": {
+              "cnot_count": -4,
+              "cnot_depth": 0,
+              "logical_block_count": 0,
+              "parameter_count": -2,
+              "total_depth": -11
+            }
+          },
+          {
+            "candidate_id": "candidate-v1:7bd3eec2a8db68a4347178e80d371cea0fc842b0e0236faac3931bfe6682f8e9",
+            "eligible": true,
+            "predicted_cumulative_change_hartree": 4.595195789938574e-05,
+            "rejection_reasons": [],
+            "resource_delta": {
+              "cnot_count": -4,
+              "cnot_depth": 0,
+              "logical_block_count": 0,
+              "parameter_count": -2,
+              "total_depth": -11
+            }
+          },
+          {
+            "candidate_id": "candidate-v1:eb0f3f0e1d61a5379bafd867bcb140b8894ae077eb550960dd23c5c359803c5a",
+            "eligible": true,
+            "predicted_cumulative_change_hartree": 3.0575213176282105e-05,
+            "rejection_reasons": [],
+            "resource_delta": {
+              "cnot_count": -4,
+              "cnot_depth": 0,
+              "logical_block_count": 0,
+              "parameter_count": -2,
+              "total_depth": -11
+            }
+          },
+          {
+            "candidate_id": "candidate-v1:469465b15872cc9d15fc3ac78c01e5212eb751dc126b0536fa04446299393694",
+            "eligible": true,
+            "predicted_cumulative_change_hartree": 5.1912222193702965e-05,
+            "rejection_reasons": [],
+            "resource_delta": {
+              "cnot_count": -4,
+              "cnot_depth": 0,
+              "logical_block_count": 0,
+              "parameter_count": -2,
+              "total_depth": -11
+            }
+          },
+          {
+            "candidate_id": "candidate-v1:156099feb59bec4a3fd7bc2f281b2a0c18db6b8f41413a45408844f1064062b1",
+            "eligible": true,
+            "predicted_cumulative_change_hartree": 5.2635588459308185e-05,
+            "rejection_reasons": [],
+            "resource_delta": {
+              "cnot_count": -13,
+              "cnot_depth": 0,
+              "logical_block_count": -1,
+              "parameter_count": -3,
+              "total_depth": -24
+            }
+          },
+          {
+            "candidate_id": "candidate-v1:06a06685cedafef0e56af59cd22c8bf94b932b29f4067be8c95f91ce4135dc1a",
+            "eligible": true,
+            "predicted_cumulative_change_hartree": 2.190656523526004e-05,
+            "rejection_reasons": [],
+            "resource_delta": {
+              "cnot_count": 0,
+              "cnot_depth": 0,
+              "logical_block_count": 0,
+              "parameter_count": -1,
+              "total_depth": 0
+            }
+          },
+          {
+            "candidate_id": "candidate-v1:f6fcfe049db3a7fa3e81b37f20f3b27ce3da79e84dd759c5fbd0745ab46c3359",
+            "eligible": true,
+            "predicted_cumulative_change_hartree": 2.53607681003921e-07,
+            "rejection_reasons": [],
+            "resource_delta": {
+              "cnot_count": 0,
+              "cnot_depth": 0,
+              "logical_block_count": 0,
+              "parameter_count": -1,
+              "total_depth": 0
+            }
+          },
+          {
+            "candidate_id": "candidate-v1:31aad38a26d05020612e0724a2c9969dcaed01a42f495705910e5da0ac405c68",
+            "eligible": true,
+            "predicted_cumulative_change_hartree": 4.7757603770096545e-05,
+            "rejection_reasons": [],
+            "resource_delta": {
+              "cnot_count": 0,
+              "cnot_depth": 0,
+              "logical_block_count": 0,
+              "parameter_count": -1,
+              "total_depth": 0
+            }
+          },
+          {
+            "candidate_id": "candidate-v1:38043152f0ed71c8e8636cf9cb79b05523410ca36df88b22874110981d895942",
+            "eligible": true,
+            "predicted_cumulative_change_hartree": 4.777816821227601e-05,
+            "rejection_reasons": [],
+            "resource_delta": {
+              "cnot_count": 0,
+              "cnot_depth": 0,
+              "logical_block_count": 0,
+              "parameter_count": -2,
+              "total_depth": -3
+            }
+          },
+          {
+            "candidate_id": "candidate-v1:1a10094b8d24949d3968a18f1ce71512e62b1d3ddc5c3c3743216bf0fc839cff",
+            "eligible": true,
+            "predicted_cumulative_change_hartree": 4.98180154813151e-05,
+            "rejection_reasons": [],
+            "resource_delta": {
+              "cnot_count": 0,
+              "cnot_depth": 0,
+              "logical_block_count": 0,
+              "parameter_count": -2,
+              "total_depth": -3
+            }
+          },
+          {
+            "candidate_id": "candidate-v1:5d1659382bcb155d918cdafcdf3ea1b9ebbd1ee654ad99d83257c656579661da",
+            "eligible": true,
+            "predicted_cumulative_change_hartree": 3.893169223343959e-05,
+            "rejection_reasons": [],
+            "resource_delta": {
+              "cnot_count": 0,
+              "cnot_depth": 0,
+              "logical_block_count": 0,
+              "parameter_count": -2,
+              "total_depth": -3
+            }
+          },
+          {
+            "candidate_id": "candidate-v1:1380221449be24bd0fea63c58bef20d5d9c12d2192ceb362f339f9621fee5600",
+            "eligible": true,
+            "predicted_cumulative_change_hartree": 4.793176213979079e-05,
+            "rejection_reasons": [],
+            "resource_delta": {
+              "cnot_count": -4,
+              "cnot_depth": 0,
+              "logical_block_count": 0,
+              "parameter_count": -2,
+              "total_depth": -11
+            }
+          },
+          {
+            "candidate_id": "candidate-v1:71f3cd1a9aef1a430ca3947ee392e77932fc6f14de463eba29684fcea6123ccb",
+            "eligible": true,
+            "predicted_cumulative_change_hartree": 4.7830155987084483e-05,
+            "rejection_reasons": [],
+            "resource_delta": {
+              "cnot_count": -4,
+              "cnot_depth": 0,
+              "logical_block_count": 0,
+              "parameter_count": -2,
+              "total_depth": -11
+            }
+          },
+          {
+            "candidate_id": "candidate-v1:3ce6682fcf92798ad2972f35c696a9acacd1c9f5cddecf1deed9c3a7ce53e9c8",
+            "eligible": true,
+            "predicted_cumulative_change_hartree": 2.2312436965878197e-05,
+            "rejection_reasons": [],
+            "resource_delta": {
+              "cnot_count": -4,
+              "cnot_depth": 0,
+              "logical_block_count": 0,
+              "parameter_count": -2,
+              "total_depth": -11
+            }
+          },
+          {
+            "candidate_id": "candidate-v1:9b8177a6447a9031cd1fe54318970405adc55941945bba55634b4f2673402104",
+            "eligible": true,
+            "predicted_cumulative_change_hartree": 4.955332841326778e-05,
+            "rejection_reasons": [],
+            "resource_delta": {
+              "cnot_count": -4,
+              "cnot_depth": 0,
+              "logical_block_count": 0,
+              "parameter_count": -2,
+              "total_depth": -11
+            }
+          },
+          {
+            "candidate_id": "candidate-v1:4fa68d11a0e55150f7a678dee8ea4401b9f09f4fc9de70500b0d327dff8d292d",
+            "eligible": true,
+            "predicted_cumulative_change_hartree": 3.266118309558284e-05,
+            "rejection_reasons": [],
+            "resource_delta": {
+              "cnot_count": -4,
+              "cnot_depth": 0,
+              "logical_block_count": 0,
+              "parameter_count": -2,
+              "total_depth": -11
+            }
+          },
+          {
+            "candidate_id": "candidate-v1:82d5924a8b39f778ec806e7969eee91fd63c01657ed73091341033da4852cc7b",
+            "eligible": true,
+            "predicted_cumulative_change_hartree": 5.222387687842318e-05,
+            "rejection_reasons": [],
+            "resource_delta": {
+              "cnot_count": -4,
+              "cnot_depth": 0,
+              "logical_block_count": 0,
+              "parameter_count": -2,
+              "total_depth": -11
+            }
+          }
+        ],
+        "chosen_candidate_id": "candidate-v1:1334771f370cda2d7a4a8da467c52657b8b453fde4271dbcaa4c81fe48435128",
+        "selector_digest": "09823d0d82b3029ff7f25eeb2d5e22a6208e4029cdcf6ba28365339cf0a62216",
+        "selector_version": "dvg-obs-selector-v1"
+      },
+      "eligible_count": 30,
+      "offline_actual_change_hartree_for_replay_audit_only": 4.440892098500626e-16,
+      "offline_actual_safe_for_replay_audit_only": true
+    }
+  ],
+  "schema_version": "1.0.0",
+  "selector_config": {
+    "candidates_per_round": 1,
+    "cumulative_energy_budget_hartree": 0.0001,
+    "evaluation_oracle_runtime_fields_forbidden": true,
+    "maximum_optimizer_fallbacks": 1,
+    "optimizer_fallback": "projection-off-once-if-primary-status-false",
+    "optimizer_warm_start": "projection-on-target-native-obs",
+    "predictor": "general_constraint_obs",
+    "primary_max_accepted_rounds": 1,
+    "require_full_resource_recount": true,
+    "require_hessian_quality_gate": true,
+    "require_semantic_validation": true,
+    "resource_lexicographic_order": [
+      "cnot_count",
+      "cnot_depth",
+      "parameter_count",
+      "logical_block_count",
+      "total_depth"
+    ],
+    "secondary_greedy_max_accepted_rounds": 4,
+    "stop_regime_after_rejected_candidate": true,
+    "version": "dvg-obs-selector-v1"
+  },
+  "selector_digest": "09823d0d82b3029ff7f25eeb2d5e22a6208e4029cdcf6ba28365339cf0a62216",
+  "selector_freeze_gate": {
+    "fci_runtime_field_present": false,
+    "general_obs_calibration_false_safe_count": 0,
+    "primary_first_accuracy_no_candidate_is_allowed": true,
+    "terminal_positive_selected_without_actual_outcome_input": true,
+    "terminal_selected_candidate_offline_safe": true
+  }
+}

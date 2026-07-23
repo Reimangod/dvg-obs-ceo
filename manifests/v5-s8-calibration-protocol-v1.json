@@ -1,0 +1,86 @@
+{
+  "schema_version": "1.0.0",
+  "protocol_id": "dvg-obs-v5-s8-calibration-protocol-v1",
+  "parent_protocol_id": "dvg-obs-v5-risk-aware-sequential-protocol-v1",
+  "parent_code_commit": "c6aa0ee2293434564c8cc8ca907d7ad5ef9afb25",
+  "study_status": "development-calibration",
+  "inputs": [
+    {
+      "case_id": "h2-1.5-iteration-1",
+      "role": "small-system-negative-control",
+      "checkpoint_path": "artifacts/s8/calibration-bundle/checkpoint-h2-1.5-iteration-1.json",
+      "checkpoint_sha256": "5e4045001b5025b58be34e5219e8eada3615a81672d050945f6a156fc883b5a7",
+      "rows_directory": "artifacts/s8/calibration-bundle/rows",
+      "row_prefix": "h2-1.5-iteration-1-",
+      "expected_row_count": 1
+    },
+    {
+      "case_id": "h4-1.5-first-chemical-accuracy",
+      "role": "small-system-boundary-control",
+      "checkpoint_path": "artifacts/s8/calibration-bundle/checkpoint-h4-1.5-first-chemical-accuracy.json",
+      "checkpoint_sha256": "e8e7cba516dce67c154257db78f6e6c9e048a0cb085c2f9db9984e9839752d6e",
+      "rows_directory": "artifacts/s8/calibration-bundle/rows",
+      "row_prefix": "h4-1.5-first-chemical-accuracy-",
+      "expected_row_count": 16
+    },
+    {
+      "case_id": "h4-1.5-iteration-12-or-convergence",
+      "role": "small-system-positive-control",
+      "checkpoint_path": "artifacts/s8-1/later-checkpoint-calibration-bundle/checkpoint-h4-1.5-iteration-12-or-convergence.json",
+      "checkpoint_sha256": "43e55458fd6ad71cb6c509a1ec7a927a180d6b1085bdf54a718c2db78af706a7",
+      "rows_directory": "artifacts/s8-1/later-checkpoint-calibration-bundle/rows",
+      "row_prefix": "h4-1.5-iteration-12-or-convergence-",
+      "expected_row_count": 62
+    },
+    {
+      "case_id": "lih-3.0",
+      "role": "held-out-development-transfer-after-small-system-choice",
+      "summary_path": "artifacts/v4.1/s6-regression/lih-3.0/summary.json",
+      "summary_sha256": "eb7a7ab26d0e1a2927477b709c854e705af1a3b5b6df8382ad453666e4627a84"
+    }
+  ],
+  "fixed_scientific_gates": {
+    "source_relative_energy_budget_hartree": 0.0001,
+    "target_gradient_infinity_max": 1e-08,
+    "constraint_residual_max": 1e-10,
+    "independent_energy_tolerance_hartree": 1e-10,
+    "componentwise_nonworse_resources": true,
+    "at_least_one_strict_physical_resource_improvement": true,
+    "actual_or_fci_energy_in_screening": false,
+    "paper_measurement_cost": null
+  },
+  "sensitivity_grid": {
+    "finite_difference_relative_step_multipliers": [0.25, 0.5, 1.0, 2.0, 4.0],
+    "base_relative_step": "float64-epsilon^(1/3)",
+    "internal_projected_secant_residual_triggers": [0.05, 0.1, 0.2],
+    "constraint_direction_coverage_triggers": [0.25, 0.5, 0.75],
+    "condition_number_triggers": [100000000.0, 10000000000.0, 1000000000000.0],
+    "beam_widths": [1, 2, 4, 8],
+    "maximum_exact_attempts": [2, 4],
+    "maximum_attempted_rounds": [1, 2, 3]
+  },
+  "ablation_matrix": {
+    "A": {"selector": "v4.1", "search": "v4.1-one-shot", "curvature": "recycled", "rounds": 1, "optimizer": "v4.1"},
+    "B": {"selector": "v5-risk-aware-pareto", "search": "v4.1-one-shot", "curvature": "recycled", "rounds": 1, "optimizer": "v4.1"},
+    "C": {"selector": "v5-risk-aware-pareto", "search": "width-1", "curvature": "recycled", "rounds": "sequential", "optimizer": "v4.1"},
+    "D": {"selector": "v5-risk-aware-pareto", "search": "multi-trajectory", "curvature": "recycled", "rounds": "sequential", "optimizer": "v4.1"},
+    "E": {"selector": "v5-risk-aware-pareto", "search": "multi-trajectory", "curvature": "conditional-hvp", "rounds": "sequential", "optimizer": "v4.1"},
+    "F": {"selector": "v5-risk-aware-pareto", "search": "multi-trajectory", "curvature": "conditional-hvp", "rounds": "sequential", "optimizer": "conditional-polishing"}
+  },
+  "decision_order": [
+    "audit-all-small-system-rows",
+    "evaluate-full-sensitivity-grid-without-dropping-negative-settings",
+    "choose-provisional-settings-from-h2-and-both-h4-controls",
+    "evaluate-lih-transfer-once-with-provisional-settings",
+    "freeze-s9-configuration-or-retain-v4.1"
+  ],
+  "adoption_rules": {
+    "one_molecule_cannot_determine_a_threshold": true,
+    "width_above_one_requires_pareto_gain_after_incremental_work": true,
+    "conditional_hvp_requires_audited_decision_change_or_false_exclusion_recovery": true,
+    "conditional_polishing_requires_audited_recovery_without_gate_relaxation": true,
+    "retain_v4_1_if_v5_has_no_resource_work_frontier_gain": true,
+    "negative_result_is_publishable_and_not_hidden": true
+  },
+  "claim_boundary": "Development-only calibration. Existing exact observations may evaluate predictors but never enter screening features; no unseen-generalization or final molecular performance claim."
+}

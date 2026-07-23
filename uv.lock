@@ -227,6 +227,9 @@ baseline = [
     { name = "pyscf" },
     { name = "qiskit" },
 ]
+calibration = [
+    { name = "matplotlib" },
+]
 test = [
     { name = "pytest" },
 ]
@@ -234,6 +237,7 @@ test = [
 [package.metadata]
 requires-dist = [
     { name = "jsonschema", specifier = "==4.23.0" },
+    { name = "matplotlib", marker = "extra == 'calibration'", specifier = "==3.10.9" },
     { name = "numpy", specifier = "==1.23.5" },
     { name = "openfermion", marker = "extra == 'baseline'", specifier = "==1.5.1" },
     { name = "openfermionpyscf", marker = "extra == 'baseline'", specifier = "==0.5" },
@@ -242,7 +246,7 @@ requires-dist = [
     { name = "qiskit", marker = "extra == 'baseline'", specifier = "==0.43.3" },
     { name = "scipy", specifier = "==1.10.1" },
 ]
-provides-extras = ["baseline", "test"]
+provides-extras = ["baseline", "test", "calibration"]
 
 [[package]]
 name = "exceptiongroup"

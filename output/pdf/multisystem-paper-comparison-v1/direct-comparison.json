@@ -1,0 +1,20 @@
+{
+  "case": "h6-1.5",
+  "comparison_level": "direct_same-molecule-distance-algorithm-and-first-accuracy-objective",
+  "delta_percent": {
+    "cnot_count": 8.251231527093596,
+    "cnot_depth": 8.51063829787234,
+    "measurement_cost": null
+  },
+  "local": {
+    "cnot_count": 879,
+    "cnot_depth": 306,
+    "measurement_cost": null
+  },
+  "paper": {
+    "cnot_count": 812,
+    "cnot_depth": 282,
+    "measurement_cost": 10857,
+    "source": "Ram\u00f4a et al. (2025), Table 1"
+  }
+}

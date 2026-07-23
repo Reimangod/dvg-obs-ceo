@@ -1,0 +1,24 @@
+{
+  "artifact_kind": "v3-s1-independent-result-audit",
+  "checks": {
+    "aggregate_energy_max": true,
+    "aggregate_fidelity_min": true,
+    "aggregate_gradient_max": true,
+    "baseline_not_reexecuted": true,
+    "candidate_ids_unique": true,
+    "case_counts": true,
+    "entry_recomputation": true,
+    "execution_tag": true,
+    "expected_result_count": true,
+    "failed_ids": true,
+    "kind_counts": true,
+    "manifest_sha256": true,
+    "overall_pass": true,
+    "paper_measurement_cost_unclaimed": true,
+    "protocol_id": true
+  },
+  "failed_checks": [],
+  "passed": true,
+  "result_sha256": "fcc9f8867d9a2125e2342900e5a05c5f39ecfc65830f4f965cef2a0e9e0490f1",
+  "schema_version": "1.0.0"
+}

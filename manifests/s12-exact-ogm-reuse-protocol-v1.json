@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "protocol_id": "dvg-obs-s12-exact-ogm-reuse-protocol-v1",
+  "execution_tag": "dvg-obs-s12-exact-ogm-reuse-protocol-v1",
+  "scope": "noiseless exact simulator measurement reuse calibration",
+  "cases": ["H2 1.5 Å one-iteration CEO* state", "LiH 3.0 Å CEO* first-chemical-accuracy state"],
+  "paired_branches": ["reuse OFF", "reuse ON"],
+  "reuse_rule": "identical Pauli, StatePreparationID, ProblemID, exact estimator, and backend; parent MeasurementContextID may differ and remains auditable",
+  "measurement_flow": "final energy Pauli terms seed the cache; identical terms in the next OGM distinct-gradient-term union may reuse them",
+  "success_conditions": [
+    "OFF and ON energy are bitwise equal",
+    "OFF and ON gradient vectors are bitwise equal",
+    "termwise energy and gradient norm match the pinned sparse-matrix evaluator within 1e-10",
+    "ON has positive cache hits and fewer fresh exact Pauli expectation kernels"
+  ],
+  "claim_boundary": [
+    "No finite-shot allocation or noisy estimator is implemented.",
+    "Fresh exact Pauli expectation kernels are not paper-equivalent Measurement Cost.",
+    "No CNOT, depth, ansatz, optimizer, pruning selector, or acceptance behavior is changed."
+  ],
+  "references": [
+    "https://doi.org/10.1038/s41534-025-01039-4",
+    "https://arxiv.org/abs/2507.16879"
+  ]
+}

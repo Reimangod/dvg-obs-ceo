@@ -1,0 +1,62 @@
+{
+  "artifact_kind": "v5-s8-calibration-protocol-audit",
+  "checks": {
+    "ablation_order_complete": true,
+    "development_only": true,
+    "fixed_energy_budget": true,
+    "fixed_gradient_gate": true,
+    "information_firewall": true,
+    "input_h2-1.5-iteration-1": true,
+    "input_h4-1.5-first-chemical-accuracy": true,
+    "input_h4-1.5-iteration-12-or-convergence": true,
+    "input_lih-3.0": true,
+    "lih_is_held_out_until_small_system_choice": true,
+    "measurement_cost_remains_null": true,
+    "parent_protocol_identity": true,
+    "protocol_identity": true,
+    "width_grid_preregistered": true
+  },
+  "claim_boundary": "Development-only calibration. Existing exact observations may evaluate predictors but never enter screening features; no unseen-generalization or final molecular performance claim.",
+  "inputs": {
+    "h2-1.5-iteration-1": {
+      "checks": {
+        "checkpoint_exists": true,
+        "checkpoint_sha256": true,
+        "row_case_identity": true,
+        "row_count": true
+      },
+      "row_count": 1,
+      "row_set_digest": "73279dc44522fae166f2cb498af0ee5fb153f9ce19b237101e4b4d6f65cb11a7"
+    },
+    "h4-1.5-first-chemical-accuracy": {
+      "checks": {
+        "checkpoint_exists": true,
+        "checkpoint_sha256": true,
+        "row_case_identity": true,
+        "row_count": true
+      },
+      "row_count": 16,
+      "row_set_digest": "26118ec32d119d27b885a16f86a112c3d857db45ee78baad995cc20eabd677b4"
+    },
+    "h4-1.5-iteration-12-or-convergence": {
+      "checks": {
+        "checkpoint_exists": true,
+        "checkpoint_sha256": true,
+        "row_case_identity": true,
+        "row_count": true
+      },
+      "row_count": 62,
+      "row_set_digest": "e239d9a3d5ad301ea5e0099fdecf16d53da3a61f2ca6a5f63c4f3c6c2b402cb5"
+    },
+    "lih-3.0": {
+      "checks": {
+        "summary_exists": true,
+        "summary_sha256": true
+      }
+    }
+  },
+  "manifest_path": "manifests/v5-s8-calibration-protocol-v1.json",
+  "manifest_sha256": "3e1f7abf80bea0904dca889689e161d9c34d84850c29d45910cd699771b0c6a1",
+  "passed": true,
+  "schema_version": "1.0.0"
+}

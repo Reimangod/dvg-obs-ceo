@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "v5-s8-lih-energy-aware-width4-v1",
+  "status": "frozen-before-execution",
+  "code_tag_to_create_before_execution": "dvg-obs-v5-s8-lih-energy-aware-width4-code-v1",
+  "entry_gate": {
+    "width2_round3_result_path": "artifacts/v5/s8/lih-energy-aware-width2-round3-v1/summary.json",
+    "width2_round3_result_sha256": "ae2c3a93d4eef86f0a7ec8df9895c712c1b0d939dd7118c822076973e91c961a",
+    "width2_round3_audit_path": "artifacts/v5/s8/lih-energy-aware-width2-round3-v1-audit.json",
+    "width2_round3_audit_sha256": "fd155e7b7762694e6d35ebe139bdbfac6c53dd50ac722172b4759d72b95edd9a"
+  },
+  "protocol": {
+    "width": 4,
+    "top_k_per_parent": 4,
+    "maximum_rounds": 3,
+    "maximum_exact_attempts": 12,
+    "endpoint_quota": 1,
+    "source_relative_energy_budget_hartree": 0.0001,
+    "beam_dominance": "resources-plus-energy",
+    "joint_catalog": true,
+    "conditional_polishing": true,
+    "threshold_relaxation": false,
+    "winner_rule_changed": false,
+    "acceptance_gates_changed": false
+  },
+  "rationale": "Width four is the smallest breadth sensitivity that exact-evaluates source candidates ranked three and four. Width eight adds no first-round candidate because the frozen selector exposes at most four unique attempts per parent.",
+  "stop_rule": "If width four does not improve the audited 58-CNOT, 8-parameter endpoint, width eight is not run and S8 freezes a negative structural-floor conclusion.",
+  "claim_boundary": "Known LiH breadth calibration only; not confirmatory evidence.",
+  "paper_measurement_cost": null
+}

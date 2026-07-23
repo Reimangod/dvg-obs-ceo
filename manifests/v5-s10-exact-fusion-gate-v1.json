@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0.0",
+  "stage": "V5-S10",
+  "status": "frozen-before-execution",
+  "extension_version": "V5.1",
+  "code_tag_to_create": "dvg-obs-v5-s10-fusion-gate-code-v1.1",
+  "hypothesis": "Registered OVP and MVP blocks built from the same parent QEs can be fused exactly when every intervening generator commutes, removing one physical OVP block without reducing variational expressivity.",
+  "candidate_family": {
+    "name": "exact-cross-iteration-OVP-to-MVP-absorption",
+    "generic_qiskit_compilation": false,
+    "floating_coefficient_inference": false,
+    "requires_registered_parent_metadata": true,
+    "requires_exact_signed_parameter_map": true,
+    "requires_operator_commutator_audit": true,
+    "requires_state_and_energy_recomputation": true,
+    "requires_physical_and_structural_resource_recount": true
+  },
+  "inputs": [
+    {
+      "case_id": "lih-3.0",
+      "checkpoint_path": "artifacts/s10/lih-3a-first-accuracy-primary-v1-2/checkpoint.json",
+      "checkpoint_sha256": "1ef38be983595fdb094f2a47287e6047193351e0eff4a7c589630ef023ad98eb"
+    },
+    {
+      "case_id": "h6-1.5",
+      "checkpoint_path": "artifacts/full-figures/ceo-star/h6-1.5/checkpoint.json",
+      "checkpoint_sha256": "2c994c6ac2d4478c7174b71b661f496c9fda8a14e3a7ca08d01e9130515fe491"
+    },
+    {
+      "case_id": "h6-3.0",
+      "checkpoint_path": "artifacts/full-figures/ceo-star/h6-3.0/checkpoint.json",
+      "checkpoint_sha256": "40a59c46b12e27551b3b156125cf1f2bd6f75ec49da1831eba13cdc27be24a88"
+    },
+    {
+      "case_id": "beh2-3.0",
+      "checkpoint_path": "artifacts/full-figures/ceo-star/beh2-3.0/checkpoint.json",
+      "checkpoint_sha256": "4344d203bbf161fd53814f1fb51af2bbc8531d7c77587a477a3654b3b1ec626c"
+    }
+  ],
+  "acceptance": {
+    "maximum_absolute_energy_drift_hartree": 1e-10,
+    "minimum_state_fidelity": 0.9999999999,
+    "maximum_operator_identity_residual": 1e-12,
+    "maximum_commutator_residual": 1e-12,
+    "parameter_reduction_required": true,
+    "cnot_reduction_required": true,
+    "all_other_guarded_resources_must_not_increase": true
+  },
+  "adoption_gate": {
+    "at_least_one_fully_certified_real_checkpoint_candidate": true,
+    "extension_remains_separate_from_v5_core": true,
+    "s11_must_retest_from_frozen_sources": true
+  },
+  "forbidden": [
+    "coefficient-only deletion claims",
+    "approximate commutation",
+    "unregistered generator merging",
+    "barrier-free full-ansatz Qiskit compilation",
+    "threshold relaxation after observing outcomes"
+  ],
+  "paper_measurement_cost": null,
+  "claim_boundary": "A positive gate proves existence and exactness of a new structural rewrite on development checkpoints; it does not establish V5.1 performance superiority."
+}

@@ -1,0 +1,242 @@
+{
+  "artifact_kind": "s12-exact-ogm-aware-measurement-reuse-probe",
+  "branches": {
+    "reuse_off": {
+      "energy_hartree": -0.9981493534714099,
+      "gradient_vector_digest": "691110c0339790dc7f20228b5d872904d5504200ee57cbe37e5928cb14fe9a36",
+      "ledger": {
+        "cache_hits": 0,
+        "enabled": false,
+        "event_ledger_digest": "cc464d2f888030be78d38afb2e278a4ae31f72458518c1efc61fa5d02eecd2bd",
+        "exact_noiseless_only": true,
+        "fresh_pauli_expectation_evaluations": 66,
+        "paper_measurement_cost": null,
+        "policy_version": "exact-pauli-cross-context-reuse-v1",
+        "requests": 66,
+        "unique_cached_records": 0
+      },
+      "maximum_gradient": 1.4253660751695207e-09,
+      "maximum_gradient_index": 4,
+      "total_gradient_norm_excluding_parents": 2.015772034851245e-09
+    },
+    "reuse_on": {
+      "energy_hartree": -0.9981493534714099,
+      "gradient_vector_digest": "691110c0339790dc7f20228b5d872904d5504200ee57cbe37e5928cb14fe9a36",
+      "ledger": {
+        "cache_hits": 8,
+        "enabled": true,
+        "event_ledger_digest": "d45adfcbbd713bfee4cd3c33b6d8409774f652f48a9ad7029865b726c5b4365d",
+        "exact_noiseless_only": true,
+        "fresh_pauli_expectation_evaluations": 58,
+        "paper_measurement_cost": null,
+        "policy_version": "exact-pauli-cross-context-reuse-v1",
+        "requests": 66,
+        "unique_cached_records": 58
+      },
+      "maximum_gradient": 1.4253660751695207e-09,
+      "maximum_gradient_index": 4,
+      "total_gradient_norm_excluding_parents": 2.015772034851245e-09
+    }
+  },
+  "case": "h2-1.5",
+  "checks": {
+    "measurement_contexts_distinct": true,
+    "official_sparse_energy_matches_source": true,
+    "reuse_has_positive_hits": true,
+    "reuse_off_on_energy_bitwise_equal": true,
+    "reuse_off_on_gradient_bitwise_equal": true,
+    "reuse_reduces_fresh_pauli_evaluations": true,
+    "state_id_same_across_contexts": true,
+    "termwise_energy_matches_official_sparse": true,
+    "termwise_gradient_norm_matches_official": false
+  },
+  "claim_boundary": [
+    "Reuse OFF and ON differ only in exact Pauli expectation caching; CEO* state and observables are unchanged.",
+    "Cross-context reuse is allowed only for an identical Pauli term under identical StatePreparationID, ProblemID, estimator, and backend.",
+    "This simulator probe counts exact Pauli expectation kernels, not shots, commuting collections, or paper-equivalent Measurement Cost.",
+    "The referenced shot-efficient method motivates energy-to-next-gradient reuse, but its finite-shot allocation is not implemented here."
+  ],
+  "execution_freeze": {
+    "head": "6002ad6bd18d896bb60a553925f87e90e38b8acb",
+    "protocol_tag": "dvg-obs-s12-exact-ogm-reuse-protocol-v1",
+    "threads": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    }
+  },
+  "failed_checks": [
+    "termwise_gradient_norm_matches_official"
+  ],
+  "identities": {
+    "energy": {
+      "measurement": {
+        "backend_context_digest": "a8a0c6b4728d7b628e64cc3c44da895b58fdcc6032e178d00067a0e7724acb81",
+        "estimator_version": "exact-statevector-pauli-v1",
+        "grouping_strategy": "termwise-exact-v1",
+        "measurement_plan_version": "energy-term-plan-v1",
+        "observable_set_digest": "73aa1294fc781e62117bb683681e3b4b1285fa30553a8dae2262b11f556af6bf",
+        "problem_id": "problem-v1:0fe7767818044a5952641952b20682143ed54e846e199e6a0aaeeb1c63332cc7",
+        "state_preparation_id": "state-v1:98291ba508e8ae3a2112bdf40108bfef574ee725361fc76adbb8fc98a6357318"
+      },
+      "measurement_context_id": "measurement-v1:0457792c673e19e0737defb91ff80e28ab0f1b07a266b5b42b3f113fec044a77",
+      "problem": {
+        "active_space": [
+          0,
+          1
+        ],
+        "basis_set": "sto-3g",
+        "fermion_to_qubit_mapping_convention": "openfermion-jordan-wigner-v1",
+        "frozen_orbitals": [],
+        "geometry_angstrom": [
+          [
+            "H",
+            [
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          [
+            "H",
+            [
+              0.0,
+              0.0,
+              1.5
+            ]
+          ]
+        ],
+        "hamiltonian_digest": "73aa1294fc781e62117bb683681e3b4b1285fa30553a8dae2262b11f556af6bf",
+        "molecule": "H2"
+      },
+      "problem_id": "problem-v1:0fe7767818044a5952641952b20682143ed54e846e199e6a0aaeeb1c63332cc7",
+      "schema_version": "1.0.0",
+      "state": {
+        "ansatz_block_structure": [
+          {
+            "generator_family": "TETRIS-layer-1",
+            "indices": [
+              4
+            ]
+          }
+        ],
+        "ansatz_indices": [
+          4
+        ],
+        "coefficient_bytes_hex": [
+          "bfd7410d798951d4"
+        ],
+        "generator_definition_digest": "b13ea4ee5355386dfc45703cea8ac1f9f19baaeb8ec197fea386edfc04095051",
+        "orbital_parameter_bytes_hex": [],
+        "qubit_mapping": "jordan-wigner",
+        "qubit_ordering": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "reference_state": [
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "state_preparation_id": "state-v1:98291ba508e8ae3a2112bdf40108bfef574ee725361fc76adbb8fc98a6357318"
+    },
+    "gradients": {
+      "measurement": {
+        "backend_context_digest": "a8a0c6b4728d7b628e64cc3c44da895b58fdcc6032e178d00067a0e7724acb81",
+        "estimator_version": "exact-statevector-pauli-v1",
+        "grouping_strategy": "ogm-distinct-pauli-union-v1",
+        "measurement_plan_version": "ogm-aware-distinct-term-plan-v1",
+        "observable_set_digest": "7e95eacef9779c6c6db486b66986f3738d72578bf0f1d719f6bfb30df16d8736",
+        "problem_id": "problem-v1:0fe7767818044a5952641952b20682143ed54e846e199e6a0aaeeb1c63332cc7",
+        "state_preparation_id": "state-v1:98291ba508e8ae3a2112bdf40108bfef574ee725361fc76adbb8fc98a6357318"
+      },
+      "measurement_context_id": "measurement-v1:3cd9c5ed8b0e24398539da687498e35700e329e1408d44cb2edb05537136145c",
+      "problem": {
+        "active_space": [
+          0,
+          1
+        ],
+        "basis_set": "sto-3g",
+        "fermion_to_qubit_mapping_convention": "openfermion-jordan-wigner-v1",
+        "frozen_orbitals": [],
+        "geometry_angstrom": [
+          [
+            "H",
+            [
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          [
+            "H",
+            [
+              0.0,
+              0.0,
+              1.5
+            ]
+          ]
+        ],
+        "hamiltonian_digest": "73aa1294fc781e62117bb683681e3b4b1285fa30553a8dae2262b11f556af6bf",
+        "molecule": "H2"
+      },
+      "problem_id": "problem-v1:0fe7767818044a5952641952b20682143ed54e846e199e6a0aaeeb1c63332cc7",
+      "schema_version": "1.0.0",
+      "state": {
+        "ansatz_block_structure": [
+          {
+            "generator_family": "TETRIS-layer-1",
+            "indices": [
+              4
+            ]
+          }
+        ],
+        "ansatz_indices": [
+          4
+        ],
+        "coefficient_bytes_hex": [
+          "bfd7410d798951d4"
+        ],
+        "generator_definition_digest": "b13ea4ee5355386dfc45703cea8ac1f9f19baaeb8ec197fea386edfc04095051",
+        "orbital_parameter_bytes_hex": [],
+        "qubit_mapping": "jordan-wigner",
+        "qubit_ordering": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "reference_state": [
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "state_preparation_id": "state-v1:98291ba508e8ae3a2112bdf40108bfef574ee725361fc76adbb8fc98a6357318"
+    }
+  },
+  "observable_inventory": {
+    "cross_context_overlap_terms": 8,
+    "energy_nonidentity_pauli_terms": 14,
+    "ogm_gradient_union_nonidentity_pauli_terms": 52,
+    "pool_operators": 6
+  },
+  "paper_measurement_cost": null,
+  "passed": false,
+  "protocol_id": "dvg-obs-s12-exact-ogm-reuse-protocol-v1",
+  "schema_version": "1.0.0",
+  "source": {
+    "path": "artifacts/s1/h2-1.5-smoke.json",
+    "sha256": "7519961f88c1a27d1531bf9e368e7392071f17915a917524e297aa46205de591"
+  },
+  "upstream": {
+    "commit": "a3f89d03e6a03c89767d3cf8ee7657a57653dda0",
+    "git_tree": "794d847f5c1be1590d93da81b905a915dfa17d13",
+    "worktree_clean": "true"
+  }
+}

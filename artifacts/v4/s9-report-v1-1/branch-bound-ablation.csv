@@ -1,0 +1,3 @@
+case_id,exhaustive_completed,branch_bound_completed,branch_bound_expanded,eligible_count,eligible_sets_equal
+h2-1.5-iteration-1,1,1,3,0,True
+h4-1.5-first-chemical-accuracy,2303,16,25,0,True

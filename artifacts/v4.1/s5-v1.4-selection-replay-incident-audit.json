@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0.0",
+  "artifact_kind": "v4.1-s5-superseded-selection-replay-audit",
+  "screening_code_commit": "ca1fbd96f005785455bc1512f0a4a1505a49495b",
+  "affected_root": "artifacts/v4.1/s5-sentinels-rerun-v4",
+  "affected_file_sha256": {
+    "h6-1.5/summary.json": "7787169414f612d6eb9bdf9866621f5907369d3f377abb32528162d5ec98adce",
+    "h6-1.5/bundle-manifest.json": "277c0b586e94e9f953b5aeef0c8ff993849dc39503a4c99f4b77be32e8b8f209",
+    "h6-3.0/summary.json": "edd44fa3a0b3d6a49d1c9806f93ce8825def3d0512eb057d858b71cd6ec36c9a",
+    "h6-3.0/bundle-manifest.json": "3ed51896ce1f298403b9fd08af755df817aaf81d4528d09e031c4b91cf3cfa32",
+    "beh2-3.0/summary.json": "b6b5df6c0828e4efd3f56f9bbb78adfb38b6987b74fb862bb62ddd91f151d094",
+    "beh2-3.0/bundle-manifest.json": "a9650a0383e18e5d81d9c0804fbf44b2d1fc38da8db094ec12b45097d5c8b339"
+  },
+  "defect": "the standalone bundles contain selected sentinels but omit the predicted-loss and full-resource table for every quality-passed selector input",
+  "scientific_selection_impact": "none-observed; the frozen runner selected four sentinels per case without actual candidate or FCI energy",
+  "auditability_impact": "material; endpoint and Pareto ordering cannot be independently replayed from the bundle alone",
+  "status": "superseded-not-final-evidence",
+  "actual_candidate_energy_evaluations": 0,
+  "recovery": "persist the complete energy-blind resource-candidate table, replay selection inside the producer and an independent audit, freeze v1.5, and rerun all cases"
+}

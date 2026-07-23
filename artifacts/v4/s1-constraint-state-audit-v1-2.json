@@ -1,0 +1,2765 @@
+{
+  "artifact_kind": "v4-s1-constraint-state-audit",
+  "candidate_count": 21,
+  "checks": {
+    "all_registered_kinds_present": true,
+    "candidate_count": true,
+    "candidate_ids_unique": true,
+    "equivalence_maps_to_one_semantic_id": true,
+    "equivalent_construction_paths_collapsed": true,
+    "exact_rref_contains_no_float": true,
+    "numerical_residuals": true,
+    "protocol_lists_supported_scope": true,
+    "registered_relations_present": true,
+    "s0_audit": true,
+    "semantic_id_maps_to_one_equivalence_class": true,
+    "semantic_primitives_exclude_candidate_labels": true
+  },
+  "claim_boundary": "Exact identity audit only; no search, energy evaluation, or performance claim.",
+  "equivalence_class_count": 17,
+  "execution_freeze": {
+    "head": "c49accc54deff100f1c945360cf38edb194d9e5a",
+    "protocol_tag": "dvg-obs-v4-s1-constraint-ir-v1.2",
+    "threads": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    }
+  },
+  "failed_checks": [],
+  "kind_counts": {
+    "block-deletion": 7,
+    "mvp-constituent-deletion": 4,
+    "mvp-to-ovp-diff": 2,
+    "mvp-to-ovp-sum": 2,
+    "mvp-to-single-qe": 4,
+    "mvp-whole-deletion": 2
+  },
+  "passed": true,
+  "records": [
+    {
+      "audit_provenance": {
+        "candidate_id": "candidate-v1:a9dbe642deb55cc69fbd01a1342ab2358430f66630037c8b84b682ec5b539f04",
+        "equivalence_class_id": "transform-v1:879f892194d0e0a4899cfe08c6f62d890c94435eece5f647bd1326e131b7ace7",
+        "kind": "block-deletion",
+        "numerical_context_digest": "69f748f1e49451734bf7346612d61c676dd29e78ca10ece392da525c8a19e8be",
+        "original_orientation": "deletion"
+      },
+      "candidate_id": "candidate-v1:a9dbe642deb55cc69fbd01a1342ab2358430f66630037c8b84b682ec5b539f04",
+      "case_id": "h2-1.5-iteration-1",
+      "equivalence_class_id": "transform-v1:879f892194d0e0a4899cfe08c6f62d890c94435eece5f647bd1326e131b7ace7",
+      "kind": "block-deletion",
+      "semantic_primitive": {
+        "exact_augmented_rref": [
+          [
+            "1",
+            "0"
+          ]
+        ],
+        "generator_normalization": "paper-era-pool-arrange-v1",
+        "generator_relation": "empty",
+        "removed_source_slots": [
+          0
+        ],
+        "source_block_id": "block-v1:e1e7edf0804d82b5b212fc2904d4ec8e0bdf5ab027f6d7c5e8e76d62191c1fb3",
+        "source_pool_indices": [
+          4
+        ],
+        "source_slots": [
+          "block-v1:e1e7edf0804d82b5b212fc2904d4ec8e0bdf5ab027f6d7c5e8e76d62191c1fb3:slot:0"
+        ],
+        "target_family": "empty",
+        "target_operator_digests": [],
+        "target_pool_indices": [],
+        "units": "radian",
+        "version": "atomic-ceo-symbolic-v1"
+      },
+      "state": {
+        "constraint_numerical_id": "constraint-numerical-v1:2f57dc69fa35077b440b559544d72eef5dc659f38a054b3734720f431e2d2bf0",
+        "constraint_semantic_id": "constraint-semantic-v1:238587c99f3608547bd758f83f6741837b844459d08518be094c829d8f7f5832",
+        "diagnostics": {
+          "exact_rank": 1,
+          "jacobian_condition_number": 1.0,
+          "jacobian_constraint_residual_infinity": 0.0,
+          "offset_constraint_residual_infinity": 0.0,
+          "source_dimension": 1,
+          "target_dimension": 0
+        },
+        "exact_system": {
+          "augmented_rref": [
+            [
+              "1",
+              "0"
+            ]
+          ],
+          "source_slots": [
+            "block-v1:e1e7edf0804d82b5b212fc2904d4ec8e0bdf5ab027f6d7c5e8e76d62191c1fb3:slot:0"
+          ],
+          "version": "constraint-semantic-v1"
+        },
+        "numerical_payload": {
+          "condition_number_float64": "3ff0000000000000",
+          "constraint_matrix_float64": [
+            [
+              "3ff0000000000000"
+            ]
+          ],
+          "constraint_rhs_float64": [
+            "0000000000000000"
+          ],
+          "jacobian_float64": [
+            []
+          ],
+          "offset_float64": [
+            "0000000000000000"
+          ],
+          "rank": 1,
+          "source_slots": [
+            "block-v1:e1e7edf0804d82b5b212fc2904d4ec8e0bdf5ab027f6d7c5e8e76d62191c1fb3:slot:0"
+          ],
+          "target_slots": [],
+          "version": "constraint-numerical-v1"
+        },
+        "transformation_primitives": [
+          {
+            "exact_augmented_rref": [
+              [
+                "1",
+                "0"
+              ]
+            ],
+            "generator_normalization": "paper-era-pool-arrange-v1",
+            "generator_relation": "empty",
+            "removed_source_slots": [
+              0
+            ],
+            "source_block_id": "block-v1:e1e7edf0804d82b5b212fc2904d4ec8e0bdf5ab027f6d7c5e8e76d62191c1fb3",
+            "source_pool_indices": [
+              4
+            ],
+            "source_slots": [
+              "block-v1:e1e7edf0804d82b5b212fc2904d4ec8e0bdf5ab027f6d7c5e8e76d62191c1fb3:slot:0"
+            ],
+            "target_family": "empty",
+            "target_operator_digests": [],
+            "target_pool_indices": [],
+            "units": "radian",
+            "version": "atomic-ceo-symbolic-v1"
+          }
+        ]
+      }
+    },
+    {
+      "audit_provenance": {
+        "candidate_id": "candidate-v1:2fbdcbc7747780b91fbfe9dedd097cd728250df2043fc8b5a57f7cc99911dd84",
+        "equivalence_class_id": "transform-v1:f3c739c2824aa6309707f37f56e5627f2c7ec76857deb8714ae4543d52786865",
+        "kind": "mvp-to-single-qe",
+        "numerical_context_digest": "7a12f5846e750f2a5b975f67b240fb64515dc44cdbc53502daf8b4da2272a998",
+        "original_orientation": "canonical-qe"
+      },
+      "candidate_id": "candidate-v1:2fbdcbc7747780b91fbfe9dedd097cd728250df2043fc8b5a57f7cc99911dd84",
+      "case_id": "h4-1.5-first-chemical-accuracy",
+      "equivalence_class_id": "transform-v1:f3c739c2824aa6309707f37f56e5627f2c7ec76857deb8714ae4543d52786865",
+      "kind": "mvp-to-single-qe",
+      "semantic_primitive": {
+        "exact_augmented_rref": [
+          [
+            "0",
+            "1",
+            "0"
+          ]
+        ],
+        "generator_normalization": "paper-era-pool-arrange-v1",
+        "generator_relation": "identity-subset",
+        "removed_source_slots": [
+          1
+        ],
+        "source_block_id": "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a",
+        "source_pool_indices": [
+          43,
+          44
+        ],
+        "source_slots": [
+          "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a:slot:0",
+          "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a:slot:1"
+        ],
+        "target_family": "single-QE",
+        "target_operator_digests": [
+          "951d91f09ea740b2e207db18dcf413fd6b8495eee4703c4a79cd76c84b1ede91"
+        ],
+        "target_pool_indices": [
+          43
+        ],
+        "units": "radian",
+        "version": "atomic-ceo-symbolic-v1"
+      },
+      "state": {
+        "constraint_numerical_id": "constraint-numerical-v1:1afab19418636aa383118740a34472584748faecd51d6ed86850f2ae87f05068",
+        "constraint_semantic_id": "constraint-semantic-v1:2b300d520ba9d66e5a8dc6525143f2b613402c4869fb62396830aa08ce30a716",
+        "diagnostics": {
+          "exact_rank": 1,
+          "jacobian_condition_number": 1.0,
+          "jacobian_constraint_residual_infinity": 0.0,
+          "offset_constraint_residual_infinity": 0.0,
+          "source_dimension": 2,
+          "target_dimension": 1
+        },
+        "exact_system": {
+          "augmented_rref": [
+            [
+              "0",
+              "1",
+              "0"
+            ]
+          ],
+          "source_slots": [
+            "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a:slot:0",
+            "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a:slot:1"
+          ],
+          "version": "constraint-semantic-v1"
+        },
+        "numerical_payload": {
+          "condition_number_float64": "3ff0000000000000",
+          "constraint_matrix_float64": [
+            [
+              "0000000000000000",
+              "3ff0000000000000"
+            ]
+          ],
+          "constraint_rhs_float64": [
+            "0000000000000000"
+          ],
+          "jacobian_float64": [
+            [
+              "3ff0000000000000"
+            ],
+            [
+              "0000000000000000"
+            ]
+          ],
+          "offset_float64": [
+            "0000000000000000",
+            "0000000000000000"
+          ],
+          "rank": 1,
+          "source_slots": [
+            "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a:slot:0",
+            "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a:slot:1"
+          ],
+          "target_slots": [
+            "target:0"
+          ],
+          "version": "constraint-numerical-v1"
+        },
+        "transformation_primitives": [
+          {
+            "exact_augmented_rref": [
+              [
+                "0",
+                "1",
+                "0"
+              ]
+            ],
+            "generator_normalization": "paper-era-pool-arrange-v1",
+            "generator_relation": "identity-subset",
+            "removed_source_slots": [
+              1
+            ],
+            "source_block_id": "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a",
+            "source_pool_indices": [
+              43,
+              44
+            ],
+            "source_slots": [
+              "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a:slot:0",
+              "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a:slot:1"
+            ],
+            "target_family": "single-QE",
+            "target_operator_digests": [
+              "951d91f09ea740b2e207db18dcf413fd6b8495eee4703c4a79cd76c84b1ede91"
+            ],
+            "target_pool_indices": [
+              43
+            ],
+            "units": "radian",
+            "version": "atomic-ceo-symbolic-v1"
+          }
+        ]
+      }
+    },
+    {
+      "audit_provenance": {
+        "candidate_id": "candidate-v1:436b6f9a209a6dd9b2c0bdc6e7df9af0c89e1f77f2438b6fff669524035beea2",
+        "equivalence_class_id": "transform-v1:a0bbb0639a22156ea8307340562ffc319fbe58b3d9a0becb3eddd76a6619c9c3",
+        "kind": "mvp-to-ovp-sum",
+        "numerical_context_digest": "26658e1b48679584929a85126bca48515652802de558275f9fd15db1622cbdd6",
+        "original_orientation": "sum"
+      },
+      "candidate_id": "candidate-v1:436b6f9a209a6dd9b2c0bdc6e7df9af0c89e1f77f2438b6fff669524035beea2",
+      "case_id": "h4-1.5-first-chemical-accuracy",
+      "equivalence_class_id": "transform-v1:a0bbb0639a22156ea8307340562ffc319fbe58b3d9a0becb3eddd76a6619c9c3",
+      "kind": "mvp-to-ovp-sum",
+      "semantic_primitive": {
+        "exact_augmented_rref": [
+          [
+            "1",
+            "-1",
+            "0"
+          ]
+        ],
+        "generator_normalization": "paper-era-pool-arrange-v1",
+        "generator_relation": "existing-ovp-sum",
+        "removed_source_slots": [],
+        "source_block_id": "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef",
+        "source_pool_indices": [
+          57,
+          58
+        ],
+        "source_slots": [
+          "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef:slot:0",
+          "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef:slot:1"
+        ],
+        "target_family": "OVP",
+        "target_operator_digests": [
+          "32b80eae7918aa316eddb96125eef70469a87f2dca4fac5fc3ebb7c80ad4e348"
+        ],
+        "target_pool_indices": [
+          138
+        ],
+        "units": "radian",
+        "version": "atomic-ceo-symbolic-v1"
+      },
+      "state": {
+        "constraint_numerical_id": "constraint-numerical-v1:3e7cf296c57c421e308886f67f2ac1f9bd68ce844365483ccfb4de45e3eff5eb",
+        "constraint_semantic_id": "constraint-semantic-v1:ab8e576070e34a35a634986a1725011dbde3bf501c37151137844e807fafb12e",
+        "diagnostics": {
+          "exact_rank": 1,
+          "jacobian_condition_number": 1.0,
+          "jacobian_constraint_residual_infinity": 0.0,
+          "offset_constraint_residual_infinity": 0.0,
+          "source_dimension": 2,
+          "target_dimension": 1
+        },
+        "exact_system": {
+          "augmented_rref": [
+            [
+              "1",
+              "-1",
+              "0"
+            ]
+          ],
+          "source_slots": [
+            "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef:slot:0",
+            "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef:slot:1"
+          ],
+          "version": "constraint-semantic-v1"
+        },
+        "numerical_payload": {
+          "condition_number_float64": "3ff0000000000000",
+          "constraint_matrix_float64": [
+            [
+              "3ff0000000000000",
+              "bff0000000000000"
+            ]
+          ],
+          "constraint_rhs_float64": [
+            "0000000000000000"
+          ],
+          "jacobian_float64": [
+            [
+              "3feffffffffffffe"
+            ],
+            [
+              "3feffffffffffffe"
+            ]
+          ],
+          "offset_float64": [
+            "0000000000000000",
+            "0000000000000000"
+          ],
+          "rank": 1,
+          "source_slots": [
+            "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef:slot:0",
+            "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef:slot:1"
+          ],
+          "target_slots": [
+            "target:0"
+          ],
+          "version": "constraint-numerical-v1"
+        },
+        "transformation_primitives": [
+          {
+            "exact_augmented_rref": [
+              [
+                "1",
+                "-1",
+                "0"
+              ]
+            ],
+            "generator_normalization": "paper-era-pool-arrange-v1",
+            "generator_relation": "existing-ovp-sum",
+            "removed_source_slots": [],
+            "source_block_id": "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef",
+            "source_pool_indices": [
+              57,
+              58
+            ],
+            "source_slots": [
+              "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef:slot:0",
+              "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef:slot:1"
+            ],
+            "target_family": "OVP",
+            "target_operator_digests": [
+              "32b80eae7918aa316eddb96125eef70469a87f2dca4fac5fc3ebb7c80ad4e348"
+            ],
+            "target_pool_indices": [
+              138
+            ],
+            "units": "radian",
+            "version": "atomic-ceo-symbolic-v1"
+          }
+        ]
+      }
+    },
+    {
+      "audit_provenance": {
+        "candidate_id": "candidate-v1:4d1a87a7bdec5c9a5995c45f8f39773b86e20eb88aa20f93f98cf50dd4e8711d",
+        "equivalence_class_id": "transform-v1:469f86a5a8205bd0154958168f23273c9dbaab7f7d82f18c3674785e7665a5c2",
+        "kind": "mvp-whole-deletion",
+        "numerical_context_digest": "26658e1b48679584929a85126bca48515652802de558275f9fd15db1622cbdd6",
+        "original_orientation": "deletion"
+      },
+      "candidate_id": "candidate-v1:4d1a87a7bdec5c9a5995c45f8f39773b86e20eb88aa20f93f98cf50dd4e8711d",
+      "case_id": "h4-1.5-first-chemical-accuracy",
+      "equivalence_class_id": "transform-v1:469f86a5a8205bd0154958168f23273c9dbaab7f7d82f18c3674785e7665a5c2",
+      "kind": "mvp-whole-deletion",
+      "semantic_primitive": {
+        "exact_augmented_rref": [
+          [
+            "1",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "1",
+            "0"
+          ]
+        ],
+        "generator_normalization": "paper-era-pool-arrange-v1",
+        "generator_relation": "empty",
+        "removed_source_slots": [
+          0,
+          1
+        ],
+        "source_block_id": "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef",
+        "source_pool_indices": [
+          57,
+          58
+        ],
+        "source_slots": [
+          "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef:slot:0",
+          "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef:slot:1"
+        ],
+        "target_family": "empty",
+        "target_operator_digests": [],
+        "target_pool_indices": [],
+        "units": "radian",
+        "version": "atomic-ceo-symbolic-v1"
+      },
+      "state": {
+        "constraint_numerical_id": "constraint-numerical-v1:85faed110a8263f33626ec64cc22597727990d8a8e5444eb4146fc6ff9106518",
+        "constraint_semantic_id": "constraint-semantic-v1:c772a2c33bab2405c10e7e30f9298fac0e857b3c973da3fb001ef48f3fdbdd04",
+        "diagnostics": {
+          "exact_rank": 2,
+          "jacobian_condition_number": 1.0,
+          "jacobian_constraint_residual_infinity": 0.0,
+          "offset_constraint_residual_infinity": 0.0,
+          "source_dimension": 2,
+          "target_dimension": 0
+        },
+        "exact_system": {
+          "augmented_rref": [
+            [
+              "1",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "1",
+              "0"
+            ]
+          ],
+          "source_slots": [
+            "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef:slot:0",
+            "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef:slot:1"
+          ],
+          "version": "constraint-semantic-v1"
+        },
+        "numerical_payload": {
+          "condition_number_float64": "3ff0000000000000",
+          "constraint_matrix_float64": [
+            [
+              "3ff0000000000000",
+              "0000000000000000"
+            ],
+            [
+              "0000000000000000",
+              "3ff0000000000000"
+            ]
+          ],
+          "constraint_rhs_float64": [
+            "0000000000000000",
+            "0000000000000000"
+          ],
+          "jacobian_float64": [
+            [],
+            []
+          ],
+          "offset_float64": [
+            "0000000000000000",
+            "0000000000000000"
+          ],
+          "rank": 2,
+          "source_slots": [
+            "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef:slot:0",
+            "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef:slot:1"
+          ],
+          "target_slots": [],
+          "version": "constraint-numerical-v1"
+        },
+        "transformation_primitives": [
+          {
+            "exact_augmented_rref": [
+              [
+                "1",
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "1",
+                "0"
+              ]
+            ],
+            "generator_normalization": "paper-era-pool-arrange-v1",
+            "generator_relation": "empty",
+            "removed_source_slots": [
+              0,
+              1
+            ],
+            "source_block_id": "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef",
+            "source_pool_indices": [
+              57,
+              58
+            ],
+            "source_slots": [
+              "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef:slot:0",
+              "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef:slot:1"
+            ],
+            "target_family": "empty",
+            "target_operator_digests": [],
+            "target_pool_indices": [],
+            "units": "radian",
+            "version": "atomic-ceo-symbolic-v1"
+          }
+        ]
+      }
+    },
+    {
+      "audit_provenance": {
+        "candidate_id": "candidate-v1:58857b6297c6ea4052c33f3596c196575f4c48f59bd1f611b3571bddf9101ce8",
+        "equivalence_class_id": "transform-v1:e279f5c41f22e1ab9f75e0882399bf5226a539188292808b5529ff21b19a55c5",
+        "kind": "block-deletion",
+        "numerical_context_digest": "e40c8799ea4d00121bf45f6e4cd4efacb40bd22828af28fd4d410f116fcc5225",
+        "original_orientation": "deletion"
+      },
+      "candidate_id": "candidate-v1:58857b6297c6ea4052c33f3596c196575f4c48f59bd1f611b3571bddf9101ce8",
+      "case_id": "h4-1.5-first-chemical-accuracy",
+      "equivalence_class_id": "transform-v1:e279f5c41f22e1ab9f75e0882399bf5226a539188292808b5529ff21b19a55c5",
+      "kind": "block-deletion",
+      "semantic_primitive": {
+        "exact_augmented_rref": [
+          [
+            "1",
+            "0"
+          ]
+        ],
+        "generator_normalization": "paper-era-pool-arrange-v1",
+        "generator_relation": "empty",
+        "removed_source_slots": [
+          0
+        ],
+        "source_block_id": "block-v1:9674fa2fb78322fc80f4cd0c7524cdac3ff3a6236204b39bdcfd4537a1372441",
+        "source_pool_indices": [
+          100
+        ],
+        "source_slots": [
+          "block-v1:9674fa2fb78322fc80f4cd0c7524cdac3ff3a6236204b39bdcfd4537a1372441:slot:0"
+        ],
+        "target_family": "empty",
+        "target_operator_digests": [],
+        "target_pool_indices": [],
+        "units": "radian",
+        "version": "atomic-ceo-symbolic-v1"
+      },
+      "state": {
+        "constraint_numerical_id": "constraint-numerical-v1:5006589122aca5b2500a3ba328d4e0b19b05a48a86e58aacdfe5bec45c965eba",
+        "constraint_semantic_id": "constraint-semantic-v1:719d2850e22b3e46a1ee11bee6abbe337970b774ed66f24e137cd0fd9bcb0cae",
+        "diagnostics": {
+          "exact_rank": 1,
+          "jacobian_condition_number": 1.0,
+          "jacobian_constraint_residual_infinity": 0.0,
+          "offset_constraint_residual_infinity": 0.0,
+          "source_dimension": 1,
+          "target_dimension": 0
+        },
+        "exact_system": {
+          "augmented_rref": [
+            [
+              "1",
+              "0"
+            ]
+          ],
+          "source_slots": [
+            "block-v1:9674fa2fb78322fc80f4cd0c7524cdac3ff3a6236204b39bdcfd4537a1372441:slot:0"
+          ],
+          "version": "constraint-semantic-v1"
+        },
+        "numerical_payload": {
+          "condition_number_float64": "3ff0000000000000",
+          "constraint_matrix_float64": [
+            [
+              "3ff0000000000000"
+            ]
+          ],
+          "constraint_rhs_float64": [
+            "0000000000000000"
+          ],
+          "jacobian_float64": [
+            []
+          ],
+          "offset_float64": [
+            "0000000000000000"
+          ],
+          "rank": 1,
+          "source_slots": [
+            "block-v1:9674fa2fb78322fc80f4cd0c7524cdac3ff3a6236204b39bdcfd4537a1372441:slot:0"
+          ],
+          "target_slots": [],
+          "version": "constraint-numerical-v1"
+        },
+        "transformation_primitives": [
+          {
+            "exact_augmented_rref": [
+              [
+                "1",
+                "0"
+              ]
+            ],
+            "generator_normalization": "paper-era-pool-arrange-v1",
+            "generator_relation": "empty",
+            "removed_source_slots": [
+              0
+            ],
+            "source_block_id": "block-v1:9674fa2fb78322fc80f4cd0c7524cdac3ff3a6236204b39bdcfd4537a1372441",
+            "source_pool_indices": [
+              100
+            ],
+            "source_slots": [
+              "block-v1:9674fa2fb78322fc80f4cd0c7524cdac3ff3a6236204b39bdcfd4537a1372441:slot:0"
+            ],
+            "target_family": "empty",
+            "target_operator_digests": [],
+            "target_pool_indices": [],
+            "units": "radian",
+            "version": "atomic-ceo-symbolic-v1"
+          }
+        ]
+      }
+    },
+    {
+      "audit_provenance": {
+        "candidate_id": "candidate-v1:5d7805f7dfc77e353809c27d3c11919946756631254aa0f75804ad48ae336551",
+        "equivalence_class_id": "transform-v1:aa96eb1cd4a711555c034594a2d893ceb4be570f1369abf5541b07b93a9fb454",
+        "kind": "block-deletion",
+        "numerical_context_digest": "2e60a705c110c2cebbf3b5ff60a178d9ddb0106ad71a9f47a109995f2a48b93e",
+        "original_orientation": "deletion"
+      },
+      "candidate_id": "candidate-v1:5d7805f7dfc77e353809c27d3c11919946756631254aa0f75804ad48ae336551",
+      "case_id": "h4-1.5-first-chemical-accuracy",
+      "equivalence_class_id": "transform-v1:aa96eb1cd4a711555c034594a2d893ceb4be570f1369abf5541b07b93a9fb454",
+      "kind": "block-deletion",
+      "semantic_primitive": {
+        "exact_augmented_rref": [
+          [
+            "1",
+            "0"
+          ]
+        ],
+        "generator_normalization": "paper-era-pool-arrange-v1",
+        "generator_relation": "empty",
+        "removed_source_slots": [
+          0
+        ],
+        "source_block_id": "block-v1:ae5a79de07f7b84d6b931a6b3514a2eab2093fac8a743f03a0a50446aee9c9b6",
+        "source_pool_indices": [
+          106
+        ],
+        "source_slots": [
+          "block-v1:ae5a79de07f7b84d6b931a6b3514a2eab2093fac8a743f03a0a50446aee9c9b6:slot:0"
+        ],
+        "target_family": "empty",
+        "target_operator_digests": [],
+        "target_pool_indices": [],
+        "units": "radian",
+        "version": "atomic-ceo-symbolic-v1"
+      },
+      "state": {
+        "constraint_numerical_id": "constraint-numerical-v1:926ae55acf52083da185bcf4bc4e0ffaf4a0539268c1f927df189728b9c5d587",
+        "constraint_semantic_id": "constraint-semantic-v1:5c1c71ac2991e4f615fbd20c6271208e7e4277d25c2911e8c8445f9c5fc03c42",
+        "diagnostics": {
+          "exact_rank": 1,
+          "jacobian_condition_number": 1.0,
+          "jacobian_constraint_residual_infinity": 0.0,
+          "offset_constraint_residual_infinity": 0.0,
+          "source_dimension": 1,
+          "target_dimension": 0
+        },
+        "exact_system": {
+          "augmented_rref": [
+            [
+              "1",
+              "0"
+            ]
+          ],
+          "source_slots": [
+            "block-v1:ae5a79de07f7b84d6b931a6b3514a2eab2093fac8a743f03a0a50446aee9c9b6:slot:0"
+          ],
+          "version": "constraint-semantic-v1"
+        },
+        "numerical_payload": {
+          "condition_number_float64": "3ff0000000000000",
+          "constraint_matrix_float64": [
+            [
+              "3ff0000000000000"
+            ]
+          ],
+          "constraint_rhs_float64": [
+            "0000000000000000"
+          ],
+          "jacobian_float64": [
+            []
+          ],
+          "offset_float64": [
+            "0000000000000000"
+          ],
+          "rank": 1,
+          "source_slots": [
+            "block-v1:ae5a79de07f7b84d6b931a6b3514a2eab2093fac8a743f03a0a50446aee9c9b6:slot:0"
+          ],
+          "target_slots": [],
+          "version": "constraint-numerical-v1"
+        },
+        "transformation_primitives": [
+          {
+            "exact_augmented_rref": [
+              [
+                "1",
+                "0"
+              ]
+            ],
+            "generator_normalization": "paper-era-pool-arrange-v1",
+            "generator_relation": "empty",
+            "removed_source_slots": [
+              0
+            ],
+            "source_block_id": "block-v1:ae5a79de07f7b84d6b931a6b3514a2eab2093fac8a743f03a0a50446aee9c9b6",
+            "source_pool_indices": [
+              106
+            ],
+            "source_slots": [
+              "block-v1:ae5a79de07f7b84d6b931a6b3514a2eab2093fac8a743f03a0a50446aee9c9b6:slot:0"
+            ],
+            "target_family": "empty",
+            "target_operator_digests": [],
+            "target_pool_indices": [],
+            "units": "radian",
+            "version": "atomic-ceo-symbolic-v1"
+          }
+        ]
+      }
+    },
+    {
+      "audit_provenance": {
+        "candidate_id": "candidate-v1:70b156419fc7f6bc31d927dea9d953a9705ccede9d044e5ae537e6ce5f8fd0e8",
+        "equivalence_class_id": "transform-v1:d46ce5ef575fdaa00d1d234867fcd9573fb5d6a6211b25979fed37f7aa3cb8a2",
+        "kind": "mvp-constituent-deletion",
+        "numerical_context_digest": "7a12f5846e750f2a5b975f67b240fb64515dc44cdbc53502daf8b4da2272a998",
+        "original_orientation": "ordered-subset"
+      },
+      "candidate_id": "candidate-v1:70b156419fc7f6bc31d927dea9d953a9705ccede9d044e5ae537e6ce5f8fd0e8",
+      "case_id": "h4-1.5-first-chemical-accuracy",
+      "equivalence_class_id": "transform-v1:d46ce5ef575fdaa00d1d234867fcd9573fb5d6a6211b25979fed37f7aa3cb8a2",
+      "kind": "mvp-constituent-deletion",
+      "semantic_primitive": {
+        "exact_augmented_rref": [
+          [
+            "1",
+            "0",
+            "0"
+          ]
+        ],
+        "generator_normalization": "paper-era-pool-arrange-v1",
+        "generator_relation": "identity-subset",
+        "removed_source_slots": [
+          0
+        ],
+        "source_block_id": "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a",
+        "source_pool_indices": [
+          43,
+          44
+        ],
+        "source_slots": [
+          "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a:slot:0",
+          "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a:slot:1"
+        ],
+        "target_family": "single-QE",
+        "target_operator_digests": [
+          "a3b7ee4223edbbdea656a6aed23c188598ded86f9f77059cbee096b9f15cad17"
+        ],
+        "target_pool_indices": [
+          44
+        ],
+        "units": "radian",
+        "version": "atomic-ceo-symbolic-v1"
+      },
+      "state": {
+        "constraint_numerical_id": "constraint-numerical-v1:b5dc9cfa3f14570d371224743cff256198fdf9449c10722f258078014a985250",
+        "constraint_semantic_id": "constraint-semantic-v1:55599c623ff9679024ff306164b3ce3e4dedf41eca8a240ad9f64347ece19590",
+        "diagnostics": {
+          "exact_rank": 1,
+          "jacobian_condition_number": 1.0,
+          "jacobian_constraint_residual_infinity": 0.0,
+          "offset_constraint_residual_infinity": 0.0,
+          "source_dimension": 2,
+          "target_dimension": 1
+        },
+        "exact_system": {
+          "augmented_rref": [
+            [
+              "1",
+              "0",
+              "0"
+            ]
+          ],
+          "source_slots": [
+            "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a:slot:0",
+            "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a:slot:1"
+          ],
+          "version": "constraint-semantic-v1"
+        },
+        "numerical_payload": {
+          "condition_number_float64": "3ff0000000000000",
+          "constraint_matrix_float64": [
+            [
+              "3ff0000000000000",
+              "0000000000000000"
+            ]
+          ],
+          "constraint_rhs_float64": [
+            "0000000000000000"
+          ],
+          "jacobian_float64": [
+            [
+              "0000000000000000"
+            ],
+            [
+              "3ff0000000000000"
+            ]
+          ],
+          "offset_float64": [
+            "0000000000000000",
+            "0000000000000000"
+          ],
+          "rank": 1,
+          "source_slots": [
+            "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a:slot:0",
+            "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a:slot:1"
+          ],
+          "target_slots": [
+            "target:0"
+          ],
+          "version": "constraint-numerical-v1"
+        },
+        "transformation_primitives": [
+          {
+            "exact_augmented_rref": [
+              [
+                "1",
+                "0",
+                "0"
+              ]
+            ],
+            "generator_normalization": "paper-era-pool-arrange-v1",
+            "generator_relation": "identity-subset",
+            "removed_source_slots": [
+              0
+            ],
+            "source_block_id": "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a",
+            "source_pool_indices": [
+              43,
+              44
+            ],
+            "source_slots": [
+              "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a:slot:0",
+              "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a:slot:1"
+            ],
+            "target_family": "single-QE",
+            "target_operator_digests": [
+              "a3b7ee4223edbbdea656a6aed23c188598ded86f9f77059cbee096b9f15cad17"
+            ],
+            "target_pool_indices": [
+              44
+            ],
+            "units": "radian",
+            "version": "atomic-ceo-symbolic-v1"
+          }
+        ]
+      }
+    },
+    {
+      "audit_provenance": {
+        "candidate_id": "candidate-v1:7f20067caa031a05345976e1024b170c50ce565c1e60805b9168e4ed0e17b548",
+        "equivalence_class_id": "transform-v1:b40d37d80ad33435bf92b7e4d52634fd4b6f6ebef6afcbc3cacd656c6a644ca3",
+        "kind": "mvp-to-ovp-sum",
+        "numerical_context_digest": "7a12f5846e750f2a5b975f67b240fb64515dc44cdbc53502daf8b4da2272a998",
+        "original_orientation": "sum"
+      },
+      "candidate_id": "candidate-v1:7f20067caa031a05345976e1024b170c50ce565c1e60805b9168e4ed0e17b548",
+      "case_id": "h4-1.5-first-chemical-accuracy",
+      "equivalence_class_id": "transform-v1:b40d37d80ad33435bf92b7e4d52634fd4b6f6ebef6afcbc3cacd656c6a644ca3",
+      "kind": "mvp-to-ovp-sum",
+      "semantic_primitive": {
+        "exact_augmented_rref": [
+          [
+            "1",
+            "-1",
+            "0"
+          ]
+        ],
+        "generator_normalization": "paper-era-pool-arrange-v1",
+        "generator_relation": "existing-ovp-sum",
+        "removed_source_slots": [],
+        "source_block_id": "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a",
+        "source_pool_indices": [
+          43,
+          44
+        ],
+        "source_slots": [
+          "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a:slot:0",
+          "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a:slot:1"
+        ],
+        "target_family": "OVP",
+        "target_operator_digests": [
+          "5f8d254c7a79d0cfa526bdd56c35cd77f04e922a8a072ecf6413454752000bcb"
+        ],
+        "target_pool_indices": [
+          124
+        ],
+        "units": "radian",
+        "version": "atomic-ceo-symbolic-v1"
+      },
+      "state": {
+        "constraint_numerical_id": "constraint-numerical-v1:bdfa5d18edc5a0c39624ead3b0a93b28eeddcc96863ecdc284902471353604bc",
+        "constraint_semantic_id": "constraint-semantic-v1:0fe4971a4e852f77ddfe7b2c3f4289f986a260076cbca29cb375ac2f21e3e5b1",
+        "diagnostics": {
+          "exact_rank": 1,
+          "jacobian_condition_number": 1.0,
+          "jacobian_constraint_residual_infinity": 0.0,
+          "offset_constraint_residual_infinity": 0.0,
+          "source_dimension": 2,
+          "target_dimension": 1
+        },
+        "exact_system": {
+          "augmented_rref": [
+            [
+              "1",
+              "-1",
+              "0"
+            ]
+          ],
+          "source_slots": [
+            "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a:slot:0",
+            "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a:slot:1"
+          ],
+          "version": "constraint-semantic-v1"
+        },
+        "numerical_payload": {
+          "condition_number_float64": "3ff0000000000000",
+          "constraint_matrix_float64": [
+            [
+              "3ff0000000000000",
+              "bff0000000000000"
+            ]
+          ],
+          "constraint_rhs_float64": [
+            "0000000000000000"
+          ],
+          "jacobian_float64": [
+            [
+              "3feffffffffffffe"
+            ],
+            [
+              "3feffffffffffffe"
+            ]
+          ],
+          "offset_float64": [
+            "0000000000000000",
+            "0000000000000000"
+          ],
+          "rank": 1,
+          "source_slots": [
+            "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a:slot:0",
+            "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a:slot:1"
+          ],
+          "target_slots": [
+            "target:0"
+          ],
+          "version": "constraint-numerical-v1"
+        },
+        "transformation_primitives": [
+          {
+            "exact_augmented_rref": [
+              [
+                "1",
+                "-1",
+                "0"
+              ]
+            ],
+            "generator_normalization": "paper-era-pool-arrange-v1",
+            "generator_relation": "existing-ovp-sum",
+            "removed_source_slots": [],
+            "source_block_id": "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a",
+            "source_pool_indices": [
+              43,
+              44
+            ],
+            "source_slots": [
+              "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a:slot:0",
+              "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a:slot:1"
+            ],
+            "target_family": "OVP",
+            "target_operator_digests": [
+              "5f8d254c7a79d0cfa526bdd56c35cd77f04e922a8a072ecf6413454752000bcb"
+            ],
+            "target_pool_indices": [
+              124
+            ],
+            "units": "radian",
+            "version": "atomic-ceo-symbolic-v1"
+          }
+        ]
+      }
+    },
+    {
+      "audit_provenance": {
+        "candidate_id": "candidate-v1:7f2a090c514c1939fe586e0a34c2257a20232ea354b9081ba42427e996117ab2",
+        "equivalence_class_id": "transform-v1:1b7187c888c191b3c061c3093c7a1c643770c0c6261c86cc098a09867603ee3c",
+        "kind": "mvp-whole-deletion",
+        "numerical_context_digest": "7a12f5846e750f2a5b975f67b240fb64515dc44cdbc53502daf8b4da2272a998",
+        "original_orientation": "deletion"
+      },
+      "candidate_id": "candidate-v1:7f2a090c514c1939fe586e0a34c2257a20232ea354b9081ba42427e996117ab2",
+      "case_id": "h4-1.5-first-chemical-accuracy",
+      "equivalence_class_id": "transform-v1:1b7187c888c191b3c061c3093c7a1c643770c0c6261c86cc098a09867603ee3c",
+      "kind": "mvp-whole-deletion",
+      "semantic_primitive": {
+        "exact_augmented_rref": [
+          [
+            "1",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "1",
+            "0"
+          ]
+        ],
+        "generator_normalization": "paper-era-pool-arrange-v1",
+        "generator_relation": "empty",
+        "removed_source_slots": [
+          0,
+          1
+        ],
+        "source_block_id": "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a",
+        "source_pool_indices": [
+          43,
+          44
+        ],
+        "source_slots": [
+          "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a:slot:0",
+          "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a:slot:1"
+        ],
+        "target_family": "empty",
+        "target_operator_digests": [],
+        "target_pool_indices": [],
+        "units": "radian",
+        "version": "atomic-ceo-symbolic-v1"
+      },
+      "state": {
+        "constraint_numerical_id": "constraint-numerical-v1:eb65bcae75a85b5d32bad5e71071bf60a2aa529f8eb8a2c442f5e55bf8119db4",
+        "constraint_semantic_id": "constraint-semantic-v1:3b4535a8bdffbc837ced2e24c0d131a298c8c450273943cd5d57431aa4d6df24",
+        "diagnostics": {
+          "exact_rank": 2,
+          "jacobian_condition_number": 1.0,
+          "jacobian_constraint_residual_infinity": 0.0,
+          "offset_constraint_residual_infinity": 0.0,
+          "source_dimension": 2,
+          "target_dimension": 0
+        },
+        "exact_system": {
+          "augmented_rref": [
+            [
+              "1",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "1",
+              "0"
+            ]
+          ],
+          "source_slots": [
+            "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a:slot:0",
+            "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a:slot:1"
+          ],
+          "version": "constraint-semantic-v1"
+        },
+        "numerical_payload": {
+          "condition_number_float64": "3ff0000000000000",
+          "constraint_matrix_float64": [
+            [
+              "3ff0000000000000",
+              "0000000000000000"
+            ],
+            [
+              "0000000000000000",
+              "3ff0000000000000"
+            ]
+          ],
+          "constraint_rhs_float64": [
+            "0000000000000000",
+            "0000000000000000"
+          ],
+          "jacobian_float64": [
+            [],
+            []
+          ],
+          "offset_float64": [
+            "0000000000000000",
+            "0000000000000000"
+          ],
+          "rank": 2,
+          "source_slots": [
+            "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a:slot:0",
+            "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a:slot:1"
+          ],
+          "target_slots": [],
+          "version": "constraint-numerical-v1"
+        },
+        "transformation_primitives": [
+          {
+            "exact_augmented_rref": [
+              [
+                "1",
+                "0",
+                "0"
+              ],
+              [
+                "0",
+                "1",
+                "0"
+              ]
+            ],
+            "generator_normalization": "paper-era-pool-arrange-v1",
+            "generator_relation": "empty",
+            "removed_source_slots": [
+              0,
+              1
+            ],
+            "source_block_id": "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a",
+            "source_pool_indices": [
+              43,
+              44
+            ],
+            "source_slots": [
+              "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a:slot:0",
+              "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a:slot:1"
+            ],
+            "target_family": "empty",
+            "target_operator_digests": [],
+            "target_pool_indices": [],
+            "units": "radian",
+            "version": "atomic-ceo-symbolic-v1"
+          }
+        ]
+      }
+    },
+    {
+      "audit_provenance": {
+        "candidate_id": "candidate-v1:86cf795e09e9c5e0e0708ca83cd8bf0a13333452f778bd5e093c9392f11b32d6",
+        "equivalence_class_id": "transform-v1:fab04776290bea2f370cd31a4822fa7fa406cfa2aa46dd8dae249f1d29a0e135",
+        "kind": "mvp-constituent-deletion",
+        "numerical_context_digest": "26658e1b48679584929a85126bca48515652802de558275f9fd15db1622cbdd6",
+        "original_orientation": "ordered-subset"
+      },
+      "candidate_id": "candidate-v1:86cf795e09e9c5e0e0708ca83cd8bf0a13333452f778bd5e093c9392f11b32d6",
+      "case_id": "h4-1.5-first-chemical-accuracy",
+      "equivalence_class_id": "transform-v1:fab04776290bea2f370cd31a4822fa7fa406cfa2aa46dd8dae249f1d29a0e135",
+      "kind": "mvp-constituent-deletion",
+      "semantic_primitive": {
+        "exact_augmented_rref": [
+          [
+            "1",
+            "0",
+            "0"
+          ]
+        ],
+        "generator_normalization": "paper-era-pool-arrange-v1",
+        "generator_relation": "identity-subset",
+        "removed_source_slots": [
+          0
+        ],
+        "source_block_id": "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef",
+        "source_pool_indices": [
+          57,
+          58
+        ],
+        "source_slots": [
+          "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef:slot:0",
+          "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef:slot:1"
+        ],
+        "target_family": "single-QE",
+        "target_operator_digests": [
+          "ae5159956b0bcc6c9e1a2c40e32336a2013b1b4ed83d55a05a8f956742536971"
+        ],
+        "target_pool_indices": [
+          58
+        ],
+        "units": "radian",
+        "version": "atomic-ceo-symbolic-v1"
+      },
+      "state": {
+        "constraint_numerical_id": "constraint-numerical-v1:4ca66f3504ca3304b42c169d2bab4f1057917b7c34bf9205de2829666891bd1b",
+        "constraint_semantic_id": "constraint-semantic-v1:6ce32a162bc9fbcf5921d274cefb30a38eb617792d74c2ddd39abcdcdcf263ac",
+        "diagnostics": {
+          "exact_rank": 1,
+          "jacobian_condition_number": 1.0,
+          "jacobian_constraint_residual_infinity": 0.0,
+          "offset_constraint_residual_infinity": 0.0,
+          "source_dimension": 2,
+          "target_dimension": 1
+        },
+        "exact_system": {
+          "augmented_rref": [
+            [
+              "1",
+              "0",
+              "0"
+            ]
+          ],
+          "source_slots": [
+            "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef:slot:0",
+            "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef:slot:1"
+          ],
+          "version": "constraint-semantic-v1"
+        },
+        "numerical_payload": {
+          "condition_number_float64": "3ff0000000000000",
+          "constraint_matrix_float64": [
+            [
+              "3ff0000000000000",
+              "0000000000000000"
+            ]
+          ],
+          "constraint_rhs_float64": [
+            "0000000000000000"
+          ],
+          "jacobian_float64": [
+            [
+              "0000000000000000"
+            ],
+            [
+              "3ff0000000000000"
+            ]
+          ],
+          "offset_float64": [
+            "0000000000000000",
+            "0000000000000000"
+          ],
+          "rank": 1,
+          "source_slots": [
+            "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef:slot:0",
+            "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef:slot:1"
+          ],
+          "target_slots": [
+            "target:0"
+          ],
+          "version": "constraint-numerical-v1"
+        },
+        "transformation_primitives": [
+          {
+            "exact_augmented_rref": [
+              [
+                "1",
+                "0",
+                "0"
+              ]
+            ],
+            "generator_normalization": "paper-era-pool-arrange-v1",
+            "generator_relation": "identity-subset",
+            "removed_source_slots": [
+              0
+            ],
+            "source_block_id": "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef",
+            "source_pool_indices": [
+              57,
+              58
+            ],
+            "source_slots": [
+              "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef:slot:0",
+              "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef:slot:1"
+            ],
+            "target_family": "single-QE",
+            "target_operator_digests": [
+              "ae5159956b0bcc6c9e1a2c40e32336a2013b1b4ed83d55a05a8f956742536971"
+            ],
+            "target_pool_indices": [
+              58
+            ],
+            "units": "radian",
+            "version": "atomic-ceo-symbolic-v1"
+          }
+        ]
+      }
+    },
+    {
+      "audit_provenance": {
+        "candidate_id": "candidate-v1:920d2dd8c375f70c51cf28bcbcf2209142fdbc274f81e80194748d8bfd971d69",
+        "equivalence_class_id": "transform-v1:5495a6e2ae0064bcccbf756dd3b32c587fc9c1945b31c258af7a2924589daf84",
+        "kind": "mvp-to-ovp-diff",
+        "numerical_context_digest": "7a12f5846e750f2a5b975f67b240fb64515dc44cdbc53502daf8b4da2272a998",
+        "original_orientation": "diff"
+      },
+      "candidate_id": "candidate-v1:920d2dd8c375f70c51cf28bcbcf2209142fdbc274f81e80194748d8bfd971d69",
+      "case_id": "h4-1.5-first-chemical-accuracy",
+      "equivalence_class_id": "transform-v1:5495a6e2ae0064bcccbf756dd3b32c587fc9c1945b31c258af7a2924589daf84",
+      "kind": "mvp-to-ovp-diff",
+      "semantic_primitive": {
+        "exact_augmented_rref": [
+          [
+            "1",
+            "1",
+            "0"
+          ]
+        ],
+        "generator_normalization": "paper-era-pool-arrange-v1",
+        "generator_relation": "existing-ovp-difference",
+        "removed_source_slots": [],
+        "source_block_id": "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a",
+        "source_pool_indices": [
+          43,
+          44
+        ],
+        "source_slots": [
+          "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a:slot:0",
+          "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a:slot:1"
+        ],
+        "target_family": "OVP",
+        "target_operator_digests": [
+          "bf95da449ebc8dbf44fa55f9ac8ed19c9a073456022730cc943826be22b6ca73"
+        ],
+        "target_pool_indices": [
+          125
+        ],
+        "units": "radian",
+        "version": "atomic-ceo-symbolic-v1"
+      },
+      "state": {
+        "constraint_numerical_id": "constraint-numerical-v1:f2df964300658bccb46d8d63b2a575e95975e783fe873451b3a71dd47937f3ff",
+        "constraint_semantic_id": "constraint-semantic-v1:2aaaeaa527b4f28801986c809399d1350b4c2f6e12a65d0a5ea7bf6811a44aa0",
+        "diagnostics": {
+          "exact_rank": 1,
+          "jacobian_condition_number": 1.0,
+          "jacobian_constraint_residual_infinity": 0.0,
+          "offset_constraint_residual_infinity": 0.0,
+          "source_dimension": 2,
+          "target_dimension": 1
+        },
+        "exact_system": {
+          "augmented_rref": [
+            [
+              "1",
+              "1",
+              "0"
+            ]
+          ],
+          "source_slots": [
+            "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a:slot:0",
+            "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a:slot:1"
+          ],
+          "version": "constraint-semantic-v1"
+        },
+        "numerical_payload": {
+          "condition_number_float64": "3ff0000000000000",
+          "constraint_matrix_float64": [
+            [
+              "3ff0000000000000",
+              "3ff0000000000000"
+            ]
+          ],
+          "constraint_rhs_float64": [
+            "0000000000000000"
+          ],
+          "jacobian_float64": [
+            [
+              "3feffffffffffffe"
+            ],
+            [
+              "bfeffffffffffffe"
+            ]
+          ],
+          "offset_float64": [
+            "0000000000000000",
+            "0000000000000000"
+          ],
+          "rank": 1,
+          "source_slots": [
+            "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a:slot:0",
+            "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a:slot:1"
+          ],
+          "target_slots": [
+            "target:0"
+          ],
+          "version": "constraint-numerical-v1"
+        },
+        "transformation_primitives": [
+          {
+            "exact_augmented_rref": [
+              [
+                "1",
+                "1",
+                "0"
+              ]
+            ],
+            "generator_normalization": "paper-era-pool-arrange-v1",
+            "generator_relation": "existing-ovp-difference",
+            "removed_source_slots": [],
+            "source_block_id": "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a",
+            "source_pool_indices": [
+              43,
+              44
+            ],
+            "source_slots": [
+              "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a:slot:0",
+              "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a:slot:1"
+            ],
+            "target_family": "OVP",
+            "target_operator_digests": [
+              "bf95da449ebc8dbf44fa55f9ac8ed19c9a073456022730cc943826be22b6ca73"
+            ],
+            "target_pool_indices": [
+              125
+            ],
+            "units": "radian",
+            "version": "atomic-ceo-symbolic-v1"
+          }
+        ]
+      }
+    },
+    {
+      "audit_provenance": {
+        "candidate_id": "candidate-v1:989a6cbf43e147a3600da39002f385667bcb3be3d35dc10d4b4d45b1edd239f6",
+        "equivalence_class_id": "transform-v1:d46ce5ef575fdaa00d1d234867fcd9573fb5d6a6211b25979fed37f7aa3cb8a2",
+        "kind": "mvp-to-single-qe",
+        "numerical_context_digest": "7a12f5846e750f2a5b975f67b240fb64515dc44cdbc53502daf8b4da2272a998",
+        "original_orientation": "canonical-qe"
+      },
+      "candidate_id": "candidate-v1:989a6cbf43e147a3600da39002f385667bcb3be3d35dc10d4b4d45b1edd239f6",
+      "case_id": "h4-1.5-first-chemical-accuracy",
+      "equivalence_class_id": "transform-v1:d46ce5ef575fdaa00d1d234867fcd9573fb5d6a6211b25979fed37f7aa3cb8a2",
+      "kind": "mvp-to-single-qe",
+      "semantic_primitive": {
+        "exact_augmented_rref": [
+          [
+            "1",
+            "0",
+            "0"
+          ]
+        ],
+        "generator_normalization": "paper-era-pool-arrange-v1",
+        "generator_relation": "identity-subset",
+        "removed_source_slots": [
+          0
+        ],
+        "source_block_id": "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a",
+        "source_pool_indices": [
+          43,
+          44
+        ],
+        "source_slots": [
+          "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a:slot:0",
+          "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a:slot:1"
+        ],
+        "target_family": "single-QE",
+        "target_operator_digests": [
+          "a3b7ee4223edbbdea656a6aed23c188598ded86f9f77059cbee096b9f15cad17"
+        ],
+        "target_pool_indices": [
+          44
+        ],
+        "units": "radian",
+        "version": "atomic-ceo-symbolic-v1"
+      },
+      "state": {
+        "constraint_numerical_id": "constraint-numerical-v1:b5dc9cfa3f14570d371224743cff256198fdf9449c10722f258078014a985250",
+        "constraint_semantic_id": "constraint-semantic-v1:55599c623ff9679024ff306164b3ce3e4dedf41eca8a240ad9f64347ece19590",
+        "diagnostics": {
+          "exact_rank": 1,
+          "jacobian_condition_number": 1.0,
+          "jacobian_constraint_residual_infinity": 0.0,
+          "offset_constraint_residual_infinity": 0.0,
+          "source_dimension": 2,
+          "target_dimension": 1
+        },
+        "exact_system": {
+          "augmented_rref": [
+            [
+              "1",
+              "0",
+              "0"
+            ]
+          ],
+          "source_slots": [
+            "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a:slot:0",
+            "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a:slot:1"
+          ],
+          "version": "constraint-semantic-v1"
+        },
+        "numerical_payload": {
+          "condition_number_float64": "3ff0000000000000",
+          "constraint_matrix_float64": [
+            [
+              "3ff0000000000000",
+              "0000000000000000"
+            ]
+          ],
+          "constraint_rhs_float64": [
+            "0000000000000000"
+          ],
+          "jacobian_float64": [
+            [
+              "0000000000000000"
+            ],
+            [
+              "3ff0000000000000"
+            ]
+          ],
+          "offset_float64": [
+            "0000000000000000",
+            "0000000000000000"
+          ],
+          "rank": 1,
+          "source_slots": [
+            "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a:slot:0",
+            "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a:slot:1"
+          ],
+          "target_slots": [
+            "target:0"
+          ],
+          "version": "constraint-numerical-v1"
+        },
+        "transformation_primitives": [
+          {
+            "exact_augmented_rref": [
+              [
+                "1",
+                "0",
+                "0"
+              ]
+            ],
+            "generator_normalization": "paper-era-pool-arrange-v1",
+            "generator_relation": "identity-subset",
+            "removed_source_slots": [
+              0
+            ],
+            "source_block_id": "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a",
+            "source_pool_indices": [
+              43,
+              44
+            ],
+            "source_slots": [
+              "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a:slot:0",
+              "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a:slot:1"
+            ],
+            "target_family": "single-QE",
+            "target_operator_digests": [
+              "a3b7ee4223edbbdea656a6aed23c188598ded86f9f77059cbee096b9f15cad17"
+            ],
+            "target_pool_indices": [
+              44
+            ],
+            "units": "radian",
+            "version": "atomic-ceo-symbolic-v1"
+          }
+        ]
+      }
+    },
+    {
+      "audit_provenance": {
+        "candidate_id": "candidate-v1:9fa58e963f34702253766deeed02aff01661fe0a3ee3b3634013d447c45214c2",
+        "equivalence_class_id": "transform-v1:66bb9c711c289dfec29f21e8d4e1acc793db5e3f042026450f5add2a8181d6a7",
+        "kind": "block-deletion",
+        "numerical_context_digest": "8ef8558fccee478dd13ecaf61f7d388a5f7b0d821627a0c5063aeb0325a7d4d8",
+        "original_orientation": "deletion"
+      },
+      "candidate_id": "candidate-v1:9fa58e963f34702253766deeed02aff01661fe0a3ee3b3634013d447c45214c2",
+      "case_id": "h4-1.5-first-chemical-accuracy",
+      "equivalence_class_id": "transform-v1:66bb9c711c289dfec29f21e8d4e1acc793db5e3f042026450f5add2a8181d6a7",
+      "kind": "block-deletion",
+      "semantic_primitive": {
+        "exact_augmented_rref": [
+          [
+            "1",
+            "0"
+          ]
+        ],
+        "generator_normalization": "paper-era-pool-arrange-v1",
+        "generator_relation": "empty",
+        "removed_source_slots": [
+          0
+        ],
+        "source_block_id": "block-v1:51639d659dd89e9785609d7427b091b1c1bfed34aa5f84c8643f92d9e4d5c046",
+        "source_pool_indices": [
+          162
+        ],
+        "source_slots": [
+          "block-v1:51639d659dd89e9785609d7427b091b1c1bfed34aa5f84c8643f92d9e4d5c046:slot:0"
+        ],
+        "target_family": "empty",
+        "target_operator_digests": [],
+        "target_pool_indices": [],
+        "units": "radian",
+        "version": "atomic-ceo-symbolic-v1"
+      },
+      "state": {
+        "constraint_numerical_id": "constraint-numerical-v1:84bfbfad62ab196002b40caf20d623f26f58dc87755723ab3500ad0112fa774d",
+        "constraint_semantic_id": "constraint-semantic-v1:4df3335e90dec79ca9b3763fcc8effca1c80cf30a76f2fcfff4b6619f09b2069",
+        "diagnostics": {
+          "exact_rank": 1,
+          "jacobian_condition_number": 1.0,
+          "jacobian_constraint_residual_infinity": 0.0,
+          "offset_constraint_residual_infinity": 0.0,
+          "source_dimension": 1,
+          "target_dimension": 0
+        },
+        "exact_system": {
+          "augmented_rref": [
+            [
+              "1",
+              "0"
+            ]
+          ],
+          "source_slots": [
+            "block-v1:51639d659dd89e9785609d7427b091b1c1bfed34aa5f84c8643f92d9e4d5c046:slot:0"
+          ],
+          "version": "constraint-semantic-v1"
+        },
+        "numerical_payload": {
+          "condition_number_float64": "3ff0000000000000",
+          "constraint_matrix_float64": [
+            [
+              "3ff0000000000000"
+            ]
+          ],
+          "constraint_rhs_float64": [
+            "0000000000000000"
+          ],
+          "jacobian_float64": [
+            []
+          ],
+          "offset_float64": [
+            "0000000000000000"
+          ],
+          "rank": 1,
+          "source_slots": [
+            "block-v1:51639d659dd89e9785609d7427b091b1c1bfed34aa5f84c8643f92d9e4d5c046:slot:0"
+          ],
+          "target_slots": [],
+          "version": "constraint-numerical-v1"
+        },
+        "transformation_primitives": [
+          {
+            "exact_augmented_rref": [
+              [
+                "1",
+                "0"
+              ]
+            ],
+            "generator_normalization": "paper-era-pool-arrange-v1",
+            "generator_relation": "empty",
+            "removed_source_slots": [
+              0
+            ],
+            "source_block_id": "block-v1:51639d659dd89e9785609d7427b091b1c1bfed34aa5f84c8643f92d9e4d5c046",
+            "source_pool_indices": [
+              162
+            ],
+            "source_slots": [
+              "block-v1:51639d659dd89e9785609d7427b091b1c1bfed34aa5f84c8643f92d9e4d5c046:slot:0"
+            ],
+            "target_family": "empty",
+            "target_operator_digests": [],
+            "target_pool_indices": [],
+            "units": "radian",
+            "version": "atomic-ceo-symbolic-v1"
+          }
+        ]
+      }
+    },
+    {
+      "audit_provenance": {
+        "candidate_id": "candidate-v1:af69fa8e99373f7d76ca6b2b4d45d396b109756ad087ed6cc28520d4c25a18a2",
+        "equivalence_class_id": "transform-v1:706759c8600a468c80019ea6c39c668ab81e44660ea8d7c1b8d9759790524a5d",
+        "kind": "block-deletion",
+        "numerical_context_digest": "3ccde235f3d51a7a0a98b6da0357cbb09e0be650bcc7b75b6a92039f94aa5dec",
+        "original_orientation": "deletion"
+      },
+      "candidate_id": "candidate-v1:af69fa8e99373f7d76ca6b2b4d45d396b109756ad087ed6cc28520d4c25a18a2",
+      "case_id": "h4-1.5-first-chemical-accuracy",
+      "equivalence_class_id": "transform-v1:706759c8600a468c80019ea6c39c668ab81e44660ea8d7c1b8d9759790524a5d",
+      "kind": "block-deletion",
+      "semantic_primitive": {
+        "exact_augmented_rref": [
+          [
+            "1",
+            "0"
+          ]
+        ],
+        "generator_normalization": "paper-era-pool-arrange-v1",
+        "generator_relation": "empty",
+        "removed_source_slots": [
+          0
+        ],
+        "source_block_id": "block-v1:7ac84c3dda8a4855e03322293b7c111ab4364a52bf2f01f8ea56e8b3ee8c7219",
+        "source_pool_indices": [
+          140
+        ],
+        "source_slots": [
+          "block-v1:7ac84c3dda8a4855e03322293b7c111ab4364a52bf2f01f8ea56e8b3ee8c7219:slot:0"
+        ],
+        "target_family": "empty",
+        "target_operator_digests": [],
+        "target_pool_indices": [],
+        "units": "radian",
+        "version": "atomic-ceo-symbolic-v1"
+      },
+      "state": {
+        "constraint_numerical_id": "constraint-numerical-v1:26f27a96a52d1b81d191bd07da4d1fef16c27cf2439d0d875d01a41e1c82ad80",
+        "constraint_semantic_id": "constraint-semantic-v1:e09adecdde53d3df1e257dff65c26406f11d8357a72cbfa60fcff1cdbd6fb245",
+        "diagnostics": {
+          "exact_rank": 1,
+          "jacobian_condition_number": 1.0,
+          "jacobian_constraint_residual_infinity": 0.0,
+          "offset_constraint_residual_infinity": 0.0,
+          "source_dimension": 1,
+          "target_dimension": 0
+        },
+        "exact_system": {
+          "augmented_rref": [
+            [
+              "1",
+              "0"
+            ]
+          ],
+          "source_slots": [
+            "block-v1:7ac84c3dda8a4855e03322293b7c111ab4364a52bf2f01f8ea56e8b3ee8c7219:slot:0"
+          ],
+          "version": "constraint-semantic-v1"
+        },
+        "numerical_payload": {
+          "condition_number_float64": "3ff0000000000000",
+          "constraint_matrix_float64": [
+            [
+              "3ff0000000000000"
+            ]
+          ],
+          "constraint_rhs_float64": [
+            "0000000000000000"
+          ],
+          "jacobian_float64": [
+            []
+          ],
+          "offset_float64": [
+            "0000000000000000"
+          ],
+          "rank": 1,
+          "source_slots": [
+            "block-v1:7ac84c3dda8a4855e03322293b7c111ab4364a52bf2f01f8ea56e8b3ee8c7219:slot:0"
+          ],
+          "target_slots": [],
+          "version": "constraint-numerical-v1"
+        },
+        "transformation_primitives": [
+          {
+            "exact_augmented_rref": [
+              [
+                "1",
+                "0"
+              ]
+            ],
+            "generator_normalization": "paper-era-pool-arrange-v1",
+            "generator_relation": "empty",
+            "removed_source_slots": [
+              0
+            ],
+            "source_block_id": "block-v1:7ac84c3dda8a4855e03322293b7c111ab4364a52bf2f01f8ea56e8b3ee8c7219",
+            "source_pool_indices": [
+              140
+            ],
+            "source_slots": [
+              "block-v1:7ac84c3dda8a4855e03322293b7c111ab4364a52bf2f01f8ea56e8b3ee8c7219:slot:0"
+            ],
+            "target_family": "empty",
+            "target_operator_digests": [],
+            "target_pool_indices": [],
+            "units": "radian",
+            "version": "atomic-ceo-symbolic-v1"
+          }
+        ]
+      }
+    },
+    {
+      "audit_provenance": {
+        "candidate_id": "candidate-v1:b577a7dab4c621ffc581b0eeba887693389da8b579ba9e7b436697f2f8995e78",
+        "equivalence_class_id": "transform-v1:fab04776290bea2f370cd31a4822fa7fa406cfa2aa46dd8dae249f1d29a0e135",
+        "kind": "mvp-to-single-qe",
+        "numerical_context_digest": "26658e1b48679584929a85126bca48515652802de558275f9fd15db1622cbdd6",
+        "original_orientation": "canonical-qe"
+      },
+      "candidate_id": "candidate-v1:b577a7dab4c621ffc581b0eeba887693389da8b579ba9e7b436697f2f8995e78",
+      "case_id": "h4-1.5-first-chemical-accuracy",
+      "equivalence_class_id": "transform-v1:fab04776290bea2f370cd31a4822fa7fa406cfa2aa46dd8dae249f1d29a0e135",
+      "kind": "mvp-to-single-qe",
+      "semantic_primitive": {
+        "exact_augmented_rref": [
+          [
+            "1",
+            "0",
+            "0"
+          ]
+        ],
+        "generator_normalization": "paper-era-pool-arrange-v1",
+        "generator_relation": "identity-subset",
+        "removed_source_slots": [
+          0
+        ],
+        "source_block_id": "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef",
+        "source_pool_indices": [
+          57,
+          58
+        ],
+        "source_slots": [
+          "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef:slot:0",
+          "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef:slot:1"
+        ],
+        "target_family": "single-QE",
+        "target_operator_digests": [
+          "ae5159956b0bcc6c9e1a2c40e32336a2013b1b4ed83d55a05a8f956742536971"
+        ],
+        "target_pool_indices": [
+          58
+        ],
+        "units": "radian",
+        "version": "atomic-ceo-symbolic-v1"
+      },
+      "state": {
+        "constraint_numerical_id": "constraint-numerical-v1:4ca66f3504ca3304b42c169d2bab4f1057917b7c34bf9205de2829666891bd1b",
+        "constraint_semantic_id": "constraint-semantic-v1:6ce32a162bc9fbcf5921d274cefb30a38eb617792d74c2ddd39abcdcdcf263ac",
+        "diagnostics": {
+          "exact_rank": 1,
+          "jacobian_condition_number": 1.0,
+          "jacobian_constraint_residual_infinity": 0.0,
+          "offset_constraint_residual_infinity": 0.0,
+          "source_dimension": 2,
+          "target_dimension": 1
+        },
+        "exact_system": {
+          "augmented_rref": [
+            [
+              "1",
+              "0",
+              "0"
+            ]
+          ],
+          "source_slots": [
+            "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef:slot:0",
+            "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef:slot:1"
+          ],
+          "version": "constraint-semantic-v1"
+        },
+        "numerical_payload": {
+          "condition_number_float64": "3ff0000000000000",
+          "constraint_matrix_float64": [
+            [
+              "3ff0000000000000",
+              "0000000000000000"
+            ]
+          ],
+          "constraint_rhs_float64": [
+            "0000000000000000"
+          ],
+          "jacobian_float64": [
+            [
+              "0000000000000000"
+            ],
+            [
+              "3ff0000000000000"
+            ]
+          ],
+          "offset_float64": [
+            "0000000000000000",
+            "0000000000000000"
+          ],
+          "rank": 1,
+          "source_slots": [
+            "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef:slot:0",
+            "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef:slot:1"
+          ],
+          "target_slots": [
+            "target:0"
+          ],
+          "version": "constraint-numerical-v1"
+        },
+        "transformation_primitives": [
+          {
+            "exact_augmented_rref": [
+              [
+                "1",
+                "0",
+                "0"
+              ]
+            ],
+            "generator_normalization": "paper-era-pool-arrange-v1",
+            "generator_relation": "identity-subset",
+            "removed_source_slots": [
+              0
+            ],
+            "source_block_id": "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef",
+            "source_pool_indices": [
+              57,
+              58
+            ],
+            "source_slots": [
+              "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef:slot:0",
+              "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef:slot:1"
+            ],
+            "target_family": "single-QE",
+            "target_operator_digests": [
+              "ae5159956b0bcc6c9e1a2c40e32336a2013b1b4ed83d55a05a8f956742536971"
+            ],
+            "target_pool_indices": [
+              58
+            ],
+            "units": "radian",
+            "version": "atomic-ceo-symbolic-v1"
+          }
+        ]
+      }
+    },
+    {
+      "audit_provenance": {
+        "candidate_id": "candidate-v1:c53878b41fe0334d430d88bdbc45ebb5f1bc3eab1143b38578e92d2f984fc9d4",
+        "equivalence_class_id": "transform-v1:b109de720bc3ca77c9c3af966d968751bd546717cff8546bd5eae67119673340",
+        "kind": "mvp-constituent-deletion",
+        "numerical_context_digest": "26658e1b48679584929a85126bca48515652802de558275f9fd15db1622cbdd6",
+        "original_orientation": "ordered-subset"
+      },
+      "candidate_id": "candidate-v1:c53878b41fe0334d430d88bdbc45ebb5f1bc3eab1143b38578e92d2f984fc9d4",
+      "case_id": "h4-1.5-first-chemical-accuracy",
+      "equivalence_class_id": "transform-v1:b109de720bc3ca77c9c3af966d968751bd546717cff8546bd5eae67119673340",
+      "kind": "mvp-constituent-deletion",
+      "semantic_primitive": {
+        "exact_augmented_rref": [
+          [
+            "0",
+            "1",
+            "0"
+          ]
+        ],
+        "generator_normalization": "paper-era-pool-arrange-v1",
+        "generator_relation": "identity-subset",
+        "removed_source_slots": [
+          1
+        ],
+        "source_block_id": "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef",
+        "source_pool_indices": [
+          57,
+          58
+        ],
+        "source_slots": [
+          "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef:slot:0",
+          "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef:slot:1"
+        ],
+        "target_family": "single-QE",
+        "target_operator_digests": [
+          "fab962e9ec1325fd80b1f62055b0ab844165ab2907f9c5fe9e686e3ab77d64ad"
+        ],
+        "target_pool_indices": [
+          57
+        ],
+        "units": "radian",
+        "version": "atomic-ceo-symbolic-v1"
+      },
+      "state": {
+        "constraint_numerical_id": "constraint-numerical-v1:a8157fa6029d3d17bc5624c0ea5685ebd6427f690592d23287d8bd4c2fceb420",
+        "constraint_semantic_id": "constraint-semantic-v1:5a3823e86372e85239e03023d6e527d271c98cfa0afc422c0b49fd4d202263c0",
+        "diagnostics": {
+          "exact_rank": 1,
+          "jacobian_condition_number": 1.0,
+          "jacobian_constraint_residual_infinity": 0.0,
+          "offset_constraint_residual_infinity": 0.0,
+          "source_dimension": 2,
+          "target_dimension": 1
+        },
+        "exact_system": {
+          "augmented_rref": [
+            [
+              "0",
+              "1",
+              "0"
+            ]
+          ],
+          "source_slots": [
+            "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef:slot:0",
+            "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef:slot:1"
+          ],
+          "version": "constraint-semantic-v1"
+        },
+        "numerical_payload": {
+          "condition_number_float64": "3ff0000000000000",
+          "constraint_matrix_float64": [
+            [
+              "0000000000000000",
+              "3ff0000000000000"
+            ]
+          ],
+          "constraint_rhs_float64": [
+            "0000000000000000"
+          ],
+          "jacobian_float64": [
+            [
+              "3ff0000000000000"
+            ],
+            [
+              "0000000000000000"
+            ]
+          ],
+          "offset_float64": [
+            "0000000000000000",
+            "0000000000000000"
+          ],
+          "rank": 1,
+          "source_slots": [
+            "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef:slot:0",
+            "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef:slot:1"
+          ],
+          "target_slots": [
+            "target:0"
+          ],
+          "version": "constraint-numerical-v1"
+        },
+        "transformation_primitives": [
+          {
+            "exact_augmented_rref": [
+              [
+                "0",
+                "1",
+                "0"
+              ]
+            ],
+            "generator_normalization": "paper-era-pool-arrange-v1",
+            "generator_relation": "identity-subset",
+            "removed_source_slots": [
+              1
+            ],
+            "source_block_id": "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef",
+            "source_pool_indices": [
+              57,
+              58
+            ],
+            "source_slots": [
+              "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef:slot:0",
+              "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef:slot:1"
+            ],
+            "target_family": "single-QE",
+            "target_operator_digests": [
+              "fab962e9ec1325fd80b1f62055b0ab844165ab2907f9c5fe9e686e3ab77d64ad"
+            ],
+            "target_pool_indices": [
+              57
+            ],
+            "units": "radian",
+            "version": "atomic-ceo-symbolic-v1"
+          }
+        ]
+      }
+    },
+    {
+      "audit_provenance": {
+        "candidate_id": "candidate-v1:cda61e108c1a97bc27e74619bb1e9e8f74a4d305d3fbabaca0f72956a3ee966f",
+        "equivalence_class_id": "transform-v1:b109de720bc3ca77c9c3af966d968751bd546717cff8546bd5eae67119673340",
+        "kind": "mvp-to-single-qe",
+        "numerical_context_digest": "26658e1b48679584929a85126bca48515652802de558275f9fd15db1622cbdd6",
+        "original_orientation": "canonical-qe"
+      },
+      "candidate_id": "candidate-v1:cda61e108c1a97bc27e74619bb1e9e8f74a4d305d3fbabaca0f72956a3ee966f",
+      "case_id": "h4-1.5-first-chemical-accuracy",
+      "equivalence_class_id": "transform-v1:b109de720bc3ca77c9c3af966d968751bd546717cff8546bd5eae67119673340",
+      "kind": "mvp-to-single-qe",
+      "semantic_primitive": {
+        "exact_augmented_rref": [
+          [
+            "0",
+            "1",
+            "0"
+          ]
+        ],
+        "generator_normalization": "paper-era-pool-arrange-v1",
+        "generator_relation": "identity-subset",
+        "removed_source_slots": [
+          1
+        ],
+        "source_block_id": "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef",
+        "source_pool_indices": [
+          57,
+          58
+        ],
+        "source_slots": [
+          "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef:slot:0",
+          "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef:slot:1"
+        ],
+        "target_family": "single-QE",
+        "target_operator_digests": [
+          "fab962e9ec1325fd80b1f62055b0ab844165ab2907f9c5fe9e686e3ab77d64ad"
+        ],
+        "target_pool_indices": [
+          57
+        ],
+        "units": "radian",
+        "version": "atomic-ceo-symbolic-v1"
+      },
+      "state": {
+        "constraint_numerical_id": "constraint-numerical-v1:a8157fa6029d3d17bc5624c0ea5685ebd6427f690592d23287d8bd4c2fceb420",
+        "constraint_semantic_id": "constraint-semantic-v1:5a3823e86372e85239e03023d6e527d271c98cfa0afc422c0b49fd4d202263c0",
+        "diagnostics": {
+          "exact_rank": 1,
+          "jacobian_condition_number": 1.0,
+          "jacobian_constraint_residual_infinity": 0.0,
+          "offset_constraint_residual_infinity": 0.0,
+          "source_dimension": 2,
+          "target_dimension": 1
+        },
+        "exact_system": {
+          "augmented_rref": [
+            [
+              "0",
+              "1",
+              "0"
+            ]
+          ],
+          "source_slots": [
+            "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef:slot:0",
+            "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef:slot:1"
+          ],
+          "version": "constraint-semantic-v1"
+        },
+        "numerical_payload": {
+          "condition_number_float64": "3ff0000000000000",
+          "constraint_matrix_float64": [
+            [
+              "0000000000000000",
+              "3ff0000000000000"
+            ]
+          ],
+          "constraint_rhs_float64": [
+            "0000000000000000"
+          ],
+          "jacobian_float64": [
+            [
+              "3ff0000000000000"
+            ],
+            [
+              "0000000000000000"
+            ]
+          ],
+          "offset_float64": [
+            "0000000000000000",
+            "0000000000000000"
+          ],
+          "rank": 1,
+          "source_slots": [
+            "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef:slot:0",
+            "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef:slot:1"
+          ],
+          "target_slots": [
+            "target:0"
+          ],
+          "version": "constraint-numerical-v1"
+        },
+        "transformation_primitives": [
+          {
+            "exact_augmented_rref": [
+              [
+                "0",
+                "1",
+                "0"
+              ]
+            ],
+            "generator_normalization": "paper-era-pool-arrange-v1",
+            "generator_relation": "identity-subset",
+            "removed_source_slots": [
+              1
+            ],
+            "source_block_id": "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef",
+            "source_pool_indices": [
+              57,
+              58
+            ],
+            "source_slots": [
+              "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef:slot:0",
+              "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef:slot:1"
+            ],
+            "target_family": "single-QE",
+            "target_operator_digests": [
+              "fab962e9ec1325fd80b1f62055b0ab844165ab2907f9c5fe9e686e3ab77d64ad"
+            ],
+            "target_pool_indices": [
+              57
+            ],
+            "units": "radian",
+            "version": "atomic-ceo-symbolic-v1"
+          }
+        ]
+      }
+    },
+    {
+      "audit_provenance": {
+        "candidate_id": "candidate-v1:d23aa90310d38b46684404e6b5d8c53f0297d5b46b7441cdd2908c7ed224d799",
+        "equivalence_class_id": "transform-v1:f069b4c4d8767a83a78df364435d6bd1f9bff104dce9b43d24795ffe8020b321",
+        "kind": "block-deletion",
+        "numerical_context_digest": "f390ffe46ad5c915818d3147f137775c2af315010baddf43ab5a00500b10ff8e",
+        "original_orientation": "deletion"
+      },
+      "candidate_id": "candidate-v1:d23aa90310d38b46684404e6b5d8c53f0297d5b46b7441cdd2908c7ed224d799",
+      "case_id": "h4-1.5-first-chemical-accuracy",
+      "equivalence_class_id": "transform-v1:f069b4c4d8767a83a78df364435d6bd1f9bff104dce9b43d24795ffe8020b321",
+      "kind": "block-deletion",
+      "semantic_primitive": {
+        "exact_augmented_rref": [
+          [
+            "1",
+            "0"
+          ]
+        ],
+        "generator_normalization": "paper-era-pool-arrange-v1",
+        "generator_relation": "empty",
+        "removed_source_slots": [
+          0
+        ],
+        "source_block_id": "block-v1:ab4f6bad45532f11dcf3494beb153f33e6fbabea4bf4f9f8496bdd092912eb7d",
+        "source_pool_indices": [
+          122
+        ],
+        "source_slots": [
+          "block-v1:ab4f6bad45532f11dcf3494beb153f33e6fbabea4bf4f9f8496bdd092912eb7d:slot:0"
+        ],
+        "target_family": "empty",
+        "target_operator_digests": [],
+        "target_pool_indices": [],
+        "units": "radian",
+        "version": "atomic-ceo-symbolic-v1"
+      },
+      "state": {
+        "constraint_numerical_id": "constraint-numerical-v1:57fedf109b7b7e78ca86282411aba966002f39f255203c877989c8a88099c522",
+        "constraint_semantic_id": "constraint-semantic-v1:556a90c5d2ca717f52f931a8dc6db25dfcc275316505e95b85feff59b8205a98",
+        "diagnostics": {
+          "exact_rank": 1,
+          "jacobian_condition_number": 1.0,
+          "jacobian_constraint_residual_infinity": 0.0,
+          "offset_constraint_residual_infinity": 0.0,
+          "source_dimension": 1,
+          "target_dimension": 0
+        },
+        "exact_system": {
+          "augmented_rref": [
+            [
+              "1",
+              "0"
+            ]
+          ],
+          "source_slots": [
+            "block-v1:ab4f6bad45532f11dcf3494beb153f33e6fbabea4bf4f9f8496bdd092912eb7d:slot:0"
+          ],
+          "version": "constraint-semantic-v1"
+        },
+        "numerical_payload": {
+          "condition_number_float64": "3ff0000000000000",
+          "constraint_matrix_float64": [
+            [
+              "3ff0000000000000"
+            ]
+          ],
+          "constraint_rhs_float64": [
+            "0000000000000000"
+          ],
+          "jacobian_float64": [
+            []
+          ],
+          "offset_float64": [
+            "0000000000000000"
+          ],
+          "rank": 1,
+          "source_slots": [
+            "block-v1:ab4f6bad45532f11dcf3494beb153f33e6fbabea4bf4f9f8496bdd092912eb7d:slot:0"
+          ],
+          "target_slots": [],
+          "version": "constraint-numerical-v1"
+        },
+        "transformation_primitives": [
+          {
+            "exact_augmented_rref": [
+              [
+                "1",
+                "0"
+              ]
+            ],
+            "generator_normalization": "paper-era-pool-arrange-v1",
+            "generator_relation": "empty",
+            "removed_source_slots": [
+              0
+            ],
+            "source_block_id": "block-v1:ab4f6bad45532f11dcf3494beb153f33e6fbabea4bf4f9f8496bdd092912eb7d",
+            "source_pool_indices": [
+              122
+            ],
+            "source_slots": [
+              "block-v1:ab4f6bad45532f11dcf3494beb153f33e6fbabea4bf4f9f8496bdd092912eb7d:slot:0"
+            ],
+            "target_family": "empty",
+            "target_operator_digests": [],
+            "target_pool_indices": [],
+            "units": "radian",
+            "version": "atomic-ceo-symbolic-v1"
+          }
+        ]
+      }
+    },
+    {
+      "audit_provenance": {
+        "candidate_id": "candidate-v1:d68e24bbf926e226938c26ab7d92fa01a8b7ab8368675aedb5adfe7cae350655",
+        "equivalence_class_id": "transform-v1:341a26469e49718a6efea945ea55bbe86b4465a5673caff224572e149e68624a",
+        "kind": "mvp-to-ovp-diff",
+        "numerical_context_digest": "26658e1b48679584929a85126bca48515652802de558275f9fd15db1622cbdd6",
+        "original_orientation": "diff"
+      },
+      "candidate_id": "candidate-v1:d68e24bbf926e226938c26ab7d92fa01a8b7ab8368675aedb5adfe7cae350655",
+      "case_id": "h4-1.5-first-chemical-accuracy",
+      "equivalence_class_id": "transform-v1:341a26469e49718a6efea945ea55bbe86b4465a5673caff224572e149e68624a",
+      "kind": "mvp-to-ovp-diff",
+      "semantic_primitive": {
+        "exact_augmented_rref": [
+          [
+            "1",
+            "1",
+            "0"
+          ]
+        ],
+        "generator_normalization": "paper-era-pool-arrange-v1",
+        "generator_relation": "existing-ovp-difference",
+        "removed_source_slots": [],
+        "source_block_id": "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef",
+        "source_pool_indices": [
+          57,
+          58
+        ],
+        "source_slots": [
+          "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef:slot:0",
+          "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef:slot:1"
+        ],
+        "target_family": "OVP",
+        "target_operator_digests": [
+          "4b10b0c3ad291cbb5ba4b123405240c2e40d9c0c84e60a30e99685a62a0e3da7"
+        ],
+        "target_pool_indices": [
+          139
+        ],
+        "units": "radian",
+        "version": "atomic-ceo-symbolic-v1"
+      },
+      "state": {
+        "constraint_numerical_id": "constraint-numerical-v1:84b90c48cf5abac4d95f55a005b0d034b82aa9511477f07f9427d416c51e1c58",
+        "constraint_semantic_id": "constraint-semantic-v1:4735b3789a3af1912e61b52847124bfda09e3f158b64d95d7a3a9026b4ffc22e",
+        "diagnostics": {
+          "exact_rank": 1,
+          "jacobian_condition_number": 1.0,
+          "jacobian_constraint_residual_infinity": 0.0,
+          "offset_constraint_residual_infinity": 0.0,
+          "source_dimension": 2,
+          "target_dimension": 1
+        },
+        "exact_system": {
+          "augmented_rref": [
+            [
+              "1",
+              "1",
+              "0"
+            ]
+          ],
+          "source_slots": [
+            "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef:slot:0",
+            "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef:slot:1"
+          ],
+          "version": "constraint-semantic-v1"
+        },
+        "numerical_payload": {
+          "condition_number_float64": "3ff0000000000000",
+          "constraint_matrix_float64": [
+            [
+              "3ff0000000000000",
+              "3ff0000000000000"
+            ]
+          ],
+          "constraint_rhs_float64": [
+            "0000000000000000"
+          ],
+          "jacobian_float64": [
+            [
+              "3feffffffffffffe"
+            ],
+            [
+              "bfeffffffffffffe"
+            ]
+          ],
+          "offset_float64": [
+            "0000000000000000",
+            "0000000000000000"
+          ],
+          "rank": 1,
+          "source_slots": [
+            "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef:slot:0",
+            "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef:slot:1"
+          ],
+          "target_slots": [
+            "target:0"
+          ],
+          "version": "constraint-numerical-v1"
+        },
+        "transformation_primitives": [
+          {
+            "exact_augmented_rref": [
+              [
+                "1",
+                "1",
+                "0"
+              ]
+            ],
+            "generator_normalization": "paper-era-pool-arrange-v1",
+            "generator_relation": "existing-ovp-difference",
+            "removed_source_slots": [],
+            "source_block_id": "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef",
+            "source_pool_indices": [
+              57,
+              58
+            ],
+            "source_slots": [
+              "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef:slot:0",
+              "block-v1:be20dede0c7cb1e05a536aa82cc61368f453e1fd90923b36f7d6fe50382482ef:slot:1"
+            ],
+            "target_family": "OVP",
+            "target_operator_digests": [
+              "4b10b0c3ad291cbb5ba4b123405240c2e40d9c0c84e60a30e99685a62a0e3da7"
+            ],
+            "target_pool_indices": [
+              139
+            ],
+            "units": "radian",
+            "version": "atomic-ceo-symbolic-v1"
+          }
+        ]
+      }
+    },
+    {
+      "audit_provenance": {
+        "candidate_id": "candidate-v1:db5fb02bce1654d5c349d836130ae251308b94fc86608d3a556571a637d73200",
+        "equivalence_class_id": "transform-v1:619d883cc135e8ef12c29aae3113ce9d6ebcd54464c8dcb0f59b86b44d46d87b",
+        "kind": "block-deletion",
+        "numerical_context_digest": "0439371d55cc6f7c010142bf2b55ccbc0216b7ee7d7feb5de98b49e33dbf6df7",
+        "original_orientation": "deletion"
+      },
+      "candidate_id": "candidate-v1:db5fb02bce1654d5c349d836130ae251308b94fc86608d3a556571a637d73200",
+      "case_id": "h4-1.5-first-chemical-accuracy",
+      "equivalence_class_id": "transform-v1:619d883cc135e8ef12c29aae3113ce9d6ebcd54464c8dcb0f59b86b44d46d87b",
+      "kind": "block-deletion",
+      "semantic_primitive": {
+        "exact_augmented_rref": [
+          [
+            "1",
+            "0"
+          ]
+        ],
+        "generator_normalization": "paper-era-pool-arrange-v1",
+        "generator_relation": "empty",
+        "removed_source_slots": [
+          0
+        ],
+        "source_block_id": "block-v1:d1f1479a96aaacccfc3ef0623b1fe00eefc1401a93bdf71063e22417a8a15275",
+        "source_pool_indices": [
+          156
+        ],
+        "source_slots": [
+          "block-v1:d1f1479a96aaacccfc3ef0623b1fe00eefc1401a93bdf71063e22417a8a15275:slot:0"
+        ],
+        "target_family": "empty",
+        "target_operator_digests": [],
+        "target_pool_indices": [],
+        "units": "radian",
+        "version": "atomic-ceo-symbolic-v1"
+      },
+      "state": {
+        "constraint_numerical_id": "constraint-numerical-v1:5ae6726cadb2fd3bd2d6132522782d83088f8c0d62cc66709575e966ffeb35a6",
+        "constraint_semantic_id": "constraint-semantic-v1:5ae5573367b432fef7e69096a47282de78a52ebfe9b8b2fd6b6fdaa6c73c6813",
+        "diagnostics": {
+          "exact_rank": 1,
+          "jacobian_condition_number": 1.0,
+          "jacobian_constraint_residual_infinity": 0.0,
+          "offset_constraint_residual_infinity": 0.0,
+          "source_dimension": 1,
+          "target_dimension": 0
+        },
+        "exact_system": {
+          "augmented_rref": [
+            [
+              "1",
+              "0"
+            ]
+          ],
+          "source_slots": [
+            "block-v1:d1f1479a96aaacccfc3ef0623b1fe00eefc1401a93bdf71063e22417a8a15275:slot:0"
+          ],
+          "version": "constraint-semantic-v1"
+        },
+        "numerical_payload": {
+          "condition_number_float64": "3ff0000000000000",
+          "constraint_matrix_float64": [
+            [
+              "3ff0000000000000"
+            ]
+          ],
+          "constraint_rhs_float64": [
+            "0000000000000000"
+          ],
+          "jacobian_float64": [
+            []
+          ],
+          "offset_float64": [
+            "0000000000000000"
+          ],
+          "rank": 1,
+          "source_slots": [
+            "block-v1:d1f1479a96aaacccfc3ef0623b1fe00eefc1401a93bdf71063e22417a8a15275:slot:0"
+          ],
+          "target_slots": [],
+          "version": "constraint-numerical-v1"
+        },
+        "transformation_primitives": [
+          {
+            "exact_augmented_rref": [
+              [
+                "1",
+                "0"
+              ]
+            ],
+            "generator_normalization": "paper-era-pool-arrange-v1",
+            "generator_relation": "empty",
+            "removed_source_slots": [
+              0
+            ],
+            "source_block_id": "block-v1:d1f1479a96aaacccfc3ef0623b1fe00eefc1401a93bdf71063e22417a8a15275",
+            "source_pool_indices": [
+              156
+            ],
+            "source_slots": [
+              "block-v1:d1f1479a96aaacccfc3ef0623b1fe00eefc1401a93bdf71063e22417a8a15275:slot:0"
+            ],
+            "target_family": "empty",
+            "target_operator_digests": [],
+            "target_pool_indices": [],
+            "units": "radian",
+            "version": "atomic-ceo-symbolic-v1"
+          }
+        ]
+      }
+    },
+    {
+      "audit_provenance": {
+        "candidate_id": "candidate-v1:fff7155780d50642af0896f96640a99e5391604a16074490c8b32a7756155c52",
+        "equivalence_class_id": "transform-v1:f3c739c2824aa6309707f37f56e5627f2c7ec76857deb8714ae4543d52786865",
+        "kind": "mvp-constituent-deletion",
+        "numerical_context_digest": "7a12f5846e750f2a5b975f67b240fb64515dc44cdbc53502daf8b4da2272a998",
+        "original_orientation": "ordered-subset"
+      },
+      "candidate_id": "candidate-v1:fff7155780d50642af0896f96640a99e5391604a16074490c8b32a7756155c52",
+      "case_id": "h4-1.5-first-chemical-accuracy",
+      "equivalence_class_id": "transform-v1:f3c739c2824aa6309707f37f56e5627f2c7ec76857deb8714ae4543d52786865",
+      "kind": "mvp-constituent-deletion",
+      "semantic_primitive": {
+        "exact_augmented_rref": [
+          [
+            "0",
+            "1",
+            "0"
+          ]
+        ],
+        "generator_normalization": "paper-era-pool-arrange-v1",
+        "generator_relation": "identity-subset",
+        "removed_source_slots": [
+          1
+        ],
+        "source_block_id": "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a",
+        "source_pool_indices": [
+          43,
+          44
+        ],
+        "source_slots": [
+          "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a:slot:0",
+          "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a:slot:1"
+        ],
+        "target_family": "single-QE",
+        "target_operator_digests": [
+          "951d91f09ea740b2e207db18dcf413fd6b8495eee4703c4a79cd76c84b1ede91"
+        ],
+        "target_pool_indices": [
+          43
+        ],
+        "units": "radian",
+        "version": "atomic-ceo-symbolic-v1"
+      },
+      "state": {
+        "constraint_numerical_id": "constraint-numerical-v1:1afab19418636aa383118740a34472584748faecd51d6ed86850f2ae87f05068",
+        "constraint_semantic_id": "constraint-semantic-v1:2b300d520ba9d66e5a8dc6525143f2b613402c4869fb62396830aa08ce30a716",
+        "diagnostics": {
+          "exact_rank": 1,
+          "jacobian_condition_number": 1.0,
+          "jacobian_constraint_residual_infinity": 0.0,
+          "offset_constraint_residual_infinity": 0.0,
+          "source_dimension": 2,
+          "target_dimension": 1
+        },
+        "exact_system": {
+          "augmented_rref": [
+            [
+              "0",
+              "1",
+              "0"
+            ]
+          ],
+          "source_slots": [
+            "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a:slot:0",
+            "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a:slot:1"
+          ],
+          "version": "constraint-semantic-v1"
+        },
+        "numerical_payload": {
+          "condition_number_float64": "3ff0000000000000",
+          "constraint_matrix_float64": [
+            [
+              "0000000000000000",
+              "3ff0000000000000"
+            ]
+          ],
+          "constraint_rhs_float64": [
+            "0000000000000000"
+          ],
+          "jacobian_float64": [
+            [
+              "3ff0000000000000"
+            ],
+            [
+              "0000000000000000"
+            ]
+          ],
+          "offset_float64": [
+            "0000000000000000",
+            "0000000000000000"
+          ],
+          "rank": 1,
+          "source_slots": [
+            "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a:slot:0",
+            "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a:slot:1"
+          ],
+          "target_slots": [
+            "target:0"
+          ],
+          "version": "constraint-numerical-v1"
+        },
+        "transformation_primitives": [
+          {
+            "exact_augmented_rref": [
+              [
+                "0",
+                "1",
+                "0"
+              ]
+            ],
+            "generator_normalization": "paper-era-pool-arrange-v1",
+            "generator_relation": "identity-subset",
+            "removed_source_slots": [
+              1
+            ],
+            "source_block_id": "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a",
+            "source_pool_indices": [
+              43,
+              44
+            ],
+            "source_slots": [
+              "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a:slot:0",
+              "block-v1:8df1586e42ea62826c406cccadeaf3b524adb7b3b03834fad4338ca4ed5cb26a:slot:1"
+            ],
+            "target_family": "single-QE",
+            "target_operator_digests": [
+              "951d91f09ea740b2e207db18dcf413fd6b8495eee4703c4a79cd76c84b1ede91"
+            ],
+            "target_pool_indices": [
+              43
+            ],
+            "units": "radian",
+            "version": "atomic-ceo-symbolic-v1"
+          }
+        ]
+      }
+    }
+  ],
+  "schema_version": "1.0.0",
+  "semantic_state_count": 17,
+  "work": {
+    "ceo_star_adapt_iterations": 0,
+    "ordinary_gsd_adapt_iterations": 0,
+    "paper_measurement_cost": null,
+    "vqe_energy_evaluations": 0
+  }
+}

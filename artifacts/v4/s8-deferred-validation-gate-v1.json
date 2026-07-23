@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "artifact_kind": "v4-s8-deferred-validation-gate",
+  "status": "deferred-not-passed",
+  "reason": "No unseen system with a matched frozen CEO* checkpoint is available, and new CEO* or ordinary ADAPT executions are outside the authorized scope.",
+  "new_molecular_executions": 0,
+  "new_ceo_star_adapt_iterations": 0,
+  "new_ordinary_adapt_iterations": 0,
+  "development_result": {
+    "path": "artifacts/v4/s7-lih-development-v1-2/summary.json",
+    "sha256": "f07ecc935f1edd26b27dc4c36868d394a9b9215266a823b098eb1991c8f875ad",
+    "role": "observed-development-only"
+  },
+  "independent_audit": {
+    "path": "artifacts/v4/s7-lih-independent-audit-v1.json",
+    "sha256": "d7909e4d7fd7ce4004670f029a62e3825e84e3e2468d2f16151252664dd32869",
+    "passed": true
+  },
+  "future_validation_requires_new_protocol": [
+    "permission to create a matched CEO* source checkpoint",
+    "molecule and geometry selection rule frozen before execution",
+    "checkpoint selection criterion frozen before execution",
+    "unchanged V4 thresholds, solver settings, candidate catalog, and deterministic budgets",
+    "at least two systems or one molecule at two geometries for a broader generality claim"
+  ],
+  "forbidden_claims": [
+    "blind validation passed",
+    "out-of-sample superiority",
+    "general molecular superiority",
+    "paper-equivalent Measurement Cost reduction"
+  ],
+  "claim_boundary": "S8 is a documented deferment, not a passed validation gate and not a failed V4 LiH development result."
+}

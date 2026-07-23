@@ -1,0 +1,78 @@
+{
+  "artifact_kind": "multisystem-paper-comparison-bundle",
+  "claim_boundary": [
+    "H6 3 A and BeH2 3 A plots are axis-equivalent comparisons to Fig. 11, not algorithm-identical reproductions.",
+    "Only H6 1.5 A CNOT count and CNOT depth are direct numerical comparisons to paper Table 1.",
+    "Paper-equivalent Measurement Cost is unavailable locally and no proxy is substituted.",
+    "All local trajectories stop at first strict chemical accuracy, not full gradient convergence."
+  ],
+  "direct_comparison": {
+    "case": "h6-1.5",
+    "comparison_level": "direct_same-molecule-distance-algorithm-and-first-accuracy-objective",
+    "delta_percent": {
+      "cnot_count": 8.251231527093596,
+      "cnot_depth": 8.51063829787234,
+      "measurement_cost": null
+    },
+    "local": {
+      "cnot_count": 879,
+      "cnot_depth": 306,
+      "measurement_cost": null
+    },
+    "paper": {
+      "cnot_count": 812,
+      "cnot_depth": 282,
+      "measurement_cost": 10857,
+      "source": "Ram\u00f4a et al. (2025), Table 1"
+    }
+  },
+  "generation_freeze": {
+    "head": "d27ae91a7d2f92315e6731cb8e7a98d0b6f9c715",
+    "protocol_tag": "dvg-obs-multisystem-paper-comparison-protocol-v1.1"
+  },
+  "outputs_sha256": {
+    "direct-comparison.json": "8f1e38b4c732ec3cb83ec2c592c64477cc61921269fd71f805f635f53b8a47dc",
+    "direct-h6-1.5-table1-comparison.pdf": "f21451d8a0b8c7766a68bc58148b9ceb464ebbd548b3003b4b64d7650fbca114",
+    "direct-h6-1.5-table1-comparison.png": "e233e5509cb647c9f55180edc9b706d91f4a19dd29413bcd7d2dd4bcf2ae97fc",
+    "direct-h6-1.5-table1-comparison.svg": "d7e09b061f9beb3eed4771f0762a50c717ba5fb2d19440c6149fd62c1800bf9f",
+    "fig11-style-h6-beh2-3a.pdf": "15a4087f689827624f1bf53f695d3627e389d0b3e1a8b9e1c065f2785d369149",
+    "fig11-style-h6-beh2-3a.png": "779d6353762805ffcdb94136253d290044c1b6c4afc94ff6c4ba233b0e1c2828",
+    "fig11-style-h6-beh2-3a.svg": "eabc0da9d77181c69815aa566e91b1875d4316010d5aaf363b3864f460ab97c3",
+    "fig14-style-ceo-star-multisystem.pdf": "131aedbd70c41aa660ef317ec8632ce39d7f16725fa280c89a3bf7fc208be8fe",
+    "fig14-style-ceo-star-multisystem.png": "6e46ebf89ce28c4bc29b1e2baa46ddc3df1cbf66516dd94452b3f738043a584e",
+    "fig14-style-ceo-star-multisystem.svg": "a9b84c35a6a6807495f036d5e0e497e5d3bcd86a9ea1895adb1e15532a89ca37",
+    "fig15-style-ceo-star-multisystem.pdf": "586f754dd67abc25c1da48dee0424dc7ad919f6b01fcff1f6cd986d33b8649ce",
+    "fig15-style-ceo-star-multisystem.png": "9edd5180ab1abe870a612373cc937b6416a4e9affe2b07a40e3313106c2c00fc",
+    "fig15-style-ceo-star-multisystem.svg": "2717f30307812fac43a7959936e4d34e2de55bdc5d24535041182b9505df7d7b",
+    "figure-data.csv": "8ea49e570a10760a547a1187482c278d61cc74360ba29c3adf241ef052aca0b6",
+    "multisystem-paper-comparison.pdf": "cc4b5ea2e460ff9a5ad4448ce071266ca4c6ffa7472e6e2f6fe4db1b83cc5de2"
+  },
+  "paper_reference": {
+    "doi": "10.1038/s41534-025-01039-4",
+    "figure11_boundary": "same H6/BeH2 3 A problems, but paper uses non-star CEO and full convergence",
+    "figure14_15_boundary": "direct only for H6 1.5 A; paper BeH2 is 2 A",
+    "table1": {
+      "h6-1.5": {
+        "cnot_count": 812,
+        "cnot_depth": 282,
+        "measurement_cost": 10857,
+        "source": "Ram\u00f4a et al. (2025), Table 1"
+      }
+    }
+  },
+  "schema_version": "1.0.0",
+  "source_hashes": {
+    "beh2-3.0": {
+      "checkpoint": "4344d203bbf161fd53814f1fb51af2bbc8531d7c77587a477a3654b3b1ec626c",
+      "progress": "73c8f3b8ea980c15b6e0431ab09c2dcfdeca934be80502c4250eb4154b8f814a"
+    },
+    "h6-1.5": {
+      "checkpoint": "2c994c6ac2d4478c7174b71b661f496c9fda8a14e3a7ca08d01e9130515fe491",
+      "progress": "0145d9634f5c5df49d2d9679315997faa7216e9d9c93c827070067dd84c4d7fb"
+    },
+    "h6-3.0": {
+      "checkpoint": "40a59c46b12e27551b3b156125cf1f2bd6f75ec49da1831eba13cdc27be24a88",
+      "progress": "18785c743414d27fd6439505cc5f86fe4306185b7e00529cac143c950fab19a6"
+    }
+  }
+}

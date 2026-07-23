@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "stage": "S7.1-correction-before-S9",
+  "status": "implemented",
+  "completed_at": "2026-07-20",
+  "supersedes_acceptance_version": "accuracy-kkt-resource-guard-v1",
+  "transaction_version": "compression-transaction-v2",
+  "acceptance_version": "runtime-kkt-cumulative-resource-guard-v2",
+  "corrections": {
+    "fci_removed_from_runtime_evidence": true,
+    "chemical_accuracy_removed_from_runtime_decision": true,
+    "offline_chemical_accuracy_reporting_retained": true,
+    "immutable_budget_reference_required": true,
+    "cumulative_budget_hartree": 0.0001,
+    "per_round_budget_reset_forbidden": true
+  },
+  "historical_artifacts": {
+    "s7_v1_retained": true,
+    "s7_v1_crash_durability_evidence_still_applicable": true,
+    "s7_v1_acceptance_semantics_allowed_for_molecular_execution": false
+  },
+  "verification": {
+    "full_suite_tests_passed_local": 76,
+    "known_paper_stack_warnings": 95,
+    "transaction_sha256": "79d29505b537009b5e96964020ed12c6a73313e197d0025b3819c2280c219e06",
+    "probe_sha256": "70566f369d0d50823c0d6334ffe5882870350f870c650954496eca6820ba9d4f",
+    "tests_sha256": "ad0240599cf2c75880f8f449d7389ff318dcf5fc1cc6da417830e155d86eb2c4"
+  },
+  "claim_boundary": [
+    "This correction changes runtime acceptance semantics, not S8 offline labels.",
+    "FCI remains permitted only for post-run scientific evaluation.",
+    "No molecular performance result is produced by S7.1."
+  ]
+}

@@ -1,0 +1,412 @@
+{
+  "artifact_kind": "s12-exact-ogm-aware-measurement-reuse-probe",
+  "branches": {
+    "reuse_off": {
+      "energy_hartree": -7.797909682469502,
+      "gradient_vector_digest": "388e2438c1e0086e87836ad7bb78409a8dd91e8ccb17f1e164f57f3128a0bc09",
+      "ledger": {
+        "cache_hits": 0,
+        "enabled": false,
+        "event_ledger_digest": "90f8e3ab12d71b26bcbba2b7bce83dfac09e16a5cad94945e650e96267155e32",
+        "exact_noiseless_only": true,
+        "fresh_pauli_expectation_evaluations": 517893,
+        "paper_measurement_cost": null,
+        "policy_version": "exact-pauli-cross-context-reuse-v1",
+        "requests": 517893,
+        "unique_cached_records": 0
+      },
+      "maximum_gradient": -0.015883353347661083,
+      "maximum_gradient_index": 802,
+      "total_gradient_norm_excluding_parents": 0.05734144692858926
+    },
+    "reuse_on": {
+      "energy_hartree": -7.797909682469502,
+      "gradient_vector_digest": "388e2438c1e0086e87836ad7bb78409a8dd91e8ccb17f1e164f57f3128a0bc09",
+      "ledger": {
+        "cache_hits": 369,
+        "enabled": true,
+        "event_ledger_digest": "966a7216456402b823150f5da91da2e3ce2c881d285d66797f4fc0362f71775d",
+        "exact_noiseless_only": true,
+        "fresh_pauli_expectation_evaluations": 517524,
+        "paper_measurement_cost": null,
+        "policy_version": "exact-pauli-cross-context-reuse-v1",
+        "requests": 517893,
+        "unique_cached_records": 517524
+      },
+      "maximum_gradient": -0.015883353347661083,
+      "maximum_gradient_index": 802,
+      "total_gradient_norm_excluding_parents": 0.05734144692858926
+    }
+  },
+  "case": "lih-3.0",
+  "checks": {
+    "measurement_contexts_distinct": true,
+    "official_rank_norm_matches_thresholded_raw_vector": true,
+    "official_sparse_energy_matches_source": true,
+    "reuse_has_positive_hits": true,
+    "reuse_off_on_energy_bitwise_equal": true,
+    "reuse_off_on_gradient_bitwise_equal": true,
+    "reuse_reduces_fresh_pauli_evaluations": true,
+    "state_id_same_across_contexts": true,
+    "termwise_energy_matches_official_sparse": true,
+    "termwise_gradient_vector_matches_official_sparse": true
+  },
+  "claim_boundary": [
+    "Reuse OFF and ON differ only in exact Pauli expectation caching; CEO* state and observables are unchanged.",
+    "Cross-context reuse is allowed only for an identical Pauli term under identical StatePreparationID, ProblemID, estimator, and backend.",
+    "This simulator probe counts exact Pauli expectation kernels, not shots, commuting collections, or paper-equivalent Measurement Cost.",
+    "The referenced shot-efficient method motivates energy-to-next-gradient reuse, but its finite-shot allocation is not implemented here."
+  ],
+  "execution_freeze": {
+    "head": "b90a9125a9bde69fcf0520250239bc394ea2d7fd",
+    "protocol_tag": "dvg-obs-s12-exact-ogm-reuse-protocol-v1.1",
+    "threads": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    }
+  },
+  "failed_checks": [],
+  "identities": {
+    "energy": {
+      "measurement": {
+        "backend_context_digest": "a8a0c6b4728d7b628e64cc3c44da895b58fdcc6032e178d00067a0e7724acb81",
+        "estimator_version": "exact-statevector-pauli-v1",
+        "grouping_strategy": "termwise-exact-v1",
+        "measurement_plan_version": "energy-term-plan-v1",
+        "observable_set_digest": "98bd9ad1fb446c703d3ec3bf5bfbb3019933b586011522ae17e6827ff3241dac",
+        "problem_id": "problem-v1:ae7a2731cb746040b767163b62193281628d247c5f9b0e888590e9b821fce7f7",
+        "state_preparation_id": "state-v1:c11c32d282145ac379292341ef3813116d4acda41fa7af83ae335fa222ffa822"
+      },
+      "measurement_context_id": "measurement-v1:03d2cce42ffe6203c59f25bbb44e71c1db07697257ceac84a892f3c7be663687",
+      "problem": {
+        "active_space": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "basis_set": "sto-3g",
+        "fermion_to_qubit_mapping_convention": "openfermion-jordan-wigner-v1",
+        "frozen_orbitals": [],
+        "geometry_angstrom": [
+          [
+            "Li",
+            [
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          [
+            "H",
+            [
+              0.0,
+              0.0,
+              3.0
+            ]
+          ]
+        ],
+        "hamiltonian_digest": "98bd9ad1fb446c703d3ec3bf5bfbb3019933b586011522ae17e6827ff3241dac",
+        "molecule": "LiH"
+      },
+      "problem_id": "problem-v1:ae7a2731cb746040b767163b62193281628d247c5f9b0e888590e9b821fce7f7",
+      "schema_version": "1.0.0",
+      "state": {
+        "ansatz_block_structure": [
+          {
+            "generator_family": "TETRIS-layer-1",
+            "indices": [
+              970,
+              588
+            ]
+          },
+          {
+            "generator_family": "TETRIS-layer-2",
+            "indices": [
+              946,
+              612,
+              1160
+            ]
+          },
+          {
+            "generator_family": "TETRIS-layer-3",
+            "indices": [
+              952,
+              602,
+              1154
+            ]
+          },
+          {
+            "generator_family": "TETRIS-layer-4",
+            "indices": [
+              940,
+              618,
+              1182
+            ]
+          },
+          {
+            "generator_family": "TETRIS-layer-5",
+            "indices": [
+              14,
+              10,
+              4,
+              9
+            ]
+          }
+        ],
+        "ansatz_indices": [
+          970,
+          588,
+          946,
+          612,
+          1160,
+          952,
+          602,
+          1154,
+          940,
+          618,
+          1182,
+          14,
+          10,
+          4,
+          9
+        ],
+        "coefficient_bytes_hex": [
+          "bfc8172c5b6400f0",
+          "bf6229d3453ae9c2",
+          "bfd18ae2f309aa86",
+          "bf64aae233eac24d",
+          "bf57947603b32c84",
+          "3fccb6ee775eb742",
+          "beac011f99715808",
+          "bfad9a0407e660b7",
+          "bfd192a6de446cfe",
+          "bf578d98cb09dd35",
+          "bfe92173f2b75036",
+          "bfc1a1648a04c350",
+          "3fd2fca615432a82",
+          "3f5a8f334588ef81",
+          "bf6151e9f92c5393"
+        ],
+        "generator_definition_digest": "6e7a4cf25f0bb31e8a5b380de084852a4f97acfe922e4d9639f61a50fef75fec",
+        "orbital_parameter_bytes_hex": [],
+        "qubit_mapping": "jordan-wigner",
+        "qubit_ordering": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "reference_state": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "state_preparation_id": "state-v1:c11c32d282145ac379292341ef3813116d4acda41fa7af83ae335fa222ffa822"
+    },
+    "gradients": {
+      "measurement": {
+        "backend_context_digest": "a8a0c6b4728d7b628e64cc3c44da895b58fdcc6032e178d00067a0e7724acb81",
+        "estimator_version": "exact-statevector-pauli-v1",
+        "grouping_strategy": "ogm-distinct-pauli-union-v1",
+        "measurement_plan_version": "ogm-aware-distinct-term-plan-v1",
+        "observable_set_digest": "48809284a97c9ca89fbe7aa7ecad883ba97d74687d03b7567ab51384443ac255",
+        "problem_id": "problem-v1:ae7a2731cb746040b767163b62193281628d247c5f9b0e888590e9b821fce7f7",
+        "state_preparation_id": "state-v1:c11c32d282145ac379292341ef3813116d4acda41fa7af83ae335fa222ffa822"
+      },
+      "measurement_context_id": "measurement-v1:4c664682fb781590a66d53b420a56f4c1fb6bc6ca979c8e25d0c95c73bb976b5",
+      "problem": {
+        "active_space": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "basis_set": "sto-3g",
+        "fermion_to_qubit_mapping_convention": "openfermion-jordan-wigner-v1",
+        "frozen_orbitals": [],
+        "geometry_angstrom": [
+          [
+            "Li",
+            [
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          [
+            "H",
+            [
+              0.0,
+              0.0,
+              3.0
+            ]
+          ]
+        ],
+        "hamiltonian_digest": "98bd9ad1fb446c703d3ec3bf5bfbb3019933b586011522ae17e6827ff3241dac",
+        "molecule": "LiH"
+      },
+      "problem_id": "problem-v1:ae7a2731cb746040b767163b62193281628d247c5f9b0e888590e9b821fce7f7",
+      "schema_version": "1.0.0",
+      "state": {
+        "ansatz_block_structure": [
+          {
+            "generator_family": "TETRIS-layer-1",
+            "indices": [
+              970,
+              588
+            ]
+          },
+          {
+            "generator_family": "TETRIS-layer-2",
+            "indices": [
+              946,
+              612,
+              1160
+            ]
+          },
+          {
+            "generator_family": "TETRIS-layer-3",
+            "indices": [
+              952,
+              602,
+              1154
+            ]
+          },
+          {
+            "generator_family": "TETRIS-layer-4",
+            "indices": [
+              940,
+              618,
+              1182
+            ]
+          },
+          {
+            "generator_family": "TETRIS-layer-5",
+            "indices": [
+              14,
+              10,
+              4,
+              9
+            ]
+          }
+        ],
+        "ansatz_indices": [
+          970,
+          588,
+          946,
+          612,
+          1160,
+          952,
+          602,
+          1154,
+          940,
+          618,
+          1182,
+          14,
+          10,
+          4,
+          9
+        ],
+        "coefficient_bytes_hex": [
+          "bfc8172c5b6400f0",
+          "bf6229d3453ae9c2",
+          "bfd18ae2f309aa86",
+          "bf64aae233eac24d",
+          "bf57947603b32c84",
+          "3fccb6ee775eb742",
+          "beac011f99715808",
+          "bfad9a0407e660b7",
+          "bfd192a6de446cfe",
+          "bf578d98cb09dd35",
+          "bfe92173f2b75036",
+          "bfc1a1648a04c350",
+          "3fd2fca615432a82",
+          "3f5a8f334588ef81",
+          "bf6151e9f92c5393"
+        ],
+        "generator_definition_digest": "6e7a4cf25f0bb31e8a5b380de084852a4f97acfe922e4d9639f61a50fef75fec",
+        "orbital_parameter_bytes_hex": [],
+        "qubit_mapping": "jordan-wigner",
+        "qubit_ordering": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "reference_state": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "state_preparation_id": "state-v1:c11c32d282145ac379292341ef3813116d4acda41fa7af83ae335fa222ffa822"
+    }
+  },
+  "independent_sparse_parity": {
+    "maximum_absolute_gradient_difference": 2.3594407677629547e-15,
+    "official_energy_hartree": -7.797909682469515,
+    "official_gradient_zero_cutoff": 1e-08,
+    "official_rank_gradient_norm": 0.05734144692858884,
+    "thresholded_raw_gradient_norm": 0.05734144692858884
+  },
+  "observable_inventory": {
+    "cross_context_overlap_terms": 369,
+    "energy_nonidentity_pauli_terms": 630,
+    "ogm_gradient_union_nonidentity_pauli_terms": 517263,
+    "pool_operators": 1200
+  },
+  "paper_measurement_cost": null,
+  "passed": true,
+  "protocol_id": "dvg-obs-s12-exact-ogm-reuse-protocol-v1.1",
+  "schema_version": "1.0.0",
+  "source": {
+    "path": "artifacts/s10/lih-3a-first-accuracy-primary-v1-2/checkpoint.json",
+    "sha256": "1ef38be983595fdb094f2a47287e6047193351e0eff4a7c589630ef023ad98eb"
+  },
+  "upstream": {
+    "commit": "a3f89d03e6a03c89767d3cf8ee7657a57653dda0",
+    "git_tree": "794d847f5c1be1590d93da81b905a915dfa17d13",
+    "worktree_clean": "true"
+  }
+}

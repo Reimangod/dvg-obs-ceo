@@ -1,0 +1,75 @@
+{
+  "artifact_kind": "v4-s7-lih-independent-audit",
+  "audit_freeze": {
+    "audit_tag": "dvg-obs-v4-s7-lih-audit-v1",
+    "head": "697abcb63abec6e04048814df3876e1f1be8fc18",
+    "threads": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    }
+  },
+  "checks": {
+    "accepted_checks_complete": true,
+    "actual_energy_absent_from_selector": true,
+    "attempt_bound": true,
+    "attempt_order": true,
+    "endpoint_winners_replayed": true,
+    "execution_tag_v1_2": true,
+    "fci_absent_from_selector": true,
+    "no_new_ansatz_growth": true,
+    "no_orphan_staging_in_result": true,
+    "no_search_numerical_failures": true,
+    "rejected_checks_fail": true,
+    "rollback_exact": true,
+    "search_surrogate_complete": true,
+    "selection_digest": true,
+    "source_checkpoint_reconstructed": true,
+    "stored_checkpoint_hash": true,
+    "strict_json_summary": true,
+    "strict_quality_payload": true,
+    "transaction_layout": true,
+    "winner_energy_budget": true,
+    "winner_independent_energy": true,
+    "winner_resources": true,
+    "winner_two_path_semantics": true
+  },
+  "claim_boundary": "Independent consistency audit of observed LiH development evidence; not blind validation or a general superiority claim.",
+  "failed_checks": [],
+  "passed": true,
+  "result": {
+    "accepted_attempts": 1,
+    "rolled_back_attempts": 1,
+    "source": {
+      "cnot_count": 107,
+      "cnot_depth": 30,
+      "parameter_count": 15,
+      "total_depth": 171
+    },
+    "winner": {
+      "constraint_semantic_id": "constraint-semantic-v1:d1a889fb1c7afb77d200ef565d93e080b9907c23100612ab7eefbc2fc8f8646b",
+      "energy_change_hartree": 8.690137959188604e-05,
+      "energy_hartree": -7.797822781089923,
+      "kkt_residual": 6.3719367560111095e-09,
+      "resources": {
+        "cnot_count": 58,
+        "cnot_depth": 30,
+        "parameter_count": 8,
+        "total_depth": 92
+      }
+    }
+  },
+  "schema_version": "1.0.0",
+  "selection_digest": "7f58663cd6da220bd40085539a733cd038bda731e4c46c01fca16eb1ea788fa1",
+  "summary_sha256": "f07ecc935f1edd26b27dc4c36868d394a9b9215266a823b098eb1991c8f875ad",
+  "transaction_sha256": {
+    "transactions/committed/v4-lih-attempt-01-bc2fc8f8646b/attempt.json": "367f5ae4bd9f2801ae5c98f4362da3ca66274ea3ff87a6008efa62a5382f85a1",
+    "transactions/committed/v4-lih-attempt-01-bc2fc8f8646b/commit.json": "d5b39102199105be6bec1a4bc123cafd38f145405d2d6494948467ffd1c50d2d",
+    "transactions/committed/v4-lih-attempt-01-bc2fc8f8646b/snapshot.json": "6d589102b3ec9e94d558014a90427e798d48f619816fadcf6b24513c5dbe472d",
+    "transactions/committed/v4-lih-attempt-01-bc2fc8f8646b/trial.json": "15d41ed97e098ef72eea5121967168d1f2090b574ab6d390bbf20fd51000962e",
+    "transactions/failed/v4-lih-attempt-02-e6172441440b/attempt.json": "c19efb9b42854c2f19f8912543476dfa82e7c0b8a71b7235f5ef142fccd4f90b",
+    "transactions/failed/v4-lih-attempt-02-e6172441440b/rollback.json": "7361bfcc5a2e6df13c066f5966e2d6401f87296ba1060bc53c05df4ef0c6f069",
+    "transactions/failed/v4-lih-attempt-02-e6172441440b/snapshot.json": "6d589102b3ec9e94d558014a90427e798d48f619816fadcf6b24513c5dbe472d",
+    "transactions/failed/v4-lih-attempt-02-e6172441440b/trial.json": "119c32a985fd87a069724edb9a56978cedddddbb0f4195f2318c20cb3c959eba"
+  }
+}

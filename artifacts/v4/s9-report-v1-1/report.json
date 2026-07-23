@@ -1,0 +1,45 @@
+{
+  "ablations": {
+    "branch_bound_matches_exhaustive_h2_h4": true,
+    "confidence_filter_after": 8,
+    "confidence_filter_before": 127,
+    "v3_passed": false
+  },
+  "artifact_kind": "v4-s9-report-bundle",
+  "claim_boundary": "LiH development reporting only; no blind validation, generality, or paper Measurement Cost claim.",
+  "headline": {
+    "cnot_depth_reduction": 0,
+    "cnot_reduction": 49,
+    "energy_change_hartree": 8.690137959188604e-05,
+    "parameter_reduction": 7,
+    "total_depth_reduction": 79
+  },
+  "output_sha256": {
+    "branch-bound-ablation.csv": "df0b75b62cb3ba7a27c10940b0bb7d0a01bfeb5ff07fa63fdd56573679d6547f",
+    "comparison.csv": "8e7cf6e86a7c185a8f04af099b515891978d08145ae2fbfdbfb7eb5749d972d8",
+    "exact-attempts.csv": "75eb5193fee63cac2638ccdc321cd172b14076225989a2b14808549726d38449",
+    "pareto-candidates.csv": "dfc01a3a2749141b3788c6e7430c9d8b8fbf4e4589742a2b6d1ac29e4216b949",
+    "pareto-parameters-cnot.png": "02c6b5da4baa46ca743cb0ff759d3044ea908a4e40b185f33e4b5dacc63ee725",
+    "prediction-vs-actual.png": "76fbed5d46101c3cd81c45f80a69c8eb391e08a8bfe82805f54becfece12fa94",
+    "resource-comparison.png": "7d2e700433e3dd67eeb0a367aa8f48f0915e616c205ddceb481b2fac2fc40c4f",
+    "trajectory.csv": "558eee8018d019204b246c6d4c24a451f8a3d3e3d76aceb95d9af1ca1c793f39"
+  },
+  "paper_measurement_cost": null,
+  "report_freeze": {
+    "head": "bd002403a9c9d34a70d8a1e4a372e6283402f774",
+    "report_tag": "dvg-obs-v4-s9-report-v1.1",
+    "threads": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    }
+  },
+  "schema_version": "1.0.0",
+  "source_sha256": {
+    "s4_result": "49052b4bcff64f7f42b6b31450a044995d40c420d5528925c518b221cb314702",
+    "s7_summary": "f07ecc935f1edd26b27dc4c36868d394a9b9215266a823b098eb1991c8f875ad",
+    "v2_summary": "aa911e6bbdaede6290242f8309845c11259c3a3e90a8b97b0299777b89e2f0e4",
+    "v2_trial": "38b0cb3f57fe661fc67a7cb7109237aa71086da3da2fdcf62ec28c4597a9d8c6",
+    "v3_result": "1d72ab0c40cccc713778d7dd12bf8d254dc55d8993b908a4e8dc8c10ba81f35d"
+  }
+}

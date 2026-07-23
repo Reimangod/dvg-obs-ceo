@@ -1,0 +1,157 @@
+{
+  "absolute_energy_drift_hartree": 8.881784197001252e-16,
+  "artifact_kind": "v5.1-s11-h6-joint-exact-fusion-result",
+  "candidate_ids": [
+    "fusion-v1:b88d87d2d419fd877cd35ade248d35462c9a534348ed85c4e672fa5e14ae5172",
+    "fusion-v1:95a9194dbc2d46a5b58a53f89f9e834014071b05662cdcb3ed25cfd2f64e8b95"
+  ],
+  "case_id": "h6-1.5",
+  "checks": {
+    "block_nonincrease": true,
+    "candidate_count": true,
+    "cnot_depth_nonincrease": true,
+    "cnot_reduction": true,
+    "commutators": true,
+    "energy": true,
+    "generator_identities": true,
+    "parameter_reduction": true,
+    "physical_structural_resources": true,
+    "state": true,
+    "total_depth_nonincrease": true
+  },
+  "claim_boundary": "Lossless development-case postprocessing of one frozen V4.1 H6 point. No unseen-system, global-superiority, or paper Measurement Cost claim.",
+  "comparison_context": {
+    "selection_used_v5_s9_outcome": false,
+    "v5_s9_raw_winner_energy_increase_hartree": 8.46365777271707e-05,
+    "v5_s9_raw_winner_resources": {
+      "cnot_count": 858,
+      "cnot_depth": 301,
+      "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+      "logical_block_count": 78,
+      "parameter_count": 132,
+      "structure_digest": "9983c6f087766ed9b17b07a4f13f1e997e466a64e54546a70f42a9b77bf21941",
+      "total_depth": 1549
+    }
+  },
+  "execution_freeze": {
+    "code_tag": "dvg-obs-v5-s11-h6-fusion-code-v1",
+    "head": "c52fcb67056064d4080dd48998043325d8797c78",
+    "output_absent": true
+  },
+  "manifest_path": "manifests/v5-s11-h6-exact-fusion-v1.json",
+  "manifest_sha256": "7154248b2e2047dec0979e8c23c975dc45e184b6febe8cad14d5a0ac52e8bb35",
+  "operator_audits": [
+    {
+      "commutators": [
+        {
+          "operator_number": 0,
+          "residual": 0.0
+        },
+        {
+          "operator_number": 1,
+          "residual": 0.0
+        },
+        {
+          "operator_number": 2,
+          "residual": 0.0
+        },
+        {
+          "operator_number": 3,
+          "residual": 0.0
+        },
+        {
+          "operator_number": 4,
+          "residual": 0.0
+        },
+        {
+          "operator_number": 5,
+          "residual": 0.0
+        },
+        {
+          "operator_number": "parent-0-parent-1",
+          "residual": 0.0
+        }
+      ],
+      "generator_identity_residual": 0.0,
+      "maximum_commutator_residual": 0.0
+    },
+    {
+      "commutators": [
+        {
+          "operator_number": 0,
+          "residual": 0.0
+        },
+        {
+          "operator_number": 1,
+          "residual": 0.0
+        },
+        {
+          "operator_number": 2,
+          "residual": 0.0
+        },
+        {
+          "operator_number": 3,
+          "residual": 0.0
+        },
+        {
+          "operator_number": 4,
+          "residual": 0.0
+        },
+        {
+          "operator_number": 5,
+          "residual": 0.0
+        },
+        {
+          "operator_number": 6,
+          "residual": 0.0
+        },
+        {
+          "operator_number": "parent-0-parent-1",
+          "residual": 0.0
+        }
+      ],
+      "generator_identity_residual": 0.0,
+      "maximum_commutator_residual": 0.0
+    }
+  ],
+  "passed": true,
+  "result_digest": "a8e21445a6f93906e0b9997696e492a779152bc189a3d9a0a9f939c239447cba",
+  "schema_version": "1.0.0",
+  "source": {
+    "energy_hartree": -2.99408531605911,
+    "energy_increase_from_ceo_source_hartree": 8.821426554872502e-05,
+    "kind": "frozen-v4.1-attempt-1",
+    "resources": {
+      "cnot_count": 858,
+      "cnot_depth": 300,
+      "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+      "logical_block_count": 78,
+      "parameter_count": 131,
+      "structure_digest": "1bc0d6c5d54c0c4d06867e0b3d5fa3b479a491a1d40c3e10e9f535964784c3e7",
+      "total_depth": 1546
+    }
+  },
+  "state_fidelity": 1.0,
+  "target": {
+    "energy_hartree": -2.994085316059109,
+    "energy_increase_from_ceo_source_hartree": 8.82142655496132e-05,
+    "kind": "v5.1-joint-exact-fusion",
+    "resources": {
+      "cnot_count": 840,
+      "cnot_depth": 300,
+      "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+      "logical_block_count": 76,
+      "parameter_count": 129,
+      "structure_digest": "e4a7790e2e3c3ac54c910175651f2bcd40eb1963ead3adf5000bab30dac2b950",
+      "total_depth": 1520
+    }
+  },
+  "work": {
+    "energy_evaluations": 2,
+    "full_resource_recounts": 4,
+    "optimizer_iterations": 0,
+    "optimizer_starts": 0,
+    "paper_measurement_cost": null,
+    "statevector_evaluations": 2
+  }
+}

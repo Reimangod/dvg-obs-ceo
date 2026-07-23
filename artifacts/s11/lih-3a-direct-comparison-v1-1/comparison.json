@@ -1,0 +1,296 @@
+{
+  "artifact_kind": "s11-lih-direct-comparison",
+  "chemical_accuracy_hartree": 0.0015936,
+  "claim_boundary": [
+    "GSD and CEO* are direct pinned-code executions at their first chemical-accuracy iterations.",
+    "The accepted V2 result equals CEO* because the only selected compression trial was rolled back.",
+    "The 98-CNOT V2 candidate is counterfactual evidence, not an accepted performance result.",
+    "Paper measurement costs are cited references only; local work counters are not equivalent.",
+    "CEO* per-iteration wall time and work were not captured and are not inferred."
+  ],
+  "comparison_id": "dvg-obs-s11-lih-matched-comparison-v1.1",
+  "execution_freeze": {
+    "head": "23c47b39a5e8f465b81f1ea250ee18f63d1dd5a8",
+    "protocol_tag": "dvg-obs-s11-lih-comparison-protocol-v1.1"
+  },
+  "final_comparison": [
+    {
+      "adapt_iterations": 6,
+      "cnot_count": 392,
+      "cnot_depth": 384,
+      "energy_hartree": -7.79815882803421,
+      "evidence_status": "direct-accepted",
+      "fci_error_hartree": 0.0006843314681974633,
+      "parameter_count": 6,
+      "series": "GSD-ADAPT",
+      "total_depth": 500
+    },
+    {
+      "adapt_iterations": 5,
+      "cnot_count": 107,
+      "cnot_depth": 30,
+      "energy_hartree": -7.797909682469515,
+      "evidence_status": "direct-accepted",
+      "fci_error_hartree": 0.0009334770328921493,
+      "parameter_count": 15,
+      "series": "CEO*",
+      "total_depth": 171
+    },
+    {
+      "adapt_iterations": 5,
+      "cnot_count": 107,
+      "cnot_depth": 30,
+      "energy_hartree": -7.797909682469515,
+      "evidence_status": "direct-accepted-after-rollback",
+      "fci_error_hartree": 0.0009334770328921493,
+      "parameter_count": 15,
+      "series": "V2-primary",
+      "total_depth": 171
+    },
+    {
+      "adapt_iterations": 5,
+      "cnot_count": 98,
+      "cnot_depth": 30,
+      "energy_hartree": -7.797909682465736,
+      "evidence_status": "rejected-counterfactual-kkt",
+      "fci_error_hartree": 0.0009334770366713485,
+      "parameter_count": 14,
+      "series": "V2-candidate",
+      "total_depth": 158
+    }
+  ],
+  "paper_reference": {
+    "ceo_star": {
+      "cnot_count": 107,
+      "cnot_depth": 30,
+      "measurement_cost": 560
+    },
+    "gsd": {
+      "cnot_count": 392,
+      "cnot_depth": 384,
+      "measurement_cost": 50468
+    }
+  },
+  "problem": {
+    "distance_angstrom": 3.0,
+    "molecule": "LiH",
+    "noise": null,
+    "shots": null
+  },
+  "schema_version": "1.0.0",
+  "source_audit": {
+    "artifact_kind": "s11-lih-comparison-source-audit",
+    "checks": {
+      "all_reported_scalars_finite": true,
+      "ceo_reaches_chemical_accuracy": true,
+      "ceo_trajectory_resource_alignment": true,
+      "counterfactual_failed_kkt_only": true,
+      "counterfactual_is_rejected": true,
+      "gsd_energy_nonincreasing": true,
+      "gsd_final_row_matches_summary": true,
+      "gsd_iterations_sequential": true,
+      "gsd_jsonl_exactly_matches_summary": true,
+      "gsd_one_parameter_per_iteration": true,
+      "gsd_reaches_chemical_accuracy": true,
+      "gsd_reproduces_paper_cnot": true,
+      "gsd_reproduces_paper_cnot_depth": true,
+      "gsd_resources_nondecreasing": true,
+      "gsd_schema_valid": true,
+      "measurement_cost_not_relabelled": true,
+      "v2_primary_is_rollback": true
+    },
+    "comparison_id": "dvg-obs-s11-lih-matched-comparison-v1.1",
+    "failed_checks": [],
+    "passed": true,
+    "schema_version": "1.0.0",
+    "source_sha256": {
+      "gsd_summary": "1804669ecad7c9891bf6c46afb54e2de347e57c56b7a887374a3c49ce22a6369",
+      "gsd_trajectory_jsonl": "de29c5b6d008f86283034fc6a52697a7dfa65e4e3ff27a44e175a4e815073cec",
+      "s10_checkpoint": "1ef38be983595fdb094f2a47287e6047193351e0eff4a7c589630ef023ad98eb",
+      "s10_summary": "aa911e6bbdaede6290242f8309845c11259c3a3e90a8b97b0299777b89e2f0e4"
+    }
+  },
+  "trajectories": {
+    "ceo_star": [
+      {
+        "absolute_error_hartree": 0.05450119508369955,
+        "adapt_iteration": 1,
+        "cnot_count": 18,
+        "cnot_depth": 7,
+        "energy_hartree": -7.744341964418708,
+        "finished": false,
+        "parameter_count": 2,
+        "total_depth": 26
+      },
+      {
+        "absolute_error_hartree": 0.036024276437943925,
+        "adapt_iteration": 2,
+        "cnot_count": 45,
+        "cnot_depth": 14,
+        "energy_hartree": -7.7628188830644635,
+        "finished": false,
+        "parameter_count": 5,
+        "total_depth": 65
+      },
+      {
+        "absolute_error_hartree": 0.023007438377283584,
+        "adapt_iteration": 3,
+        "cnot_count": 72,
+        "cnot_depth": 21,
+        "energy_hartree": -7.775835721125124,
+        "finished": false,
+        "parameter_count": 8,
+        "total_depth": 104
+      },
+      {
+        "absolute_error_hartree": 0.005631636980601762,
+        "adapt_iteration": 4,
+        "cnot_count": 99,
+        "cnot_depth": 28,
+        "energy_hartree": -7.793211522521806,
+        "finished": false,
+        "parameter_count": 11,
+        "total_depth": 143
+      },
+      {
+        "absolute_error_hartree": 0.0009334770328921493,
+        "adapt_iteration": 5,
+        "cnot_count": 107,
+        "cnot_depth": 30,
+        "energy_hartree": -7.797909682469515,
+        "finished": false,
+        "parameter_count": 15,
+        "total_depth": 171
+      }
+    ],
+    "gsd_adapt": [
+      {
+        "adapt_iteration": 1,
+        "cnot_count": 48,
+        "cnot_depth": 48,
+        "cumulative_gradient_component_equivalent": 5,
+        "cumulative_optimizer_energy_evaluations": 5,
+        "cumulative_wall_time_seconds": 11.465568334009731,
+        "energy_hartree": -7.744257991821097,
+        "fci_error_hartree": 0.054585167681310054,
+        "finished": false,
+        "paper_measurement_cost": null,
+        "parameter_count": 1,
+        "total_depth": 72
+      },
+      {
+        "adapt_iteration": 2,
+        "cnot_count": 192,
+        "cnot_depth": 192,
+        "cumulative_gradient_component_equivalent": 15,
+        "cumulative_optimizer_energy_evaluations": 10,
+        "cumulative_wall_time_seconds": 14.203948792011943,
+        "energy_hartree": -7.76272257239292,
+        "fci_error_hartree": 0.03612058710948762,
+        "finished": false,
+        "paper_measurement_cost": null,
+        "parameter_count": 2,
+        "total_depth": 240
+      },
+      {
+        "adapt_iteration": 3,
+        "cnot_count": 304,
+        "cnot_depth": 304,
+        "cumulative_gradient_component_equivalent": 36,
+        "cumulative_optimizer_energy_evaluations": 17,
+        "cumulative_wall_time_seconds": 17.63285416699364,
+        "energy_hartree": -7.775440924976592,
+        "fci_error_hartree": 0.02340223452581558,
+        "finished": false,
+        "paper_measurement_cost": null,
+        "parameter_count": 3,
+        "total_depth": 376
+      },
+      {
+        "adapt_iteration": 4,
+        "cnot_count": 352,
+        "cnot_depth": 348,
+        "cumulative_gradient_component_equivalent": 72,
+        "cumulative_optimizer_energy_evaluations": 26,
+        "cumulative_wall_time_seconds": 21.3607426249946,
+        "energy_hartree": -7.7930540602561,
+        "fci_error_hartree": 0.005789099246307217,
+        "finished": false,
+        "paper_measurement_cost": null,
+        "parameter_count": 4,
+        "total_depth": 448
+      },
+      {
+        "adapt_iteration": 5,
+        "cnot_count": 360,
+        "cnot_depth": 356,
+        "cumulative_gradient_component_equivalent": 127,
+        "cumulative_optimizer_energy_evaluations": 37,
+        "cumulative_wall_time_seconds": 25.94560329199885,
+        "energy_hartree": -7.795661166527098,
+        "fci_error_hartree": 0.003181992975309633,
+        "finished": false,
+        "paper_measurement_cost": null,
+        "parameter_count": 5,
+        "total_depth": 462
+      },
+      {
+        "adapt_iteration": 6,
+        "cnot_count": 392,
+        "cnot_depth": 384,
+        "cumulative_gradient_component_equivalent": 211,
+        "cumulative_optimizer_energy_evaluations": 51,
+        "cumulative_wall_time_seconds": 31.19091245898744,
+        "energy_hartree": -7.79815882803421,
+        "fci_error_hartree": 0.0006843314681974633,
+        "finished": false,
+        "paper_measurement_cost": null,
+        "parameter_count": 6,
+        "total_depth": 500
+      }
+    ]
+  },
+  "v2_rejected_counterfactual": {
+    "cnot_count": 98,
+    "cnot_depth": 30,
+    "counter_version": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+    "energy_hartree": -7.797909682465736,
+    "fci_error_hartree": 0.0009334770366713485,
+    "logical_block_count": 14,
+    "parameter_count": 14,
+    "rejection_reasons": [
+      "kkt"
+    ],
+    "status": "rejected-counterfactual",
+    "structure_digest": "bbc35a4f22ddccfcf1ba9cb7a8f9e711e5bd645fdba5010253b6a16d8e28aa03",
+    "total_depth": 158
+  },
+  "work": {
+    "ceo_star": {
+      "baseline_gradient_component_equivalent": 1580,
+      "baseline_optimizer_energy_evaluations": 166,
+      "explicit_checkpoint_statevector_kernels": 1,
+      "independent_checkpoint_energy_evaluations": 1,
+      "paper_measurement_cost": null,
+      "wall_time_seconds": 94.08080924997921
+    },
+    "gsd_adapt": {
+      "gradient_component_equivalent": 211,
+      "optimizer_energy_evaluations": 51,
+      "paper_measurement_cost": null,
+      "wall_time_seconds": 31.27409233400249
+    },
+    "per_iteration_ceo_work_available": false,
+    "v2_trial": {
+      "circuit_executions": 0,
+      "compression_attempts": 1,
+      "energy_evaluations": 216,
+      "gradient_component_evaluations": 2112,
+      "gradient_vector_evaluations": 38,
+      "optimizer_iterations": 2,
+      "screening_rounds": 1,
+      "shots": 0,
+      "statevector_kernels": 6
+    }
+  }
+}
