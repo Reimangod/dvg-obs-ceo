@@ -1,0 +1,108 @@
+{
+  "schema_version": "1.0.0",
+  "artifact_kind": "v5-v5.1-audited-development-release-summary",
+  "inputs": [
+    {
+      "stage": "V5-S9",
+      "path": "artifacts/v5/s9/summary-v1.json",
+      "sha256": "7563ce99008816014756965b88496903407a379290bc90bb5c7c54f4489442c7"
+    },
+    {
+      "stage": "V5-S10",
+      "path": "artifacts/v5/s10/exact-fusion-gate-v1.json",
+      "sha256": "ff6d5e9113dc05f51cbf06919f78d2bdbe3246847c4cd73f26009005efb9925f"
+    },
+    {
+      "stage": "V5.1-S11",
+      "path": "artifacts/v5/s11/h6-1.5-exact-fusion-v1.json",
+      "sha256": "1fa2981c1fa50fcf495426480406cee99401350f1733595777ab43917e5b6b6a"
+    },
+    {
+      "stage": "V5.1-S11b",
+      "path": "artifacts/v5/s11/h6-1.5-s9-fusion-integration-v1.json",
+      "sha256": "fd95622e1711f3c0a1dc0f04e37a1335bb98bacdb83b1a9b0ec897eef452f67c"
+    }
+  ],
+  "core_v5_gate": {
+    "strict_success_cases": [
+      "h6-3.0"
+    ],
+    "strong_development_success_passed": false,
+    "global_superiority_established": false
+  },
+  "v5_1_extension_gate": {
+    "strict_success_cases_against_matched_v4_1_points": [
+      "h6-1.5",
+      "h6-3.0"
+    ],
+    "strong_development_success_passed": true,
+    "outcome_informed_cases": [
+      "h6-1.5"
+    ],
+    "confirmatory_cases": [],
+    "global_superiority_established": false
+  },
+  "h6_1_5_pareto_front": [
+    {
+      "point_id": "v5.1-v4.1-lossless-fusion",
+      "classification": "frozen-development",
+      "energy_increase_hartree": 0.0000882142655496132,
+      "cnot_count": 840,
+      "parameter_count": 129,
+      "total_depth": 1520,
+      "cnot_depth": 300,
+      "logical_block_count": 76,
+      "optimizer_starts_for_fusion": 0
+    },
+    {
+      "point_id": "v5.1-s9-low-energy-fusion",
+      "classification": "outcome-informed-exploratory-integration",
+      "energy_increase_hartree": 0.0000846365777271707,
+      "cnot_count": 840,
+      "parameter_count": 130,
+      "total_depth": 1523,
+      "cnot_depth": 301,
+      "logical_block_count": 76,
+      "optimizer_starts_for_fusion": 0
+    }
+  ],
+  "matched_case_release_choices": [
+    {
+      "case_id": "lih-3.0",
+      "choice": "V4.1-equivalent",
+      "reason": "No strict V5 improvement and no exact-fusion candidate."
+    },
+    {
+      "case_id": "h6-1.5",
+      "choice": "V5.1 Pareto front",
+      "reason": "Two exact lossless fusion points trade one parameter/depth against lower energy loss."
+    },
+    {
+      "case_id": "h6-3.0",
+      "choice": "V5 strict-success point",
+      "reason": "Lower energy loss and all guarded resources than the matched V4.1 point."
+    },
+    {
+      "case_id": "beh2-3.0",
+      "choice": "V4.1",
+      "reason": "V5 resource savings did not satisfy the frozen same-or-lower-energy condition and no exact-fusion candidate exists."
+    }
+  ],
+  "safety": {
+    "coefficient_only_deletion_claims": false,
+    "generic_qiskit_full_ansatz_compilation": false,
+    "exact_generator_provenance_required": true,
+    "physical_circuit_removal_required": true,
+    "state_energy_resource_recomputation_required": true,
+    "old_v4_1_and_v5_artifacts_modified": false
+  },
+  "paper_measurement_cost": null,
+  "limitations": [
+    "All four systems/geometries were used during development; there is no unseen confirmatory case.",
+    "The V5.1 exact-fusion family has candidates only on H6 1.5 Å in the current four-case set.",
+    "No noisy-device performance is claimed.",
+    "Paper Measurement Cost is not reconstructed by this release.",
+    "Strong development success for V5.1 is not a global or out-of-sample superiority claim."
+  ],
+  "claim_boundary": "Noiseless exact-statevector development evidence. Core V5 and the outcome-informed V5.1 extension are reported separately."
+}
