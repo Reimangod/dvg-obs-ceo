@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Reimangod/dvg-obs-ceo/schemas/v5-ledger-event-v1.schema.json",
+  "title": "V5 path-scoped hash-chained scientific event",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "protocol_id", "ledger_id", "run_id", "path_id",
+    "case_id", "code_commit", "sequence", "event_id", "event_type",
+    "phase", "round_index", "candidate_id", "emitted_at_utc",
+    "previous_event_digest", "parent_checkpoint_digest", "identities",
+    "work", "payload", "event_digest"
+  ],
+  "properties": {
+    "schema_version": {"const": "v5-ledger-event-v1"},
+    "protocol_id": {"const": "dvg-obs-v5-risk-aware-sequential-protocol-v1"},
+    "ledger_id": {"type": "string", "pattern": "^ledger-v5:[0-9a-f]{64}$"},
+    "run_id": {"type": "string", "pattern": "^run-v5:[0-9a-f]{64}$"},
+    "path_id": {"type": "string", "pattern": "^path-v5:[0-9a-f]{64}$"},
+    "case_id": {"type": "string", "minLength": 1},
+    "code_commit": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+    "sequence": {"type": "integer", "minimum": 0},
+    "event_id": {"type": "string", "pattern": "^event-v5:[0-9a-f]{64}$"},
+    "event_type": {
+      "enum": [
+        "run_started", "round_started", "candidate_screened",
+        "candidate_rejected", "hvp_refinement", "exact_attempt_started",
+        "exact_attempt_finished", "round_committed", "round_rolled_back",
+        "run_finished", "incident"
+      ]
+    },
+    "phase": {"enum": ["control", "screening", "refinement", "exact", "commit", "rollback", "incident"]},
+    "round_index": {"type": "integer", "minimum": 0},
+    "candidate_id": {
+      "oneOf": [
+        {"type": "null"},
+        {"type": "string", "pattern": "^candidate-v5:[0-9a-f]{64}$"}
+      ]
+    },
+    "emitted_at_utc": {"type": "string", "format": "date-time"},
+    "previous_event_digest": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "parent_checkpoint_digest": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "identities": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["state_preparation_id", "problem_id", "measurement_context_id"],
+      "properties": {
+        "state_preparation_id": {"type": "string", "pattern": "^state-v1:[0-9a-f]{64}$"},
+        "problem_id": {"type": "string", "pattern": "^problem-v1:[0-9a-f]{64}$"},
+        "measurement_context_id": {"type": "string", "pattern": "^measurement-v1:[0-9a-f]{64}$"}
+      }
+    },
+    "work": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "energy_evaluations", "gradient_vector_evaluations",
+        "gradient_component_equivalents", "analytic_hvp_calls",
+        "finite_difference_hvp_calls", "quadratic_solve_iterations",
+        "exact_vqe_attempts", "optimizer_iterations", "optimizer_starts",
+        "full_resource_recounts", "expanded_search_states",
+        "attempted_rounds", "accepted_rounds", "statevector_evaluations"
+      ],
+      "properties": {
+        "energy_evaluations": {"type": "integer", "minimum": 0},
+        "gradient_vector_evaluations": {"type": "integer", "minimum": 0},
+        "gradient_component_equivalents": {"type": "integer", "minimum": 0},
+        "analytic_hvp_calls": {"type": "integer", "minimum": 0},
+        "finite_difference_hvp_calls": {"type": "integer", "minimum": 0},
+        "quadratic_solve_iterations": {"type": "integer", "minimum": 0},
+        "exact_vqe_attempts": {"type": "integer", "minimum": 0},
+        "optimizer_iterations": {"type": "integer", "minimum": 0},
+        "optimizer_starts": {"type": "integer", "minimum": 0},
+        "full_resource_recounts": {"type": "integer", "minimum": 0},
+        "expanded_search_states": {"type": "integer", "minimum": 0},
+        "attempted_rounds": {"type": "integer", "minimum": 0},
+        "accepted_rounds": {"type": "integer", "minimum": 0},
+        "statevector_evaluations": {"type": "integer", "minimum": 0}
+      }
+    },
+    "payload": {"type": "object"},
+    "event_digest": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  }
+}
