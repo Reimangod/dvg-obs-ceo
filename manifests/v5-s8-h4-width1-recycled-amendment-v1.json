@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0.0",
+  "amendment_id": "v5-s8-h4-width1-recycled-amendment-v1",
+  "parent_execution_id": "v5-s8-h4-width1-recycled-v1",
+  "status": "registered-after-pilot-before-v1.1-rerun",
+  "pilot_evidence": {
+    "path": "artifacts/v5/s8/h4-width1-recycled-pilot-v1/summary.json",
+    "sha256": "b0db0061fe3dda5a1ebf2dbb9303966968fb904eab89a036605e4886ee6fe66f",
+    "disposition": "engineering-pilot-not-adoptable-performance-evidence"
+  },
+  "deficiencies_found": [
+    "source energy and state were not independently compared with the checkpoint inside this runner",
+    "full per-attempt optimizer, stationarity, constraint, and acceptance evidence was not included in summary.json"
+  ],
+  "changes_allowed": [
+    "independently reconstruct and verify source energy and statevector digest before screening",
+    "persist full exact-attempt evidence after exact execution",
+    "change output directory and runner version to prevent overwrite or evidence mixing"
+  ],
+  "changes_forbidden": [
+    "change candidate ranking",
+    "change predictor, thresholds, work caps, optimizer, or acceptance gates",
+    "use pilot outcomes in screening"
+  ],
+  "rerun_required": true,
+  "replacement_code_tag": "dvg-obs-v5-s8-h4-width1-recycled-code-v1.1",
+  "claim_boundary": "The pilot remains preserved but cannot support an adopted V5 result.",
+  "paper_measurement_cost": null
+}

@@ -25,6 +25,15 @@ def test_execution_manifest_binds_inputs_and_rejected_work_policy():
     assert manifest["paper_measurement_cost"] is None
 
 
+def test_pilot_amendment_forbids_scientific_changes():
+    amendment = json.loads(
+        (ROOT / "manifests/v5-s8-h4-width1-recycled-amendment-v1.json").read_text()
+    )
+    assert amendment["rerun_required"] is True
+    assert "change candidate ranking" in amendment["changes_forbidden"]
+    assert "use pilot outcomes in screening" in amendment["changes_forbidden"]
+
+
 def test_state_and_measurement_identity_separate_processing_context():
     runtime = CompressionRuntime.create(
         ansatz=AnsatzStructure.create([1], [0.25], [1]),

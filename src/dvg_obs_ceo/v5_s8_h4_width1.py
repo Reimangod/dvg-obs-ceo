@@ -46,10 +46,10 @@ from .v5_sequential import (
 )
 
 
-RUNNER_VERSION = "v5-s8-h4-width1-recycled-v1"
+RUNNER_VERSION = "v5-s8-h4-width1-recycled-v1.1"
 CASE_ID = "h4-1.5-iteration-12-or-convergence"
 CHECKPOINT = ROOT / "artifacts/s8-1/later-checkpoint-calibration-bundle/checkpoint-h4-1.5-iteration-12-or-convergence.json"
-OUTPUT = ROOT / "artifacts/v5/s8/h4-width1-recycled"
+OUTPUT = ROOT / "artifacts/v5/s8/h4-width1-recycled-v1-1"
 REQUIRED_THREADS = {"OMP_NUM_THREADS": "1", "OPENBLAS_NUM_THREADS": "1", "MKL_NUM_THREADS": "1"}
 
 
@@ -109,6 +109,7 @@ class H4WidthOneAdapter:
         self.work = V5WorkCounters()
         self._catalog_cache: dict[str, CatalogSnapshot] = {}
         self._selection_cache: dict[str, dict[str, Any]] = {}
+        self.attempt_records: list[dict[str, Any]] = []
 
     def _build(self, runtime: CompressionRuntime) -> CatalogSnapshot:
         runtime_digest = runtime.snapshot().snapshot_digest
@@ -259,7 +260,7 @@ class H4WidthOneAdapter:
             or plan.state.constraint_numerical_id != candidate.evidence["constraint_numerical_id"]
         ):
             raise V5S8H4WidthOneError("frozen candidate constraint identity drift")
-        initial, target_inverse, _ = obs_warm_start(
+        initial, target_inverse, prediction = obs_warm_start(
             source.coefficients, runtime.gradient, runtime.inverse_hessian, plan.transformation
         )
         fallback_initial = least_squares_native_coordinates(
@@ -329,6 +330,32 @@ class H4WidthOneAdapter:
             fallback_optimizer=None if fallback is None else _optimizer(fallback),
         ), criteria)
 
+        self.attempt_records.append({
+            "round_index": round_index,
+            "exact_attempt": exact_attempt,
+            "sequential_candidate_id": candidate.candidate_id,
+            "atomic_candidate_ids": list(atomic_ids),
+            "constraint_semantic_id": plan.state.constraint_semantic_id,
+            "constraint_numerical_id": plan.state.constraint_numerical_id,
+            "prediction": {
+                "predicted_constraint_penalty_hartree": float(prediction.predicted_constraint_penalty),
+                "predicted_change_from_current_hartree": float(prediction.predicted_change_from_current),
+                "direct_quadratic_change_from_current_hartree": float(prediction.direct_quadratic_change_from_current),
+                "constraint_residual_infinity": float(prediction.constraint_residual_infinity),
+                "reference_energy_kind": prediction.reference_energy_kind,
+            },
+            "primary": primary,
+            "fallback": fallback,
+            "selected_optimizer_path": "recycled-obs" if fallback is None else "least-squares-fallback",
+            "two_path_certificate": certificate,
+            "constraint_residual_infinity": residual,
+            "before_resources": asdict(before.snapshot),
+            "physical_resources": asdict(physical.snapshot),
+            "structural_resources": asdict(structural.snapshot),
+            "acceptance": asdict(decision),
+            "paper_measurement_cost": None,
+        })
+
         runtime.ansatz = target
         runtime.energy_hartree = float(selected["energy_hartree"])
         runtime.gradient = np.asarray(selected["gradient"], dtype=np.float64)
@@ -390,6 +417,17 @@ def run(output: Path = OUTPUT) -> dict[str, Any]:
     )
     source_resources = evaluate_full_circuit_resources(pool, source, paper_era_backend())
     source_state = _state_vector(algorithm, source.coefficients, source.indices)
+    source_state_digest = hashlib.sha256(
+        np.asarray(source_state, dtype=">c16").tobytes()
+    ).hexdigest()
+    source_energy_recomputed = _energy(
+        algorithm, np.asarray(source.coefficients, dtype=np.float64), source.indices
+    )
+    if (
+        source_state_digest != checkpoint["statevector_sha256"]
+        or abs(source_energy_recomputed - float(checkpoint["energy_hartree"])) > 1e-10
+    ):
+        raise V5S8H4WidthOneError("independent source state or energy reconstruction drift")
     runtime = CompressionRuntime.create(
         ansatz=source,
         energy_hartree=float(checkpoint["energy_hartree"]),
@@ -442,9 +480,16 @@ def run(output: Path = OUTPUT) -> dict[str, Any]:
         "case_id": CASE_ID,
         "checkpoint_digest": checkpoint["checkpoint_digest"],
         "source_energy_hartree": checkpoint["energy_hartree"],
+        "source_reconstruction": {
+            "independent_energy_hartree": source_energy_recomputed,
+            "energy_difference_hartree": abs(source_energy_recomputed - float(checkpoint["energy_hartree"])),
+            "statevector_sha256": source_state_digest,
+            "matches_checkpoint_statevector": source_state_digest == checkpoint["statevector_sha256"],
+        },
         "source_resources": asdict(source_resources.snapshot),
         "result": result,
         "catalog_diagnostics_by_runtime": adapter._selection_cache,
+        "exact_attempt_records": adapter.attempt_records,
         "claim_boundary": [
             "Development H4 ablation C only; not a molecular superiority claim.",
             "Uses recycled curvature only; no exact Hessian or HVP enters screening.",
