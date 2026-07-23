@@ -83,6 +83,8 @@ def run(
     runner_version: str = RUNNER_VERSION,
     beam_dominance: str = "resources-only",
     artifact_kind: str = "v5-s8-lih-width2-multitrajectory",
+    maximum_rounds: int = 2,
+    maximum_exact_attempts: int = 4,
 ) -> dict[str, Any]:
     if output.exists():
         raise V5S8LiHMultiTrajectoryError("refusing to overwrite width-two output")
@@ -261,8 +263,8 @@ def run(
         config=MultiTrajectoryConfig(
             width=2,
             top_k_per_parent=2,
-            maximum_rounds=2,
-            maximum_exact_attempts=4,
+            maximum_rounds=maximum_rounds,
+            maximum_exact_attempts=maximum_exact_attempts,
             endpoint_quota=1,
             cumulative_energy_budget_hartree=1e-4,
             beam_dominance=beam_dominance,

@@ -45,3 +45,24 @@ def test_accounting_corrected_manifest_binds_incomplete_result_and_finding():
     assert manifest["accounting_correction"][
         "zero_candidate_terminal_catalog_charged"
     ] is True
+
+
+def test_round_three_manifest_binds_audited_round_two_and_limits_extension():
+    manifest = json.loads(
+        (
+            ROOT / "manifests/v5-s8-lih-energy-aware-width2-round3-v1.json"
+        ).read_text(encoding="utf-8")
+    )
+    entry = manifest["entry_gate"]
+    for path_key, digest_key in (
+        ("round2_result_path", "round2_result_sha256"),
+        ("round2_audit_path", "round2_audit_sha256"),
+    ):
+        assert hashlib.sha256((ROOT / entry[path_key]).read_bytes()).hexdigest() == (
+            entry[digest_key]
+        )
+    protocol = manifest["protocol"]
+    assert protocol["maximum_rounds"] == 3
+    assert protocol["maximum_exact_attempts"] == 6
+    assert protocol["threshold_relaxation"] is False
+    assert protocol["acceptance_gates_changed"] is False
