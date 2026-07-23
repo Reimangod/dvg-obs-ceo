@@ -1,0 +1,155 @@
+{
+  "schema_version": "1.0.0",
+  "protocol_id": "dvg-obs-v5-risk-aware-sequential-protocol-v1",
+  "protocol_tag": "dvg-obs-v5-s0-preregistration-v1",
+  "study_status": "development",
+  "study_regime": "exact-statevector-noiseless-posthoc-compression",
+  "parent": {
+    "result_tag": "dvg-obs-v4.1-multisystem-results-v1",
+    "result_commit": "e760482113c204295499f5b39cbeee15b9ea1a5d",
+    "release_manifest_path": "artifacts/v4.1/s10-release-v1/bundle-manifest.json",
+    "release_manifest_sha256": "fb75ad8476cc39426f2642d380fdb78f86516d964ebff9f8eb8f1668adac6dd3",
+    "release_bundle_digest": "e2ad6896fa79f568ed7ff625e4ad4ee074566dad8d6eda9e9a6ef41c16d05dba",
+    "comparison_path": "artifacts/v4.1/s10-release-v1/comparison.json",
+    "comparison_sha256": "8dbb85409f05d0937a1999a23dd2d18ae9384b6d90ff79c10cc2daf662f56026"
+  },
+  "plan": {
+    "path": "docs/V5_RISK_AWARE_SEQUENTIAL_PLAN.md",
+    "sha256": "3278546dbd3c0b18f6a873a6a91df0a13cfff220e941af7dd9e88f89136ccf16"
+  },
+  "output_root": "artifacts/v5",
+  "development_cases": [
+    "h2",
+    "h4",
+    "lih-3.0",
+    "h6-1.5",
+    "h6-3.0",
+    "beh2-3.0"
+  ],
+  "confirmatory_cases": [],
+  "source_checkpoints": [
+    {
+      "case_id": "lih-3.0",
+      "path": "artifacts/s10/lih-3a-first-accuracy-primary-v1-2/checkpoint.json",
+      "sha256": "1ef38be983595fdb094f2a47287e6047193351e0eff4a7c589630ef023ad98eb"
+    },
+    {
+      "case_id": "h6-1.5",
+      "path": "artifacts/full-figures/ceo-star/h6-1.5/checkpoint.json",
+      "sha256": "2c994c6ac2d4478c7174b71b661f496c9fda8a14e3a7ca08d01e9130515fe491"
+    },
+    {
+      "case_id": "h6-3.0",
+      "path": "artifacts/full-figures/ceo-star/h6-3.0/checkpoint.json",
+      "sha256": "40a59c46b12e27551b3b156125cf1f2bd6f75ec49da1831eba13cdc27be24a88"
+    },
+    {
+      "case_id": "beh2-3.0",
+      "path": "artifacts/full-figures/ceo-star/beh2-3.0/checkpoint.json",
+      "sha256": "4344d203bbf161fd53814f1fb51af2bbc8531d7c77587a477a3654b3b1ec626c"
+    }
+  ],
+  "research_hypothesis": "Risk-aware sequential exact-constraint OBS compression improves the circuit-resource-versus-energy-loss frontier of one-shot V4.1 under a fixed and reported compression-work budget.",
+  "claim_boundary": {
+    "existing_cases_are_development_only": true,
+    "unseen_generalization_requires_new_frozen_case": true,
+    "global_optimum_claim": false,
+    "hardware_or_noise_claim": false,
+    "paper_measurement_cost_available": false,
+    "end_to_end_ceo_growth_changed": false
+  },
+  "scientific_invariants": {
+    "source_relative_algorithmic_energy_budget_hartree": 0.0001,
+    "target_gradient_infinity_norm_max": 1e-08,
+    "fci_or_actual_candidate_energy_used_in_screening_or_ranking": false,
+    "actual_energy_updates_budget_only_between_rounds": true,
+    "chemical_accuracy_is_benchmark_only_guard": true,
+    "paper_era_circuit_semantics": true,
+    "barrier_free_global_compilation": false,
+    "parameter_removal_requires_physical_circuit_removal": true,
+    "measurement_cost_is_null_until_exact_definition_exists": true
+  },
+  "primary_endpoints": [
+    "cnot_count",
+    "parameter_count"
+  ],
+  "secondary_endpoints": [
+    "cnot_depth",
+    "total_depth",
+    "logical_block_count"
+  ],
+  "identity_layers": [
+    "StatePreparationID",
+    "ProblemID",
+    "MeasurementContextID",
+    "ConstraintSemanticID",
+    "ConstraintNumericalID"
+  ],
+  "stage_order": [
+    "S0",
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5",
+    "S6",
+    "S7",
+    "S8",
+    "S9",
+    "S10",
+    "S11",
+    "S12"
+  ],
+  "core_feature_order": [
+    "nested-transactions",
+    "sequential-width-1",
+    "risk-aware-pareto",
+    "conditional-matrix-free-hvp",
+    "conditional-target-native-polishing",
+    "budgeted-multi-trajectory"
+  ],
+  "deferred_or_separate_features": [
+    "new-transformation-families",
+    "measurement-reuse",
+    "ogm",
+    "global-qiskit-compilation",
+    "modified-adapt-or-ceo-growth"
+  ],
+  "adoption_rule": {
+    "retain_v4_1_when_v5_does_not_pareto_improve": true,
+    "failed_round_rolls_back_current_round_only": true,
+    "whole_path_invalidation_requires_parent_corruption_or_provenance_failure": true,
+    "threshold_relaxation_for_preferred_result": false
+  },
+  "audit_policy": {
+    "pre_step_parent_and_worktree_check": true,
+    "independent_post_step_audit": true,
+    "failure_injection_for_stateful_components": true,
+    "exclusive_versioned_artifacts": true,
+    "unknown_failure_is_incident": true,
+    "affected_results_rerun_after_amendment": true,
+    "rejected_work_is_reported": true
+  },
+  "allowed_change_classes": [
+    "v5-protocol-and-schema",
+    "v5-telemetry-and-ledger",
+    "nested-transaction-and-rollback",
+    "sequential-catalog-rebuild",
+    "risk-aware-pareto-selection",
+    "conditional-matrix-free-hvp",
+    "conditional-target-native-polishing",
+    "budgeted-multi-trajectory-search",
+    "v5-tests-audits-and-versioned-artifacts"
+  ],
+  "forbidden_change_classes": [
+    "rewrite-v4-or-v4.1-artifacts",
+    "legacy-v2-or-v3-runtime-import",
+    "fci-or-actual-energy-ranking",
+    "unregistered-molecule-specific-threshold",
+    "silent-regularization-or-retry",
+    "parameter-only-resource-claim",
+    "measurement-cost-relabeling",
+    "ordinary-adapt-or-ceo-growth-execution",
+    "barrier-free-global-compilation"
+  ]
+}
