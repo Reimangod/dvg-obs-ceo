@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0.0",
+  "execution_id": "v5-s8-lih-polishing-l2-alignment-probe-v1",
+  "status": "frozen-before-execution",
+  "code_tag_to_create_before_execution": "dvg-obs-v5-s8-lih-polishing-l2-alignment-code-v1",
+  "parent_probe": {
+    "result_path": "artifacts/v5/s8/lih-conditional-polishing-probe-v1.json",
+    "result_sha256": "236829eddc38b12d89bdc64014716df5212daa9b12fbabbd751455fa6956aeec",
+    "audit_path": "artifacts/v5/s8/lih-conditional-polishing-probe-v1-audit.json",
+    "audit_sha256": "e49ca0fdcfda67714cb22a3056639639a3d40dc0156218519f963c279fb60de2"
+  },
+  "implementation_evidence": {
+    "pinned_scipy_file": ".venv/lib/python3.10/site-packages/scipy/optimize/_trustregion.py",
+    "status_2_condition": "predicted_reduction <= 0 is checked before the post-step gradient termination check",
+    "official_optimize_result_documentation": "https://docs.scipy.org/doc/scipy-1.15.1/reference/generated/scipy.optimize.OptimizeResult.html"
+  },
+  "single_change": {
+    "field": "TrustNCGConfig.gradient_l2_tolerance",
+    "before": 5e-9,
+    "after": 1e-8,
+    "reason": "align the operational L2 stop with the unchanged scientific L-infinity certificate",
+    "mathematical_safety": "norm_inf(g) <= norm_2(g), therefore norm_2(g) <= 1e-8 implies norm_inf(g) <= 1e-8"
+  },
+  "unchanged": {
+    "scientific_gradient_infinity_gate": 1e-8,
+    "energy_budget_hartree": 0.0001,
+    "constraint_gate": 1e-10,
+    "candidate": "same frozen C candidate",
+    "initial_coordinates": "same audited rejected fallback point",
+    "resource_and_semantics_gates": "unchanged",
+    "work_budgets": "unchanged",
+    "second_start": false
+  },
+  "claim_boundary": [
+    "Calibration-driven optimizer alignment, not a threshold relaxation.",
+    "This remains a causal probe and not a committed sequential result.",
+    "LiH is development data; a later frozen reevaluation is required."
+  ],
+  "paper_measurement_cost": null
+}

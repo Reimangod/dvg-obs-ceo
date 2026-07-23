@@ -26,6 +26,7 @@ from .transaction import (
 )
 from .v4_lih import _energy, _gradient
 from .v5_conditional_polishing import (
+    ConditionalPolishingConfig,
     PolishingEligibility,
     polish_target_native_conditionally,
 )
@@ -47,7 +48,12 @@ def _digest(value):
     return hashlib.sha256(canonical_json_bytes(value)).hexdigest()
 
 
-def run(output: Path = OUTPUT) -> dict:
+def run(
+    output: Path = OUTPUT,
+    *,
+    polishing_config: ConditionalPolishingConfig = ConditionalPolishingConfig(),
+    runner_version: str = RUNNER_VERSION,
+) -> dict:
     if output.exists():
         raise V5S8LiHPolishingProbeError("refusing to overwrite polishing probe")
     threads = {name: os.environ.get(name) for name in REQUIRED_THREADS}
@@ -104,6 +110,7 @@ def run(output: Path = OUTPUT) -> dict:
             predicted_energy_within_budget=True,
             refinement_required=True,
         ),
+        config=polishing_config,
     )
     acceptance = None
     independent = None
@@ -174,7 +181,7 @@ def run(output: Path = OUTPUT) -> dict:
     payload = {
         "schema_version": "1.0.0",
         "artifact_kind": "v5-s8-lih-conditional-polishing-probe",
-        "runner_version": RUNNER_VERSION,
+        "runner_version": runner_version,
         "trigger": {
             "source_result_digest": source_result["result_digest"],
             "source_audit_digest": source_audit["audit_digest"],
