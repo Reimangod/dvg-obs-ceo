@@ -91,6 +91,7 @@ dvg-obs-v6-s3-replay = "dvg_obs_ceo.v6_rank_adaptive.legacy_replay:main"
 dvg-obs-v6-s5-feasibility = "dvg_obs_ceo.v6_rank_adaptive.native_rank2_feasibility:main"
 dvg-obs-v6-s6-exact-rewrite = "dvg_obs_ceo.v6_rank_adaptive.exact_rewrite_engine:main"
 dvg-obs-v6-s7-rank-catalog = "dvg_obs_ceo.v6_rank_adaptive.rank_candidate_catalog:main"
+dvg-obs-v6-s8-predictor-freeze = "dvg_obs_ceo.v6_rank_adaptive.predictor_freeze:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

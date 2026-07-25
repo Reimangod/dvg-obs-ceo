@@ -1,0 +1,293 @@
+{
+  "adapter_version": "v6-exact-rewrite-pullback-obs-adapter-v1",
+  "artifact_kind": "v6-s8-predictor-candidate-freeze",
+  "claim_boundary": "Development-only quadratic prediction and immutable candidate freeze. The recycled model is approximate, empirical uncertainty is pending S11 calibration, and no candidate energy, accuracy, matched-work, or paper Measurement Cost result is established.",
+  "config": {
+    "maximum_predictor_calls": 3,
+    "maximum_unique_attempts": 2,
+    "require_no_component_regression": false,
+    "screening_budget_hartree": 0.0001,
+    "top_k_per_endpoint": 2
+  },
+  "development_only": true,
+  "freeze_digest": "d0d74f592c0de62731a74f66e729babcc564eb8789604c3fdbb1bfeb554ce932",
+  "frozen_candidate_count": 1,
+  "frozen_candidate_ids": [
+    "v6-rank-candidate:09e1064d9897af7ff16a9944cfe178a6042ba6536e70e73dd413dc96ba44d20a"
+  ],
+  "information_firewall": {
+    "actual_candidate_energy_available": false,
+    "candidate_outcomes_can_change_current_freeze": false,
+    "fci_reference_available": false,
+    "legacy_energy_field_read": false,
+    "poisoning_contract": "Only coordinates, gradient, and final_inverse_hessian are read from the legacy primary record; screening records recursively reject actual and FCI fields."
+  },
+  "inputs": {
+    "legacy_model": {
+      "fields_read": [
+        "coordinates",
+        "gradient",
+        "final_inverse_hessian"
+      ],
+      "path": "artifacts/v4.1/multisystem/h6-1.5/summary.json",
+      "sha256": "a3af2d964b44f40c375f9b700c38fae5f48246c0a597dd8a807407510166c2ca"
+    },
+    "s6": {
+      "path": "artifacts/v6/s6/exact-rewrite-trace-v1.json",
+      "sha256": "7ffd67ee78b87fe466f37233cda9a9e0b37feae3f36647aad579664dd3ca178a"
+    },
+    "s7": {
+      "path": "artifacts/v6/s7/rank-candidate-catalog-v1.json",
+      "sha256": "d521edd3b12c8be80de3e6c8ecfb0af96a0871cb32875ba7dbe4e77d7cc5e6b1"
+    }
+  },
+  "model_adapter": {
+    "accepted_exact_rewrite_proposal_ids": [
+      "v6-rewrite-proposal:555fe3ecdf7bf08801b1ec6e99b5b85000403883da8468fb1738742e38717b60",
+      "v6-rewrite-proposal:7d4ad2f3989dc343fd273dbc65bb92e4dea2788fab0f1ec5c57e80cc4fb5530f"
+    ],
+    "adapter_version": "v6-exact-rewrite-pullback-obs-adapter-v1",
+    "forward_map_digest": "44d2d84092b93ced431507341a5a1958ba0ca765648b7ac53b7b718670932ed3",
+    "forward_map_rank": 129,
+    "forward_mapping_residual_infinity": 0.0,
+    "legacy_gradient_infinity": 3.4753156654548922e-09,
+    "legacy_inverse_hessian_condition_number": 49406.23152599597,
+    "legacy_model_dimension": 131,
+    "rejected_direct_transport_diagnostic": {
+      "canonical_gauge_displacement_l2": 0.5136273444551696,
+      "decision": "REJECT_DIRECT_HESSIAN_TRANSPORT_USE_CONSTRAINT_PULLBACK",
+      "ranking_influence": false,
+      "recycled_quadratic_change_hartree": 0.13190652448580176,
+      "relocated_gradient_infinity": 0.29626322126778926
+    },
+    "s6_dimension": 129
+  },
+  "paper_measurement_cost": null,
+  "prediction_records": [
+    {
+      "actual_or_fci_energy_used": false,
+      "candidate_id": "v6-rank-candidate:09e1064d9897af7ff16a9944cfe178a6042ba6536e70e73dd413dc96ba44d20a",
+      "constraint_numerical_id": "constraint-numerical-v6:e15695e0d58246d2d2965ffaddeb0f8ae3014e951d4bd870a6e188251e4cd2ef",
+      "constraint_residual_infinity": 4.336808689942018e-19,
+      "constraint_semantic_id": "constraint-semantic-v6:40af7f4b58bf05d8fe0fa9dccd3d781859675a2041563e80ca62a75a5e1cc42c",
+      "predicted_change_from_current_hartree": 1.424145041873128e-06,
+      "predicted_constraint_penalty_hartree": 1.4241450420054917e-06,
+      "predicted_loss_hartree": 1.424145041873128e-06,
+      "pulled_back_constraint_nonzero_positions": [
+        118
+      ],
+      "risk_record": {
+        "candidate_ids": [
+          "v6-rank-candidate:09e1064d9897af7ff16a9944cfe178a6042ba6536e70e73dd413dc96ba44d20a"
+        ],
+        "constraint_numerical_id": "constraint-numerical-v6:e15695e0d58246d2d2965ffaddeb0f8ae3014e951d4bd870a6e188251e4cd2ef",
+        "constraint_semantic_id": "constraint-semantic-v6:40af7f4b58bf05d8fe0fa9dccd3d781859675a2041563e80ca62a75a5e1cc42c",
+        "diagnostics": {
+          "evidence_digest": "5d29cb686770aa28579bed7b3418d9c57a383488deb9b1221f7c4642ad3be6bc",
+          "quality_gate_passed": true,
+          "quality_stratum": "boundary",
+          "refinement_required": true,
+          "uncertainty_margin_hartree": 0.0
+        },
+        "full_resource_recount_succeeded": true,
+        "predicted_loss_hartree": 1.424145041873128e-06,
+        "resources": {
+          "cnot_count": 841,
+          "cnot_depth": 301,
+          "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+          "logical_block_count": 76,
+          "parameter_count": 128,
+          "structure_digest": "1eec8b911f3a6a1713ac1c3cd175e254e0b7284df0b6c62b109bd89666606179",
+          "total_depth": 1518
+        },
+        "semantics_validated": true
+      },
+      "uncertainty_interpretation": "Numeric margin is zero because empirical calibration is pending, not because predictor uncertainty is proven zero."
+    },
+    {
+      "actual_or_fci_energy_used": false,
+      "candidate_id": "v6-rank-candidate:3f2111bc84b04ad55ab62d8db9048ac1536ec7eb825ae237680854d1ebd0cac4",
+      "constraint_numerical_id": "constraint-numerical-v6:e20d32c8fafebbba24101e679e0356cd7e7fc0bd4d6e91af4c6d76c601892526",
+      "constraint_residual_infinity": 0.0,
+      "constraint_semantic_id": "constraint-semantic-v6:dfc3265634183ef09b94a884ac6500434cf99578d3f8a548ffe0173301e6ffd4",
+      "predicted_change_from_current_hartree": 1.9254550858857432e-06,
+      "predicted_constraint_penalty_hartree": 1.925455086018107e-06,
+      "predicted_loss_hartree": 1.9254550858857432e-06,
+      "pulled_back_constraint_nonzero_positions": [
+        120
+      ],
+      "risk_record": {
+        "candidate_ids": [
+          "v6-rank-candidate:3f2111bc84b04ad55ab62d8db9048ac1536ec7eb825ae237680854d1ebd0cac4"
+        ],
+        "constraint_numerical_id": "constraint-numerical-v6:e20d32c8fafebbba24101e679e0356cd7e7fc0bd4d6e91af4c6d76c601892526",
+        "constraint_semantic_id": "constraint-semantic-v6:dfc3265634183ef09b94a884ac6500434cf99578d3f8a548ffe0173301e6ffd4",
+        "diagnostics": {
+          "evidence_digest": "d7370f9eaddc027b88d8323ed1f71bd739a5d3fdae7f34731147aa77539871c4",
+          "quality_gate_passed": true,
+          "quality_stratum": "boundary",
+          "refinement_required": true,
+          "uncertainty_margin_hartree": 0.0
+        },
+        "full_resource_recount_succeeded": true,
+        "predicted_loss_hartree": 1.9254550858857432e-06,
+        "resources": {
+          "cnot_count": 841,
+          "cnot_depth": 301,
+          "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+          "logical_block_count": 76,
+          "parameter_count": 128,
+          "structure_digest": "99fa75656cd58b6b5fb1b1274a2b5f3bf76c0867d1b059cd32830fcdaa48cab1",
+          "total_depth": 1518
+        },
+        "semantics_validated": true
+      },
+      "uncertainty_interpretation": "Numeric margin is zero because empirical calibration is pending, not because predictor uncertainty is proven zero."
+    },
+    {
+      "actual_or_fci_energy_used": false,
+      "candidate_id": "v6-rank-candidate:f2e79e66911a7167f49ac58a001d42b646a4ffef4706ae21230bc4d438aebade",
+      "constraint_numerical_id": "constraint-numerical-v6:f9822f837c4353e128884ab397e45ee78bb8ee617fd7d4d4de6e2b3705f99a4b",
+      "constraint_residual_infinity": 0.0,
+      "constraint_semantic_id": "constraint-semantic-v6:b4b521e421b016e27e4d76b858bbc4f6a1a0d1a5909ef56519ab8da14670ede1",
+      "predicted_change_from_current_hartree": 8.203592421290851e-05,
+      "predicted_constraint_penalty_hartree": 8.203592421304088e-05,
+      "predicted_loss_hartree": 8.203592421290851e-05,
+      "pulled_back_constraint_nonzero_positions": [
+        119
+      ],
+      "risk_record": {
+        "candidate_ids": [
+          "v6-rank-candidate:f2e79e66911a7167f49ac58a001d42b646a4ffef4706ae21230bc4d438aebade"
+        ],
+        "constraint_numerical_id": "constraint-numerical-v6:f9822f837c4353e128884ab397e45ee78bb8ee617fd7d4d4de6e2b3705f99a4b",
+        "constraint_semantic_id": "constraint-semantic-v6:b4b521e421b016e27e4d76b858bbc4f6a1a0d1a5909ef56519ab8da14670ede1",
+        "diagnostics": {
+          "evidence_digest": "58547fd7347f7d5f22fc1bb41fa5fa844c1da6ac7a4786cb882c44239dbebf7d",
+          "quality_gate_passed": true,
+          "quality_stratum": "boundary",
+          "refinement_required": true,
+          "uncertainty_margin_hartree": 0.0
+        },
+        "full_resource_recount_succeeded": true,
+        "predicted_loss_hartree": 8.203592421290851e-05,
+        "resources": {
+          "cnot_count": 841,
+          "cnot_depth": 301,
+          "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+          "logical_block_count": 76,
+          "parameter_count": 128,
+          "structure_digest": "2fa9cf6177fe5b6c60d1f9ef6ef1fce5443cff0aec89aa71e564f2fd8967a3ad",
+          "total_depth": 1518
+        },
+        "semantics_validated": true
+      },
+      "uncertainty_interpretation": "Numeric margin is zero because empirical calibration is pending, not because predictor uncertainty is proven zero."
+    }
+  ],
+  "report_digest": "3ad2ed39ca5fa4d97108bfe926014928047b6dfeb45ef9e0662612774bc5f7ab",
+  "schema_version": "1.0.0",
+  "selection": {
+    "assessments": [
+      {
+        "constraint_semantic_id": "constraint-semantic-v6:40af7f4b58bf05d8fe0fa9dccd3d781859675a2041563e80ca62a75a5e1cc42c",
+        "eligible": true,
+        "quality_stratum": "boundary",
+        "refinement_required": true,
+        "rejection_reasons": [],
+        "risk_adjusted_loss_hartree": 1.424145041873128e-06,
+        "structure_digest": "1eec8b911f3a6a1713ac1c3cd175e254e0b7284df0b6c62b109bd89666606179"
+      },
+      {
+        "constraint_semantic_id": "constraint-semantic-v6:b4b521e421b016e27e4d76b858bbc4f6a1a0d1a5909ef56519ab8da14670ede1",
+        "eligible": true,
+        "quality_stratum": "boundary",
+        "refinement_required": true,
+        "rejection_reasons": [],
+        "risk_adjusted_loss_hartree": 8.203592421290851e-05,
+        "structure_digest": "2fa9cf6177fe5b6c60d1f9ef6ef1fce5443cff0aec89aa71e564f2fd8967a3ad"
+      },
+      {
+        "constraint_semantic_id": "constraint-semantic-v6:dfc3265634183ef09b94a884ac6500434cf99578d3f8a548ffe0173301e6ffd4",
+        "eligible": true,
+        "quality_stratum": "boundary",
+        "refinement_required": true,
+        "rejection_reasons": [],
+        "risk_adjusted_loss_hartree": 1.9254550858857432e-06,
+        "structure_digest": "99fa75656cd58b6b5fb1b1274a2b5f3bf76c0867d1b059cd32830fcdaa48cab1"
+      }
+    ],
+    "deduplicated_structure_count": 3,
+    "eligible_count": 3,
+    "endpoint_semantic_ids": {
+      "cnot_count": [
+        "constraint-semantic-v6:40af7f4b58bf05d8fe0fa9dccd3d781859675a2041563e80ca62a75a5e1cc42c"
+      ],
+      "cnot_depth": [
+        "constraint-semantic-v6:40af7f4b58bf05d8fe0fa9dccd3d781859675a2041563e80ca62a75a5e1cc42c"
+      ],
+      "logical_block_count": [
+        "constraint-semantic-v6:40af7f4b58bf05d8fe0fa9dccd3d781859675a2041563e80ca62a75a5e1cc42c"
+      ],
+      "parameter_count": [
+        "constraint-semantic-v6:40af7f4b58bf05d8fe0fa9dccd3d781859675a2041563e80ca62a75a5e1cc42c"
+      ],
+      "total_depth": [
+        "constraint-semantic-v6:40af7f4b58bf05d8fe0fa9dccd3d781859675a2041563e80ca62a75a5e1cc42c"
+      ]
+    },
+    "input_count": 3,
+    "maximum_unique_attempts": 2,
+    "pareto_axes": [
+      "cnot_count",
+      "cnot_depth",
+      "total_depth",
+      "parameter_count",
+      "logical_block_count",
+      "risk_adjusted_loss_hartree"
+    ],
+    "pareto_semantic_ids": [
+      "constraint-semantic-v6:40af7f4b58bf05d8fe0fa9dccd3d781859675a2041563e80ca62a75a5e1cc42c"
+    ],
+    "refinement_semantic_ids": [
+      "constraint-semantic-v6:40af7f4b58bf05d8fe0fa9dccd3d781859675a2041563e80ca62a75a5e1cc42c",
+      "constraint-semantic-v6:b4b521e421b016e27e4d76b858bbc4f6a1a0d1a5909ef56519ab8da14670ede1",
+      "constraint-semantic-v6:dfc3265634183ef09b94a884ac6500434cf99578d3f8a548ffe0173301e6ffd4"
+    ],
+    "require_no_component_regression": false,
+    "scientific_boundary": "Risk diagnostics rank or request refinement; exact independent acceptance alone authorizes a committed state.",
+    "screening_budget_hartree": 0.0001,
+    "selection_digest": "d9a9b9ab4d2c59e15e31abf7922e2b5d8cadc97ebba81658be1bc7ce0d94137b",
+    "source_structure_digest": "c09aeee48afd5008ee7a933108e9079d08ceeb38911c649cf24f04a45c6b7cb8",
+    "structure_aliases": {
+      "1eec8b911f3a6a1713ac1c3cd175e254e0b7284df0b6c62b109bd89666606179": [
+        "constraint-semantic-v6:40af7f4b58bf05d8fe0fa9dccd3d781859675a2041563e80ca62a75a5e1cc42c"
+      ],
+      "2fa9cf6177fe5b6c60d1f9ef6ef1fce5443cff0aec89aa71e564f2fd8967a3ad": [
+        "constraint-semantic-v6:b4b521e421b016e27e4d76b858bbc4f6a1a0d1a5909ef56519ab8da14670ede1"
+      ],
+      "99fa75656cd58b6b5fb1b1274a2b5f3bf76c0867d1b059cd32830fcdaa48cab1": [
+        "constraint-semantic-v6:dfc3265634183ef09b94a884ac6500434cf99578d3f8a548ffe0173301e6ffd4"
+      ]
+    },
+    "top_k_per_endpoint": 2,
+    "unique_attempt_endpoints": [
+      "cnot_count"
+    ],
+    "unique_attempt_semantic_ids": [
+      "constraint-semantic-v6:40af7f4b58bf05d8fe0fa9dccd3d781859675a2041563e80ca62a75a5e1cc42c"
+    ],
+    "version": "v5-risk-aware-pareto-selector-v1"
+  },
+  "selector_version": "v6-development-pareto-freeze-v1",
+  "work": {
+    "energy_evaluations": 0,
+    "exact_rewrite_replays": 2,
+    "full_resource_recounts": 0,
+    "gradient_vector_evaluations": 0,
+    "hvp_evaluations": 0,
+    "optimizer_starts": 0,
+    "paper_measurement_cost": null,
+    "quadratic_predictor_calls": 3
+  }
+}
