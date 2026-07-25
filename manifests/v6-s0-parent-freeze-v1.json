@@ -1,0 +1,61 @@
+{
+  "artifact_inventory": {
+    "algorithm": "sha256(concatenated '<sha256>  <path>\\n' records for lexicographically sorted tracked files under artifacts/ at the parent tag)",
+    "sha256": "39966839954c779a8bc1c5a270c8fa96af8b45a642e72d84815fc40ecc65a25e"
+  },
+  "ci": {
+    "conclusion": "success",
+    "head_sha": "6e0984c5e8b779c060b4be9936555d761bdaebd8",
+    "run_id": 30157575752,
+    "url": "https://github.com/Reimangod/dvg-obs-ceo/actions/runs/30157575752",
+    "workflow": "scientific-integrity"
+  },
+  "claim_boundary": {
+    "allowed": [
+      "audited exact-statevector noiseless post-checkpoint development results",
+      "V4.1, V5, and V5.1 historical behavior as qualified by the correctness errata"
+    ],
+    "forbidden": [
+      "unseen or prospective validation",
+      "global or universal superiority",
+      "paper Measurement Cost",
+      "hardware or noisy-backend advantage"
+    ]
+  },
+  "dependencies": {
+    ".github/workflows/ci.yml": "ed7df49cd8cfa2a54fc4be451302f37fad18ea6b7dc23e222a5481f259aca5c4",
+    ".gitmodules": "011416bea390ca9c9e3e5aeb67d081bbb23d6cfba51f52aa9b596f53be31af8e",
+    "pyproject.toml": "22d8d3a845a3b18947f931c5c202dac163aee9404d81e13b08f1f5ecf958859f",
+    "uv.lock": "8a9021a72dd3bd6af8d8fc656d8f544adf620c1900c5ce081b26f484bbf6909d"
+  },
+  "environment": {
+    "local_platform_observed": "macOS-26.0.1-arm64-arm-64bit-Mach-O",
+    "python": "3.10.19",
+    "thread_environment": {
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "VECLIB_MAXIMUM_THREADS": "1"
+    },
+    "uv": "0.9.8"
+  },
+  "github": {
+    "default_branch": "main",
+    "repository": "Reimangod/dvg-obs-ceo",
+    "visibility_observed": "PUBLIC"
+  },
+  "parent": {
+    "annotated_tag": "stable-v5-correctness-audit-v1",
+    "branch": "stable-v5-correctness-audit",
+    "commit": "6e0984c5e8b779c060b4be9936555d761bdaebd8",
+    "submodule_commit": "a3f89d03e6a03c89767d3cf8ee7657a57653dda0",
+    "submodule_path": "vendor/ceo-adapt-vqe"
+  },
+  "schema_version": "1.0.0",
+  "tests": {
+    "count": 351,
+    "release_audit": "passed",
+    "result": "passed"
+  }
+}
