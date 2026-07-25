@@ -1,4 +1,5 @@
 import json
+from pathlib import Path
 
 import pytest
 from jsonschema import ValidationError
@@ -12,7 +13,9 @@ from dvg_obs_ceo.s11_gsd import (
 
 
 def test_s11_gsd_protocol_matches_paper_reference_and_claim_boundary() -> None:
-    protocol = json.load(open("manifests/s11-gsd-lih-protocol-v1.json", encoding="utf-8"))
+    protocol = json.loads(
+        Path("manifests/s11-gsd-lih-protocol-v1.json").read_text(encoding="utf-8")
+    )
     assert protocol["protocol_id"] == PROTOCOL_ID
     assert protocol["algorithm"]["pool"] == "GSD"
     assert protocol["algorithm"]["tetris"] is False

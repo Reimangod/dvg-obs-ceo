@@ -279,6 +279,7 @@ def select_risk_aware_pareto(
         for field in RESOURCE_FIELDS
     }
     queue: list[RiskAwareCandidate] = []
+    queue_endpoints: list[str] = []
     seen: set[str] = set()
     for rank in range(top_k_per_endpoint):
         for field in RESOURCE_FIELDS:
@@ -289,6 +290,7 @@ def select_risk_aware_pareto(
             if candidate.resources.structure_digest not in seen and len(queue) < maximum_unique_attempts:
                 seen.add(candidate.resources.structure_digest)
                 queue.append(candidate)
+                queue_endpoints.append(field)
     payload: dict[str, Any] = {
         "version": SELECTOR_VERSION,
         "screening_budget_hartree": screening_budget_hartree,
@@ -306,6 +308,7 @@ def select_risk_aware_pareto(
             for field, ranked in endpoints.items()
         },
         "unique_attempt_semantic_ids": [candidate.constraint_semantic_id for candidate in queue],
+        "unique_attempt_endpoints": queue_endpoints,
         "refinement_semantic_ids": sorted(
             candidate.constraint_semantic_id for candidate in eligible
             if candidate.diagnostics.refinement_required

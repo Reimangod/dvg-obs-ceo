@@ -235,16 +235,11 @@ def execute_case(case_id: str) -> dict[str, Any]:
     if [item["constraint_semantic_id"] for item in queue] != s5["selection"]["unique_attempt_semantic_ids"]:
         raise V41ExactError("S5 sentinel queue/order mismatch")
 
-    chemical_margin = (
-        float(checkpoint["exact_energy_hartree"])
-        + float(checkpoint["chemical_accuracy_hartree"])
-        - float(checkpoint["energy_hartree"])
-    )
-    if not math.isfinite(chemical_margin) or chemical_margin <= 0:
-        raise V41ExactError("source is not strictly inside chemical accuracy")
-    effective_budget = min(
-        float(config["acceptance"]["cumulative_energy_budget_hartree"]),
-        float(np.nextafter(chemical_margin, -math.inf)),
+    # FCI/exact ground-state energy is deliberately excluded from runtime
+    # acceptance. Chemical accuracy is evaluated by a separate offline audit.
+    chemical_margin = None
+    effective_budget = float(
+        config["acceptance"]["cumulative_energy_budget_hartree"]
     )
 
     started = time.perf_counter()
@@ -357,6 +352,8 @@ def execute_case(case_id: str) -> dict[str, Any]:
                 "chemical_accuracy_margin_hartree": chemical_margin,
                 "effective_cumulative_budget_hartree": effective_budget,
                 "used_for_screening_or_ranking": False,
+                "fci_or_exact_energy_used_at_runtime": False,
+                "chemical_accuracy_audit": "offline-only",
             },
             "work": {
                 "new_ceo_star_adapt_iterations": 0,

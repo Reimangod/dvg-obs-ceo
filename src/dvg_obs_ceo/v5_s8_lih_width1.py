@@ -97,11 +97,11 @@ def run(
             "checkpoint_digest": checkpoint["checkpoint_digest"],
         },
     )
-    problem_id = versioned_id("problem-v1", {
-        "case_id": CASE_ID,
-        "hamiltonian_context": "stored-pinned-lih-3.0-angstrom-sto-3g",
-        "checkpoint_digest": checkpoint["checkpoint_digest"],
-    })
+    from .molecular_identity import problem_spec
+
+    problem_id = problem_spec(
+        algorithm=algorithm, case_id=CASE_ID
+    ).problem_id
     adapter = MolecularWidthOneAdapter(
         algorithm,
         pool,
@@ -117,7 +117,7 @@ def run(
         "checkpoint_digest": checkpoint["checkpoint_digest"],
     })
     store = PathCheckpointStore(output / "path", path_id)
-    source_state_id = _state_id(runtime)
+    source_state_id = _state_id(runtime, algorithm=algorithm, pool=pool)
     store.initialize(
         runtime,
         work=adapter.work,

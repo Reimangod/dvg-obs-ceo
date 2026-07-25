@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0.0",
+  "artifact_kind": "v5-historical-correctness-errata",
+  "historical_artifacts_modified": false,
+  "inputs": [
+    {
+      "path": "manifests/v5-s9-frozen-development-v1.json",
+      "sha256": "6dfb1b2176584bb0e2cb34c8f0bd218b9fa569d2a190c2bbc44b6370747c8ea2"
+    },
+    {
+      "path": "artifacts/v5/s9/summary-v1.json",
+      "sha256": "7563ce99008816014756965b88496903407a379290bc90bb5c7c54f4489442c7"
+    },
+    {
+      "path": "artifacts/v5/release/summary-v1.json",
+      "sha256": "f86eb9d838f390f94359b4c205fc8e2546b9c813da244855d6c4360d6449f85d"
+    },
+    {
+      "path": "artifacts/v5/release/resource-priority-amendment-v1.json",
+      "sha256": "25b824183c66528211ae253b37364b3cc9001e3cb79404211ed8b1a64c4a30cc"
+    }
+  ],
+  "corrections": [
+    {
+      "id": "fci-runtime-budget-leakage",
+      "severity": "scientific",
+      "affected_scope": "V4/V4.1 multisystem exact acceptance and V5 S9 multisystem execution",
+      "finding": "Exact/FCI ground-state energy was converted into a chemical-accuracy margin that could tighten runtime acceptance despite documentation describing FCI as offline benchmark evidence.",
+      "historical_classification": "development-oracle-assisted",
+      "forward_rule": "Runtime screening, ranking, and acceptance use only the frozen source-relative algorithmic energy budget. Chemical accuracy is computed by a separate offline audit."
+    },
+    {
+      "id": "release-policy-nonidentity",
+      "severity": "reporting",
+      "affected_scope": "V5/V5.1 release summary and later resource-priority amendment",
+      "finding": "The two files encode different policies; the amendment is not a replacement scientific result and must not be presented as the same canonical winner rule.",
+      "forward_rule": "Every release table must display its policy ID. Historical strict-comparison labels and post-outcome resource-priority choices remain separate."
+    },
+    {
+      "id": "claim-boundary-copy-paste",
+      "severity": "documentation",
+      "affected_scope": [
+        "artifacts/v5/s9/h6-1.5-v1/summary.json",
+        "artifacts/v5/s9/h6-3.0-v1/summary.json",
+        "artifacts/v5/s9/beh2-3.0-v1/summary.json"
+      ],
+      "finding": "The inherited claim-boundary text says Known LiH width calibration even for H6 and BeH2.",
+      "forward_rule": "Interpret the records as their explicit case_id and artifact_kind; do not infer LiH scope from the copied sentence."
+    }
+  ],
+  "paper_measurement_cost": null,
+  "claim_boundary": "Non-destructive errata for historical development evidence. It does not recalculate, replace, or upgrade any reported performance result."
+}

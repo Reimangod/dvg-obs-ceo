@@ -308,16 +308,11 @@ def run(case_id: str) -> dict[str, Any]:
         maximum_unique_attempts=config["exact_vqe_budget"]["maximum_unique_exact_attempts"],
     )
     attempts: list[dict[str, Any]] = []
-    chemical_accuracy_margin = (
-        float(checkpoint["exact_energy_hartree"])
-        + float(checkpoint["chemical_accuracy_hartree"])
-        - float(checkpoint["energy_hartree"])
-    )
-    if not math.isfinite(chemical_accuracy_margin) or chemical_accuracy_margin <= 0.0:
-        raise V4MultiSystemError("source checkpoint is not strictly within chemical accuracy")
-    effective_acceptance_budget = min(
-        float(config["acceptance"]["cumulative_energy_budget_hartree"]),
-        float(np.nextafter(chemical_accuracy_margin, -math.inf)),
+    # Runtime acceptance is deployable and FCI-free. Exact/FCI energy may be
+    # consumed only by a separate reporting audit after the run is frozen.
+    chemical_accuracy_margin = None
+    effective_acceptance_budget = float(
+        config["acceptance"]["cumulative_energy_budget_hartree"]
     )
     safe_case_id = case_id.replace(".", "p")
     for number, semantic_id in enumerate(selection["unique_attempt_semantic_ids"], 1):
@@ -397,10 +392,12 @@ def run(case_id: str) -> dict[str, Any]:
             "paper_measurement_cost": None,
         },
         "accuracy_guard": {
-            "rule": "min(frozen_energy_budget, nextafter(exact_energy + chemical_accuracy - source_energy, -infinity))",
+            "rule": "frozen source-relative algorithmic energy budget",
             "chemical_accuracy_margin_hartree": chemical_accuracy_margin,
             "effective_acceptance_budget_hartree": effective_acceptance_budget,
             "used_for_screening_or_ranking": False,
+            "fci_or_exact_energy_used_at_runtime": False,
+            "chemical_accuracy_audit": "offline-only",
         },
         "claim_boundary": protocol()["claim_boundary"],
     }

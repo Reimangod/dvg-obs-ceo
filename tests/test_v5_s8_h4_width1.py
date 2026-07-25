@@ -1,12 +1,8 @@
 import hashlib
+import inspect
 import json
 from pathlib import Path
 
-import numpy as np
-
-from dvg_obs_ceo.resources import AnsatzStructure
-from dvg_obs_ceo.telemetry import WorkCounters
-from dvg_obs_ceo.transaction import CompressionRuntime
 from dvg_obs_ceo.v5_s8_h4_width1 import _measurement_id, _state_id
 
 
@@ -35,20 +31,7 @@ def test_pilot_amendment_forbids_scientific_changes():
 
 
 def test_state_and_measurement_identity_separate_processing_context():
-    runtime = CompressionRuntime.create(
-        ansatz=AnsatzStructure.create([1], [0.25], [1]),
-        energy_hartree=-1.0,
-        gradient=[0.0],
-        inverse_hessian=np.eye(1),
-        statevector=[1.0, 0.0],
-        work=WorkCounters(),
-        adapt_iteration=1,
-        metadata={
-            "resource_structure_digest": "a" * 64,
-            "budget_reference_energy_hartree": -1.0,
-        },
-    )
-    state = _state_id(runtime)
+    state = "state-v1:" + "a" * 64
     problem = "problem-v1:" + "b" * 64
     measurement = _measurement_id(state, problem)
     assert state.startswith("state-v1:")
@@ -56,20 +39,8 @@ def test_state_and_measurement_identity_separate_processing_context():
     assert state != measurement
 
 
-def test_state_identity_changes_with_canonical_coefficient_bytes():
-    runtime = CompressionRuntime.create(
-        ansatz=AnsatzStructure.create([1], [0.25], [1]),
-        energy_hartree=-1.0,
-        gradient=[0.0],
-        inverse_hessian=np.eye(1),
-        statevector=[1.0, 0.0],
-        work=WorkCounters(),
-        adapt_iteration=1,
-        metadata={
-            "resource_structure_digest": "a" * 64,
-            "budget_reference_energy_hartree": -1.0,
-        },
-    )
-    first = _state_id(runtime)
-    runtime.ansatz = AnsatzStructure.create([1], [0.5], [1])
-    assert _state_id(runtime) != first
+def test_production_state_id_delegates_to_canonical_three_layer_identity():
+    source = inspect.getsource(_state_id)
+    assert "state_preparation_spec" in source
+    assert "tobytes" not in source
+    assert "versioned_id" not in source

@@ -139,11 +139,17 @@ def run_audit(case_id: str, *, recompute_quantum: bool = True) -> dict[str, Any]
         for attempt in v4["attempts"]
         if attempt["transaction_status"] == "accepted"
     ]
+    primary_v4_id = v4["endpoint_winners"]["cnot_primary"]
+    primary_v4 = next(
+        (point for point in v4_points if point["id"] == primary_v4_id),
+        None,
+    )
+    if primary_v4 is None:
+        raise V5S9AuditError("registered V4.1 CNOT-primary comparator is absent")
     strict_pairs = [
-        {"v5_id": left["id"], "v4_id": right["id"]}
+        {"v5_id": left["id"], "v4_id": primary_v4["id"]}
         for left in v5_points
-        for right in v4_points
-        if _strict_pair(left, right)
+        if _strict_pair(left, primary_v4)
     ]
     code_commit = subprocess.check_output(
         ["git", "-C", str(ROOT), "rev-parse", "dvg-obs-v5-s9-frozen-code-v1^{}"],
@@ -365,6 +371,7 @@ def run_audit(case_id: str, *, recompute_quantum: bool = True) -> dict[str, Any]
         "independent_recomputations": recomputations,
         "strict_primary_success": bool(strict_pairs),
         "strict_primary_success_pairs": strict_pairs,
+        "strict_primary_comparator_id": primary_v4["id"],
         "v5_accepted_frontier_inputs": v5_points,
         "v4_1_accepted_frontier_inputs": v4_points,
         "winner": {
@@ -385,8 +392,9 @@ def run_audit(case_id: str, *, recompute_quantum: bool = True) -> dict[str, Any]
         },
         "claim_boundary": (
             "Development-case exact-statevector comparison only. Strict success "
-            "requires no larger actual energy increase and componentwise nonworse "
-            "guarded resources with a strict CNOT or parameter improvement."
+            "is evaluated only against the registered V4.1 CNOT-primary comparator "
+            "and requires no larger actual energy increase, componentwise nonworse "
+            "guarded resources, and a strict CNOT or parameter improvement."
         ),
         "paper_measurement_cost": None,
     }

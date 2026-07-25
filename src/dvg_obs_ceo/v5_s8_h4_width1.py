@@ -18,12 +18,18 @@ from typing import Any, Mapping
 import numpy as np
 
 from .baseline import ROOT
+from .artifact_io import atomic_write_new_json
 from .block_ir import enumerate_candidates, recover_dvg_blocks
 from .calibration import least_squares_native_coordinates, obs_warm_start
 from .composition import compose_registered_candidates
 from .constraint_state import ConstraintStateError
 from .composition import GlobalCompatibilityError
 from .identity import canonical_json_bytes
+from .molecular_identity import (
+    measurement_context,
+    problem_spec,
+    state_preparation_spec,
+)
 from .joint_prediction import JointScreeningContext
 from .resources import AnsatzStructure, evaluate_full_circuit_resources, paper_era_backend
 from .s8_probe import _algorithm, _optimize_target, _state_vector
@@ -77,29 +83,21 @@ def _optimizer(path: Mapping[str, Any]) -> OptimizerOutcome:
     )
 
 
-def _state_id(runtime: CompressionRuntime) -> str:
-    return versioned_id("state-v1", {
-        "ansatz_indices": list(runtime.ansatz.indices),
-        "ansatz_coefficients_float64_hex": [
-            np.float64(value).tobytes().hex() for value in runtime.ansatz.coefficients
-        ],
-        "iteration_counts": list(runtime.ansatz.cumulative_parameter_counts),
-        "generator_definition": "pinned-paper-era-ceo-pool",
-        "qubit_mapping": "pinned-upstream-jordan-wigner",
-        "resource_structure_digest": runtime.metadata["resource_structure_digest"],
-    })
+def _state_id(
+    runtime: CompressionRuntime,
+    *,
+    algorithm: Any,
+    pool: Any,
+) -> str:
+    return state_preparation_spec(
+        runtime, algorithm=algorithm, pool=pool
+    ).state_preparation_id
 
 
 def _measurement_id(state_id: str, problem_id: str) -> str:
-    return versioned_id("measurement-v1", {
-        "state_preparation_id": state_id,
-        "problem_id": problem_id,
-        "observable_set": "energy-and-analytic-gradient",
-        "measurement_plan_version": "exact-statevector-v1",
-        "grouping_strategy": "not-applicable-exact-statevector",
-        "estimator_version": "pinned-upstream-exact-v1",
-        "backend_context": "noise-free-statevector",
-    })
+    return measurement_context(
+        state_preparation_id=state_id, problem_id=problem_id
+    ).measurement_context_id
 
 
 class H4WidthOneAdapter:
@@ -291,7 +289,10 @@ class H4WidthOneAdapter:
             require_no_component_regression=True,
         )
         queue: list[SequentialCandidate] = []
-        for semantic_id in selection["unique_attempt_semantic_ids"]:
+        for semantic_id, endpoint in zip(
+            selection["unique_attempt_semantic_ids"],
+            selection["unique_attempt_endpoints"],
+        ):
             stored = by_semantic[semantic_id]
             evidence = {
                 "atomic_candidate_ids": list(stored["candidate_ids"]),
@@ -299,6 +300,7 @@ class H4WidthOneAdapter:
                 "constraint_numerical_id": stored["constraint_numerical_id"],
                 "selection_digest": selection["selection_digest"],
                 "predictor": "recycled-general-constraint-obs",
+                "selection_endpoint": endpoint,
             }
             queue.append(SequentialCandidate(
                 versioned_id("candidate-v5", evidence),
@@ -606,7 +608,9 @@ class H4WidthOneAdapter:
                 + (2 if polishing_optimizer_outcome is not None else 0)
             ),
         )
-        state_id = _state_id(runtime)
+        state_id = _state_id(
+            runtime, algorithm=self.algorithm, pool=self.pool
+        )
         return SequentialExecution(
             candidate.candidate_id,
             decision,
@@ -672,11 +676,9 @@ def run(output: Path = OUTPUT) -> dict[str, Any]:
             "checkpoint_digest": checkpoint["checkpoint_digest"],
         },
     )
-    problem_id = versioned_id("problem-v1", {
-        "case_id": CASE_ID,
-        "hamiltonian_context": "stored-pinned-h4-linear-1.5-angstrom-sto-3g",
-        "checkpoint_digest": checkpoint["checkpoint_digest"],
-    })
+    problem_id = problem_spec(
+        algorithm=algorithm, case_id=CASE_ID
+    ).problem_id
     adapter = H4WidthOneAdapter(algorithm, pool, problem_id=problem_id)
     source_catalog = adapter.catalog_builder(runtime)
     path_id = versioned_id("path-v5", {
@@ -685,7 +687,7 @@ def run(output: Path = OUTPUT) -> dict[str, Any]:
         "checkpoint_digest": checkpoint["checkpoint_digest"],
     })
     store = PathCheckpointStore(output / "path", path_id)
-    source_state_id = _state_id(runtime)
+    source_state_id = _state_id(runtime, algorithm=algorithm, pool=pool)
     store.initialize(
         runtime,
         work=adapter.work,
@@ -729,10 +731,7 @@ def run(output: Path = OUTPUT) -> dict[str, Any]:
     }
     payload["result_digest"] = _digest(payload)
     output.mkdir(parents=True, exist_ok=True)
-    (output / "summary.json").write_text(
-        json.dumps(payload, indent=2, sort_keys=True, allow_nan=False) + "\n",
-        encoding="utf-8",
-    )
+    atomic_write_new_json(output / "summary.json", payload)
     return payload
 
 

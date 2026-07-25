@@ -184,7 +184,9 @@ def run_audit(*, recompute_quantum: bool = True) -> dict[str, Any]:
             ),
             "independent_final_state": state_sha == stored_state_sha,
             "independent_final_resources": asdict(resources) == final.resource_snapshot,
-            "final_state_identity": _state_id(snapshot) == final.state_preparation_id,
+            "final_state_identity": _state_id(
+                snapshot, algorithm=algorithm, pool=pool
+            ) == final.state_preparation_id,
         })
 
     result = {

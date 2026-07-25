@@ -1,5 +1,6 @@
 from dataclasses import asdict
 import json
+from pathlib import Path
 
 import pytest
 
@@ -44,7 +45,11 @@ def test_selected_candidate_work_counts_primary_and_fallback() -> None:
 
 
 def test_s10_protocol_forbids_fci_in_runtime_acceptance() -> None:
-    protocol = json.loads(open("manifests/s10-lih-paired-protocol-v1.2.json", encoding="utf-8").read())
+    protocol = json.loads(
+        Path("manifests/s10-lih-paired-protocol-v1.2.json").read_text(
+            encoding="utf-8"
+        )
+    )
     assert protocol["protocol_id"] == PROTOCOL_ID
     assert protocol["selector"]["digest"] == SELECTOR_DIGEST
     assert protocol["acceptance"]["fci_is_pruning_selector_or_acceptance_input"] is False

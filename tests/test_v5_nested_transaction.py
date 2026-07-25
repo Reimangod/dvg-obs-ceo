@@ -14,7 +14,7 @@ from dvg_obs_ceo.v5_nested_transaction import (
     recover_orphaned_round,
 )
 from dvg_obs_ceo.v5_nested_audit import run_audit
-from tests.test_transaction import accepted_decision, mutate_to_accepted, runtime
+from test_transaction import accepted_decision, mutate_to_accepted, runtime
 
 
 def resource(character: str, parameters: int = 2) -> ResourceSnapshot:

@@ -2,9 +2,12 @@ import hashlib
 import json
 from pathlib import Path
 
-import numpy as np
+import pytest
 
-from dvg_obs_ceo.v5_s8_lih_multitrajectory import _effective_energy_budget
+from dvg_obs_ceo.v5_s8_lih_multitrajectory import (
+    V5S8LiHMultiTrajectoryError,
+    _effective_energy_budget,
+)
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -37,7 +40,7 @@ def test_s9_manifest_binds_checkpoints_and_carry_forward():
     assert protocol["complete_terminal_catalog_accounting"] is True
 
 
-def test_chemical_accuracy_guard_is_common_and_fail_closed():
+def test_historical_manifest_records_oracle_assisted_budget_rule():
     manifest = json.loads(
         (ROOT / "manifests/v5-s9-frozen-development-v1.json").read_text(
             encoding="utf-8"
@@ -47,19 +50,27 @@ def test_chemical_accuracy_guard_is_common_and_fail_closed():
     assert rule == (
         "min(algorithmic budget, nextafter(chemical-accuracy margin, -infinity))"
     )
-    cases = {
-        item["case_id"]: json.loads(
-            (ROOT / item["checkpoint_path"]).read_text(encoding="utf-8")
-        )
-        for item in manifest["cases"]
+
+
+def test_deployable_budget_is_invariant_to_fci_poisoning():
+    checkpoint = {
+        "energy_hartree": -2.0,
+        "exact_energy_hartree": -2.1,
+        "chemical_accuracy_hartree": 0.0015936,
     }
-    h6_15_budget, h6_15_margin = _effective_energy_budget(
-        cases["h6-1.5"], enforce_chemical_accuracy=True
-    )
-    h6_30_budget, h6_30_margin = _effective_energy_budget(
-        cases["h6-3.0"], enforce_chemical_accuracy=True
-    )
-    assert h6_15_budget == 1e-4
-    assert h6_15_margin > 1e-4
-    assert h6_30_margin < 1e-4
-    assert h6_30_budget == float(np.nextafter(h6_30_margin, -np.inf))
+    poisoned = {
+        **checkpoint,
+        "exact_energy_hartree": 1.0e12,
+        "chemical_accuracy_hartree": 9.0e11,
+    }
+    assert _effective_energy_budget(
+        checkpoint, enforce_chemical_accuracy=False
+    ) == (1e-4, None)
+    assert _effective_energy_budget(
+        poisoned, enforce_chemical_accuracy=False
+    ) == (1e-4, None)
+
+
+def test_runtime_chemical_accuracy_enforcement_fails_closed():
+    with pytest.raises(V5S8LiHMultiTrajectoryError, match="offline"):
+        _effective_energy_budget({}, enforce_chemical_accuracy=True)

@@ -29,6 +29,7 @@ from .resources import AnsatzStructure, ResourceEvaluationError
 
 ComplexArray = NDArray[np.complex128]
 FUSION_IR_VERSION = "v5.1-exact-cross-iteration-ceo-fusion-v1"
+_OPERATOR_AUDIT_TOLERANCE = 1e-12
 
 
 class ExactFusionError(RuntimeError):
@@ -37,6 +38,113 @@ class ExactFusionError(RuntimeError):
 
 def _digest(value: Any) -> str:
     return hashlib.sha256(canonical_json_bytes(value)).hexdigest()
+
+
+def _operator_terms(operator: Any) -> dict[tuple[tuple[int, str], ...], complex]:
+    """Return a normalized Pauli-term mapping without trusting operator algebra."""
+
+    terms = getattr(operator, "terms", None)
+    if not isinstance(terms, dict):
+        raise ExactFusionError("fusion generator has no inspectable Pauli terms")
+    normalized: dict[tuple[tuple[int, str], ...], complex] = {}
+    for term, coefficient in terms.items():
+        key = tuple((int(qubit), str(pauli)) for qubit, pauli in term)
+        normalized[key] = normalized.get(key, 0.0j) + complex(coefficient)
+    return normalized
+
+
+_PAULI_PRODUCT: dict[tuple[str, str], tuple[complex, str | None]] = {
+    ("I", "I"): (1.0, None),
+    ("I", "X"): (1.0, "X"),
+    ("I", "Y"): (1.0, "Y"),
+    ("I", "Z"): (1.0, "Z"),
+    ("X", "I"): (1.0, "X"),
+    ("Y", "I"): (1.0, "Y"),
+    ("Z", "I"): (1.0, "Z"),
+    ("X", "X"): (1.0, None),
+    ("Y", "Y"): (1.0, None),
+    ("Z", "Z"): (1.0, None),
+    ("X", "Y"): (1.0j, "Z"),
+    ("Y", "X"): (-1.0j, "Z"),
+    ("Y", "Z"): (1.0j, "X"),
+    ("Z", "Y"): (-1.0j, "X"),
+    ("Z", "X"): (1.0j, "Y"),
+    ("X", "Z"): (-1.0j, "Y"),
+}
+
+
+def _multiply_pauli_terms(
+    left: tuple[tuple[int, str], ...],
+    right: tuple[tuple[int, str], ...],
+) -> tuple[complex, tuple[tuple[int, str], ...]]:
+    factors = {qubit: pauli for qubit, pauli in left}
+    phase = 1.0 + 0.0j
+    for qubit, right_pauli in right:
+        left_pauli = factors.get(qubit, "I")
+        try:
+            local_phase, product = _PAULI_PRODUCT[(left_pauli, right_pauli)]
+        except KeyError as error:
+            raise ExactFusionError("fusion generator contains a non-Pauli term") from error
+        phase *= local_phase
+        if product is None:
+            factors.pop(qubit, None)
+        else:
+            factors[qubit] = product
+    return phase, tuple(sorted(factors.items()))
+
+
+def _commutator_residual(left: Any, right: Any) -> float:
+    residual: dict[tuple[tuple[int, str], ...], complex] = {}
+    left_terms = _operator_terms(left)
+    right_terms = _operator_terms(right)
+    for left_term, left_coefficient in left_terms.items():
+        for right_term, right_coefficient in right_terms.items():
+            phase, product = _multiply_pauli_terms(left_term, right_term)
+            residual[product] = residual.get(product, 0.0j) + (
+                phase * left_coefficient * right_coefficient
+            )
+            phase, product = _multiply_pauli_terms(right_term, left_term)
+            residual[product] = residual.get(product, 0.0j) - (
+                phase * right_coefficient * left_coefficient
+            )
+    return float(sum(abs(value) ** 2 for value in residual.values()) ** 0.5)
+
+
+def _audit_candidate_operators(
+    pool: Any,
+    candidate: ExactFusionCandidate,
+    blocks_by_id: dict[str, DVGBlock],
+    *,
+    tolerance: float = _OPERATOR_AUDIT_TOLERANCE,
+) -> None:
+    """Fail closed unless the registered fusion identity is true as an operator."""
+
+    ovp_block = blocks_by_id[candidate.ovp_block_id]
+    mvp_block = blocks_by_id[candidate.mvp_block_id]
+    ovp = pool.get_q_op(ovp_block.pool_indices[0])
+    parents = [pool.get_q_op(index) for index in mvp_block.pool_indices]
+    difference = _operator_terms(ovp)
+    for weight, parent in zip(candidate.exact_signed_relation, parents):
+        for term, coefficient in _operator_terms(parent).items():
+            difference[term] = difference.get(term, 0.0j) - weight * coefficient
+    identity_residual = float(
+        sum(abs(value) ** 2 for value in difference.values()) ** 0.5
+    )
+    if identity_residual > tolerance:
+        raise ExactFusionError("registered OVP generator identity failed")
+
+    relevant = list(parents)
+    for block_id in candidate.intervening_block_ids:
+        relevant.extend(
+            pool.get_q_op(index) for index in blocks_by_id[block_id].pool_indices
+        )
+    if any(_commutator_residual(ovp, operator) > tolerance for operator in relevant):
+        raise ExactFusionError("OVP does not commute across the fusion corridor")
+    if any(
+        _commutator_residual(left, right) > tolerance
+        for left, right in itertools.combinations(parents, 2)
+    ):
+        raise ExactFusionError("registered MVP parent generators do not commute")
 
 
 @dataclass(frozen=True)
@@ -172,6 +280,7 @@ def apply_exact_fusion(
     }.get(candidate.candidate_id)
     if refreshed != candidate:
         raise ExactFusionError("fusion provenance no longer matches the source structure")
+    _audit_candidate_operators(pool, candidate, by_id)
 
     coefficients = list(source.coefficients)
     ovp_coordinate = coefficients[candidate.ovp_position]
@@ -230,6 +339,8 @@ def apply_exact_fusions(
     removed_positions: set[int] = set()
     removal_iterations: list[int] = []
     block_by_id = {block.block_id: block for block in blocks}
+    for candidate in selected:
+        _audit_candidate_operators(pool, candidate, block_by_id)
     for candidate in selected:
         ovp_coordinate = source.coefficients[candidate.ovp_position]
         for position, weight in zip(

@@ -77,6 +77,19 @@ def test_generator_and_unitary_identity_is_independently_checked():
         validate_exact_fusion_generators(candidate, first - second, [first, second])
 
 
+def test_apply_rejects_registered_metadata_when_operator_identity_is_false():
+    pool = FakePool()
+    # Metadata alleges q0 + q1, while the actual OVP generator is q0 only.
+    pool.operators[2].q_operator = pool.get_q_op(0)
+    source = AnsatzStructure.create([2, 0, 1], [0.2, 0.3, -0.1], [1, 3])
+    blocks = recover_dvg_blocks(
+        pool, source.indices, source.coefficients, source.cumulative_parameter_counts
+    )
+    candidate = enumerate_exact_fusions(pool, blocks)[0]
+    with pytest.raises(ExactFusionError, match="identity failed"):
+        apply_exact_fusion(pool, source, candidate)
+
+
 def test_joint_fusion_uses_one_immutable_source_and_rejects_duplicates():
     pool = FakePool()
     disjoint = type(pool.operators[0])(

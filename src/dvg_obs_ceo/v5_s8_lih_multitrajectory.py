@@ -12,7 +12,9 @@ from typing import Any, Callable
 import numpy as np
 
 from .baseline import ROOT
+from .artifact_io import atomic_publish_json_directory
 from .identity import canonical_json_bytes
+from .molecular_identity import problem_spec
 from .polishing import TrustNCGConfig
 from .resources import AnsatzStructure, evaluate_full_circuit_resources, paper_era_backend
 from .s8_probe import _state_vector
@@ -93,22 +95,19 @@ def _effective_energy_budget(
     *,
     enforce_chemical_accuracy: bool,
 ) -> tuple[float, float | None]:
+    """Return the deployable source-relative guard without consulting FCI.
+
+    ``enforce_chemical_accuracy`` is retained only to fail closed for callers
+    of the legacy oracle-assisted path. Chemical accuracy belongs to an offline
+    audit and must never alter catalog, ranking, or acceptance.
+    """
     algorithmic_energy_budget = 1e-4
-    if not enforce_chemical_accuracy:
-        return algorithmic_energy_budget, None
-    chemical_accuracy_margin = (
-        float(checkpoint["exact_energy_hartree"])
-        + float(checkpoint["chemical_accuracy_hartree"])
-        - float(checkpoint["energy_hartree"])
-    )
-    if not np.isfinite(chemical_accuracy_margin) or chemical_accuracy_margin <= 0:
+    if enforce_chemical_accuracy:
         raise V5S8LiHMultiTrajectoryError(
-            "source checkpoint is not strictly inside chemical accuracy"
+            "runtime chemical-accuracy enforcement is forbidden; "
+            "use the offline scientific audit"
         )
-    return min(
-        algorithmic_energy_budget,
-        float(np.nextafter(chemical_accuracy_margin, -np.inf)),
-    ), chemical_accuracy_margin
+    return algorithmic_energy_budget, None
 
 
 def run(
@@ -183,12 +182,12 @@ def run(
             enforce_chemical_accuracy=enforce_chemical_accuracy,
         )
     )
-    problem_id = versioned_id("problem-v1", {
-        "case_id": case_id,
-        "checkpoint_digest": checkpoint["checkpoint_digest"],
-        "hamiltonian_context": hamiltonian_context,
-    })
-    source_state_id = _state_id(source_runtime)
+    problem_id = problem_spec(
+        algorithm=algorithm, case_id=case_id
+    ).problem_id
+    source_state_id = _state_id(
+        source_runtime, algorithm=algorithm, pool=pool
+    )
     source_path_id = versioned_id("path-v5", {
         "runner_version": runner_version,
         "execution_freeze": execution_freeze,
@@ -238,6 +237,7 @@ def run(
         candidates = candidates_by_path[parent.path_id]
         proposals = []
         for rank, candidate in enumerate(candidates.values()):
+            endpoint = candidate.evidence["selection_endpoint"]
             proposals.append(ExpansionProposal.create(
                 parent_path_id=parent.path_id,
                 candidate_id=candidate.candidate_id,
@@ -251,7 +251,7 @@ def run(
                     "candidate_id": candidate.candidate_id,
                     "role": "structural-proposal-before-exact-coefficients",
                 }),
-                endpoint=ENDPOINTS[rank % len(ENDPOINTS)],
+                endpoint=endpoint,
                 screening_rank=rank,
                 predicted_loss_hartree=candidate.predicted_loss_hartree,
             ))
@@ -359,6 +359,7 @@ def run(
             "chemical_accuracy_margin_hartree": chemical_accuracy_margin,
             "effective_source_relative_budget_hartree": effective_energy_budget,
             "chemical_accuracy_enforced": enforce_chemical_accuracy,
+            "fci_or_exact_energy_used_at_runtime": False,
         },
         "result": result,
         "branch_records": branch_records,
@@ -367,18 +368,14 @@ def run(
         },
         "source_runtime_unchanged": source_runtime.snapshot().snapshot_digest == source_snapshot.snapshot_digest,
         "claim_boundary": [
-            "Known LiH width calibration only; not confirmatory.",
+            f"Known development case {case_id}; not confirmatory.",
             "All branches use isolated runtimes and exact acceptance.",
             "Work counters are not paper Measurement Cost."
         ],
         "paper_measurement_cost": None,
     }
     payload["result_digest"] = _digest(payload)
-    output.mkdir(parents=True)
-    (output / "summary.json").write_text(
-        json.dumps(payload, indent=2, sort_keys=True, allow_nan=False) + "\n",
-        encoding="utf-8",
-    )
+    atomic_publish_json_directory(output, payload)
     return payload
 
 

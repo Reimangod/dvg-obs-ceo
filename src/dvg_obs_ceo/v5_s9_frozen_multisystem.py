@@ -100,7 +100,7 @@ def execute(case_id: str):
             "pinned-multisystem-checkpoint:"
             + case["checkpoint_sha256"]
         ),
-        enforce_chemical_accuracy=True,
+        enforce_chemical_accuracy=False,
         execution_freeze=freeze,
     )
     return result

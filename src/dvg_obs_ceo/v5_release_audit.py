@@ -5,6 +5,7 @@ from __future__ import annotations
 import hashlib
 import json
 from pathlib import Path
+import sys
 from typing import Any
 
 from .baseline import ROOT
@@ -12,6 +13,7 @@ from .identity import canonical_json_bytes
 
 
 SUMMARY = ROOT / "artifacts/v5/release/summary-v1.json"
+ERRATA = ROOT / "artifacts/v5/release/correctness-errata-v1.json"
 
 
 class V5ReleaseAuditError(RuntimeError):
@@ -96,6 +98,22 @@ def audit() -> dict[str, Any]:
         and front[1]["energy_increase_hartree"]
         == s11b["target"]["energy_increase_from_ceo_source_hartree"]
     )
+    errata = json.loads(ERRATA.read_text(encoding="utf-8"))
+    checks["errata_is_non_destructive"] = (
+        errata["historical_artifacts_modified"] is False
+    )
+    checks["errata_input_hashes"] = all(
+        hashlib.sha256((ROOT / item["path"]).read_bytes()).hexdigest()
+        == item["sha256"]
+        for item in errata["inputs"]
+    )
+    checks["errata_covers_known_findings"] = {
+        item["id"] for item in errata["corrections"]
+    } == {
+        "fci-runtime-budget-leakage",
+        "release-policy-nonidentity",
+        "claim-boundary-copy-paste",
+    }
     failed = [name for name, passed in checks.items() if not passed]
     if failed:
         raise V5ReleaseAuditError("release audit failed: " + ", ".join(failed))
@@ -105,5 +123,20 @@ def audit() -> dict[str, Any]:
         "checks": checks,
         "passed": True,
         "summary_sha256": hashlib.sha256(SUMMARY.read_bytes()).hexdigest(),
+        "errata_sha256": hashlib.sha256(ERRATA.read_bytes()).hexdigest(),
         "paper_measurement_cost": None,
     }
+
+
+def main() -> None:
+    """Run the read-only release audit and fail visibly on any inconsistency."""
+    try:
+        result = audit()
+    except (OSError, KeyError, TypeError, ValueError, V5ReleaseAuditError) as error:
+        print(f"V5 release audit failed: {error}", file=sys.stderr)
+        raise SystemExit(1) from error
+    print(json.dumps(result, indent=2, sort_keys=True, allow_nan=False))
+
+
+if __name__ == "__main__":
+    main()

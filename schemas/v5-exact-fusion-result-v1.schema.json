@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://reimangod.github.io/dvg-obs-ceo/schemas/v5-exact-fusion-result-v1.schema.json",
+  "title": "V5.1 exact-fusion result artifact",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "artifact_kind",
+    "result_digest",
+    "claim_boundary"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "result_digest": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "claim_boundary": {"type": "string", "minLength": 1}
+  },
+  "oneOf": [
+    {
+      "properties": {
+        "artifact_kind": {"const": "v5-s10-exact-fusion-gate-result"}
+      },
+      "required": [
+        "cases",
+        "certified_candidate_count",
+        "adoption_gate_passed",
+        "execution_freeze",
+        "manifest_path",
+        "manifest_sha256"
+      ]
+    },
+    {
+      "properties": {
+        "artifact_kind": {"const": "v5.1-s11-h6-joint-exact-fusion-result"}
+      },
+      "required": [
+        "case_id",
+        "candidate_ids",
+        "operator_audits",
+        "source",
+        "target",
+        "checks",
+        "passed",
+        "work"
+      ]
+    },
+    {
+      "properties": {
+        "artifact_kind": {"const": "v5.1-s11b-s9-fusion-integration-result"}
+      },
+      "required": [
+        "case_id",
+        "candidate_ids",
+        "operator_audits",
+        "source",
+        "target",
+        "checks",
+        "passed",
+        "classification",
+        "v5_1_pareto_context",
+        "work"
+      ]
+    }
+  ],
+  "additionalProperties": true
+}

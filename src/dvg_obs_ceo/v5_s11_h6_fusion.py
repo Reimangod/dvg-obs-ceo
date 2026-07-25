@@ -14,6 +14,7 @@ from typing import Any
 import numpy as np
 
 from .baseline import ROOT
+from .artifact_io import atomic_write_new_json
 from .block_ir import recover_dvg_blocks
 from .identity import canonical_json_bytes
 from .multisystem_checkpoint import _algorithm
@@ -62,26 +63,7 @@ def _verify_freeze(output: Path) -> dict[str, Any]:
 
 
 def _write_exclusive(path: Path, value: dict[str, Any]) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    descriptor = os.open(path, os.O_CREAT | os.O_EXCL | os.O_WRONLY, 0o644)
-    payload = (
-        json.dumps(value, indent=2, sort_keys=True, allow_nan=False) + "\n"
-    ).encode()
-    try:
-        offset = 0
-        while offset < len(payload):
-            written = os.write(descriptor, payload[offset:])
-            if written <= 0:
-                raise V5S11FusionError("artifact write made no progress")
-            offset += written
-        os.fsync(descriptor)
-    finally:
-        os.close(descriptor)
-    directory = os.open(path.parent, os.O_RDONLY)
-    try:
-        os.fsync(directory)
-    finally:
-        os.close(directory)
+    atomic_write_new_json(path, value)
 
 
 def _snapshot(resources: Any) -> dict[str, Any]:

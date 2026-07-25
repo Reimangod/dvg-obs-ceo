@@ -79,6 +79,7 @@ dvg-obs-v5-pareto-audit = "dvg_obs_ceo.v5_pareto_audit:main"
 dvg-obs-v5-hvp-kkt-audit = "dvg_obs_ceo.v5_hvp_kkt_audit:main"
 dvg-obs-v5-polishing-audit = "dvg_obs_ceo.v5_conditional_polishing_audit:main"
 dvg-obs-v5-multitrajectory-audit = "dvg_obs_ceo.v5_multitrajectory_audit:main"
+dvg-obs-v5-release-audit = "dvg_obs_ceo.v5_release_audit:main"
 dvg-obs-v5-s8-protocol = "dvg_obs_ceo.v5_s8_protocol:main"
 dvg-obs-v5-s8-small-calibration = "dvg_obs_ceo.v5_s8_small_calibration:main"
 dvg-obs-v5-s8-hvp-step = "dvg_obs_ceo.v5_s8_hvp_step:main"
@@ -92,3 +93,12 @@ where = ["src"]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 addopts = "-ra --strict-markers"
+filterwarnings = [
+  "error",
+  "ignore::DeprecationWarning:openfermion\\..*",
+  "ignore::DeprecationWarning:qiskit\\..*",
+  "ignore::DeprecationWarning:pyscf\\..*",
+  "ignore::DeprecationWarning:numpy\\..*",
+  "ignore::DeprecationWarning:adaptvqe\\..*",
+  "ignore:The distutils package is deprecated.*:DeprecationWarning",
+]

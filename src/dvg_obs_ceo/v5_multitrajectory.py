@@ -13,9 +13,9 @@ from .telemetry import ResourceSnapshot
 
 MULTITRAJECTORY_VERSION = "v5-budgeted-multitrajectory-v1"
 RESOURCE_FIELDS = (
-    "cnot_count", "parameter_count", "total_depth", "cnot_depth", "logical_block_count",
+    "cnot_count", "cnot_depth", "total_depth", "parameter_count", "logical_block_count",
 )
-ENDPOINTS = ("cnot_count", "parameter_count", "total_depth", "cnot_depth")
+ENDPOINTS = RESOURCE_FIELDS
 
 
 class V5MultiTrajectoryError(RuntimeError):
