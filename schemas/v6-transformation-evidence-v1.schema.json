@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://reimangod.github.io/dvg-obs-ceo/schemas/v6-transformation-evidence-v1.schema.json",
+  "title": "V6 orthogonal transformation and resource evidence",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "evidence_id",
+    "evidence_type",
+    "status",
+    "strength",
+    "semantic_scope",
+    "context_scope",
+    "method_id",
+    "source_semantic_id",
+    "target_semantic_id",
+    "input_digest",
+    "output_digest",
+    "tolerance",
+    "details"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "evidence_id": {"type": "string", "pattern": "^v6-evidence-v1:[0-9a-f]{64}$"},
+    "evidence_type": {
+      "enum": [
+        "TARGET_EMBEDDING",
+        "SOURCE_PARAMETER_MEMBERSHIP",
+        "SOURCE_STATE_EQUIVALENCE",
+        "SOURCE_UNITARY_EQUIVALENCE",
+        "NATIVE_SYNTHESIS",
+        "CONTEXTUAL_REWRITE"
+      ]
+    },
+    "status": {"enum": ["PASSED", "FAILED", "NOT_ESTABLISHED"]},
+    "strength": {
+      "enum": [
+        "ALGEBRAICALLY_PROVEN",
+        "SYMBOLICALLY_PROVEN",
+        "PROVENANCE_DERIVED",
+        "NUMERICALLY_VALIDATED",
+        "NOT_ESTABLISHED"
+      ]
+    },
+    "semantic_scope": {
+      "enum": [
+        "PARAMETER_MAP",
+        "POINTWISE_STATE",
+        "POINTWISE_UNITARY",
+        "FAMILYWISE_UNITARY"
+      ]
+    },
+    "context_scope": {
+      "enum": [
+        "CHECKPOINT_FULL_STATE",
+        "PREFIX_STATE",
+        "LOCAL_BLOCK",
+        "ARBITRARY_CIRCUIT_CONTEXT"
+      ]
+    },
+    "method_id": {"type": "string", "minLength": 1},
+    "source_semantic_id": {"type": "string", "minLength": 1},
+    "target_semantic_id": {"type": "string", "minLength": 1},
+    "input_digest": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "output_digest": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "tolerance": {
+      "oneOf": [
+        {"type": "null"},
+        {"type": "number", "exclusiveMinimum": 0}
+      ]
+    },
+    "details": {"type": "object"}
+  }
+}

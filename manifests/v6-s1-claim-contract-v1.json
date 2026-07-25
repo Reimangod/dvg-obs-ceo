@@ -1,0 +1,46 @@
+{
+  "allowed_primary_claim": "synthesis-certified rank adaptation may add matched-work nondominated energy-resource points after prospective validation",
+  "development_cases": [
+    "H2",
+    "H4-early",
+    "H4-late",
+    "LiH-3.0A",
+    "H6-1.5A",
+    "H6-3.0A",
+    "BeH2-3.0A"
+  ],
+  "exactness_vocabulary": {
+    "algebraic": "requires algebraic or symbolic evidence at the claimed semantic and context scope",
+    "numerical": "must be described as numerically validated within the recorded tolerance",
+    "pointwise_state": "checkpoint-specific and not a general circuit rewrite",
+    "provenance": "depends on separately validated source metadata and is not automatically algebraic proof"
+  },
+  "forbidden_runtime_inputs": [
+    "FCI energy",
+    "chemical-accuracy margin",
+    "post-hoc release winner",
+    "prospective validation outcome"
+  ],
+  "forbidden_without_new_evidence": [
+    "best for every molecule",
+    "global optimum",
+    "universal VQE compression",
+    "paper Measurement Cost reduction",
+    "hardware advantage",
+    "unseen generalization",
+    "mathematical exactness from numerical fidelity alone",
+    "matched-work superiority with an incomplete work ledger",
+    "physical circuit reduction inferred from parameter count"
+  ],
+  "paper_measurement_cost": null,
+  "primary_resources": [
+    "cnot_count",
+    "cnot_depth",
+    "total_depth",
+    "parameter_count",
+    "logical_block_count"
+  ],
+  "schema_version": "1.0.0",
+  "study_regime": "exact-statevector noiseless post-checkpoint compression",
+  "target_venue": "Physical Review A Regular Article"
+}
