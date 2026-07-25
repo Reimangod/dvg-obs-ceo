@@ -1,0 +1,419 @@
+{
+  "artifact_kind": "v6-s7-rank-candidate-catalog",
+  "candidate_count": 3,
+  "candidates": [
+    {
+      "candidate_id": "v6-rank-candidate:09e1064d9897af7ff16a9944cfe178a6042ba6536e70e73dd413dc96ba44d20a",
+      "contextual_rewrite_evidence_id": "v6-evidence-v1:a220cd440f880f8f1f7f203705544b6e704bcf44b08ea214ec51f413b201bc90",
+      "energy_evaluated": false,
+      "equivalence_class_id": "v6-rank-equivalence:07bbcdc9bb4ec2934a5677663f08844f1868cd54cda7f936a8842bdd881578cd",
+      "equivalence_scope": "NATIVE_RESOURCE_ONLY_NOT_HAMILTONIAN_STATE_OR_ENERGY",
+      "human_classification": "APPROXIMATE_RANK_DEMOTION",
+      "kept_source_slots": [
+        1,
+        2
+      ],
+      "native_mapping": [
+        {
+          "angle_scale": "2",
+          "control_label": 6,
+          "generator_digest": "783741dea72d952ca2b72b4f535d7553a684cf4f51583306459450e467045ac1",
+          "pool_index": 194,
+          "support_qubits": [
+            0,
+            6,
+            8,
+            10
+          ]
+        },
+        {
+          "angle_scale": "-2",
+          "control_label": 5,
+          "generator_digest": "2195fc49e44840dca7ebf36032a94adbaebaa069b5fd5ceedf6fef5e8ae86502",
+          "pool_index": 195,
+          "support_qubits": [
+            0,
+            6,
+            8,
+            10
+          ]
+        }
+      ],
+      "native_synthesis_evidence_id": "v6-evidence-v1:9c068baba860533f868e673d19033779e3592577b7ae0e0b45bbb7b53ac84242",
+      "omitted_pool_index": 193,
+      "omitted_source_slot": 0,
+      "optimization_requirement": "FULL_REOPTIMIZATION",
+      "paper_measurement_cost": null,
+      "rejection_reasons": [],
+      "resources": {
+        "after": {
+          "cnot_count": 841,
+          "cnot_depth": 301,
+          "logical_block_count": 76,
+          "parameter_count": 128,
+          "total_depth": 1518
+        },
+        "after_digest": "1eec8b911f3a6a1713ac1c3cd175e254e0b7284df0b6c62b109bd89666606179",
+        "before": {
+          "cnot_count": 840,
+          "cnot_depth": 300,
+          "logical_block_count": 76,
+          "parameter_count": 129,
+          "total_depth": 1520
+        },
+        "before_digest": "c09aeee48afd5008ee7a933108e9079d08ceeb38911c649cf24f04a45c6b7cb8",
+        "compiler_configuration": "uncompiled-barrier-preserving-paper-era-qasm-v1",
+        "effect": "VERIFIED_GAIN",
+        "native_synthesizer_version": "v6-mvp3-rank2-sparse-ucry-v1",
+        "physical_circuit_gain": true,
+        "primary_nonregression": true,
+        "primary_resource": "total_depth",
+        "qubit_order": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "resource_counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "strict_gain": true
+      },
+      "screening_status": "ELIGIBLE_NATIVE_PHYSICAL_GAIN",
+      "source_ansatz_positions": [
+        116,
+        117,
+        118
+      ],
+      "source_block_id": "block-v1:417c887ab430749fdc4475d9bf7d8ca618eed8874c70e41af57bf3a6b39e57fa",
+      "source_parameter_membership": "NOT_ESTABLISHED",
+      "source_pool_indices": [
+        193,
+        194,
+        195
+      ],
+      "source_state_digest": "a9a2985f370418d6d7c4f3b5e8024079bc11839647c316371c49836da5f205ae",
+      "source_state_equivalence": "NOT_ESTABLISHED",
+      "target_embedding_evidence_id": "v6-evidence-v1:9cf621a511b64d94c24b011f1f62baaae8642723598e2a07a4d9beb1473783f4",
+      "target_pool_indices": [
+        194,
+        195
+      ],
+      "target_seed_state_digest": "f70870f1213fdaea243e6af254370c7965bead50d7b2f1ca2626d299a44e69b1",
+      "transition_id": "v6-transition:mvp3-to-sparse-ucry-rank2-v1"
+    },
+    {
+      "candidate_id": "v6-rank-candidate:3f2111bc84b04ad55ab62d8db9048ac1536ec7eb825ae237680854d1ebd0cac4",
+      "contextual_rewrite_evidence_id": "v6-evidence-v1:a220cd440f880f8f1f7f203705544b6e704bcf44b08ea214ec51f413b201bc90",
+      "energy_evaluated": false,
+      "equivalence_class_id": "v6-rank-equivalence:07bbcdc9bb4ec2934a5677663f08844f1868cd54cda7f936a8842bdd881578cd",
+      "equivalence_scope": "NATIVE_RESOURCE_ONLY_NOT_HAMILTONIAN_STATE_OR_ENERGY",
+      "human_classification": "APPROXIMATE_RANK_DEMOTION",
+      "kept_source_slots": [
+        0,
+        1
+      ],
+      "native_mapping": [
+        {
+          "angle_scale": "-2",
+          "control_label": 3,
+          "generator_digest": "82a0316e1860f8f1a93723e45a2962f5a518b97501a18acb7bc961bcab6ea85c",
+          "pool_index": 193,
+          "support_qubits": [
+            0,
+            6,
+            8,
+            10
+          ]
+        },
+        {
+          "angle_scale": "2",
+          "control_label": 6,
+          "generator_digest": "783741dea72d952ca2b72b4f535d7553a684cf4f51583306459450e467045ac1",
+          "pool_index": 194,
+          "support_qubits": [
+            0,
+            6,
+            8,
+            10
+          ]
+        }
+      ],
+      "native_synthesis_evidence_id": "v6-evidence-v1:9c068baba860533f868e673d19033779e3592577b7ae0e0b45bbb7b53ac84242",
+      "omitted_pool_index": 195,
+      "omitted_source_slot": 2,
+      "optimization_requirement": "FULL_REOPTIMIZATION",
+      "paper_measurement_cost": null,
+      "rejection_reasons": [],
+      "resources": {
+        "after": {
+          "cnot_count": 841,
+          "cnot_depth": 301,
+          "logical_block_count": 76,
+          "parameter_count": 128,
+          "total_depth": 1518
+        },
+        "after_digest": "99fa75656cd58b6b5fb1b1274a2b5f3bf76c0867d1b059cd32830fcdaa48cab1",
+        "before": {
+          "cnot_count": 840,
+          "cnot_depth": 300,
+          "logical_block_count": 76,
+          "parameter_count": 129,
+          "total_depth": 1520
+        },
+        "before_digest": "c09aeee48afd5008ee7a933108e9079d08ceeb38911c649cf24f04a45c6b7cb8",
+        "compiler_configuration": "uncompiled-barrier-preserving-paper-era-qasm-v1",
+        "effect": "VERIFIED_GAIN",
+        "native_synthesizer_version": "v6-mvp3-rank2-sparse-ucry-v1",
+        "physical_circuit_gain": true,
+        "primary_nonregression": true,
+        "primary_resource": "total_depth",
+        "qubit_order": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "resource_counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "strict_gain": true
+      },
+      "screening_status": "ELIGIBLE_NATIVE_PHYSICAL_GAIN",
+      "source_ansatz_positions": [
+        116,
+        117,
+        118
+      ],
+      "source_block_id": "block-v1:417c887ab430749fdc4475d9bf7d8ca618eed8874c70e41af57bf3a6b39e57fa",
+      "source_parameter_membership": "NOT_ESTABLISHED",
+      "source_pool_indices": [
+        193,
+        194,
+        195
+      ],
+      "source_state_digest": "a9a2985f370418d6d7c4f3b5e8024079bc11839647c316371c49836da5f205ae",
+      "source_state_equivalence": "NOT_ESTABLISHED",
+      "target_embedding_evidence_id": "v6-evidence-v1:a8fd638f4985fe136d10cb790aeda09a83276508a1d5f44026a74f54cdad54e8",
+      "target_pool_indices": [
+        193,
+        194
+      ],
+      "target_seed_state_digest": "37467c40798c42e736a52759ea674022c4498fdb2b0ece4dbcb7282f6e2c5760",
+      "transition_id": "v6-transition:mvp3-to-sparse-ucry-rank2-v1"
+    },
+    {
+      "candidate_id": "v6-rank-candidate:f2e79e66911a7167f49ac58a001d42b646a4ffef4706ae21230bc4d438aebade",
+      "contextual_rewrite_evidence_id": "v6-evidence-v1:a220cd440f880f8f1f7f203705544b6e704bcf44b08ea214ec51f413b201bc90",
+      "energy_evaluated": false,
+      "equivalence_class_id": "v6-rank-equivalence:07bbcdc9bb4ec2934a5677663f08844f1868cd54cda7f936a8842bdd881578cd",
+      "equivalence_scope": "NATIVE_RESOURCE_ONLY_NOT_HAMILTONIAN_STATE_OR_ENERGY",
+      "human_classification": "APPROXIMATE_RANK_DEMOTION",
+      "kept_source_slots": [
+        0,
+        2
+      ],
+      "native_mapping": [
+        {
+          "angle_scale": "-2",
+          "control_label": 3,
+          "generator_digest": "82a0316e1860f8f1a93723e45a2962f5a518b97501a18acb7bc961bcab6ea85c",
+          "pool_index": 193,
+          "support_qubits": [
+            0,
+            6,
+            8,
+            10
+          ]
+        },
+        {
+          "angle_scale": "-2",
+          "control_label": 5,
+          "generator_digest": "2195fc49e44840dca7ebf36032a94adbaebaa069b5fd5ceedf6fef5e8ae86502",
+          "pool_index": 195,
+          "support_qubits": [
+            0,
+            6,
+            8,
+            10
+          ]
+        }
+      ],
+      "native_synthesis_evidence_id": "v6-evidence-v1:9c068baba860533f868e673d19033779e3592577b7ae0e0b45bbb7b53ac84242",
+      "omitted_pool_index": 194,
+      "omitted_source_slot": 1,
+      "optimization_requirement": "FULL_REOPTIMIZATION",
+      "paper_measurement_cost": null,
+      "rejection_reasons": [],
+      "resources": {
+        "after": {
+          "cnot_count": 841,
+          "cnot_depth": 301,
+          "logical_block_count": 76,
+          "parameter_count": 128,
+          "total_depth": 1518
+        },
+        "after_digest": "2fa9cf6177fe5b6c60d1f9ef6ef1fce5443cff0aec89aa71e564f2fd8967a3ad",
+        "before": {
+          "cnot_count": 840,
+          "cnot_depth": 300,
+          "logical_block_count": 76,
+          "parameter_count": 129,
+          "total_depth": 1520
+        },
+        "before_digest": "c09aeee48afd5008ee7a933108e9079d08ceeb38911c649cf24f04a45c6b7cb8",
+        "compiler_configuration": "uncompiled-barrier-preserving-paper-era-qasm-v1",
+        "effect": "VERIFIED_GAIN",
+        "native_synthesizer_version": "v6-mvp3-rank2-sparse-ucry-v1",
+        "physical_circuit_gain": true,
+        "primary_nonregression": true,
+        "primary_resource": "total_depth",
+        "qubit_order": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "resource_counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "strict_gain": true
+      },
+      "screening_status": "ELIGIBLE_NATIVE_PHYSICAL_GAIN",
+      "source_ansatz_positions": [
+        116,
+        117,
+        118
+      ],
+      "source_block_id": "block-v1:417c887ab430749fdc4475d9bf7d8ca618eed8874c70e41af57bf3a6b39e57fa",
+      "source_parameter_membership": "NOT_ESTABLISHED",
+      "source_pool_indices": [
+        193,
+        194,
+        195
+      ],
+      "source_state_digest": "a9a2985f370418d6d7c4f3b5e8024079bc11839647c316371c49836da5f205ae",
+      "source_state_equivalence": "NOT_ESTABLISHED",
+      "target_embedding_evidence_id": "v6-evidence-v1:1cb186cebfa9f65b36d466f30bb0fbcd08fe39d4ed777a60f7f02e81c068d9e4",
+      "target_pool_indices": [
+        193,
+        195
+      ],
+      "target_seed_state_digest": "870e1a2ef9b7bde8e5d02e80898cb512e3253468a771e37788c8558bd883fd12",
+      "transition_id": "v6-transition:mvp3-to-sparse-ucry-rank2-v1"
+    }
+  ],
+  "catalog_version": "v6-rank-candidate-catalog-v1",
+  "claim_boundary": "Deterministic development candidate generation, registered family embedding, native synthesis, and full-circuit resource recount only. Demoted checkpoint seeds are not claimed state- or energy-equivalent and require later full reoptimization.",
+  "development_only": true,
+  "eligible_candidate_count": 3,
+  "eligible_source_block_count": 1,
+  "equivalence_classes": {
+    "v6-rank-equivalence:07bbcdc9bb4ec2934a5677663f08844f1868cd54cda7f936a8842bdd881578cd": [
+      "v6-rank-candidate:09e1064d9897af7ff16a9944cfe178a6042ba6536e70e73dd413dc96ba44d20a",
+      "v6-rank-candidate:3f2111bc84b04ad55ab62d8db9048ac1536ec7eb825ae237680854d1ebd0cac4",
+      "v6-rank-candidate:f2e79e66911a7167f49ac58a001d42b646a4ffef4706ae21230bc4d438aebade"
+    ]
+  },
+  "equivalence_policy": "Candidates in one class share only the registered native synthesis/resource orbit. They remain separate candidates because Hamiltonian, checkpoint-state, and energy equivalence are not established.",
+  "evidence_artifact": "artifacts/v6/s5/native-rank2-feasibility-v1.json",
+  "evidence_artifact_sha256": "999146962096629cc87220db68eed3c403c9ef11020e662404bb9a523ab6cbee",
+  "paper_measurement_cost": null,
+  "parent_effect": "The saturated S6 parent contains one eligible rank-three MVP block; S7 therefore has three registered ordered-subset edges. The earlier S5 checkpoint had two such blocks before exact OVP-to-MVP absorption.",
+  "registered_source_constituent_counts": [
+    3
+  ],
+  "rejected_candidate_count": 0,
+  "report_digest": "b07c152c432bbd1ffcf07f56e0e00dc64f97482ac24496b424f20f41f2b4e3a8",
+  "schema_version": "1.0.0",
+  "source_artifact": "artifacts/v6/s6/exact-rewrite-trace-v1.json",
+  "source_artifact_sha256": "7ffd67ee78b87fe466f37233cda9a9e0b37feae3f36647aad579664dd3ca178a",
+  "source_counter_label_comparison": {
+    "interpretation": "Wrapper labels differ, while the pinned underlying paper-era QASM counter implementation ID is identical.",
+    "s6_wrapper": "paper-era-full-circuit-resource-v1:paper-era-qasm-counter-a3f89d0",
+    "s7_wrapper": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0"
+  },
+  "source_recount": {
+    "circuit_qasm_digest": "c09aeee48afd5008ee7a933108e9079d08ceeb38911c649cf24f04a45c6b7cb8",
+    "cnot_count": 840,
+    "cnot_depth": 300,
+    "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+    "logical_block_count": 76,
+    "parameter_count": 129,
+    "total_depth": 1520
+  },
+  "source_recount_checks": {
+    "base_counter_implementation_matches_s6": true,
+    "cnot_count_matches_s6": true,
+    "cnot_depth_matches_s6": true,
+    "logical_block_count_matches_s6": true,
+    "parameter_count_matches_s6": true,
+    "total_depth_matches_s6": true
+  },
+  "source_state_digest": "a9a2985f370418d6d7c4f3b5e8024079bc11839647c316371c49836da5f205ae",
+  "transition_registry": {
+    "artifact_kind": "v6-transition-registry",
+    "frozen": true,
+    "registry_digest": "7b0887a20446f259149f85abcd16947e7ec290c688c65cb03c0e9eeb557afc4f",
+    "schema_version": "1.0.0",
+    "transitions": [
+      {
+        "allowed_constituent_counts": [
+          3
+        ],
+        "evidence_ids": [
+          "v6-evidence-v1:a8fd638f4985fe136d10cb790aeda09a83276508a1d5f44026a74f54cdad54e8",
+          "v6-evidence-v1:1cb186cebfa9f65b36d466f30bb0fbcd08fe39d4ed777a60f7f02e81c068d9e4",
+          "v6-evidence-v1:9cf621a511b64d94c24b011f1f62baaae8642723598e2a07a4d9beb1473783f4",
+          "v6-evidence-v1:9c068baba860533f868e673d19033779e3592577b7ae0e0b45bbb7b53ac84242",
+          "v6-evidence-v1:a220cd440f880f8f1f7f203705544b6e704bcf44b08ea214ec51f413b201bc90"
+        ],
+        "generator_relation_id": "v6-exact-ordered-qe-subset-relation-v1",
+        "native_synthesis_id": "v6-mvp3-rank2-sparse-ucry-v1",
+        "native_synthesis_scope": "FAMILYWISE",
+        "parameter_map_id": "v6-mvp3-ordered-subset-rank2-map-v1",
+        "parameter_map_kind": "AFFINE_EXACT",
+        "semantic_scope": "FAMILYWISE_UNITARY",
+        "source_family": "MVP",
+        "status": "VERIFIED",
+        "target_family": "SPARSE_UCRY_RANK2",
+        "target_rank": 2,
+        "transition_id": "v6-transition:mvp3-to-sparse-ucry-rank2-v1"
+      }
+    ]
+  },
+  "unregistered_edges_not_enumerated": [
+    {
+      "reason": "no S1-S5 verified native transition is registered",
+      "source_constituent_count": 2,
+      "target_rank": 1
+    }
+  ],
+  "work": {
+    "energy_evaluations": 0,
+    "full_resource_recounts": 4,
+    "gradient_vector_evaluations": 0,
+    "native_candidates_synthesized": 3,
+    "optimizer_starts": 0,
+    "paper_measurement_cost": null,
+    "rank_blocks_inspected": 76
+  }
+}
