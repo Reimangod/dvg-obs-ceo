@@ -87,6 +87,7 @@ dvg-obs-v5-s8-h4-hvp-sentinels = "dvg_obs_ceo.v5_s8_h4_hvp_sentinels:main"
 dvg-obs-paper-equivalent-figures = "dvg_obs_ceo.paper_equivalent_figures:main"
 dvg-obs-multisystem-checkpoint = "dvg_obs_ceo.multisystem_checkpoint:main"
 dvg-obs-v6-s0-preflight = "dvg_obs_ceo.v6_rank_adaptive.s0_preflight:main"
+dvg-obs-v6-s3-replay = "dvg_obs_ceo.v6_rank_adaptive.legacy_replay:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
