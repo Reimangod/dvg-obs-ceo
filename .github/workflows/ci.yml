@@ -24,5 +24,6 @@ jobs:
       - run: uv sync --frozen --extra test --extra baseline
       - run: test "$(git tag --list 'dvg-obs-*' | wc -l | tr -d ' ')" -gt 0
       - run: uv run python tools/check_isolation.py
+      - run: uv run python -W error::SyntaxWarning -m compileall -q src tests
       - run: uv run python -m pytest -q
       - run: uv run dvg-obs-v5-release-audit
