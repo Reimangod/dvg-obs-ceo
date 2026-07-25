@@ -101,7 +101,4 @@ filterwarnings = [
   "ignore::DeprecationWarning:numpy\\..*",
   "ignore::DeprecationWarning:adaptvqe\\..*",
   "ignore:The distutils package is deprecated.*:DeprecationWarning",
-  # Python 3.10.20 promotes an invalid escape in pinned OpenFermion 1.0.1.
-  # CI separately compiles first-party sources with SyntaxWarning as an error.
-  "ignore:invalid escape sequence:SyntaxWarning",
 ]
