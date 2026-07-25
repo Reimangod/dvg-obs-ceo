@@ -1,0 +1,300 @@
+{
+  "artifact_kind": "v6-ns4-familywise-native-certification",
+  "certifications": [
+    {
+      "candidate_id": "v6-ns-synthesis:5d382de89ba978b1eba20d6f31dce5b1884015acad1882265756730ddb2790f1",
+      "familywise_certified": false,
+      "numerical_samples": 0,
+      "status": "RESOURCE_REJECTED_BEFORE_NUMERICAL_REGRESSION"
+    },
+    {
+      "candidate_id": "v6-ns-synthesis:629ff82c57acea79b24b6fe7a799a1de86415a78b6a39f15769216e26e12fd57",
+      "familywise_certified": false,
+      "numerical_samples": 0,
+      "status": "RESOURCE_REJECTED_BEFORE_NUMERICAL_REGRESSION"
+    },
+    {
+      "candidate_id": "v6-ns-synthesis:e8f10043a9c544e0d1cf2fb69a8b5c6d20b91d8e31bf864726aae559257e70d3",
+      "familywise_certified": false,
+      "numerical_samples": 0,
+      "status": "RESOURCE_REJECTED_BEFORE_NUMERICAL_REGRESSION"
+    },
+    {
+      "candidate_id": "v6-ns-synthesis:b5c84fb55f9b3b4823e793c3cc90810fe8c97c4cf2492dcf2dbd2db5dc9ea9cd",
+      "familywise_certified": false,
+      "numerical_samples": 0,
+      "status": "RESOURCE_REJECTED_BEFORE_NUMERICAL_REGRESSION"
+    },
+    {
+      "candidate_id": "v6-ns-synthesis:082571d4d8c109df627146dbb87aa3ec77b9780a52d207d96600364b1f1dfbfb",
+      "context_independent": true,
+      "familywise_certified": true,
+      "maximum_statevector_l2_error_up_to_global_phase": 1.3880773351901495e-15,
+      "numerical_samples": 5,
+      "numerical_tolerance": 1e-10,
+      "qcec_status": "NOT_REQUIRED_FOR_ACCEPTANCE_EXACT_INTERNAL_PROOF_USED",
+      "random_seed": 20260726,
+      "status": "FAMILYWISE_CERTIFIED",
+      "symbolic_evidence": {
+        "arbitrary_context_substitution": "equal local unitaries on identical ordered qubits may replace one another under arbitrary prefix and suffix circuits",
+        "fixed_rz_commutation": "Rz on control c commutes with all control-to-pivot CNOTs and target Rz phases.",
+        "generator_map_identity": [
+          0,
+          0
+        ],
+        "parameter_map_rank": 2,
+        "parity_walk_rule": "Each required Z-parity vertex is visited exactly once for phase insertion; repeated visits carry no phase. The walk starts at 0 and ends at 4, preserving the source Clifford scaffold's net linear transform.",
+        "phase_rows": [
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            -2,
+            -2
+          ],
+          [
+            -2,
+            0
+          ],
+          [
+            0,
+            -2
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      "symbolic_evidence_digest": "640506486e37d81d1fe74d1b75d9ed27f3d5fde4d6eeba8c352cd97a7e64b192",
+      "symbolic_method": "exact-integer-generator-map-and-boolean-parity-walk-v1"
+    },
+    {
+      "candidate_id": "v6-ns-synthesis:55325cd93623b01b2a3206e77bfef9094b9962164f382df33a2f8cec451729ea",
+      "familywise_certified": false,
+      "numerical_samples": 0,
+      "status": "RESOURCE_REJECTED_BEFORE_NUMERICAL_REGRESSION"
+    },
+    {
+      "candidate_id": "v6-ns-synthesis:4d8a5257447dd99dc8daf30e7445d0b8a50984ca06061f8fc15b86d364797ea7",
+      "context_independent": true,
+      "familywise_certified": true,
+      "maximum_statevector_l2_error_up_to_global_phase": 1.1300325136110592e-15,
+      "numerical_samples": 5,
+      "numerical_tolerance": 1e-10,
+      "qcec_status": "NOT_REQUIRED_FOR_ACCEPTANCE_EXACT_INTERNAL_PROOF_USED",
+      "random_seed": 20260726,
+      "status": "FAMILYWISE_CERTIFIED",
+      "symbolic_evidence": {
+        "arbitrary_context_substitution": "equal local unitaries on identical ordered qubits may replace one another under arbitrary prefix and suffix circuits",
+        "fixed_rz_commutation": "Rz on control c commutes with all control-to-pivot CNOTs and target Rz phases.",
+        "generator_map_identity": [
+          0,
+          0
+        ],
+        "parameter_map_rank": 2,
+        "parity_walk_rule": "Each required Z-parity vertex is visited exactly once for phase insertion; repeated visits carry no phase. The walk starts at 0 and ends at 4, preserving the source Clifford scaffold's net linear transform.",
+        "phase_rows": [
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            -2
+          ],
+          [
+            0,
+            -2
+          ],
+          [
+            -2,
+            0
+          ],
+          [
+            -2,
+            2
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            2
+          ]
+        ]
+      },
+      "symbolic_evidence_digest": "c600a41d6c779247c407579cea2f4680368b10a02f51da34df45bedc7f5aea14",
+      "symbolic_method": "exact-integer-generator-map-and-boolean-parity-walk-v1"
+    },
+    {
+      "candidate_id": "v6-ns-synthesis:0f34d163561f16926d558adbff3dc14a776d960b96aad206dec3e9da2737ed4a",
+      "familywise_certified": false,
+      "numerical_samples": 0,
+      "status": "RESOURCE_REJECTED_BEFORE_NUMERICAL_REGRESSION"
+    },
+    {
+      "candidate_id": "v6-ns-synthesis:d083a33672402133116f72c7636f2f2903d689cf83b2f3f833d8a292d80b2aa3",
+      "familywise_certified": false,
+      "numerical_samples": 0,
+      "status": "RESOURCE_REJECTED_BEFORE_NUMERICAL_REGRESSION"
+    },
+    {
+      "candidate_id": "v6-ns-synthesis:3adec3882cd232ad06467997b41e372b69b4c13e796ec171e6ad6891ed30afac",
+      "familywise_certified": false,
+      "numerical_samples": 0,
+      "status": "RESOURCE_REJECTED_BEFORE_NUMERICAL_REGRESSION"
+    },
+    {
+      "candidate_id": "v6-ns-synthesis:f355b6c8365b62d497ec1ef1973a456c7e9315b1a8edc32d7ae3dacfdbde4b09",
+      "context_independent": true,
+      "familywise_certified": true,
+      "maximum_statevector_l2_error_up_to_global_phase": 1.1705217460157914e-15,
+      "numerical_samples": 5,
+      "numerical_tolerance": 1e-10,
+      "qcec_status": "NOT_REQUIRED_FOR_ACCEPTANCE_EXACT_INTERNAL_PROOF_USED",
+      "random_seed": 20260726,
+      "status": "FAMILYWISE_CERTIFIED",
+      "symbolic_evidence": {
+        "arbitrary_context_substitution": "equal local unitaries on identical ordered qubits may replace one another under arbitrary prefix and suffix circuits",
+        "fixed_rz_commutation": "Rz on control c commutes with all control-to-pivot CNOTs and target Rz phases.",
+        "generator_map_identity": [
+          0,
+          0
+        ],
+        "parameter_map_rank": 2,
+        "parity_walk_rule": "Each required Z-parity vertex is visited exactly once for phase insertion; repeated visits carry no phase. The walk starts at 0 and ends at 4, preserving the source Clifford scaffold's net linear transform.",
+        "phase_rows": [
+          [
+            -2,
+            2
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            -2,
+            0
+          ],
+          [
+            0,
+            -2
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            -2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            0
+          ]
+        ]
+      },
+      "symbolic_evidence_digest": "eddb09a1dff06f26ee904a3cd467457550e80deb0f6cb015ebac049fc703f1a0",
+      "symbolic_method": "exact-integer-generator-map-and-boolean-parity-walk-v1"
+    },
+    {
+      "candidate_id": "v6-ns-synthesis:334e3c4d6c9684d1362eabf422d89ea6a374b78268daf11b9ad1511ce37086d3",
+      "familywise_certified": false,
+      "numerical_samples": 0,
+      "status": "RESOURCE_REJECTED_BEFORE_NUMERICAL_REGRESSION"
+    },
+    {
+      "candidate_id": "v6-ns-synthesis:bde749bc31b6dad291c0ee265c6560902f283110f0ccc0bcb79ca59170fb6534",
+      "context_independent": true,
+      "familywise_certified": true,
+      "maximum_statevector_l2_error_up_to_global_phase": 1.1861710675836764e-15,
+      "numerical_samples": 5,
+      "numerical_tolerance": 1e-10,
+      "qcec_status": "NOT_REQUIRED_FOR_ACCEPTANCE_EXACT_INTERNAL_PROOF_USED",
+      "random_seed": 20260726,
+      "status": "FAMILYWISE_CERTIFIED",
+      "symbolic_evidence": {
+        "arbitrary_context_substitution": "equal local unitaries on identical ordered qubits may replace one another under arbitrary prefix and suffix circuits",
+        "fixed_rz_commutation": "Rz on control c commutes with all control-to-pivot CNOTs and target Rz phases.",
+        "generator_map_identity": [
+          0,
+          0
+        ],
+        "parameter_map_rank": 2,
+        "parity_walk_rule": "Each required Z-parity vertex is visited exactly once for phase insertion; repeated visits carry no phase. The walk starts at 0 and ends at 4, preserving the source Clifford scaffold's net linear transform.",
+        "phase_rows": [
+          [
+            -2,
+            0
+          ],
+          [
+            0,
+            -2
+          ],
+          [
+            -2,
+            -2
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            2
+          ]
+        ]
+      },
+      "symbolic_evidence_digest": "c9b010c9d10d53bf8ebb7a8b2133a58620e5aebf5758bffb26d045e0e3743659",
+      "symbolic_method": "exact-integer-generator-map-and-boolean-parity-walk-v1"
+    }
+  ],
+  "claim_boundary": "Exact proof is limited to the registered three-generator CEO phase-polynomial scaffold and parameter maps. Numerical tests are regression evidence, not the source of exactness.",
+  "familywise_certified_count": 4,
+  "inputs": {
+    "ns1": "8ca6202b1f6635b7d62eadcfe4ab4681079e11e33a6c51e8364179a0c8714416",
+    "ns3": "8a4598d10675bba3ea7a9da92c457280eb27590b847f10dc7fac1af0a8a05d97"
+  },
+  "pipeline_version": "v6-native-synthesis-pipeline-v1",
+  "report_digest": "6cede09dec9310add47034557fbfaddc8866bf9f9cc1f8dfab461320f710cf1a",
+  "schema_version": "1.0.0",
+  "work": {
+    "energy_evaluations": 0,
+    "numerical_statevector_samples": 20
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "artifact_kind": "v6-ns2-reference-resource-bounds",
+  "energy_evaluations": 0,
+  "hard_gate": {
+    "parameter_only_is_failure": true,
+    "rule_1": "delta_cnot < 0 and delta_cnot_depth <= 0",
+    "rule_2": "delta_cnot <= 0 and delta_cnot_depth < 0",
+    "rule_3": "delta_cnot <= 0 and delta_cnot_depth <= 0 and delta_total_depth < 0 and delta_parameters < 0"
+  },
+  "mvp3_reference": {
+    "counter_disclosure": "The frozen paper-era QASM counter observes CNOT depth 13 for the vendored reference circuit although pool metadata and the paper state 11. Hard gates use the observed frozen counter consistently.",
+    "paper_nominal": {
+      "cnot_count": 13,
+      "cnot_depth": 11
+    },
+    "resources": {
+      "circuit_qasm_digest": "c29dacffe44b920b474ae7d7ad2245b3c36cd60698c41584c037f3e22259a511",
+      "cnot_count": 13,
+      "cnot_depth": 13,
+      "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+      "logical_block_count": 1,
+      "parameter_count": 3,
+      "total_depth": 24
+    }
+  },
+  "ns1_report_digest": "8ca6202b1f6635b7d62eadcfe4ab4681079e11e33a6c51e8364179a0c8714416",
+  "pipeline_version": "v6-native-synthesis-pipeline-v1",
+  "report_digest": "ad9ebfa63f1e6bfb8598b6caad55897cc5a59000c4b846ceb50185b0281953ba",
+  "same_support_ovp_references": [
+    {
+      "pool_index": 760,
+      "resources": {
+        "circuit_qasm_digest": "c9c865aa466c125bfbc1b352f7fe93a19cf9040d4e50d2a5b3fdd35c444d5bbf",
+        "cnot_count": 9,
+        "cnot_depth": 7,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 1,
+        "parameter_count": 1,
+        "total_depth": 13
+      }
+    },
+    {
+      "pool_index": 761,
+      "resources": {
+        "circuit_qasm_digest": "ef4fdc6d051a25c3fcfaf9d08c581fe516452bb7c46e7fc1fe12e21d66563723",
+        "cnot_count": 9,
+        "cnot_depth": 7,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 1,
+        "parameter_count": 1,
+        "total_depth": 13
+      }
+    },
+    {
+      "pool_index": 762,
+      "resources": {
+        "circuit_qasm_digest": "8966dfb2d3c2628fdb1a73309ec71dec8907657302e8d649a7c7a0581536f862",
+        "cnot_count": 9,
+        "cnot_depth": 7,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 1,
+        "parameter_count": 1,
+        "total_depth": 13
+      }
+    },
+    {
+      "pool_index": 763,
+      "resources": {
+        "circuit_qasm_digest": "a5ba59ddfb11848924b0b3e889df9892e98fce8b4c846f652d5234dfaf253e25",
+        "cnot_count": 9,
+        "cnot_depth": 7,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 1,
+        "parameter_count": 1,
+        "total_depth": 13
+      }
+    },
+    {
+      "pool_index": 764,
+      "resources": {
+        "circuit_qasm_digest": "f97e354c0f0c7c95d3ade70247ced8023f439ab43295a634c5bf89bdc8fe002f",
+        "cnot_count": 9,
+        "cnot_depth": 7,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 1,
+        "parameter_count": 1,
+        "total_depth": 13
+      }
+    },
+    {
+      "pool_index": 765,
+      "resources": {
+        "circuit_qasm_digest": "2656133c826b3e4916d0324ba5929f946669bca8863e9ff8027258c541e41fe5",
+        "cnot_count": 9,
+        "cnot_depth": 7,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 1,
+        "parameter_count": 1,
+        "total_depth": 13
+      }
+    }
+  ],
+  "schema_version": "1.0.0"
+}

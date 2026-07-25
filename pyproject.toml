@@ -97,6 +97,8 @@ dvg-obs-v6-s9-certification = "dvg_obs_ceo.v6_rank_adaptive.s9_certification:mai
 dvg-obs-v6-s9-result-audit = "dvg_obs_ceo.v6_rank_adaptive.s9_result_audit:main"
 dvg-obs-v6-s9-stationarity-diagnostic = "dvg_obs_ceo.v6_rank_adaptive.s9_stationarity_diagnostic:main"
 dvg-obs-v6-ns0-closure = "dvg_obs_ceo.v6_rank_adaptive.ns0_closure:main"
+dvg-obs-v6-native-synthesis = "dvg_obs_ceo.v6_rank_adaptive.native_synthesis_pipeline:main"
+dvg-obs-v6-ns7-energy-certification = "dvg_obs_ceo.v6_rank_adaptive.ns7_energy_certification:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

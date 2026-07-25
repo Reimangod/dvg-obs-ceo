@@ -1,0 +1,3696 @@
+{
+  "artifact_kind": "v6-ns5-resource-only-context-census",
+  "claim_boundary": "Resource-only census. No candidate energy, stationarity, measurement cost, or accuracy is established.",
+  "contexts": [
+    {
+      "case_id": "h4-1.5-late",
+      "eligible_rank3_block_count": 2,
+      "logical_block_count": 14,
+      "parameter_count": 24,
+      "path": "artifacts/s8-1/later-checkpoint-calibration-bundle/checkpoint-h4-1.5-iteration-12-or-convergence.json",
+      "role": "development",
+      "sha256": "43e55458fd6ad71cb6c509a1ec7a927a180d6b1085bdf54a718c2db78af706a7",
+      "source_resources": {
+        "circuit_qasm_digest": "3baf7e7bd30365b2b0126bc4d51d9a5f54f52783703a36d8934ab89233fc9a3b",
+        "cnot_count": 158,
+        "cnot_depth": 73,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 14,
+        "parameter_count": 24,
+        "total_depth": 270
+      }
+    },
+    {
+      "case_id": "h6-1.5-s6",
+      "eligible_rank3_block_count": 1,
+      "logical_block_count": 76,
+      "parameter_count": 129,
+      "path": "artifacts/v6/s6/exact-rewrite-trace-v1.json",
+      "role": "development",
+      "sha256": "7ffd67ee78b87fe466f37233cda9a9e0b37feae3f36647aad579664dd3ca178a",
+      "source_resources": {
+        "circuit_qasm_digest": "c09aeee48afd5008ee7a933108e9079d08ceeb38911c649cf24f04a45c6b7cb8",
+        "cnot_count": 840,
+        "cnot_depth": 300,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 76,
+        "parameter_count": 129,
+        "total_depth": 1520
+      }
+    },
+    {
+      "case_id": "h6-3.0",
+      "eligible_rank3_block_count": 12,
+      "logical_block_count": 95,
+      "parameter_count": 149,
+      "path": "artifacts/full-figures/ceo-star/h6-3.0/checkpoint.json",
+      "role": "development",
+      "sha256": "40a59c46b12e27551b3b156125cf1f2bd6f75ec49da1831eba13cdc27be24a88",
+      "source_resources": {
+        "circuit_qasm_digest": "877329b73f6fd209969882cb1ef811488052764676e3883fcbbf53b066167728",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 149,
+        "total_depth": 1493
+      }
+    },
+    {
+      "case_id": "beh2-3.0",
+      "eligible_rank3_block_count": 0,
+      "logical_block_count": 32,
+      "parameter_count": 38,
+      "path": "artifacts/full-figures/ceo-star/beh2-3.0/checkpoint.json",
+      "role": "validation",
+      "sha256": "4344d203bbf161fd53814f1fb51af2bbc8531d7c77587a477a3654b3b1ec626c",
+      "source_resources": {
+        "circuit_qasm_digest": "4587c608c61d2ec9504be10b0ba3f43da5e2f65942d19a48cbf37c4fe91a75ca",
+        "cnot_count": 284,
+        "cnot_depth": 94,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 32,
+        "parameter_count": 38,
+        "total_depth": 458
+      }
+    }
+  ],
+  "inputs": {
+    "ns1": "8ca6202b1f6635b7d62eadcfe4ab4681079e11e33a6c51e8364179a0c8714416",
+    "ns3": "8a4598d10675bba3ea7a9da92c457280eb27590b847f10dc7fac1af0a8a05d97",
+    "ns4": "6cede09dec9310add47034557fbfaddc8866bf9f9cc1f8dfab461320f710cf1a"
+  },
+  "pipeline_version": "v6-native-synthesis-pipeline-v1",
+  "primary_eligible_record_count": 60,
+  "record_count": 60,
+  "records": [
+    {
+      "context_id": "h4-1.5-late",
+      "context_role": "development",
+      "direct_primary_eligible": true,
+      "energy_evaluated": false,
+      "exact_rewrite_closure": {
+        "not_claimed_globally_saturated": true,
+        "post_closure_resources_equal_direct": true,
+        "rewrites_applied": 0,
+        "status": "NO_REGISTERED_RULE_FOR_AFFINE_TIED_BLOCK"
+      },
+      "family_id": "v6-ns-family:1d05b2720fc1cd78db70bd697f5ec77bff77fc96f58b0c57a24ecb3f077ca18d",
+      "normal": [
+        1,
+        -1,
+        -1
+      ],
+      "post_closure_primary_eligible": true,
+      "post_closure_resources": {
+        "circuit_qasm_digest": "0edcc9a7366cf6e6ed01df00d2a00ef864f2672ce27ba86932c3abc2a2bfac6f",
+        "cnot_count": 158,
+        "cnot_depth": 73,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 14,
+        "parameter_count": 23,
+        "total_depth": 268
+      },
+      "resource_delta": {
+        "cnot_count": 0,
+        "cnot_depth": 0,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -2
+      },
+      "source_block_id": "block-v1:faf8b2a4a196a6aa523d5bde7bdfd3f91986133c78fea7f3a1ef71b02b3bdce1",
+      "source_pool_indices": [
+        65,
+        66,
+        67
+      ],
+      "source_resources": {
+        "circuit_qasm_digest": "3baf7e7bd30365b2b0126bc4d51d9a5f54f52783703a36d8934ab89233fc9a3b",
+        "cnot_count": 158,
+        "cnot_depth": 73,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 14,
+        "parameter_count": 24,
+        "total_depth": 270
+      },
+      "synthesis_candidate_id": "v6-ns-synthesis:082571d4d8c109df627146dbb87aa3ec77b9780a52d207d96600364b1f1dfbfb",
+      "target_resources": {
+        "circuit_qasm_digest": "0edcc9a7366cf6e6ed01df00d2a00ef864f2672ce27ba86932c3abc2a2bfac6f",
+        "cnot_count": 158,
+        "cnot_depth": 73,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 14,
+        "parameter_count": 23,
+        "total_depth": 268
+      }
+    },
+    {
+      "context_id": "h4-1.5-late",
+      "context_role": "development",
+      "direct_primary_eligible": true,
+      "energy_evaluated": false,
+      "exact_rewrite_closure": {
+        "not_claimed_globally_saturated": true,
+        "post_closure_resources_equal_direct": true,
+        "rewrites_applied": 0,
+        "status": "NO_REGISTERED_RULE_FOR_AFFINE_TIED_BLOCK"
+      },
+      "family_id": "v6-ns-family:36564e90c05ea0d4eb801d3fb6df949c37b301ff3156ad904bf442523ca31be4",
+      "normal": [
+        1,
+        -1,
+        1
+      ],
+      "post_closure_primary_eligible": true,
+      "post_closure_resources": {
+        "circuit_qasm_digest": "ab94e61992da8ab6f7a83d2ac12e2aaafbb4325b119096598efeb3788f8225c4",
+        "cnot_count": 158,
+        "cnot_depth": 73,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 14,
+        "parameter_count": 23,
+        "total_depth": 268
+      },
+      "resource_delta": {
+        "cnot_count": 0,
+        "cnot_depth": 0,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -2
+      },
+      "source_block_id": "block-v1:faf8b2a4a196a6aa523d5bde7bdfd3f91986133c78fea7f3a1ef71b02b3bdce1",
+      "source_pool_indices": [
+        65,
+        66,
+        67
+      ],
+      "source_resources": {
+        "circuit_qasm_digest": "3baf7e7bd30365b2b0126bc4d51d9a5f54f52783703a36d8934ab89233fc9a3b",
+        "cnot_count": 158,
+        "cnot_depth": 73,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 14,
+        "parameter_count": 24,
+        "total_depth": 270
+      },
+      "synthesis_candidate_id": "v6-ns-synthesis:4d8a5257447dd99dc8daf30e7445d0b8a50984ca06061f8fc15b86d364797ea7",
+      "target_resources": {
+        "circuit_qasm_digest": "ab94e61992da8ab6f7a83d2ac12e2aaafbb4325b119096598efeb3788f8225c4",
+        "cnot_count": 158,
+        "cnot_depth": 73,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 14,
+        "parameter_count": 23,
+        "total_depth": 268
+      }
+    },
+    {
+      "context_id": "h4-1.5-late",
+      "context_role": "development",
+      "direct_primary_eligible": true,
+      "energy_evaluated": false,
+      "exact_rewrite_closure": {
+        "not_claimed_globally_saturated": true,
+        "post_closure_resources_equal_direct": true,
+        "rewrites_applied": 0,
+        "status": "NO_REGISTERED_RULE_FOR_AFFINE_TIED_BLOCK"
+      },
+      "family_id": "v6-ns-family:00630228cc0ccc0f76bc2cd500b96ec1cd2b487a78f04f69996079e0702726fa",
+      "normal": [
+        1,
+        1,
+        -1
+      ],
+      "post_closure_primary_eligible": true,
+      "post_closure_resources": {
+        "circuit_qasm_digest": "3e6a5d7759762bb5b1f1122ad76fd82f2c303b853de8f29be482d6a865671a4e",
+        "cnot_count": 156,
+        "cnot_depth": 73,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 14,
+        "parameter_count": 23,
+        "total_depth": 266
+      },
+      "resource_delta": {
+        "cnot_count": -2,
+        "cnot_depth": 0,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -4
+      },
+      "source_block_id": "block-v1:faf8b2a4a196a6aa523d5bde7bdfd3f91986133c78fea7f3a1ef71b02b3bdce1",
+      "source_pool_indices": [
+        65,
+        66,
+        67
+      ],
+      "source_resources": {
+        "circuit_qasm_digest": "3baf7e7bd30365b2b0126bc4d51d9a5f54f52783703a36d8934ab89233fc9a3b",
+        "cnot_count": 158,
+        "cnot_depth": 73,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 14,
+        "parameter_count": 24,
+        "total_depth": 270
+      },
+      "synthesis_candidate_id": "v6-ns-synthesis:f355b6c8365b62d497ec1ef1973a456c7e9315b1a8edc32d7ae3dacfdbde4b09",
+      "target_resources": {
+        "circuit_qasm_digest": "3e6a5d7759762bb5b1f1122ad76fd82f2c303b853de8f29be482d6a865671a4e",
+        "cnot_count": 156,
+        "cnot_depth": 73,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 14,
+        "parameter_count": 23,
+        "total_depth": 266
+      }
+    },
+    {
+      "context_id": "h4-1.5-late",
+      "context_role": "development",
+      "direct_primary_eligible": true,
+      "energy_evaluated": false,
+      "exact_rewrite_closure": {
+        "not_claimed_globally_saturated": true,
+        "post_closure_resources_equal_direct": true,
+        "rewrites_applied": 0,
+        "status": "NO_REGISTERED_RULE_FOR_AFFINE_TIED_BLOCK"
+      },
+      "family_id": "v6-ns-family:1bd5552f1cc2df503c3111f459cc1ce8c5ef3d58e4de413675f78a44fe72176b",
+      "normal": [
+        1,
+        1,
+        1
+      ],
+      "post_closure_primary_eligible": true,
+      "post_closure_resources": {
+        "circuit_qasm_digest": "338ec51687c3d11b4fec2345748979f502622285f48030d5766644067d2082fe",
+        "cnot_count": 156,
+        "cnot_depth": 73,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 14,
+        "parameter_count": 23,
+        "total_depth": 266
+      },
+      "resource_delta": {
+        "cnot_count": -2,
+        "cnot_depth": 0,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -4
+      },
+      "source_block_id": "block-v1:faf8b2a4a196a6aa523d5bde7bdfd3f91986133c78fea7f3a1ef71b02b3bdce1",
+      "source_pool_indices": [
+        65,
+        66,
+        67
+      ],
+      "source_resources": {
+        "circuit_qasm_digest": "3baf7e7bd30365b2b0126bc4d51d9a5f54f52783703a36d8934ab89233fc9a3b",
+        "cnot_count": 158,
+        "cnot_depth": 73,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 14,
+        "parameter_count": 24,
+        "total_depth": 270
+      },
+      "synthesis_candidate_id": "v6-ns-synthesis:bde749bc31b6dad291c0ee265c6560902f283110f0ccc0bcb79ca59170fb6534",
+      "target_resources": {
+        "circuit_qasm_digest": "338ec51687c3d11b4fec2345748979f502622285f48030d5766644067d2082fe",
+        "cnot_count": 156,
+        "cnot_depth": 73,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 14,
+        "parameter_count": 23,
+        "total_depth": 266
+      }
+    },
+    {
+      "context_id": "h4-1.5-late",
+      "context_role": "development",
+      "direct_primary_eligible": true,
+      "energy_evaluated": false,
+      "exact_rewrite_closure": {
+        "not_claimed_globally_saturated": true,
+        "post_closure_resources_equal_direct": true,
+        "rewrites_applied": 0,
+        "status": "NO_REGISTERED_RULE_FOR_AFFINE_TIED_BLOCK"
+      },
+      "family_id": "v6-ns-family:1d05b2720fc1cd78db70bd697f5ec77bff77fc96f58b0c57a24ecb3f077ca18d",
+      "normal": [
+        1,
+        -1,
+        -1
+      ],
+      "post_closure_primary_eligible": true,
+      "post_closure_resources": {
+        "circuit_qasm_digest": "09b276ac1214c708f125a5097f2c70acae120a7d927d483a582c886ecfc048c6",
+        "cnot_count": 158,
+        "cnot_depth": 73,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 14,
+        "parameter_count": 23,
+        "total_depth": 268
+      },
+      "resource_delta": {
+        "cnot_count": 0,
+        "cnot_depth": 0,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -2
+      },
+      "source_block_id": "block-v1:0ba5fcd7367a0e4e30973e567b884037f64b4cc15a5d41a67ec9c8cc198f1562",
+      "source_pool_indices": [
+        34,
+        35,
+        36
+      ],
+      "source_resources": {
+        "circuit_qasm_digest": "3baf7e7bd30365b2b0126bc4d51d9a5f54f52783703a36d8934ab89233fc9a3b",
+        "cnot_count": 158,
+        "cnot_depth": 73,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 14,
+        "parameter_count": 24,
+        "total_depth": 270
+      },
+      "synthesis_candidate_id": "v6-ns-synthesis:082571d4d8c109df627146dbb87aa3ec77b9780a52d207d96600364b1f1dfbfb",
+      "target_resources": {
+        "circuit_qasm_digest": "09b276ac1214c708f125a5097f2c70acae120a7d927d483a582c886ecfc048c6",
+        "cnot_count": 158,
+        "cnot_depth": 73,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 14,
+        "parameter_count": 23,
+        "total_depth": 268
+      }
+    },
+    {
+      "context_id": "h4-1.5-late",
+      "context_role": "development",
+      "direct_primary_eligible": true,
+      "energy_evaluated": false,
+      "exact_rewrite_closure": {
+        "not_claimed_globally_saturated": true,
+        "post_closure_resources_equal_direct": true,
+        "rewrites_applied": 0,
+        "status": "NO_REGISTERED_RULE_FOR_AFFINE_TIED_BLOCK"
+      },
+      "family_id": "v6-ns-family:36564e90c05ea0d4eb801d3fb6df949c37b301ff3156ad904bf442523ca31be4",
+      "normal": [
+        1,
+        -1,
+        1
+      ],
+      "post_closure_primary_eligible": true,
+      "post_closure_resources": {
+        "circuit_qasm_digest": "765df905aa8ed9c54bfe35d5d7abc4f0d9178362f676eb75691fb76da69a951e",
+        "cnot_count": 158,
+        "cnot_depth": 73,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 14,
+        "parameter_count": 23,
+        "total_depth": 268
+      },
+      "resource_delta": {
+        "cnot_count": 0,
+        "cnot_depth": 0,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -2
+      },
+      "source_block_id": "block-v1:0ba5fcd7367a0e4e30973e567b884037f64b4cc15a5d41a67ec9c8cc198f1562",
+      "source_pool_indices": [
+        34,
+        35,
+        36
+      ],
+      "source_resources": {
+        "circuit_qasm_digest": "3baf7e7bd30365b2b0126bc4d51d9a5f54f52783703a36d8934ab89233fc9a3b",
+        "cnot_count": 158,
+        "cnot_depth": 73,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 14,
+        "parameter_count": 24,
+        "total_depth": 270
+      },
+      "synthesis_candidate_id": "v6-ns-synthesis:4d8a5257447dd99dc8daf30e7445d0b8a50984ca06061f8fc15b86d364797ea7",
+      "target_resources": {
+        "circuit_qasm_digest": "765df905aa8ed9c54bfe35d5d7abc4f0d9178362f676eb75691fb76da69a951e",
+        "cnot_count": 158,
+        "cnot_depth": 73,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 14,
+        "parameter_count": 23,
+        "total_depth": 268
+      }
+    },
+    {
+      "context_id": "h4-1.5-late",
+      "context_role": "development",
+      "direct_primary_eligible": true,
+      "energy_evaluated": false,
+      "exact_rewrite_closure": {
+        "not_claimed_globally_saturated": true,
+        "post_closure_resources_equal_direct": true,
+        "rewrites_applied": 0,
+        "status": "NO_REGISTERED_RULE_FOR_AFFINE_TIED_BLOCK"
+      },
+      "family_id": "v6-ns-family:00630228cc0ccc0f76bc2cd500b96ec1cd2b487a78f04f69996079e0702726fa",
+      "normal": [
+        1,
+        1,
+        -1
+      ],
+      "post_closure_primary_eligible": true,
+      "post_closure_resources": {
+        "circuit_qasm_digest": "388eebd1a667e84f3b94bb30aeca54e30a107987f198de7d70f0c74bea40d9a5",
+        "cnot_count": 156,
+        "cnot_depth": 73,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 14,
+        "parameter_count": 23,
+        "total_depth": 266
+      },
+      "resource_delta": {
+        "cnot_count": -2,
+        "cnot_depth": 0,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -4
+      },
+      "source_block_id": "block-v1:0ba5fcd7367a0e4e30973e567b884037f64b4cc15a5d41a67ec9c8cc198f1562",
+      "source_pool_indices": [
+        34,
+        35,
+        36
+      ],
+      "source_resources": {
+        "circuit_qasm_digest": "3baf7e7bd30365b2b0126bc4d51d9a5f54f52783703a36d8934ab89233fc9a3b",
+        "cnot_count": 158,
+        "cnot_depth": 73,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 14,
+        "parameter_count": 24,
+        "total_depth": 270
+      },
+      "synthesis_candidate_id": "v6-ns-synthesis:f355b6c8365b62d497ec1ef1973a456c7e9315b1a8edc32d7ae3dacfdbde4b09",
+      "target_resources": {
+        "circuit_qasm_digest": "388eebd1a667e84f3b94bb30aeca54e30a107987f198de7d70f0c74bea40d9a5",
+        "cnot_count": 156,
+        "cnot_depth": 73,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 14,
+        "parameter_count": 23,
+        "total_depth": 266
+      }
+    },
+    {
+      "context_id": "h4-1.5-late",
+      "context_role": "development",
+      "direct_primary_eligible": true,
+      "energy_evaluated": false,
+      "exact_rewrite_closure": {
+        "not_claimed_globally_saturated": true,
+        "post_closure_resources_equal_direct": true,
+        "rewrites_applied": 0,
+        "status": "NO_REGISTERED_RULE_FOR_AFFINE_TIED_BLOCK"
+      },
+      "family_id": "v6-ns-family:1bd5552f1cc2df503c3111f459cc1ce8c5ef3d58e4de413675f78a44fe72176b",
+      "normal": [
+        1,
+        1,
+        1
+      ],
+      "post_closure_primary_eligible": true,
+      "post_closure_resources": {
+        "circuit_qasm_digest": "44783eeba065c128a83520dbd8953993d7e0c63166ed5e4373e5b870b62974a9",
+        "cnot_count": 156,
+        "cnot_depth": 73,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 14,
+        "parameter_count": 23,
+        "total_depth": 266
+      },
+      "resource_delta": {
+        "cnot_count": -2,
+        "cnot_depth": 0,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -4
+      },
+      "source_block_id": "block-v1:0ba5fcd7367a0e4e30973e567b884037f64b4cc15a5d41a67ec9c8cc198f1562",
+      "source_pool_indices": [
+        34,
+        35,
+        36
+      ],
+      "source_resources": {
+        "circuit_qasm_digest": "3baf7e7bd30365b2b0126bc4d51d9a5f54f52783703a36d8934ab89233fc9a3b",
+        "cnot_count": 158,
+        "cnot_depth": 73,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 14,
+        "parameter_count": 24,
+        "total_depth": 270
+      },
+      "synthesis_candidate_id": "v6-ns-synthesis:bde749bc31b6dad291c0ee265c6560902f283110f0ccc0bcb79ca59170fb6534",
+      "target_resources": {
+        "circuit_qasm_digest": "44783eeba065c128a83520dbd8953993d7e0c63166ed5e4373e5b870b62974a9",
+        "cnot_count": 156,
+        "cnot_depth": 73,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 14,
+        "parameter_count": 23,
+        "total_depth": 266
+      }
+    },
+    {
+      "context_id": "h6-1.5-s6",
+      "context_role": "development",
+      "direct_primary_eligible": true,
+      "energy_evaluated": false,
+      "exact_rewrite_closure": {
+        "not_claimed_globally_saturated": true,
+        "post_closure_resources_equal_direct": true,
+        "rewrites_applied": 0,
+        "status": "NO_REGISTERED_RULE_FOR_AFFINE_TIED_BLOCK"
+      },
+      "family_id": "v6-ns-family:1d05b2720fc1cd78db70bd697f5ec77bff77fc96f58b0c57a24ecb3f077ca18d",
+      "normal": [
+        1,
+        -1,
+        -1
+      ],
+      "post_closure_primary_eligible": true,
+      "post_closure_resources": {
+        "circuit_qasm_digest": "54666dfa71d4002a4bfc514e277f9b7b1ce0984626fa4846f3f365ae3347365e",
+        "cnot_count": 840,
+        "cnot_depth": 300,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 76,
+        "parameter_count": 128,
+        "total_depth": 1518
+      },
+      "resource_delta": {
+        "cnot_count": 0,
+        "cnot_depth": 0,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -2
+      },
+      "source_block_id": "block-v1:417c887ab430749fdc4475d9bf7d8ca618eed8874c70e41af57bf3a6b39e57fa",
+      "source_pool_indices": [
+        193,
+        194,
+        195
+      ],
+      "source_resources": {
+        "circuit_qasm_digest": "c09aeee48afd5008ee7a933108e9079d08ceeb38911c649cf24f04a45c6b7cb8",
+        "cnot_count": 840,
+        "cnot_depth": 300,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 76,
+        "parameter_count": 129,
+        "total_depth": 1520
+      },
+      "synthesis_candidate_id": "v6-ns-synthesis:082571d4d8c109df627146dbb87aa3ec77b9780a52d207d96600364b1f1dfbfb",
+      "target_resources": {
+        "circuit_qasm_digest": "54666dfa71d4002a4bfc514e277f9b7b1ce0984626fa4846f3f365ae3347365e",
+        "cnot_count": 840,
+        "cnot_depth": 300,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 76,
+        "parameter_count": 128,
+        "total_depth": 1518
+      }
+    },
+    {
+      "context_id": "h6-1.5-s6",
+      "context_role": "development",
+      "direct_primary_eligible": true,
+      "energy_evaluated": false,
+      "exact_rewrite_closure": {
+        "not_claimed_globally_saturated": true,
+        "post_closure_resources_equal_direct": true,
+        "rewrites_applied": 0,
+        "status": "NO_REGISTERED_RULE_FOR_AFFINE_TIED_BLOCK"
+      },
+      "family_id": "v6-ns-family:36564e90c05ea0d4eb801d3fb6df949c37b301ff3156ad904bf442523ca31be4",
+      "normal": [
+        1,
+        -1,
+        1
+      ],
+      "post_closure_primary_eligible": true,
+      "post_closure_resources": {
+        "circuit_qasm_digest": "fbaf0b71633a0da9800636fe01e70ed79c9c2292eb95be6c39075ca08ee4cc59",
+        "cnot_count": 840,
+        "cnot_depth": 300,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 76,
+        "parameter_count": 128,
+        "total_depth": 1518
+      },
+      "resource_delta": {
+        "cnot_count": 0,
+        "cnot_depth": 0,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -2
+      },
+      "source_block_id": "block-v1:417c887ab430749fdc4475d9bf7d8ca618eed8874c70e41af57bf3a6b39e57fa",
+      "source_pool_indices": [
+        193,
+        194,
+        195
+      ],
+      "source_resources": {
+        "circuit_qasm_digest": "c09aeee48afd5008ee7a933108e9079d08ceeb38911c649cf24f04a45c6b7cb8",
+        "cnot_count": 840,
+        "cnot_depth": 300,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 76,
+        "parameter_count": 129,
+        "total_depth": 1520
+      },
+      "synthesis_candidate_id": "v6-ns-synthesis:4d8a5257447dd99dc8daf30e7445d0b8a50984ca06061f8fc15b86d364797ea7",
+      "target_resources": {
+        "circuit_qasm_digest": "fbaf0b71633a0da9800636fe01e70ed79c9c2292eb95be6c39075ca08ee4cc59",
+        "cnot_count": 840,
+        "cnot_depth": 300,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 76,
+        "parameter_count": 128,
+        "total_depth": 1518
+      }
+    },
+    {
+      "context_id": "h6-1.5-s6",
+      "context_role": "development",
+      "direct_primary_eligible": true,
+      "energy_evaluated": false,
+      "exact_rewrite_closure": {
+        "not_claimed_globally_saturated": true,
+        "post_closure_resources_equal_direct": true,
+        "rewrites_applied": 0,
+        "status": "NO_REGISTERED_RULE_FOR_AFFINE_TIED_BLOCK"
+      },
+      "family_id": "v6-ns-family:00630228cc0ccc0f76bc2cd500b96ec1cd2b487a78f04f69996079e0702726fa",
+      "normal": [
+        1,
+        1,
+        -1
+      ],
+      "post_closure_primary_eligible": true,
+      "post_closure_resources": {
+        "circuit_qasm_digest": "f3d07952afb1cac69b78d79837a200da0c979e119db743de03b784ad663ab9a2",
+        "cnot_count": 838,
+        "cnot_depth": 298,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 76,
+        "parameter_count": 128,
+        "total_depth": 1516
+      },
+      "resource_delta": {
+        "cnot_count": -2,
+        "cnot_depth": -2,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -4
+      },
+      "source_block_id": "block-v1:417c887ab430749fdc4475d9bf7d8ca618eed8874c70e41af57bf3a6b39e57fa",
+      "source_pool_indices": [
+        193,
+        194,
+        195
+      ],
+      "source_resources": {
+        "circuit_qasm_digest": "c09aeee48afd5008ee7a933108e9079d08ceeb38911c649cf24f04a45c6b7cb8",
+        "cnot_count": 840,
+        "cnot_depth": 300,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 76,
+        "parameter_count": 129,
+        "total_depth": 1520
+      },
+      "synthesis_candidate_id": "v6-ns-synthesis:f355b6c8365b62d497ec1ef1973a456c7e9315b1a8edc32d7ae3dacfdbde4b09",
+      "target_resources": {
+        "circuit_qasm_digest": "f3d07952afb1cac69b78d79837a200da0c979e119db743de03b784ad663ab9a2",
+        "cnot_count": 838,
+        "cnot_depth": 298,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 76,
+        "parameter_count": 128,
+        "total_depth": 1516
+      }
+    },
+    {
+      "context_id": "h6-1.5-s6",
+      "context_role": "development",
+      "direct_primary_eligible": true,
+      "energy_evaluated": false,
+      "exact_rewrite_closure": {
+        "not_claimed_globally_saturated": true,
+        "post_closure_resources_equal_direct": true,
+        "rewrites_applied": 0,
+        "status": "NO_REGISTERED_RULE_FOR_AFFINE_TIED_BLOCK"
+      },
+      "family_id": "v6-ns-family:1bd5552f1cc2df503c3111f459cc1ce8c5ef3d58e4de413675f78a44fe72176b",
+      "normal": [
+        1,
+        1,
+        1
+      ],
+      "post_closure_primary_eligible": true,
+      "post_closure_resources": {
+        "circuit_qasm_digest": "f3ed5c48dec0df9f266068cdf71a8bbae761fd3e96116882cb1fc1e7573b369b",
+        "cnot_count": 838,
+        "cnot_depth": 298,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 76,
+        "parameter_count": 128,
+        "total_depth": 1516
+      },
+      "resource_delta": {
+        "cnot_count": -2,
+        "cnot_depth": -2,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -4
+      },
+      "source_block_id": "block-v1:417c887ab430749fdc4475d9bf7d8ca618eed8874c70e41af57bf3a6b39e57fa",
+      "source_pool_indices": [
+        193,
+        194,
+        195
+      ],
+      "source_resources": {
+        "circuit_qasm_digest": "c09aeee48afd5008ee7a933108e9079d08ceeb38911c649cf24f04a45c6b7cb8",
+        "cnot_count": 840,
+        "cnot_depth": 300,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 76,
+        "parameter_count": 129,
+        "total_depth": 1520
+      },
+      "synthesis_candidate_id": "v6-ns-synthesis:bde749bc31b6dad291c0ee265c6560902f283110f0ccc0bcb79ca59170fb6534",
+      "target_resources": {
+        "circuit_qasm_digest": "f3ed5c48dec0df9f266068cdf71a8bbae761fd3e96116882cb1fc1e7573b369b",
+        "cnot_count": 838,
+        "cnot_depth": 298,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 76,
+        "parameter_count": 128,
+        "total_depth": 1516
+      }
+    },
+    {
+      "context_id": "h6-3.0",
+      "context_role": "development",
+      "direct_primary_eligible": true,
+      "energy_evaluated": false,
+      "exact_rewrite_closure": {
+        "not_claimed_globally_saturated": true,
+        "post_closure_resources_equal_direct": true,
+        "rewrites_applied": 0,
+        "status": "NO_REGISTERED_RULE_FOR_AFFINE_TIED_BLOCK"
+      },
+      "family_id": "v6-ns-family:1d05b2720fc1cd78db70bd697f5ec77bff77fc96f58b0c57a24ecb3f077ca18d",
+      "normal": [
+        1,
+        -1,
+        -1
+      ],
+      "post_closure_primary_eligible": true,
+      "post_closure_resources": {
+        "circuit_qasm_digest": "ac3817092be5e1f3d6aa839d7f9515afcab23b52ecaf65b6b3b864cf56710d61",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1491
+      },
+      "resource_delta": {
+        "cnot_count": 0,
+        "cnot_depth": 0,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -2
+      },
+      "source_block_id": "block-v1:33b547a529b53b7f0a7732b161dd749a71d2f8d19629344f8816c32fc9ea9cba",
+      "source_pool_indices": [
+        103,
+        104,
+        105
+      ],
+      "source_resources": {
+        "circuit_qasm_digest": "877329b73f6fd209969882cb1ef811488052764676e3883fcbbf53b066167728",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 149,
+        "total_depth": 1493
+      },
+      "synthesis_candidate_id": "v6-ns-synthesis:082571d4d8c109df627146dbb87aa3ec77b9780a52d207d96600364b1f1dfbfb",
+      "target_resources": {
+        "circuit_qasm_digest": "ac3817092be5e1f3d6aa839d7f9515afcab23b52ecaf65b6b3b864cf56710d61",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1491
+      }
+    },
+    {
+      "context_id": "h6-3.0",
+      "context_role": "development",
+      "direct_primary_eligible": true,
+      "energy_evaluated": false,
+      "exact_rewrite_closure": {
+        "not_claimed_globally_saturated": true,
+        "post_closure_resources_equal_direct": true,
+        "rewrites_applied": 0,
+        "status": "NO_REGISTERED_RULE_FOR_AFFINE_TIED_BLOCK"
+      },
+      "family_id": "v6-ns-family:36564e90c05ea0d4eb801d3fb6df949c37b301ff3156ad904bf442523ca31be4",
+      "normal": [
+        1,
+        -1,
+        1
+      ],
+      "post_closure_primary_eligible": true,
+      "post_closure_resources": {
+        "circuit_qasm_digest": "ea5e6223b3c86bfaf86beb3372424ed626f9fd6addf20ed7f7a0100a44f891b0",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1491
+      },
+      "resource_delta": {
+        "cnot_count": 0,
+        "cnot_depth": 0,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -2
+      },
+      "source_block_id": "block-v1:33b547a529b53b7f0a7732b161dd749a71d2f8d19629344f8816c32fc9ea9cba",
+      "source_pool_indices": [
+        103,
+        104,
+        105
+      ],
+      "source_resources": {
+        "circuit_qasm_digest": "877329b73f6fd209969882cb1ef811488052764676e3883fcbbf53b066167728",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 149,
+        "total_depth": 1493
+      },
+      "synthesis_candidate_id": "v6-ns-synthesis:4d8a5257447dd99dc8daf30e7445d0b8a50984ca06061f8fc15b86d364797ea7",
+      "target_resources": {
+        "circuit_qasm_digest": "ea5e6223b3c86bfaf86beb3372424ed626f9fd6addf20ed7f7a0100a44f891b0",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1491
+      }
+    },
+    {
+      "context_id": "h6-3.0",
+      "context_role": "development",
+      "direct_primary_eligible": true,
+      "energy_evaluated": false,
+      "exact_rewrite_closure": {
+        "not_claimed_globally_saturated": true,
+        "post_closure_resources_equal_direct": true,
+        "rewrites_applied": 0,
+        "status": "NO_REGISTERED_RULE_FOR_AFFINE_TIED_BLOCK"
+      },
+      "family_id": "v6-ns-family:00630228cc0ccc0f76bc2cd500b96ec1cd2b487a78f04f69996079e0702726fa",
+      "normal": [
+        1,
+        1,
+        -1
+      ],
+      "post_closure_primary_eligible": true,
+      "post_closure_resources": {
+        "circuit_qasm_digest": "68f4a84169e480bf02d41f64b431a35e5225a9374ebec6746efca9537fe3b7b7",
+        "cnot_count": 783,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1489
+      },
+      "resource_delta": {
+        "cnot_count": -2,
+        "cnot_depth": 0,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -4
+      },
+      "source_block_id": "block-v1:33b547a529b53b7f0a7732b161dd749a71d2f8d19629344f8816c32fc9ea9cba",
+      "source_pool_indices": [
+        103,
+        104,
+        105
+      ],
+      "source_resources": {
+        "circuit_qasm_digest": "877329b73f6fd209969882cb1ef811488052764676e3883fcbbf53b066167728",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 149,
+        "total_depth": 1493
+      },
+      "synthesis_candidate_id": "v6-ns-synthesis:f355b6c8365b62d497ec1ef1973a456c7e9315b1a8edc32d7ae3dacfdbde4b09",
+      "target_resources": {
+        "circuit_qasm_digest": "68f4a84169e480bf02d41f64b431a35e5225a9374ebec6746efca9537fe3b7b7",
+        "cnot_count": 783,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1489
+      }
+    },
+    {
+      "context_id": "h6-3.0",
+      "context_role": "development",
+      "direct_primary_eligible": true,
+      "energy_evaluated": false,
+      "exact_rewrite_closure": {
+        "not_claimed_globally_saturated": true,
+        "post_closure_resources_equal_direct": true,
+        "rewrites_applied": 0,
+        "status": "NO_REGISTERED_RULE_FOR_AFFINE_TIED_BLOCK"
+      },
+      "family_id": "v6-ns-family:1bd5552f1cc2df503c3111f459cc1ce8c5ef3d58e4de413675f78a44fe72176b",
+      "normal": [
+        1,
+        1,
+        1
+      ],
+      "post_closure_primary_eligible": true,
+      "post_closure_resources": {
+        "circuit_qasm_digest": "3fade50da5c0c97b49c6faeb0f19f503b4e416b20c475e3877101c63ac956fde",
+        "cnot_count": 783,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1489
+      },
+      "resource_delta": {
+        "cnot_count": -2,
+        "cnot_depth": 0,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -4
+      },
+      "source_block_id": "block-v1:33b547a529b53b7f0a7732b161dd749a71d2f8d19629344f8816c32fc9ea9cba",
+      "source_pool_indices": [
+        103,
+        104,
+        105
+      ],
+      "source_resources": {
+        "circuit_qasm_digest": "877329b73f6fd209969882cb1ef811488052764676e3883fcbbf53b066167728",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 149,
+        "total_depth": 1493
+      },
+      "synthesis_candidate_id": "v6-ns-synthesis:bde749bc31b6dad291c0ee265c6560902f283110f0ccc0bcb79ca59170fb6534",
+      "target_resources": {
+        "circuit_qasm_digest": "3fade50da5c0c97b49c6faeb0f19f503b4e416b20c475e3877101c63ac956fde",
+        "cnot_count": 783,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1489
+      }
+    },
+    {
+      "context_id": "h6-3.0",
+      "context_role": "development",
+      "direct_primary_eligible": true,
+      "energy_evaluated": false,
+      "exact_rewrite_closure": {
+        "not_claimed_globally_saturated": true,
+        "post_closure_resources_equal_direct": true,
+        "rewrites_applied": 0,
+        "status": "NO_REGISTERED_RULE_FOR_AFFINE_TIED_BLOCK"
+      },
+      "family_id": "v6-ns-family:1d05b2720fc1cd78db70bd697f5ec77bff77fc96f58b0c57a24ecb3f077ca18d",
+      "normal": [
+        1,
+        -1,
+        -1
+      ],
+      "post_closure_primary_eligible": true,
+      "post_closure_resources": {
+        "circuit_qasm_digest": "93a7ef1862e1e3e3cf6d5dc36a89dfa605988d5a0e68a49e38a73f07b3bee354",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1491
+      },
+      "resource_delta": {
+        "cnot_count": 0,
+        "cnot_depth": 0,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -2
+      },
+      "source_block_id": "block-v1:0d5548a42182ff9ce76ef2ea4a7bd95c041febe12f2a23b0a7aedb716950b3bb",
+      "source_pool_indices": [
+        468,
+        469,
+        470
+      ],
+      "source_resources": {
+        "circuit_qasm_digest": "877329b73f6fd209969882cb1ef811488052764676e3883fcbbf53b066167728",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 149,
+        "total_depth": 1493
+      },
+      "synthesis_candidate_id": "v6-ns-synthesis:082571d4d8c109df627146dbb87aa3ec77b9780a52d207d96600364b1f1dfbfb",
+      "target_resources": {
+        "circuit_qasm_digest": "93a7ef1862e1e3e3cf6d5dc36a89dfa605988d5a0e68a49e38a73f07b3bee354",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1491
+      }
+    },
+    {
+      "context_id": "h6-3.0",
+      "context_role": "development",
+      "direct_primary_eligible": true,
+      "energy_evaluated": false,
+      "exact_rewrite_closure": {
+        "not_claimed_globally_saturated": true,
+        "post_closure_resources_equal_direct": true,
+        "rewrites_applied": 0,
+        "status": "NO_REGISTERED_RULE_FOR_AFFINE_TIED_BLOCK"
+      },
+      "family_id": "v6-ns-family:36564e90c05ea0d4eb801d3fb6df949c37b301ff3156ad904bf442523ca31be4",
+      "normal": [
+        1,
+        -1,
+        1
+      ],
+      "post_closure_primary_eligible": true,
+      "post_closure_resources": {
+        "circuit_qasm_digest": "c636094353703cbcfede4f9c30421cc7dbb30a0cb2bc8702a3085aa6ea198efa",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1491
+      },
+      "resource_delta": {
+        "cnot_count": 0,
+        "cnot_depth": 0,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -2
+      },
+      "source_block_id": "block-v1:0d5548a42182ff9ce76ef2ea4a7bd95c041febe12f2a23b0a7aedb716950b3bb",
+      "source_pool_indices": [
+        468,
+        469,
+        470
+      ],
+      "source_resources": {
+        "circuit_qasm_digest": "877329b73f6fd209969882cb1ef811488052764676e3883fcbbf53b066167728",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 149,
+        "total_depth": 1493
+      },
+      "synthesis_candidate_id": "v6-ns-synthesis:4d8a5257447dd99dc8daf30e7445d0b8a50984ca06061f8fc15b86d364797ea7",
+      "target_resources": {
+        "circuit_qasm_digest": "c636094353703cbcfede4f9c30421cc7dbb30a0cb2bc8702a3085aa6ea198efa",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1491
+      }
+    },
+    {
+      "context_id": "h6-3.0",
+      "context_role": "development",
+      "direct_primary_eligible": true,
+      "energy_evaluated": false,
+      "exact_rewrite_closure": {
+        "not_claimed_globally_saturated": true,
+        "post_closure_resources_equal_direct": true,
+        "rewrites_applied": 0,
+        "status": "NO_REGISTERED_RULE_FOR_AFFINE_TIED_BLOCK"
+      },
+      "family_id": "v6-ns-family:00630228cc0ccc0f76bc2cd500b96ec1cd2b487a78f04f69996079e0702726fa",
+      "normal": [
+        1,
+        1,
+        -1
+      ],
+      "post_closure_primary_eligible": true,
+      "post_closure_resources": {
+        "circuit_qasm_digest": "ea5ae2dc901929e79de88809b8c26e4b48e951752c392d6c6960c378ff60477e",
+        "cnot_count": 783,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1489
+      },
+      "resource_delta": {
+        "cnot_count": -2,
+        "cnot_depth": 0,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -4
+      },
+      "source_block_id": "block-v1:0d5548a42182ff9ce76ef2ea4a7bd95c041febe12f2a23b0a7aedb716950b3bb",
+      "source_pool_indices": [
+        468,
+        469,
+        470
+      ],
+      "source_resources": {
+        "circuit_qasm_digest": "877329b73f6fd209969882cb1ef811488052764676e3883fcbbf53b066167728",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 149,
+        "total_depth": 1493
+      },
+      "synthesis_candidate_id": "v6-ns-synthesis:f355b6c8365b62d497ec1ef1973a456c7e9315b1a8edc32d7ae3dacfdbde4b09",
+      "target_resources": {
+        "circuit_qasm_digest": "ea5ae2dc901929e79de88809b8c26e4b48e951752c392d6c6960c378ff60477e",
+        "cnot_count": 783,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1489
+      }
+    },
+    {
+      "context_id": "h6-3.0",
+      "context_role": "development",
+      "direct_primary_eligible": true,
+      "energy_evaluated": false,
+      "exact_rewrite_closure": {
+        "not_claimed_globally_saturated": true,
+        "post_closure_resources_equal_direct": true,
+        "rewrites_applied": 0,
+        "status": "NO_REGISTERED_RULE_FOR_AFFINE_TIED_BLOCK"
+      },
+      "family_id": "v6-ns-family:1bd5552f1cc2df503c3111f459cc1ce8c5ef3d58e4de413675f78a44fe72176b",
+      "normal": [
+        1,
+        1,
+        1
+      ],
+      "post_closure_primary_eligible": true,
+      "post_closure_resources": {
+        "circuit_qasm_digest": "53aa8a7ff5f8df8e58e87b29f87545e6f4633c1e600f505839dc299062b2dfb0",
+        "cnot_count": 783,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1489
+      },
+      "resource_delta": {
+        "cnot_count": -2,
+        "cnot_depth": 0,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -4
+      },
+      "source_block_id": "block-v1:0d5548a42182ff9ce76ef2ea4a7bd95c041febe12f2a23b0a7aedb716950b3bb",
+      "source_pool_indices": [
+        468,
+        469,
+        470
+      ],
+      "source_resources": {
+        "circuit_qasm_digest": "877329b73f6fd209969882cb1ef811488052764676e3883fcbbf53b066167728",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 149,
+        "total_depth": 1493
+      },
+      "synthesis_candidate_id": "v6-ns-synthesis:bde749bc31b6dad291c0ee265c6560902f283110f0ccc0bcb79ca59170fb6534",
+      "target_resources": {
+        "circuit_qasm_digest": "53aa8a7ff5f8df8e58e87b29f87545e6f4633c1e600f505839dc299062b2dfb0",
+        "cnot_count": 783,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1489
+      }
+    },
+    {
+      "context_id": "h6-3.0",
+      "context_role": "development",
+      "direct_primary_eligible": true,
+      "energy_evaluated": false,
+      "exact_rewrite_closure": {
+        "not_claimed_globally_saturated": true,
+        "post_closure_resources_equal_direct": true,
+        "rewrites_applied": 0,
+        "status": "NO_REGISTERED_RULE_FOR_AFFINE_TIED_BLOCK"
+      },
+      "family_id": "v6-ns-family:1d05b2720fc1cd78db70bd697f5ec77bff77fc96f58b0c57a24ecb3f077ca18d",
+      "normal": [
+        1,
+        -1,
+        -1
+      ],
+      "post_closure_primary_eligible": true,
+      "post_closure_resources": {
+        "circuit_qasm_digest": "f799bb1aa7ba9548a13009c3bd322b28d660c6633b63f124a4613bafe1cac135",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1491
+      },
+      "resource_delta": {
+        "cnot_count": 0,
+        "cnot_depth": 0,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -2
+      },
+      "source_block_id": "block-v1:33b1c18a78ba753aab1b30bcb1514d39f894fe1ebb6ab7ad5d41a1a5896ce7ce",
+      "source_pool_indices": [
+        103,
+        104,
+        105
+      ],
+      "source_resources": {
+        "circuit_qasm_digest": "877329b73f6fd209969882cb1ef811488052764676e3883fcbbf53b066167728",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 149,
+        "total_depth": 1493
+      },
+      "synthesis_candidate_id": "v6-ns-synthesis:082571d4d8c109df627146dbb87aa3ec77b9780a52d207d96600364b1f1dfbfb",
+      "target_resources": {
+        "circuit_qasm_digest": "f799bb1aa7ba9548a13009c3bd322b28d660c6633b63f124a4613bafe1cac135",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1491
+      }
+    },
+    {
+      "context_id": "h6-3.0",
+      "context_role": "development",
+      "direct_primary_eligible": true,
+      "energy_evaluated": false,
+      "exact_rewrite_closure": {
+        "not_claimed_globally_saturated": true,
+        "post_closure_resources_equal_direct": true,
+        "rewrites_applied": 0,
+        "status": "NO_REGISTERED_RULE_FOR_AFFINE_TIED_BLOCK"
+      },
+      "family_id": "v6-ns-family:36564e90c05ea0d4eb801d3fb6df949c37b301ff3156ad904bf442523ca31be4",
+      "normal": [
+        1,
+        -1,
+        1
+      ],
+      "post_closure_primary_eligible": true,
+      "post_closure_resources": {
+        "circuit_qasm_digest": "38a87c69ec8ff18ec477c43b5ba9276bfcbda0f8bc7b3ab59b927398942c996c",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1491
+      },
+      "resource_delta": {
+        "cnot_count": 0,
+        "cnot_depth": 0,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -2
+      },
+      "source_block_id": "block-v1:33b1c18a78ba753aab1b30bcb1514d39f894fe1ebb6ab7ad5d41a1a5896ce7ce",
+      "source_pool_indices": [
+        103,
+        104,
+        105
+      ],
+      "source_resources": {
+        "circuit_qasm_digest": "877329b73f6fd209969882cb1ef811488052764676e3883fcbbf53b066167728",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 149,
+        "total_depth": 1493
+      },
+      "synthesis_candidate_id": "v6-ns-synthesis:4d8a5257447dd99dc8daf30e7445d0b8a50984ca06061f8fc15b86d364797ea7",
+      "target_resources": {
+        "circuit_qasm_digest": "38a87c69ec8ff18ec477c43b5ba9276bfcbda0f8bc7b3ab59b927398942c996c",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1491
+      }
+    },
+    {
+      "context_id": "h6-3.0",
+      "context_role": "development",
+      "direct_primary_eligible": true,
+      "energy_evaluated": false,
+      "exact_rewrite_closure": {
+        "not_claimed_globally_saturated": true,
+        "post_closure_resources_equal_direct": true,
+        "rewrites_applied": 0,
+        "status": "NO_REGISTERED_RULE_FOR_AFFINE_TIED_BLOCK"
+      },
+      "family_id": "v6-ns-family:00630228cc0ccc0f76bc2cd500b96ec1cd2b487a78f04f69996079e0702726fa",
+      "normal": [
+        1,
+        1,
+        -1
+      ],
+      "post_closure_primary_eligible": true,
+      "post_closure_resources": {
+        "circuit_qasm_digest": "ac85715833159329a9007843162332d47acc3d1c336799e4baf84e9424391914",
+        "cnot_count": 783,
+        "cnot_depth": 292,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1489
+      },
+      "resource_delta": {
+        "cnot_count": -2,
+        "cnot_depth": -2,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -4
+      },
+      "source_block_id": "block-v1:33b1c18a78ba753aab1b30bcb1514d39f894fe1ebb6ab7ad5d41a1a5896ce7ce",
+      "source_pool_indices": [
+        103,
+        104,
+        105
+      ],
+      "source_resources": {
+        "circuit_qasm_digest": "877329b73f6fd209969882cb1ef811488052764676e3883fcbbf53b066167728",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 149,
+        "total_depth": 1493
+      },
+      "synthesis_candidate_id": "v6-ns-synthesis:f355b6c8365b62d497ec1ef1973a456c7e9315b1a8edc32d7ae3dacfdbde4b09",
+      "target_resources": {
+        "circuit_qasm_digest": "ac85715833159329a9007843162332d47acc3d1c336799e4baf84e9424391914",
+        "cnot_count": 783,
+        "cnot_depth": 292,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1489
+      }
+    },
+    {
+      "context_id": "h6-3.0",
+      "context_role": "development",
+      "direct_primary_eligible": true,
+      "energy_evaluated": false,
+      "exact_rewrite_closure": {
+        "not_claimed_globally_saturated": true,
+        "post_closure_resources_equal_direct": true,
+        "rewrites_applied": 0,
+        "status": "NO_REGISTERED_RULE_FOR_AFFINE_TIED_BLOCK"
+      },
+      "family_id": "v6-ns-family:1bd5552f1cc2df503c3111f459cc1ce8c5ef3d58e4de413675f78a44fe72176b",
+      "normal": [
+        1,
+        1,
+        1
+      ],
+      "post_closure_primary_eligible": true,
+      "post_closure_resources": {
+        "circuit_qasm_digest": "56ad253cef5071fb98e147ac8f3395444d1b3c29d084fb2f49a21170ad8269c7",
+        "cnot_count": 783,
+        "cnot_depth": 292,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1489
+      },
+      "resource_delta": {
+        "cnot_count": -2,
+        "cnot_depth": -2,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -4
+      },
+      "source_block_id": "block-v1:33b1c18a78ba753aab1b30bcb1514d39f894fe1ebb6ab7ad5d41a1a5896ce7ce",
+      "source_pool_indices": [
+        103,
+        104,
+        105
+      ],
+      "source_resources": {
+        "circuit_qasm_digest": "877329b73f6fd209969882cb1ef811488052764676e3883fcbbf53b066167728",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 149,
+        "total_depth": 1493
+      },
+      "synthesis_candidate_id": "v6-ns-synthesis:bde749bc31b6dad291c0ee265c6560902f283110f0ccc0bcb79ca59170fb6534",
+      "target_resources": {
+        "circuit_qasm_digest": "56ad253cef5071fb98e147ac8f3395444d1b3c29d084fb2f49a21170ad8269c7",
+        "cnot_count": 783,
+        "cnot_depth": 292,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1489
+      }
+    },
+    {
+      "context_id": "h6-3.0",
+      "context_role": "development",
+      "direct_primary_eligible": true,
+      "energy_evaluated": false,
+      "exact_rewrite_closure": {
+        "not_claimed_globally_saturated": true,
+        "post_closure_resources_equal_direct": true,
+        "rewrites_applied": 0,
+        "status": "NO_REGISTERED_RULE_FOR_AFFINE_TIED_BLOCK"
+      },
+      "family_id": "v6-ns-family:1d05b2720fc1cd78db70bd697f5ec77bff77fc96f58b0c57a24ecb3f077ca18d",
+      "normal": [
+        1,
+        -1,
+        -1
+      ],
+      "post_closure_primary_eligible": true,
+      "post_closure_resources": {
+        "circuit_qasm_digest": "f3e7a22ad625f06a47113d8d7445baafb075b5f53a4c181bafb3e13b9256f702",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1491
+      },
+      "resource_delta": {
+        "cnot_count": 0,
+        "cnot_depth": 0,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -2
+      },
+      "source_block_id": "block-v1:52cf3f7d01db0616fef91f850c5e38b6cd38f5252e1a3635a34240d14d469883",
+      "source_pool_indices": [
+        460,
+        461,
+        462
+      ],
+      "source_resources": {
+        "circuit_qasm_digest": "877329b73f6fd209969882cb1ef811488052764676e3883fcbbf53b066167728",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 149,
+        "total_depth": 1493
+      },
+      "synthesis_candidate_id": "v6-ns-synthesis:082571d4d8c109df627146dbb87aa3ec77b9780a52d207d96600364b1f1dfbfb",
+      "target_resources": {
+        "circuit_qasm_digest": "f3e7a22ad625f06a47113d8d7445baafb075b5f53a4c181bafb3e13b9256f702",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1491
+      }
+    },
+    {
+      "context_id": "h6-3.0",
+      "context_role": "development",
+      "direct_primary_eligible": true,
+      "energy_evaluated": false,
+      "exact_rewrite_closure": {
+        "not_claimed_globally_saturated": true,
+        "post_closure_resources_equal_direct": true,
+        "rewrites_applied": 0,
+        "status": "NO_REGISTERED_RULE_FOR_AFFINE_TIED_BLOCK"
+      },
+      "family_id": "v6-ns-family:36564e90c05ea0d4eb801d3fb6df949c37b301ff3156ad904bf442523ca31be4",
+      "normal": [
+        1,
+        -1,
+        1
+      ],
+      "post_closure_primary_eligible": true,
+      "post_closure_resources": {
+        "circuit_qasm_digest": "c023b94df3525fab6cfda4dbe86a17d2be9e65b0560a768888829132651ebd33",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1491
+      },
+      "resource_delta": {
+        "cnot_count": 0,
+        "cnot_depth": 0,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -2
+      },
+      "source_block_id": "block-v1:52cf3f7d01db0616fef91f850c5e38b6cd38f5252e1a3635a34240d14d469883",
+      "source_pool_indices": [
+        460,
+        461,
+        462
+      ],
+      "source_resources": {
+        "circuit_qasm_digest": "877329b73f6fd209969882cb1ef811488052764676e3883fcbbf53b066167728",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 149,
+        "total_depth": 1493
+      },
+      "synthesis_candidate_id": "v6-ns-synthesis:4d8a5257447dd99dc8daf30e7445d0b8a50984ca06061f8fc15b86d364797ea7",
+      "target_resources": {
+        "circuit_qasm_digest": "c023b94df3525fab6cfda4dbe86a17d2be9e65b0560a768888829132651ebd33",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1491
+      }
+    },
+    {
+      "context_id": "h6-3.0",
+      "context_role": "development",
+      "direct_primary_eligible": true,
+      "energy_evaluated": false,
+      "exact_rewrite_closure": {
+        "not_claimed_globally_saturated": true,
+        "post_closure_resources_equal_direct": true,
+        "rewrites_applied": 0,
+        "status": "NO_REGISTERED_RULE_FOR_AFFINE_TIED_BLOCK"
+      },
+      "family_id": "v6-ns-family:00630228cc0ccc0f76bc2cd500b96ec1cd2b487a78f04f69996079e0702726fa",
+      "normal": [
+        1,
+        1,
+        -1
+      ],
+      "post_closure_primary_eligible": true,
+      "post_closure_resources": {
+        "circuit_qasm_digest": "2a6f8b1bc3ebe8f80313d3aee0a5fcc6377b3979575d8eba19bdb79995929205",
+        "cnot_count": 783,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1489
+      },
+      "resource_delta": {
+        "cnot_count": -2,
+        "cnot_depth": 0,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -4
+      },
+      "source_block_id": "block-v1:52cf3f7d01db0616fef91f850c5e38b6cd38f5252e1a3635a34240d14d469883",
+      "source_pool_indices": [
+        460,
+        461,
+        462
+      ],
+      "source_resources": {
+        "circuit_qasm_digest": "877329b73f6fd209969882cb1ef811488052764676e3883fcbbf53b066167728",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 149,
+        "total_depth": 1493
+      },
+      "synthesis_candidate_id": "v6-ns-synthesis:f355b6c8365b62d497ec1ef1973a456c7e9315b1a8edc32d7ae3dacfdbde4b09",
+      "target_resources": {
+        "circuit_qasm_digest": "2a6f8b1bc3ebe8f80313d3aee0a5fcc6377b3979575d8eba19bdb79995929205",
+        "cnot_count": 783,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1489
+      }
+    },
+    {
+      "context_id": "h6-3.0",
+      "context_role": "development",
+      "direct_primary_eligible": true,
+      "energy_evaluated": false,
+      "exact_rewrite_closure": {
+        "not_claimed_globally_saturated": true,
+        "post_closure_resources_equal_direct": true,
+        "rewrites_applied": 0,
+        "status": "NO_REGISTERED_RULE_FOR_AFFINE_TIED_BLOCK"
+      },
+      "family_id": "v6-ns-family:1bd5552f1cc2df503c3111f459cc1ce8c5ef3d58e4de413675f78a44fe72176b",
+      "normal": [
+        1,
+        1,
+        1
+      ],
+      "post_closure_primary_eligible": true,
+      "post_closure_resources": {
+        "circuit_qasm_digest": "4d41324b50e3e459715f9c6a6f5bcd96f39051942a8bc6b13fce6cc0cc01f788",
+        "cnot_count": 783,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1489
+      },
+      "resource_delta": {
+        "cnot_count": -2,
+        "cnot_depth": 0,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -4
+      },
+      "source_block_id": "block-v1:52cf3f7d01db0616fef91f850c5e38b6cd38f5252e1a3635a34240d14d469883",
+      "source_pool_indices": [
+        460,
+        461,
+        462
+      ],
+      "source_resources": {
+        "circuit_qasm_digest": "877329b73f6fd209969882cb1ef811488052764676e3883fcbbf53b066167728",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 149,
+        "total_depth": 1493
+      },
+      "synthesis_candidate_id": "v6-ns-synthesis:bde749bc31b6dad291c0ee265c6560902f283110f0ccc0bcb79ca59170fb6534",
+      "target_resources": {
+        "circuit_qasm_digest": "4d41324b50e3e459715f9c6a6f5bcd96f39051942a8bc6b13fce6cc0cc01f788",
+        "cnot_count": 783,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1489
+      }
+    },
+    {
+      "context_id": "h6-3.0",
+      "context_role": "development",
+      "direct_primary_eligible": true,
+      "energy_evaluated": false,
+      "exact_rewrite_closure": {
+        "not_claimed_globally_saturated": true,
+        "post_closure_resources_equal_direct": true,
+        "rewrites_applied": 0,
+        "status": "NO_REGISTERED_RULE_FOR_AFFINE_TIED_BLOCK"
+      },
+      "family_id": "v6-ns-family:1d05b2720fc1cd78db70bd697f5ec77bff77fc96f58b0c57a24ecb3f077ca18d",
+      "normal": [
+        1,
+        -1,
+        -1
+      ],
+      "post_closure_primary_eligible": true,
+      "post_closure_resources": {
+        "circuit_qasm_digest": "55dd71af2bc6d263cc827dbc686fe78802928da767c55f15f266e431dbef07bc",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1491
+      },
+      "resource_delta": {
+        "cnot_count": 0,
+        "cnot_depth": 0,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -2
+      },
+      "source_block_id": "block-v1:9340071bfdcbc293e0bf99887d36c354a7d707b81ec04721ce37baa9fa996ecc",
+      "source_pool_indices": [
+        113,
+        114,
+        115
+      ],
+      "source_resources": {
+        "circuit_qasm_digest": "877329b73f6fd209969882cb1ef811488052764676e3883fcbbf53b066167728",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 149,
+        "total_depth": 1493
+      },
+      "synthesis_candidate_id": "v6-ns-synthesis:082571d4d8c109df627146dbb87aa3ec77b9780a52d207d96600364b1f1dfbfb",
+      "target_resources": {
+        "circuit_qasm_digest": "55dd71af2bc6d263cc827dbc686fe78802928da767c55f15f266e431dbef07bc",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1491
+      }
+    },
+    {
+      "context_id": "h6-3.0",
+      "context_role": "development",
+      "direct_primary_eligible": true,
+      "energy_evaluated": false,
+      "exact_rewrite_closure": {
+        "not_claimed_globally_saturated": true,
+        "post_closure_resources_equal_direct": true,
+        "rewrites_applied": 0,
+        "status": "NO_REGISTERED_RULE_FOR_AFFINE_TIED_BLOCK"
+      },
+      "family_id": "v6-ns-family:36564e90c05ea0d4eb801d3fb6df949c37b301ff3156ad904bf442523ca31be4",
+      "normal": [
+        1,
+        -1,
+        1
+      ],
+      "post_closure_primary_eligible": true,
+      "post_closure_resources": {
+        "circuit_qasm_digest": "0eb4feae353c5c348746adc76cedb32887b2418307063ec519603fe74c059c08",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1491
+      },
+      "resource_delta": {
+        "cnot_count": 0,
+        "cnot_depth": 0,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -2
+      },
+      "source_block_id": "block-v1:9340071bfdcbc293e0bf99887d36c354a7d707b81ec04721ce37baa9fa996ecc",
+      "source_pool_indices": [
+        113,
+        114,
+        115
+      ],
+      "source_resources": {
+        "circuit_qasm_digest": "877329b73f6fd209969882cb1ef811488052764676e3883fcbbf53b066167728",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 149,
+        "total_depth": 1493
+      },
+      "synthesis_candidate_id": "v6-ns-synthesis:4d8a5257447dd99dc8daf30e7445d0b8a50984ca06061f8fc15b86d364797ea7",
+      "target_resources": {
+        "circuit_qasm_digest": "0eb4feae353c5c348746adc76cedb32887b2418307063ec519603fe74c059c08",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1491
+      }
+    },
+    {
+      "context_id": "h6-3.0",
+      "context_role": "development",
+      "direct_primary_eligible": true,
+      "energy_evaluated": false,
+      "exact_rewrite_closure": {
+        "not_claimed_globally_saturated": true,
+        "post_closure_resources_equal_direct": true,
+        "rewrites_applied": 0,
+        "status": "NO_REGISTERED_RULE_FOR_AFFINE_TIED_BLOCK"
+      },
+      "family_id": "v6-ns-family:00630228cc0ccc0f76bc2cd500b96ec1cd2b487a78f04f69996079e0702726fa",
+      "normal": [
+        1,
+        1,
+        -1
+      ],
+      "post_closure_primary_eligible": true,
+      "post_closure_resources": {
+        "circuit_qasm_digest": "a4e02cee0001f18a296c4f937488edb8c90bfcb1f49b1fd66c461a24196519ee",
+        "cnot_count": 783,
+        "cnot_depth": 292,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1489
+      },
+      "resource_delta": {
+        "cnot_count": -2,
+        "cnot_depth": -2,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -4
+      },
+      "source_block_id": "block-v1:9340071bfdcbc293e0bf99887d36c354a7d707b81ec04721ce37baa9fa996ecc",
+      "source_pool_indices": [
+        113,
+        114,
+        115
+      ],
+      "source_resources": {
+        "circuit_qasm_digest": "877329b73f6fd209969882cb1ef811488052764676e3883fcbbf53b066167728",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 149,
+        "total_depth": 1493
+      },
+      "synthesis_candidate_id": "v6-ns-synthesis:f355b6c8365b62d497ec1ef1973a456c7e9315b1a8edc32d7ae3dacfdbde4b09",
+      "target_resources": {
+        "circuit_qasm_digest": "a4e02cee0001f18a296c4f937488edb8c90bfcb1f49b1fd66c461a24196519ee",
+        "cnot_count": 783,
+        "cnot_depth": 292,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1489
+      }
+    },
+    {
+      "context_id": "h6-3.0",
+      "context_role": "development",
+      "direct_primary_eligible": true,
+      "energy_evaluated": false,
+      "exact_rewrite_closure": {
+        "not_claimed_globally_saturated": true,
+        "post_closure_resources_equal_direct": true,
+        "rewrites_applied": 0,
+        "status": "NO_REGISTERED_RULE_FOR_AFFINE_TIED_BLOCK"
+      },
+      "family_id": "v6-ns-family:1bd5552f1cc2df503c3111f459cc1ce8c5ef3d58e4de413675f78a44fe72176b",
+      "normal": [
+        1,
+        1,
+        1
+      ],
+      "post_closure_primary_eligible": true,
+      "post_closure_resources": {
+        "circuit_qasm_digest": "0756efcc9cc63f395acad394b2b12b809ece1bf2d4374af96d52d2a268d40ef1",
+        "cnot_count": 783,
+        "cnot_depth": 292,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1489
+      },
+      "resource_delta": {
+        "cnot_count": -2,
+        "cnot_depth": -2,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -4
+      },
+      "source_block_id": "block-v1:9340071bfdcbc293e0bf99887d36c354a7d707b81ec04721ce37baa9fa996ecc",
+      "source_pool_indices": [
+        113,
+        114,
+        115
+      ],
+      "source_resources": {
+        "circuit_qasm_digest": "877329b73f6fd209969882cb1ef811488052764676e3883fcbbf53b066167728",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 149,
+        "total_depth": 1493
+      },
+      "synthesis_candidate_id": "v6-ns-synthesis:bde749bc31b6dad291c0ee265c6560902f283110f0ccc0bcb79ca59170fb6534",
+      "target_resources": {
+        "circuit_qasm_digest": "0756efcc9cc63f395acad394b2b12b809ece1bf2d4374af96d52d2a268d40ef1",
+        "cnot_count": 783,
+        "cnot_depth": 292,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1489
+      }
+    },
+    {
+      "context_id": "h6-3.0",
+      "context_role": "development",
+      "direct_primary_eligible": true,
+      "energy_evaluated": false,
+      "exact_rewrite_closure": {
+        "not_claimed_globally_saturated": true,
+        "post_closure_resources_equal_direct": true,
+        "rewrites_applied": 0,
+        "status": "NO_REGISTERED_RULE_FOR_AFFINE_TIED_BLOCK"
+      },
+      "family_id": "v6-ns-family:1d05b2720fc1cd78db70bd697f5ec77bff77fc96f58b0c57a24ecb3f077ca18d",
+      "normal": [
+        1,
+        -1,
+        -1
+      ],
+      "post_closure_primary_eligible": true,
+      "post_closure_resources": {
+        "circuit_qasm_digest": "24d10c7053ffa3a202581a5fa6f7fb9daf9c42a0a447b23d443b16ccea59af06",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1491
+      },
+      "resource_delta": {
+        "cnot_count": 0,
+        "cnot_depth": 0,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -2
+      },
+      "source_block_id": "block-v1:35efe658255755ac7058e5d6e357d182a99f48c085d952721fc3b3ca287dbdb1",
+      "source_pool_indices": [
+        277,
+        278,
+        279
+      ],
+      "source_resources": {
+        "circuit_qasm_digest": "877329b73f6fd209969882cb1ef811488052764676e3883fcbbf53b066167728",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 149,
+        "total_depth": 1493
+      },
+      "synthesis_candidate_id": "v6-ns-synthesis:082571d4d8c109df627146dbb87aa3ec77b9780a52d207d96600364b1f1dfbfb",
+      "target_resources": {
+        "circuit_qasm_digest": "24d10c7053ffa3a202581a5fa6f7fb9daf9c42a0a447b23d443b16ccea59af06",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1491
+      }
+    },
+    {
+      "context_id": "h6-3.0",
+      "context_role": "development",
+      "direct_primary_eligible": true,
+      "energy_evaluated": false,
+      "exact_rewrite_closure": {
+        "not_claimed_globally_saturated": true,
+        "post_closure_resources_equal_direct": true,
+        "rewrites_applied": 0,
+        "status": "NO_REGISTERED_RULE_FOR_AFFINE_TIED_BLOCK"
+      },
+      "family_id": "v6-ns-family:36564e90c05ea0d4eb801d3fb6df949c37b301ff3156ad904bf442523ca31be4",
+      "normal": [
+        1,
+        -1,
+        1
+      ],
+      "post_closure_primary_eligible": true,
+      "post_closure_resources": {
+        "circuit_qasm_digest": "41f0ff4fe1c2fc9012a0614817ac84e777193083a15acc04c449544c155d49af",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1491
+      },
+      "resource_delta": {
+        "cnot_count": 0,
+        "cnot_depth": 0,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -2
+      },
+      "source_block_id": "block-v1:35efe658255755ac7058e5d6e357d182a99f48c085d952721fc3b3ca287dbdb1",
+      "source_pool_indices": [
+        277,
+        278,
+        279
+      ],
+      "source_resources": {
+        "circuit_qasm_digest": "877329b73f6fd209969882cb1ef811488052764676e3883fcbbf53b066167728",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 149,
+        "total_depth": 1493
+      },
+      "synthesis_candidate_id": "v6-ns-synthesis:4d8a5257447dd99dc8daf30e7445d0b8a50984ca06061f8fc15b86d364797ea7",
+      "target_resources": {
+        "circuit_qasm_digest": "41f0ff4fe1c2fc9012a0614817ac84e777193083a15acc04c449544c155d49af",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1491
+      }
+    },
+    {
+      "context_id": "h6-3.0",
+      "context_role": "development",
+      "direct_primary_eligible": true,
+      "energy_evaluated": false,
+      "exact_rewrite_closure": {
+        "not_claimed_globally_saturated": true,
+        "post_closure_resources_equal_direct": true,
+        "rewrites_applied": 0,
+        "status": "NO_REGISTERED_RULE_FOR_AFFINE_TIED_BLOCK"
+      },
+      "family_id": "v6-ns-family:00630228cc0ccc0f76bc2cd500b96ec1cd2b487a78f04f69996079e0702726fa",
+      "normal": [
+        1,
+        1,
+        -1
+      ],
+      "post_closure_primary_eligible": true,
+      "post_closure_resources": {
+        "circuit_qasm_digest": "bcf31abca431e89fb45839d4d4d3aef988534fe6a52c36c258e5fe3228b089df",
+        "cnot_count": 783,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1489
+      },
+      "resource_delta": {
+        "cnot_count": -2,
+        "cnot_depth": 0,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -4
+      },
+      "source_block_id": "block-v1:35efe658255755ac7058e5d6e357d182a99f48c085d952721fc3b3ca287dbdb1",
+      "source_pool_indices": [
+        277,
+        278,
+        279
+      ],
+      "source_resources": {
+        "circuit_qasm_digest": "877329b73f6fd209969882cb1ef811488052764676e3883fcbbf53b066167728",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 149,
+        "total_depth": 1493
+      },
+      "synthesis_candidate_id": "v6-ns-synthesis:f355b6c8365b62d497ec1ef1973a456c7e9315b1a8edc32d7ae3dacfdbde4b09",
+      "target_resources": {
+        "circuit_qasm_digest": "bcf31abca431e89fb45839d4d4d3aef988534fe6a52c36c258e5fe3228b089df",
+        "cnot_count": 783,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1489
+      }
+    },
+    {
+      "context_id": "h6-3.0",
+      "context_role": "development",
+      "direct_primary_eligible": true,
+      "energy_evaluated": false,
+      "exact_rewrite_closure": {
+        "not_claimed_globally_saturated": true,
+        "post_closure_resources_equal_direct": true,
+        "rewrites_applied": 0,
+        "status": "NO_REGISTERED_RULE_FOR_AFFINE_TIED_BLOCK"
+      },
+      "family_id": "v6-ns-family:1bd5552f1cc2df503c3111f459cc1ce8c5ef3d58e4de413675f78a44fe72176b",
+      "normal": [
+        1,
+        1,
+        1
+      ],
+      "post_closure_primary_eligible": true,
+      "post_closure_resources": {
+        "circuit_qasm_digest": "3ac884943f30c871c0328a6f6c8fe96c06370df4395f48a1151464627469b90d",
+        "cnot_count": 783,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1489
+      },
+      "resource_delta": {
+        "cnot_count": -2,
+        "cnot_depth": 0,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -4
+      },
+      "source_block_id": "block-v1:35efe658255755ac7058e5d6e357d182a99f48c085d952721fc3b3ca287dbdb1",
+      "source_pool_indices": [
+        277,
+        278,
+        279
+      ],
+      "source_resources": {
+        "circuit_qasm_digest": "877329b73f6fd209969882cb1ef811488052764676e3883fcbbf53b066167728",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 149,
+        "total_depth": 1493
+      },
+      "synthesis_candidate_id": "v6-ns-synthesis:bde749bc31b6dad291c0ee265c6560902f283110f0ccc0bcb79ca59170fb6534",
+      "target_resources": {
+        "circuit_qasm_digest": "3ac884943f30c871c0328a6f6c8fe96c06370df4395f48a1151464627469b90d",
+        "cnot_count": 783,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1489
+      }
+    },
+    {
+      "context_id": "h6-3.0",
+      "context_role": "development",
+      "direct_primary_eligible": true,
+      "energy_evaluated": false,
+      "exact_rewrite_closure": {
+        "not_claimed_globally_saturated": true,
+        "post_closure_resources_equal_direct": true,
+        "rewrites_applied": 0,
+        "status": "NO_REGISTERED_RULE_FOR_AFFINE_TIED_BLOCK"
+      },
+      "family_id": "v6-ns-family:1d05b2720fc1cd78db70bd697f5ec77bff77fc96f58b0c57a24ecb3f077ca18d",
+      "normal": [
+        1,
+        -1,
+        -1
+      ],
+      "post_closure_primary_eligible": true,
+      "post_closure_resources": {
+        "circuit_qasm_digest": "91c5f7378ace1ff14060cccfbca2cac359fe65adf302767da54fb1222eb5dc45",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1491
+      },
+      "resource_delta": {
+        "cnot_count": 0,
+        "cnot_depth": 0,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -2
+      },
+      "source_block_id": "block-v1:724b5ff91c78fd76e57e9497cfcdac52cdf24d25bb5f5f9bfeefe622aa13d3a6",
+      "source_pool_indices": [
+        378,
+        379,
+        380
+      ],
+      "source_resources": {
+        "circuit_qasm_digest": "877329b73f6fd209969882cb1ef811488052764676e3883fcbbf53b066167728",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 149,
+        "total_depth": 1493
+      },
+      "synthesis_candidate_id": "v6-ns-synthesis:082571d4d8c109df627146dbb87aa3ec77b9780a52d207d96600364b1f1dfbfb",
+      "target_resources": {
+        "circuit_qasm_digest": "91c5f7378ace1ff14060cccfbca2cac359fe65adf302767da54fb1222eb5dc45",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1491
+      }
+    },
+    {
+      "context_id": "h6-3.0",
+      "context_role": "development",
+      "direct_primary_eligible": true,
+      "energy_evaluated": false,
+      "exact_rewrite_closure": {
+        "not_claimed_globally_saturated": true,
+        "post_closure_resources_equal_direct": true,
+        "rewrites_applied": 0,
+        "status": "NO_REGISTERED_RULE_FOR_AFFINE_TIED_BLOCK"
+      },
+      "family_id": "v6-ns-family:36564e90c05ea0d4eb801d3fb6df949c37b301ff3156ad904bf442523ca31be4",
+      "normal": [
+        1,
+        -1,
+        1
+      ],
+      "post_closure_primary_eligible": true,
+      "post_closure_resources": {
+        "circuit_qasm_digest": "81cdb25c4e7820f5781db02a1d05eee9cbedc224ca3d89b2728c908633bb4250",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1491
+      },
+      "resource_delta": {
+        "cnot_count": 0,
+        "cnot_depth": 0,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -2
+      },
+      "source_block_id": "block-v1:724b5ff91c78fd76e57e9497cfcdac52cdf24d25bb5f5f9bfeefe622aa13d3a6",
+      "source_pool_indices": [
+        378,
+        379,
+        380
+      ],
+      "source_resources": {
+        "circuit_qasm_digest": "877329b73f6fd209969882cb1ef811488052764676e3883fcbbf53b066167728",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 149,
+        "total_depth": 1493
+      },
+      "synthesis_candidate_id": "v6-ns-synthesis:4d8a5257447dd99dc8daf30e7445d0b8a50984ca06061f8fc15b86d364797ea7",
+      "target_resources": {
+        "circuit_qasm_digest": "81cdb25c4e7820f5781db02a1d05eee9cbedc224ca3d89b2728c908633bb4250",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1491
+      }
+    },
+    {
+      "context_id": "h6-3.0",
+      "context_role": "development",
+      "direct_primary_eligible": true,
+      "energy_evaluated": false,
+      "exact_rewrite_closure": {
+        "not_claimed_globally_saturated": true,
+        "post_closure_resources_equal_direct": true,
+        "rewrites_applied": 0,
+        "status": "NO_REGISTERED_RULE_FOR_AFFINE_TIED_BLOCK"
+      },
+      "family_id": "v6-ns-family:00630228cc0ccc0f76bc2cd500b96ec1cd2b487a78f04f69996079e0702726fa",
+      "normal": [
+        1,
+        1,
+        -1
+      ],
+      "post_closure_primary_eligible": true,
+      "post_closure_resources": {
+        "circuit_qasm_digest": "132ecfe28e25b564fac4d404d383f7f2ee40d9c3c9b1fb924bcc43c60bf64eea",
+        "cnot_count": 783,
+        "cnot_depth": 292,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1489
+      },
+      "resource_delta": {
+        "cnot_count": -2,
+        "cnot_depth": -2,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -4
+      },
+      "source_block_id": "block-v1:724b5ff91c78fd76e57e9497cfcdac52cdf24d25bb5f5f9bfeefe622aa13d3a6",
+      "source_pool_indices": [
+        378,
+        379,
+        380
+      ],
+      "source_resources": {
+        "circuit_qasm_digest": "877329b73f6fd209969882cb1ef811488052764676e3883fcbbf53b066167728",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 149,
+        "total_depth": 1493
+      },
+      "synthesis_candidate_id": "v6-ns-synthesis:f355b6c8365b62d497ec1ef1973a456c7e9315b1a8edc32d7ae3dacfdbde4b09",
+      "target_resources": {
+        "circuit_qasm_digest": "132ecfe28e25b564fac4d404d383f7f2ee40d9c3c9b1fb924bcc43c60bf64eea",
+        "cnot_count": 783,
+        "cnot_depth": 292,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1489
+      }
+    },
+    {
+      "context_id": "h6-3.0",
+      "context_role": "development",
+      "direct_primary_eligible": true,
+      "energy_evaluated": false,
+      "exact_rewrite_closure": {
+        "not_claimed_globally_saturated": true,
+        "post_closure_resources_equal_direct": true,
+        "rewrites_applied": 0,
+        "status": "NO_REGISTERED_RULE_FOR_AFFINE_TIED_BLOCK"
+      },
+      "family_id": "v6-ns-family:1bd5552f1cc2df503c3111f459cc1ce8c5ef3d58e4de413675f78a44fe72176b",
+      "normal": [
+        1,
+        1,
+        1
+      ],
+      "post_closure_primary_eligible": true,
+      "post_closure_resources": {
+        "circuit_qasm_digest": "9f09cd828c81554c149f1554ad4336dc05ae1630899fe96b57bef98ed197dd3b",
+        "cnot_count": 783,
+        "cnot_depth": 292,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1489
+      },
+      "resource_delta": {
+        "cnot_count": -2,
+        "cnot_depth": -2,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -4
+      },
+      "source_block_id": "block-v1:724b5ff91c78fd76e57e9497cfcdac52cdf24d25bb5f5f9bfeefe622aa13d3a6",
+      "source_pool_indices": [
+        378,
+        379,
+        380
+      ],
+      "source_resources": {
+        "circuit_qasm_digest": "877329b73f6fd209969882cb1ef811488052764676e3883fcbbf53b066167728",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 149,
+        "total_depth": 1493
+      },
+      "synthesis_candidate_id": "v6-ns-synthesis:bde749bc31b6dad291c0ee265c6560902f283110f0ccc0bcb79ca59170fb6534",
+      "target_resources": {
+        "circuit_qasm_digest": "9f09cd828c81554c149f1554ad4336dc05ae1630899fe96b57bef98ed197dd3b",
+        "cnot_count": 783,
+        "cnot_depth": 292,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1489
+      }
+    },
+    {
+      "context_id": "h6-3.0",
+      "context_role": "development",
+      "direct_primary_eligible": true,
+      "energy_evaluated": false,
+      "exact_rewrite_closure": {
+        "not_claimed_globally_saturated": true,
+        "post_closure_resources_equal_direct": true,
+        "rewrites_applied": 0,
+        "status": "NO_REGISTERED_RULE_FOR_AFFINE_TIED_BLOCK"
+      },
+      "family_id": "v6-ns-family:1d05b2720fc1cd78db70bd697f5ec77bff77fc96f58b0c57a24ecb3f077ca18d",
+      "normal": [
+        1,
+        -1,
+        -1
+      ],
+      "post_closure_primary_eligible": true,
+      "post_closure_resources": {
+        "circuit_qasm_digest": "ec4fb932e25eeacbe040aba1cf87a2439e3bcba812133e129f140bfac5177783",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1491
+      },
+      "resource_delta": {
+        "cnot_count": 0,
+        "cnot_depth": 0,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -2
+      },
+      "source_block_id": "block-v1:60fffbe2c2efb673e500a152cc448ad7d4f86b46b7fea0c6864b729144564a8a",
+      "source_pool_indices": [
+        193,
+        194,
+        195
+      ],
+      "source_resources": {
+        "circuit_qasm_digest": "877329b73f6fd209969882cb1ef811488052764676e3883fcbbf53b066167728",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 149,
+        "total_depth": 1493
+      },
+      "synthesis_candidate_id": "v6-ns-synthesis:082571d4d8c109df627146dbb87aa3ec77b9780a52d207d96600364b1f1dfbfb",
+      "target_resources": {
+        "circuit_qasm_digest": "ec4fb932e25eeacbe040aba1cf87a2439e3bcba812133e129f140bfac5177783",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1491
+      }
+    },
+    {
+      "context_id": "h6-3.0",
+      "context_role": "development",
+      "direct_primary_eligible": true,
+      "energy_evaluated": false,
+      "exact_rewrite_closure": {
+        "not_claimed_globally_saturated": true,
+        "post_closure_resources_equal_direct": true,
+        "rewrites_applied": 0,
+        "status": "NO_REGISTERED_RULE_FOR_AFFINE_TIED_BLOCK"
+      },
+      "family_id": "v6-ns-family:36564e90c05ea0d4eb801d3fb6df949c37b301ff3156ad904bf442523ca31be4",
+      "normal": [
+        1,
+        -1,
+        1
+      ],
+      "post_closure_primary_eligible": true,
+      "post_closure_resources": {
+        "circuit_qasm_digest": "85616694b4e539cbd7125123207a17358c3f3e0c7bd0df8f481bc23418acc185",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1491
+      },
+      "resource_delta": {
+        "cnot_count": 0,
+        "cnot_depth": 0,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -2
+      },
+      "source_block_id": "block-v1:60fffbe2c2efb673e500a152cc448ad7d4f86b46b7fea0c6864b729144564a8a",
+      "source_pool_indices": [
+        193,
+        194,
+        195
+      ],
+      "source_resources": {
+        "circuit_qasm_digest": "877329b73f6fd209969882cb1ef811488052764676e3883fcbbf53b066167728",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 149,
+        "total_depth": 1493
+      },
+      "synthesis_candidate_id": "v6-ns-synthesis:4d8a5257447dd99dc8daf30e7445d0b8a50984ca06061f8fc15b86d364797ea7",
+      "target_resources": {
+        "circuit_qasm_digest": "85616694b4e539cbd7125123207a17358c3f3e0c7bd0df8f481bc23418acc185",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1491
+      }
+    },
+    {
+      "context_id": "h6-3.0",
+      "context_role": "development",
+      "direct_primary_eligible": true,
+      "energy_evaluated": false,
+      "exact_rewrite_closure": {
+        "not_claimed_globally_saturated": true,
+        "post_closure_resources_equal_direct": true,
+        "rewrites_applied": 0,
+        "status": "NO_REGISTERED_RULE_FOR_AFFINE_TIED_BLOCK"
+      },
+      "family_id": "v6-ns-family:00630228cc0ccc0f76bc2cd500b96ec1cd2b487a78f04f69996079e0702726fa",
+      "normal": [
+        1,
+        1,
+        -1
+      ],
+      "post_closure_primary_eligible": true,
+      "post_closure_resources": {
+        "circuit_qasm_digest": "5f2a93209c23a4d3e118dc4666cbd1cf8099afefb5aff8a2e29cf2935a185c2d",
+        "cnot_count": 783,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1489
+      },
+      "resource_delta": {
+        "cnot_count": -2,
+        "cnot_depth": 0,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -4
+      },
+      "source_block_id": "block-v1:60fffbe2c2efb673e500a152cc448ad7d4f86b46b7fea0c6864b729144564a8a",
+      "source_pool_indices": [
+        193,
+        194,
+        195
+      ],
+      "source_resources": {
+        "circuit_qasm_digest": "877329b73f6fd209969882cb1ef811488052764676e3883fcbbf53b066167728",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 149,
+        "total_depth": 1493
+      },
+      "synthesis_candidate_id": "v6-ns-synthesis:f355b6c8365b62d497ec1ef1973a456c7e9315b1a8edc32d7ae3dacfdbde4b09",
+      "target_resources": {
+        "circuit_qasm_digest": "5f2a93209c23a4d3e118dc4666cbd1cf8099afefb5aff8a2e29cf2935a185c2d",
+        "cnot_count": 783,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1489
+      }
+    },
+    {
+      "context_id": "h6-3.0",
+      "context_role": "development",
+      "direct_primary_eligible": true,
+      "energy_evaluated": false,
+      "exact_rewrite_closure": {
+        "not_claimed_globally_saturated": true,
+        "post_closure_resources_equal_direct": true,
+        "rewrites_applied": 0,
+        "status": "NO_REGISTERED_RULE_FOR_AFFINE_TIED_BLOCK"
+      },
+      "family_id": "v6-ns-family:1bd5552f1cc2df503c3111f459cc1ce8c5ef3d58e4de413675f78a44fe72176b",
+      "normal": [
+        1,
+        1,
+        1
+      ],
+      "post_closure_primary_eligible": true,
+      "post_closure_resources": {
+        "circuit_qasm_digest": "682ef9999987dc413b52ab7fcd45dfadaa31c6712ab2853c808fc29f09d6cc39",
+        "cnot_count": 783,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1489
+      },
+      "resource_delta": {
+        "cnot_count": -2,
+        "cnot_depth": 0,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -4
+      },
+      "source_block_id": "block-v1:60fffbe2c2efb673e500a152cc448ad7d4f86b46b7fea0c6864b729144564a8a",
+      "source_pool_indices": [
+        193,
+        194,
+        195
+      ],
+      "source_resources": {
+        "circuit_qasm_digest": "877329b73f6fd209969882cb1ef811488052764676e3883fcbbf53b066167728",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 149,
+        "total_depth": 1493
+      },
+      "synthesis_candidate_id": "v6-ns-synthesis:bde749bc31b6dad291c0ee265c6560902f283110f0ccc0bcb79ca59170fb6534",
+      "target_resources": {
+        "circuit_qasm_digest": "682ef9999987dc413b52ab7fcd45dfadaa31c6712ab2853c808fc29f09d6cc39",
+        "cnot_count": 783,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1489
+      }
+    },
+    {
+      "context_id": "h6-3.0",
+      "context_role": "development",
+      "direct_primary_eligible": true,
+      "energy_evaluated": false,
+      "exact_rewrite_closure": {
+        "not_claimed_globally_saturated": true,
+        "post_closure_resources_equal_direct": true,
+        "rewrites_applied": 0,
+        "status": "NO_REGISTERED_RULE_FOR_AFFINE_TIED_BLOCK"
+      },
+      "family_id": "v6-ns-family:1d05b2720fc1cd78db70bd697f5ec77bff77fc96f58b0c57a24ecb3f077ca18d",
+      "normal": [
+        1,
+        -1,
+        -1
+      ],
+      "post_closure_primary_eligible": true,
+      "post_closure_resources": {
+        "circuit_qasm_digest": "551026195df0267913e188fa2b9e5e725b4835691afbf9b9c125216610686ad5",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1491
+      },
+      "resource_delta": {
+        "cnot_count": 0,
+        "cnot_depth": 0,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -2
+      },
+      "source_block_id": "block-v1:e27c7d4f904f49d5ccad21be21637d5c8ff2352b56e1ef3ee4dc4575bc8edca7",
+      "source_pool_indices": [
+        256,
+        257,
+        258
+      ],
+      "source_resources": {
+        "circuit_qasm_digest": "877329b73f6fd209969882cb1ef811488052764676e3883fcbbf53b066167728",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 149,
+        "total_depth": 1493
+      },
+      "synthesis_candidate_id": "v6-ns-synthesis:082571d4d8c109df627146dbb87aa3ec77b9780a52d207d96600364b1f1dfbfb",
+      "target_resources": {
+        "circuit_qasm_digest": "551026195df0267913e188fa2b9e5e725b4835691afbf9b9c125216610686ad5",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1491
+      }
+    },
+    {
+      "context_id": "h6-3.0",
+      "context_role": "development",
+      "direct_primary_eligible": true,
+      "energy_evaluated": false,
+      "exact_rewrite_closure": {
+        "not_claimed_globally_saturated": true,
+        "post_closure_resources_equal_direct": true,
+        "rewrites_applied": 0,
+        "status": "NO_REGISTERED_RULE_FOR_AFFINE_TIED_BLOCK"
+      },
+      "family_id": "v6-ns-family:36564e90c05ea0d4eb801d3fb6df949c37b301ff3156ad904bf442523ca31be4",
+      "normal": [
+        1,
+        -1,
+        1
+      ],
+      "post_closure_primary_eligible": true,
+      "post_closure_resources": {
+        "circuit_qasm_digest": "68e0da9cd4f9f26e7e20b002aa421784bfde04201df060772651e2719a64fb6b",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1491
+      },
+      "resource_delta": {
+        "cnot_count": 0,
+        "cnot_depth": 0,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -2
+      },
+      "source_block_id": "block-v1:e27c7d4f904f49d5ccad21be21637d5c8ff2352b56e1ef3ee4dc4575bc8edca7",
+      "source_pool_indices": [
+        256,
+        257,
+        258
+      ],
+      "source_resources": {
+        "circuit_qasm_digest": "877329b73f6fd209969882cb1ef811488052764676e3883fcbbf53b066167728",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 149,
+        "total_depth": 1493
+      },
+      "synthesis_candidate_id": "v6-ns-synthesis:4d8a5257447dd99dc8daf30e7445d0b8a50984ca06061f8fc15b86d364797ea7",
+      "target_resources": {
+        "circuit_qasm_digest": "68e0da9cd4f9f26e7e20b002aa421784bfde04201df060772651e2719a64fb6b",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1491
+      }
+    },
+    {
+      "context_id": "h6-3.0",
+      "context_role": "development",
+      "direct_primary_eligible": true,
+      "energy_evaluated": false,
+      "exact_rewrite_closure": {
+        "not_claimed_globally_saturated": true,
+        "post_closure_resources_equal_direct": true,
+        "rewrites_applied": 0,
+        "status": "NO_REGISTERED_RULE_FOR_AFFINE_TIED_BLOCK"
+      },
+      "family_id": "v6-ns-family:00630228cc0ccc0f76bc2cd500b96ec1cd2b487a78f04f69996079e0702726fa",
+      "normal": [
+        1,
+        1,
+        -1
+      ],
+      "post_closure_primary_eligible": true,
+      "post_closure_resources": {
+        "circuit_qasm_digest": "02892b9ecc9b2d8f0b8c2fc23f9e0eb79840ba68bdfbba8dd062fd59b6dc20a6",
+        "cnot_count": 783,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1489
+      },
+      "resource_delta": {
+        "cnot_count": -2,
+        "cnot_depth": 0,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -4
+      },
+      "source_block_id": "block-v1:e27c7d4f904f49d5ccad21be21637d5c8ff2352b56e1ef3ee4dc4575bc8edca7",
+      "source_pool_indices": [
+        256,
+        257,
+        258
+      ],
+      "source_resources": {
+        "circuit_qasm_digest": "877329b73f6fd209969882cb1ef811488052764676e3883fcbbf53b066167728",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 149,
+        "total_depth": 1493
+      },
+      "synthesis_candidate_id": "v6-ns-synthesis:f355b6c8365b62d497ec1ef1973a456c7e9315b1a8edc32d7ae3dacfdbde4b09",
+      "target_resources": {
+        "circuit_qasm_digest": "02892b9ecc9b2d8f0b8c2fc23f9e0eb79840ba68bdfbba8dd062fd59b6dc20a6",
+        "cnot_count": 783,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1489
+      }
+    },
+    {
+      "context_id": "h6-3.0",
+      "context_role": "development",
+      "direct_primary_eligible": true,
+      "energy_evaluated": false,
+      "exact_rewrite_closure": {
+        "not_claimed_globally_saturated": true,
+        "post_closure_resources_equal_direct": true,
+        "rewrites_applied": 0,
+        "status": "NO_REGISTERED_RULE_FOR_AFFINE_TIED_BLOCK"
+      },
+      "family_id": "v6-ns-family:1bd5552f1cc2df503c3111f459cc1ce8c5ef3d58e4de413675f78a44fe72176b",
+      "normal": [
+        1,
+        1,
+        1
+      ],
+      "post_closure_primary_eligible": true,
+      "post_closure_resources": {
+        "circuit_qasm_digest": "bb3055a8a61386d03866b7c1034df7bbf65b3da4a018e56bcc30efa501c26a8a",
+        "cnot_count": 783,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1489
+      },
+      "resource_delta": {
+        "cnot_count": -2,
+        "cnot_depth": 0,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -4
+      },
+      "source_block_id": "block-v1:e27c7d4f904f49d5ccad21be21637d5c8ff2352b56e1ef3ee4dc4575bc8edca7",
+      "source_pool_indices": [
+        256,
+        257,
+        258
+      ],
+      "source_resources": {
+        "circuit_qasm_digest": "877329b73f6fd209969882cb1ef811488052764676e3883fcbbf53b066167728",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 149,
+        "total_depth": 1493
+      },
+      "synthesis_candidate_id": "v6-ns-synthesis:bde749bc31b6dad291c0ee265c6560902f283110f0ccc0bcb79ca59170fb6534",
+      "target_resources": {
+        "circuit_qasm_digest": "bb3055a8a61386d03866b7c1034df7bbf65b3da4a018e56bcc30efa501c26a8a",
+        "cnot_count": 783,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1489
+      }
+    },
+    {
+      "context_id": "h6-3.0",
+      "context_role": "development",
+      "direct_primary_eligible": true,
+      "energy_evaluated": false,
+      "exact_rewrite_closure": {
+        "not_claimed_globally_saturated": true,
+        "post_closure_resources_equal_direct": true,
+        "rewrites_applied": 0,
+        "status": "NO_REGISTERED_RULE_FOR_AFFINE_TIED_BLOCK"
+      },
+      "family_id": "v6-ns-family:1d05b2720fc1cd78db70bd697f5ec77bff77fc96f58b0c57a24ecb3f077ca18d",
+      "normal": [
+        1,
+        -1,
+        -1
+      ],
+      "post_closure_primary_eligible": true,
+      "post_closure_resources": {
+        "circuit_qasm_digest": "8b3521a719aa8fe8369d06053ded574c74da32c6996832669c69ae6c001503f2",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1491
+      },
+      "resource_delta": {
+        "cnot_count": 0,
+        "cnot_depth": 0,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -2
+      },
+      "source_block_id": "block-v1:757f6c4c54e69d668b3e9456ce16a52fed87471bea0891a193a60215ed6d3ee9",
+      "source_pool_indices": [
+        468,
+        469,
+        470
+      ],
+      "source_resources": {
+        "circuit_qasm_digest": "877329b73f6fd209969882cb1ef811488052764676e3883fcbbf53b066167728",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 149,
+        "total_depth": 1493
+      },
+      "synthesis_candidate_id": "v6-ns-synthesis:082571d4d8c109df627146dbb87aa3ec77b9780a52d207d96600364b1f1dfbfb",
+      "target_resources": {
+        "circuit_qasm_digest": "8b3521a719aa8fe8369d06053ded574c74da32c6996832669c69ae6c001503f2",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1491
+      }
+    },
+    {
+      "context_id": "h6-3.0",
+      "context_role": "development",
+      "direct_primary_eligible": true,
+      "energy_evaluated": false,
+      "exact_rewrite_closure": {
+        "not_claimed_globally_saturated": true,
+        "post_closure_resources_equal_direct": true,
+        "rewrites_applied": 0,
+        "status": "NO_REGISTERED_RULE_FOR_AFFINE_TIED_BLOCK"
+      },
+      "family_id": "v6-ns-family:36564e90c05ea0d4eb801d3fb6df949c37b301ff3156ad904bf442523ca31be4",
+      "normal": [
+        1,
+        -1,
+        1
+      ],
+      "post_closure_primary_eligible": true,
+      "post_closure_resources": {
+        "circuit_qasm_digest": "76a70db27fdc939b471ae9a45d6dcdd194d55fc56437e9c1eb5b2acd23592247",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1491
+      },
+      "resource_delta": {
+        "cnot_count": 0,
+        "cnot_depth": 0,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -2
+      },
+      "source_block_id": "block-v1:757f6c4c54e69d668b3e9456ce16a52fed87471bea0891a193a60215ed6d3ee9",
+      "source_pool_indices": [
+        468,
+        469,
+        470
+      ],
+      "source_resources": {
+        "circuit_qasm_digest": "877329b73f6fd209969882cb1ef811488052764676e3883fcbbf53b066167728",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 149,
+        "total_depth": 1493
+      },
+      "synthesis_candidate_id": "v6-ns-synthesis:4d8a5257447dd99dc8daf30e7445d0b8a50984ca06061f8fc15b86d364797ea7",
+      "target_resources": {
+        "circuit_qasm_digest": "76a70db27fdc939b471ae9a45d6dcdd194d55fc56437e9c1eb5b2acd23592247",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1491
+      }
+    },
+    {
+      "context_id": "h6-3.0",
+      "context_role": "development",
+      "direct_primary_eligible": true,
+      "energy_evaluated": false,
+      "exact_rewrite_closure": {
+        "not_claimed_globally_saturated": true,
+        "post_closure_resources_equal_direct": true,
+        "rewrites_applied": 0,
+        "status": "NO_REGISTERED_RULE_FOR_AFFINE_TIED_BLOCK"
+      },
+      "family_id": "v6-ns-family:00630228cc0ccc0f76bc2cd500b96ec1cd2b487a78f04f69996079e0702726fa",
+      "normal": [
+        1,
+        1,
+        -1
+      ],
+      "post_closure_primary_eligible": true,
+      "post_closure_resources": {
+        "circuit_qasm_digest": "e6f6308a12db7d90587a2b3da0dbcaa69bb375b5a50271905231881b3e4a3975",
+        "cnot_count": 783,
+        "cnot_depth": 293,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1489
+      },
+      "resource_delta": {
+        "cnot_count": -2,
+        "cnot_depth": -1,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -4
+      },
+      "source_block_id": "block-v1:757f6c4c54e69d668b3e9456ce16a52fed87471bea0891a193a60215ed6d3ee9",
+      "source_pool_indices": [
+        468,
+        469,
+        470
+      ],
+      "source_resources": {
+        "circuit_qasm_digest": "877329b73f6fd209969882cb1ef811488052764676e3883fcbbf53b066167728",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 149,
+        "total_depth": 1493
+      },
+      "synthesis_candidate_id": "v6-ns-synthesis:f355b6c8365b62d497ec1ef1973a456c7e9315b1a8edc32d7ae3dacfdbde4b09",
+      "target_resources": {
+        "circuit_qasm_digest": "e6f6308a12db7d90587a2b3da0dbcaa69bb375b5a50271905231881b3e4a3975",
+        "cnot_count": 783,
+        "cnot_depth": 293,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1489
+      }
+    },
+    {
+      "context_id": "h6-3.0",
+      "context_role": "development",
+      "direct_primary_eligible": true,
+      "energy_evaluated": false,
+      "exact_rewrite_closure": {
+        "not_claimed_globally_saturated": true,
+        "post_closure_resources_equal_direct": true,
+        "rewrites_applied": 0,
+        "status": "NO_REGISTERED_RULE_FOR_AFFINE_TIED_BLOCK"
+      },
+      "family_id": "v6-ns-family:1bd5552f1cc2df503c3111f459cc1ce8c5ef3d58e4de413675f78a44fe72176b",
+      "normal": [
+        1,
+        1,
+        1
+      ],
+      "post_closure_primary_eligible": true,
+      "post_closure_resources": {
+        "circuit_qasm_digest": "41ccd83d790c62943441edf362577af726f5cb84086d16bb6db289dd15630b35",
+        "cnot_count": 783,
+        "cnot_depth": 293,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1489
+      },
+      "resource_delta": {
+        "cnot_count": -2,
+        "cnot_depth": -1,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -4
+      },
+      "source_block_id": "block-v1:757f6c4c54e69d668b3e9456ce16a52fed87471bea0891a193a60215ed6d3ee9",
+      "source_pool_indices": [
+        468,
+        469,
+        470
+      ],
+      "source_resources": {
+        "circuit_qasm_digest": "877329b73f6fd209969882cb1ef811488052764676e3883fcbbf53b066167728",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 149,
+        "total_depth": 1493
+      },
+      "synthesis_candidate_id": "v6-ns-synthesis:bde749bc31b6dad291c0ee265c6560902f283110f0ccc0bcb79ca59170fb6534",
+      "target_resources": {
+        "circuit_qasm_digest": "41ccd83d790c62943441edf362577af726f5cb84086d16bb6db289dd15630b35",
+        "cnot_count": 783,
+        "cnot_depth": 293,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1489
+      }
+    },
+    {
+      "context_id": "h6-3.0",
+      "context_role": "development",
+      "direct_primary_eligible": true,
+      "energy_evaluated": false,
+      "exact_rewrite_closure": {
+        "not_claimed_globally_saturated": true,
+        "post_closure_resources_equal_direct": true,
+        "rewrites_applied": 0,
+        "status": "NO_REGISTERED_RULE_FOR_AFFINE_TIED_BLOCK"
+      },
+      "family_id": "v6-ns-family:1d05b2720fc1cd78db70bd697f5ec77bff77fc96f58b0c57a24ecb3f077ca18d",
+      "normal": [
+        1,
+        -1,
+        -1
+      ],
+      "post_closure_primary_eligible": true,
+      "post_closure_resources": {
+        "circuit_qasm_digest": "b95b7127ad8f28adb07ca8ce29e10177fb41f23b561f3bdddac8ed3019b46883",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1491
+      },
+      "resource_delta": {
+        "cnot_count": 0,
+        "cnot_depth": 0,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -2
+      },
+      "source_block_id": "block-v1:b57945152936bc9d83ee3525870cae8bdab6b7a023573399cc31d319ac66f204",
+      "source_pool_indices": [
+        545,
+        546,
+        547
+      ],
+      "source_resources": {
+        "circuit_qasm_digest": "877329b73f6fd209969882cb1ef811488052764676e3883fcbbf53b066167728",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 149,
+        "total_depth": 1493
+      },
+      "synthesis_candidate_id": "v6-ns-synthesis:082571d4d8c109df627146dbb87aa3ec77b9780a52d207d96600364b1f1dfbfb",
+      "target_resources": {
+        "circuit_qasm_digest": "b95b7127ad8f28adb07ca8ce29e10177fb41f23b561f3bdddac8ed3019b46883",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1491
+      }
+    },
+    {
+      "context_id": "h6-3.0",
+      "context_role": "development",
+      "direct_primary_eligible": true,
+      "energy_evaluated": false,
+      "exact_rewrite_closure": {
+        "not_claimed_globally_saturated": true,
+        "post_closure_resources_equal_direct": true,
+        "rewrites_applied": 0,
+        "status": "NO_REGISTERED_RULE_FOR_AFFINE_TIED_BLOCK"
+      },
+      "family_id": "v6-ns-family:36564e90c05ea0d4eb801d3fb6df949c37b301ff3156ad904bf442523ca31be4",
+      "normal": [
+        1,
+        -1,
+        1
+      ],
+      "post_closure_primary_eligible": true,
+      "post_closure_resources": {
+        "circuit_qasm_digest": "fb91a3a2765950ef7dbeeac2de4b2b26dfe03874ae217f3acccddd86efb5e7b1",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1491
+      },
+      "resource_delta": {
+        "cnot_count": 0,
+        "cnot_depth": 0,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -2
+      },
+      "source_block_id": "block-v1:b57945152936bc9d83ee3525870cae8bdab6b7a023573399cc31d319ac66f204",
+      "source_pool_indices": [
+        545,
+        546,
+        547
+      ],
+      "source_resources": {
+        "circuit_qasm_digest": "877329b73f6fd209969882cb1ef811488052764676e3883fcbbf53b066167728",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 149,
+        "total_depth": 1493
+      },
+      "synthesis_candidate_id": "v6-ns-synthesis:4d8a5257447dd99dc8daf30e7445d0b8a50984ca06061f8fc15b86d364797ea7",
+      "target_resources": {
+        "circuit_qasm_digest": "fb91a3a2765950ef7dbeeac2de4b2b26dfe03874ae217f3acccddd86efb5e7b1",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1491
+      }
+    },
+    {
+      "context_id": "h6-3.0",
+      "context_role": "development",
+      "direct_primary_eligible": true,
+      "energy_evaluated": false,
+      "exact_rewrite_closure": {
+        "not_claimed_globally_saturated": true,
+        "post_closure_resources_equal_direct": true,
+        "rewrites_applied": 0,
+        "status": "NO_REGISTERED_RULE_FOR_AFFINE_TIED_BLOCK"
+      },
+      "family_id": "v6-ns-family:00630228cc0ccc0f76bc2cd500b96ec1cd2b487a78f04f69996079e0702726fa",
+      "normal": [
+        1,
+        1,
+        -1
+      ],
+      "post_closure_primary_eligible": true,
+      "post_closure_resources": {
+        "circuit_qasm_digest": "e88b3f1f7fcf417b2a9ee615c7c9164f8bc37b340104543bd13251160751a6f4",
+        "cnot_count": 783,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1489
+      },
+      "resource_delta": {
+        "cnot_count": -2,
+        "cnot_depth": 0,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -4
+      },
+      "source_block_id": "block-v1:b57945152936bc9d83ee3525870cae8bdab6b7a023573399cc31d319ac66f204",
+      "source_pool_indices": [
+        545,
+        546,
+        547
+      ],
+      "source_resources": {
+        "circuit_qasm_digest": "877329b73f6fd209969882cb1ef811488052764676e3883fcbbf53b066167728",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 149,
+        "total_depth": 1493
+      },
+      "synthesis_candidate_id": "v6-ns-synthesis:f355b6c8365b62d497ec1ef1973a456c7e9315b1a8edc32d7ae3dacfdbde4b09",
+      "target_resources": {
+        "circuit_qasm_digest": "e88b3f1f7fcf417b2a9ee615c7c9164f8bc37b340104543bd13251160751a6f4",
+        "cnot_count": 783,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1489
+      }
+    },
+    {
+      "context_id": "h6-3.0",
+      "context_role": "development",
+      "direct_primary_eligible": true,
+      "energy_evaluated": false,
+      "exact_rewrite_closure": {
+        "not_claimed_globally_saturated": true,
+        "post_closure_resources_equal_direct": true,
+        "rewrites_applied": 0,
+        "status": "NO_REGISTERED_RULE_FOR_AFFINE_TIED_BLOCK"
+      },
+      "family_id": "v6-ns-family:1bd5552f1cc2df503c3111f459cc1ce8c5ef3d58e4de413675f78a44fe72176b",
+      "normal": [
+        1,
+        1,
+        1
+      ],
+      "post_closure_primary_eligible": true,
+      "post_closure_resources": {
+        "circuit_qasm_digest": "09bd19f08a6be90fd836073de25d8769a53fb4e9cfa9243f172fadf9b31e7900",
+        "cnot_count": 783,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1489
+      },
+      "resource_delta": {
+        "cnot_count": -2,
+        "cnot_depth": 0,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -4
+      },
+      "source_block_id": "block-v1:b57945152936bc9d83ee3525870cae8bdab6b7a023573399cc31d319ac66f204",
+      "source_pool_indices": [
+        545,
+        546,
+        547
+      ],
+      "source_resources": {
+        "circuit_qasm_digest": "877329b73f6fd209969882cb1ef811488052764676e3883fcbbf53b066167728",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 149,
+        "total_depth": 1493
+      },
+      "synthesis_candidate_id": "v6-ns-synthesis:bde749bc31b6dad291c0ee265c6560902f283110f0ccc0bcb79ca59170fb6534",
+      "target_resources": {
+        "circuit_qasm_digest": "09bd19f08a6be90fd836073de25d8769a53fb4e9cfa9243f172fadf9b31e7900",
+        "cnot_count": 783,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1489
+      }
+    },
+    {
+      "context_id": "h6-3.0",
+      "context_role": "development",
+      "direct_primary_eligible": true,
+      "energy_evaluated": false,
+      "exact_rewrite_closure": {
+        "not_claimed_globally_saturated": true,
+        "post_closure_resources_equal_direct": true,
+        "rewrites_applied": 0,
+        "status": "NO_REGISTERED_RULE_FOR_AFFINE_TIED_BLOCK"
+      },
+      "family_id": "v6-ns-family:1d05b2720fc1cd78db70bd697f5ec77bff77fc96f58b0c57a24ecb3f077ca18d",
+      "normal": [
+        1,
+        -1,
+        -1
+      ],
+      "post_closure_primary_eligible": true,
+      "post_closure_resources": {
+        "circuit_qasm_digest": "b0d6c345474ea0aac1fcf2b592f843577bad3c732413116ae56fa1a9eb5c6644",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1491
+      },
+      "resource_delta": {
+        "cnot_count": 0,
+        "cnot_depth": 0,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -2
+      },
+      "source_block_id": "block-v1:06ce15236ac603308f518adde8774895cf1caabb5bf9127f2f1b382646fd9b01",
+      "source_pool_indices": [
+        94,
+        95,
+        96
+      ],
+      "source_resources": {
+        "circuit_qasm_digest": "877329b73f6fd209969882cb1ef811488052764676e3883fcbbf53b066167728",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 149,
+        "total_depth": 1493
+      },
+      "synthesis_candidate_id": "v6-ns-synthesis:082571d4d8c109df627146dbb87aa3ec77b9780a52d207d96600364b1f1dfbfb",
+      "target_resources": {
+        "circuit_qasm_digest": "b0d6c345474ea0aac1fcf2b592f843577bad3c732413116ae56fa1a9eb5c6644",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1491
+      }
+    },
+    {
+      "context_id": "h6-3.0",
+      "context_role": "development",
+      "direct_primary_eligible": true,
+      "energy_evaluated": false,
+      "exact_rewrite_closure": {
+        "not_claimed_globally_saturated": true,
+        "post_closure_resources_equal_direct": true,
+        "rewrites_applied": 0,
+        "status": "NO_REGISTERED_RULE_FOR_AFFINE_TIED_BLOCK"
+      },
+      "family_id": "v6-ns-family:36564e90c05ea0d4eb801d3fb6df949c37b301ff3156ad904bf442523ca31be4",
+      "normal": [
+        1,
+        -1,
+        1
+      ],
+      "post_closure_primary_eligible": true,
+      "post_closure_resources": {
+        "circuit_qasm_digest": "c9004b611f8b9f5e147eee48fa3b00f19ea0910a9fd7254cafe050b80f75938a",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1491
+      },
+      "resource_delta": {
+        "cnot_count": 0,
+        "cnot_depth": 0,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -2
+      },
+      "source_block_id": "block-v1:06ce15236ac603308f518adde8774895cf1caabb5bf9127f2f1b382646fd9b01",
+      "source_pool_indices": [
+        94,
+        95,
+        96
+      ],
+      "source_resources": {
+        "circuit_qasm_digest": "877329b73f6fd209969882cb1ef811488052764676e3883fcbbf53b066167728",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 149,
+        "total_depth": 1493
+      },
+      "synthesis_candidate_id": "v6-ns-synthesis:4d8a5257447dd99dc8daf30e7445d0b8a50984ca06061f8fc15b86d364797ea7",
+      "target_resources": {
+        "circuit_qasm_digest": "c9004b611f8b9f5e147eee48fa3b00f19ea0910a9fd7254cafe050b80f75938a",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1491
+      }
+    },
+    {
+      "context_id": "h6-3.0",
+      "context_role": "development",
+      "direct_primary_eligible": true,
+      "energy_evaluated": false,
+      "exact_rewrite_closure": {
+        "not_claimed_globally_saturated": true,
+        "post_closure_resources_equal_direct": true,
+        "rewrites_applied": 0,
+        "status": "NO_REGISTERED_RULE_FOR_AFFINE_TIED_BLOCK"
+      },
+      "family_id": "v6-ns-family:00630228cc0ccc0f76bc2cd500b96ec1cd2b487a78f04f69996079e0702726fa",
+      "normal": [
+        1,
+        1,
+        -1
+      ],
+      "post_closure_primary_eligible": true,
+      "post_closure_resources": {
+        "circuit_qasm_digest": "8a165abf2a2252e900dbcedac03d2a440be772b8348474d203cf0878f08d3107",
+        "cnot_count": 783,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1489
+      },
+      "resource_delta": {
+        "cnot_count": -2,
+        "cnot_depth": 0,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -4
+      },
+      "source_block_id": "block-v1:06ce15236ac603308f518adde8774895cf1caabb5bf9127f2f1b382646fd9b01",
+      "source_pool_indices": [
+        94,
+        95,
+        96
+      ],
+      "source_resources": {
+        "circuit_qasm_digest": "877329b73f6fd209969882cb1ef811488052764676e3883fcbbf53b066167728",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 149,
+        "total_depth": 1493
+      },
+      "synthesis_candidate_id": "v6-ns-synthesis:f355b6c8365b62d497ec1ef1973a456c7e9315b1a8edc32d7ae3dacfdbde4b09",
+      "target_resources": {
+        "circuit_qasm_digest": "8a165abf2a2252e900dbcedac03d2a440be772b8348474d203cf0878f08d3107",
+        "cnot_count": 783,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1489
+      }
+    },
+    {
+      "context_id": "h6-3.0",
+      "context_role": "development",
+      "direct_primary_eligible": true,
+      "energy_evaluated": false,
+      "exact_rewrite_closure": {
+        "not_claimed_globally_saturated": true,
+        "post_closure_resources_equal_direct": true,
+        "rewrites_applied": 0,
+        "status": "NO_REGISTERED_RULE_FOR_AFFINE_TIED_BLOCK"
+      },
+      "family_id": "v6-ns-family:1bd5552f1cc2df503c3111f459cc1ce8c5ef3d58e4de413675f78a44fe72176b",
+      "normal": [
+        1,
+        1,
+        1
+      ],
+      "post_closure_primary_eligible": true,
+      "post_closure_resources": {
+        "circuit_qasm_digest": "d30eeb666f027cf9d41bc50e57b6be9fbe0ccb881e35a10116cdd8e4ec6fb446",
+        "cnot_count": 783,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1489
+      },
+      "resource_delta": {
+        "cnot_count": -2,
+        "cnot_depth": 0,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -4
+      },
+      "source_block_id": "block-v1:06ce15236ac603308f518adde8774895cf1caabb5bf9127f2f1b382646fd9b01",
+      "source_pool_indices": [
+        94,
+        95,
+        96
+      ],
+      "source_resources": {
+        "circuit_qasm_digest": "877329b73f6fd209969882cb1ef811488052764676e3883fcbbf53b066167728",
+        "cnot_count": 785,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 149,
+        "total_depth": 1493
+      },
+      "synthesis_candidate_id": "v6-ns-synthesis:bde749bc31b6dad291c0ee265c6560902f283110f0ccc0bcb79ca59170fb6534",
+      "target_resources": {
+        "circuit_qasm_digest": "d30eeb666f027cf9d41bc50e57b6be9fbe0ccb881e35a10116cdd8e4ec6fb446",
+        "cnot_count": 783,
+        "cnot_depth": 294,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 95,
+        "parameter_count": 148,
+        "total_depth": 1489
+      }
+    }
+  ],
+  "report_digest": "880ae8478eec8911f4d5ca5c7075e30050e368cbfb7cc793157afaf1a2c3a70a",
+  "schema_version": "1.0.0",
+  "work": {
+    "energy_evaluations": 0,
+    "full_source_recounts": 4,
+    "full_target_recounts": 60,
+    "optimizer_runs": 0
+  }
+}

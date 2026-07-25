@@ -1,0 +1,837 @@
+{
+  "artifact_kind": "v6-ns3-bounded-native-synthesis-search",
+  "bounds": {
+    "cube_vertices": 8,
+    "deterministic_breadth_first_search": true,
+    "end_vertex": 4,
+    "gate_alphabet": [
+      "cx",
+      "rz",
+      "h"
+    ],
+    "generic_qiskit_compiler_used": false,
+    "maximum_search_states": 2048,
+    "neighbor_order": [
+      1,
+      2,
+      4
+    ],
+    "start_vertex": 0
+  },
+  "candidate_count": 13,
+  "candidates": [
+    {
+      "candidate_id": "v6-ns-synthesis:5d382de89ba978b1eba20d6f31dce5b1884015acad1882265756730ddb2790f1",
+      "energy_evaluated": false,
+      "family_id": "v6-ns-family:bbb2451dd71189e157d6ff113be60391fb45f7942c2976875f33e9608fcf26a3",
+      "lane": "bounded-direct-phase-polynomial-parity-walk",
+      "local_primary_eligible": false,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "resource_delta_vs_mvp3": {
+        "cnot_count": 0,
+        "cnot_depth": 0,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": 0
+      },
+      "resources": {
+        "circuit_qasm_digest": "b26ce09649cf934fd2c321d1432f7e8df843b04d79e278032788dba2edda383b",
+        "cnot_count": 13,
+        "cnot_depth": 13,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 1,
+        "parameter_count": 2,
+        "total_depth": 24
+      },
+      "search_trace": {
+        "final_vertex": 4,
+        "outer_cnot_count": 6,
+        "path_bits": [
+          1,
+          2,
+          1,
+          4,
+          1,
+          2,
+          1
+        ],
+        "path_length": 7,
+        "required_vertices": [
+          0,
+          1,
+          3,
+          2,
+          6,
+          7,
+          5,
+          4
+        ],
+        "search_states_explored": 336,
+        "source_coordinates": [
+          0.2718281828459045,
+          -0.3141592653589793,
+          0.0
+        ],
+        "total_cnot_formula": 13,
+        "zero_vertices": []
+      },
+      "synthesis_version": "v6-rank2-shortest-parity-walk-v1"
+    },
+    {
+      "candidate_id": "v6-ns-synthesis:629ff82c57acea79b24b6fe7a799a1de86415a78b6a39f15769216e26e12fd57",
+      "energy_evaluated": false,
+      "family_id": "v6-ns-family:40b7577acc4212bed6775e190ce8317a511a8004a7baa1c822f7abc27c75d73d",
+      "lane": "bounded-direct-phase-polynomial-parity-walk",
+      "local_primary_eligible": false,
+      "normal": [
+        0,
+        1,
+        -1
+      ],
+      "resource_delta_vs_mvp3": {
+        "cnot_count": 0,
+        "cnot_depth": 0,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": 0
+      },
+      "resources": {
+        "circuit_qasm_digest": "c768ec7ff3f9d8590a1749c724abff14be0321f83b136fd32c3e4a849d584907",
+        "cnot_count": 13,
+        "cnot_depth": 13,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 1,
+        "parameter_count": 2,
+        "total_depth": 24
+      },
+      "search_trace": {
+        "final_vertex": 4,
+        "outer_cnot_count": 6,
+        "path_bits": [
+          1,
+          2,
+          1,
+          4,
+          1,
+          2,
+          1
+        ],
+        "path_length": 7,
+        "required_vertices": [
+          0,
+          1,
+          3,
+          2,
+          6,
+          7,
+          5,
+          4
+        ],
+        "search_states_explored": 336,
+        "source_coordinates": [
+          0.2718281828459045,
+          -0.3141592653589793,
+          -0.3141592653589793
+        ],
+        "total_cnot_formula": 13,
+        "zero_vertices": []
+      },
+      "synthesis_version": "v6-rank2-shortest-parity-walk-v1"
+    },
+    {
+      "candidate_id": "v6-ns-synthesis:e8f10043a9c544e0d1cf2fb69a8b5c6d20b91d8e31bf864726aae559257e70d3",
+      "energy_evaluated": false,
+      "family_id": "v6-ns-family:eabb481327b98c0ace2d13ee2f8acddf4870fbb3c18f39f27d1f6982e462e525",
+      "lane": "bounded-direct-phase-polynomial-parity-walk",
+      "local_primary_eligible": false,
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "resource_delta_vs_mvp3": {
+        "cnot_count": 0,
+        "cnot_depth": 0,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": 0
+      },
+      "resources": {
+        "circuit_qasm_digest": "9e607bbf6f94d1860cc630dd18a9f94bde3f291eeba6832dff2aba18e835daab",
+        "cnot_count": 13,
+        "cnot_depth": 13,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 1,
+        "parameter_count": 2,
+        "total_depth": 24
+      },
+      "search_trace": {
+        "final_vertex": 4,
+        "outer_cnot_count": 6,
+        "path_bits": [
+          1,
+          2,
+          1,
+          4,
+          1,
+          2,
+          1
+        ],
+        "path_length": 7,
+        "required_vertices": [
+          0,
+          1,
+          3,
+          2,
+          6,
+          7,
+          5,
+          4
+        ],
+        "search_states_explored": 336,
+        "source_coordinates": [
+          0.2718281828459045,
+          0.0,
+          -0.3141592653589793
+        ],
+        "total_cnot_formula": 13,
+        "zero_vertices": []
+      },
+      "synthesis_version": "v6-rank2-shortest-parity-walk-v1"
+    },
+    {
+      "candidate_id": "v6-ns-synthesis:b5c84fb55f9b3b4823e793c3cc90810fe8c97c4cf2492dcf2dbd2db5dc9ea9cd",
+      "energy_evaluated": false,
+      "family_id": "v6-ns-family:1d131656e9915c18d428cb49707138b188acb5028123d9f193fb00ca5fa32abf",
+      "lane": "bounded-direct-phase-polynomial-parity-walk",
+      "local_primary_eligible": false,
+      "normal": [
+        0,
+        1,
+        1
+      ],
+      "resource_delta_vs_mvp3": {
+        "cnot_count": 0,
+        "cnot_depth": 0,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": 0
+      },
+      "resources": {
+        "circuit_qasm_digest": "05301ba31f4870b86e061c58fe48e19812ce8f4f041d922b1455da981920d21d",
+        "cnot_count": 13,
+        "cnot_depth": 13,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 1,
+        "parameter_count": 2,
+        "total_depth": 24
+      },
+      "search_trace": {
+        "final_vertex": 4,
+        "outer_cnot_count": 6,
+        "path_bits": [
+          1,
+          2,
+          1,
+          4,
+          1,
+          2,
+          1
+        ],
+        "path_length": 7,
+        "required_vertices": [
+          0,
+          1,
+          3,
+          2,
+          6,
+          7,
+          5,
+          4
+        ],
+        "search_states_explored": 336,
+        "source_coordinates": [
+          0.2718281828459045,
+          0.3141592653589793,
+          -0.3141592653589793
+        ],
+        "total_cnot_formula": 13,
+        "zero_vertices": []
+      },
+      "synthesis_version": "v6-rank2-shortest-parity-walk-v1"
+    },
+    {
+      "candidate_id": "v6-ns-synthesis:082571d4d8c109df627146dbb87aa3ec77b9780a52d207d96600364b1f1dfbfb",
+      "energy_evaluated": false,
+      "family_id": "v6-ns-family:1d05b2720fc1cd78db70bd697f5ec77bff77fc96f58b0c57a24ecb3f077ca18d",
+      "lane": "bounded-direct-phase-polynomial-parity-walk",
+      "local_primary_eligible": true,
+      "normal": [
+        1,
+        -1,
+        -1
+      ],
+      "resource_delta_vs_mvp3": {
+        "cnot_count": 0,
+        "cnot_depth": 0,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -2
+      },
+      "resources": {
+        "circuit_qasm_digest": "8e72557636af0d8ae29ed51441cc9b1ac2d122b10fc2d1415b609d77fa3fe6e8",
+        "cnot_count": 13,
+        "cnot_depth": 13,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 1,
+        "parameter_count": 2,
+        "total_depth": 22
+      },
+      "search_trace": {
+        "final_vertex": 4,
+        "outer_cnot_count": 6,
+        "path_bits": [
+          1,
+          1,
+          2,
+          4,
+          1,
+          2,
+          1
+        ],
+        "path_length": 7,
+        "required_vertices": [
+          0,
+          1,
+          2,
+          6,
+          7,
+          5
+        ],
+        "search_states_explored": 163,
+        "source_coordinates": [
+          -0.042331082513074825,
+          0.2718281828459045,
+          -0.3141592653589793
+        ],
+        "total_cnot_formula": 13,
+        "zero_vertices": [
+          3,
+          4
+        ]
+      },
+      "synthesis_version": "v6-rank2-shortest-parity-walk-v1"
+    },
+    {
+      "candidate_id": "v6-ns-synthesis:55325cd93623b01b2a3206e77bfef9094b9962164f382df33a2f8cec451729ea",
+      "energy_evaluated": false,
+      "family_id": "v6-ns-family:e58f59e187eb757d776fe6ca74403f15661c7b462aaffb09654a1e40e8ba429b",
+      "lane": "bounded-direct-phase-polynomial-parity-walk",
+      "local_primary_eligible": false,
+      "normal": [
+        1,
+        -1,
+        0
+      ],
+      "resource_delta_vs_mvp3": {
+        "cnot_count": 0,
+        "cnot_depth": 0,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": 0
+      },
+      "resources": {
+        "circuit_qasm_digest": "de799d7e23cc7dce614024afb145b9c22a8af9caf137566dd6fd9edbaf7279cf",
+        "cnot_count": 13,
+        "cnot_depth": 13,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 1,
+        "parameter_count": 2,
+        "total_depth": 24
+      },
+      "search_trace": {
+        "final_vertex": 4,
+        "outer_cnot_count": 6,
+        "path_bits": [
+          1,
+          2,
+          1,
+          4,
+          1,
+          2,
+          1
+        ],
+        "path_length": 7,
+        "required_vertices": [
+          0,
+          1,
+          3,
+          2,
+          6,
+          7,
+          5,
+          4
+        ],
+        "search_states_explored": 336,
+        "source_coordinates": [
+          0.2718281828459045,
+          0.2718281828459045,
+          -0.3141592653589793
+        ],
+        "total_cnot_formula": 13,
+        "zero_vertices": []
+      },
+      "synthesis_version": "v6-rank2-shortest-parity-walk-v1"
+    },
+    {
+      "candidate_id": "v6-ns-synthesis:4d8a5257447dd99dc8daf30e7445d0b8a50984ca06061f8fc15b86d364797ea7",
+      "energy_evaluated": false,
+      "family_id": "v6-ns-family:36564e90c05ea0d4eb801d3fb6df949c37b301ff3156ad904bf442523ca31be4",
+      "lane": "bounded-direct-phase-polynomial-parity-walk",
+      "local_primary_eligible": true,
+      "normal": [
+        1,
+        -1,
+        1
+      ],
+      "resource_delta_vs_mvp3": {
+        "cnot_count": 0,
+        "cnot_depth": 0,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -2
+      },
+      "resources": {
+        "circuit_qasm_digest": "e453a5441da3cb606aa38ca40d714a67cc7c8e7fed8699b732dc972d3f27dbe0",
+        "cnot_count": 13,
+        "cnot_depth": 13,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 1,
+        "parameter_count": 2,
+        "total_depth": 22
+      },
+      "search_trace": {
+        "final_vertex": 4,
+        "outer_cnot_count": 6,
+        "path_bits": [
+          1,
+          2,
+          1,
+          4,
+          1,
+          2,
+          1
+        ],
+        "path_length": 7,
+        "required_vertices": [
+          1,
+          3,
+          2,
+          6,
+          5,
+          4
+        ],
+        "search_states_explored": 236,
+        "source_coordinates": [
+          0.5859874482048838,
+          0.2718281828459045,
+          -0.3141592653589793
+        ],
+        "total_cnot_formula": 13,
+        "zero_vertices": [
+          0,
+          7
+        ]
+      },
+      "synthesis_version": "v6-rank2-shortest-parity-walk-v1"
+    },
+    {
+      "candidate_id": "v6-ns-synthesis:0f34d163561f16926d558adbff3dc14a776d960b96aad206dec3e9da2737ed4a",
+      "energy_evaluated": false,
+      "family_id": "v6-ns-family:a61e607e52d19d9b53f15fa3aabd6440d1c5ef499462b196288d307e685504a1",
+      "lane": "bounded-direct-phase-polynomial-parity-walk",
+      "local_primary_eligible": false,
+      "normal": [
+        1,
+        0,
+        -1
+      ],
+      "resource_delta_vs_mvp3": {
+        "cnot_count": 0,
+        "cnot_depth": 0,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": 0
+      },
+      "resources": {
+        "circuit_qasm_digest": "c59d6b3e68184006ec5bba7088a966a32ddfe2d4cc8ce248bd92def3ee8e9155",
+        "cnot_count": 13,
+        "cnot_depth": 13,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 1,
+        "parameter_count": 2,
+        "total_depth": 24
+      },
+      "search_trace": {
+        "final_vertex": 4,
+        "outer_cnot_count": 6,
+        "path_bits": [
+          1,
+          2,
+          1,
+          4,
+          1,
+          2,
+          1
+        ],
+        "path_length": 7,
+        "required_vertices": [
+          0,
+          1,
+          3,
+          2,
+          6,
+          7,
+          5,
+          4
+        ],
+        "search_states_explored": 336,
+        "source_coordinates": [
+          -0.3141592653589793,
+          0.2718281828459045,
+          -0.3141592653589793
+        ],
+        "total_cnot_formula": 13,
+        "zero_vertices": []
+      },
+      "synthesis_version": "v6-rank2-shortest-parity-walk-v1"
+    },
+    {
+      "candidate_id": "v6-ns-synthesis:d083a33672402133116f72c7636f2f2903d689cf83b2f3f833d8a292d80b2aa3",
+      "energy_evaluated": false,
+      "family_id": "v6-ns-family:b731f56458dfb1c40afc83d007158f3941aca30013632e3542c022a48b9921fd",
+      "lane": "bounded-direct-phase-polynomial-parity-walk",
+      "local_primary_eligible": false,
+      "normal": [
+        1,
+        0,
+        0
+      ],
+      "resource_delta_vs_mvp3": {
+        "cnot_count": 0,
+        "cnot_depth": 0,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": 0
+      },
+      "resources": {
+        "circuit_qasm_digest": "0f868265ebf09f88f794be934b9b0308affaea2d8a4c4a1bf746ca62869a688b",
+        "cnot_count": 13,
+        "cnot_depth": 13,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 1,
+        "parameter_count": 2,
+        "total_depth": 24
+      },
+      "search_trace": {
+        "final_vertex": 4,
+        "outer_cnot_count": 6,
+        "path_bits": [
+          1,
+          2,
+          1,
+          4,
+          1,
+          2,
+          1
+        ],
+        "path_length": 7,
+        "required_vertices": [
+          0,
+          1,
+          3,
+          2,
+          6,
+          7,
+          5,
+          4
+        ],
+        "search_states_explored": 336,
+        "source_coordinates": [
+          0.0,
+          0.2718281828459045,
+          -0.3141592653589793
+        ],
+        "total_cnot_formula": 13,
+        "zero_vertices": []
+      },
+      "synthesis_version": "v6-rank2-shortest-parity-walk-v1"
+    },
+    {
+      "candidate_id": "v6-ns-synthesis:3adec3882cd232ad06467997b41e372b69b4c13e796ec171e6ad6891ed30afac",
+      "energy_evaluated": false,
+      "family_id": "v6-ns-family:cad9116cc389867fe73b3f2f18a21248c99e1b0ed136d45b3a57c3f2ef25e715",
+      "lane": "bounded-direct-phase-polynomial-parity-walk",
+      "local_primary_eligible": false,
+      "normal": [
+        1,
+        0,
+        1
+      ],
+      "resource_delta_vs_mvp3": {
+        "cnot_count": 0,
+        "cnot_depth": 0,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": 0
+      },
+      "resources": {
+        "circuit_qasm_digest": "ee5569f0cadbbbc2611b474bca165df15e60feb3173680de723ed40522ad7378",
+        "cnot_count": 13,
+        "cnot_depth": 13,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 1,
+        "parameter_count": 2,
+        "total_depth": 24
+      },
+      "search_trace": {
+        "final_vertex": 4,
+        "outer_cnot_count": 6,
+        "path_bits": [
+          1,
+          2,
+          1,
+          4,
+          1,
+          2,
+          1
+        ],
+        "path_length": 7,
+        "required_vertices": [
+          0,
+          1,
+          3,
+          2,
+          6,
+          7,
+          5,
+          4
+        ],
+        "search_states_explored": 336,
+        "source_coordinates": [
+          0.3141592653589793,
+          0.2718281828459045,
+          -0.3141592653589793
+        ],
+        "total_cnot_formula": 13,
+        "zero_vertices": []
+      },
+      "synthesis_version": "v6-rank2-shortest-parity-walk-v1"
+    },
+    {
+      "candidate_id": "v6-ns-synthesis:f355b6c8365b62d497ec1ef1973a456c7e9315b1a8edc32d7ae3dacfdbde4b09",
+      "energy_evaluated": false,
+      "family_id": "v6-ns-family:00630228cc0ccc0f76bc2cd500b96ec1cd2b487a78f04f69996079e0702726fa",
+      "lane": "bounded-direct-phase-polynomial-parity-walk",
+      "local_primary_eligible": true,
+      "normal": [
+        1,
+        1,
+        -1
+      ],
+      "resource_delta_vs_mvp3": {
+        "cnot_count": -2,
+        "cnot_depth": -2,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -4
+      },
+      "resources": {
+        "circuit_qasm_digest": "0023b6219e2fda0bdca514e9552e4cc04dc2f09a98d35155a807d48134e76b66",
+        "cnot_count": 11,
+        "cnot_depth": 11,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 1,
+        "parameter_count": 2,
+        "total_depth": 20
+      },
+      "search_trace": {
+        "final_vertex": 4,
+        "outer_cnot_count": 6,
+        "path_bits": [
+          2,
+          1,
+          4,
+          2,
+          1
+        ],
+        "path_length": 5,
+        "required_vertices": [
+          0,
+          3,
+          2,
+          7,
+          5,
+          4
+        ],
+        "search_states_explored": 82,
+        "source_coordinates": [
+          -0.5859874482048838,
+          0.2718281828459045,
+          -0.3141592653589793
+        ],
+        "total_cnot_formula": 11,
+        "zero_vertices": [
+          1,
+          6
+        ]
+      },
+      "synthesis_version": "v6-rank2-shortest-parity-walk-v1"
+    },
+    {
+      "candidate_id": "v6-ns-synthesis:334e3c4d6c9684d1362eabf422d89ea6a374b78268daf11b9ad1511ce37086d3",
+      "energy_evaluated": false,
+      "family_id": "v6-ns-family:55a4f090172bd0b2c88aac1c2be42ace4c4fe8a1e4ec2d2e63b60bd2883c3a0c",
+      "lane": "bounded-direct-phase-polynomial-parity-walk",
+      "local_primary_eligible": false,
+      "normal": [
+        1,
+        1,
+        0
+      ],
+      "resource_delta_vs_mvp3": {
+        "cnot_count": 0,
+        "cnot_depth": 0,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": 0
+      },
+      "resources": {
+        "circuit_qasm_digest": "b51d6cded937e4afd745e9552fbf58c88d43ca16627eeae92131cc63be6fc424",
+        "cnot_count": 13,
+        "cnot_depth": 13,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 1,
+        "parameter_count": 2,
+        "total_depth": 24
+      },
+      "search_trace": {
+        "final_vertex": 4,
+        "outer_cnot_count": 6,
+        "path_bits": [
+          1,
+          2,
+          1,
+          4,
+          1,
+          2,
+          1
+        ],
+        "path_length": 7,
+        "required_vertices": [
+          0,
+          1,
+          3,
+          2,
+          6,
+          7,
+          5,
+          4
+        ],
+        "search_states_explored": 336,
+        "source_coordinates": [
+          -0.2718281828459045,
+          0.2718281828459045,
+          -0.3141592653589793
+        ],
+        "total_cnot_formula": 13,
+        "zero_vertices": []
+      },
+      "synthesis_version": "v6-rank2-shortest-parity-walk-v1"
+    },
+    {
+      "candidate_id": "v6-ns-synthesis:bde749bc31b6dad291c0ee265c6560902f283110f0ccc0bcb79ca59170fb6534",
+      "energy_evaluated": false,
+      "family_id": "v6-ns-family:1bd5552f1cc2df503c3111f459cc1ce8c5ef3d58e4de413675f78a44fe72176b",
+      "lane": "bounded-direct-phase-polynomial-parity-walk",
+      "local_primary_eligible": true,
+      "normal": [
+        1,
+        1,
+        1
+      ],
+      "resource_delta_vs_mvp3": {
+        "cnot_count": -2,
+        "cnot_depth": -2,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -4
+      },
+      "resources": {
+        "circuit_qasm_digest": "ae68113f1d3520210a41a5cadfa40202cfb7aaf958e3a5c7f4ac9b002ea85ea5",
+        "cnot_count": 11,
+        "cnot_depth": 11,
+        "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+        "logical_block_count": 1,
+        "parameter_count": 2,
+        "total_depth": 20
+      },
+      "search_trace": {
+        "final_vertex": 4,
+        "outer_cnot_count": 6,
+        "path_bits": [
+          1,
+          2,
+          4,
+          1,
+          2
+        ],
+        "path_length": 5,
+        "required_vertices": [
+          0,
+          1,
+          3,
+          6,
+          7,
+          4
+        ],
+        "search_states_explored": 72,
+        "source_coordinates": [
+          0.042331082513074825,
+          0.2718281828459045,
+          -0.3141592653589793
+        ],
+        "total_cnot_formula": 11,
+        "zero_vertices": [
+          2,
+          5
+        ]
+      },
+      "synthesis_version": "v6-rank2-shortest-parity-walk-v1"
+    }
+  ],
+  "inputs": {
+    "ns1": "8ca6202b1f6635b7d62eadcfe4ab4681079e11e33a6c51e8364179a0c8714416",
+    "ns2": "ad9ebfa63f1e6bfb8598b6caad55897cc5a59000c4b846ceb50185b0281953ba"
+  },
+  "lanes": {
+    "active_subspace_direct_decomposition": "REALIZED_AS_EXACT_PHASE_POLYNOMIAL_DIAGONALIZATION",
+    "bounded_parameterized_superoptimization": "EXECUTED_WITHIN_FIXED_CLIFFORD_SCAFFOLD",
+    "shared_parity_network": "EXECUTED",
+    "sparse_ucry_baseline": "HISTORICAL_S7_EXECUTED_NOT_PRIMARY_ELIGIBLE"
+  },
+  "local_primary_eligible_count": 4,
+  "pipeline_version": "v6-native-synthesis-pipeline-v1",
+  "report_digest": "8a4598d10675bba3ea7a9da92c457280eb27590b847f10dc7fac1af0a8a05d97",
+  "schema_version": "1.0.0",
+  "work": {
+    "circuits_synthesized": 13,
+    "energy_evaluations": 0,
+    "resource_recounts": 13,
+    "search_states_explored": 3577
+  }
+}
