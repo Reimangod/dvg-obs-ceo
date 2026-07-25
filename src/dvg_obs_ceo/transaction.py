@@ -27,7 +27,12 @@ from .telemetry import ResourceSnapshot, WorkCounters
 FloatArray = NDArray[np.float64]
 ComplexArray = NDArray[np.complex128]
 TRANSACTION_VERSION = "compression-transaction-v2"
-ACCEPTANCE_VERSION = "runtime-kkt-cumulative-resource-guard-v2"
+ACCEPTANCE_VERSION = "runtime-kkt-cumulative-resource-guard-v3"
+RESOURCE_POLICIES = {
+    "componentwise-pareto-v1",
+    "circuit-primary-v1",
+    "exploratory-depth-parameter-v1",
+}
 
 
 class TransactionError(RuntimeError):
@@ -342,6 +347,7 @@ class AcceptanceCriteria:
     maximum_constraint_residual: float = 1e-10
     maximum_kkt_residual: float = 1e-8
     guard_logical_block_count: bool = True
+    resource_policy: str = "componentwise-pareto-v1"
 
     def __post_init__(self) -> None:
         values = (
@@ -357,6 +363,8 @@ class AcceptanceCriteria:
             raise TransactionError("minimum state fidelity cannot exceed one")
         if not isinstance(self.guard_logical_block_count, bool):
             raise TransactionError("logical-block guard flag must be boolean")
+        if self.resource_policy not in RESOURCE_POLICIES:
+            raise TransactionError("resource acceptance policy is unsupported")
 
 
 @dataclass(frozen=True)
@@ -414,23 +422,55 @@ def evaluate_acceptance(
     )
     before = evidence.before_resources
     after = evidence.after_resources
-    before_values = (
-        before.cnot_count,
-        before.cnot_depth,
-        before.total_depth,
-        before.parameter_count,
-    )
-    after_values = (
-        after.cnot_count,
-        after.cnot_depth,
-        after.total_depth,
-        after.parameter_count,
-    )
-    if criteria.guard_logical_block_count:
-        before_values = (*before_values, before.logical_block_count)
-        after_values = (*after_values, after.logical_block_count)
-    pareto_nonworse = all(new <= old for old, new in zip(before_values, after_values))
-    resource_improved = any(new < old for old, new in zip(before_values, after_values))
+    resource_pairs = {
+        "cnot_count": (before.cnot_count, after.cnot_count),
+        "cnot_depth": (before.cnot_depth, after.cnot_depth),
+        "total_depth": (before.total_depth, after.total_depth),
+        "parameter_count": (before.parameter_count, after.parameter_count),
+        "logical_block_count": (
+            before.logical_block_count,
+            after.logical_block_count,
+        ),
+    }
+    if criteria.resource_policy == "circuit-primary-v1":
+        protected = ("cnot_count", "cnot_depth")
+        pareto_nonworse = all(
+            resource_pairs[name][1] <= resource_pairs[name][0]
+            for name in protected
+        )
+        resource_improved = any(
+            resource_pairs[name][1] < resource_pairs[name][0]
+            for name in protected
+        )
+    elif criteria.resource_policy == "exploratory-depth-parameter-v1":
+        # This policy is intentionally stronger than "any improvement":
+        # both preregistered exploratory endpoints must improve strictly.
+        protected = ("total_depth", "parameter_count")
+        pareto_nonworse = all(
+            resource_pairs[name][1] <= resource_pairs[name][0]
+            for name in protected
+        )
+        resource_improved = all(
+            resource_pairs[name][1] < resource_pairs[name][0]
+            for name in protected
+        )
+    else:
+        protected = (
+            "cnot_count",
+            "cnot_depth",
+            "total_depth",
+            "parameter_count",
+        )
+        if criteria.guard_logical_block_count:
+            protected = (*protected, "logical_block_count")
+        pareto_nonworse = all(
+            resource_pairs[name][1] <= resource_pairs[name][0]
+            for name in protected
+        )
+        resource_improved = any(
+            resource_pairs[name][1] < resource_pairs[name][0]
+            for name in protected
+        )
     fallback_attempted = evidence.fallback_optimizer is not None
     fallback_completed = bool(
         evidence.fallback_optimizer is not None and evidence.fallback_optimizer.completed
@@ -460,6 +500,7 @@ def evaluate_acceptance(
         "kkt": finite and evidence.kkt_residual <= criteria.maximum_kkt_residual,
         "resource_recount": evidence.full_resource_recount_succeeded,
         "transformation_semantics": evidence.transformation_semantics_validated,
+        "resource_policy_valid": criteria.resource_policy in RESOURCE_POLICIES,
         "pareto_nonworse": pareto_nonworse,
         "resource_improved": resource_improved,
         "optimizer_path_reviewed": optimizer_path_reviewed,

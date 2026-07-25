@@ -973,6 +973,12 @@ Definition of done:
 
 ### S9 — Exact attempt, independent certification, and rollback
 
+Protocol amendment: S9 is governed by
+`docs/V6_S9_CERTIFICATION_PROTOCOL.md` and the V6-S8.1 Top-2 freeze. The
+current candidates are exploratory total-depth/parameter feasibility attempts,
+not circuit-primary candidates. Accepted exploratory attempts remain isolated
+from the primary lineage, and cannot become an S10 primary parent.
+
 Actions:
 
 - run target-native optimization in the existing transaction boundary;
@@ -996,6 +1002,12 @@ Definition of done:
   artifacts.
 
 ### S10 — Sequential/beam search and work-profile comparator
+
+Entry hold: the current V6-S8.1 rank-2 queue does not authorize S10. After S9,
+the project first follows the preregistered Go/No-Go in the S9 protocol:
+stop the current family if accuracy/stationarity fails, or study native
+synthesis/resource-only context if feasibility passes. S10 requires a new
+circuit-primary-eligible candidate and a separately frozen amendment.
 
 Actions:
 
