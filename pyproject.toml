@@ -106,4 +106,5 @@ filterwarnings = [
   "ignore::DeprecationWarning:numpy\\..*",
   "ignore::DeprecationWarning:adaptvqe\\..*",
   "ignore:The distutils package is deprecated.*:DeprecationWarning",
+  "ignore:invalid escape sequence:DeprecationWarning",
 ]
