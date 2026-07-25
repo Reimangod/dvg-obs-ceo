@@ -299,10 +299,12 @@ def evaluate_attempt(
     family: Mapping[str, Any],
     context: Mapping[str, Any],
 ) -> dict[str, Any]:
-    from adaptvqe.minimize import minimize_bfgs
-
     started = time.perf_counter()
     algorithm, pool = _algorithm_for(queue_item["context_id"])
+    # The pinned upstream loader used by _algorithm_for registers the
+    # vendored paper-era package path.  Import only after that registration.
+    from adaptvqe.minimize import minimize_bfgs
+
     source = _load_context_structure(context)
     blocks = recover_dvg_blocks(
         pool,

@@ -1,6 +1,7 @@
 import numpy as np
 
 from dvg_obs_ceo.v6_rank_adaptive.ns7_energy_certification import (
+    _algorithm_for,
     affine_embedding,
     projected_initial_coordinates,
 )
@@ -40,3 +41,12 @@ def test_euclidean_projection_is_deterministic_and_feasible():
         0.0,
         atol=1e-15,
     )
+
+
+def test_upstream_optimizer_is_importable_after_algorithm_loader():
+    algorithm, pool = _algorithm_for("h4-1.5-late")
+    from adaptvqe.minimize import minimize_bfgs
+
+    assert algorithm is not None
+    assert pool is not None
+    assert callable(minimize_bfgs)
