@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://reimangod.github.io/dvg-obs-ceo/schemas/v6-architecture-state-v1.schema.json",
+  "title": "V6 unified ArchitectureState",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "architecture_state_id",
+    "normalized_ir_digest",
+    "identity",
+    "blocks",
+    "resources",
+    "work_ledger",
+    "evidence_ids",
+    "transition_registry_digest",
+    "protocol_digest",
+    "environment_digest",
+    "parent_checkpoint_id",
+    "parent_checkpoint_digest",
+    "original_artifact_digest"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "architecture_state_id": {
+      "type": "string",
+      "pattern": "^architecture-v1:[0-9a-f]{64}$"
+    },
+    "normalized_ir_digest": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "identity": {"type": "object"},
+    "blocks": {
+      "type": "array",
+      "items": {"type": "object"}
+    },
+    "resources": {"type": "object"},
+    "work_ledger": {"type": "object"},
+    "evidence_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^v6-evidence-v1:[0-9a-f]{64}$"
+      },
+      "uniqueItems": true
+    },
+    "transition_registry_digest": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "protocol_digest": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "environment_digest": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "parent_checkpoint_id": {"type": "string", "minLength": 1},
+    "parent_checkpoint_digest": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "original_artifact_digest": {
+      "oneOf": [
+        {"type": "null"},
+        {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+      ]
+    }
+  }
+}
