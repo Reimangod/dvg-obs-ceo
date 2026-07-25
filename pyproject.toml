@@ -94,6 +94,7 @@ dvg-obs-v6-s7-rank-catalog = "dvg_obs_ceo.v6_rank_adaptive.rank_candidate_catalo
 dvg-obs-v6-s8-predictor-freeze = "dvg_obs_ceo.v6_rank_adaptive.predictor_freeze:main"
 dvg-obs-v6-s8-1-protocol-freeze = "dvg_obs_ceo.v6_rank_adaptive.s8_1_protocol_freeze:main"
 dvg-obs-v6-s9-certification = "dvg_obs_ceo.v6_rank_adaptive.s9_certification:main"
+dvg-obs-v6-s9-result-audit = "dvg_obs_ceo.v6_rank_adaptive.s9_result_audit:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

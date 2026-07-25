@@ -1,0 +1,29 @@
+{
+  "artifact_kind": "v6-s9-independent-result-audit",
+  "audit_digest": "33f51bee28cd94d1694cc1eb51a32bed0639c1a85f88937d92a8b8bf6105b341",
+  "audit_version": "v6-s9-result-audit-v1",
+  "checks": {
+    "all_candidate_rollbacks_exact": true,
+    "classification_reconciles": true,
+    "development_only": true,
+    "fault_audit_passed": true,
+    "independent_certificates_passed": true,
+    "input_hash_legacy_quadratic_model": true,
+    "input_hash_s6": true,
+    "input_hash_s7": true,
+    "input_hash_s8_1": true,
+    "no_primary_acceptance": true,
+    "only_stationarity_failed_exploratory": true,
+    "prediction_arithmetic": true,
+    "primary_lineage_frozen": true,
+    "queue_order_preserved": true,
+    "report_digest": true,
+    "runner_version": true,
+    "top2_only": true
+  },
+  "claim_boundary": "Structural, arithmetic, input-hash, and transaction-lifecycle audit of the S9 result. Quantum kernels are checked through the independent certificates stored by S9, not recomputed here.",
+  "passed": true,
+  "result_path": "artifacts/v6/s9/native-rank2-top2-result-v1.json",
+  "result_sha256": "0384b510af1420a10d63a69567ff13b91148c3c2ecef9267b108e9572669edf1",
+  "schema_version": "1.0.0"
+}
