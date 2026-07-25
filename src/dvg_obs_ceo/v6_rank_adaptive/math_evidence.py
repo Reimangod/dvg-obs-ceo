@@ -482,6 +482,18 @@ def _multiply_operators(
     )
 
 
+def exact_operators_commute(
+    left: ExactPauliOperator,
+    right: ExactPauliOperator,
+) -> bool:
+    """Return exact commutation in rational Pauli algebra."""
+    commutator = _multiply_operators(left, right) + _multiply_operators(
+        right,
+        left,
+    ).scale(Fraction(-1))
+    return not commutator.terms
+
+
 @dataclass(frozen=True)
 class AlgebraicProofRecord:
     proof_type: str
@@ -551,11 +563,7 @@ def prove_generator_relation_and_commutation(
             "generator count does not match parameter-map dimensions"
         )
     for left, right in itertools.combinations(source_generators, 2):
-        commutator = _multiply_operators(left, right) + _multiply_operators(
-            right,
-            left,
-        ).scale(Fraction(-1))
-        if commutator.terms:
+        if not exact_operators_commute(left, right):
             raise MathematicalEvidenceError(
                 "source generators do not commute exactly"
             )
