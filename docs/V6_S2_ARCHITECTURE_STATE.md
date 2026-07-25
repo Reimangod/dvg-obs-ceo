@@ -27,9 +27,10 @@ J = [[1], [-1]]
 ```
 
 using canonical strings `"1"` and `"-1"`. Noncanonical equivalents such as
-`"2/2"` are rejected. S2 validates representation and shape but does not claim
-that the declared rank or generator relation is mathematically correct; those
-proof kernels belong to S4.
+`"2/2"` are rejected. S2 originally validated representation and shape. S4
+tightened the invariant: affine and periodic-affine maps now recompute
+Jacobian rank with exact rational row reduction and reject an incorrect
+`declared_rank`. Generator relations remain a separate S4 proof axis.
 
 The supported representations are:
 

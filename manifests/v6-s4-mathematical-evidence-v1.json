@@ -1,0 +1,30 @@
+{
+  "artifact_kind": "v6-s4-mathematical-evidence-manifest",
+  "capabilities": [
+    "exact affine rank validation",
+    "explicit-witness periodic affine membership",
+    "noninjective affine membership reporting",
+    "exact rational Pauli generator-relation proof",
+    "exact pairwise Pauli commutation proof record",
+    "global-phase pointwise unitary validation",
+    "reference-bound pointwise state validation",
+    "context-scope enforcement",
+    "native-synthesis scope enforcement"
+  ],
+  "claim_boundary": "Mathematical evidence infrastructure only; no registered executable rank transition, molecular performance result, resource gain, or comparative claim.",
+  "exact_arithmetic": [
+    "fractions.Fraction",
+    "canonical rational Pauli algebra"
+  ],
+  "known_limitations": [
+    "registered analytic maps require a separate named proof kernel",
+    "periodic membership requires a caller-supplied integer winding witness",
+    "zero-offset affine maps only for the generator-relation kernel",
+    "numerical matrix samples remain pointwise evidence",
+    "commutation proof is not contextual-rewrite evidence",
+    "native circuit feasibility and physical resources are deferred to S5"
+  ],
+  "paper_measurement_cost": null,
+  "schema_version": "1.0.0",
+  "test_file": "tests/v6_rank_adaptive/test_math_evidence.py"
+}

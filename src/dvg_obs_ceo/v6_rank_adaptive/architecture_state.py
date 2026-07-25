@@ -64,6 +64,46 @@ def _canonical_rational(value: str) -> str:
     return canonical
 
 
+def _exact_rank(rows: tuple[tuple[str, ...], ...]) -> int:
+    """Return matrix rank using exact rational arithmetic."""
+    matrix = [[Fraction(value) for value in row] for row in rows]
+    if not matrix:
+        return 0
+    row_count = len(matrix)
+    column_count = len(matrix[0])
+    pivot_row = 0
+    for column in range(column_count):
+        pivot = next(
+            (
+                row
+                for row in range(pivot_row, row_count)
+                if matrix[row][column] != 0
+            ),
+            None,
+        )
+        if pivot is None:
+            continue
+        matrix[pivot_row], matrix[pivot] = matrix[pivot], matrix[pivot_row]
+        scale = matrix[pivot_row][column]
+        matrix[pivot_row] = [value / scale for value in matrix[pivot_row]]
+        for row in range(row_count):
+            if row == pivot_row:
+                continue
+            factor = matrix[row][column]
+            if factor:
+                matrix[row] = [
+                    left - factor * right
+                    for left, right in zip(
+                        matrix[row],
+                        matrix[pivot_row],
+                    )
+                ]
+        pivot_row += 1
+        if pivot_row == row_count:
+            break
+    return pivot_row
+
+
 @dataclass(frozen=True)
 class GeneratorSemantic:
     generator_id: str
@@ -163,6 +203,11 @@ class ParameterMapIR:
             for row in self.jacobian:
                 for value in row:
                     _canonical_rational(value)
+            actual_rank = _exact_rank(self.jacobian)
+            if self.declared_rank != actual_rank:
+                raise ArchitectureStateError(
+                    "declared rank does not match the exact affine Jacobian rank"
+                )
         if self.periodicity is not None:
             if len(self.periodicity) != self.source_dimension:
                 raise ArchitectureStateError(
