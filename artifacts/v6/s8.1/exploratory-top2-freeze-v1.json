@@ -1,0 +1,139 @@
+{
+  "amends_but_does_not_overwrite": "v6-s8-predictor-candidate-freeze",
+  "artifact_kind": "v6-s8.1-pre-outcome-protocol-freeze",
+  "assessments": [
+    {
+      "candidate_id": "v6-rank-candidate:09e1064d9897af7ff16a9944cfe178a6042ba6536e70e73dd413dc96ba44d20a",
+      "circuit_primary_eligible": false,
+      "circuit_primary_rejection_reasons": [
+        "cnot-regression",
+        "cnot-depth-regression"
+      ],
+      "empirical_uncertainty_calibrated": false,
+      "exploratory_depth_parameter_eligible": true,
+      "exploratory_disclosed_regressions": [
+        "cnot_count",
+        "cnot_depth"
+      ],
+      "predicted_loss_hartree": 1.424145041873128e-06,
+      "quality_stratum": "boundary",
+      "resource_delta_target_minus_s6": {
+        "cnot_count": 1,
+        "cnot_depth": 1,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -2
+      }
+    },
+    {
+      "candidate_id": "v6-rank-candidate:3f2111bc84b04ad55ab62d8db9048ac1536ec7eb825ae237680854d1ebd0cac4",
+      "circuit_primary_eligible": false,
+      "circuit_primary_rejection_reasons": [
+        "cnot-regression",
+        "cnot-depth-regression"
+      ],
+      "empirical_uncertainty_calibrated": false,
+      "exploratory_depth_parameter_eligible": true,
+      "exploratory_disclosed_regressions": [
+        "cnot_count",
+        "cnot_depth"
+      ],
+      "predicted_loss_hartree": 1.9254550858857432e-06,
+      "quality_stratum": "boundary",
+      "resource_delta_target_minus_s6": {
+        "cnot_count": 1,
+        "cnot_depth": 1,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -2
+      }
+    },
+    {
+      "candidate_id": "v6-rank-candidate:f2e79e66911a7167f49ac58a001d42b646a4ffef4706ae21230bc4d438aebade",
+      "circuit_primary_eligible": false,
+      "circuit_primary_rejection_reasons": [
+        "cnot-regression",
+        "cnot-depth-regression"
+      ],
+      "empirical_uncertainty_calibrated": false,
+      "exploratory_depth_parameter_eligible": true,
+      "exploratory_disclosed_regressions": [
+        "cnot_count",
+        "cnot_depth"
+      ],
+      "predicted_loss_hartree": 8.203592421290851e-05,
+      "quality_stratum": "boundary",
+      "resource_delta_target_minus_s6": {
+        "cnot_count": 1,
+        "cnot_depth": 1,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -2
+      }
+    }
+  ],
+  "circuit_primary_candidate_ids": [],
+  "claim_boundary": "The Top-2 queue is an exploratory pre-outcome development freeze. Even accepted S9 attempts are not circuit-primary CNOT compression results and cannot establish matched-work or molecule-general performance.",
+  "development_only": true,
+  "endpoint_policy": {
+    "circuit_primary": {
+      "current_candidates_are_primary_results": false,
+      "eligibility": "both nonregress and at least one strictly improves",
+      "protected_resources": [
+        "cnot_count",
+        "cnot_depth"
+      ]
+    },
+    "exploratory_depth_parameter": {
+      "allowed_but_disclosed_regressions": [
+        "cnot_count",
+        "cnot_depth"
+      ],
+      "required_strict_gains": [
+        "total_depth",
+        "parameter_count"
+      ],
+      "s9_purpose": "native rank-2 feasibility and predictor diagnosis only"
+    }
+  },
+  "excluded_by_top2_cap": [
+    "v6-rank-candidate:f2e79e66911a7167f49ac58a001d42b646a4ffef4706ae21230bc4d438aebade"
+  ],
+  "exploratory_top2_candidate_ids": [
+    "v6-rank-candidate:09e1064d9897af7ff16a9944cfe178a6042ba6536e70e73dd413dc96ba44d20a",
+    "v6-rank-candidate:3f2111bc84b04ad55ab62d8db9048ac1536ec7eb825ae237680854d1ebd0cac4"
+  ],
+  "freeze_digest": "0c6fdde2c10f087333bcb50a2d2cd5c8852adf71adfb48d6070bcdf6d203a11d",
+  "inputs": {
+    "s7": {
+      "path": "artifacts/v6/s7/rank-candidate-catalog-v1.json",
+      "report_digest": "b07c152c432bbd1ffcf07f56e0e00dc64f97482ac24496b424f20f41f2b4e3a8",
+      "sha256": "d521edd3b12c8be80de3e6c8ecfb0af96a0871cb32875ba7dbe4e77d7cc5e6b1"
+    },
+    "s8": {
+      "original_top1_retained_as_historical_evidence": true,
+      "path": "artifacts/v6/s8/predictor-candidate-freeze-v1.json",
+      "report_digest": "3ad2ed39ca5fa4d97108bfe926014928047b6dfeb45ef9e0662612774bc5f7ab",
+      "sha256": "65ac79b25acdfcaf911a20ef6efa95789dcb125b778a28da3d681a3f9732e521"
+    }
+  },
+  "paper_measurement_cost": null,
+  "pre_outcome_attestation": {
+    "actual_candidate_energy_observed": false,
+    "fci_or_chemical_accuracy_used": false,
+    "s9_artifact_absent_when_freeze_created": true
+  },
+  "protocol_version": "v6-s8.1-pre-outcome-endpoint-top2-freeze-v1",
+  "schema_version": "1.0.0",
+  "selector_policy": {
+    "name": "boundary-quality-deterministic-top2-v1",
+    "ranking": [
+      "predicted_loss_hartree",
+      "canonical_candidate_id"
+    ],
+    "reason": "The first two point predictions differ by only about 5e-7 Ha while empirical uncertainty is uncalibrated.",
+    "risk_aware_claim": false,
+    "s9_outcomes_may_change_this_queue": false,
+    "top_k": 2
+  }
+}

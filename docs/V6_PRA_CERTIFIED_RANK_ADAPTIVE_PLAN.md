@@ -425,6 +425,13 @@ energy loss.
 
 ### 7.2 Candidate eligibility
 
+Pre-outcome amendment: the versioned S8.1 freeze separates a
+`circuit-primary` track, protecting both CNOT count and CNOT depth, from an
+`exploratory depth/parameter` track. Candidates that regress either protected
+circuit-primary resource cannot support the primary performance claim, even
+when they proceed as explicitly labeled exploratory feasibility attempts.
+See `docs/V6_S8_1_PRE_OUTCOME_PROTOCOL_FREEZE.md`.
+
 A candidate enters numerical screening only if:
 
 - its target family and parameter map are registered;

@@ -52,6 +52,16 @@ The deterministic engine accepted the same two exact OVP-to-MVP absorptions
 previously audited in V5.1, one per sequential state. It reached
 `SATURATED` with `complete: true`.
 
+Here, `complete` means complete under the frozen greedy,
+resource-ordered deterministic policy without hitting a cap. It does not
+establish exploration of every rewrite order or a globally optimal exact
+normal form:
+
+```text
+complete_under_frozen_deterministic_policy: true
+global_exact_rewrite_optimum: NOT_ESTABLISHED
+```
+
 The complete work trace records:
 
 ```text
