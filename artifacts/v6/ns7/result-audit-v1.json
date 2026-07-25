@@ -1,0 +1,45 @@
+{
+  "artifact_kind": "v6-ns7-independent-result-audit",
+  "audit_digest": "f9cc3f821373a67b493e5c4386660b0c3556ac2a0937eb390e444144b08ac75b",
+  "audit_version": "v6-ns7-result-audit-v1",
+  "checks": {
+    "acceptance_is_conjunction": true,
+    "accepted_contexts_reconcile": true,
+    "accepted_energy_and_stationarity": true,
+    "classification_reconciles": true,
+    "development_only": true,
+    "energy_arithmetic": true,
+    "finite_difference_spot_checks": true,
+    "hard_resource_gate": true,
+    "independent_energy_agreement": true,
+    "input_hash_ns1": true,
+    "input_hash_ns5": true,
+    "input_hash_ns6": true,
+    "no_validation_or_pra_claim": true,
+    "outcome_blind_queue": true,
+    "queue_count_preserved": true,
+    "queue_order_preserved": true,
+    "rejections_are_not_resource_or_semantic_failures": true,
+    "report_digest": true,
+    "resource_recounts_match_ns5": true,
+    "runner_version": true,
+    "semantic_native_fidelity": true,
+    "source_lineage_immutable": true,
+    "summary_counts_reconcile": true,
+    "worktree_was_clean": true
+  },
+  "claim_boundary": "Independent structural, arithmetic, queue, resource, and certificate audit of the frozen NS7 report. It does not rerun quantum kernels and does not establish cross-molecule or PRA performance.",
+  "outcome_summary": {
+    "accepted": 2,
+    "accepted_contexts": [
+      "h4-1.5-late"
+    ],
+    "attempted": 6,
+    "maximum_finite_difference_error": 2.492363803188735e-09,
+    "maximum_native_energy_disagreement": 3.9968028886505635e-15
+  },
+  "passed": true,
+  "result_path": "artifacts/v6/ns7/energy-certification-v1.json",
+  "result_sha256": "966459d555a3fcd098d9536e4e0dac6230ac9796cf10fa2194fd89c4c6ab1b5c",
+  "schema_version": "1.0.0"
+}

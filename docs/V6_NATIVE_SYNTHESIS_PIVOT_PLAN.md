@@ -1,6 +1,6 @@
 # V6-NS: primary-resource native-synthesis pivot
 
-Status: new development protocol after immutable V6-S9 closure
+Status: completed through NS7; see `docs/V6_NS7_RESULT.md`
 
 ## Decision
 
@@ -246,6 +246,12 @@ a new pre-outcome protocol with:
 Only an NS7 acceptance may reopen a later sequential-search design.
 
 ## Final Go/No-Go
+
+Recorded outcome: `GO_DEVELOPMENT_PRIMARY_NATIVE`. Two H4 transitions passed
+the frozen NS7 checks. All four H6 attempts failed the preregistered
+stationarity requirement, and BeH2 had no eligible frozen rank-three MVP
+block. Sequential-search design may reopen as a bounded development question;
+cross-molecule and PRA performance claims remain unauthorized.
 
 V6 rank adaptation continues only if a newly certified transition passes the
 hard full-circuit resource gate. It becomes a PRA performance candidate only
