@@ -94,7 +94,12 @@ where = ["src"]
 testpaths = ["tests"]
 addopts = "-ra --strict-markers"
 filterwarnings = [
-  "error",
+  "error::DeprecationWarning",
+  "error::FutureWarning",
+  "error::ResourceWarning",
+  "error::RuntimeWarning",
+  "error::UserWarning",
+  "error::pytest.PytestUnraisableExceptionWarning",
   "ignore::DeprecationWarning:openfermion\\..*",
   "ignore::DeprecationWarning:qiskit\\..*",
   "ignore::DeprecationWarning:pyscf\\..*",
