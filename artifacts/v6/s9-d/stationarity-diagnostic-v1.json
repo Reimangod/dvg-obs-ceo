@@ -1,0 +1,305 @@
+{
+  "artifact_kind": "v6-s9-d-stationarity-mechanism-diagnostic",
+  "candidate_diagnostics": [
+    {
+      "acceptance_reassessed": false,
+      "candidate_id": "v6-rank-candidate:09e1064d9897af7ff16a9944cfe178a6042ba6536e70e73dd413dc96ba44d20a",
+      "no_new_quantum_or_optimizer_work": true,
+      "optimizer": {
+        "function_evaluations": 204,
+        "gradient_vector_evaluations": 204,
+        "iterations": 200,
+        "message": "Maximum number of iterations has been exceeded.",
+        "status": 1,
+        "success": false
+      },
+      "selected_optimizer_path": "primary",
+      "stationarity": {
+        "absolute_gradient_quantiles": {
+          "0.0": 8.4724132489453e-10,
+          "0.25": 1.285128029257767e-08,
+          "0.5": 3.409555776625925e-08,
+          "0.75": 6.487890353494051e-08,
+          "0.9": 9.970829241540113e-08,
+          "0.99": 2.3004359908465347e-07,
+          "1.0": 3.098042065239519e-07
+        },
+        "components_above_threshold": 103,
+        "demoted_block_max_absolute_gradient": 4.5406064879262124e-08,
+        "demoted_block_target_positions": [
+          116,
+          117
+        ],
+        "fixed_threshold": 1e-08,
+        "fraction_components_above_threshold": 0.8046875,
+        "gradient_infinity": 3.098042065239519e-07,
+        "gradient_l2": 7.856365163362532e-07,
+        "maximum_component_inside_demoted_block": false,
+        "outside_block_max_absolute_gradient": 3.098042065239519e-07,
+        "threshold_multiple": 30.980420652395193,
+        "top_components": [
+          {
+            "absolute_gradient": 3.098042065239519e-07,
+            "gradient": 3.098042065239519e-07,
+            "inside_demoted_block": false,
+            "pool_index": 53,
+            "rank": 1,
+            "target_position": 111
+          },
+          {
+            "absolute_gradient": 2.399549292436394e-07,
+            "gradient": -2.399549292436394e-07,
+            "inside_demoted_block": false,
+            "pool_index": 531,
+            "rank": 2,
+            "target_position": 70
+          },
+          {
+            "absolute_gradient": 2.032462990251725e-07,
+            "gradient": -2.032462990251725e-07,
+            "inside_demoted_block": false,
+            "pool_index": 22,
+            "rank": 3,
+            "target_position": 79
+          },
+          {
+            "absolute_gradient": 2.0172648588243167e-07,
+            "gradient": -2.0172648588243167e-07,
+            "inside_demoted_block": false,
+            "pool_index": 147,
+            "rank": 4,
+            "target_position": 16
+          },
+          {
+            "absolute_gradient": 1.8021934758622512e-07,
+            "gradient": 1.8021934758622512e-07,
+            "inside_demoted_block": false,
+            "pool_index": 742,
+            "rank": 5,
+            "target_position": 5
+          },
+          {
+            "absolute_gradient": 1.5656767166370754e-07,
+            "gradient": -1.5656767166370754e-07,
+            "inside_demoted_block": false,
+            "pool_index": 11,
+            "rank": 6,
+            "target_position": 83
+          },
+          {
+            "absolute_gradient": 1.4796921532847507e-07,
+            "gradient": 1.4796921532847507e-07,
+            "inside_demoted_block": false,
+            "pool_index": 73,
+            "rank": 7,
+            "target_position": 22
+          },
+          {
+            "absolute_gradient": 1.3467419688257927e-07,
+            "gradient": -1.3467419688257927e-07,
+            "inside_demoted_block": false,
+            "pool_index": 320,
+            "rank": 8,
+            "target_position": 94
+          },
+          {
+            "absolute_gradient": 1.1682513470403621e-07,
+            "gradient": 1.1682513470403621e-07,
+            "inside_demoted_block": false,
+            "pool_index": 509,
+            "rank": 9,
+            "target_position": 100
+          },
+          {
+            "absolute_gradient": 1.1472097142013076e-07,
+            "gradient": -1.1472097142013076e-07,
+            "inside_demoted_block": false,
+            "pool_index": 406,
+            "rank": 10,
+            "target_position": 34
+          }
+        ]
+      },
+      "surrogate_curvature": {
+        "condition_number_if_spd": 16803.171908246717,
+        "dimension": 128,
+        "evidence_kind": "optimizer-final-BFGS-inverse-Hessian-surrogate",
+        "gradient_squared_alignment_with_five_lowest_implied_curvature_directions": 0.00041339170403020467,
+        "implied_hessian_maximum_eigenvalue_if_spd": 6.275970745373934,
+        "implied_hessian_minimum_eigenvalue_if_spd": 0.0003734991690642522,
+        "maximum_inverse_hessian_eigenvalue": 2677.382127797913,
+        "minimum_inverse_hessian_eigenvalue": 0.15933790015466653,
+        "not_exact_physical_hessian": true,
+        "symmetric_part_positive_definite": true,
+        "symmetry_relative_residual": 5.9869297332372884e-15
+      },
+      "unavailable_from_saved_s9_evidence": [
+        "per-iteration coordinate and step-norm trajectory",
+        "line-search trial points and Wolfe-condition diagnostics",
+        "exact Hessian or new Hessian-vector products at final point",
+        "proof that another optimizer or parameterization would fail"
+      ]
+    },
+    {
+      "acceptance_reassessed": false,
+      "candidate_id": "v6-rank-candidate:3f2111bc84b04ad55ab62d8db9048ac1536ec7eb825ae237680854d1ebd0cac4",
+      "no_new_quantum_or_optimizer_work": true,
+      "optimizer": {
+        "function_evaluations": 203,
+        "gradient_vector_evaluations": 203,
+        "iterations": 200,
+        "message": "Maximum number of iterations has been exceeded.",
+        "status": 1,
+        "success": false
+      },
+      "selected_optimizer_path": "primary",
+      "stationarity": {
+        "absolute_gradient_quantiles": {
+          "0.0": 1.16854611138242e-10,
+          "0.25": 1.3051816945470508e-08,
+          "0.5": 3.4115197446721985e-08,
+          "0.75": 7.31055738943575e-08,
+          "0.9": 1.105356539486693e-07,
+          "0.99": 2.0359262040109545e-07,
+          "1.0": 2.8128899950258506e-07
+        },
+        "components_above_threshold": 102,
+        "demoted_block_max_absolute_gradient": 1.3854192442690086e-07,
+        "demoted_block_target_positions": [
+          116,
+          117
+        ],
+        "fixed_threshold": 1e-08,
+        "fraction_components_above_threshold": 0.796875,
+        "gradient_infinity": 2.8128899950258506e-07,
+        "gradient_l2": 7.715433297434759e-07,
+        "maximum_component_inside_demoted_block": false,
+        "outside_block_max_absolute_gradient": 2.8128899950258506e-07,
+        "threshold_multiple": 28.128899950258507,
+        "top_components": [
+          {
+            "absolute_gradient": 2.8128899950258506e-07,
+            "gradient": -2.8128899950258506e-07,
+            "inside_demoted_block": false,
+            "pool_index": 432,
+            "rank": 1,
+            "target_position": 66
+          },
+          {
+            "absolute_gradient": 2.0609265164144974e-07,
+            "gradient": 2.0609265164144974e-07,
+            "inside_demoted_block": false,
+            "pool_index": 200,
+            "rank": 2,
+            "target_position": 84
+          },
+          {
+            "absolute_gradient": 1.9683327667717443e-07,
+            "gradient": 1.9683327667717443e-07,
+            "inside_demoted_block": false,
+            "pool_index": 531,
+            "rank": 3,
+            "target_position": 70
+          },
+          {
+            "absolute_gradient": 1.6127508262424176e-07,
+            "gradient": 1.6127508262424176e-07,
+            "inside_demoted_block": false,
+            "pool_index": 408,
+            "rank": 4,
+            "target_position": 92
+          },
+          {
+            "absolute_gradient": 1.5373039596762857e-07,
+            "gradient": 1.5373039596762857e-07,
+            "inside_demoted_block": false,
+            "pool_index": 209,
+            "rank": 5,
+            "target_position": 75
+          },
+          {
+            "absolute_gradient": 1.4764277195738812e-07,
+            "gradient": 1.4764277195738812e-07,
+            "inside_demoted_block": false,
+            "pool_index": 235,
+            "rank": 6,
+            "target_position": 98
+          },
+          {
+            "absolute_gradient": 1.409132560784357e-07,
+            "gradient": -1.409132560784357e-07,
+            "inside_demoted_block": false,
+            "pool_index": 53,
+            "rank": 7,
+            "target_position": 111
+          },
+          {
+            "absolute_gradient": 1.3854192442690086e-07,
+            "gradient": 1.3854192442690086e-07,
+            "inside_demoted_block": true,
+            "pool_index": 194,
+            "rank": 8,
+            "target_position": 117
+          },
+          {
+            "absolute_gradient": 1.2742987604455838e-07,
+            "gradient": 1.2742987604455838e-07,
+            "inside_demoted_block": false,
+            "pool_index": 355,
+            "rank": 9,
+            "target_position": 48
+          },
+          {
+            "absolute_gradient": 1.200506460701477e-07,
+            "gradient": 1.200506460701477e-07,
+            "inside_demoted_block": false,
+            "pool_index": 238,
+            "rank": 10,
+            "target_position": 29
+          }
+        ]
+      },
+      "surrogate_curvature": {
+        "condition_number_if_spd": 25224.711993457957,
+        "dimension": 128,
+        "evidence_kind": "optimizer-final-BFGS-inverse-Hessian-surrogate",
+        "gradient_squared_alignment_with_five_lowest_implied_curvature_directions": 0.00011966796394868523,
+        "implied_hessian_maximum_eigenvalue_if_spd": 6.082999957119687,
+        "implied_hessian_minimum_eigenvalue_if_spd": 0.00024115240478057056,
+        "maximum_inverse_hessian_eigenvalue": 4146.755247619944,
+        "minimum_inverse_hessian_eigenvalue": 0.1643925706146975,
+        "not_exact_physical_hessian": true,
+        "symmetric_part_positive_definite": true,
+        "symmetry_relative_residual": 4.505831301512124e-15
+      },
+      "unavailable_from_saved_s9_evidence": [
+        "per-iteration coordinate and step-norm trajectory",
+        "line-search trial points and Wolfe-condition diagnostics",
+        "exact Hessian or new Hessian-vector products at final point",
+        "proof that another optimizer or parameterization would fail"
+      ]
+    }
+  ],
+  "conclusion_scope": "Read-only diagnosis of saved S9 gradients and optimizer BFGS surrogates. It cannot distinguish representation insufficiency from optimizer or parameterization limitations, cannot certify physical Hessian curvature, and does not alter S9 acceptance.",
+  "development_only": true,
+  "diagnostic_version": "v6-s9-d-read-only-stationarity-v1",
+  "inputs": {
+    "s6_path": "artifacts/v6/s6/exact-rewrite-trace-v1.json",
+    "s6_target_state_digest": "a9a2985f370418d6d7c4f3b5e8024079bc11839647c316371c49836da5f205ae",
+    "s9_path": "artifacts/v6/s9/native-rank2-top2-result-v1.json",
+    "s9_report_digest": "26cac4ad6aae4edfe8f84d594dcd81db7ad32f964ce06819930f60a470df06fe"
+  },
+  "paper_measurement_cost": null,
+  "report_digest": "b087ea44e2c1be843417d7a31fab4557e92e7e1c39f51ee42aace7847bb1fa51",
+  "schema_version": "1.0.0",
+  "work": {
+    "circuit_recounts": 0,
+    "energy_evaluations": 0,
+    "gradient_evaluations": 0,
+    "hvp_evaluations": 0,
+    "optimizer_runs": 0,
+    "paper_measurement_cost": null,
+    "saved_array_decompositions": 2,
+    "statevector_recomputations": 0
+  }
+}

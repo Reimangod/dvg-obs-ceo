@@ -1,0 +1,58 @@
+{
+  "artifact_kind": "v6-ns0-s9-immutable-closure",
+  "closed_state": {
+    "optimizer_cap_mutable": false,
+    "protocol_family": "SPARSE_UCRY_RANK2 optimization protocol",
+    "s10_authorized": false,
+    "s6_primary_parent_mutable_by_ns": false,
+    "s8_1_candidate_queue_mutable": false,
+    "s9_outcomes_mutable": false,
+    "stationarity_threshold_mutable": false,
+    "status": "STOPPED_NOT_CERTIFIED",
+    "third_candidate_addition_allowed": false
+  },
+  "closure_digest": "84a7db309f023f917414c0e42b7cafec132c5f49657f13c9e84021aab880f66b",
+  "closure_version": "v6-ns0-s9-immutable-closure-v1",
+  "inputs": {
+    "v6_s8_1": {
+      "path": "artifacts/v6/s8.1/exploratory-top2-freeze-v1.json",
+      "semantic_digest": "0c6fdde2c10f087333bcb50a2d2cd5c8852adf71adfb48d6070bcdf6d203a11d",
+      "sha256": "06c24fe5264f88bbf5a59d2f5f4bece7d90d6a02223328cdcbef3df8d920acbe"
+    },
+    "v6_s9": {
+      "path": "artifacts/v6/s9/native-rank2-top2-result-v1.json",
+      "semantic_digest": "26cac4ad6aae4edfe8f84d594dcd81db7ad32f964ce06819930f60a470df06fe",
+      "sha256": "0384b510af1420a10d63a69567ff13b91148c3c2ecef9267b108e9572669edf1"
+    },
+    "v6_s9_d": {
+      "path": "artifacts/v6/s9-d/stationarity-diagnostic-v1.json",
+      "semantic_digest": "b087ea44e2c1be843417d7a31fab4557e92e7e1c39f51ee42aace7847bb1fa51",
+      "sha256": "5989403df2051ab3ccdc3efe37142c0ed5b516eacab025f22e12913abdb14718"
+    },
+    "v6_s9_result_audit": {
+      "path": "artifacts/v6/s9/result-audit-v1.json",
+      "semantic_digest": "33f51bee28cd94d1694cc1eb51a32bed0639c1a85f88937d92a8b8bf6105b341",
+      "sha256": "046f02409de3497e2c7b6815a245840778d34c5d1972bb8dad4f636e77a40bfe"
+    }
+  },
+  "new_namespace_contract": {
+    "does_not_reuse_as_acceptance": [
+      "S9 optimizer outcomes",
+      "S9 exploratory endpoint",
+      "historical S8 Top-1 selection"
+    ],
+    "energy_evaluation_forbidden_until": "a separately frozen NS6 primary-resource-eligible queue",
+    "protocol": "V6-NS",
+    "purpose": "primary-resource native circuit synthesis",
+    "reuses": [
+      "abstract exact generator relations",
+      "familywise semantic evidence",
+      "frozen paper-era resource counter"
+    ]
+  },
+  "paper_measurement_cost": null,
+  "s9_commit": "21654bfb1ca62fc1668dfd79defe15592c350922",
+  "s9_tag": "v6-s9-native-rank2-not-certified-v1",
+  "schema_version": "1.0.0",
+  "tag_resolved_commit": "21654bfb1ca62fc1668dfd79defe15592c350922"
+}
