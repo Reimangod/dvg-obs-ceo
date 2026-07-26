@@ -1,0 +1,41 @@
+{
+  "schema": "dvg-obs-ceo.v6.release-provenance-supplement.v1",
+  "status": "corrected",
+  "scope": "V6 NS8-NS10 follow-up release engineering only",
+  "scientific_content_commit": "38b60fd2b948a05e3bdb413b17bcf21d9db8360a",
+  "original_manifest_commit": "a1199f7184c716998d5412d556573c3465e0b3af",
+  "original_completion_tag": {
+    "name": "v6-ns8-ns10-followup-complete-v1",
+    "object": "06f40ff0cbbcaa4b664dbe09ff55ebbd0f1e6a8d",
+    "peeled_commit": "a1199f7184c716998d5412d556573c3465e0b3af"
+  },
+  "ci_fix_commit": "ed013908ee5952cdfcf022f8a98b221f15f1fd7b",
+  "submodule_commits": {
+    "vendor/ceo-adapt-vqe": "a3f89d03e6a03c89767d3cf8ee7657a57653dda0"
+  },
+  "github_ci": {
+    "workflow": "scientific-integrity",
+    "run_id": 30189248114,
+    "run_url": "https://github.com/Reimangod/dvg-obs-ceo/actions/runs/30189248114",
+    "head_sha": "ed013908ee5952cdfcf022f8a98b221f15f1fd7b",
+    "conclusion": "success",
+    "test_count": 471,
+    "local_test_count": 471
+  },
+  "corrected_defect": {
+    "incident": "docs/incidents/V6_RELEASE_LINUX_ORTHOGONAL_STATE_CI_FAILURE.md",
+    "failure_mode": "An exactly zero overlap produced an infinite diagnostic residual that canonical JSON correctly rejected.",
+    "correction": "Orthogonal finite-norm states now use a deterministic unit phase and the finite Euclidean residual.",
+    "scientific_outcome_impact": "none",
+    "artifact_impact": "No NS7-NS10 scientific artifact exercised the failing path."
+  },
+  "sha256": {
+    "artifacts/v6/release/ns8-ns10-manifest-v1.json": "c5cb153e3d3d8251d1a3226e2d6ec1fa975ad6c01c30c8c704639a6eba441aa6",
+    "docs/V6_NS8_NS10_FINAL_RESULT.md": "7b2aba81aee21c05cb9ca228e8469bf990da3a281fdde4fa52cd45e16636479d"
+  },
+  "claim_boundary": {
+    "changed": false,
+    "pra_superiority_established": false,
+    "statement": "The correction changes release portability and canonical serialization only; it does not change any V6 energy, gradient, fidelity, resource, acceptance, or rejection result."
+  }
+}
