@@ -252,6 +252,10 @@ def test_state_equivalence_is_bound_to_the_recorded_reference():
     assert accepted.status is EvidenceStatus.PASSED
     assert rejected.status is EvidenceStatus.FAILED
     assert accepted.context_scope is ContextScope.CHECKPOINT_FULL_STATE
+    assert np.isfinite(rejected.details["residual_l2"])
+    assert np.isclose(rejected.details["residual_l2"], np.sqrt(2.0))
+    assert rejected.details["global_phase_real"] == 1.0
+    assert rejected.details["global_phase_imag"] == 0.0
 
 
 def test_context_scope_cannot_be_silently_broadened():

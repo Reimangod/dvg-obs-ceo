@@ -631,8 +631,16 @@ def _global_phase_residual(
     target: ComplexArray,
 ) -> tuple[float, complex]:
     overlap = np.vdot(target.reshape(-1), source.reshape(-1))
-    if abs(overlap) <= np.finfo(np.float64).tiny:
-        return math.inf, complex(1)
+    source_norm = float(np.linalg.norm(source))
+    target_norm = float(np.linalg.norm(target))
+    phase_resolution = (
+        np.finfo(np.float64).eps * source_norm * target_norm
+    )
+    if abs(overlap) <= phase_resolution:
+        # The phase of an orthogonal or numerically orthogonal pair is
+        # undefined.  Record one canonical phase and the finite limiting
+        # residual instead of emitting infinity, which is not canonical JSON.
+        return math.hypot(source_norm, target_norm), complex(1)
     phase = overlap / abs(overlap)
     return float(np.linalg.norm(source - phase * target)), complex(phase)
 
