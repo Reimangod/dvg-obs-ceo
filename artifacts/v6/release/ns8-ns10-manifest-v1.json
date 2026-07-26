@@ -1,0 +1,121 @@
+{
+  "all_checks_passed": true,
+  "artifact_kind": "v6-ns8-ns10-release-manifest",
+  "branch": "v6-certified-rank-adaptive",
+  "checks": {
+    "ns10_audit_exists": true,
+    "ns10_audit_passed": true,
+    "ns10_freeze_exists": true,
+    "ns10_freeze_tag_resolves": true,
+    "ns10_protocol_tag_resolves": true,
+    "ns10_result_exists": true,
+    "ns10_result_tag_resolves": true,
+    "ns7_audit_exists": true,
+    "ns7_audit_passed": true,
+    "ns7_result_exists": true,
+    "ns7_result_tag_resolves": true,
+    "ns8_audit_exists": true,
+    "ns8_audit_passed": true,
+    "ns8_protocol_tag_resolves": true,
+    "ns8_result_exists": true,
+    "ns8_result_tag_resolves": true,
+    "ns9_audit_exists": true,
+    "ns9_audit_passed": true,
+    "ns9_freeze_exists": true,
+    "ns9_freeze_tag_resolves": true,
+    "ns9_protocol_tag_resolves": true,
+    "ns9_result_exists": true,
+    "ns9_result_tag_resolves": true
+  },
+  "claim_boundary": "Audited development release. H4 mechanism and a two-transition energy-resource frontier point are established. H6 recovery, cross-molecule robustness, prospective validation, matched-work global superiority, Measurement Cost, and PRA performance are not established.",
+  "environment": {
+    "dependencies": {
+      "numpy": "1.23.5",
+      "openfermion": "1.5.1",
+      "qiskit": "0.43.3",
+      "scipy": "1.10.1"
+    },
+    "platform": "macOS-26.0.1-arm64-arm-64bit",
+    "python": "3.10.19 (main, Oct 28 2025, 12:01:32) [Clang 20.1.4 ]"
+  },
+  "final_gates": {
+    "cross_molecule_robustness": "NOT_ESTABLISHED",
+    "h4_mechanism": "PASS",
+    "h4_same_source_legacy_frontier_after_two_transitions": "PASS",
+    "h6_fixed_optimizer_recovery": "FAIL",
+    "native_rank_feasibility": "PASS",
+    "pra_performance_claim": "NOT_ESTABLISHED",
+    "prospective_validation": "NOT_RUN"
+  },
+  "incidents": [
+    "docs/incidents/V6_NS7_PRE_EXECUTION_IMPORT_FAILURE.md",
+    "docs/incidents/V6_NS9_WRONG_ENTRYPOINT_PRE_EXECUTION_FAILURE.md"
+  ],
+  "manifest_digest": "1d032d37e459fc1da44c18a5341b4dc4366505705bec20432f52cec6f5608391",
+  "paper_measurement_cost": null,
+  "release_content_commit": "38b60fd2b948a05e3bdb413b17bcf21d9db8360a",
+  "schema_version": "1.0.0",
+  "stages": {
+    "ns10": {
+      "audit": "artifacts/v6/ns10/result-audit-v1.json",
+      "audit_digest": "ee17b67c5b3231dc0118cfbcf99644c95b6a908dcf864e3dcbec13d74038abd8",
+      "audit_sha256": "6bee6c6c0eab9274ecd589af65dae412dfef418eaa2035153c13677cd72d22ba",
+      "freeze": "artifacts/v6/ns10/queue-freeze-v1.json",
+      "freeze_commit": "d0f3a98",
+      "freeze_sha256": "41e461d3639e7871042b26e72cdfd28ead627dae05024f470300b208090b7d9e",
+      "freeze_tag": "v6-ns10-h6-queue-freeze-v1",
+      "freeze_tag_resolved_commit": "d0f3a98451060b8ae96afe1b66be6dd52d3aa628",
+      "protocol_commit": "4df0282",
+      "protocol_tag": "v6-ns10-h6-optimizer-protocol-v1",
+      "protocol_tag_resolved_commit": "4df0282fdb93cee9c97da6047aef7c38a68e0eb9",
+      "result": "artifacts/v6/ns10/h6-optimizer-ablation-v1.json",
+      "result_commit": "6b48ee6",
+      "result_sha256": "473718811cb83b96b3445797a4e18e8095f2f130b0fd9544943d7bd0ccdf56b8",
+      "result_tag": "v6-ns10-h6-optimizer-result-v1",
+      "result_tag_resolved_commit": "6b48ee640c20a3d1f8d21f3f89abcb28ebedca02"
+    },
+    "ns7": {
+      "audit": "artifacts/v6/ns7/result-audit-v1.json",
+      "audit_digest": "f9cc3f821373a67b493e5c4386660b0c3556ac2a0937eb390e444144b08ac75b",
+      "audit_sha256": "b2bf859f0dfc79bd09b4b7bc0e12d73d8d00921b81a2c10d739dbc6e22ff983a",
+      "execution_commit": "3a52c6f",
+      "result": "artifacts/v6/ns7/energy-certification-v1.json",
+      "result_commit": "1620b12",
+      "result_sha256": "966459d555a3fcd098d9536e4e0dac6230ac9796cf10fa2194fd89c4c6ab1b5c",
+      "result_tag": "v6-ns7-primary-native-development-v1",
+      "result_tag_resolved_commit": "1620b120da5a5b01ea5ab52eabb28282aa2c37b8"
+    },
+    "ns8": {
+      "audit": "artifacts/v6/ns8/result-audit-v1.json",
+      "audit_digest": "bdd36dfbcd1e7f5af8d66e95c91dcfbfecb0efa7de6a98b121c1851b42388bf3",
+      "audit_sha256": "d2f131308a9ab68d0416e6518f050bf5cbb3686d68bf34d7d24587c9ea389c4a",
+      "protocol_commit": "8ab3f1b",
+      "protocol_tag": "v6-ns8-followup-protocol-v1",
+      "protocol_tag_resolved_commit": "8ab3f1b4139b100650937a31aab40481c8d02a38",
+      "result": "artifacts/v6/ns8/h4-followup-audit-v1.json",
+      "result_commit": "3c24247",
+      "result_sha256": "29271fe9f470fdac1e14c802783af2d19c6d88272f622687e3e460a86bcf54e0",
+      "result_tag": "v6-ns8-h4-followup-result-v1",
+      "result_tag_resolved_commit": "3c24247ff0a8aca44880ea6d2c40524c007ef593"
+    },
+    "ns9": {
+      "audit": "artifacts/v6/ns9/result-audit-v1.json",
+      "audit_digest": "25e009aabc7ae0e8f3907be2dc7ca1c43ef39489b3e5e49132024c7695f39512",
+      "audit_sha256": "e100460bcab846ecbf6044dbb0ab9b72780fc84e2a1c225228921b0657bb30a9",
+      "freeze": "artifacts/v6/ns9/queue-freeze-v1.json",
+      "freeze_commit": "3bc0caa",
+      "freeze_sha256": "ba1ce004f73ccceeddabcc6bc2914d782efe6bc378c622762000e086bec82cd4",
+      "freeze_tag": "v6-ns9-queue-freeze-v1",
+      "freeze_tag_resolved_commit": "3bc0caa0fc9d5af95a7595bbf9161aea5f1f6df7",
+      "protocol_commit": "eb93992",
+      "protocol_tag": "v6-ns9-sequential-protocol-v1",
+      "protocol_tag_resolved_commit": "eb9399288be92eff3b0a790f265eca24f748dfab",
+      "result": "artifacts/v6/ns9/sequential-pilot-v1.json",
+      "result_commit": "16ee662",
+      "result_sha256": "df635eb8763fadd3d1aa98123745a0bf9eeccea2e7462369e2b2069f41d7b953",
+      "result_tag": "v6-ns9-h4-sequential-result-v1",
+      "result_tag_resolved_commit": "16ee662a1afa61c36345698cf607a555ff743de1"
+    }
+  },
+  "version": "v6-ns8-ns10-release-manifest-v1"
+}
