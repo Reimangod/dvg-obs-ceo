@@ -1,0 +1,42 @@
+{
+  "schema": "dvg-obs-ceo.v6_1.release.negative-result-manifest.v1",
+  "decision": "NO_GO_MECHANISM_NOT_SEPARATED",
+  "completed_stages": ["T0", "T1", "T2", "FINAL_AUDIT"],
+  "not_authorized_stages": {
+    "T3": "T2 gate failed",
+    "T4": "T2 gate failed",
+    "T5": "T2 gate failed before prospective selector validation",
+    "T6_performance": "T2 gate failed before prospective selector validation"
+  },
+  "parent_release_tag": "v6-ns8-ns10-followup-complete-v1.1",
+  "frozen_tags": [
+    "v6.1-t0-tangent-protocol-v1",
+    "v6.1-t1-tangent-kernel-v1",
+    "v6.1-t2-runner-freeze-v1",
+    "v6.1-t2-runner-freeze-v1.1",
+    "v6.1-t2-runner-freeze-v1.2",
+    "v6.1-t2-runner-freeze-v1.3"
+  ],
+  "execution_commit": "9a7215541291002424c89ca193c1715cf1006d7f",
+  "input_and_result_sha256": {
+    "artifacts/v6_1/t0/protocol-v1.json": "2585b1684e52e56e76b35d00fce99f27826732fc46d1c8a0c6162b1136892be6",
+    "artifacts/v6_1/t2/mechanism-audit-v1.json": "45ba12e2beca11080fa634d11a74027087a348fc8cddd9eb399ef330d3a06660",
+    "docs/V6_1_TANGENT_CERTIFIED_PLAN.md": "895a36ed25b45b3db5b49fd72e759518a5ebe0751f6fbfc349c8c53c8cf3b525"
+  },
+  "observed": {
+    "accepted_count": 5,
+    "rejected_count": 5,
+    "maximum_accepted_rho": 6.1363436371616295e-15,
+    "minimum_rejected_rho": 2.113856050912404e-15,
+    "separation_ratio": 0.34448136804316415,
+    "statevector_evaluations": 1532
+  },
+  "integrity": {
+    "thresholds_changed_after_outcome": false,
+    "records_excluded_after_outcome": false,
+    "fci_used": false,
+    "v6_artifacts_overwritten": false,
+    "partial_artifact_from_failed_runs": false
+  },
+  "claim_boundary": "Negative retrospective mechanism result only; no selector, performance, generalization, or CEO* superiority claim."
+}
