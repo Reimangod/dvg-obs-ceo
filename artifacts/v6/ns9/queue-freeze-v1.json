@@ -1,0 +1,256 @@
+{
+  "artifact_kind": "v6-ns9-h4-queue-freeze",
+  "creation_commit": "2ff1f29c713de551a1f6468dda76cc4663945ea4",
+  "development_only": true,
+  "entry_boundary": {
+    "ns7_mechanism_certified": true,
+    "ns8_same_source_frontier_addition": false,
+    "reason_to_run_despite_dominated_roots": "Bounded test of whether a second native rank transition certifies and changes the cumulative frontier."
+  },
+  "freeze_digest": "a46e41656cfa0b446506c423cee1b6f0891209fa4177a92f8e2d90d7b9a4b2b6",
+  "freeze_version": "v6-ns9-h4-two-round-freeze-v1",
+  "inputs": {
+    "ns1": {
+      "path": "artifacts/v6/ns1/target-family-registry-v1.json",
+      "sha256": "0d08bf6dde167f5007327719721befd5ac5845bf2379ac0c1fa718b73c324fa2"
+    },
+    "ns7": {
+      "path": "artifacts/v6/ns7/energy-certification-v1.json",
+      "report_digest": "4a5d47ffd27b6310c356611765e9613d9e40603a471ca681ea6b8a03af2825ec",
+      "sha256": "966459d555a3fcd098d9536e4e0dac6230ac9796cf10fa2194fd89c4c6ab1b5c"
+    },
+    "ns8": {
+      "path": "artifacts/v6/ns8/h4-followup-audit-v1.json",
+      "report_digest": "30f644b4138d7a9b61ab419037d9106ed08247eda9286212781ca5ddced2dbae",
+      "sha256": "29271fe9f470fdac1e14c802783af2d19c6d88272f622687e3e460a86bcf54e0"
+    }
+  },
+  "protocol": {
+    "energy_budget_hartree": 0.0001,
+    "fallback": null,
+    "fci_or_chemical_accuracy_used": false,
+    "gradient_tolerance": 1e-08,
+    "initial_inverse_hessian": "identity",
+    "initialization": "euclidean-projection-of-accepted-root",
+    "maximum_iterations_per_attempt": 200,
+    "outcomes_may_change_queue": false,
+    "paper_measurement_cost": null,
+    "stationarity_tolerance": 1e-08,
+    "work_cap": {
+      "exact_attempts": 4,
+      "finite_difference_energy_evaluations": 40,
+      "full_resource_recounts": 4,
+      "optimizer_energy_evaluations": 820,
+      "optimizer_gradient_vector_evaluations": 820,
+      "optimizer_iterations": 800
+    }
+  },
+  "queue": [
+    {
+      "child_block_id": "block-v1:faf8b2a4a196a6aa523d5bde7bdfd3f91986133c78fea7f3a1ef71b02b3bdce1",
+      "child_family_id": "v6-ns-family:00630228cc0ccc0f76bc2cd500b96ec1cd2b487a78f04f69996079e0702726fa",
+      "child_normal": [
+        1,
+        1,
+        -1
+      ],
+      "child_pool_indices": [
+        65,
+        66,
+        67
+      ],
+      "context_id": "h4-1.5-late",
+      "queue_id": "v6-ns9-queue:f6e7273b149d0dcd97f9a1d72cdba9a2d678537cd8bf48157950580e9e33f4a8",
+      "root_attempt_id": "v6-ns7-attempt:7795aba658cc0d70219f0adb33d21fe6a35fd833ef77825c1f50dc2e3b8554fa",
+      "root_block_id": "block-v1:0ba5fcd7367a0e4e30973e567b884037f64b4cc15a5d41a67ec9c8cc198f1562",
+      "root_family_id": "v6-ns-family:00630228cc0ccc0f76bc2cd500b96ec1cd2b487a78f04f69996079e0702726fa",
+      "root_normal": [
+        1,
+        1,
+        -1
+      ],
+      "root_source_coordinates_float64_hex": [
+        "bfd7271ede4ae28f",
+        "bfbdc68c85760b5d",
+        "3fca67e7efe148f7",
+        "3fcaeb5f323824c6",
+        "bfbd6d7c69504b2b",
+        "bfba152f7f663ab6",
+        "bfc1677adbd7be03",
+        "3fd7b4246ca487b8",
+        "bfc4a253b1563175",
+        "3fc8f9903034f14b",
+        "3fb11987931054bd",
+        "bfd74988a4ed8e31",
+        "3fdb63a2f45646ff",
+        "bfa4d9e56b1fb42a",
+        "bfb182bd67717e0a",
+        "3fea22864f03f585",
+        "3fe8293feba7eeeb",
+        "3fa5535ebfba1fe9",
+        "3f8c959f96e56b63",
+        "bf756e77610b6691",
+        "3fa20e3ba0baeea6",
+        "3f92a005e393e6fa",
+        "3f917339d8096460",
+        "3fa2099fddcea5ad"
+      ],
+      "round_index": 2
+    },
+    {
+      "child_block_id": "block-v1:faf8b2a4a196a6aa523d5bde7bdfd3f91986133c78fea7f3a1ef71b02b3bdce1",
+      "child_family_id": "v6-ns-family:1bd5552f1cc2df503c3111f459cc1ce8c5ef3d58e4de413675f78a44fe72176b",
+      "child_normal": [
+        1,
+        1,
+        1
+      ],
+      "child_pool_indices": [
+        65,
+        66,
+        67
+      ],
+      "context_id": "h4-1.5-late",
+      "queue_id": "v6-ns9-queue:6a2ea44461db1b8f6c87ebf9eca8eb0f29942f5040076a815c5a96ec8130aa09",
+      "root_attempt_id": "v6-ns7-attempt:7795aba658cc0d70219f0adb33d21fe6a35fd833ef77825c1f50dc2e3b8554fa",
+      "root_block_id": "block-v1:0ba5fcd7367a0e4e30973e567b884037f64b4cc15a5d41a67ec9c8cc198f1562",
+      "root_family_id": "v6-ns-family:00630228cc0ccc0f76bc2cd500b96ec1cd2b487a78f04f69996079e0702726fa",
+      "root_normal": [
+        1,
+        1,
+        -1
+      ],
+      "root_source_coordinates_float64_hex": [
+        "bfd7271ede4ae28f",
+        "bfbdc68c85760b5d",
+        "3fca67e7efe148f7",
+        "3fcaeb5f323824c6",
+        "bfbd6d7c69504b2b",
+        "bfba152f7f663ab6",
+        "bfc1677adbd7be03",
+        "3fd7b4246ca487b8",
+        "bfc4a253b1563175",
+        "3fc8f9903034f14b",
+        "3fb11987931054bd",
+        "bfd74988a4ed8e31",
+        "3fdb63a2f45646ff",
+        "bfa4d9e56b1fb42a",
+        "bfb182bd67717e0a",
+        "3fea22864f03f585",
+        "3fe8293feba7eeeb",
+        "3fa5535ebfba1fe9",
+        "3f8c959f96e56b63",
+        "bf756e77610b6691",
+        "3fa20e3ba0baeea6",
+        "3f92a005e393e6fa",
+        "3f917339d8096460",
+        "3fa2099fddcea5ad"
+      ],
+      "round_index": 2
+    },
+    {
+      "child_block_id": "block-v1:faf8b2a4a196a6aa523d5bde7bdfd3f91986133c78fea7f3a1ef71b02b3bdce1",
+      "child_family_id": "v6-ns-family:00630228cc0ccc0f76bc2cd500b96ec1cd2b487a78f04f69996079e0702726fa",
+      "child_normal": [
+        1,
+        1,
+        -1
+      ],
+      "child_pool_indices": [
+        65,
+        66,
+        67
+      ],
+      "context_id": "h4-1.5-late",
+      "queue_id": "v6-ns9-queue:7971a5ebb0907576d4874b09685bffd95c60b088cc6dcc173c0910c85d2b6e64",
+      "root_attempt_id": "v6-ns7-attempt:7736056168558c298c1abe20b2b4ba97a104eba0d08ee7d6aba2f9568885625d",
+      "root_block_id": "block-v1:0ba5fcd7367a0e4e30973e567b884037f64b4cc15a5d41a67ec9c8cc198f1562",
+      "root_family_id": "v6-ns-family:1bd5552f1cc2df503c3111f459cc1ce8c5ef3d58e4de413675f78a44fe72176b",
+      "root_normal": [
+        1,
+        1,
+        1
+      ],
+      "root_source_coordinates_float64_hex": [
+        "bfd715de59a1d604",
+        "bfbe140b49c6270e",
+        "3fcaf8512c27a8a8",
+        "3fca1c7730b8aead",
+        "bfc02a80d9423a19",
+        "bfb71c0d711ba1a3",
+        "bfc1812466fbdc46",
+        "3fd6cca0bfb94ca3",
+        "bfc4a7dbb890fe3c",
+        "3fc9d80c52757064",
+        "3fb205720f32590e",
+        "bfd6e69a10b2530d",
+        "3fda95fdf68ba70b",
+        "bfa59a437d4c28a8",
+        "bfb1974854321d29",
+        "3fea257d1346aeab",
+        "3fe82af83875f060",
+        "3fa553ca9bd29361",
+        "3f9194486e3f5a03",
+        "bf7dd1aa1c7b5baf",
+        "3fa0cabf4a6f6a80",
+        "3f882685e412f62c",
+        "bfa6cd0ce9c12a59",
+        "3fa0c36b70bc6cce"
+      ],
+      "round_index": 2
+    },
+    {
+      "child_block_id": "block-v1:faf8b2a4a196a6aa523d5bde7bdfd3f91986133c78fea7f3a1ef71b02b3bdce1",
+      "child_family_id": "v6-ns-family:1bd5552f1cc2df503c3111f459cc1ce8c5ef3d58e4de413675f78a44fe72176b",
+      "child_normal": [
+        1,
+        1,
+        1
+      ],
+      "child_pool_indices": [
+        65,
+        66,
+        67
+      ],
+      "context_id": "h4-1.5-late",
+      "queue_id": "v6-ns9-queue:7f2095764e7b4d8431a2302fc866a481799f9831e9e87a9ae86715ee8051a424",
+      "root_attempt_id": "v6-ns7-attempt:7736056168558c298c1abe20b2b4ba97a104eba0d08ee7d6aba2f9568885625d",
+      "root_block_id": "block-v1:0ba5fcd7367a0e4e30973e567b884037f64b4cc15a5d41a67ec9c8cc198f1562",
+      "root_family_id": "v6-ns-family:1bd5552f1cc2df503c3111f459cc1ce8c5ef3d58e4de413675f78a44fe72176b",
+      "root_normal": [
+        1,
+        1,
+        1
+      ],
+      "root_source_coordinates_float64_hex": [
+        "bfd715de59a1d604",
+        "bfbe140b49c6270e",
+        "3fcaf8512c27a8a8",
+        "3fca1c7730b8aead",
+        "bfc02a80d9423a19",
+        "bfb71c0d711ba1a3",
+        "bfc1812466fbdc46",
+        "3fd6cca0bfb94ca3",
+        "bfc4a7dbb890fe3c",
+        "3fc9d80c52757064",
+        "3fb205720f32590e",
+        "bfd6e69a10b2530d",
+        "3fda95fdf68ba70b",
+        "bfa59a437d4c28a8",
+        "bfb1974854321d29",
+        "3fea257d1346aeab",
+        "3fe82af83875f060",
+        "3fa553ca9bd29361",
+        "3f9194486e3f5a03",
+        "bf7dd1aa1c7b5baf",
+        "3fa0cabf4a6f6a80",
+        "3f882685e412f62c",
+        "bfa6cd0ce9c12a59",
+        "3fa0c36b70bc6cce"
+      ],
+      "round_index": 2
+    }
+  ],
+  "queue_count": 4,
+  "schema_version": "1.0.0"
+}
