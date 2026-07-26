@@ -104,6 +104,7 @@ dvg-obs-v6-ns8-followup-audit = "dvg_obs_ceo.v6_rank_adaptive.ns8_followup_audit
 dvg-obs-v6-ns8-result-audit = "dvg_obs_ceo.v6_rank_adaptive.ns8_result_audit:main"
 dvg-obs-v6-ns9-freeze = "dvg_obs_ceo.v6_rank_adaptive.ns9_sequential_pilot:freeze_main"
 dvg-obs-v6-ns9-pilot = "dvg_obs_ceo.v6_rank_adaptive.ns9_sequential_pilot:main"
+dvg-obs-v6-ns9-result-audit = "dvg_obs_ceo.v6_rank_adaptive.ns9_result_audit:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

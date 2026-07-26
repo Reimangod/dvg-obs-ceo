@@ -1,0 +1,29 @@
+{
+  "artifact_kind": "v6-ns9-independent-result-audit",
+  "audit_digest": "25e009aabc7ae0e8f3907be2dc7ca1c43ef39489b3e5e49132024c7695f39512",
+  "audit_version": "v6-ns9-independent-result-audit-v1",
+  "checks": {
+    "acceptance_conjunction": true,
+    "accepted_stationary_and_inside_budget": true,
+    "exactly_four_attempts": true,
+    "freeze_digest": true,
+    "freeze_sha256": true,
+    "frontier_gate_reconciles": true,
+    "full_resource_gain": true,
+    "h6_ablation_authorized_but_pra_not_claimed": true,
+    "queue_order_preserved": true,
+    "report_digest": true,
+    "roots_immutable": true,
+    "runner_version": true,
+    "semantic_native_equivalence": true,
+    "single_rejection_is_kkt_and_optimizer": true,
+    "source_state_preserved_for_accepted": true,
+    "three_accept_one_reject": true,
+    "work_caps_reconcile": true
+  },
+  "claim_boundary": "Independent queue, arithmetic, certificate, resource, work-cap, and frontier reconciliation; quantum kernels are not rerun.",
+  "passed": true,
+  "result_path": "artifacts/v6/ns9/sequential-pilot-v1.json",
+  "result_sha256": "df635eb8763fadd3d1aa98123745a0bf9eeccea2e7462369e2b2069f41d7b953",
+  "schema_version": "1.0.0"
+}
