@@ -337,6 +337,7 @@ def build_report() -> dict[str, Any]:
             ratio >= gate["minimum_separation_ratio"]
         ),
     }
+    checks = {name: bool(value) for name, value in checks.items()}
     decision = (
         "GO_DEVELOPMENT_MECHANISM_SEPARATED"
         if all(checks.values())
