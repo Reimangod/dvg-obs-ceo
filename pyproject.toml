@@ -101,6 +101,7 @@ dvg-obs-v6-native-synthesis = "dvg_obs_ceo.v6_rank_adaptive.native_synthesis_pip
 dvg-obs-v6-ns7-energy-certification = "dvg_obs_ceo.v6_rank_adaptive.ns7_energy_certification:main"
 dvg-obs-v6-ns7-result-audit = "dvg_obs_ceo.v6_rank_adaptive.ns7_result_audit:main"
 dvg-obs-v6-ns8-followup-audit = "dvg_obs_ceo.v6_rank_adaptive.ns8_followup_audit:main"
+dvg-obs-v6-ns8-result-audit = "dvg_obs_ceo.v6_rank_adaptive.ns8_result_audit:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

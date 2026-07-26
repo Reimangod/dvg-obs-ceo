@@ -1,0 +1,27 @@
+{
+  "artifact_kind": "v6-ns8-independent-result-audit",
+  "audit_digest": "bdd36dfbcd1e7f5af8d66e95c91dcfbfecb0efa7de6a98b121c1851b42388bf3",
+  "audit_version": "v6-ns8-independent-result-audit-v1",
+  "checks": {
+    "all_fd_stationarity_checks_inside_threshold": true,
+    "candidate_candidate_fidelity": true,
+    "development_only": true,
+    "full_fd_includes_analytic_maximum": true,
+    "input_hashes": true,
+    "matched_work_superiority_not_claimed": true,
+    "ns7_decisions_not_modified": true,
+    "report_digest": true,
+    "runner_version": true,
+    "same_source_checks": true,
+    "source_candidate_fidelity": true,
+    "symmetry_preserved": true,
+    "two_accepted_candidates_audited": true,
+    "v5_round1_dominates_both_v6_points": true,
+    "v6_frontier_addition_is_false": true
+  },
+  "claim_boundary": "Independent arithmetic, identity, symmetry, full-gradient, and frontier reconciliation. Quantum kernels are not rerun here.",
+  "passed": true,
+  "result_path": "artifacts/v6/ns8/h4-followup-audit-v1.json",
+  "result_sha256": "29271fe9f470fdac1e14c802783af2d19c6d88272f622687e3e460a86bcf54e0",
+  "schema_version": "1.0.0"
+}

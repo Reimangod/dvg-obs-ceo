@@ -1,0 +1,532 @@
+{
+  "artifact_kind": "v6-ns8-h4-mechanism-frontier-audit",
+  "audit_version": "v6-ns8-h4-mechanism-frontier-audit-v1",
+  "claim_boundary": "Outcome-aware development mechanism and same-source historical frontier audit. NS7 decisions are immutable; no prospective, cross-molecule, matched-work superiority, or PRA claim.",
+  "development_only": true,
+  "execution": {
+    "dependencies": {
+      "numpy": "1.23.5",
+      "openfermion": "1.5.1",
+      "scipy": "1.10.1"
+    },
+    "git_commit": "8ab3f1b4139b100650937a31aab40481c8d02a38",
+    "git_describe": "v6-ns8-followup-protocol-v1",
+    "platform": "macOS-26.0.1-arm64-arm-64bit",
+    "python": "3.10.19 (main, Oct 28 2025, 12:01:32) [Clang 20.1.4 ]",
+    "threads": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    }
+  },
+  "frontier_audit": {
+    "energy_equivalence_tolerance_hartree": 1e-12,
+    "legacy_comparator_availability": {
+      "same_structure_reoptimization": "SOURCE_ALREADY_RECONSTRUCTED_AND_STATIONARY; NO_SEPARATE_MATCHED-WORK RUN",
+      "standalone_magnitude_late_h4_endpoint": "UNAVAILABLE",
+      "v4.1_exact_late_h4_endpoint": "UNAVAILABLE",
+      "v5.1_exact_fusion_late_h4_endpoint": "UNAVAILABLE",
+      "v5_round1_and_endpoint": "AVAILABLE_L5"
+    },
+    "matched_work_limitation": "Legacy and V6 work fields are reconstructible but were not generated under one prospectively shared work envelope; no matched-work superiority claim is made.",
+    "matched_work_superiority_established": false,
+    "ns7_adds_same_source_energy_resource_pareto_point": false,
+    "paper_measurement_cost": null,
+    "points": [
+      {
+        "dominated_by": [
+          "v6-ns7-attempt:7795aba658cc0d70219f0adb33d21fe6a35fd833ef77825c1f50dc2e3b8554fa",
+          "v6-ns7-attempt:7736056168558c298c1abe20b2b4ba97a104eba0d08ee7d6aba2f9568885625d",
+          "candidate-v5:31092f298a433f060f89c505ee9b2d358048e029510a739835ed755e0cb02b9a"
+        ],
+        "energy_loss_hartree": 0.0,
+        "method": "CEO* source / same-structure control",
+        "pareto_nondominated": false,
+        "point_id": "ceo-star-source",
+        "resources": {
+          "cnot_count": 158,
+          "cnot_depth": 73,
+          "logical_block_count": 14,
+          "parameter_count": 24,
+          "total_depth": 270
+        },
+        "work": {
+          "energy_evaluations": 0,
+          "exact_vqe_attempts": 0,
+          "full_resource_recounts": 0,
+          "gradient_component_equivalents": 0,
+          "gradient_vector_evaluations": 0
+        }
+      },
+      {
+        "dominated_by": [
+          "candidate-v5:31092f298a433f060f89c505ee9b2d358048e029510a739835ed755e0cb02b9a"
+        ],
+        "energy_loss_hartree": -8.881784197001252e-16,
+        "method": "V6 NS7 native rank-2",
+        "normal": [
+          1,
+          1,
+          -1
+        ],
+        "pareto_nondominated": false,
+        "point_id": "v6-ns7-attempt:7795aba658cc0d70219f0adb33d21fe6a35fd833ef77825c1f50dc2e3b8554fa",
+        "resources": {
+          "cnot_count": 156,
+          "cnot_depth": 73,
+          "logical_block_count": 14,
+          "parameter_count": 23,
+          "total_depth": 266
+        },
+        "work": {
+          "energy_evaluations": 64,
+          "exact_vqe_attempts": 1,
+          "full_resource_recounts": 1,
+          "gradient_component_equivalents": 1196,
+          "gradient_vector_evaluations": 52
+        }
+      },
+      {
+        "dominated_by": [
+          "candidate-v5:31092f298a433f060f89c505ee9b2d358048e029510a739835ed755e0cb02b9a"
+        ],
+        "energy_loss_hartree": -2.220446049250313e-16,
+        "method": "V6 NS7 native rank-2",
+        "normal": [
+          1,
+          1,
+          1
+        ],
+        "pareto_nondominated": false,
+        "point_id": "v6-ns7-attempt:7736056168558c298c1abe20b2b4ba97a104eba0d08ee7d6aba2f9568885625d",
+        "resources": {
+          "cnot_count": 156,
+          "cnot_depth": 73,
+          "logical_block_count": 14,
+          "parameter_count": 23,
+          "total_depth": 266
+        },
+        "work": {
+          "energy_evaluations": 66,
+          "exact_vqe_attempts": 1,
+          "full_resource_recounts": 1,
+          "gradient_component_equivalents": 1242,
+          "gradient_vector_evaluations": 54
+        }
+      },
+      {
+        "dominated_by": [],
+        "energy_loss_hartree": 4.440892098500626e-16,
+        "method": "V5 round-1 intermediate",
+        "pareto_nondominated": true,
+        "point_id": "candidate-v5:31092f298a433f060f89c505ee9b2d358048e029510a739835ed755e0cb02b9a",
+        "resources": {
+          "cnot_count": 145,
+          "cnot_depth": 73,
+          "logical_block_count": 13,
+          "parameter_count": 21,
+          "total_depth": 246
+        },
+        "work": {
+          "accepted_rounds": 1,
+          "analytic_hvp_calls": 0,
+          "attempted_rounds": 1,
+          "energy_evaluations": 35,
+          "exact_vqe_attempts": 1,
+          "expanded_search_states": 62,
+          "finite_difference_hvp_calls": 0,
+          "full_resource_recounts": 65,
+          "gradient_component_equivalents": 717,
+          "gradient_vector_evaluations": 34,
+          "optimizer_iterations": 30,
+          "optimizer_starts": 1,
+          "quadratic_solve_iterations": 0,
+          "statevector_evaluations": 5
+        }
+      },
+      {
+        "dominated_by": [],
+        "energy_loss_hartree": 5.1901648685959145e-05,
+        "method": "V5 two-round endpoint",
+        "pareto_nondominated": true,
+        "point_id": "candidate-v5:cd30dae115ab354bd42dabe09bef079c26de9a8dd7457a13d60ea42173608788",
+        "resources": {
+          "cnot_count": 132,
+          "cnot_depth": 60,
+          "logical_block_count": 12,
+          "parameter_count": 18,
+          "total_depth": 222
+        },
+        "work": {
+          "accepted_rounds": 2,
+          "analytic_hvp_calls": 0,
+          "attempted_rounds": 2,
+          "energy_evaluations": 53,
+          "exact_vqe_attempts": 2,
+          "expanded_search_states": 111,
+          "finite_difference_hvp_calls": 0,
+          "full_resource_recounts": 117,
+          "gradient_component_equivalents": 1026,
+          "gradient_vector_evaluations": 51,
+          "optimizer_iterations": 43,
+          "optimizer_starts": 2,
+          "quadratic_solve_iterations": 0,
+          "statevector_evaluations": 10
+        }
+      }
+    ],
+    "same_source_checks": {
+      "energy": true,
+      "resources": true,
+      "state_digest": true
+    }
+  },
+  "inputs": {
+    "ns7": {
+      "path": "artifacts/v6/ns7/energy-certification-v1.json",
+      "report_digest": "4a5d47ffd27b6310c356611765e9613d9e40603a471ca681ea6b8a03af2825ec",
+      "sha256": "966459d555a3fcd098d9536e4e0dac6230ac9796cf10fa2194fd89c4c6ab1b5c"
+    },
+    "v5_h4": {
+      "path": "artifacts/v5/s8/h4-width1-recycled-v1-1/summary.json",
+      "sha256": "0198844c1c62376f46d42dd0627e469a8c541862cca7fb86404d581ad8237f07"
+    }
+  },
+  "mechanism_audit": {
+    "acceptance_decisions_modified": false,
+    "candidate_candidate_state_fidelity": 1.0,
+    "candidates": [
+      {
+        "attempt_id": "v6-ns7-attempt:7795aba658cc0d70219f0adb33d21fe6a35fd833ef77825c1f50dc2e3b8554fa",
+        "candidate_energy_hartree": -1.9961503255188098,
+        "family_id": "v6-ns-family:00630228cc0ccc0f76bc2cd500b96ec1cd2b487a78f04f69996079e0702726fa",
+        "gradient": {
+          "analytic_infinity": 6.9367295640193616e-09,
+          "dimension": 23,
+          "finite_difference": {
+            "1.0e-06": {
+              "analytic_maximum_component": 6.9367295640193616e-09,
+              "analytic_maximum_component_index": 10,
+              "finite_difference_at_analytic_maximum": 7.105427357601002e-09,
+              "gradient_infinity": 7.105427357601002e-09,
+              "maximum_absolute_error": 7.910948532537099e-10
+            },
+            "2.0e-06": {
+              "analytic_maximum_component": 6.9367295640193616e-09,
+              "analytic_maximum_component_index": 10,
+              "finite_difference_at_analytic_maximum": 7.105427357601002e-09,
+              "gradient_infinity": 7.105427357601002e-09,
+              "maximum_absolute_error": 3.2807587896366286e-10
+            },
+            "5.0e-07": {
+              "analytic_maximum_component": 6.9367295640193616e-09,
+              "analytic_maximum_component_index": 10,
+              "finite_difference_at_analytic_maximum": 6.8833827526759706e-09,
+              "gradient_infinity": 6.8833827526759706e-09,
+              "maximum_absolute_error": 1.896719711846906e-09
+            }
+          },
+          "maximum_component_index": 10
+        },
+        "hessian_diagnostic": {
+          "absolute_condition_above_1e-10": 13728188205.394386,
+          "claim_boundary": "Numerical target-coordinate Hessian diagnostic; not an exact physical Hessian proof.",
+          "maximum_eigenvalue": 3.3493229156325284,
+          "method": "centered-difference-of-analytic-gradient",
+          "minimum_eigenvalue": -8.799032314726464e-10,
+          "near_zero_eigenvalue_count": 4,
+          "negative_eigenvalue_count": 0,
+          "step": 0.0001,
+          "symmetry_residual_infinity": 2.027917778146815e-09
+        },
+        "leading_determinants": [
+          {
+            "amplitude_imag": 0.0,
+            "amplitude_real": 0.8658000908662491,
+            "basis_index": 240,
+            "bitstring": "11110000",
+            "probability": 0.7496097973440052
+          },
+          {
+            "amplitude_imag": 0.0,
+            "amplitude_real": -0.3260783734070509,
+            "basis_index": 204,
+            "bitstring": "11001100",
+            "probability": 0.10632710560378814
+          },
+          {
+            "amplitude_imag": 0.0,
+            "amplitude_real": 0.17535025084848044,
+            "basis_index": 105,
+            "bitstring": "01101001",
+            "probability": 0.030747710472625013
+          },
+          {
+            "amplitude_imag": 0.0,
+            "amplitude_real": 0.17535024938384972,
+            "basis_index": 150,
+            "bitstring": "10010110",
+            "probability": 0.030747709958978287
+          },
+          {
+            "amplitude_imag": 0.0,
+            "amplitude_real": -0.1400962257149242,
+            "basis_index": 51,
+            "bitstring": "00110011",
+            "probability": 0.019626952459566988
+          },
+          {
+            "amplitude_imag": 0.0,
+            "amplitude_real": -0.12248779474623246,
+            "basis_index": 102,
+            "bitstring": "01100110",
+            "probability": 0.015003259861795173
+          },
+          {
+            "amplitude_imag": 0.0,
+            "amplitude_real": -0.12248779229799676,
+            "basis_index": 153,
+            "bitstring": "10011001",
+            "probability": 0.015003259262037195
+          },
+          {
+            "amplitude_imag": 0.0,
+            "amplitude_real": 0.10383683024316777,
+            "basis_index": 15,
+            "bitstring": "00001111",
+            "probability": 0.01078208731494844
+          }
+        ],
+        "normal": [
+          1,
+          1,
+          -1
+        ],
+        "source_candidate_state_fidelity": 0.9999999999999998,
+        "symmetries": {
+          "particle_number": {
+            "expectation": 4.0,
+            "variance": 0.0
+          },
+          "spin_squared": {
+            "expectation": 3.2770052834075975e-16,
+            "variance": 1.1232624928600964e-15
+          },
+          "spin_z": {
+            "expectation": 0.0,
+            "variance": 0.0
+          }
+        }
+      },
+      {
+        "attempt_id": "v6-ns7-attempt:7736056168558c298c1abe20b2b4ba97a104eba0d08ee7d6aba2f9568885625d",
+        "candidate_energy_hartree": -1.9961503255188089,
+        "family_id": "v6-ns-family:1bd5552f1cc2df503c3111f459cc1ce8c5ef3d58e4de413675f78a44fe72176b",
+        "gradient": {
+          "analytic_infinity": 9.313722333301189e-09,
+          "dimension": 23,
+          "finite_difference": {
+            "1.0e-06": {
+              "analytic_maximum_component": -9.313722333301189e-09,
+              "analytic_maximum_component_index": 14,
+              "finite_difference_at_analytic_maximum": -9.43689570931383e-09,
+              "gradient_infinity": 9.43689570931383e-09,
+              "maximum_absolute_error": 5.567469818501536e-10
+            },
+            "2.0e-06": {
+              "analytic_maximum_component": -9.313722333301189e-09,
+              "analytic_maximum_component_index": 14,
+              "finite_difference_at_analytic_maximum": -9.325873406851315e-09,
+              "gradient_infinity": 9.325873406851315e-09,
+              "maximum_absolute_error": 4.697103817008497e-10
+            },
+            "5.0e-07": {
+              "analytic_maximum_component": -9.313722333301189e-09,
+              "analytic_maximum_component_index": 14,
+              "finite_difference_at_analytic_maximum": -9.992007221626409e-09,
+              "gradient_infinity": 9.992007221626409e-09,
+              "maximum_absolute_error": 2.274780808164678e-09
+            }
+          },
+          "maximum_component_index": 14
+        },
+        "hessian_diagnostic": {
+          "absolute_condition_above_1e-10": 26943205411.95001,
+          "claim_boundary": "Numerical target-coordinate Hessian diagnostic; not an exact physical Hessian proof.",
+          "maximum_eigenvalue": 3.0951628825436686,
+          "method": "centered-difference-of-analytic-gradient",
+          "minimum_eigenvalue": -2.178983923768401e-09,
+          "near_zero_eigenvalue_count": 4,
+          "negative_eigenvalue_count": 0,
+          "step": 0.0001,
+          "symmetry_residual_infinity": 2.047346681077755e-09
+        },
+        "leading_determinants": [
+          {
+            "amplitude_imag": 0.0,
+            "amplitude_real": 0.8658000898163487,
+            "basis_index": 240,
+            "bitstring": "11110000",
+            "probability": 0.7496097955259975
+          },
+          {
+            "amplitude_imag": 0.0,
+            "amplitude_real": -0.32607837625929975,
+            "basis_index": 204,
+            "bitstring": "11001100",
+            "probability": 0.10632710746390146
+          },
+          {
+            "amplitude_imag": 0.0,
+            "amplitude_real": 0.1753502528705669,
+            "basis_index": 105,
+            "bitstring": "01101001",
+            "probability": 0.030747711181771758
+          },
+          {
+            "amplitude_imag": 0.0,
+            "amplitude_real": 0.1753502521108164,
+            "basis_index": 150,
+            "bitstring": "10010110",
+            "probability": 0.03074771091532687
+          },
+          {
+            "amplitude_imag": 0.0,
+            "amplitude_real": -0.14009622700021584,
+            "basis_index": 51,
+            "bitstring": "00110011",
+            "probability": 0.01962695281969601
+          },
+          {
+            "amplitude_imag": 0.0,
+            "amplitude_real": -0.12248779116831739,
+            "basis_index": 102,
+            "bitstring": "01100110",
+            "probability": 0.015003258985293332
+          },
+          {
+            "amplitude_imag": 0.0,
+            "amplitude_real": -0.12248779084498719,
+            "basis_index": 153,
+            "bitstring": "10011001",
+            "probability": 0.015003258906085329
+          },
+          {
+            "amplitude_imag": 0.0,
+            "amplitude_real": 0.10383682935030769,
+            "basis_index": 15,
+            "bitstring": "00001111",
+            "probability": 0.010782087129524921
+          }
+        ],
+        "normal": [
+          1,
+          1,
+          1
+        ],
+        "source_candidate_state_fidelity": 1.0,
+        "symmetries": {
+          "particle_number": {
+            "expectation": 4.000000000000001,
+            "variance": 0.0
+          },
+          "spin_squared": {
+            "expectation": 4.644599714441034e-16,
+            "variance": 2.47600916187162e-15
+          },
+          "spin_z": {
+            "expectation": 0.0,
+            "variance": 0.0
+          }
+        }
+      }
+    ],
+    "optimizer_trajectory": {
+      "reason": "NS7 did not record iterates; no rerun is presented as historical optimizer trajectory.",
+      "status": "UNAVAILABLE"
+    },
+    "source": {
+      "leading_determinants": [
+        {
+          "amplitude_imag": 0.0,
+          "amplitude_real": 0.8658000926879869,
+          "basis_index": 240,
+          "bitstring": "11110000",
+          "probability": 0.7496098004985267
+        },
+        {
+          "amplitude_imag": 0.0,
+          "amplitude_real": -0.3260783665640477,
+          "basis_index": 204,
+          "bitstring": "11001100",
+          "probability": 0.10632710114107746
+        },
+        {
+          "amplitude_imag": 0.0,
+          "amplitude_real": 0.17535025132394524,
+          "basis_index": 150,
+          "bitstring": "10010110",
+          "probability": 0.030747710639370762
+        },
+        {
+          "amplitude_imag": 0.0,
+          "amplitude_real": 0.17535024741157407,
+          "basis_index": 105,
+          "bitstring": "01101001",
+          "probability": 0.03074770926730024
+        },
+        {
+          "amplitude_imag": 0.0,
+          "amplitude_real": -0.1400962253218714,
+          "basis_index": 51,
+          "bitstring": "00110011",
+          "probability": 0.019626952349436563
+        },
+        {
+          "amplitude_imag": 0.0,
+          "amplitude_real": -0.12248779566787867,
+          "basis_index": 153,
+          "bitstring": "10011001",
+          "probability": 0.015003260087575996
+        },
+        {
+          "amplitude_imag": 0.0,
+          "amplitude_real": -0.12248779515295485,
+          "basis_index": 102,
+          "bitstring": "01100110",
+          "probability": 0.01500325996143223
+        },
+        {
+          "amplitude_imag": 0.0,
+          "amplitude_real": 0.1038368297011638,
+          "basis_index": 15,
+          "bitstring": "00001111",
+          "probability": 0.010782087202388492
+        }
+      ],
+      "state_sha256": "d8d48b9c4a3248da57eecf747b77b856b647ecc046b62109a786f6e779c6de76",
+      "symmetries": {
+        "particle_number": {
+          "expectation": 4.000000000000002,
+          "variance": 0.0
+        },
+        "spin_squared": {
+          "expectation": 2.9684777773577247e-16,
+          "variance": 7.835299109372341e-16
+        },
+        "spin_z": {
+          "expectation": 0.0,
+          "variance": 0.0
+        }
+      }
+    },
+    "work": {
+      "energy_evaluations": 278,
+      "gradient_vector_evaluations": 94,
+      "observable_expectations": 9,
+      "statevector_evaluations": 3
+    }
+  },
+  "report_digest": "30f644b4138d7a9b61ab419037d9106ed08247eda9286212781ca5ddced2dbae",
+  "schema_version": "1.0.0"
+}
