@@ -49,6 +49,13 @@ class TangentMechanismAuditError(RuntimeError):
     """Raised when the frozen T2 audit cannot be certified."""
 
 
+def _stage_authorization(decision: str) -> dict[str, bool]:
+    return {
+        "t3_t4": decision == "GO_DEVELOPMENT_MECHANISM_SEPARATED",
+        "t5_t6_performance": False,
+    }
+
+
 def _git(*args: str) -> str:
     return subprocess.run(
         ["git", *args],
@@ -356,10 +363,7 @@ def build_report() -> dict[str, Any]:
                 item["statevector_evaluations"] for item in records
             ),
         },
-        "authorization": {
-            "t3_t4": decision == "GO_DEVELOPMENT_MECHANISM_SEPARATED",
-            "t5_t6_performance": false,
-        },
+        "authorization": _stage_authorization(decision),
         "claim_boundary": (
             "Retrospective, outcome-aware development diagnostic only; "
             "not prospective selector validation or performance evidence."
