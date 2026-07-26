@@ -1,0 +1,122 @@
+{
+  "artifact_kind": "v6-ns10-h6-optimizer-ablation-freeze",
+  "creation_commit": "4df0282fdb93cee9c97da6047aef7c38a68e0eb9",
+  "development_only": true,
+  "freeze_digest": "e25bad3458cc69ccba1dde619c9dfad6e6548559d2fcbb41b589ea455aa61f67",
+  "freeze_version": "v6-ns10-h6-trust-region-freeze-v1",
+  "inputs": {
+    "ns1": {
+      "path": "artifacts/v6/ns1/target-family-registry-v1.json",
+      "sha256": "0d08bf6dde167f5007327719721befd5ac5845bf2379ac0c1fa718b73c324fa2"
+    },
+    "ns7": {
+      "path": "artifacts/v6/ns7/energy-certification-v1.json",
+      "sha256": "966459d555a3fcd098d9536e4e0dac6230ac9796cf10fa2194fd89c4c6ab1b5c"
+    },
+    "ns9": {
+      "path": "artifacts/v6/ns9/sequential-pilot-v1.json",
+      "sha256": "df635eb8763fadd3d1aa98123745a0bf9eeccea2e7462369e2b2069f41d7b953"
+    }
+  },
+  "protocol": {
+    "barrier_tol": 1e-12,
+    "energy_budget_hartree": 0.0001,
+    "fallback": null,
+    "fci_or_chemical_accuracy_used": false,
+    "gtol": 1e-08,
+    "hessian_update": "scipy-BFGS-init-scale-1.0",
+    "initialization": "same-euclidean-projection-as-ns7",
+    "maximum_iterations": 200,
+    "optimizer": "scipy-trust-constr",
+    "outcomes_may_change_queue": false,
+    "paper_measurement_cost": null,
+    "same_policy_all_contexts": true,
+    "work_cap": {
+      "energy_evaluations": 1500,
+      "finite_difference_energy_evaluations": 60,
+      "full_resource_recounts": 4,
+      "gradient_vector_evaluations": 1500,
+      "optimizer_iterations": 1200,
+      "optimizer_starts": 6
+    },
+    "xtol": 1e-12
+  },
+  "queue": [
+    {
+      "context_id": "h6-1.5-s6",
+      "family_id": "v6-ns-family:00630228cc0ccc0f76bc2cd500b96ec1cd2b487a78f04f69996079e0702726fa",
+      "kind": "rank2-trust-region",
+      "normal": [
+        1,
+        1,
+        -1
+      ],
+      "ns7_attempt_id": "v6-ns7-attempt:90b9d61c32461525149b888637a55cf74851295560aadcb8b27e1d91709b7038",
+      "ns7_final_gradient_infinity": 7.367273171032807e-05,
+      "ns7_initial_energy_hartree": -2.9936488448270637,
+      "ns7_iterations": 200,
+      "queue_id": "v6-ns10-queue:8e9d1ad135e96451d5a52f05a9590ea07155178b3997e0cc3c40ccb63367e0a1",
+      "source_block_id": "block-v1:417c887ab430749fdc4475d9bf7d8ca618eed8874c70e41af57bf3a6b39e57fa"
+    },
+    {
+      "context_id": "h6-1.5-s6",
+      "family_id": "v6-ns-family:1bd5552f1cc2df503c3111f459cc1ce8c5ef3d58e4de413675f78a44fe72176b",
+      "kind": "rank2-trust-region",
+      "normal": [
+        1,
+        1,
+        1
+      ],
+      "ns7_attempt_id": "v6-ns7-attempt:d9a0a81437cd73a427530d3b1f4e2d39946047cbf6e47cd62724552afd3d45df",
+      "ns7_final_gradient_infinity": 1.9946850109147558e-05,
+      "ns7_initial_energy_hartree": -2.9937993930400157,
+      "ns7_iterations": 200,
+      "queue_id": "v6-ns10-queue:6fecab9e74aa8d33a18138c00029f87d8097d991acb400257ca2f017a04ff2c0",
+      "source_block_id": "block-v1:417c887ab430749fdc4475d9bf7d8ca618eed8874c70e41af57bf3a6b39e57fa"
+    },
+    {
+      "context_id": "h6-3.0",
+      "family_id": "v6-ns-family:00630228cc0ccc0f76bc2cd500b96ec1cd2b487a78f04f69996079e0702726fa",
+      "kind": "rank2-trust-region",
+      "normal": [
+        1,
+        1,
+        -1
+      ],
+      "ns7_attempt_id": "v6-ns7-attempt:ccf4b2cf135aaf9615841db60df9709bf187ee965a0bf86f147cb36086ecc92e",
+      "ns7_final_gradient_infinity": 5.1746362115447087e-05,
+      "ns7_initial_energy_hartree": -2.7958285152099007,
+      "ns7_iterations": 200,
+      "queue_id": "v6-ns10-queue:7ce6cf289991728ce548ba3f23c31f837264acfc81c1b6f2b38f4fc2ea9099f3",
+      "source_block_id": "block-v1:06ce15236ac603308f518adde8774895cf1caabb5bf9127f2f1b382646fd9b01"
+    },
+    {
+      "context_id": "h6-3.0",
+      "family_id": "v6-ns-family:1bd5552f1cc2df503c3111f459cc1ce8c5ef3d58e4de413675f78a44fe72176b",
+      "kind": "rank2-trust-region",
+      "normal": [
+        1,
+        1,
+        1
+      ],
+      "ns7_attempt_id": "v6-ns7-attempt:f537766092ec3e7551f4b5ea87e3fba3059fe8164c7e152dc69e0f05e08ac837",
+      "ns7_final_gradient_infinity": 5.790954935324484e-06,
+      "ns7_initial_energy_hartree": -2.7983441414764667,
+      "ns7_iterations": 200,
+      "queue_id": "v6-ns10-queue:1768f1f00459ae632af41f90cbd2008be183e622ed6a6b1f269415192ab89a8b",
+      "source_block_id": "block-v1:06ce15236ac603308f518adde8774895cf1caabb5bf9127f2f1b382646fd9b01"
+    },
+    {
+      "context_id": "h6-1.5-s6",
+      "kind": "same-structure-trust-region-control",
+      "queue_id": "v6-ns10-queue:be7b4708c9787d3a904ee71532c57a99a0865e4090dff793fc72f4ee0a5fa651"
+    },
+    {
+      "context_id": "h6-3.0",
+      "kind": "same-structure-trust-region-control",
+      "queue_id": "v6-ns10-queue:ab269a6dcf6c5cfa55f47e746ea7cdb14607129b5c8c1d646ffee715c7b9aa89"
+    }
+  ],
+  "queue_count": 6,
+  "schema_version": "1.0.0"
+}
