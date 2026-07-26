@@ -324,7 +324,7 @@ def build_report() -> dict[str, Any]:
     )
     accepted_bound = bool(accepted) and max(accepted) <= gate["accepted_rho_max"]
     rejected_bound = bool(rejected) and min(rejected) >= gate["rejected_rho_min"]
-    ratio = (
+    ratio = float(
         min(rejected) / max(max(accepted), np.finfo(float).eps)
         if accepted and rejected else 0.0
     )
@@ -333,7 +333,9 @@ def build_report() -> dict[str, Any]:
         "sensitivity_classification_stable": sensitivity_stable,
         "all_accepted_below_bound": accepted_bound,
         "all_rejected_above_bound": rejected_bound,
-        "minimum_separation_ratio": ratio >= gate["minimum_separation_ratio"],
+        "minimum_separation_ratio": bool(
+            ratio >= gate["minimum_separation_ratio"]
+        ),
     }
     decision = (
         "GO_DEVELOPMENT_MECHANISM_SEPARATED"

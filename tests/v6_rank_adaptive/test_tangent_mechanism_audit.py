@@ -3,6 +3,7 @@ from __future__ import annotations
 import numpy as np
 import struct
 
+from dvg_obs_ceo.identity import canonical_json_bytes
 from dvg_obs_ceo.v6_rank_adaptive.tangent_mechanism_audit import (
     _float64_hex,
     _stage_authorization,
@@ -24,3 +25,4 @@ def test_t2_never_authorizes_performance_stages_directly() -> None:
         "t3_t4": False,
         "t5_t6_performance": False,
     }
+    canonical_json_bytes(_stage_authorization("NO_GO_MECHANISM_NOT_SEPARATED"))
