@@ -1,6 +1,6 @@
 # V6-NS8/NS9 bounded follow-up plan
 
-Status: frozen before NS8 diagnostic recomputation and NS9 candidate energy
+Status: completed through the conditional NS10 H6 ablation
 
 ## Claim boundary
 
@@ -85,3 +85,12 @@ Scientific-frontier Go separately requires at least one NS9 point not
 dominated by the reconstructible same-source legacy frontier. Failure of the
 frontier gate stops the H6 optimizer ablation. A resource or semantic
 regression also stops the pilot.
+
+Recorded outcome:
+
+- NS8 mechanism audit: passed;
+- NS8 same-source legacy-frontier addition: failed;
+- NS9 additional-transition gate: passed;
+- NS9 legacy-frontier gate: passed;
+- conditional NS10 trust-region recovery: failed;
+- cross-molecule/PRA performance gate: not established.

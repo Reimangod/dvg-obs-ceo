@@ -108,6 +108,7 @@ dvg-obs-v6-ns9-result-audit = "dvg_obs_ceo.v6_rank_adaptive.ns9_result_audit:mai
 dvg-obs-v6-ns10-freeze = "dvg_obs_ceo.v6_rank_adaptive.ns10_h6_optimizer_ablation:freeze_main"
 dvg-obs-v6-ns10-ablation = "dvg_obs_ceo.v6_rank_adaptive.ns10_h6_optimizer_ablation:main"
 dvg-obs-v6-ns10-result-audit = "dvg_obs_ceo.v6_rank_adaptive.ns10_result_audit:main"
+dvg-obs-v6-followup-release = "dvg_obs_ceo.v6_rank_adaptive.followup_release:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
