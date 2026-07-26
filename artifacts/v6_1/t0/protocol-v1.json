@@ -1,0 +1,41 @@
+{
+  "schema": "dvg-obs-ceo.v6_1.t0.protocol.v1",
+  "status": "frozen_before_outcome_computation",
+  "parent": {
+    "tag": "v6-ns8-ns10-followup-complete-v1.1",
+    "commit": "831a2f3"
+  },
+  "vendor_ceo_adapt_vqe_commit": "a3f89d03e6a03c89767d3cf8ee7657a57653dda0",
+  "metric": {
+    "name": "projective-pure-state-tangent-gram",
+    "qfi_factor_convention": 1,
+    "parameter_scalar_field": "real",
+    "compensation_projection": "real-linear",
+    "finite_difference_primary_step": 1e-6,
+    "finite_difference_sensitivity_steps": [5e-7, 2e-6],
+    "svd_relative_cutoff": 1e-10
+  },
+  "gate": {
+    "accepted_rho_max": 1e-8,
+    "rejected_rho_min": 1e-5,
+    "minimum_separation_ratio": 1000,
+    "threshold_tuning_after_outcomes": false
+  },
+  "development_contexts": [
+    "h4-1.5-late",
+    "h4-1.5-late-after-first-demotion",
+    "h6-1.5-s6",
+    "h6-3.0"
+  ],
+  "runtime_prohibitions": [
+    "fci_energy_for_ranking",
+    "post_outcome_threshold_tuning",
+    "local_block_gram_as_sole_certificate",
+    "qfi_as_replacement_for_energy_or_resource_certification"
+  ],
+  "conditional_stages": {
+    "t3_t4_authorized_only_if_t2_go": true,
+    "t5_t6_performance_execution_authorized_only_if_t4_go": true
+  },
+  "claim_boundary": "T2 is an outcome-aware development diagnostic, not a prospective selector validation or performance claim."
+}
