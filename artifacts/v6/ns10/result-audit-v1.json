@@ -1,0 +1,26 @@
+{
+  "artifact_kind": "v6-ns10-independent-result-audit",
+  "audit_digest": "ee17b67c5b3231dc0118cfbcf99644c95b6a908dcf864e3dcbec13d74038abd8",
+  "audit_version": "v6-ns10-independent-result-audit-v1",
+  "checks": {
+    "both_controls_already_stationary_and_certified": true,
+    "candidate_failures_are_stationarity_and_optimizer": true,
+    "four_candidates_two_controls": true,
+    "freeze_digest": true,
+    "freeze_sha256": true,
+    "independent_fd_checks": true,
+    "no_candidate_certified": true,
+    "ns7_and_pra_claims_unchanged": true,
+    "queue_order_preserved": true,
+    "report_digest": true,
+    "runner_version": true,
+    "summary_reconciles": true,
+    "work_caps_reconcile": true
+  },
+  "claim_boundary": "Independent queue, certificate, finite-difference, work, and summary reconciliation; quantum kernels are not rerun.",
+  "interpretation": "Both unconstrained sources are already stationary under the same trust-region implementation, while all four constrained rank-two runs hit the frozen iteration cap above the stationarity threshold. This implicates the fixed constrained landscapes or families within this protocol; it does not prove that no stationary point exists.",
+  "passed": true,
+  "result_path": "artifacts/v6/ns10/h6-optimizer-ablation-v1.json",
+  "result_sha256": "473718811cb83b96b3445797a4e18e8095f2f130b0fd9544943d7bd0ccdf56b8",
+  "schema_version": "1.0.0"
+}
