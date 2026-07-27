@@ -1,0 +1,102 @@
+{
+  "claim_boundary": {
+    "cross_molecule_robustness_established": false,
+    "matched_work_superiority_established": false,
+    "pra_performance_claim_established": false,
+    "prospective_validation_established": false
+  },
+  "evidence_roles": {
+    "development": [
+      "H2 prior calibration contexts",
+      "H4 all previously executed geometries/checkpoints",
+      "LiH 3.0 A",
+      "H6 1.5 A",
+      "H6 3.0 A",
+      "BeH2 3.0 A"
+    ],
+    "prospective": [],
+    "prospective_selection_status": "NOT_SELECTED"
+  },
+  "immutability": {
+    "force_push_authorized": false,
+    "historical_artifacts_rewritten": false,
+    "historical_outcomes_relabelled_prospective": false
+  },
+  "inputs": [
+    {
+      "bytes": 24379,
+      "path": "docs/PRA_CRITICAL_PATH_PLAN.md",
+      "sha256": "6d9b81de635b727db898445a66477b28266d1bd20a19e9d49e5031f6e63dbf13"
+    },
+    {
+      "bytes": 81425,
+      "path": "artifacts/v6/ns7/energy-certification-v1.json",
+      "sha256": "966459d555a3fcd098d9536e4e0dac6230ac9796cf10fa2194fd89c4c6ab1b5c"
+    },
+    {
+      "bytes": 42067,
+      "path": "artifacts/v6/ns9/sequential-pilot-v1.json",
+      "sha256": "df635eb8763fadd3d1aa98123745a0bf9eeccea2e7462369e2b2069f41d7b953"
+    },
+    {
+      "bytes": 40009,
+      "path": "artifacts/v6/ns10/h6-optimizer-ablation-v1.json",
+      "sha256": "473718811cb83b96b3445797a4e18e8095f2f130b0fd9544943d7bd0ccdf56b8"
+    },
+    {
+      "bytes": 5761,
+      "path": "artifacts/v6/release/ns8-ns10-manifest-v1.json",
+      "sha256": "c5cb153e3d3d8251d1a3226e2d6ec1fa975ad6c01c30c8c704639a6eba441aa6"
+    },
+    {
+      "bytes": 2002,
+      "path": "artifacts/v6/release/provenance-supplement-v1.json",
+      "sha256": "ff19745325853147ab01d55087a2937802f1e8527007ed4f22bfb757837ff3c1"
+    },
+    {
+      "bytes": 1345,
+      "path": "artifacts/v6_1/t0/protocol-v1.json",
+      "sha256": "2585b1684e52e56e76b35d00fce99f27826732fc46d1c8a0c6162b1136892be6"
+    },
+    {
+      "bytes": 34515,
+      "path": "artifacts/v6_1/t2/mechanism-audit-v1.json",
+      "sha256": "45ba12e2beca11080fa634d11a74027087a348fc8cddd9eb399ef330d3a06660"
+    },
+    {
+      "bytes": 1752,
+      "path": "artifacts/v6_1/release/negative-result-manifest-v1.json",
+      "sha256": "2416aa4a7bf5429527284f658babcbedfe915f00082f412e18788e49a9a48874"
+    }
+  ],
+  "ledger_digest": "54242b8f90c6c964ab41738c260594d09810852d61df9b1141ca0a983146c58b",
+  "parent": {
+    "peeled_commit": "406ccbf49691aec638d78951959cdc6eeb7f472f",
+    "tag": "v6.1-t2-negative-result-complete-v1",
+    "vendor_ceo_adapt_vqe_commit": "a3f89d03e6a03c89767d3cf8ee7657a57653dda0"
+  },
+  "prior_visible_outcomes": [
+    {
+      "context": "H4 1.5 A late checkpoint",
+      "outcome": "two sequential native rank demotions certified",
+      "role": "development"
+    },
+    {
+      "context": "H6 1.5 A and 3.0 A",
+      "outcome": "tested registered rank-two families not certified under the frozen NS7/NS10 protocols",
+      "role": "development"
+    },
+    {
+      "context": "BeH2 3.0 A",
+      "outcome": "no eligible frozen rank-three MVP block",
+      "role": "development"
+    },
+    {
+      "context": "V6.1 tangent/QFI diagnostic",
+      "outcome": "NO_GO_MECHANISM_NOT_SEPARATED",
+      "role": "development"
+    }
+  ],
+  "schema": "dvg-obs-ceo.pra-path.s0-evidence-ledger.v1",
+  "status": "immutable-parent-reconciled"
+}
