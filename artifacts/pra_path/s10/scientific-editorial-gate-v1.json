@@ -1,0 +1,44 @@
+{
+  "authorization": {
+    "pra_performance_manuscript": false,
+    "s11_negative_result_release": true
+  },
+  "claim_boundary": "Editorial/scientific closure decision, not a journal acceptance prediction and not a claim that future preregistered work cannot succeed.",
+  "criteria": {
+    "accepted_points_pass_all_certification_layers": true,
+    "causal_ablation_separates_mechanisms": false,
+    "clean_environment_reproduces_submission_tables_and_figures": false,
+    "distinct_methodological_contribution_supported_by_bounded_prior_art": true,
+    "native_physical_cnot_or_depth_reduction_independently_verified": true,
+    "negative_and_null_outcomes_retained": true,
+    "one_prospective_geometry_adds_matched_work_pareto_point": false,
+    "two_independent_development_conditions_add_matched_work_pareto_points": false
+  },
+  "criteria_passed": 4,
+  "criteria_total": 8,
+  "decision": "NO_GO_PRA_PERFORMANCE_SUBMISSION_PACKAGE",
+  "execution": {
+    "git_commit": "27ccbec15445f3f590858fa6703caada59cbc2d7"
+  },
+  "inputs": {
+    "s6_audit_digest": "7800aacddbde4e0d81c3db0bbd194b9321924011623fcc93a4491cd49bdfb20a",
+    "s7_report_digest": "e30f0857afccd58954a81a4398bcbf1b809b2c5d328fa1208594b10f9018ccc3",
+    "s8_report_digest": "9b13d4d8c931e962ba8028ef8e39dddc0ec68afe04c8f242532674a7c6e0555a",
+    "s9_report_digest": "98afa92437e529adb728cac40f5bc3f0563874b03275f152d57dda6a8b4d571f"
+  },
+  "report_digest": "ba37c6b6130033d54d374ad1b6880ad941b052c59f417d70d19a8c3398e273c0",
+  "research_integrity": {
+    "failed_gate_overridden": false,
+    "negative_result_retained": true,
+    "post_outcome_tuning_performed": false,
+    "prospective_label_misused": false
+  },
+  "schema": "dvg-obs-ceo.pra-path.s10-scientific-editorial-gate.v1",
+  "stage": "S10",
+  "status": "COMPLETE",
+  "strength_assessment": {
+    "limitation": "Cross-system certification, matched-work comparison, causal ablation, and prospective validation are absent.",
+    "positive": "The registered native method is technically distinct under the bounded audit and reproduces certified H4 reductions at two new geometries.",
+    "submission_recommendation": "Do not submit a general performance-improvement PRA claim from this evidence package."
+  }
+}
