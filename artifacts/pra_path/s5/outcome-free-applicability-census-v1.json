@@ -1,0 +1,111 @@
+{
+  "authorization": {
+    "performance_execution": true,
+    "s6": true
+  },
+  "claim_boundary": "Outcome-free structural census. Prospective applicability is conditional and its future screen-out rate must be reported.",
+  "conditional_applicability_population": true,
+  "decision": "GO_S6_STRUCTURAL_QUEUES_FROZEN",
+  "development_execution_order": [
+    "h4-1.0",
+    "h4-2.0",
+    "h5-1.5"
+  ],
+  "development_records": [
+    {
+      "candidate_energy_evaluated": false,
+      "case_id": "h4-1.0",
+      "estimated_work": {
+        "full_resource_recounts": 9,
+        "independent_source_energy_evaluations": 1,
+        "source_gradient_component_equivalent": 7222,
+        "source_optimizer_energy_evaluations": 378,
+        "wall_time_seconds": 20.732486124965362
+      },
+      "qubit_count": 8,
+      "rank_three_mvp_block_count": 2,
+      "registered_native_transition_count": 8,
+      "role": "development-low-cost-reproducibility",
+      "source_generation_succeeded": true,
+      "source_path": "artifacts/pra_path/s5/sources/h4-1.0.json",
+      "source_report_digest": "ddd772eb938b785e680d9380b0aff02b0608775084f4ce6a1b23f7d294a66926",
+      "structurally_primary_eligible_transition_count": 8
+    },
+    {
+      "candidate_energy_evaluated": false,
+      "case_id": "h4-2.0",
+      "estimated_work": {
+        "full_resource_recounts": 9,
+        "independent_source_energy_evaluations": 1,
+        "source_gradient_component_equivalent": 7852,
+        "source_optimizer_energy_evaluations": 427,
+        "wall_time_seconds": 22.640111499931663
+      },
+      "qubit_count": 8,
+      "rank_three_mvp_block_count": 2,
+      "registered_native_transition_count": 8,
+      "role": "development-low-cost-reproducibility",
+      "source_generation_succeeded": true,
+      "source_path": "artifacts/pra_path/s5/sources/h4-2.0.json",
+      "source_report_digest": "110eb68966eebfa3b446ac1b11c3b48eebadf1f910f8aa9fb657f89481af9c06",
+      "structurally_primary_eligible_transition_count": 8
+    },
+    {
+      "candidate_energy_evaluated": false,
+      "case_id": "h5-1.5",
+      "estimated_work": {
+        "full_resource_recounts": 9,
+        "independent_source_energy_evaluations": 1,
+        "source_gradient_component_equivalent": 45546,
+        "source_optimizer_energy_evaluations": 1227,
+        "wall_time_seconds": 132.36326899996493
+      },
+      "qubit_count": 10,
+      "rank_three_mvp_block_count": 2,
+      "registered_native_transition_count": 8,
+      "role": "development-cross-system",
+      "source_generation_succeeded": true,
+      "source_path": "artifacts/pra_path/s5/sources/h5-1.5.json",
+      "source_report_digest": "dd5fa05f3ce393972c12a265b7958f48f3aa1d1f91e5af354d69f941a0a39c0e",
+      "structurally_primary_eligible_transition_count": 8
+    }
+  ],
+  "execution_freeze": {
+    "git_commit": "4e07437c2cc60a8916e923a922640f11c101c6a6",
+    "s4_report_digest": "660f5e8a4199d79ea79d47758403db3f48ece2e83943cc6e94968bc79dd1f0e4",
+    "threads": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    }
+  },
+  "information_firewall": {
+    "exact_reference_used": false,
+    "fidelity_or_reachability_used": false,
+    "final_pareto_status_used": false,
+    "optimizer_outcome_used_for_case_ranking": false,
+    "post_demotion_energy_available": false,
+    "structural_fields_only": true
+  },
+  "prospective_molecule_order": [
+    {
+      "factory": "adaptvqe.molecules.create_h7",
+      "geometries_angstrom": [
+        1.5,
+        3.0
+      ],
+      "molecule": "H7"
+    },
+    {
+      "factory": "adaptvqe.molecules.create_h3",
+      "geometries_angstrom": [
+        1.5,
+        3.0
+      ],
+      "molecule": "H3"
+    }
+  ],
+  "prospective_selection_rule": "At S8, select the first ordered molecule for which both frozen geometries are statevector-feasible, source generation succeeds, and at least one registered native structurally primary-eligible transition exists at each geometry. Retain all screen-outs.",
+  "report_digest": "284221c7f224038e02885267068214d22c783c5effa3fe3bf5d6cfb37d8730e4",
+  "schema": "dvg-obs-ceo.pra-path.s5-applicability-census.v1"
+}
