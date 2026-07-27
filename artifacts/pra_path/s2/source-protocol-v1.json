@@ -1,0 +1,77 @@
+{
+  "schema": "dvg-obs-ceo.pra-path.s2-source-protocol.v1",
+  "status": "frozen",
+  "parent_s1_decision": "GO_S2_FIELD_NAMING_CORRECTION",
+  "source_roles": {
+    "historical_paper_endpoint_source": {
+      "purpose": "paper-era and historical reconstruction only",
+      "may_be_used_for_new_causal_performance_claim": false,
+      "coefficients_mutated": false
+    },
+    "stationarity_normalized_source": {
+      "purpose": "common causal source for development, matched-work, and prospective comparisons",
+      "parameter_gradient_infinity_max": 1e-08,
+      "independent_gradient_check_required": true,
+      "full_resource_recount_required": true,
+      "all_methods_receive_byte_identical_source": true
+    }
+  },
+  "required_identity_fields": [
+    "StatePreparationID",
+    "ProblemID",
+    "ansatz_structure_digest",
+    "coefficient_digest",
+    "statevector_digest",
+    "hamiltonian_digest",
+    "reference_state_digest",
+    "qubit_mapping",
+    "qubit_ordering"
+  ],
+  "required_optimization_fields": [
+    "source_checkpoint_parameter_gradient_infinity",
+    "adapt_pool_gradient",
+    "adapt_stopping_rule",
+    "optimizer_name_and_version",
+    "optimizer_status",
+    "energy_change",
+    "iterations",
+    "energy_evaluations",
+    "gradient_vector_evaluations"
+  ],
+  "gradient_semantics": {
+    "source_checkpoint_parameter_gradient_infinity": "full parameter gradient evaluated at the unmodified source checkpoint",
+    "candidate_full_source_coordinate_gradient_infinity": "full source-coordinate gradient evaluated at the mapped candidate",
+    "candidate_target_coordinate_gradient_infinity": "J^T g in registered target coordinates",
+    "candidate_orthonormal_tangent_gradient_infinity": "Q^T g for an orthonormal basis Q of range(J); primary stationarity evidence",
+    "candidate_normal_kkt_multiplier": "least-squares equality-constraint multiplier"
+  },
+  "existing_source_classification": {
+    "h6-1.5-s6": {
+      "historical_source": true,
+      "stationarity_normalized_source": true,
+      "parameter_gradient_infinity": 3.4753153774907952e-09,
+      "reoptimization_required": false
+    },
+    "h6-3.0": {
+      "historical_source": true,
+      "stationarity_normalized_source": true,
+      "parameter_gradient_infinity": 1.908776525727518e-09,
+      "reoptimization_required": false
+    }
+  },
+  "work_reporting": {
+    "post_checkpoint_table": "common deterministic source polishing reported separately",
+    "end_to_end_table": "source generation and polishing included",
+    "source_polishing_may_be_hidden": false
+  },
+  "runtime_firewall": {
+    "fci_or_reference_energy_used_for_source_stopping": false,
+    "chemical_accuracy_used_for_source_stopping": false,
+    "candidate_outcomes_may_change_source": false
+  },
+  "authorization": {
+    "s3": true,
+    "new_performance_execution": false
+  },
+  "claim_boundary": "Source identity and convergence protocol only; no new performance evidence."
+}
