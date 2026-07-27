@@ -113,6 +113,7 @@ dvg-obs-v6-followup-release = "dvg_obs_ceo.v6_rank_adaptive.followup_release:mai
 dvg-obs-pra-s0-ledger = "dvg_obs_ceo.pra_path.s0_evidence_ledger:main"
 dvg-obs-pra-s1-gradient-identity = "dvg_obs_ceo.pra_path.s1_gradient_identity_audit:main"
 dvg-obs-pra-s3-registry-audit = "dvg_obs_ceo.pra_path.s3_registry_audit:main"
+dvg-obs-pra-release = "dvg_obs_ceo.pra_path.release_audit:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

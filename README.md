@@ -56,3 +56,8 @@ The V4, V5, and V5.1 outcomes are **development results**, not blind
 validation or a general superiority claim. V5.1 meets the two-case strong
 development threshold only when the explicitly outcome-informed H6 1.5 A
 extension is included. Paper-equivalent Measurement Cost remains unavailable.
+
+The later PRA critical-path experiment is closed as a reproducible negative
+result: certified native reductions reproduced at H4 1.0 Å and 2.0 Å, but the
+frozen cross-system gate failed at H5 1.5 Å. See
+[`docs/PRA_CRITICAL_PATH_S11_RELEASE.md`](docs/PRA_CRITICAL_PATH_S11_RELEASE.md).
