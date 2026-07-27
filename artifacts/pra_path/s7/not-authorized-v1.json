@@ -1,0 +1,26 @@
+{
+  "authorization": {
+    "s8": false,
+    "s9": false
+  },
+  "causal_ablation_executed": false,
+  "claim_boundary": "No matched-work superiority or causal-ablation result exists.",
+  "decision": "NOT_AUTHORIZED_S7_UPSTREAM_GATE_FAILED",
+  "execution": {
+    "git_commit": "2216fe6ec95dc4916fc5e79ee5ff52c0afadbd52"
+  },
+  "historical_or_development_outcomes_discarded": false,
+  "input": {
+    "digest": "7800aacddbde4e0d81c3db0bbd194b9321924011623fcc93a4491cd49bdfb20a",
+    "path": "artifacts/pra_path/s6/result-audit-v1.json"
+  },
+  "matched_work_executed": false,
+  "paper_measurement_cost": null,
+  "reason": "S6 did not establish a certified non-H4 development condition; the preregistered matched-work entry gate failed.",
+  "report_digest": "e30f0857afccd58954a81a4398bcbf1b809b2c5d328fa1208594b10f9018ccc3",
+  "schema": "dvg-obs-ceo.pra-path.s7-closure.v1",
+  "scientific_actions_executed": false,
+  "stage": "S7",
+  "status": "NOT_AUTHORIZED",
+  "threshold_or_optimizer_changed": false
+}
