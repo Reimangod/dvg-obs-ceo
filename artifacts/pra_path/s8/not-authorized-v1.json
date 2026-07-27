@@ -1,0 +1,26 @@
+{
+  "authorization": {
+    "s9": false
+  },
+  "claim_boundary": "The structural H7/H3 order from S5 remains planning metadata and is not an activated prospective protocol.",
+  "decision": "NOT_AUTHORIZED_S8_UPSTREAM_GATE_FAILED",
+  "development_data_relabelled_prospective": false,
+  "execution": {
+    "git_commit": "e9c5523cfe2b52144d898be23d623e18fa9ceb9f"
+  },
+  "historical_or_development_outcomes_discarded": false,
+  "input": {
+    "digest": "e30f0857afccd58954a81a4398bcbf1b809b2c5d328fa1208594b10f9018ccc3",
+    "path": "artifacts/pra_path/s7/not-authorized-v1.json"
+  },
+  "prospective_manifest_frozen": false,
+  "prospective_molecule_selected": false,
+  "prospective_queue_created": false,
+  "reason": "The matched-work development gate was not reached, so no prospective scientific protocol may be activated.",
+  "report_digest": "9b13d4d8c931e962ba8028ef8e39dddc0ec68afe04c8f242532674a7c6e0555a",
+  "schema": "dvg-obs-ceo.pra-path.s8-closure.v1",
+  "scientific_actions_executed": false,
+  "stage": "S8",
+  "status": "NOT_AUTHORIZED",
+  "threshold_or_optimizer_changed": false
+}
