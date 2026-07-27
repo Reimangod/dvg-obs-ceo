@@ -346,6 +346,9 @@ def audit_release() -> dict[str, Any]:
     checks["inventory_paths_unique"] = len(
         {item["path"] for item in inventory}
     ) == len(inventory)
+    checks["inventory_is_complete"] = {
+        item["path"] for item in inventory
+    } == {str(path.relative_to(ROOT)) for path in _upstream_artifacts()}
     for item in inventory:
         path = ROOT / item["path"]
         _, field, digest = _verified_json(
@@ -363,6 +366,13 @@ def audit_release() -> dict[str, Any]:
         cases = list(csv.DictReader(stream))
     with ATTEMPT_CSV.open(newline="", encoding="utf-8") as stream:
         attempts = list(csv.DictReader(stream))
+    s6, _, _ = _verified_json(S6_RESULT)
+    checks["case_table_exactly_regenerated"] = CASE_CSV.read_text(
+        encoding="utf-8"
+    ) == _csv_text(CASE_FIELDS, case_rows(s6))
+    checks["attempt_table_exactly_regenerated"] = ATTEMPT_CSV.read_text(
+        encoding="utf-8"
+    ) == _csv_text(ATTEMPT_FIELDS, attempt_rows(s6))
     checks["three_case_rows"] = len(cases) == 3
     checks["twenty_four_attempt_rows"] = len(attempts) == 24
     checks["attempt_ids_unique"] = len(
@@ -385,6 +395,17 @@ def audit_release() -> dict[str, Any]:
         "s9_prospective_execution": False,
         "s10_decision": "NO_GO_PRA_PERFORMANCE_SUBMISSION_PACKAGE",
     }
+    s7, _, _ = _verified_json(PRA_ROOT / "s7/not-authorized-v1.json")
+    s8, _, _ = _verified_json(PRA_ROOT / "s8/not-authorized-v1.json")
+    s9, _, _ = _verified_json(PRA_ROOT / "s9/not-authorized-v1.json")
+    checks["closure_artifacts_prohibit_execution"] = (
+        s7["scientific_actions_executed"] is False
+        and s7["matched_work_executed"] is False
+        and s8["scientific_actions_executed"] is False
+        and s8["prospective_manifest_frozen"] is False
+        and s9["scientific_actions_executed"] is False
+        and s9["prospective_result_exists"] is False
+    )
     checks["environment_lock_unchanged"] = (
         _file_sha256(ROOT / "uv.lock")
         == manifest["execution"]["dependency_lock"]["sha256"]

@@ -1,0 +1,210 @@
+{
+  "artifact_inventory": [
+    {
+      "internal_digest": "54242b8f90c6c964ab41738c260594d09810852d61df9b1141ca0a983146c58b",
+      "internal_digest_field": "ledger_digest",
+      "path": "artifacts/pra_path/s0/evidence-ledger-v1.json",
+      "sha256": "86adf391da0dd432684fa4a103500e2c33fe66e030bc1b5386d3ea572839e193"
+    },
+    {
+      "internal_digest": "c21f8d188279c18a9676167e6cbe914ad321c7ec55376ffeca85d89a63fc02b0",
+      "internal_digest_field": "report_digest",
+      "path": "artifacts/pra_path/s1/gradient-identity-audit-v1.json",
+      "sha256": "541503ca291f357e7b2bb9b56403ded6b90235680bee4d561242385958383fed"
+    },
+    {
+      "internal_digest": "ba37c6b6130033d54d374ad1b6880ad941b052c59f417d70d19a8c3398e273c0",
+      "internal_digest_field": "report_digest",
+      "path": "artifacts/pra_path/s10/scientific-editorial-gate-v1.json",
+      "sha256": "def42ba4d5691b08b35809e79bc1d5893fffc08efc6f059cade588386cf8db23"
+    },
+    {
+      "internal_digest": null,
+      "internal_digest_field": null,
+      "path": "artifacts/pra_path/s2/source-protocol-v1.json",
+      "sha256": "8e3cdf3409a3eddb47b269d88da6d50fe5b30c47536c5bf6318e17bbc2f2ecb4"
+    },
+    {
+      "internal_digest": "bf257e5fc4629b0fc0a0bd10320e47773ca6ad039d37d8c429d47805b03173f6",
+      "internal_digest_field": "report_digest",
+      "path": "artifacts/pra_path/s3/normal-registry-audit-v1.json",
+      "sha256": "5040fff5401072b81ca15888177ae3223e5868cdf007268fc4a6eead5b66ed83"
+    },
+    {
+      "internal_digest": "660f5e8a4199d79ea79d47758403db3f48ece2e83943cc6e94968bc79dd1f0e4",
+      "internal_digest_field": "report_digest",
+      "path": "artifacts/pra_path/s4/prior-art-novelty-audit-v1.json",
+      "sha256": "7da7ea61447e147b8ce77c1a052f56bccff4f034c7f24a89a099c10c6057059f"
+    },
+    {
+      "internal_digest": "284221c7f224038e02885267068214d22c783c5effa3fe3bf5d6cfb37d8730e4",
+      "internal_digest_field": "report_digest",
+      "path": "artifacts/pra_path/s5/outcome-free-applicability-census-v1.json",
+      "sha256": "592ca97f019836d28cca1d89e0dcebc196018913b0992550584934635790cff9"
+    },
+    {
+      "internal_digest": "ddd772eb938b785e680d9380b0aff02b0608775084f4ce6a1b23f7d294a66926",
+      "internal_digest_field": "report_digest",
+      "path": "artifacts/pra_path/s5/sources/h4-1.0.json",
+      "sha256": "a281432b3a25459f6a9b780ec3cdc70f79cd0e6d2ae38f2cd0b233d62188df6b"
+    },
+    {
+      "internal_digest": "110eb68966eebfa3b446ac1b11c3b48eebadf1f910f8aa9fb657f89481af9c06",
+      "internal_digest_field": "report_digest",
+      "path": "artifacts/pra_path/s5/sources/h4-2.0.json",
+      "sha256": "9b7057196ee26564898443ac750d4fb31da7b2fa24596421dab9b1a563aae83d"
+    },
+    {
+      "internal_digest": "dd5fa05f3ce393972c12a265b7958f48f3aa1d1f91e5af354d69f941a0a39c0e",
+      "internal_digest_field": "report_digest",
+      "path": "artifacts/pra_path/s5/sources/h5-1.5.json",
+      "sha256": "96343efea4e20a2a1693bae59e43c7e88593078dd0296c56dee08f272b5106ed"
+    },
+    {
+      "internal_digest": "9ab2a7e468a964a2c62c0ada0222da005bc98f993d1aa872af1469bb6eb17795",
+      "internal_digest_field": "report_digest",
+      "path": "artifacts/pra_path/s6/independent-development-evaluation-v1.json",
+      "sha256": "e33f38ea1f2030c7b823535ac94a7124c442bd4a106937a86a512dc56baa4117"
+    },
+    {
+      "internal_digest": "8ab62ef36d4780dfe73d2171befff8190ee00b866b3d9850d2459679d4a91e3d",
+      "internal_digest_field": "freeze_digest",
+      "path": "artifacts/pra_path/s6/queue-freeze-v1.json",
+      "sha256": "65e40232238da510ff5f3f097a8b73c1b6225e8164e79ce790f3f1a3d07453e7"
+    },
+    {
+      "internal_digest": "7800aacddbde4e0d81c3db0bbd194b9321924011623fcc93a4491cd49bdfb20a",
+      "internal_digest_field": "audit_digest",
+      "path": "artifacts/pra_path/s6/result-audit-v1.json",
+      "sha256": "4eddd9095b8637bb7fdee22f1de25cf22a483a68eb957c1c0acc46e270dec3aa"
+    },
+    {
+      "internal_digest": "e30f0857afccd58954a81a4398bcbf1b809b2c5d328fa1208594b10f9018ccc3",
+      "internal_digest_field": "report_digest",
+      "path": "artifacts/pra_path/s7/not-authorized-v1.json",
+      "sha256": "4c0b4af86449a636525e085995c7cecc0c8aac79a88c0c2b2241d74ea17f9cfc"
+    },
+    {
+      "internal_digest": "9b13d4d8c931e962ba8028ef8e39dddc0ec68afe04c8f242532674a7c6e0555a",
+      "internal_digest_field": "report_digest",
+      "path": "artifacts/pra_path/s8/not-authorized-v1.json",
+      "sha256": "40b7a969e64e4971a8128291f72d85f41711a8a17ed5ccaf670162fe8a568458"
+    },
+    {
+      "internal_digest": "98afa92437e529adb728cac40f5bc3f0563874b03275f152d57dda6a8b4d571f",
+      "internal_digest_field": "report_digest",
+      "path": "artifacts/pra_path/s9/not-authorized-v1.json",
+      "sha256": "aac6ea02674d9e99c63a763dcd7a1167e854dbbaba25ec7764d9a6fedd0011fa"
+    }
+  ],
+  "availability": {
+    "release_tag": "pra-critical-path-negative-result-v1",
+    "source_repository": "https://github.com/Reimangod/dvg-obs-ceo",
+    "zenodo_claim": false,
+    "zenodo_doi": null
+  },
+  "case_summaries": [
+    {
+      "accepted": 7,
+      "accepted_attempt_ids": [
+        "pra-s6-attempt:160c4d8afc48d1d5afc81dc43e730916d2257a11919ea8eb620c33404b99bc5c",
+        "pra-s6-attempt:d4b570dd99ec4529add68330f6957e9f7333258a1c8f9792da050a9d2ef0b9de",
+        "pra-s6-attempt:ce24718356381bda49597c33f94e91351bb0bc30ec799a072058e366fb0c954c",
+        "pra-s6-attempt:d87d1128bf43e4e781edbc4124029b80e30e2f41d1fb8b0ad09f05564acf2662",
+        "pra-s6-attempt:42577a5983b5dcc8ba3ee7a3eb0db70207b5d6bfefd4b4bc031e0d949915849a",
+        "pra-s6-attempt:d66d18724fc4138371fe9ce37349a65c5a73248d23649e9ef7359f52736a735a",
+        "pra-s6-attempt:8d4a021121af0f2a60aa964eaffa2a812890794f384ad5773280da970df095be"
+      ],
+      "attempted": 8,
+      "best_accepted_cnot_depth_reduction": 0,
+      "best_accepted_cnot_reduction": 2,
+      "best_accepted_parameter_reduction": 1,
+      "best_accepted_total_depth_reduction": 4,
+      "case_id": "h4-1.0",
+      "new_energy_resource_nondominated_point": true,
+      "rejected": 1
+    },
+    {
+      "accepted": 7,
+      "accepted_attempt_ids": [
+        "pra-s6-attempt:761b13c98b9a314842883c36eacd0547e7dce48d0900b81576e5dab3a8995dce",
+        "pra-s6-attempt:78b6e976c63bdc2e7b3860d186858c9676c430db01b7c5a192c43863cad7066f",
+        "pra-s6-attempt:d77360b7f89d7047ecdc3e31e6156ea7172f8e6a183b7191e687bc12bd1af1ad",
+        "pra-s6-attempt:d4a8f089d94949b5d96a3d4d3c2e1339de88e6e948103dcada93ff10efad1af4",
+        "pra-s6-attempt:0b19f9585806d6e89f9a55dc37815aa24ecca9b25cd8df03c3b1cc25b6a97b61",
+        "pra-s6-attempt:a068714cfc0b409164293d6e8823a1d3c76dba37541c93ca01d8a003433be695",
+        "pra-s6-attempt:61c30fd06868978104c5f1b0b5f375c3fe283023b4d1852d39bcb43cb07b625c"
+      ],
+      "attempted": 8,
+      "best_accepted_cnot_depth_reduction": 0,
+      "best_accepted_cnot_reduction": 2,
+      "best_accepted_parameter_reduction": 1,
+      "best_accepted_total_depth_reduction": 4,
+      "case_id": "h4-2.0",
+      "new_energy_resource_nondominated_point": true,
+      "rejected": 1
+    },
+    {
+      "accepted": 0,
+      "accepted_attempt_ids": [],
+      "attempted": 8,
+      "best_accepted_cnot_depth_reduction": 0,
+      "best_accepted_cnot_reduction": 0,
+      "best_accepted_parameter_reduction": 0,
+      "best_accepted_total_depth_reduction": 0,
+      "case_id": "h5-1.5",
+      "new_energy_resource_nondominated_point": false,
+      "rejected": 8
+    }
+  ],
+  "claim_boundary": "This package supports certified native resource reductions at two H4 development geometries and a frozen H5 non-certification. It contains no matched-work result, prospective validation, paper-equivalent Measurement Cost, general molecular superiority claim, or PRA acceptance claim.",
+  "closure": {
+    "s10_decision": "NO_GO_PRA_PERFORMANCE_SUBMISSION_PACKAGE",
+    "s7_scientific_execution": false,
+    "s8_prospective_protocol_activated": false,
+    "s9_prospective_execution": false
+  },
+  "decision": "RELEASE_NEGATIVE_RESULT_PACKAGE",
+  "execution": {
+    "builder_git_commit": "2c7d18c58ae21851374d4d4138d36bcdeec4711b",
+    "container_claim": false,
+    "container_image": null,
+    "dependency_lock": {
+      "path": "uv.lock",
+      "sha256": "8a9021a72dd3bd6af8d8fc656d8f544adf620c1900c5ce081b26f484bbf6909d"
+    },
+    "project_definition": {
+      "path": "pyproject.toml",
+      "sha256": "22d2a29af58a9081b4f88912c814c60aac8dc98c7add82bdaec464cf8d4c074b"
+    },
+    "python_constraint": ">=3.10,<3.11"
+  },
+  "release_tables": [
+    {
+      "path": "artifacts/pra_path/release/s6-case-summary.csv",
+      "sha256": "1d0477323e08f524f765ec5addb26867318f40e6d455dbbe6e8cafc39a759cc4"
+    },
+    {
+      "path": "artifacts/pra_path/release/s6-attempts.csv",
+      "sha256": "446aeaa294b3f6a6983e7d73ab222563ef7c9bafd72c340199fb40e33885352d"
+    }
+  ],
+  "report_digest": "0b6d6450eea528075c40d41a552dcc8ef6759a015f18f843f072b88c8c40f146",
+  "reproduction": [
+    "uv sync --extra baseline --extra test",
+    "OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 uv run pytest -q tests/pra_path",
+    "uv run python -m dvg_obs_ceo.pra_path.release_audit audit"
+  ],
+  "result_summary": {
+    "accepted": 14,
+    "attempted": 24,
+    "cross_system_positive": false,
+    "decision": "NO_GO_S6_REQUIRED_CROSS_SYSTEM_EVIDENCE_ABSENT",
+    "h4_reproducibility_positive": true,
+    "pra_performance_claim_established": false,
+    "rejected": 10
+  },
+  "schema": "dvg-obs-ceo.pra-path.s11-negative-release.v1",
+  "stage": "S11",
+  "status": "COMPLETE"
+}
