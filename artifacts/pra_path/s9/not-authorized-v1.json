@@ -1,0 +1,27 @@
+{
+  "authorization": {
+    "positive_pra_performance_claim": false
+  },
+  "candidate_energy_evaluations": 0,
+  "claim_boundary": "No prospective validation evidence exists.",
+  "decision": "NOT_AUTHORIZED_S9_UPSTREAM_GATE_FAILED",
+  "execution": {
+    "git_commit": "abe56539200648e8d2b8ebe10515982e55e6d42e"
+  },
+  "historical_or_development_outcomes_discarded": false,
+  "input": {
+    "digest": "9b13d4d8c931e962ba8028ef8e39dddc0ec68afe04c8f242532674a7c6e0555a",
+    "path": "artifacts/pra_path/s8/not-authorized-v1.json"
+  },
+  "matched_work_comparators_executed": 0,
+  "molecule_or_geometry_executed": [],
+  "prospective_result_exists": false,
+  "reason": "No prospective protocol or molecule was authorized.",
+  "report_digest": "98afa92437e529adb728cac40f5bc3f0563874b03275f152d57dda6a8b4d571f",
+  "reruns": 0,
+  "schema": "dvg-obs-ceo.pra-path.s9-closure.v1",
+  "scientific_actions_executed": false,
+  "stage": "S9",
+  "status": "NOT_AUTHORIZED",
+  "threshold_or_optimizer_changed": false
+}
