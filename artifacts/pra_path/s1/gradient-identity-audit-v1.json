@@ -1,0 +1,2209 @@
+{
+  "authorization": {
+    "s2": true,
+    "source_reoptimization_required_before_s2": false
+  },
+  "candidates": [
+    {
+      "attempt_id": "v6-ns7-attempt:90b9d61c32461525149b888637a55cf74851295560aadcb8b27e1d91709b7038",
+      "checks": {
+        "embedding_constraint_holds": true,
+        "finite_difference_agrees": true,
+        "stored_full_gradient_matches": true,
+        "stored_target_gradient_matches": true
+      },
+      "context_id": "h6-1.5-s6",
+      "family_id": "v6-ns-family:00630228cc0ccc0f76bc2cd500b96ec1cd2b487a78f04f69996079e0702726fa",
+      "field_semantics": {
+        "historical_source_gradient_infinity": "candidate_full_source_coordinate_gradient_infinity",
+        "historical_target_gradient_infinity": "candidate_target_coordinate_gradient_infinity"
+      },
+      "finite_difference": {
+        "0": {
+          "absolute_error": 5.579807726974195e-10,
+          "analytic": -7.367273171032807e-05,
+          "finite_difference": -7.367328969110076e-05
+        },
+        "127": {
+          "absolute_error": 1.0870443826766635e-09,
+          "analytic": -2.132271162453127e-06,
+          "finite_difference": -2.1311841180704505e-06
+        },
+        "31": {
+          "absolute_error": 2.618097110634876e-10,
+          "analytic": 8.621952244132827e-06,
+          "finite_difference": 8.62221405384389e-06
+        },
+        "63": {
+          "absolute_error": 2.492363803188735e-09,
+          "analytic": -3.835837767225507e-05,
+          "finite_difference": -3.836087003605826e-05
+        },
+        "95": {
+          "absolute_error": 3.950567972255993e-10,
+          "analytic": 1.5107075773092055e-05,
+          "finite_difference": 1.510747082988928e-05
+        }
+      },
+      "gradients": {
+        "candidate_full_source_coordinate_gradient_infinity": 0.0013749745636236167,
+        "candidate_kkt_residual_infinity": 7.367273171032807e-05,
+        "candidate_normal_kkt_multiplier": 0.0013737300251957074,
+        "candidate_orthonormal_tangent_gradient_infinity": 7.367273171032807e-05,
+        "candidate_target_coordinate_gradient_infinity": 7.367273171032807e-05
+      },
+      "normal": [
+        1,
+        1,
+        -1
+      ]
+    },
+    {
+      "attempt_id": "v6-ns7-attempt:d9a0a81437cd73a427530d3b1f4e2d39946047cbf6e47cd62724552afd3d45df",
+      "checks": {
+        "embedding_constraint_holds": true,
+        "finite_difference_agrees": true,
+        "stored_full_gradient_matches": true,
+        "stored_target_gradient_matches": true
+      },
+      "context_id": "h6-1.5-s6",
+      "family_id": "v6-ns-family:1bd5552f1cc2df503c3111f459cc1ce8c5ef3d58e4de413675f78a44fe72176b",
+      "field_semantics": {
+        "historical_source_gradient_infinity": "candidate_full_source_coordinate_gradient_infinity",
+        "historical_target_gradient_infinity": "candidate_target_coordinate_gradient_infinity"
+      },
+      "finite_difference": {
+        "0": {
+          "absolute_error": 7.992730921557722e-10,
+          "analytic": 1.2130429906331841e-05,
+          "finite_difference": 1.2129630633239685e-05
+        },
+        "127": {
+          "absolute_error": 1.4005954599230486e-11,
+          "analytic": -2.611674637173619e-06,
+          "finite_difference": -2.6116886431282182e-06
+        },
+        "31": {
+          "absolute_error": 1.6191744238794326e-09,
+          "analytic": 5.388373939636468e-07,
+          "finite_difference": 5.404565683875262e-07
+        },
+        "63": {
+          "absolute_error": 1.8235350486561774e-09,
+          "analytic": -2.6770169351854334e-06,
+          "finite_difference": -2.675193400136777e-06
+        },
+        "95": {
+          "absolute_error": 2.438561530981008e-10,
+          "analytic": 9.967621606316599e-08,
+          "finite_difference": 9.992007221626409e-08
+        }
+      },
+      "gradients": {
+        "candidate_full_source_coordinate_gradient_infinity": 0.0013153369671023284,
+        "candidate_kkt_residual_infinity": 1.9946850109147558e-05,
+        "candidate_normal_kkt_multiplier": 0.0013139703820492326,
+        "candidate_orthonormal_tangent_gradient_infinity": 1.9946850109147558e-05,
+        "candidate_target_coordinate_gradient_infinity": 1.9946850109147558e-05
+      },
+      "normal": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "attempt_id": "v6-ns7-attempt:ccf4b2cf135aaf9615841db60df9709bf187ee965a0bf86f147cb36086ecc92e",
+      "checks": {
+        "embedding_constraint_holds": true,
+        "finite_difference_agrees": true,
+        "stored_full_gradient_matches": true,
+        "stored_target_gradient_matches": true
+      },
+      "context_id": "h6-3.0",
+      "family_id": "v6-ns-family:00630228cc0ccc0f76bc2cd500b96ec1cd2b487a78f04f69996079e0702726fa",
+      "field_semantics": {
+        "historical_source_gradient_infinity": "candidate_full_source_coordinate_gradient_infinity",
+        "historical_target_gradient_infinity": "candidate_target_coordinate_gradient_infinity"
+      },
+      "finite_difference": {
+        "0": {
+          "absolute_error": 6.402620100764977e-10,
+          "analytic": -6.614512607916456e-06,
+          "finite_difference": -6.615152869926533e-06
+        },
+        "110": {
+          "absolute_error": 6.713192744756125e-10,
+          "analytic": 2.19975097352533e-05,
+          "finite_difference": 2.1998181054527777e-05
+        },
+        "147": {
+          "absolute_error": 3.387919610652046e-11,
+          "analytic": -2.3754809803285806e-05,
+          "finite_difference": -2.37547759240897e-05
+        },
+        "36": {
+          "absolute_error": 1.992052980903658e-10,
+          "analytic": 5.1746362115447087e-05,
+          "finite_difference": 5.1746162910148996e-05
+        },
+        "73": {
+          "absolute_error": 8.294408506380468e-10,
+          "analytic": 2.3831322575219773e-05,
+          "finite_difference": 2.3830493134369135e-05
+        }
+      },
+      "gradients": {
+        "candidate_full_source_coordinate_gradient_infinity": 0.00011312498725436488,
+        "candidate_kkt_residual_infinity": 5.1746362115447087e-05,
+        "candidate_normal_kkt_multiplier": 0.00010484143177004185,
+        "candidate_orthonormal_tangent_gradient_infinity": 5.1746362115447087e-05,
+        "candidate_target_coordinate_gradient_infinity": 5.1746362115447087e-05
+      },
+      "normal": [
+        1,
+        1,
+        -1
+      ]
+    },
+    {
+      "attempt_id": "v6-ns7-attempt:f537766092ec3e7551f4b5ea87e3fba3059fe8164c7e152dc69e0f05e08ac837",
+      "checks": {
+        "embedding_constraint_holds": true,
+        "finite_difference_agrees": true,
+        "stored_full_gradient_matches": true,
+        "stored_target_gradient_matches": true
+      },
+      "context_id": "h6-3.0",
+      "family_id": "v6-ns-family:1bd5552f1cc2df503c3111f459cc1ce8c5ef3d58e4de413675f78a44fe72176b",
+      "field_semantics": {
+        "historical_source_gradient_infinity": "candidate_full_source_coordinate_gradient_infinity",
+        "historical_target_gradient_infinity": "candidate_target_coordinate_gradient_infinity"
+      },
+      "finite_difference": {
+        "0": {
+          "absolute_error": 5.437517935913405e-10,
+          "analytic": 1.6554649117372922e-06,
+          "finite_difference": 1.6560086635308835e-06
+        },
+        "110": {
+          "absolute_error": 1.2696367290843114e-09,
+          "analytic": -2.326423956700019e-06,
+          "finite_difference": -2.327693593429103e-06
+        },
+        "147": {
+          "absolute_error": 1.0962896910800615e-09,
+          "analytic": 5.729403007547038e-06,
+          "finite_difference": 5.728306717855958e-06
+        },
+        "36": {
+          "absolute_error": 5.274974658464604e-10,
+          "analytic": -1.8513110464773996e-08,
+          "finite_difference": -1.7985612998927536e-08
+        },
+        "73": {
+          "absolute_error": 1.1666031743060024e-09,
+          "analytic": -4.00241038392337e-06,
+          "finite_difference": -4.001243780749064e-06
+        }
+      },
+      "gradients": {
+        "candidate_full_source_coordinate_gradient_infinity": 0.00020568890469672881,
+        "candidate_kkt_residual_infinity": 5.790954935324484e-06,
+        "candidate_normal_kkt_multiplier": 0.00020505810640501602,
+        "candidate_orthonormal_tangent_gradient_infinity": 5.790954935324484e-06,
+        "candidate_target_coordinate_gradient_infinity": 5.790954935324484e-06
+      },
+      "normal": [
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "claim_boundary": "Gradient-semantics and source-identity correction only; no new rank-demotion performance or generalization claim.",
+  "contexts": [
+    {
+      "checks": {
+        "all_ns7_snapshot_digests_match": true,
+        "all_ns7_source_energies_match": true,
+        "all_ns7_state_digests_match": true,
+        "ns10_control_initial_energy_matches": true,
+        "ns10_control_initial_gradient_matches": true,
+        "source_checkpoint_stationary": true
+      },
+      "context_id": "h6-1.5-s6",
+      "identities": {
+        "MeasurementContextID": "measurement-v1:6b970bc7030e312bf51e7490f3bfa8dfe3b83c5dc7c50e2105b47f167904d35b",
+        "ProblemID": "problem-v1:648d02cec83cb31f434b443a722e445e461aa55ecd142da95eb83fd20bdf7cda",
+        "StatePreparationID": "state-v1:b8ede0c1e4f1bb5979157760d61841995d88783fef1a34d0404b6838745094db",
+        "measurement_context_payload": {
+          "backend_context_digest": "a9ab0658103460fa25a9536bc58f2094e808d5362b36a167a5f5ca1638a417ca",
+          "estimator_version": "paper-era-analytic-v1",
+          "grouping_strategy": "none-exact",
+          "measurement_plan_version": "exact-statevector-v1",
+          "observable_set_digest": "2dd2a1d11d050231281eed73f53e780ee91ed99ed9632e69caa39a6a1782cdb6",
+          "problem_id": "problem-v1:648d02cec83cb31f434b443a722e445e461aa55ecd142da95eb83fd20bdf7cda",
+          "state_preparation_id": "state-v1:b8ede0c1e4f1bb5979157760d61841995d88783fef1a34d0404b6838745094db"
+        },
+        "problem_payload": {
+          "active_space": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "basis_set": "sto-3g",
+          "fermion_to_qubit_mapping_convention": "jordan-wigner-paper-era",
+          "frozen_orbitals": [],
+          "geometry_angstrom": [
+            [
+              "H",
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            [
+              "H",
+              [
+                0.0,
+                0.0,
+                1.5
+              ]
+            ],
+            [
+              "H",
+              [
+                0.0,
+                0.0,
+                3.0
+              ]
+            ],
+            [
+              "H",
+              [
+                0.0,
+                0.0,
+                4.5
+              ]
+            ],
+            [
+              "H",
+              [
+                0.0,
+                0.0,
+                6.0
+              ]
+            ],
+            [
+              "H",
+              [
+                0.0,
+                0.0,
+                7.5
+              ]
+            ]
+          ],
+          "hamiltonian_digest": "2dd2a1d11d050231281eed73f53e780ee91ed99ed9632e69caa39a6a1782cdb6",
+          "molecule": "linear-H6"
+        },
+        "state_preparation_payload": {
+          "ansatz_block_structure": [
+            {
+              "generator_family": "OVP",
+              "indices": [
+                1116
+              ]
+            },
+            {
+              "generator_family": "OVP",
+              "indices": [
+                964
+              ]
+            },
+            {
+              "generator_family": "OVP",
+              "indices": [
+                618
+              ]
+            },
+            {
+              "generator_family": "OVP",
+              "indices": [
+                1004
+              ]
+            },
+            {
+              "generator_family": "OVP",
+              "indices": [
+                1056
+              ]
+            },
+            {
+              "generator_family": "OVP",
+              "indices": [
+                742
+              ]
+            },
+            {
+              "generator_family": "OVP",
+              "indices": [
+                882
+              ]
+            },
+            {
+              "generator_family": "OVP",
+              "indices": [
+                702
+              ]
+            },
+            {
+              "generator_family": "OVP",
+              "indices": [
+                816
+              ]
+            },
+            {
+              "generator_family": "OVP",
+              "indices": [
+                1116
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                179,
+                180
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                290,
+                291
+              ]
+            },
+            {
+              "generator_family": "OVP",
+              "indices": [
+                964
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                146,
+                147
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                244,
+                245
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                370,
+                371
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                72,
+                73
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                492,
+                493
+              ]
+            },
+            {
+              "generator_family": "OVP",
+              "indices": [
+                965
+              ]
+            },
+            {
+              "generator_family": "OVP",
+              "indices": [
+                602
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                134,
+                135
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                238,
+                239
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                508,
+                509
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                405,
+                406
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                452,
+                453
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                62,
+                63
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                362,
+                363
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                296,
+                297
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                175,
+                176
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                181,
+                182
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                354,
+                355
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                302,
+                303
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                502,
+                503
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                358,
+                359
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                70,
+                71
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                399,
+                400
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                66,
+                67
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                452,
+                453
+              ]
+            },
+            {
+              "generator_family": "OVP",
+              "indices": [
+                618
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                420,
+                421
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                432,
+                433
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                344,
+                345
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                531,
+                532
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                286,
+                287
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                208,
+                209
+              ]
+            },
+            {
+              "generator_family": "single-QE",
+              "indices": [
+                351
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                38,
+                39
+              ]
+            },
+            {
+              "generator_family": "single-QE",
+              "indices": [
+                22
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                444,
+                445
+              ]
+            },
+            {
+              "generator_family": "single-QE",
+              "indices": [
+                25
+              ]
+            },
+            {
+              "generator_family": "single-QE",
+              "indices": [
+                11
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                200,
+                201
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                436,
+                437
+              ]
+            },
+            {
+              "generator_family": "single-QE",
+              "indices": [
+                8
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                124,
+                125
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                407,
+                408
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                319,
+                320
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                138,
+                139
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                234,
+                235
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                508,
+                509
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                187,
+                188
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                238,
+                239
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                440,
+                441
+              ]
+            },
+            {
+              "generator_family": "single-QE",
+              "indices": [
+                3
+              ]
+            },
+            {
+              "generator_family": "OVP",
+              "indices": [
+                1177
+              ]
+            },
+            {
+              "generator_family": "single-QE",
+              "indices": [
+                13
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                52,
+                53
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                481,
+                482
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                399,
+                400
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                193,
+                194,
+                195
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                220,
+                221
+              ]
+            },
+            {
+              "generator_family": "single-QE",
+              "indices": [
+                17
+              ]
+            },
+            {
+              "generator_family": "single-QE",
+              "indices": [
+                22
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                246,
+                247
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                144,
+                145
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                492,
+                493
+              ]
+            }
+          ],
+          "ansatz_indices": [
+            1116,
+            964,
+            618,
+            1004,
+            1056,
+            742,
+            882,
+            702,
+            816,
+            1116,
+            179,
+            180,
+            290,
+            291,
+            964,
+            146,
+            147,
+            244,
+            245,
+            370,
+            371,
+            72,
+            73,
+            492,
+            493,
+            965,
+            602,
+            134,
+            135,
+            238,
+            239,
+            508,
+            509,
+            405,
+            406,
+            452,
+            453,
+            62,
+            63,
+            362,
+            363,
+            296,
+            297,
+            175,
+            176,
+            181,
+            182,
+            354,
+            355,
+            302,
+            303,
+            502,
+            503,
+            358,
+            359,
+            70,
+            71,
+            399,
+            400,
+            66,
+            67,
+            452,
+            453,
+            618,
+            420,
+            421,
+            432,
+            433,
+            344,
+            345,
+            531,
+            532,
+            286,
+            287,
+            208,
+            209,
+            351,
+            38,
+            39,
+            22,
+            444,
+            445,
+            25,
+            11,
+            200,
+            201,
+            436,
+            437,
+            8,
+            124,
+            125,
+            407,
+            408,
+            319,
+            320,
+            138,
+            139,
+            234,
+            235,
+            508,
+            509,
+            187,
+            188,
+            238,
+            239,
+            440,
+            441,
+            3,
+            1177,
+            13,
+            52,
+            53,
+            481,
+            482,
+            399,
+            400,
+            193,
+            194,
+            195,
+            220,
+            221,
+            17,
+            22,
+            246,
+            247,
+            144,
+            145,
+            492,
+            493
+          ],
+          "coefficient_bytes_hex": [
+            "bfdc67d55f4c213c",
+            "bfbde83adf534a18",
+            "3fb3a5d28b2b45c5",
+            "3ff5787bfc38b360",
+            "3fce5db0684c28de",
+            "bff0b3eb389bfdd3",
+            "bff6dd588e376f5d",
+            "3f9508f5ef5a7a26",
+            "4001820772232f4b",
+            "c00966fcfa14e51b",
+            "3fb6d019542a1f55",
+            "bfb0cb57b85f8bee",
+            "3ffb8d86c0861de5",
+            "bfbd8e1666d0ec0b",
+            "bfc3c0141a72f323",
+            "bf997c19f4e24bcc",
+            "3fbd6862bb35ef10",
+            "bf9c554b05700b19",
+            "3fe0e96936930800",
+            "bf9516c6bc3d77cd",
+            "bfdcdeab015a9294",
+            "bfaf1b0e887b6826",
+            "3fd0ae955b972377",
+            "3ff08451ed3da95d",
+            "bfec366647c7c37d",
+            "bfd0f92ff93d48cd",
+            "3ff635ef7f76b03d",
+            "bfe885263b945d23",
+            "3fbe1d3446b061ad",
+            "3fe5c6b1eb2e7761",
+            "3fba7cfd143ee547",
+            "bfae465d512e9112",
+            "bfb49ad3d3e44f49",
+            "3fb7032efadccc16",
+            "bfe8f91006fbc268",
+            "3fca93e1128e9236",
+            "3feb47f666a42434",
+            "bff809d3e223d117",
+            "c001617381d7fa6b",
+            "3fb76f9368e7154c",
+            "40035b170e240af9",
+            "3fb194f88abd08cd",
+            "3fed03e7d79ec67c",
+            "bfd0c8de7f5f0772",
+            "bfc629b99528eaeb",
+            "bfb4d81fe8ed4916",
+            "3fb16629fc734437",
+            "bfc1a6e8054f7df0",
+            "bfd00d94da00ac1d",
+            "3f90c5128e7931d8",
+            "bfec3bb5e09a8688",
+            "bfbf0865c0fc8bcf",
+            "bfcc099d369e537f",
+            "bfb4b3337405a920",
+            "bff2faed14b858fb",
+            "bfab7395ed0dd5e4",
+            "3fe5afcdd9644a28",
+            "bfe4f6006e68259f",
+            "3fd3c90305f93649",
+            "3fbbc9e5e6a4a585",
+            "bfe93f07f137b801",
+            "3f9327f2b3210728",
+            "3fb55eaecc0f4232",
+            "bfb013efb3ba6535",
+            "bfafbd5962623bb8",
+            "bf8b012cbf4b7303",
+            "bfa1b3e774d01ca1",
+            "3fb76758d88126f2",
+            "3fa490888319aff5",
+            "3fa1151c04b3ecdc",
+            "bf8727e8d9056c1d",
+            "3f943b1328319dde",
+            "bfbbf9664b6f464a",
+            "bfe1f3084b7105de",
+            "3fb5f6c0033bace7",
+            "bfc42049b979e1cf",
+            "bfaef398c5c3c726",
+            "bf9aa83996641cd2",
+            "bfb71f1d07e8c15c",
+            "3f8a1f6c14f59835",
+            "3f8aaee12ee9fb66",
+            "3fbca9ceb51b0134",
+            "bfc0296c1bfc6c85",
+            "3f7da473524f2d54",
+            "3f9e6bb08bd36cb2",
+            "3f99d6841be6398c",
+            "bf7b45100b88e4e1",
+            "bf897bead654d5de",
+            "3f90c5203b17405b",
+            "3f75c7ae7fe706d5",
+            "bfbcb3598c035e2d",
+            "bfabc94e0dc502bc",
+            "bfb106251a0198ae",
+            "3f671963ffbd1a62",
+            "bf8205cb842bc5e2",
+            "bfa5ef8e544fc21b",
+            "3fb1aa4ad0ee223d",
+            "3fa916248ec5471d",
+            "3fc0e190376de112",
+            "bfb2da579c3c26cc",
+            "3fa0b9acb8d03c13",
+            "3f8edb256262bec1",
+            "bfed36f0521bd253",
+            "3f9170fdcbbc457b",
+            "3fdec99f0cc28d34",
+            "bfbfab0504b38b59",
+            "3fa5e9713eb7c30d",
+            "bf6befbc6b608cb6",
+            "bfa075a1ae9b6fff",
+            "3f7d32690fad8f01",
+            "3f8e84cac0d34d5d",
+            "bfbc4b231218d7da",
+            "bf9099df9a6c3100",
+            "3fb345bd0e68fb70",
+            "3fe0a7aaa80a5fbf",
+            "bfc1bef032b6ba4a",
+            "3f6478cb13dd1f5c",
+            "3fb28847e500e409",
+            "bf7492a0041a4e88",
+            "bfb66318c944f376",
+            "3fa8c8cba6aff6f0",
+            "3f7ac8b6e05234be",
+            "bf7e97cec26756a5",
+            "3fc10c48cb58b956",
+            "3fe54d0507a750ae",
+            "3f9ca6c9ed41ee54",
+            "3fb8c3d63bad59d2",
+            "3fcd2245aad835fe",
+            "bf702b5d4c564dba"
+          ],
+          "generator_definition_digest": "b6d3e5a4e431d5b6b20b5ab4529d563db7edcd616052625ad0844ecaf6b45fa6",
+          "orbital_parameter_bytes_hex": [],
+          "qubit_mapping": "jordan-wigner-paper-era",
+          "qubit_ordering": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "reference_state": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "identity_established": true,
+      "source": {
+        "energy_hartree": -2.994085316059109,
+        "logical_block_count": 76,
+        "parameter_count": 129,
+        "snapshot_digest": "cb030fb4c730752f7316633da4189e1a18605d92481fe22da4aec51fee1ab74f",
+        "source_checkpoint_parameter_gradient_infinity": 3.4753153774907952e-09,
+        "state_sha256": "5d3a639735cc183732efaf35ed81b4d6f0a2737a09f94d2dc4f427ef9ec184b6"
+      }
+    },
+    {
+      "checks": {
+        "all_ns7_snapshot_digests_match": true,
+        "all_ns7_source_energies_match": true,
+        "all_ns7_state_digests_match": true,
+        "ns10_control_initial_energy_matches": true,
+        "ns10_control_initial_gradient_matches": true,
+        "source_checkpoint_stationary": true
+      },
+      "context_id": "h6-3.0",
+      "identities": {
+        "MeasurementContextID": "measurement-v1:d0602b32636c911a94c5271cc654ee890b8b1d71678546fa1a7d17933f4c10c8",
+        "ProblemID": "problem-v1:19c90480f8c2212a6a2c54f6b64975d50582bbe7c04bd26242bf206f4f6022b4",
+        "StatePreparationID": "state-v1:2a3615d8e7c1b7f7eb77d2d166e34bdd5005665d49c79b1eb7826db328d24fea",
+        "measurement_context_payload": {
+          "backend_context_digest": "a9ab0658103460fa25a9536bc58f2094e808d5362b36a167a5f5ca1638a417ca",
+          "estimator_version": "paper-era-analytic-v1",
+          "grouping_strategy": "none-exact",
+          "measurement_plan_version": "exact-statevector-v1",
+          "observable_set_digest": "3c81cba37f58da05f64ff5fa0d28bbddb5ad6c4d84a6942ad308dc95f4f4e364",
+          "problem_id": "problem-v1:19c90480f8c2212a6a2c54f6b64975d50582bbe7c04bd26242bf206f4f6022b4",
+          "state_preparation_id": "state-v1:2a3615d8e7c1b7f7eb77d2d166e34bdd5005665d49c79b1eb7826db328d24fea"
+        },
+        "problem_payload": {
+          "active_space": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "basis_set": "sto-3g",
+          "fermion_to_qubit_mapping_convention": "jordan-wigner-paper-era",
+          "frozen_orbitals": [],
+          "geometry_angstrom": [
+            [
+              "H",
+              [
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            [
+              "H",
+              [
+                0.0,
+                0.0,
+                3.0
+              ]
+            ],
+            [
+              "H",
+              [
+                0.0,
+                0.0,
+                6.0
+              ]
+            ],
+            [
+              "H",
+              [
+                0.0,
+                0.0,
+                9.0
+              ]
+            ],
+            [
+              "H",
+              [
+                0.0,
+                0.0,
+                12.0
+              ]
+            ],
+            [
+              "H",
+              [
+                0.0,
+                0.0,
+                15.0
+              ]
+            ]
+          ],
+          "hamiltonian_digest": "3c81cba37f58da05f64ff5fa0d28bbddb5ad6c4d84a6942ad308dc95f4f4e364",
+          "molecule": "linear-H6"
+        },
+        "state_preparation_payload": {
+          "ansatz_block_structure": [
+            {
+              "generator_family": "OVP",
+              "indices": [
+                964
+              ]
+            },
+            {
+              "generator_family": "OVP",
+              "indices": [
+                1132
+              ]
+            },
+            {
+              "generator_family": "OVP",
+              "indices": [
+                602
+              ]
+            },
+            {
+              "generator_family": "OVP",
+              "indices": [
+                746
+              ]
+            },
+            {
+              "generator_family": "OVP",
+              "indices": [
+                878
+              ]
+            },
+            {
+              "generator_family": "OVP",
+              "indices": [
+                1062
+              ]
+            },
+            {
+              "generator_family": "OVP",
+              "indices": [
+                1016
+              ]
+            },
+            {
+              "generator_family": "OVP",
+              "indices": [
+                1132
+              ]
+            },
+            {
+              "generator_family": "OVP",
+              "indices": [
+                964
+              ]
+            },
+            {
+              "generator_family": "OVP",
+              "indices": [
+                696
+              ]
+            },
+            {
+              "generator_family": "OVP",
+              "indices": [
+                804
+              ]
+            },
+            {
+              "generator_family": "OVP",
+              "indices": [
+                894
+              ]
+            },
+            {
+              "generator_family": "OVP",
+              "indices": [
+                728
+              ]
+            },
+            {
+              "generator_family": "OVP",
+              "indices": [
+                964
+              ]
+            },
+            {
+              "generator_family": "OVP",
+              "indices": [
+                746
+              ]
+            },
+            {
+              "generator_family": "OVP",
+              "indices": [
+                878
+              ]
+            },
+            {
+              "generator_family": "OVP",
+              "indices": [
+                1132
+              ]
+            },
+            {
+              "generator_family": "single-QE",
+              "indices": [
+                11
+              ]
+            },
+            {
+              "generator_family": "single-QE",
+              "indices": [
+                3
+              ]
+            },
+            {
+              "generator_family": "single-QE",
+              "indices": [
+                15
+              ]
+            },
+            {
+              "generator_family": "single-QE",
+              "indices": [
+                8
+              ]
+            },
+            {
+              "generator_family": "single-QE",
+              "indices": [
+                22
+              ]
+            },
+            {
+              "generator_family": "single-QE",
+              "indices": [
+                17
+              ]
+            },
+            {
+              "generator_family": "single-QE",
+              "indices": [
+                13
+              ]
+            },
+            {
+              "generator_family": "single-QE",
+              "indices": [
+                19
+              ]
+            },
+            {
+              "generator_family": "OVP",
+              "indices": [
+                603
+              ]
+            },
+            {
+              "generator_family": "single-QE",
+              "indices": [
+                11
+              ]
+            },
+            {
+              "generator_family": "single-QE",
+              "indices": [
+                3
+              ]
+            },
+            {
+              "generator_family": "single-QE",
+              "indices": [
+                15
+              ]
+            },
+            {
+              "generator_family": "single-QE",
+              "indices": [
+                8
+              ]
+            },
+            {
+              "generator_family": "OVP",
+              "indices": [
+                1133
+              ]
+            },
+            {
+              "generator_family": "single-QE",
+              "indices": [
+                17
+              ]
+            },
+            {
+              "generator_family": "single-QE",
+              "indices": [
+                22
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                103,
+                104,
+                105
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                294,
+                295
+              ]
+            },
+            {
+              "generator_family": "single-QE",
+              "indices": [
+                13
+              ]
+            },
+            {
+              "generator_family": "single-QE",
+              "indices": [
+                19
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                468,
+                469,
+                470
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                62,
+                63
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                508,
+                509
+              ]
+            },
+            {
+              "generator_family": "single-QE",
+              "indices": [
+                15
+              ]
+            },
+            {
+              "generator_family": "single-QE",
+              "indices": [
+                8
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                103,
+                104,
+                105
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                460,
+                461,
+                462
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                113,
+                114,
+                115
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                290,
+                291
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                277,
+                278,
+                279
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                378,
+                379,
+                380
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                179,
+                180
+              ]
+            },
+            {
+              "generator_family": "single-QE",
+              "indices": [
+                25
+              ]
+            },
+            {
+              "generator_family": "single-QE",
+              "indices": [
+                1
+              ]
+            },
+            {
+              "generator_family": "single-QE",
+              "indices": [
+                6
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                364,
+                365
+              ]
+            },
+            {
+              "generator_family": "single-QE",
+              "indices": [
+                27
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                202,
+                203
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                350,
+                351
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                290,
+                291
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                193,
+                194,
+                195
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                256,
+                257,
+                258
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                391,
+                392
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                296,
+                297
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                80,
+                81
+              ]
+            },
+            {
+              "generator_family": "single-QE",
+              "indices": [
+                27
+              ]
+            },
+            {
+              "generator_family": "single-QE",
+              "indices": [
+                25
+              ]
+            },
+            {
+              "generator_family": "single-QE",
+              "indices": [
+                3
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                468,
+                469,
+                470
+              ]
+            },
+            {
+              "generator_family": "single-QE",
+              "indices": [
+                13
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                286,
+                287
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                354,
+                355
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                72,
+                73
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                508,
+                509
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                543,
+                544
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                84,
+                85
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                290,
+                291
+              ]
+            },
+            {
+              "generator_family": "single-QE",
+              "indices": [
+                19
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                208,
+                209
+              ]
+            },
+            {
+              "generator_family": "single-QE",
+              "indices": [
+                6
+              ]
+            },
+            {
+              "generator_family": "single-QE",
+              "indices": [
+                15
+              ]
+            },
+            {
+              "generator_family": "single-QE",
+              "indices": [
+                11
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                537,
+                538
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                254,
+                255
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                109,
+                110
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                338,
+                339
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                432,
+                433
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                58,
+                59
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                473,
+                474
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                391,
+                392
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                545,
+                546,
+                547
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                94,
+                95,
+                96
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                265,
+                266
+              ]
+            },
+            {
+              "generator_family": "single-QE",
+              "indices": [
+                8
+              ]
+            },
+            {
+              "generator_family": "single-QE",
+              "indices": [
+                11
+              ]
+            },
+            {
+              "generator_family": "single-QE",
+              "indices": [
+                3
+              ]
+            },
+            {
+              "generator_family": "single-QE",
+              "indices": [
+                27
+              ]
+            },
+            {
+              "generator_family": "MVP",
+              "indices": [
+                436,
+                437
+              ]
+            }
+          ],
+          "ansatz_indices": [
+            964,
+            1132,
+            602,
+            746,
+            878,
+            1062,
+            1016,
+            1132,
+            964,
+            696,
+            804,
+            894,
+            728,
+            964,
+            746,
+            878,
+            1132,
+            11,
+            3,
+            15,
+            8,
+            22,
+            17,
+            13,
+            19,
+            603,
+            11,
+            3,
+            15,
+            8,
+            1133,
+            17,
+            22,
+            103,
+            104,
+            105,
+            294,
+            295,
+            13,
+            19,
+            468,
+            469,
+            470,
+            62,
+            63,
+            508,
+            509,
+            15,
+            8,
+            103,
+            104,
+            105,
+            460,
+            461,
+            462,
+            113,
+            114,
+            115,
+            290,
+            291,
+            277,
+            278,
+            279,
+            378,
+            379,
+            380,
+            179,
+            180,
+            25,
+            1,
+            6,
+            364,
+            365,
+            27,
+            202,
+            203,
+            350,
+            351,
+            290,
+            291,
+            193,
+            194,
+            195,
+            256,
+            257,
+            258,
+            391,
+            392,
+            296,
+            297,
+            80,
+            81,
+            27,
+            25,
+            3,
+            468,
+            469,
+            470,
+            13,
+            286,
+            287,
+            354,
+            355,
+            72,
+            73,
+            508,
+            509,
+            543,
+            544,
+            84,
+            85,
+            290,
+            291,
+            19,
+            208,
+            209,
+            6,
+            15,
+            11,
+            537,
+            538,
+            254,
+            255,
+            109,
+            110,
+            338,
+            339,
+            432,
+            433,
+            58,
+            59,
+            473,
+            474,
+            391,
+            392,
+            545,
+            546,
+            547,
+            94,
+            95,
+            96,
+            265,
+            266,
+            8,
+            11,
+            3,
+            27,
+            436,
+            437
+          ],
+          "coefficient_bytes_hex": [
+            "bff9731ff4321f74",
+            "3fe7b10e713e10c1",
+            "bff81b7e7e6b25e4",
+            "3fe4a52335077f87",
+            "3feb60e29e81517d",
+            "3fed44720408a718",
+            "3ff00174347d3388",
+            "bff484f45350225b",
+            "3ff8cf35b0b1e526",
+            "3fa39ca90c8e1d05",
+            "bfde28bce5bcdf8c",
+            "bfd95d22ef872b1f",
+            "bfcd33eb77f3e523",
+            "bff248c79e4674d8",
+            "bfa7f400685e515a",
+            "bfa96a8c1590df9c",
+            "3fdfeb216a524696",
+            "bfc35c3cf6b9588c",
+            "bfc1942f358c6831",
+            "3fcc2288a5c50c5c",
+            "3fcf3ab5b38ca555",
+            "3ff83825b91b5dcf",
+            "3ff97d578a377efd",
+            "bfb5d5896b01b753",
+            "bfa84aa364fa8d08",
+            "bfe7c3fcf0e81d3d",
+            "3fcef23d90933dcc",
+            "3fd1e20f6820f44c",
+            "bf9154137d891626",
+            "3f9c6755254ff1c9",
+            "c00046d443ab1f50",
+            "bff78078f615c8ae",
+            "bff6bd340bc96aa1",
+            "3ff3c662843a0df5",
+            "bfb2bf073af61e49",
+            "c00f87c0d9e9ecaa",
+            "3fb22d07db84be9d",
+            "bfc0a36762d76422",
+            "3fa8eff8a5f0eb35",
+            "3f9ae7e4189fc8e0",
+            "4000af21f6347f66",
+            "4000c77d8c41264c",
+            "3fb73c473b37be8f",
+            "3ff9eda37563d1f8",
+            "3ffd63e6141760c5",
+            "bfc01b9a47a4cfef",
+            "3ffa682a9ac31941",
+            "bfb7fce286b86360",
+            "bfce4770762b8ed1",
+            "3fd5ae3a24c5eb75",
+            "bff3da6e3d48547e",
+            "400dbad1d027b5dd",
+            "bf58b2ea8607f547",
+            "3fb60ee927ea837e",
+            "bf92fb7a0a29c42d",
+            "3f9a3df62d294211",
+            "3fa33b5c417dad9c",
+            "bfada123fa0b7d76",
+            "bffa3289d8f7b473",
+            "400f13791a179c99",
+            "bf923fb0726033d8",
+            "bf179b4c25c4f4e7",
+            "3f8f726b55eb4676",
+            "bf816e175754381e",
+            "bfa24912bd98c100",
+            "3f7839701d7672ff",
+            "3fa022b507824f5c",
+            "bffd312c117530fa",
+            "3fa02dca843dc9ff",
+            "bfb5678009d3566f",
+            "bfae29cdb225099e",
+            "3fdd9620203f430d",
+            "3fd10e3d93463d9e",
+            "3f8d623b4376038a",
+            "bfcc0d535dd88e9c",
+            "3f78639203b293d4",
+            "bfaea659de21e378",
+            "bfdb380f3c20a0a5",
+            "3ffb68f09136d859",
+            "bfe7ae177dc57877",
+            "bfd447ce44ca9546",
+            "bfb1c9dd31388173",
+            "3f99e6bfb3adb8fb",
+            "3f81360713834831",
+            "3fd53bdc8d2df301",
+            "bfa24c133e726555",
+            "3ffffd0f9451039c",
+            "bfb4bd1c93308765",
+            "bfa814a812dafe8b",
+            "bfa87a97fcf05a69",
+            "3f9e22e3355653c5",
+            "bf8079d0f1906d82",
+            "bfafcf24a343b2f5",
+            "bf959ae561f0e97b",
+            "3fab1bd5f3aedc65",
+            "3fb054117e62439c",
+            "bfa4664fcc9cb97f",
+            "3fb132b348cb4026",
+            "bfb2ec15eb169925",
+            "bfb0b32205c0f61b",
+            "bf54612f350c70e1",
+            "bfd74979f2c4c218",
+            "3fd6f26eb428c025",
+            "bfba843623f52cb5",
+            "bfd136f07f3694fa",
+            "3fc34e287b97c55d",
+            "4006044ea3c25810",
+            "bf9977571f360a14",
+            "3fca877447f96658",
+            "bfbe2d4ca052275f",
+            "3fc1d7129155ca20",
+            "bfb4744e818feae1",
+            "3fe226ff3de14b7d",
+            "bfa85b8107a7412c",
+            "3fa50ae216b36c5b",
+            "bfa382d1c9c672c9",
+            "3f9c08e4571d411b",
+            "bfb20cf5395fb971",
+            "3fb18238a3018bcc",
+            "3fcd7625d85be22e",
+            "bfd6994ad79e7b42",
+            "bfd5f99e9c3c2230",
+            "3fcefe731f6e8d18",
+            "3ff2b0744ca5c1dc",
+            "3f5a21540b9ef92d",
+            "bfd24a20208b7af3",
+            "bf9f49240b66c298",
+            "3fadfed4dbc05885",
+            "bfd22ba9f11bcf97",
+            "bf9d4107993294a2",
+            "3fcdb46bb6375a18",
+            "bfccbc4c63029b47",
+            "3fb23643417f42a3",
+            "c0006913950df944",
+            "3fc0a675ae426379",
+            "bfa0d3400eeb0c43",
+            "3fcb6df2029c117a",
+            "bfac0b253b74721c",
+            "3fc906f2c3dc3da1",
+            "bf8cefc343f262b8",
+            "bfa96ffb2d9e7878",
+            "3fe5dd9d8d82049e",
+            "3fa6ac2cfcb36748",
+            "3f719b3491a198fb",
+            "bf9f5796bfd1e656",
+            "bfa044ddaf0b9266",
+            "3f8dfeba235a2148",
+            "3fcce72dcfa9fee5",
+            "3f61bdc9756cfe70"
+          ],
+          "generator_definition_digest": "2797fa81b87f7143ec4b4f10cb2a40451c7b5d6eee3797745d6ec60eccb66f11",
+          "orbital_parameter_bytes_hex": [],
+          "qubit_mapping": "jordan-wigner-paper-era",
+          "qubit_ordering": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "reference_state": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "identity_established": true,
+      "source": {
+        "energy_hartree": -2.7994516590123246,
+        "logical_block_count": 95,
+        "parameter_count": 149,
+        "snapshot_digest": "84a699348439167b2636d5663bffcf4067d41dd51e94546085a504f93f973e67",
+        "source_checkpoint_parameter_gradient_infinity": 1.908776525727518e-09,
+        "state_sha256": "9699ceb9d0d9c3737ac8fd078038fb56ad780e305ad603d86de689103bc30513"
+      }
+    }
+  ],
+  "decision": "GO_S2_FIELD_NAMING_CORRECTION",
+  "execution": {
+    "git_commit": "b6554efc9223db65ebbf37564de8536db51daf70",
+    "threads": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    }
+  },
+  "interpretation": {
+    "correct_h6_statement": "The registered rank-two families were not certified on the two stationary H6 source checkpoints under the frozen optimization protocols.",
+    "h6_source_nonstationary_claim_supported": false,
+    "historical_field_name_ambiguous": true,
+    "historical_ns7_decisions_changed": false
+  },
+  "report_digest": "c21f8d188279c18a9676167e6cbe914ad321c7ec55376ffeca85d89a63fc02b0",
+  "schema": "dvg-obs-ceo.pra-path.s1-gradient-identity-audit.v1"
+}
