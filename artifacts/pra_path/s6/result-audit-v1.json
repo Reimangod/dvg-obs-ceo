@@ -1,0 +1,104 @@
+{
+  "audit_digest": "7800aacddbde4e0d81c3db0bbd194b9321924011623fcc93a4491cd49bdfb20a",
+  "authorization": {
+    "s10_closure_gate": true,
+    "s11_negative_result_release": true,
+    "s7": false,
+    "s8": false,
+    "s9": false
+  },
+  "case_summaries": [
+    {
+      "accepted": 7,
+      "accepted_attempt_ids": [
+        "pra-s6-attempt:160c4d8afc48d1d5afc81dc43e730916d2257a11919ea8eb620c33404b99bc5c",
+        "pra-s6-attempt:d4b570dd99ec4529add68330f6957e9f7333258a1c8f9792da050a9d2ef0b9de",
+        "pra-s6-attempt:ce24718356381bda49597c33f94e91351bb0bc30ec799a072058e366fb0c954c",
+        "pra-s6-attempt:d87d1128bf43e4e781edbc4124029b80e30e2f41d1fb8b0ad09f05564acf2662",
+        "pra-s6-attempt:42577a5983b5dcc8ba3ee7a3eb0db70207b5d6bfefd4b4bc031e0d949915849a",
+        "pra-s6-attempt:d66d18724fc4138371fe9ce37349a65c5a73248d23649e9ef7359f52736a735a",
+        "pra-s6-attempt:8d4a021121af0f2a60aa964eaffa2a812890794f384ad5773280da970df095be"
+      ],
+      "attempted": 8,
+      "best_accepted_cnot_depth_reduction": 0,
+      "best_accepted_cnot_reduction": 2,
+      "best_accepted_parameter_reduction": 1,
+      "best_accepted_total_depth_reduction": 4,
+      "case_id": "h4-1.0",
+      "new_energy_resource_nondominated_point": true,
+      "rejected": 1
+    },
+    {
+      "accepted": 7,
+      "accepted_attempt_ids": [
+        "pra-s6-attempt:761b13c98b9a314842883c36eacd0547e7dce48d0900b81576e5dab3a8995dce",
+        "pra-s6-attempt:78b6e976c63bdc2e7b3860d186858c9676c430db01b7c5a192c43863cad7066f",
+        "pra-s6-attempt:d77360b7f89d7047ecdc3e31e6156ea7172f8e6a183b7191e687bc12bd1af1ad",
+        "pra-s6-attempt:d4a8f089d94949b5d96a3d4d3c2e1339de88e6e948103dcada93ff10efad1af4",
+        "pra-s6-attempt:0b19f9585806d6e89f9a55dc37815aa24ecca9b25cd8df03c3b1cc25b6a97b61",
+        "pra-s6-attempt:a068714cfc0b409164293d6e8823a1d3c76dba37541c93ca01d8a003433be695",
+        "pra-s6-attempt:61c30fd06868978104c5f1b0b5f375c3fe283023b4d1852d39bcb43cb07b625c"
+      ],
+      "attempted": 8,
+      "best_accepted_cnot_depth_reduction": 0,
+      "best_accepted_cnot_reduction": 2,
+      "best_accepted_parameter_reduction": 1,
+      "best_accepted_total_depth_reduction": 4,
+      "case_id": "h4-2.0",
+      "new_energy_resource_nondominated_point": true,
+      "rejected": 1
+    },
+    {
+      "accepted": 0,
+      "accepted_attempt_ids": [],
+      "attempted": 8,
+      "best_accepted_cnot_depth_reduction": 0,
+      "best_accepted_cnot_reduction": 0,
+      "best_accepted_parameter_reduction": 0,
+      "best_accepted_total_depth_reduction": 0,
+      "case_id": "h5-1.5",
+      "new_energy_resource_nondominated_point": false,
+      "rejected": 8
+    }
+  ],
+  "checks": {
+    "all_acceptance_records_self_consistent": true,
+    "all_attempts_preserve_source_and_rollback": true,
+    "all_numeric_evidence_finite": true,
+    "h5_failure_signature_complete": true,
+    "h5_not_certified": true,
+    "prospective_not_authorized": true,
+    "queue_attempted_exactly_once": true,
+    "s7_not_authorized": true,
+    "summary_acceptance_count": true,
+    "summary_attempt_count": true,
+    "two_h4_conditions_positive": true
+  },
+  "claim_boundary": "Audits the frozen S6 result only. It does not rescue H5, alter the protocol, or establish matched-work or prospective evidence.",
+  "decision": "S6_RESULT_VALID_NO_GO_PERFORMANCE_ROUTE",
+  "execution": {
+    "git_commit": "9568a274cb148a0323e28febfce06e1a051a43a9"
+  },
+  "failure_interpretation": {
+    "classification": "OPTIMIZER_CAP_AND_STATIONARITY_NOT_CERTIFIED",
+    "energy_or_resource_failure": false,
+    "engineering_corruption_detected": false,
+    "post_outcome_optimizer_change_authorized": false,
+    "statement": "The frozen H5 candidates are energy- and resource-feasible but are not certified because the fixed optimizer reaches 200 iterations before the coordinate-invariant tangent stationarity threshold. This is a valid negative result, not evidence of a corrupt artifact.",
+    "threshold_relaxation_authorized": false
+  },
+  "h5_failure_signature": {
+    "all_fail_orthonormal_tangent_stationarity": true,
+    "all_hit_optimizer_iteration_cap": true,
+    "all_pass_energy_budget": true,
+    "all_pass_resource_policy": true,
+    "all_pass_semantic_native_evidence": true,
+    "all_rejected": true,
+    "attempt_count": 8
+  },
+  "inputs": {
+    "queue_freeze_digest": "8ab62ef36d4780dfe73d2171befff8190ee00b866b3d9850d2459679d4a91e3d",
+    "result_report_digest": "9ab2a7e468a964a2c62c0ada0222da005bc98f993d1aa872af1469bb6eb17795"
+  },
+  "schema": "dvg-obs-ceo.pra-path.s6-result-audit.v1"
+}
