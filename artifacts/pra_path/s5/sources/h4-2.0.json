@@ -1,0 +1,195 @@
+{
+  "ansatz_coefficients": [
+    -0.6898379530634783,
+    -0.08434307479135601,
+    -1.0395229275401896,
+    -0.9460308225511698,
+    0.1640760475342793,
+    -0.08451213975643557,
+    -0.11019878657222827,
+    0.03124378138041989,
+    0.24282147346032265,
+    0.06574695777813495,
+    -0.19682512104388808,
+    0.7575698997105283,
+    1.056661677698592,
+    -0.6002352579680347,
+    -0.3350716356448377,
+    1.3714207829116571,
+    -0.16485548989135623,
+    -0.9060504675627733,
+    0.04876763000323576,
+    -0.44305353275189263
+  ],
+  "ansatz_indices": [
+    156,
+    106,
+    122,
+    140,
+    7,
+    9,
+    4,
+    1,
+    57,
+    58,
+    43,
+    44,
+    65,
+    66,
+    67,
+    34,
+    35,
+    36,
+    101,
+    163
+  ],
+  "case": {
+    "case_id": "h4-2.0",
+    "distance_angstrom": 2.0,
+    "gradient_threshold": 1e-06,
+    "molecule": "H4",
+    "role": "development-low-cost-reproducibility"
+  },
+  "claim_boundary": "Source-generation and structural-applicability evidence only; no post-demotion accuracy or performance result.",
+  "coefficient_digest": "125e4dbcb09af1035e6d85b85c487162df3cbd5526a6eb0189af4d62b0adc295",
+  "environment": {
+    "blas_threads": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "machine": "arm64",
+    "packages": {
+      "numpy": "1.23.5",
+      "openfermion": "1.5.1",
+      "openfermionpyscf": "0.5",
+      "pyscf": "2.2.0",
+      "qiskit": "0.43.3",
+      "scipy": "1.10.1"
+    },
+    "platform": "macOS-26.0.1-arm64-arm-64bit",
+    "processor": "arm",
+    "python": "3.10.19"
+  },
+  "execution_freeze": {
+    "git_commit": "df286ef5c8f1f8f72104400f650ec0a3eb37baa7",
+    "s4_report_digest": "660f5e8a4199d79ea79d47758403db3f48ece2e83943cc6e94968bc79dd1f0e4",
+    "threads": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    }
+  },
+  "independent_source_energy_hartree": -1.8977806459898732,
+  "information_firewall": {
+    "exact_reference_read_or_stored": false,
+    "exact_reference_used_for_selection": false,
+    "factory_computes_fci_as_an_unavoidable_upstream_side_effect": true,
+    "post_demotion_energy_evaluated": false,
+    "selection_uses_only_structural_census": true,
+    "source_energy_used_for_case_selection": false
+  },
+  "iteration_counts": [
+    2,
+    4,
+    8,
+    12,
+    18,
+    20
+  ],
+  "report_digest": "110eb68966eebfa3b446ac1b11c3b48eebadf1f910f8aa9fb657f89481af9c06",
+  "schema": "dvg-obs-ceo.pra-path.s5-source.v1",
+  "source_energy_hartree": -1.8977806459898732,
+  "source_protocol": {
+    "independent_energy_agreement_tolerance": 1e-10,
+    "parameter_gradient_infinity": 5.441624346654364e-09,
+    "parameter_gradient_tolerance": 1e-08,
+    "role": "stationarity_normalized_source",
+    "termination": "adapt-converged"
+  },
+  "statevector_sha256": "cfee0e025f5188288b68ccd2534b1bbc163759b5a553b47652433b60eab55220",
+  "structural_census": {
+    "candidate_energy_evaluated": false,
+    "familywise_native_certified_count": 4,
+    "logical_block_count": 14,
+    "parameter_count": 20,
+    "qubit_count": 8,
+    "rank_three_mvp_block_count": 2,
+    "registered_native_transition_count": 8,
+    "source_resources": {
+      "circuit_qasm_digest": "046d76a46b6e172446b8872f40d1af1dde87f66411ad53410f273d111436e14d",
+      "cnot_count": 114,
+      "cnot_depth": 49,
+      "counter_version": "v6-s5-full-circuit-qasm-v1:paper-era-qasm-counter-a3f89d0",
+      "logical_block_count": 14,
+      "parameter_count": 20,
+      "total_depth": 202
+    },
+    "structural_resource_deltas": [
+      {
+        "cnot_count": 0,
+        "cnot_depth": 0,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -2
+      },
+      {
+        "cnot_count": 0,
+        "cnot_depth": 0,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -2
+      },
+      {
+        "cnot_count": -2,
+        "cnot_depth": 0,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -4
+      },
+      {
+        "cnot_count": -2,
+        "cnot_depth": 0,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -4
+      },
+      {
+        "cnot_count": 0,
+        "cnot_depth": 0,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -2
+      },
+      {
+        "cnot_count": 0,
+        "cnot_depth": 0,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -2
+      },
+      {
+        "cnot_count": -2,
+        "cnot_depth": 0,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -4
+      },
+      {
+        "cnot_count": -2,
+        "cnot_depth": 0,
+        "logical_block_count": 0,
+        "parameter_count": -1,
+        "total_depth": -4
+      }
+    ],
+    "structurally_primary_eligible_transition_count": 8
+  },
+  "work": {
+    "full_resource_recounts": 9,
+    "independent_source_energy_evaluations": 1,
+    "source_gradient_component_equivalent": 7852,
+    "source_optimizer_energy_evaluations": 427,
+    "wall_time_seconds": 22.640111499931663
+  }
+}
